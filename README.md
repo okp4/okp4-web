@@ -25,3 +25,10 @@ The [**OKP4 Discord Server**](https://discord.gg/okp4) is our primary chat chann
 software developers and node operators.
 
 Please reach out to us and say hi 👋, we're happy to help there.
+
+## You want to get involved? 😍
+
+Please check out OKP4 health files :
+
+- [Contributing](https://github.com/okp4/.github/blob/main/CONTRIBUTING.md)
+- [Code of conduct](https://github.com/okp4/.github/blob/main/CODE_OF_CONDUCT.md)
