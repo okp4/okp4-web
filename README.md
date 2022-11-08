@@ -18,17 +18,3 @@
 [![license](https://img.shields.io/github/license/okp4/okp4-web.svg?label=License&style=for-the-badge)](https://opensource.org/licenses/Apache-2.0)
 
 > Official OKP4 Web Site repository.
-
-## Community
-
-The [**OKP4 Discord Server**](https://discord.gg/okp4) is our primary chat channel for the open-source community,
-software developers and node operators.
-
-Please reach out to us and say hi 👋, we're happy to help there.
-
-## You want to get involved? 😍
-
-Please check out OKP4 health files :
-
-- [Contributing](https://github.com/okp4/.github/blob/main/CONTRIBUTING.md)
-- [Code of conduct](https://github.com/okp4/.github/blob/main/CODE_OF_CONDUCT.md)
