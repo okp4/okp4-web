@@ -89,6 +89,7 @@ b {
 
 .cta {
   text-decoration: none;
+  transition: opacity 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
 
   span {
     display: inline-block;
@@ -99,6 +100,8 @@ b {
     color: $white;
 
     &.icon {
+      transition: all 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
+
       svg {
         width: 9px;
         height: auto;
@@ -110,6 +113,14 @@ b {
     }
   }
 
+  &:hover {
+    opacity: 0.75;
+
+    .icon {
+      transform: translate3d(3px, -4px, 0);
+    }
+  }
+
   &.cta--btn {
     display: flex;
     align-items: center;
@@ -118,6 +129,14 @@ b {
     padding: 0 25px;
     background: $orange;
     border-radius: 61px;
+  }
+}
+
+.social__item {
+  transition: opacity 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
+
+  &:hover {
+    opacity: 0.75;
   }
 }
 

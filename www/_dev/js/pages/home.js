@@ -7,6 +7,9 @@ export default class PageHome {
     this.initParallaxLanding();
     this.initStickyUniverse();
     this.initRoadmap();
+
+    this.defaultScrollY = window.scrollY;
+    this.scrollMonitor = setInterval(this.scrollStarted.bind(this), 300);
   }
 
   static initHoverLanding() {
@@ -49,21 +52,28 @@ export default class PageHome {
   }
 
   static initParallaxLanding() {
-    this.landingParallax = document.querySelector('section.landing .bg__illus');
+    // this.landingParallax = document.querySelector('section.landing .bg__illus');
+    this.landingParallax = document.querySelectorAll('[data-parallax-landing]');
     this.parallaxLanding();
   }
 
   static parallaxLanding() {
 
-    if (ScrollManager.isIntersectingViewport(this.landingParallax)) {
-      const initial = 0;
-      const final = 220;
-      const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-      let ratio = ScrollManager.getIntersectionRatio(this.landingParallax, windowHeight);
-      let transformRatio = ratio.toFixed(4)*final;
-      let transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
-      this.landingParallax.style.transform = transformRatioCss;
-    }
+    this.landingParallax.forEach(el => {
+      if (ScrollManager.isIntersectingViewport(el)) {
+        // console.log(el.dataset);
+        const initial = 0;
+        const final = el.dataset.parallaxEnd;
+        const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+        let ratio;
+        if (el.dataset.parallaxAlready == "1") ratio = ScrollManager.getIntersectionRatio(el, windowHeight);
+        else ratio = ScrollManager.getIntersectionRatio(el);
+
+        let transformRatio = ratio.toFixed(4)*final;
+        let transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
+        el.style.transform = transformRatioCss;
+      }
+    });
 
     window.requestAnimationFrame(this.initParallaxLanding.bind(this));
   }
@@ -110,13 +120,12 @@ export default class PageHome {
     this.roadmapInterval;
     this.roadmapBlock = false;
     this.roadmapInterval = setInterval(()=> {
-      console.log(this.roadmapBlock);
       if (!this.roadmapBlock){
         if (!this.roadmapInit){
           var firstItem = this.roadmapItems[this.roadmapCurrent];
           if (ScrollManager.isIntersectingViewport(firstItem)) {
             let ratio = ScrollManager.getIntersectionRatio(firstItem);
-            if (ratio > 0.7) {
+            if (ratio > 0.5) {
               firstItem.classList.add('is-active');
               this.roadmapInit = true;
               this.roadmapCurrent++;
@@ -157,5 +166,12 @@ export default class PageHome {
     }, 200);
 
     // window.requestAnimationFrame(this.roadmapAutoLaunch.bind(this));
+  }
+
+  static scrollStarted(){
+    if (window.scrollY > 30 && this.defaultScrollY != window.scrollY) {
+      clearInterval(this.scrollMonitor);
+      document.querySelector('.landing__bottom').classList.add('scrollStarted');
+    }
   }
 }

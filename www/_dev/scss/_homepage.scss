@@ -26,7 +26,7 @@ section.landing {
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      height: 150%;
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -69,6 +69,51 @@ section.landing {
         left: 5px;
         display: inline-block;
         vertical-align: top;
+        opacity: 0;
+        transition: opacity 1s cubic-bezier(0.43, 0.195, 0.02, 1) 1.75s;
+
+        &.is-in-view {
+          opacity: 1;
+        }
+      }
+
+      span.revealContainer {
+        display: inline-block;
+        overflow: hidden;
+
+        span,
+        svg {
+          display: inline-block;
+          opacity: 0;
+          transform: translate3d(0, 70%, 0);
+          // transition: all 1.5s cubic-bezier(0.43, 0.195, 0.02, 1);
+          transition: all 2s cubic-bezier(0.43, 0.195, 0.02, 1);
+          transition-delay: 0.5s;
+        }
+
+        &[data-reveal-custom="2"] {
+          span,
+          svg {
+
+            // transform: translate3d(0, 50%, 0);
+            // transition-delay: 1s;
+          }
+        }
+
+        &[data-reveal-custom="3"] {
+          span,
+          svg {
+            // transition-delay: 1s;
+          }
+        }
+
+        &.is-in-view {
+          span,
+          svg {
+            opacity: 1;
+            transform: translate3d(0, 1px, 0);
+          }
+        }
       }
     }
 
@@ -83,17 +128,33 @@ section.landing {
       line-height: 50px;
       letter-spacing: 0.05em;
       color: $white;
+      opacity: 0;
+      transform: translate3d(0, 10px, 0);
+      transition: all 1.5s cubic-bezier(0.43, 0.195, 0.02, 1) 1.75s;
+
+      &.is-in-view {
+        opacity: 1;
+        transform: none;
+      }
     }
   }
 
   .landing__bottom {
     position: relative;
-    margin-top: 40px;
+    top: -50px;
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+    transition: all 1.5s cubic-bezier(0.43, 0.195, 0.02, 1);
+
+    &.is-in-view.scrollStarted {
+      opacity: 1;
+      transform: none;
+    }
 
     img {
       display: block;
       margin: 0 auto;
-      width: 900px;
+      width: 1400px;
       height: auto;
     }
   }
@@ -123,6 +184,10 @@ section.pushs {
       bottom: 0;
       background: radial-gradient(50% 50% at 50% 50%, rgba(64 102 248 / 30%) 0%, rgba(217 217 217 / 0%) 100%);
     }
+  }
+
+  .container {
+    position: relative;
   }
 
   h2 {
@@ -176,6 +241,40 @@ section.pushs {
 
     p.featured {
       margin-bottom: 65px;
+    }
+
+    .cta {
+      display: inline-block;
+      position: relative;
+      top: -2px;
+      color: inherit;
+      font-size: inherit;
+      font-weight: bold;
+      line-height: inherit;
+      margin-right: 3px;
+
+      span {
+        color: inherit;
+        font-size: inherit;
+        font-weight: bold;
+        line-height: inherit;
+        text-decoration: underline;
+
+        &.text {
+          margin-right: 5px;
+        }
+
+        &.icon {
+          position: relative;
+          top: -3px;
+
+          svg {
+            path {
+              stroke: $darkblue;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -406,7 +505,6 @@ section.universe {
       flex-direction: column;
       min-height: 531px;
       padding: 45px 58px;
-      border-radius: 20px;
 
       &:nth-of-type(2n) {
         position: relative;
@@ -414,6 +512,9 @@ section.universe {
       }
 
       .bg--grain {
+        border-radius: 20px;
+        overflow: hidden;
+
         .flat {
           background: $white;
         }
@@ -449,8 +550,8 @@ section.universe {
 
       .illus {
         position: absolute;
-        top: -20px;
-        right: 0;
+        top: -50px;
+        right: -50px;
 
         img {
           animation: floating-image 8s linear infinite;
@@ -579,6 +680,7 @@ section.roadmap {
       border-radius: 20px;
       border: 1px solid $violet;
       background-color: $violet;
+      cursor: pointer;
       transition:
         border 0.3s ease 0.4s,
         border-radius 0.3s ease 0.4s,
@@ -720,7 +822,19 @@ section.roadmap {
         padding: 0 40px;
         align-items: center;
         justify-content: space-between;
-        cursor: pointer;
+
+        h3 {
+          span.indicator {
+            display: inline-block;
+            transition: all 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
+            transform-origin: center;
+          }
+
+          .subtitle {
+            font-size: 25px;
+            font-weight: 300;
+          }
+        }
 
         .label {
           padding: 10px 20px;
@@ -754,12 +868,24 @@ section.roadmap {
         }
 
         .illus {
+          display: flex;
+          position: relative;
+          align-items: center;
+          justify-content: center;
           width: 40%;
+          height: 100%;
 
           img {
-            width: 100%;
+            position: absolute;
+            width: 120%;
             height: auto;
           }
+        }
+      }
+
+      &:hover {
+        span.indicator {
+          transform: rotate(90deg) !important;
         }
       }
     }
@@ -798,7 +924,7 @@ section.news {
     position: sticky;
     top: 117px;
     height: fit-content;
-    padding-bottom: 315px;
+    padding-bottom: 279px;
     grid-column: 1/6;
 
     h2 {
@@ -809,6 +935,7 @@ section.news {
 
   .right {
     grid-column: 7/-1;
+    margin-bottom: 150px;
 
     .item__bg {
       display: block;
@@ -819,6 +946,7 @@ section.news {
       border-radius: 20px;
       text-decoration: none;
       overflow: hidden;
+      transition: opacity 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
 
       * {
         color: $white;
@@ -846,62 +974,87 @@ section.news {
         top: 35px;
         right: 35px;
         width: 14px;
+        transition: all 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
 
         svg {
           width: 14px;
           height: auto;
         }
       }
-    }
 
-    .item__icon {
-      display: flex;
-      margin-bottom: 32px;
-      width: 100%;
-      padding-right: 130px;
+      &:hover {
+        opacity: 0.75;
 
-      .icon {
-        width: 33px;
-        margin-right: 12px;
-
-        svg {
-          width: 33px;
-          height: auto;
-
-          path {
-            fill: $darkblue;
-          }
+        .arrow {
+          transform: translate3d(3px, -4px, 0);
         }
       }
+    }
 
-      .text {
-        position: relative;
-        top: 3px;
-        margin-right: auto;
-        margin-left: 0;
+    .item__icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
 
-        h4 {
-          display: block;
-          margin-bottom: 15px;
+      .item__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 23px;
+        text-decoration: none;
+        transition: opacity 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
 
-          .arrow {
-            position: relative;
-            top: -3px;
-            left: 11px;
+        .icon {
+          width: 33px;
+          margin-right: 14px;
 
-            svg {
-              width: 14px;
-              height: auto;
+          svg {
+            width: 33px;
+            height: auto;
 
-              path {
-                stroke: $darkblue;
-              }
+            path {
+              fill: $darkblue;
             }
           }
         }
 
-        p {
-          line-height: 1.8;
+        .text {
+          h4 {
+            display: block;
+            color: $darkblue;
+            text-decoration: none;
+            // margin-bottom: 15px;
+
+            .arrow {
+              display: inline-block;
+              position: relative;
+              top: -5px;
+              margin-left: 11px;
+              transition: all 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
+
+              svg {
+                width: 14px;
+                height: auto;
+
+                path {
+                  stroke: $darkblue;
+                }
+              }
+            }
+          }
+
+          p {
+            line-height: 1.8;
+          }
+        }
+
+        &:hover {
+          opacity: 0.75;
+
+          .arrow {
+            transform: translate3d(3px, -4px, 0);
+          }
         }
       }
     }
@@ -909,7 +1062,6 @@ section.news {
 
   .bottom {
     grid-column: 1/-1;
-    margin-top: 150px;
     text-align: center;
 
     p {
