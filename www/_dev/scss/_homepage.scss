@@ -515,6 +515,7 @@ section.roadmap {
   position: relative;
   z-index: 5;
   padding-bottom: 115px;
+  overflow: hidden;
   // background-color: $whitebg;
 
   .gradient {
@@ -576,38 +577,140 @@ section.roadmap {
       max-height: 92px;
       margin: 15px auto;
       border-radius: 20px;
+      border: 1px solid $violet;
       background-color: $violet;
-      transition: background-color 0.3s ease, max-height 1s ease;
+      transition:
+        border 0.3s ease 0.4s,
+        border-radius 0.3s ease 0.4s,
+        background-color 0.5s ease 0.4s,
+        max-height 0.7s cubic-bezier(0.43, 0.195, 0.02, 1),
+        width 0.7s cubic-bezier(0.43, 0.195, 0.02, 1);
+      overflow: hidden;
 
-      * {
-        transition: color 0.3s ease;
-        color: $white;
+      .roadmap__item-container {
+        * {
+          transition: color 0.3s ease 0.4s;
+          color: $white;
+        }
+
+        .header {
+          .label {
+            transition: border 0.3s ease 0.4s;
+          }
+        }
+
+        .willGoDown {
+          transform: none;
+          transition: transform 0.5s cubic-bezier(0.43, 0.195, 0.02, 1);
+        }
       }
 
       &.is-reset {
+        max-height: 92px;
+        border: 1px solid $darkblue;
         background-color: $darkblue;
+
+        .roadmap__item-container {
+          * {
+            color: $white;
+          }
+
+          .willGoDown {
+            transform: none;
+            transition: transform 0.5s cubic-bezier(0.43, 0.195, 0.02, 1);
+          }
+        }
+
+        .header {
+          .label {
+            border: 1px solid $white;
+            transition: border 0.3s ease;
+          }
+        }
+      }
+
+      &.is-coming {
+        border: 1px solid $violet;
+        background-color: $violet;
+
+        .roadmap__item-container {
+          * {
+            color: $white;
+          }
+
+          .willGoDown {
+            transform: none;
+            transition: transform 0.5s cubic-bezier(0.43, 0.195, 0.02, 1);
+          }
+        }
+
+        .header {
+          .label {
+            border: 1px solid $white;
+          }
+        }
       }
 
       &.is-active {
         width: 100%;
-        max-height: initial;
-        padding: 25px 0;
+        max-height: 900px;
         background-color: transparent;
         border: 1px solid $darkblue;
         border-radius: 40px;
+        transition:
+          background-color 0.5s ease,
+          border 0.5s ease,
+          border-radius 0.5s ease,
+          max-height 1.2s cubic-bezier(0.43, 0.195, 0.02, 1),
+          width 0.6s cubic-bezier(0.43, 0.195, 0.02, 1);
 
-        * {
-          color: $darkblue;
+        .roadmap__item-container {
+          * {
+            transition: color 0.3s ease;
+            color: $darkblue;
+          }
+
+          .willGoDown {
+            transform: translate3d(0, 25px, 0);
+            transition: transform 0.5s cubic-bezier(0.43, 0.195, 0.02, 1);
+          }
         }
 
         .header {
           .label {
             border: 1px solid $darkblue;
+            transition: border 0.3s ease;
           }
         }
+      }
 
-        .body {
-          display: flex;
+      &:nth-child(1) {
+        &.is-active {
+          max-height: var(--roadmap-item1);
+        }
+      }
+
+      &:nth-child(2) {
+        &.is-active {
+          max-height: var(--roadmap-item2);
+        }
+      }
+
+      &:nth-child(3) {
+        &.is-active {
+          max-height: var(--roadmap-item3);
+        }
+      }
+
+      &:nth-child(4) {
+        &.is-active {
+          max-height: var(--roadmap-item4);
+        }
+      }
+
+      &:nth-child(5) {
+        &.is-active {
+          max-height: var(--roadmap-item5);
         }
       }
 
@@ -617,6 +720,7 @@ section.roadmap {
         padding: 0 40px;
         align-items: center;
         justify-content: space-between;
+        cursor: pointer;
 
         .label {
           padding: 10px 20px;
@@ -630,7 +734,7 @@ section.roadmap {
       }
 
       .body {
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 10px 40px 50px;

@@ -93,3 +93,7 @@ export function getCookie(cookieName) {
   }
   return '';
 }
+
+export function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}

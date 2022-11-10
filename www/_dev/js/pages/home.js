@@ -1,10 +1,12 @@
 import ScrollManager from '../utils/scroll-manager';
+// import {sleep} from '../utils/utils';
 
 export default class PageHome {
   static init() {
     this.initHoverLanding();
     this.initParallaxLanding();
     this.initStickyUniverse();
+    this.initRoadmap();
   }
 
   static initHoverLanding() {
@@ -54,7 +56,6 @@ export default class PageHome {
   static parallaxLanding() {
 
     if (ScrollManager.isIntersectingViewport(this.landingParallax)) {
-
       const initial = 0;
       const final = 220;
       const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
@@ -74,5 +75,87 @@ export default class PageHome {
     let topPositionSticky = -(rect.height - windowHeight) - 250;
     let topPositionCss = topPositionSticky + "px";
     this.universeSection.style.top = topPositionCss;
+  }
+
+  static initRoadmap() {
+    this.roadmapItems = document.querySelectorAll('.roadmap__item');
+    this.roadmapInit = false;
+    this.roadmapCurrent = 0;
+    this.roadmapItems.forEach((el, index) => {
+      let newIndex = index+1;
+      let height = el.offsetHeight + 50;
+      let heightCss = height + "px";
+      let selectorCss = "--roadmap-item" + newIndex;
+      document.documentElement.style.setProperty(selectorCss, heightCss);
+      // if (index != 0) el.classList.remove('is-active');
+      el.classList.remove('is-active');
+
+      el.addEventListener('click', (event) => {
+        if (!el.classList.contains('is-active')){
+          setTimeout(function(){
+            el.classList.remove('is-coming');
+          }, 100);
+          this.roadmapItems.forEach((el, index) => {
+            el.classList.remove('is-active');
+          });
+        }
+        el.classList.toggle('is-active');
+      });
+    });
+
+    this.roadmapAutoLaunch();
+  }
+
+  static async roadmapAutoLaunch(){
+    this.roadmapInterval;
+    this.roadmapBlock = false;
+    this.roadmapInterval = setInterval(()=> {
+      console.log(this.roadmapBlock);
+      if (!this.roadmapBlock){
+        if (!this.roadmapInit){
+          var firstItem = this.roadmapItems[this.roadmapCurrent];
+          if (ScrollManager.isIntersectingViewport(firstItem)) {
+            let ratio = ScrollManager.getIntersectionRatio(firstItem);
+            if (ratio > 0.7) {
+              firstItem.classList.add('is-active');
+              this.roadmapInit = true;
+              this.roadmapCurrent++;
+              
+              this.roadmapBlock = true;
+              setTimeout(()=> {
+                clearInterval(this.roadmapInterval);
+                this.roadmapBlock = false;
+              }, 1300);
+            }
+          }
+        }
+
+        // else {
+        //   var currentItem = this.roadmapItems[this.roadmapCurrent];
+        //   if (ScrollManager.isIntersectingViewport(currentItem)) {
+        //     let ratio = ScrollManager.getIntersectionRatio(currentItem);
+        //     if (ratio > 0.1) {
+        //       setTimeout(function(){
+        //         currentItem.classList.remove('is-coming');
+        //       }, 100);
+        //       this.roadmapItems.forEach((el, index) => {
+        //         el.classList.remove('is-active');
+        //       });
+        //       currentItem.classList.add('is-active');
+        //       this.roadmapCurrent++;
+        //       this.roadmapBlock = true;
+        //       setTimeout(()=> {
+        //         this.roadmapBlock = false;
+        //       }, 1300);
+        //       if (this.roadmapCurrent >= this.roadmapItems.length){
+        //         clearInterval(this.roadmapInterval);
+        //       }
+        //     }
+        //   }
+        // }
+      }
+    }, 200);
+
+    // window.requestAnimationFrame(this.roadmapAutoLaunch.bind(this));
   }
 }

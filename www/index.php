@@ -253,73 +253,83 @@
 
 			<div class="roadmap__items">
 
-				<div class="roadmap__item is-reset" data-reveal="1" data-text="1">
-					<div class="header">
-						<h3 class="title">— Genesis <span class="subtitle"></span></h3>
-						<div class="label"><span>2018-2022</span></div>
-					</div>
-					<div class="body">
-						<div class="text">
-							<p class="up">After more than two years of research and development using the Cosmos SDK as a starting point, OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.</p>
-							<p>The Nemeton era is the bootstrapping era. This is when the ideas & concepts are expressed to the public. This is when the first validators join together to power the network, test its limits and contribute to its developments. This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources.<br>The Nemeton era will result in a stable, battle-tested environment and will give birth to the OKP4 mainnet.</p>
+				<div class="roadmap__item is-reset is-active">
+					<div class="roadmap__item-container">
+						<div class="header willGoDown">
+							<h3 class="title">— Genesis <span class="subtitle"></span></h3>
+							<div class="label"><span>2018-2022</span></div>
 						</div>
-						<div class="illus"><img src="./assets/illus/item1.png" alt=""></div>
+						<div class="body willGoDown">
+							<div class="text">
+								<p class="up">After more than two years of research and development using the Cosmos SDK as a starting point, OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.</p>
+								<p>The Nemeton era is the bootstrapping era. This is when the ideas & concepts are expressed to the public. This is when the first validators join together to power the network, test its limits and contribute to its developments. This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources.<br>The Nemeton era will result in a stable, battle-tested environment and will give birth to the OKP4 mainnet.</p>
+							</div>
+							<div class="illus"><img src="./assets/illus/item1.png" alt=""></div>
+						</div>
 					</div>
 				</div>
 
-				<div class="roadmap__item is-active" data-reveal="1" data-text="1">
-					<div class="header">
-						<h3 class="title">— Nemeton <span class="subtitle">Testnet</span></h3>
-						<div class="label"><span>Q4 2022 – Q2 2022</span></div>
-					</div>
-					<div class="body">
-						<div class="text">
-							<p class="up">After more than two years of research and development using the Cosmos SDK as a starting point, OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.</p>
-							<p>The Nemeton era is the <b>bootstrapping era</b>. This is when the ideas & concepts are expressed to the public. This is when the first validators join together to power the network, test its limits and contribute to its developments. This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources.<br>The Nemeton era will result in a stable, battle-tested environment and will give birth to the OKP4 mainnet.</p>
+				<div class="roadmap__item is-reset is-coming is-active">
+					<div class="roadmap__item-container">
+						<div class="header willGoDown">
+							<h3 class="title willGoLeft">— Nemeton <span class="subtitle">Testnet</span></h3>
+							<div class="label willGoRight"><span>Q4 2022 – Q2 2022</span></div>
 						</div>
-						<div class="illus"><img src="./assets/illus/item1.png" alt=""></div>
+						<div class="body willGoDown">
+							<div class="text willGoLeft">
+								<p class="up">After more than two years of research and development using the Cosmos SDK as a starting point, OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.</p>
+								<p>The Nemeton era is.<br>The Nemeton era will result in a stable, battle-tested environment and will give birth to the OKP4 mainnet.</p>
+							</div>
+							<div class="illus willGoRight"><img src="./assets/illus/item1.png" alt=""></div>
+						</div>
 					</div>
 				</div>
 
-				<div class="roadmap__item" data-reveal="1" data-text="1">
-					<div class="header">
-						<h3 class="title">— Mainnet <span class="subtitle">X</span></h3>
-						<div class="label"><span>Q3 2022</span></div>
-					</div>
-					<div class="body">
-						<div class="text">
-							<p class="up">After more than two years of research and development using the Cosmos SDK as a starting point, OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.</p>
-							<p>The Nemeton era is the bootstrapping era. This is when the ideas & concepts are expressed to the public. This is when the first validators join together to power the network, test its limits and contribute to its developments. This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources.<br>The Nemeton era will result in a stable, battle-tested environment and will give birth to the OKP4 mainnet.</p>
+				<div class="roadmap__item is-reset is-coming is-active">
+					<div class="roadmap__item-container">
+						<div class="header willGoDown">
+							<h3 class="title">— Mainnet <span class="subtitle">X</span></h3>
+							<div class="label"><span>Q3 2022</span></div>
 						</div>
-						<div class="illus"><img src="./assets/illus/item1.png" alt=""></div>
+						<div class="body willGoDown">
+							<div class="text">
+								<p class="up">After more than two years of research and development using the Cosmos SDK as a starting point, OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.</p>
+								<p>The Nemeton era is the bootstrapping era. This is when the ideas & concepts are expressed to the public. This is when the first validators join together to power the network, test its limits and contribute to its developments. This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources.<br>The Nemeton era will result in a stable, battle-tested environment and will give birth to the OKP4 mainnet.</p>
+							</div>
+							<div class="illus"><img src="./assets/illus/item1.png" alt=""></div>
+						</div>
 					</div>
 				</div>
 
-				<div class="roadmap__item" data-reveal="1" data-text="1">
-					<div class="header">
-						<h3 class="title">— Adoption <span class="subtitle">Y</span></h3>
-						<div class="label"><span>Q2 2023</span></div>
-					</div>
-					<div class="body">
-						<div class="text">
-							<p class="up">After more than two years of research and development using the Cosmos SDK as a starting point, OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.</p>
-							<p>The Nemeton era is the bootstrapping era. This is when the ideas & concepts are expressed to the public. This is when the first validators join together to power the network, test its limits and contribute to its developments. This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources.<br>The Nemeton era will result in a stable, battle-tested environment and will give birth to the OKP4 mainnet.</p>
+				<div class="roadmap__item is-reset is-coming is-active">
+					<div class="roadmap__item-container">
+						<div class="header willGoDown">
+							<h3 class="title">— Adoption <span class="subtitle">Y</span></h3>
+							<div class="label"><span>Q2 2023</span></div>
 						</div>
-						<div class="illus"><img src="./assets/illus/item1.png" alt=""></div>
+						<div class="body willGoDown">
+							<div class="text">
+								<p class="up">After more than two years of research and development using the Cosmos SDK as a starting point, OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.</p>
+								<p>The Nemeton era is the bootstrapping era. This is when the ideas & concepts are expressed to the public. This is when the first validators join together to power the network, test its limits and contribute to its developments. This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources.<br>The Nemeton era will result in a stable, battle-tested environment and will give birth to the OKP4 mainnet.</p>
+							</div>
+							<div class="illus"><img src="./assets/illus/item1.png" alt=""></div>
+						</div>
 					</div>
 				</div>
 
-				<div class="roadmap__item" data-reveal="1" data-text="1">
-					<div class="header">
-						<h3 class="title">— Colonization <span class="subtitle">Z</span></h3>
-						<div class="label"><span>Q1 2024</span></div>
-					</div>
-					<div class="body">
-						<div class="text">
-							<p class="up">After more than two years of research and development using the Cosmos SDK as a starting point, OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.</p>
-							<p>The Nemeton era is the bootstrapping era. This is when the ideas & concepts are expressed to the public. This is when the first validators join together to power the network, test its limits and contribute to its developments. This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources.<br>The Nemeton era will result in a stable, battle-tested environment and will give birth to the OKP4 mainnet.</p>
+				<div class="roadmap__item is-reset is-coming is-active">
+					<div class="roadmap__item-container">
+						<div class="header willGoDown">
+							<h3 class="title">— Colonization <span class="subtitle">Z</span></h3>
+							<div class="label"><span>Q1 2024</span></div>
 						</div>
-						<div class="illus"><img src="./assets/illus/item1.png" alt=""></div>
+						<div class="body willGoDown">
+							<div class="text">
+								<p class="up">After more than two years of research and development using the Cosmos SDK as a starting point, OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.</p>
+								<p>The Nemeton era is the bootstrapping era. This is when the ideas & concepts are expressed to the public. This is when the first validators join together to power the network, test its limits and contribute to its developments. This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources.<br>The Nemeton era will result in a stable, battle-tested environment and will give birth to the OKP4 mainnet.</p>
+							</div>
+							<div class="illus"><img src="./assets/illus/item1.png" alt=""></div>
+						</div>
 					</div>
 				</div>
 			</div>
