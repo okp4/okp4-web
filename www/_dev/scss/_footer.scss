@@ -1,0 +1,132 @@
+.mainFooter {
+  display: block;
+  position: relative;
+  z-index: 4;
+  padding-bottom: 31px;
+  background-color: $whitebg;
+
+  // .gradient--container {
+  //   position: fixed;
+  //   top: -100px;
+  //   width: 100vw;
+  //   bottom: 0;
+  //   overflow: hidden;
+
+  //   .gradient {
+  //     position: absolute;
+  //     top: -700px;
+  //     width: 200vw;
+  //     left: -50vw;
+  //     height: 1700px;
+  //     background: radial-gradient(50% 50% at 50% 50%, rgba(64 102 248 / 20%) 0%, rgba(217 217 217 / 0%) 100%);
+  //   }
+  // }
+
+  .mainFooter--container {
+    position: relative;
+    width: calc(100vw - 230px);
+    min-width: 1200px;
+    max-width: 1688px;
+    margin: 0 auto;
+    padding: 87px 0 121px;
+    background: red;
+    margin-bottom: 31px;
+    border-radius: 30px;
+    overflow: hidden;
+
+    .footer__bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      .bg--grain {
+        overflow: hidden;
+
+        .flat {
+          background: $darkblue;
+        }
+      }
+
+      .bg__illus {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .footer__content {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      .cta--btn {
+        width: 360px;
+        margin-bottom: 55px;
+      }
+
+      p.featured {
+        display: block;
+        margin-bottom: 10px;
+        color: $white;
+        font-weight: 400;
+
+        b {
+          color: $violet;
+          font-weight: bold;
+        }
+      }
+
+      .newsletter {
+        width: 585px;
+        height: 55px;
+        background-color: $whitebg;
+        border-radius: 10px;
+        margin-bottom: 73px;
+      }
+
+      .socials {
+        display: flex;
+        align-items: center;
+
+        .social__item {
+          display: inline-block;
+          vertical-align: middle;
+          width: 29px;
+          height: 29px;
+          margin-right: 18px;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          svg {
+            width: 29px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .legals {
+    display: block;
+    width: calc(100vw - 230px);
+    min-width: 1200px;
+    max-width: 1688px;
+    margin: 0 auto;
+    padding-left: 40px;
+    text-decoration: none;
+    color: $grey;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}

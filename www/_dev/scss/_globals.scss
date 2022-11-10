@@ -1,0 +1,161 @@
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $whitebg;
+  font-family: $dmsans;
+  font-size: 18px;
+  font-weight: 400;
+  color: $darkblue;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 32px;
+  width: 100vw;
+  max-width: 1264px;
+  margin: 0 auto;
+}
+
+.subgrid {
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 32px;
+}
+
+h1 {
+  font-family: $inter;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white;
+
+  span {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+  }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $archivo;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 18px;
+
+  strong {
+    font-weight: 500;
+  }
+}
+
+p.up {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+p.featured {
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.8;
+  color: $violet;
+}
+
+b {
+  font-size: bold;
+}
+
+.cta {
+  text-decoration: none;
+
+  span {
+    display: inline-block;
+    font-family: $dmsans;
+    font-size: 16px;
+    font-weight: 400;
+    vertical-align: middle;
+    color: $white;
+
+    &.icon {
+      svg {
+        width: 9px;
+        height: auto;
+      }
+    }
+
+    &.text {
+      margin-right: 9px;
+    }
+  }
+
+  &.cta--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 0 25px;
+    background: $orange;
+    border-radius: 61px;
+  }
+}
+
+.bg--grain {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .flat,
+  .grain {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .grain {
+    opacity: 0.8;
+    background-size: contain;
+    background-repeat: repeat;
+    background-image: url("./grain.png");
+  }
+}
+
+.label {
+  display: inline-block;
+  border: 1px dashed $blue;
+  border-radius: 20px;
+  padding: 7px 17px;
+
+  span {
+    color: $violet;
+    font-family: $archivo;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+  }
+}
