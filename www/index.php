@@ -374,7 +374,7 @@
 						</div>
 					</a>
 
-					<a href="/" class="item__icon" data-reveal="1" data-text="1">
+					<a href="/" class="item__icon" data-reveal="2" data-text="1">
 						<div class="icon"><?php include './assets/socials/discord.svg' ?></div>
 						<div class="text">
 							<h4>Discord<span class="arrow"><?php include './assets/arrowtr.svg' ?></span></h4>

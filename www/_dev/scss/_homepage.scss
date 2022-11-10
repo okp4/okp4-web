@@ -946,7 +946,7 @@ section.news {
       border-radius: 20px;
       text-decoration: none;
       overflow: hidden;
-      transition: opacity 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
+      // transition: opacity 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
 
       * {
         color: $white;
@@ -983,7 +983,7 @@ section.news {
       }
 
       &:hover {
-        opacity: 0.75;
+        // opacity: 0.75;
 
         .arrow {
           transform: translate3d(3px, -4px, 0);
@@ -1003,7 +1003,7 @@ section.news {
         justify-content: center;
         margin: 0 23px;
         text-decoration: none;
-        transition: opacity 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
+        // transition: opacity 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
 
         .icon {
           width: 33px;
@@ -1050,7 +1050,7 @@ section.news {
         }
 
         &:hover {
-          opacity: 0.75;
+          // opacity: 0.75;
 
           .arrow {
             transform: translate3d(3px, -4px, 0);
