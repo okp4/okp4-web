@@ -9,16 +9,15 @@ $blue: #96AEF8;
 $black: #000000;
 $grey: #767676;
 $header-height: 123px;
-
 $inter: "Inter", sans-serif;
 $archivo: "Archivo", sans-serif;
 $dmsans: "DM Sans", sans-serif;
-
 $breakpoints: (
-  xs: 0,
+  xxs: 0,
+  xs: 375px,
   sm: 570px,
   md: 770px,
-  lg: 990px,
+  lg: 1025px,
   xl: 1200px,
   xxl: 1500px
 );

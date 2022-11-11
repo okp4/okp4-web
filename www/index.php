@@ -12,10 +12,15 @@
 
 	<header class="mainHeader">
 		<div class="bg"></div>
+
+		<a class="logo" href="./assets/logo-white">
+			<?php include './assets/logo-white.svg' ?>
+		</a>
+		
+		<div class="burger">
+			<?php include './assets/burger.svg' ?>
+		</div>
 		<div class="mainHeader--container">
-			<a class="logo" href="./assets/logo-white">
-				<?php include './assets/logo-white.svg' ?>
-			</a>
 			<a href="" class="cta whitepaper"><span class="text">Whitepaper</span><span class="icon"><?php include './assets/arrowtr.svg' ?></span></a>
 			<div class="socials">
 				<a href="" class="social__item"><?php include './assets/socials/linkedin.svg' ?></a>
@@ -46,7 +51,7 @@
 		</div>
 
 		<div class="landing__text">
-			<h1><span class="revealContainer" data-reveal-custom="1"><span>THE ULTIMATE</span></span><span class="stars" data-reveal-custom="1"><?php include './assets/stars.svg' ?></span><br><span class="revealContainer" data-reveal-custom="2"><span>coordination protocol</span></span></h1>
+			<h1><span class="revealContainer" data-reveal-custom="1"><span>THE ULTIMATE</span></span><span class="stars" data-reveal-custom="1"><?php include './assets/stars.svg' ?></span><br><span class="revealContainer spaceRight" data-reveal-custom="2"><span>coordination </span></span><span class="revealContainer" data-reveal-custom="2"><span>protocol</span></span></h1>
 			<span class="subtitle" data-reveal-custom="1">OKP4 is an ever-expanding universe of applications powered by shared digital resources.</span>
 		</div>
 

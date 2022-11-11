@@ -1,15 +1,17 @@
 import ScrollManager from '../utils/scroll-manager';
-// import {sleep} from '../utils/utils';
+import {isWindowLarger} from '../utils/utils';
 
 export default class PageHome {
   static init() {
-    this.initHoverLanding();
-    this.initParallaxLanding();
-    this.initStickyUniverse();
     this.initRoadmap();
 
-    this.defaultScrollY = window.scrollY;
-    this.scrollMonitor = setInterval(this.scrollStarted.bind(this), 300);
+    if (isWindowLarger('lg')) {
+      this.initStickyUniverse();
+      this.initHoverLanding();
+      this.initParallaxLanding();
+      this.defaultScrollY = window.scrollY;
+      this.scrollMonitor = setInterval(this.scrollStarted.bind(this), 300);
+    }
   }
 
   static initHoverLanding() {
@@ -93,7 +95,7 @@ export default class PageHome {
     this.roadmapCurrent = 0;
     this.roadmapItems.forEach((el, index) => {
       let newIndex = index+1;
-      let height = el.offsetHeight + 50;
+      let height = el.querySelector('.roadmap__item-container').offsetHeight + 150;
       let heightCss = height + "px";
       let selectorCss = "--roadmap-item" + newIndex;
       document.documentElement.style.setProperty(selectorCss, heightCss);

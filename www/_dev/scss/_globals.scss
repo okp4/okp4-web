@@ -2,42 +2,67 @@ body {
   width: 100vw;
   min-height: 100vh;
   background-color: $whitebg;
+  color: $darkblue;
   font-family: $dmsans;
   font-size: 18px;
   font-weight: 400;
-  color: $darkblue;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 32px;
+  grid-template-columns: repeat(12, 1fr);
   width: 100vw;
   max-width: 1264px;
   margin: 0 auto;
+
+  @include media-breakpoint-down(md) {
+    grid-column-gap: 15px;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 0 15px;
+  }
 }
 
 .subgrid {
-  grid-column: 1/-1;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-column: 1/-1;
   grid-column-gap: 32px;
+  grid-template-columns: repeat(12, 1fr);
+
+  @include media-breakpoint-down(md) {
+    grid-column-gap: 15px;
+    grid-template-columns: repeat(6, 1fr);
+  }
 }
 
 h1 {
+  color: $white;
   font-family: $inter;
   font-size: 80px;
   font-weight: 900;
-  line-height: 1.2;
   letter-spacing: 0.03em;
+  line-height: 1.2;
   text-transform: uppercase;
-  color: $white;
+
+  @include media-breakpoint-down(xl) {
+    font-size: 70px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    font-size: 60px;
+  }
+
+  @include media-breakpoint-down(md) {
+    font-size: 41px;
+    line-height: 54px;
+  }
 
   span {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     letter-spacing: inherit;
+    line-height: inherit;
   }
 }
 
@@ -53,18 +78,34 @@ h6 {
 
 h2 {
   font-size: 60px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 35px;
+  }
 }
 
 h3 {
   font-size: 35px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 27px;
+  }
 }
 
 h4 {
   font-size: 25px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+  }
 }
 
 p {
   font-size: 18px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 15px;
+  }
 
   strong {
     font-weight: 500;
@@ -74,13 +115,21 @@ p {
 p.up {
   font-size: 20px;
   line-height: 1.8;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 18px;
+  }
 }
 
 p.featured {
+  color: $violet;
   font-size: 25px;
   font-weight: 800;
   line-height: 1.8;
-  color: $violet;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+  }
 }
 
 b {
@@ -88,16 +137,16 @@ b {
 }
 
 .cta {
-  text-decoration: none;
   transition: opacity 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
+  text-decoration: none;
 
   span {
     display: inline-block;
+    color: $white;
     font-family: $dmsans;
     font-size: 16px;
     font-weight: 400;
     vertical-align: middle;
-    color: $white;
 
     &.icon {
       transition: all 0.4s cubic-bezier(0.43, 0.195, 0.02, 1);
@@ -127,8 +176,8 @@ b {
     justify-content: center;
     height: 60px;
     padding: 0 25px;
-    background: $orange;
     border-radius: 61px;
+    background: $orange;
   }
 }
 
@@ -158,17 +207,21 @@ b {
 
   .grain {
     opacity: 0.8;
-    background-size: contain;
-    background-repeat: repeat;
     background-image: url("./grain.png");
+    background-repeat: repeat;
+    background-size: contain;
   }
 }
 
 .label {
   display: inline-block;
+  padding: 7px 17px;
   border: 1px dashed $blue;
   border-radius: 20px;
-  padding: 7px 17px;
+
+  @include media-breakpoint-down(md) {
+    padding: 4px 12px;
+  }
 
   span {
     color: $violet;

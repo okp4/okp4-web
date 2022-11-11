@@ -10,14 +10,16 @@
   opacity: 0;
 }
 
-[data-reveal="2"],
-[data-reveal="2"][data-text] {
-  transition: opacity 0.5s linear 0.4s, transform 0.8s cubic-bezier(0.25, 0, 0, 1) 0.4s;
-}
+@include media-breakpoint-up(md) {
+  [data-reveal="2"],
+  [data-reveal="2"][data-text] {
+    transition: opacity 0.5s linear 0.4s, transform 0.8s cubic-bezier(0.25, 0, 0, 1) 0.4s;
+  }
 
-[data-reveal="3"],
-[data-reveal="3"][data-text] {
-  transition: opacity 0.5s linear 0.6s, transform 0.8s cubic-bezier(0.25, 0, 0, 1) 0.6s;
+  [data-reveal="3"],
+  [data-reveal="3"][data-text] {
+    transition: opacity 0.5s linear 0.6s, transform 0.8s cubic-bezier(0.25, 0, 0, 1) 0.6s;
+  }
 }
 
 [data-reveal].is-in-view {
