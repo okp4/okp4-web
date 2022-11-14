@@ -27,6 +27,10 @@
   opacity: 1;
 }
 
+[data-inifinite-animation]:not(.is-in-view) {
+  animation: none !important;
+}
+
 @keyframes floating-image {
   0% {
     transform: translate3d(0, 0, 0) rotate(0deg);

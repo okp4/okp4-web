@@ -1,12 +1,8 @@
-const path = require('path');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
 
-module.exports = {
-  entry: path.resolve(__dirname, 'js/index.js'),
-  output: {
-    filename: 'index.js',
-    path: path.resolve(__dirname, '../assets'),
-  },
+module.exports = env => merge(common, {
   mode: 'development',
   watch: true,
   devtool: 'inline-source-map'
-};
+});

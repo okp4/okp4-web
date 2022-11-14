@@ -90,15 +90,94 @@
       }
 
       .newsletter {
+        position: relative;
         width: 585px;
-        height: 55px;
         margin-bottom: 73px;
         border-radius: 10px;
-        background-color: $whitebg;
 
         @include media-breakpoint-down(md) {
-          width: 300px;
-          margin-bottom: 30px;
+          width: 100%;
+          margin-bottom: 50px;
+          padding: 0 15px;
+        }
+
+        svg,
+        .input--hidden,
+        .entry__error {
+          display: none !important;
+        }
+
+        #error-message,
+        #success-message {
+          display: none;
+          position: absolute;
+          top: 100%;
+          width: 100%;
+          padding-left: 3px;
+          text-align: left;
+
+          &.sib-form-message-panel--active {
+            display: block;
+            margin-top: 10px;
+
+            * {
+              color: $orange;
+              font-size: 13px;
+              text-align: left !important;
+            }
+          }
+        }
+
+        #success-message {
+          * {
+            color: $violet !important;
+          }
+        }
+
+        form {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          input,
+          .cta {
+            width: 100%;
+            height: 55px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+          }
+
+          .input__container {
+            width: 75%;
+            margin-right: 10px;
+
+            @include media-breakpoint-down(md) {
+              width: 60%;
+            }
+
+            input {
+              padding: 0 20px;
+              background: $whitebg;
+            }
+          }
+
+          .button__container {
+            // width: 100%;
+            flex: 1;
+
+            button {
+              cursor: pointer;
+
+              .icon svg {
+                display: block !important;
+              }
+            }
+          }
+
+          .cta {
+            background: $violet;
+          }
         }
       }
 

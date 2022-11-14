@@ -130,13 +130,14 @@
 			</div>
 
 			<div class="video" data-reveal="1">
-				<video>
-					<source src="./assets/video.mp4" type="video/mp4">
+				<video autoplay muted loop playsinline preload="auto">
+					<source src="./assets/video720p.mp4" type="video/mp4">
+					<source src="./assets/video720p.webm" type="video/webm">
 				</video>
-				<div class="bg playVideo">
+				<!-- <div class="bg playVideo">
 					<div class="flat"></div>
 					<?php include './assets/play.svg' ?>
-				</div>
+				</div> -->
 			</div>
 
 		</div>
@@ -161,7 +162,7 @@
 					</div>
 
 					<div class="illus" data-parallax="-60" data-reveal-custom="1">
-						<img src="./assets/illus/universe1.png" alt="">
+						<img src="./assets/illus/universe1.png" alt="" data-inifinite-animation="1">
 					</div>
 
 					<div class="text">
@@ -184,7 +185,7 @@
 					</div>
 
 					<div class="illus" data-parallax="-90" data-reveal-custom="1">
-						<img src="./assets/illus/universe2.png" alt="">
+						<img src="./assets/illus/universe2.png" alt="" data-inifinite-animation="1">
 					</div>
 
 					<div class="text">
@@ -207,7 +208,7 @@
 					</div>
 
 					<div class="illus" data-parallax="-60" data-reveal-custom="1">
-						<img src="./assets/illus/universe3.png" alt="">
+						<img src="./assets/illus/universe3.png" alt="" data-inifinite-animation="1">
 					</div>
 
 					<div class="text">
@@ -230,7 +231,7 @@
 					</div>
 
 					<div class="illus" data-parallax="-90" data-reveal-custom="1">
-						<img src="./assets/illus/universe4.png" alt="">
+						<img src="./assets/illus/universe4.png" alt="" data-inifinite-animation="1">
 					</div>
 
 					<div class="text">
@@ -428,7 +429,56 @@
 				<a href="" class="cta cta--btn"><span class="text">Let's Get In Touch</span><span class="icon"><?php include './assets/arrowtr.svg' ?></span></a>
 
 				<p class="featured">Follow our adventures and <b>stay up to date</b> !</p>
-				<div class="newsletter"></div>
+				<div class="newsletter">
+
+					<div class="sib-form">
+						<div id="sib-form-container" class="sib-form-container">
+							<div id="error-message" class="sib-form-message-panel">
+								<div class="sib-form-message-panel__text sib-form-message-panel__text--center"> 
+									<svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon"> <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" /> </svg> 
+									<span class="sib-form-message-panel__inner-text"> Nous n&#039;avons pas pu confirmer votre inscription. </span> 
+								</div> 
+							</div> 
+							<div></div> 
+							<div id="success-message" class="sib-form-message-panel"> 
+								<div class="sib-form-message-panel__text sib-form-message-panel__text--center"> 
+									<svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon"> <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" /> </svg> 
+									<span class="sib-form-message-panel__inner-text"> Votre inscription est confirmée. </span> 
+								</div> 
+							</div> 
+							<div></div> 
+							<div id="sib-container" class="sib-container--large sib-container--vertical" > 
+								<form id="sib-form" method="POST" action="https://0fecd7e3.sibforms.com/serve/MUIEANdOlhc-lWaiGH-WIgSTFCbSBmUZqtKowLRB7A5m55_Hkldh1-tqfr4X-zd6dpAeuzwNP4RtwkB_oKG-wiit25lKGKAM-zRFnOqeAO0lIYJNulFg1sDGwVCayREsNxwi3l_cs1IAwFIy8OSqXATxQJWVhXtE57DtWz4A1qKsCFPGBNQcofAXBLzTc0Bx6n-zxe3bwm_DsujP" data-type="subscription"> 
+									<div class="input__container"> 
+										<div class="sib-input sib-form-block"> 
+											<div class="form__entry entry_block"> 
+												<div class="form__label-row "> 
+													<div class="entry__field"> 
+														<input class="input" type="text" id="EMAIL" name="EMAIL" placeholder="Email address" autocomplete="off" data-required="true" required /> 
+													</div> 
+												</div> 
+												<label class="entry__error entry__error--primary"> </label> 
+											</div> 
+										</div> 
+									</div> 
+									<div class="button__container"> 
+										<div class="sib-form-block"> 
+											<button class="cta cta--button sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit"> 
+												<svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512"> <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" /> </svg>
+												<span class="text">Register</span><span class="icon"><?php include './assets/arrowlr.svg' ?></span>
+											</button>
+										</div> 
+									</div> 
+									<input type="text" name="email_address_check" value="" class="input--hidden"> 
+									<input type="hidden" name="locale" value="fr"> 
+								</form> 
+							</div> 
+						</div> 
+					</div>
+
+					<script> window.REQUIRED_CODE_ERROR_MESSAGE = 'Veuillez choisir un code pays'; window.LOCALE = 'fr'; window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer."; window.REQUIRED_ERROR_MESSAGE = "Vous devez renseigner ce champ. "; window.GENERIC_INVALID_MESSAGE = "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer."; window.translation = { common: { selectedList: '{quantity} liste sélectionnée', selectedLists: '{quantity} listes sélectionnées' } }; var AUTOHIDE = Boolean(0); </script> 
+					<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+				</div>
 
 				<div class="socials">
 					<a href="" class="social__item"><?php include './assets/socials/linkedin.svg' ?></a>
