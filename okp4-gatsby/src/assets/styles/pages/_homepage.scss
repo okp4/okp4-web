@@ -1,0 +1,25 @@
+main.homepage {
+  .landing {
+    min-height: 100vh;
+    padding-top: 235px;
+    padding-bottom: 300px;
+    text-align: center;
+
+    h1 {
+      display: block;
+      margin: 0 auto 30px;
+      max-width: 1200px;
+      text-align: center;
+    }
+
+    p {
+      margin: 0 auto;
+      max-width: 765px;
+      color: $white-80;
+      text-align: center;
+      font-size: 26px;
+      line-height: 1.8;
+      letter-spacing: 0.05em;
+    }
+  }
+}

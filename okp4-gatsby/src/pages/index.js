@@ -1,10 +1,11 @@
-import * as React from "react"
-import Layout from "../components/Layout"
+import * as React from "react";
+import Layout from "../components/Layout";
+import Landing from "../components/pages/index/Landing";
 
 export default function Home() {
   return (
-    <Layout>
-      <h1>Homepage h1 - index.js</h1>
+    <Layout location={"homepage"}>
+      <Landing></Landing>
     </Layout>
-  )
+  );
 }
