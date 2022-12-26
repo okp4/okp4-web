@@ -5,11 +5,27 @@ body {
   font-weight: 400;
 }
 
+.wrapper {
+  display: block;
+  position: relative;
+  max-width: 1265px;
+  margin: 0 auto;
+}
+
 p,
 span {
   font-family: $font;
   font-weight: 400;
   font-size: 18px;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+
+  &:visited {
+    color: $white;
+  }
 }
 
 h1,

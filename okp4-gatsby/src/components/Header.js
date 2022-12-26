@@ -64,7 +64,7 @@ const Header = () => {
               <IconArrowtr />
             </Link>
             <Link to="/" className="header__resources__link">
-              <span>Learn</span>
+              <span>Nemeton program</span>
               <IconArrowtr />
             </Link>
           </nav>
