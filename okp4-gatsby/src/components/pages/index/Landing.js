@@ -2,7 +2,7 @@ import React from "react";
 
 const Landing = () => {
   return (
-    <section className="strate landing">
+    <section className="landing">
       <div className="wrapper">
         <h1>
           The open

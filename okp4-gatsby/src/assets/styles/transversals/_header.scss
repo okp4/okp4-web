@@ -4,8 +4,9 @@ header.header {
   margin-bottom: 30px;
 
   .header__top {
-    width: 100%;
     display: flex;
+    position: relative;
+    width: 100%;
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 35px;
@@ -53,6 +54,7 @@ header.header {
 
   .header__bottom {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
 

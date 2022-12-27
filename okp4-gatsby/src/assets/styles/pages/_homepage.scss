@@ -1,7 +1,7 @@
 main.homepage {
   .landing {
     min-height: 100vh;
-    padding-top: 235px;
+    padding-top: 20vh;
     padding-bottom: 300px;
     text-align: center;
 
@@ -20,6 +20,99 @@ main.homepage {
       font-size: 26px;
       line-height: 1.8;
       letter-spacing: 0.05em;
+    }
+  }
+
+  .introduction {
+    background-color: $darkblue;
+    padding: 120px 0;
+
+    .introduction__title {
+      max-width: 66%;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    .introduction__text {
+      max-width: 70%;
+      margin: 0 auto 25px;
+      text-align: center;
+      color: $white-80;
+      font-size: 20px;
+      line-height: 1.5;
+
+      b {
+        font-weight: 600;
+      }
+
+      a {
+        display: inline-block;
+        margin: 0 5px;
+        color: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+
+        span {
+          display: inline-block;
+          margin-right: 5px;
+          font-weight: 700;
+        }
+
+        svg {
+          width: 9px;
+          height: auto;
+        }
+      }
+    }
+
+    .introduction__catch {
+      max-width: 70%;
+      margin: 0 auto 70px;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 700;
+    }
+
+    .title {
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 33px;
+    }
+
+    .introduction__cards {
+      .introduction__cards__item {
+        display: flex;
+        grid-column: span 4;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        height: 447px;
+        padding: 10px 0 40px;
+        background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%),
+          #ffffff;
+        border: 1px solid $white;
+        border-radius: 20px;
+
+        .introduction__cards__item__illus {
+          width: 340px;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .title,
+        .text {
+          color: $textblue;
+          text-align: center;
+        }
+
+        .title {
+          margin-top: auto;
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }
