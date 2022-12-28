@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
+import Halo from "../../Halo.js";
 
 const Introduction = () => {
   return (
     <section className="strate introduction">
+      <Halo></Halo>
       <div className="wrapper">
         <h2 className="introduction__title">
           New opportunities for every digital ressource

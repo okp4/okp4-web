@@ -25,24 +25,22 @@ const Halo = () => {
   }, []);
 
   function handleMouseEnter(event) {
-    console.log("mouseEnter");
-    console.log(divRef.current.parentNode);
     divRef.current.classList.add("is-active");
   }
 
   function handleMouseLeave(event) {
-    console.log("mouseLeave");
     divRef.current.classList.remove("is-active");
   }
 
   function handleMouseMove(event) {
     // Update the position of the div based on the mouse position
     setTimeout(() => {
-      let mouseX = event.pageX;
-      let mouseY = event.pageY;
+      let offsetY = divRef.current.getBoundingClientRect().y;
+      let mouseX = event.clientX;
+      let mouseY = event.clientY - offsetY;
       let transformCss = "translate3d(" + mouseX + "px, " + mouseY + "px, 0)";
-      divRef.current.style.transform = transformCss;
-      console.log(transformCss);
+      divRef.current.querySelector(".halo__light").style.transform =
+        transformCss;
     }, 100);
   }
 

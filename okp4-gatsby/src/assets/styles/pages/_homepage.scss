@@ -1,6 +1,5 @@
 main.homepage {
   .landing {
-    position: relative;
     min-height: 100vh;
     padding-top: 35vh;
     padding-bottom: 300px;
@@ -27,6 +26,7 @@ main.homepage {
   .introduction {
     background-color: $darkblue;
     padding: 160px 0;
+    overflow: hidden;
 
     .introduction__title {
       max-width: 66%;
