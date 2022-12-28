@@ -60,6 +60,51 @@ const Introduction = () => {
             <p className="text">for collaboration</p>
           </div>
         </div>
+
+        <div className="grid introduction__pushs">
+          <div className="introduction__pushs__item introduction__pushs__item--left">
+            <div className="introduction__pushs__item__illus">
+              <StaticImage
+                className="imgWrapper"
+                src="../../../assets/images/illus/index_intro_know.png"
+                alt="OKP4 Know token"
+              />
+            </div>
+            <div className="introduction__pushs__item__texts">
+              <p className="title">Powered by the KNOW token</p>
+              <p className="text">
+                Incentives & value flows for the many use cases are enabled by
+                the $KNOW. Many B2B use cases are ready to be launched, more
+                community use cases will be built when the Testnet launches.
+              </p>
+            </div>
+          </div>
+          <div className="introduction__pushs__item introduction__pushs__item--right">
+            <div className="introduction__pushs__item__illus">
+              <StaticImage
+                className="imgWrapper"
+                src="../../../assets/images/illus/index_intro_cosmos.png"
+                alt="cosmos sdk"
+              />
+            </div>
+            <div className="introduction__pushs__item__texts">
+              <p className="title">Built on the Cosmos SDK</p>
+              <p className="text">
+                A smart contract hub specifically designed for Data Spaces.
+              </p>
+            </div>
+          </div>
+          <div className="introduction__pushs__item introduction__pushs__item--right">
+            <div className="introduction__pushs__item__texts">
+              <p className="title">Simplicity and transparency</p>
+              <p className="text">
+                Decentralization guarantees sovereignity of shared data and
+                services, trustlessness, transparency, easy managment and
+                customization of governance rules.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

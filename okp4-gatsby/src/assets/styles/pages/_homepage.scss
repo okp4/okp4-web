@@ -25,7 +25,7 @@ main.homepage {
 
   .introduction {
     background-color: $darkblue;
-    padding: 120px 0;
+    padding: 160px 0;
 
     .introduction__title {
       max-width: 66%;
@@ -111,6 +111,169 @@ main.homepage {
         .title {
           margin-top: auto;
           margin-bottom: 10px;
+        }
+      }
+    }
+
+    .introduction__pushs {
+      margin-top: 80px;
+      grid-row-gap: 32px;
+
+      .introduction__pushs__item {
+        display: flex;
+        grid-column: span 6;
+        background: $pushblue;
+        border-radius: 20px;
+      }
+
+      .title {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .text {
+        color: $white-80;
+        line-height: 32px;
+      }
+
+      .introduction__pushs__item--left {
+        flex-direction: column;
+        justify-content: flex-end;
+        grid-row: span 2;
+        height: 487px;
+        padding: 50px;
+
+        .introduction__pushs__item__illus {
+          margin-top: auto;
+          margin-bottom: 0;
+          width: 350px;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .introduction__pushs__item__texts {
+          margin-top: 40px;
+          margin-bottom: 0;
+        }
+      }
+
+      .introduction__pushs__item--right {
+        grid-row: span 1;
+        height: 100%;
+        padding: 40px 75px 40px 40px;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .introduction__pushs__item__illus {
+          width: 115px;
+          margin-right: 60px;
+        }
+
+        .introduction__pushs__item__texts {
+          flex: 1;
+        }
+      }
+    }
+  }
+
+  .video {
+    .video__player {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+
+      svg {
+        width: 75px;
+        height: auto;
+      }
+    }
+  }
+
+  .universe {
+    padding: 120px;
+    background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%), #ffffff;
+
+    .universe__title {
+      display: block;
+      margin-bottom: 120px;
+      text-align: center;
+    }
+
+    .universe__wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .universe__items {
+      display: inline-block;
+      width: 41%;
+      margin-top: 50vh;
+
+      .universe__item {
+        width: 100%;
+        margin-bottom: 100px;
+
+        .tag {
+          display: inline-block;
+          padding: 6px 19px;
+          text-align: center;
+          background-color: $white;
+          border-radius: 10px;
+
+          span {
+            color: $textblue;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 19px;
+          }
+        }
+
+        .title {
+          display: block;
+          font-size: 50px;
+          font-weight: 600;
+          line-height: 60px;
+          margin-top: 15px;
+          margin-bottom: 35px;
+        }
+
+        .text {
+          display: block;
+          color: $white-80;
+          line-height: 1.5;
+        }
+      }
+    }
+
+    .universe__illus {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      position: sticky;
+      top: 0;
+      width: 58%;
+      height: 100%;
+      min-height: 595px;
+
+      .universe__illus__item {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        max-width: 595px;
+
+        &:nth-of-type(1) {
+          position: relative;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
         }
       }
     }
