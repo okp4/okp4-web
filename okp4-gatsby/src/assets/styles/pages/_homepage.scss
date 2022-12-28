@@ -179,13 +179,14 @@ main.homepage {
   }
 
   .video {
+    background: #000;
+
     .video__player {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
       aspect-ratio: 16/9;
-      background: #000;
 
       svg {
         width: 75px;
@@ -195,7 +196,7 @@ main.homepage {
   }
 
   .universe {
-    padding: 120px;
+    padding: 120px 0 80px;
     background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%), #ffffff;
 
     .universe__title {
@@ -205,8 +206,7 @@ main.homepage {
     }
 
     .universe__wrapper {
-      display: flex;
-      justify-content: space-between;
+      display: block;
       width: 100%;
     }
 
@@ -214,6 +214,7 @@ main.homepage {
       display: inline-block;
       width: 41%;
       margin-top: 50vh;
+      vertical-align: top;
 
       .universe__item {
         width: 100%;
@@ -252,14 +253,15 @@ main.homepage {
     }
 
     .universe__illus {
-      display: flex;
+      display: inline-flex;
       align-items: flex-start;
       justify-content: flex-end;
       position: sticky;
-      top: 0;
+      top: 60px;
       width: 58%;
       height: 100%;
       min-height: 595px;
+      vertical-align: top;
 
       .universe__illus__item {
         position: absolute;
@@ -274,6 +276,119 @@ main.homepage {
         img {
           width: 100%;
           height: auto;
+        }
+      }
+    }
+
+    .roadmap {
+      width: 100%;
+      margin-top: 180px;
+
+      .roadmap__intro {
+        text-align: center;
+        p {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        h2 {
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        p.title {
+          max-width: 90%;
+          margin-bottom: 32px;
+          font-size: 50px;
+          font-weight: 600;
+        }
+
+        p.text {
+          max-width: 70%;
+          color: $white-80;
+          font-size: 20px;
+          line-height: 1.5;
+          margin-bottom: 70px;
+
+          b {
+            font-weight: 600;
+          }
+        }
+      }
+
+      .roadmap__items {
+        width: 100%;
+
+        .roadmap__item {
+          display: flex;
+          width: 100%;
+          min-height: 600px;
+          border-radius: 20px;
+          margin-bottom: 32px;
+          overflow: hidden;
+
+          &:nth-child(1) {
+            background-color: #00b6b7;
+          }
+
+          &:nth-child(2) {
+            background-color: #008fad;
+          }
+
+          &:nth-child(3) {
+            background-color: #006796;
+          }
+
+          &:nth-child(4) {
+            background-color: #004073;
+          }
+
+          &:nth-child(5) {
+            background-color: #032b4a;
+          }
+
+          .roadmap__item__text {
+            min-height: 100%;
+            width: 60%;
+            padding: 40px 75px 40px 40px;
+
+            .title {
+              display: block;
+              margin-bottom: 32px;
+              font-size: 35px;
+              font-weight: 700;
+              line-height: 42px;
+            }
+
+            .excerpt {
+              display: block;
+              margin-bottom: 32px;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 36px;
+            }
+
+            .description {
+              color: $white-80;
+              line-height: 32px;
+
+              b {
+                font-weight: 700;
+              }
+            }
+          }
+
+          .roadmap__item__illus {
+            min-height: 100%;
+            width: 40%;
+
+            div,
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
         }
       }
     }
