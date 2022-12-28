@@ -1,8 +1,10 @@
 import React from "react";
+import Halo from "../../Halo.js";
 
 const Landing = () => {
   return (
     <section className="landing">
+      <Halo></Halo>
       <div className="wrapper">
         <h1>
           The open
