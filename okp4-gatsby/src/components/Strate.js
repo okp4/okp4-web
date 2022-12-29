@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { onDocumentLoad } from "gatsby";
 
 const Strate = ({ children, classContainer }) => {
   const divRef = useRef(null);
@@ -8,7 +7,15 @@ const Strate = ({ children, classContainer }) => {
 
   const setStickyPosition = () => {
     let divDimensions = divRef.current.getBoundingClientRect();
-    let topPositionSticky = -(divDimensions.height - windowHeight);
+    let topPositionSticky = 0;
+    console.log(divDimensions.height);
+
+    if (divDimensions.height > windowHeight) {
+      console.log("I am bigger than windowHeight");
+      topPositionSticky = -(divDimensions.height - windowHeight);
+    }
+    console.log({ topPositionSticky });
+
     let topPositionCss = topPositionSticky + "px";
     divRef.current.style.top = topPositionCss;
   };
@@ -25,11 +32,11 @@ const Strate = ({ children, classContainer }) => {
     let startScale = divRef.current.dataset.start;
     let endScale = divRef.current.dataset.end;
 
-    if (window.scrollY > startScale && window.scrollY < endScale) {
+    if (window.scrollY >= startScale && window.scrollY <= endScale) {
       let ratio = getScaleRatio({ startScale, endScale });
       console.log(ratio);
 
-      let scaleRatio = 1 - ratio / 5;
+      let scaleRatio = 1 - ratio / 10;
       let scaleCss =
         "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
       divRef.current.style.transform = scaleCss;
@@ -39,33 +46,42 @@ const Strate = ({ children, classContainer }) => {
       // divRef.current.querySelector(".strate__inner").style.transform =
       //   translateCss;
 
-      let opacityRatio = 1 - ratio;
-      divRef.current.querySelector(".strate__inner").style.opacity =
+      let opacityRatio = ratio / 1.1;
+      divRef.current.querySelector(".strate__layer").style.opacity =
         opacityRatio;
     }
     requestAnimationFrame(perspective);
   };
 
   useEffect(() => {
-    var divDimensions = divRef.current.getBoundingClientRect();
-    var divAbsoluteTop = divDimensions.top + window.scrollY;
-    var startScale = divAbsoluteTop + divDimensions.height - windowHeight;
-    var endScale = divAbsoluteTop + divDimensions.height;
-    divRef.current.dataset.top = divAbsoluteTop;
-    divRef.current.dataset.start = startScale;
-    divRef.current.dataset.end = endScale;
-    console.log(divRef.current.dataset);
+    setTimeout(function () {
+      var divDimensions = divRef.current.getBoundingClientRect();
+      var divAbsoluteTop = divDimensions.top + window.scrollY;
+      var startScale = divAbsoluteTop + divDimensions.height - windowHeight;
+      if (divDimensions.height < windowHeight) {
+        startScale = divAbsoluteTop;
+      }
+      var endScale = divAbsoluteTop + divDimensions.height;
+      divRef.current.dataset.top = divAbsoluteTop;
+      divRef.current.dataset.start = startScale;
+      divRef.current.dataset.end = endScale;
+      console.log(divRef.current.dataset);
 
-    setStickyPosition();
-    const animationFrame = requestAnimationFrame(perspective);
-    return () => {
-      cancelAnimationFrame(animationFrame);
-    };
+      setStickyPosition();
+      const animationFrame = requestAnimationFrame(perspective);
+
+      return () => {
+        cancelAnimationFrame(animationFrame);
+      };
+    }, 1000);
   }, []);
 
   return (
     <section className={"strate " + classContainer} ref={divRef}>
-      <div className="strate__inner">{children}</div>
+      <div className="strate__inner">
+        <div className="strate__layer"></div>
+        {children}
+      </div>
     </section>
   );
 };

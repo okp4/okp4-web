@@ -1,9 +1,10 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import Strate from "../../Strate.js";
 
 const Universe = () => {
   return (
-    <section className="strate universe">
+    <Strate classContainer={"universe"}>
       <div className="wrapper">
         <h2 className="universe__title">Enter in the OKP4 universe</h2>
         <div className="universe__wrapper">
@@ -264,7 +265,7 @@ const Universe = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Strate>
   );
 };
 

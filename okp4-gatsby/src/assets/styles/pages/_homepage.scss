@@ -181,7 +181,9 @@ main.homepage {
   }
 
   .video {
-    background: #000;
+    .strate__inner {
+      background: #000;
+    }
 
     .video__player {
       display: flex;
@@ -198,8 +200,10 @@ main.homepage {
   }
 
   .universe {
-    padding: 120px 0 80px;
-    background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%), #ffffff;
+    .strate__inner {
+      padding: 120px 0 80px;
+      background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%), #ffffff;
+    }
 
     .universe__title {
       display: block;
