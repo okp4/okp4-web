@@ -7,7 +7,7 @@ const Strate = ({ children, classContainer }) => {
 
   const setStickyPosition = () => {
     let divDimensions = divRef.current.getBoundingClientRect();
-    let topPositionSticky = 0;
+    let topPositionSticky = -40;
     console.log(divDimensions.height);
 
     if (divDimensions.height > windowHeight) {
@@ -36,17 +36,12 @@ const Strate = ({ children, classContainer }) => {
       let ratio = getScaleRatio({ startScale, endScale });
       console.log(ratio);
 
-      let scaleRatio = 1 - ratio / 10;
+      let scaleRatio = (1 - ratio / 10).toFixed(4);
       let scaleCss =
         "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
       divRef.current.style.transform = scaleCss;
 
-      // let translateRatio = windowHeight * ratio;
-      // let translateCss = "translate3d(0, " + translateRatio + "px, 0)";
-      // divRef.current.querySelector(".strate__inner").style.transform =
-      //   translateCss;
-
-      let opacityRatio = ratio / 1.1;
+      let opacityRatio = (ratio / 2).toFixed(4);
       divRef.current.querySelector(".strate__layer").style.opacity =
         opacityRatio;
     }

@@ -3,15 +3,17 @@ section.strate {
   width: calc(100vw - 60px);
   margin: 0 auto;
   transform-origin: top;
-  overflow: hidden;
+  will-change: transform;
+  // overflow: hidden;
 
   .strate__inner {
     border-radius: 40px;
     transform-origin: top;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   .strate__layer {
+    border-radius: 40px;
     position: absolute;
     z-index: 999;
     top: 0;
@@ -21,6 +23,7 @@ section.strate {
     background-color: #000000;
     opacity: 0;
     pointer-events: none;
+    overflow: hidden;
   }
 
   // & + .strate {

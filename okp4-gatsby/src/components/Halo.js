@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 
-const Halo = () => {
+const Halo = ({ classContainer = "halo--regular" }) => {
   const divRef = useRef(null);
 
   useEffect(() => {
@@ -45,7 +45,7 @@ const Halo = () => {
   }
 
   return (
-    <div className="halo" ref={divRef}>
+    <div className={"halo " + classContainer} ref={divRef}>
       <div className="halo__light"></div>
     </div>
   );

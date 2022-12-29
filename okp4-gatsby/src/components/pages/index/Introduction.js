@@ -9,7 +9,7 @@ const Introduction = () => {
   return (
     <Strate classContainer={"introduction"}>
       {/* <section className="strate introduction"> */}
-      <Halo></Halo>
+      <Halo classContainer={"halo--big"}></Halo>
       <div className="wrapper">
         <h2 className="introduction__title">
           New opportunities for every digital ressource
