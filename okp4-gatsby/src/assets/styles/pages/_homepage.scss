@@ -7,19 +7,19 @@ main.homepage {
 
     h1 {
       display: block;
-      margin: 0 auto 30px;
       max-width: 1200px;
+      margin: 0 auto 30px;
       text-align: center;
     }
 
     p {
-      margin: 0 auto;
       max-width: 765px;
+      margin: 0 auto;
       color: $white-80;
-      text-align: center;
       font-size: 26px;
-      line-height: 1.8;
       letter-spacing: 0.05em;
+      line-height: 1.8;
+      text-align: center;
     }
   }
 
@@ -38,10 +38,10 @@ main.homepage {
     .introduction__text {
       max-width: 70%;
       margin: 0 auto 25px;
-      text-align: center;
       color: $white-80;
       font-size: 20px;
       line-height: 1.5;
+      text-align: center;
 
       b {
         font-weight: 600;
@@ -70,9 +70,9 @@ main.homepage {
     .introduction__catch {
       max-width: 70%;
       margin: 0 auto 70px;
-      text-align: center;
       font-size: 25px;
       font-weight: 700;
+      text-align: center;
     }
 
     .title {
@@ -90,10 +90,10 @@ main.homepage {
         width: 400px;
         height: 447px;
         padding: 10px 0 40px;
-        background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%),
-          #ffffff;
         border: 1px solid $white;
         border-radius: 20px;
+        background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%),
+          #ffffff;
 
         .introduction__cards__item__illus {
           width: 340px;
@@ -118,14 +118,14 @@ main.homepage {
     }
 
     .introduction__pushs {
-      margin-top: 80px;
       grid-row-gap: 32px;
+      margin-top: 80px;
 
       .introduction__pushs__item {
         display: flex;
         grid-column: span 6;
-        background: $pushblue;
         border-radius: 20px;
+        background: $pushblue;
       }
 
       .title {
@@ -139,22 +139,23 @@ main.homepage {
       }
 
       .introduction__pushs__item--left {
+        grid-row: span 2;
         flex-direction: column;
         justify-content: flex-end;
-        grid-row: span 2;
         height: 487px;
         padding: 50px;
 
         .introduction__pushs__item__illus {
+          width: 350px;
           margin-top: auto;
           margin-bottom: 0;
-          width: 350px;
 
           img {
             width: 100%;
             height: auto;
           }
         }
+
         .introduction__pushs__item__texts {
           margin-top: 40px;
           margin-bottom: 0;
@@ -163,10 +164,10 @@ main.homepage {
 
       .introduction__pushs__item--right {
         grid-row: span 1;
-        height: 100%;
-        padding: 40px 75px 40px 40px;
         align-items: flex-start;
         justify-content: flex-start;
+        height: 100%;
+        padding: 40px 75px 40px 40px;
 
         .introduction__pushs__item__illus {
           width: 115px;
@@ -182,7 +183,7 @@ main.homepage {
 
   .video {
     .strate__inner {
-      background: #000;
+      background: #000000;
     }
 
     .video__player {
@@ -229,9 +230,9 @@ main.homepage {
         .tag {
           display: inline-block;
           padding: 6px 19px;
-          text-align: center;
-          background-color: $white;
           border-radius: 10px;
+          background-color: $white;
+          text-align: center;
 
           span {
             color: $textblue;
@@ -243,11 +244,11 @@ main.homepage {
 
         .title {
           display: block;
+          margin-top: 15px;
+          margin-bottom: 35px;
           font-size: 50px;
           font-weight: 600;
           line-height: 60px;
-          margin-top: 15px;
-          margin-bottom: 35px;
         }
 
         .text {
@@ -260,10 +261,10 @@ main.homepage {
 
     .universe__illus {
       display: inline-flex;
-      align-items: flex-start;
-      justify-content: flex-end;
       position: sticky;
       top: 60px;
+      align-items: flex-start;
+      justify-content: flex-end;
       width: 58%;
       height: 100%;
       min-height: 595px;
@@ -292,9 +293,10 @@ main.homepage {
 
       .roadmap__intro {
         text-align: center;
+
         p {
-          margin-left: auto;
           margin-right: auto;
+          margin-left: auto;
         }
 
         h2 {
@@ -311,10 +313,10 @@ main.homepage {
 
         p.text {
           max-width: 70%;
+          margin-bottom: 70px;
           color: $white-80;
           font-size: 20px;
           line-height: 1.5;
-          margin-bottom: 70px;
 
           b {
             font-weight: 600;
@@ -329,9 +331,9 @@ main.homepage {
           display: flex;
           width: 100%;
           min-height: 600px;
-          border-radius: 20px;
           margin-bottom: 32px;
           overflow: hidden;
+          border-radius: 20px;
 
           &:nth-child(1) {
             background-color: #00b6b7;
@@ -354,8 +356,8 @@ main.homepage {
           }
 
           .roadmap__item__text {
-            min-height: 100%;
             width: 60%;
+            min-height: 100%;
             padding: 40px 75px 40px 40px;
 
             .title {
@@ -385,8 +387,8 @@ main.homepage {
           }
 
           .roadmap__item__illus {
-            min-height: 100%;
             width: 40%;
+            min-height: 100%;
 
             div,
             img {
