@@ -24,9 +24,10 @@ main.homepage {
   }
 
   .introduction {
-    background-color: $darkblue;
-    padding: 160px 0;
-    overflow: hidden;
+    .strate__inner {
+      padding: 160px 0;
+      background-color: $darkblue;
+    }
 
     .introduction__title {
       max-width: 66%;

@@ -3,10 +3,12 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import Halo from "../../Halo.js";
+import Strate from "../../Strate.js";
 
 const Introduction = () => {
   return (
-    <section className="strate introduction">
+    <Strate classContainer={"introduction"}>
+      {/* <section className="strate introduction"> */}
       <Halo></Halo>
       <div className="wrapper">
         <h2 className="introduction__title">
@@ -108,7 +110,8 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-    </section>
+      {/* </section> */}
+    </Strate>
   );
 };
 
