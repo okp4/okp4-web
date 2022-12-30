@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Footer from "./Footer";
 import "../assets/styles/index.scss";
 
 const Layout = ({ children, location }) => {
@@ -7,6 +8,7 @@ const Layout = ({ children, location }) => {
     <>
       <Header />
       <main className={location}>{children}</main>
+      <Footer />
     </>
   );
 };

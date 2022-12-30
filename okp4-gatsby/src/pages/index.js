@@ -9,11 +9,11 @@ import Docs from "../components/pages/index/Docs";
 export default function Home() {
   return (
     <Layout location={"homepage"}>
-      <Landing></Landing>
-      <Introduction></Introduction>
-      <Video></Video>
-      <Universe></Universe>
-      <Docs></Docs>
+      <Landing />
+      <Introduction />
+      <Video />
+      <Universe />
+      <Docs />
     </Layout>
   );
 }
