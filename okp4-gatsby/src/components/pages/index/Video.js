@@ -1,6 +1,6 @@
 import React from "react";
 import IconPlay from "/src/assets/images/icons/play.inline.svg";
-import Strate from "../../Strate.js";
+import Strate from "../../animations/Strate.js";
 
 const Video = () => {
   return (

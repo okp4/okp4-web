@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
-import Halo from "../../Halo.js";
-import Strate from "../../Strate.js";
-import Parallax from "../../Parallax.js";
+import Halo from "../../animations/Halo.js";
+import Strate from "../../animations/Strate.js";
+import Parallax from "../../animations/Parallax.js";
 
 const Introduction = () => {
   return (

@@ -216,17 +216,18 @@ main.homepage {
 
     .gradient {
       position: absolute;
-      bottom: -50%;
-      left: -30%;
-      height: 100%;
-      width: 140%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
 
       .gradient__layer {
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        bottom: -50%;
+        left: -30%;
+        height: 100%;
+        width: 140%;
         background: radial-gradient(
           50% 50% at 50% 50%,
           rgba(255, 216, 119, 0.15) 0%,
@@ -276,18 +277,23 @@ main.homepage {
       display: inline-block;
       width: 41%;
       margin-top: 50vh;
+      padding-bottom: 200px;
       vertical-align: top;
 
       .universe__item {
+        position: relative;
         width: 100%;
-        margin-bottom: 100px;
+        margin-bottom: 140px;
 
         .tag {
+          position: absolute;
+          top: -40px;
           display: inline-block;
           padding: 6px 19px;
           border-radius: 10px;
           background-color: $white;
           text-align: center;
+          transition: all 0.4s ease;
 
           span {
             color: $textblue;
@@ -301,15 +307,51 @@ main.homepage {
           display: block;
           margin-top: 15px;
           margin-bottom: 35px;
+          transition: opacity 0.2s ease;
           font-size: 50px;
           font-weight: 600;
           line-height: 60px;
         }
 
         .text {
+          // position: absolute;
+          // top: 95px;
           display: block;
+          transition: all 0.4s ease;
           color: $white-80;
           line-height: 1.5;
+        }
+
+        &:not(.is-active) {
+          .title {
+            opacity: 0.15;
+          }
+
+          .tag {
+            opacity: 0;
+            transform: translate3d(0, -20px, 0);
+          }
+
+          .text {
+            opacity: 0;
+            transform: translate3d(-50px, 0, 0);
+          }
+        }
+
+        &.is-active {
+          .title {
+            opacity: 1;
+          }
+
+          .tag {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+          }
+
+          .text {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+          }
         }
       }
     }
@@ -330,6 +372,7 @@ main.homepage {
         top: 0;
         width: 100%;
         max-width: 595px;
+        transition: opacity 0.1s;
 
         &:nth-of-type(1) {
           position: relative;
@@ -338,6 +381,18 @@ main.homepage {
         img {
           width: 100%;
           height: auto;
+        }
+
+        &:not(.is-active) {
+          opacity: 0;
+        }
+
+        &.is-first-active {
+          opacity: 0.3;
+        }
+
+        &.is-active {
+          opacity: 1;
         }
       }
     }

@@ -1,15 +1,20 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import Strate from "../../Strate.js";
+import Strate from "../../animations/Strate.js";
+import StickyUniverse from "../../animations/StickyUniverse.js";
 
 const Universe = () => {
   return (
     <Strate classContainer={"universe"}>
       <div className="wrapper">
         <h2 className="universe__title">Enter in the OKP4 universe</h2>
-        <div className="universe__wrapper">
+        <StickyUniverse classContainer="universe__wrapper">
           <div className="universe__items">
-            <div className="universe__item" data-item="blockchain">
+            <div
+              className="universe__item is-first-active"
+              data-item="blockchain"
+              data-key="0"
+            >
               <div className="tag">
                 <span>OKP4</span>
               </div>
@@ -19,7 +24,7 @@ const Universe = () => {
                 coordination.
               </p>
             </div>
-            <div className="universe__item" data-item="dataverse">
+            <div className="universe__item" data-item="dataverse" data-key="1">
               <div className="tag">
                 <span>OKP4</span>
               </div>
@@ -31,7 +36,7 @@ const Universe = () => {
                 Spaces.
               </p>
             </div>
-            <div className="universe__item" data-item="dk">
+            <div className="universe__item" data-item="dk" data-key="2">
               <div className="tag">
                 <span>OKP4</span>
               </div>
@@ -41,7 +46,11 @@ const Universe = () => {
                 apps using the OKP4 protocol.
               </p>
             </div>
-            <div className="universe__item" data-item="dataverseapps">
+            <div
+              className="universe__item"
+              data-item="dataverseapps"
+              data-key="3"
+            >
               <div className="tag">
                 <span>OKP4</span>
               </div>
@@ -74,7 +83,10 @@ const Universe = () => {
                 alt="Blockchain"
               />
             </div>
-            <div className="universe__illus__item" data-item="blockchain">
+            <div
+              className="universe__illus__item is-first-active"
+              data-item="blockchain"
+            >
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_universe_blockchain.png"
@@ -82,7 +94,7 @@ const Universe = () => {
               />
             </div>
           </div>
-        </div>
+        </StickyUniverse>
 
         <div className="roadmap">
           <div className="roadmap__intro">

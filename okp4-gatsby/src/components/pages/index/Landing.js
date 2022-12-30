@@ -1,5 +1,5 @@
 import React from "react";
-import Halo from "../../Halo.js";
+import Halo from "../../animations/Halo.js";
 
 const Landing = () => {
   return (
