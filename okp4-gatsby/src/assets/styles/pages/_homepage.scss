@@ -438,30 +438,56 @@ main.homepage {
         width: 100%;
 
         .roadmap__item {
-          display: flex;
-          width: 100%;
+          position: sticky;
           min-height: 600px;
           margin-bottom: 32px;
+          width: 100%;
           overflow: hidden;
           border-radius: 20px;
+          transform-origin: top;
+
+          .roadmap__item__layer {
+            position: absolute;
+            z-index: 999;
+            top: -10px;
+            right: -10px;
+            bottom: -10px;
+            left: -10px;
+            overflow: hidden;
+            border-radius: 20px;
+            opacity: 0;
+            background-color: #000000;
+            pointer-events: none;
+          }
+
+          .roadmap__item__container {
+            display: flex;
+            position: sticky;
+            width: 100%;
+          }
 
           &:nth-child(1) {
+            // top: 20px;
             background-color: #00b6b7;
           }
 
           &:nth-child(2) {
+            // top: 50px;
             background-color: #008fad;
           }
 
           &:nth-child(3) {
+            // top: 80px;
             background-color: #006796;
           }
 
           &:nth-child(4) {
+            // top: 110px;
             background-color: #004073;
           }
 
           &:nth-child(5) {
+            // top: 140px;
             background-color: #032b4a;
           }
 
@@ -502,11 +528,16 @@ main.homepage {
 
             div,
             img {
-              width: 100%;
-              height: 100%;
+              width: 102%;
+              height: 102%;
               object-fit: cover;
             }
           }
+        }
+
+        .roadmap__items__bottom {
+          width: 100%;
+          height: 600px;
         }
       }
     }
@@ -516,7 +547,7 @@ main.homepage {
     position: relative;
     background-color: $nightblue;
     padding: 120px 0 0;
-    margin-top: 60px;
+    margin-top: 0;
 
     .docs__header {
       margin-bottom: 60px;

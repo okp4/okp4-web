@@ -9,7 +9,6 @@ import Parallax from "../../animations/Parallax.js";
 const Introduction = () => {
   return (
     <Strate classContainer={"introduction"}>
-      {/* <section className="strate introduction"> */}
       <Halo classContainer={"halo--big"}></Halo>
       <div className="gradient">
         <div className="gradient__layer"></div>
@@ -126,7 +125,6 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      {/* </section> */}
     </Strate>
   );
 };
