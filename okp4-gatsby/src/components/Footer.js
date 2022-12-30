@@ -11,7 +11,7 @@ import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 
 const Footer = () => {
   return (
-    <footer class="footer">
+    <footer className="footer">
       <div className="footer__partenaires">
         <div className="wrapper">
           <p>Our actions are co-funded by</p>

@@ -5,6 +5,10 @@ main.homepage {
     padding-bottom: 300px;
     text-align: center;
 
+    .wrapper {
+      position: relative;
+    }
+
     h1 {
       display: block;
       max-width: 1200px;
@@ -27,6 +31,10 @@ main.homepage {
     .strate__inner {
       padding: 160px 0;
       background-color: $darkblue;
+
+      .wrapper {
+        position: relative;
+      }
     }
 
     .introduction__title {
@@ -96,11 +104,30 @@ main.homepage {
           #ffffff;
 
         .introduction__cards__item__illus {
-          width: 340px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 1;
+          width: 100%;
 
-          img {
-            width: 100%;
-            height: auto;
+          .imgWrapper {
+            display: block;
+            width: 290px;
+            animation: floating-image 8s linear infinite;
+
+            picture {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+              height: auto;
+            }
+
+            img {
+              width: 100%;
+              height: auto;
+              object-fit: contain;
+            }
           }
         }
 
@@ -111,15 +138,22 @@ main.homepage {
         }
 
         .title {
-          margin-top: auto;
+          // margin-top: auto;
           margin-bottom: 10px;
+        }
+
+        &:nth-of-type(2) {
+          .imgWrapper {
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+          }
         }
       }
     }
 
     .introduction__pushs {
       grid-row-gap: 32px;
-      margin-top: 80px;
+      margin-top: 50px;
 
       .introduction__pushs__item {
         display: flex;
@@ -177,6 +211,27 @@ main.homepage {
         .introduction__pushs__item__texts {
           flex: 1;
         }
+      }
+    }
+
+    .gradient {
+      position: absolute;
+      bottom: -50%;
+      left: -30%;
+      height: 100%;
+      width: 140%;
+
+      .gradient__layer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(255, 216, 119, 0.15) 0%,
+          rgba(217, 217, 217, 0) 100%
+        );
       }
     }
   }

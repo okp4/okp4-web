@@ -1,0 +1,21 @@
+@keyframes floating-image {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate3d(0, 2px, 0) rotate(-3deg);
+  }
+
+  50% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  75% {
+    transform: translate3d(0, -2px, 0) rotate(3deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+}

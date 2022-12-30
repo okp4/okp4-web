@@ -4,12 +4,16 @@ import { StaticImage } from "gatsby-plugin-image";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import Halo from "../../Halo.js";
 import Strate from "../../Strate.js";
+import Parallax from "../../Parallax.js";
 
 const Introduction = () => {
   return (
     <Strate classContainer={"introduction"}>
       {/* <section className="strate introduction"> */}
       <Halo classContainer={"halo--big"}></Halo>
+      <div className="gradient">
+        <div className="gradient__layer"></div>
+      </div>
       <div className="wrapper">
         <h2 className="introduction__title">
           New opportunities for every digital ressource
@@ -28,7 +32,12 @@ const Introduction = () => {
           Let’s build amazing things together!
         </p>
         <div className="grid introduction__cards">
-          <div className="introduction__cards__item">
+          <Parallax
+            classContainer="introduction__cards__item"
+            parallaxStart="100"
+            parallaxEnd="-100"
+            parallaxMiddle="0.5"
+          >
             <div className="introduction__cards__item__illus">
               <StaticImage
                 className="imgWrapper"
@@ -38,9 +47,13 @@ const Introduction = () => {
             </div>
             <p className="title">Easy to build</p>
             <p className="text">Data Spaces and Applications</p>
-          </div>
-
-          <div className="introduction__cards__item">
+          </Parallax>
+          <Parallax
+            classContainer="introduction__cards__item"
+            parallaxStart="50"
+            parallaxEnd="-50"
+            parallaxMiddle="0.5"
+          >
             <div className="introduction__cards__item__illus">
               <StaticImage
                 className="imgWrapper"
@@ -50,9 +63,13 @@ const Introduction = () => {
             </div>
             <p className="title">Built in Trust</p>
             <p className="text">and custom governance</p>
-          </div>
-
-          <div className="introduction__cards__item">
+          </Parallax>
+          <Parallax
+            classContainer="introduction__cards__item"
+            parallaxStart="150"
+            parallaxEnd="-150"
+            parallaxMiddle="0.5"
+          >
             <div className="introduction__cards__item__illus">
               <StaticImage
                 className="imgWrapper"
@@ -62,9 +79,8 @@ const Introduction = () => {
             </div>
             <p className="title">Optimal incentives</p>
             <p className="text">for collaboration</p>
-          </div>
+          </Parallax>
         </div>
-
         <div className="grid introduction__pushs">
           <div className="introduction__pushs__item introduction__pushs__item--left">
             <div className="introduction__pushs__item__illus">
