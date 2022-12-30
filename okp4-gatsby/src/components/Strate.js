@@ -8,13 +8,10 @@ const Strate = ({ children, classContainer }) => {
   const setStickyPosition = () => {
     let divDimensions = divRef.current.getBoundingClientRect();
     let topPositionSticky = -40;
-    console.log(divDimensions.height);
 
     if (divDimensions.height > windowHeight) {
-      console.log("I am bigger than windowHeight");
       topPositionSticky = -(divDimensions.height - windowHeight);
     }
-    console.log({ topPositionSticky });
 
     let topPositionCss = topPositionSticky + "px";
     divRef.current.style.top = topPositionCss;
@@ -34,7 +31,6 @@ const Strate = ({ children, classContainer }) => {
 
     if (window.scrollY >= startScale && window.scrollY <= endScale) {
       let ratio = getScaleRatio({ startScale, endScale });
-      console.log(ratio);
 
       let scaleRatio = (1 - ratio / 10).toFixed(4);
       let scaleCss =
@@ -60,7 +56,6 @@ const Strate = ({ children, classContainer }) => {
       divRef.current.dataset.top = divAbsoluteTop;
       divRef.current.dataset.start = startScale;
       divRef.current.dataset.end = endScale;
-      console.log(divRef.current.dataset);
 
       setStickyPosition();
       const animationFrame = requestAnimationFrame(perspective);
