@@ -10,10 +10,18 @@ const Landing = () => {
     window.innerHeight || document.documentElement.clientHeight;
 
   const scrollStarted = () => {
-    if (window.scrollY > 30) {
-      divRef.current.classList.add("is-active");
-    } else {
-      divRef.current.classList.remove("is-active");
+    // if (window.scrollY > 30) {
+    //   divRef.current.classList.add("is-active");
+    // } else {
+    //   divRef.current.classList.remove("is-active");
+    // }
+
+    if (window.scrollY < 410) {
+      const scrollY = window.scrollY;
+      const distance = 400;
+      let percentTravelled = scrollY / distance;
+      if (percentTravelled > 1) percentTravelled = 1;
+      divFadeIn.current.style.opacity = percentTravelled;
     }
   };
 
