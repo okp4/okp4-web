@@ -50,6 +50,11 @@ header.header {
         align-items: center;
         justify-content: center;
         margin-left: 15px;
+        transition: opacity 0.25s ease;
+
+        &:hover {
+          opacity: 0.5;
+        }
 
         svg {
           width: 22px;
@@ -85,6 +90,7 @@ header.header {
 
       .header__resources__link {
         margin-left: 35px;
+        transition: opacity 0.25s ease;
 
         span {
           display: inline-block;
@@ -95,6 +101,15 @@ header.header {
         svg {
           width: 9px;
           height: auto;
+          transition: transform 0.25s ease;
+        }
+
+        &:hover {
+          opacity: 0.5;
+
+          svg {
+            transform: translate3d(5px, -5px, 0);
+          }
         }
       }
     }
@@ -104,10 +119,26 @@ header.header {
         margin: 0 15px;
 
         span {
+          background: transparent;
           font-size: 18px;
           font-weight: 700;
           line-height: 1.2;
           text-transform: uppercase;
+        }
+
+        &:hover {
+          span {
+            background: linear-gradient(
+                89.85deg,
+                #006796 37.02%,
+                #00b6b7 99.89%
+              ),
+              #ffffff;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
         }
       }
     }

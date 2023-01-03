@@ -8,10 +8,14 @@ import IconGithub from "../assets/images/socials/github.inline.svg";
 import IconMedium from "../assets/images/socials/medium.inline.svg";
 import IconDiscord from "../assets/images/socials/discord.inline.svg";
 import IconTelegram from "../assets/images/socials/telegram.inline.svg";
+import Halo from "./animations/Halo.js";
+import Docs from "./pages/index/Docs.js";
 
 const Footer = () => {
   return (
     <footer className="footer">
+      <Halo />
+      <Docs />
       <div className="footer__partenaires">
         <div className="wrapper">
           <p>Our actions are co-funded by</p>

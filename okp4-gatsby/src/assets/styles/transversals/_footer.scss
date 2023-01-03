@@ -1,7 +1,156 @@
 footer.footer {
-  padding-top: 120px;
+  position: relative;
   padding-bottom: 30px;
   background-color: $nightblue;
+
+  .docs {
+    position: relative;
+    padding: 120px 0 120px;
+    margin-top: 0;
+
+    .docs__header {
+      margin-bottom: 60px;
+
+      h3 {
+        display: inline-block;
+        width: 37%;
+        margin-right: 33px;
+      }
+
+      p {
+        display: inline-block;
+        max-width: calc(63% - 40px);
+        color: $white-80;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    .docs__content {
+      display: flex;
+
+      .title {
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .docs__content__item--large {
+        width: 37%;
+        margin-right: 32px;
+        position: relative;
+        grid-column: span 5;
+        height: 250px;
+        padding: 32px 40px;
+        border-radius: 20px;
+        background-color: #fff;
+        background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+        transition: background 0.25s ease;
+
+        &:hover {
+          background: linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
+          .title,
+          .description {
+            color: $white;
+          }
+
+          svg {
+            transform: translate3d(5px, -5px, 0);
+            path {
+              stroke: $white;
+            }
+          }
+        }
+
+        .title {
+          display: block;
+          margin-bottom: 16px;
+          color: $textblue;
+          transition: color 0.25s ease;
+        }
+
+        p.description {
+          max-width: 85%;
+          color: $textblue;
+          line-height: 27px;
+          transition: color 0.25s ease;
+        }
+
+        svg {
+          position: absolute;
+          right: 40px;
+          bottom: 40px;
+          width: 15px;
+          height: auto;
+          transition: transform 0.25s ease;
+
+          path {
+            stroke: #00b6b7;
+            transition: stroke 0.25s ease;
+          }
+        }
+      }
+
+      .docs__content__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        grid-column: span 2;
+        width: 100%;
+        flex: 1;
+
+        .docs__content__item {
+          display: flex;
+          position: relative;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+          height: calc(50% - 16px);
+          padding: 10px 32px;
+          border: 1px solid #006796;
+          border-radius: 20px;
+
+          &:hover {
+            background: linear-gradient(
+              39.81deg,
+              #006796 21.82%,
+              #00b6b7 98.43%
+            );
+
+            .arrow {
+              transform: translate3d(5px, -5px, 0);
+
+              path {
+                stroke: $white;
+              }
+            }
+          }
+
+          .social {
+            width: 33px;
+            height: auto;
+          }
+
+          .arrow {
+            position: relative;
+            top: 2px;
+            width: 15px;
+            height: auto;
+            transition: transform 0.25s ease;
+
+            path {
+              transition: stroke 0.25s ease;
+            }
+          }
+
+          p.title {
+            margin-left: 14px;
+            margin-right: auto;
+          }
+        }
+      }
+    }
+  }
 
   .footer__partenaires {
     text-align: center;
@@ -102,6 +251,15 @@ footer.footer {
 
         .footer__main__top__links__item {
           margin-left: 25px;
+          transition: opacity 0.25s ease;
+
+          &:hover {
+            opacity: 0.5;
+
+            svg {
+              transform: translate3d(5px, -5px, 0);
+            }
+          }
 
           span {
             display: inline-block;
@@ -112,6 +270,7 @@ footer.footer {
           svg {
             width: 9px;
             height: auto;
+            transition: transform 0.25s ease;
           }
         }
 
@@ -163,6 +322,11 @@ footer.footer {
           align-items: center;
           justify-content: center;
           margin-left: 20px;
+          transition: opacity 0.25s ease;
+
+          &:hover {
+            opacity: 0.5;
+          }
 
           svg {
             width: 29px;
