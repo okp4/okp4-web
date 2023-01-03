@@ -113,13 +113,18 @@ const Landing = () => {
       <div className="wrapper">
         <div className="landing__fade" ref={divFadeOut}>
           <h1>
-            The open
-            <br />
-            Knowledge protocol
+            <span>
+              <span>The open</span>
+            </span>
+            <span>
+              <span>Knowledge protocol</span>
+            </span>
           </h1>
           <p className="subtitle">
-            OKP4 is an ever-expanding universe of applications powered by shared
-            digital resources.
+            <span>
+              OKP4 is an ever-expanding universe of applications powered by
+              shared digital resources.
+            </span>
           </p>
         </div>
         <div className="landing__illus" ref={divFadeIn}>

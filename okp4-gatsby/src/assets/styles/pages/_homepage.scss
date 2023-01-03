@@ -19,11 +19,37 @@ main.homepage {
       h1 {
         display: block;
         max-width: 1200px;
-        margin: 0 auto 30px;
+        margin: 0 auto 10px;
         text-align: center;
+        line-height: 1;
+
+        span {
+          display: block;
+          font-family: inherit;
+          font-size: inherit;
+          font-weight: inherit;
+          line-height: 1;
+          margin-bottom: -10px;
+          overflow: hidden;
+
+          span {
+            line-height: 1;
+            display: inline-block;
+            transform-origin: center;
+            transform: translate3d(0, 50%, 0);
+            opacity: 0;
+            transition: all 1.1s cubic-bezier(0.43, 0.195, 0.02, 1);
+
+            body.is-fully-loaded & {
+              transform: none;
+              opacity: 1;
+            }
+          }
+        }
       }
 
       p {
+        display: block;
         max-width: 765px;
         margin: 0 auto;
         color: $white-80;
@@ -31,6 +57,23 @@ main.homepage {
         letter-spacing: 0.05em;
         line-height: 1.8;
         text-align: center;
+        overflow: hidden;
+
+        span {
+          display: inline-block;
+          font-family: inherit;
+          font-size: inherit;
+          font-weight: inherit;
+          transform-origin: center;
+          transform: translate3d(0, 50%, 0);
+          opacity: 0;
+          transition: all 1.1s cubic-bezier(0.43, 0.195, 0.02, 1);
+
+          body.is-fully-loaded & {
+            transform: none;
+            opacity: 1;
+          }
+        }
       }
     }
 
