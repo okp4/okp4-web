@@ -49,7 +49,7 @@ const StrateRoadmap = ({
       let transformCss = translateCss + scaleCss;
       // divRef.current.style.transform = transformCss;
 
-      let opacityRatio = (ratio / 2).toFixed(4);
+      let opacityRatio = (ratio / 4).toFixed(4);
       divRef.current.querySelector(".roadmap__item__layer").style.opacity =
         opacityRatio;
     }

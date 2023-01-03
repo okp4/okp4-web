@@ -9,8 +9,8 @@ const Universe = () => {
     <section className="universe strate">
       <div className="strate__inner">
         <div className="wrapper">
-          <h2 className="universe__title">Enter in the OKP4 universe</h2>
           <StickyUniverse classContainer="universe__wrapper">
+            <h2 className="universe__title">Enter in the OKP4 universe</h2>
             <div className="universe__items">
               <div
                 className="universe__item is-first-active"

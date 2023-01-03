@@ -9,6 +9,11 @@ const Parallax = ({
 }) => {
   const divRef = useRef(null);
 
+  const setInitialPosition = () => {
+    var transformRatioCss = "translate3d(0, " + parallaxStart + "px, 0)";
+    divRef.current.style.transform = transformRatioCss;
+  };
+
   const isIntersectingViewport = () => {
     const rect = divRef.current.getBoundingClientRect();
     const windowHeight =
@@ -57,6 +62,7 @@ const Parallax = ({
 
   useEffect(() => {
     setTimeout(function () {
+      setInitialPosition();
       const animationFrame = requestAnimationFrame(handleParallax);
 
       return () => {

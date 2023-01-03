@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import IconLogo from "../assets/images/logo.inline.svg";
 import IconArrowtr from "../assets/images/icons/arrow-tr.inline.svg";
 import IconChevron from "../assets/images/icons/chevron.inline.svg";
@@ -11,8 +11,44 @@ import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import { Link } from "gatsby";
 
 const Header = () => {
+  const divRef = useRef(null);
+  const windowHeight =
+    window.innerHeight || document.documentElement.clientHeight;
+
+  const getRatio = () => {
+    const scrollY = window.scrollY;
+    const distance = windowHeight;
+    let percentTravelled = (distance - scrollY) / distance;
+    if (percentTravelled < 0) percentTravelled = 0;
+
+    return percentTravelled;
+  };
+
+  const scrollStarted = () => {
+    if (window.scrollY < windowHeight + 100) {
+      divRef.current.classList.remove("is-reset");
+      let ratio = getRatio();
+      divRef.current.style.opacity = ratio;
+    } else {
+      divRef.current.classList.add("is-reset");
+    }
+  };
+
+  useEffect(() => {
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+
+    setTimeout(function () {
+      window.addEventListener("scroll", scrollStarted);
+
+      return () => {
+        window.removeEventListener("scroll", scrollStarted);
+      };
+    }, 1000);
+  }, []);
+
   return (
-    <header className="header">
+    <header className="header" ref={divRef}>
       <div className="wrapper">
         <div className="header__top">
           <div className="header__socials">

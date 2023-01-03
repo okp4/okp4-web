@@ -1,9 +1,14 @@
 header.header {
-  position: absolute;
+  position: fixed;
   z-index: 99;
   width: 100%;
   margin-top: 20px;
   margin-bottom: 30px;
+
+  &.is-reset {
+    opacity: 0;
+    pointer-events: none;
+  }
 
   .header__top {
     display: flex;

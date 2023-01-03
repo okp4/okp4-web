@@ -10,7 +10,7 @@ const Landing = () => {
     window.innerHeight || document.documentElement.clientHeight;
 
   const scrollStarted = () => {
-    if (window.scrollY > 30) {
+    if (window.scrollY > 1) {
       divRef.current.classList.add("is-active");
     } else {
       divRef.current.classList.remove("is-active");
@@ -54,7 +54,7 @@ const Landing = () => {
     if (window.scrollY >= startScale && window.scrollY <= endScale) {
       let ratio = getScaleRatio({ startScale, endScale });
 
-      let scaleRatio = (1 - ratio / 10).toFixed(4);
+      let scaleRatio = (1 - ratio / 5).toFixed(4);
       let scaleCss =
         "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
       divFadeOut.current.style.transform = scaleCss;
@@ -64,8 +64,8 @@ const Landing = () => {
     }
 
     divRef.current.querySelectorAll("[data-parallax]").forEach((elem) => {
-      if (isIntersectingViewport(divFadeIn.current)) {
-        var ratio = getIntersectionRatio(divFadeIn.current);
+      if (isIntersectingViewport(elem)) {
+        var ratio = getIntersectionRatio(elem);
         var transformRatio;
         var parallaxEnd = parseInt(elem.dataset.parallaxend);
         transformRatio = ratio.toFixed(4) * parallaxEnd;
@@ -121,130 +121,124 @@ const Landing = () => {
             src="../../../assets/images/illus/index_landing.png"
             alt="OKP4 hero image"
           />
-          <div className="landing__illus__wrapper">
+
+          {/* // Socle en bois */}
+          <div
+            className="parallaxWrapper"
+            data-parallax="1"
+            data-parallaxend="200"
+          >
             <StaticImage
-              className="imgWrapper--base"
-              src="../../../assets/images/illus/index_landing.png"
+              className="imgWrapper"
+              src="../../../assets/images/illus/index_landing_sprites/1.png"
               alt="OKP4 hero image"
             />
-            {/* // Socle en bois */}
-            <div
-              className="parallaxWrapper"
-              data-parallax="1"
-              data-parallaxend="-400"
-            >
-              <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/1.png"
-                alt="OKP4 hero image"
-              />
-            </div>
+          </div>
 
-            {/* Glow lumière */}
-            <div
-              className="parallaxWrapper"
-              data-parallax="1"
-              data-parallaxend="-420"
-            >
-              <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/2.png"
-                alt="OKP4 hero image"
-              />
-            </div>
+          {/* Glow lumière */}
+          <div
+            className="parallaxWrapper"
+            data-parallax="1"
+            data-parallaxend="180"
+          >
+            <StaticImage
+              className="imgWrapper"
+              src="../../../assets/images/illus/index_landing_sprites/2.png"
+              alt="OKP4 hero image"
+            />
+          </div>
 
-            {/* Téléphone */}
-            <div
-              className="parallaxWrapper"
-              data-parallax="1"
-              data-parallaxend="-400"
-            >
-              <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/3.png"
-                alt="OKP4 hero image"
-              />
-            </div>
+          {/* Téléphone */}
+          <div
+            className="parallaxWrapper"
+            data-parallax="1"
+            data-parallaxend="100"
+          >
+            <StaticImage
+              className="imgWrapper"
+              src="../../../assets/images/illus/index_landing_sprites/3.png"
+              alt="OKP4 hero image"
+            />
+          </div>
 
-            {/* Computation */}
-            <div
-              className="parallaxWrapper"
-              data-parallax="1"
-              data-parallaxend="-300"
-            >
-              <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/5.png"
-                alt="OKP4 hero image"
-              />
-            </div>
+          {/* Computation */}
+          <div
+            className="parallaxWrapper"
+            data-parallax="1"
+            data-parallaxend="-100"
+          >
+            <StaticImage
+              className="imgWrapper"
+              src="../../../assets/images/illus/index_landing_sprites/5.png"
+              alt="OKP4 hero image"
+            />
+          </div>
 
-            {/* Identity */}
-            <div
-              className="parallaxWrapper"
-              data-parallax="1"
-              data-parallaxend="-320"
-            >
-              <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/7.png"
-                alt="OKP4 hero image"
-              />
-            </div>
+          {/* Identity */}
+          <div
+            className="parallaxWrapper"
+            data-parallax="1"
+            data-parallaxend="-100"
+          >
+            <StaticImage
+              className="imgWrapper"
+              src="../../../assets/images/illus/index_landing_sprites/7.png"
+              alt="OKP4 hero image"
+            />
+          </div>
 
-            {/* Workflow engine */}
-            <div
-              className="parallaxWrapper"
+          {/* Workflow engine */}
+          <div
+            className="parallaxWrapper"
+            data-parallax="1"
+            data-parallaxend="-300"
+          >
+            <StaticImage
               data-parallax="1"
-              data-parallaxend="-300"
-            >
-              <StaticImage
-                data-parallax="1"
-                data-parallaxend="-290"
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/9.png"
-                alt="OKP4 hero image"
-              />
-            </div>
+              data-parallaxend="-90"
+              className="imgWrapper"
+              src="../../../assets/images/illus/index_landing_sprites/9.png"
+              alt="OKP4 hero image"
+            />
+          </div>
 
-            {/* Data */}
-            <div
-              className="parallaxWrapper"
-              data-parallax="1"
-              data-parallaxend="-270"
-            >
-              <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/6.png"
-                alt="OKP4 hero image"
-              />
-            </div>
+          {/* Data */}
+          <div
+            className="parallaxWrapper"
+            data-parallax="1"
+            data-parallaxend="-120"
+          >
+            <StaticImage
+              className="imgWrapper"
+              src="../../../assets/images/illus/index_landing_sprites/6.png"
+              alt="OKP4 hero image"
+            />
+          </div>
 
-            {/* Storage */}
-            <div
-              className="parallaxWrapper"
-              data-parallax="1"
-              data-parallaxend="-400"
-            >
-              <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/8.png"
-                alt="OKP4 hero image"
-              />
-            </div>
+          {/* Storage */}
+          <div
+            className="parallaxWrapper"
+            data-parallax="1"
+            data-parallaxend="-200"
+          >
+            <StaticImage
+              className="imgWrapper"
+              src="../../../assets/images/illus/index_landing_sprites/8.png"
+              alt="OKP4 hero image"
+            />
+          </div>
 
-            {/* Algorithm */}
-            <div
-              className="parallaxWrapper"
-              data-parallax="1"
-              data-parallaxend="-320"
-            >
-              <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/4.png"
-                alt="OKP4 hero image"
-              />
-            </div>
+          {/* Algorithm */}
+          <div
+            className="parallaxWrapper"
+            data-parallax="1"
+            data-parallaxend="-10"
+          >
+            <StaticImage
+              className="imgWrapper"
+              src="../../../assets/images/illus/index_landing_sprites/4.png"
+              alt="OKP4 hero image"
+            />
           </div>
         </div>
       </div>

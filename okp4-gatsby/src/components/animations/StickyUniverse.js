@@ -12,7 +12,6 @@ const StickyUniverse = ({ children, classContainer }) => {
     );
 
     if (firstActive) {
-      console.log("first active");
       const rect = firstActive.getBoundingClientRect();
       if (rect.top < halfScreen) {
         firstActive.classList.remove("is-first-active");
@@ -32,7 +31,7 @@ const StickyUniverse = ({ children, classContainer }) => {
         if (item.classList.contains("is-active")) return;
         let rect = item.getBoundingClientRect();
 
-        if (rect.top < halfScreen && rect.top > halfScreen - 100) {
+        if (rect.top < halfScreen + 100 && rect.top > halfScreen) {
           universeItems.forEach((oldItem) => {
             if (oldItem.classList.contains("is-active")) {
               oldItem.classList.remove("is-active");
@@ -46,9 +45,7 @@ const StickyUniverse = ({ children, classContainer }) => {
             }
           });
 
-          console.log("I am in interval");
           item.classList.add("is-active");
-          console.log(item);
           let illusSelector =
             ".universe__illus__item[data-item='" + item.dataset.item + "']";
           divRef.current
