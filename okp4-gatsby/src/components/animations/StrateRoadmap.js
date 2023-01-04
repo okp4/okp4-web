@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import * as ScrollManager from "../../utils/ScrollManager.js";
 
 const StrateRoadmap = ({
   children,
@@ -13,20 +14,8 @@ const StrateRoadmap = ({
   const setStickyPosition = () => {
     let divDimensions = divRef.current.getBoundingClientRect();
     let topPositionSticky = parseInt(scaleTopSticky);
-
-    // if (divDimensions.height > windowHeight) {
-    //   topPositionSticky = -(divDimensions.height - windowHeight);
-    // }
-
     let topPositionCss = topPositionSticky + "px";
     divRef.current.style.top = topPositionCss;
-  };
-
-  const getScaleRatio = ({ startScale, endScale }) => {
-    let distance = endScale - startScale;
-    let parcouru = window.scrollY - startScale;
-    let ratio = 1 - (distance - parcouru) / distance;
-    return ratio;
   };
 
   const perspective = () => {
@@ -36,17 +25,16 @@ const StrateRoadmap = ({
     let height = divRef.current.dataset.height;
 
     if (window.scrollY >= startScale && window.scrollY <= endScale) {
-      let distance = endScale - startScale;
-      let ratio = getScaleRatio({ startScale, endScale });
+      let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
 
       let scaleRatio = (1 - ratio * scaleMax).toFixed(4);
       let scaleCss =
         "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
       divRef.current.style.transform = scaleCss;
 
-      let translateRatio = ratio * height;
-      let translateCss = "translate3d(0," + translateRatio + "px, 0) ";
-      let transformCss = translateCss + scaleCss;
+      // let translateRatio = ratio * height;
+      // let translateCss = "translate3d(0," + translateRatio + "px, 0) ";
+      // let transformCss = translateCss + scaleCss;
       // divRef.current.style.transform = transformCss;
 
       let opacityRatio = (ratio / 4).toFixed(4);

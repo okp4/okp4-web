@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
+import * as ScrollManager from "../../../utils/ScrollManager.js";
 
 const Landing = () => {
   const divRef = useRef(null);
@@ -10,49 +11,15 @@ const Landing = () => {
     window.innerHeight || document.documentElement.clientHeight;
 
   const scrollStarted = () => {
-    // if (window.scrollY > 30) {
-    //   divRef.current.classList.add("is-active");
-    // } else {
-    //   divRef.current.classList.remove("is-active");
-    // }
-
     if (window.scrollY < 410) {
       const scrollY = window.scrollY;
       const distance = 400;
       let percentTravelled = scrollY / distance;
       if (percentTravelled > 1) percentTravelled = 1;
+
+      if (percentTravelled < 0.02) percentTravelled = 0.02;
       divFadeIn.current.style.opacity = percentTravelled;
     }
-  };
-
-  const isIntersectingViewport = (elem) => {
-    const rect = elem.getBoundingClientRect();
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-    const windowWidth =
-      window.innerWidth || document.documentElement.clientWidth;
-
-    if (rect.top < windowHeight && rect.top > -rect.height) return true;
-    else return false;
-  };
-
-  const getIntersectionRatio = (elem) => {
-    const rect = elem.getBoundingClientRect();
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-    const windowWidth =
-      window.innerWidth || document.documentElement.clientWidth;
-    const distance = rect.height + windowHeight;
-    const percentTravelled = (distance - rect.bottom) / distance;
-
-    return percentTravelled;
-  };
-
-  const getScaleRatio = ({ startScale, endScale }) => {
-    let distance = endScale - startScale;
-    let parcouru = window.scrollY - startScale;
-    let ratio = 1 - (distance - parcouru) / distance;
-    return ratio;
   };
 
   const perspective = () => {
@@ -60,7 +27,7 @@ const Landing = () => {
     let endScale = divRef.current.dataset.end;
 
     if (window.scrollY >= startScale && window.scrollY <= endScale) {
-      let ratio = getScaleRatio({ startScale, endScale });
+      let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
 
       let scaleRatio = (1 - ratio / 10).toFixed(4);
       let scaleCss =
@@ -72,8 +39,8 @@ const Landing = () => {
     }
 
     divRef.current.querySelectorAll("[data-parallax]").forEach((elem) => {
-      if (isIntersectingViewport(divFadeIn.current)) {
-        var ratio = getIntersectionRatio(divFadeIn.current);
+      if (ScrollManager.isIntersectingViewport(divFadeIn.current)) {
+        var ratio = ScrollManager.getIntersectionRatio(divFadeIn.current);
         var transformRatio;
         var parallaxEnd = parseInt(elem.dataset.parallaxend);
         transformRatio = ratio.toFixed(4) * parallaxEnd;

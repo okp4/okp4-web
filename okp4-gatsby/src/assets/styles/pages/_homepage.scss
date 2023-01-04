@@ -123,7 +123,7 @@ main.homepage {
 
     &:not(.is-active) {
       .landing__illus {
-        opacity: 0;
+        opacity: 0.02;
       }
     }
 
@@ -371,9 +371,9 @@ main.homepage {
 
     .universe__title {
       display: block;
-      position: sticky;
-      top: 20px;
-      margin-bottom: 70vh;
+      // position: sticky;
+      // top: 20px;
+      margin-bottom: 120px;
       text-align: center;
     }
 
@@ -385,7 +385,7 @@ main.homepage {
     .universe__items {
       display: inline-block;
       width: 41%;
-      // margin-top: 50vh;
+      margin-top: 50vh;
       padding-bottom: 200px;
       vertical-align: top;
 
@@ -468,8 +468,7 @@ main.homepage {
     .universe__illus {
       display: inline-flex;
       position: sticky;
-      top: 120px;
-      margin-top: calc(100px - 70vh);
+      top: 50px;
       align-items: flex-start;
       justify-content: flex-end;
       width: 58%;

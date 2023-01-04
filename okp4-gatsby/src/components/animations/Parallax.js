@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import * as ScrollManager from "../../utils/ScrollManager.js";
 
 const Parallax = ({
   children,
@@ -14,32 +15,9 @@ const Parallax = ({
     divRef.current.style.transform = transformRatioCss;
   };
 
-  const isIntersectingViewport = () => {
-    const rect = divRef.current.getBoundingClientRect();
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-    const windowWidth =
-      window.innerWidth || document.documentElement.clientWidth;
-
-    if (rect.top < windowHeight && rect.top > -rect.height) return true;
-    else return false;
-  };
-
-  const getIntersectionRatio = () => {
-    const rect = divRef.current.getBoundingClientRect();
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-    const windowWidth =
-      window.innerWidth || document.documentElement.clientWidth;
-    const distance = rect.height + windowHeight;
-    const percentTravelled = (distance - rect.bottom) / distance;
-
-    return percentTravelled;
-  };
-
   const handleParallax = () => {
-    if (isIntersectingViewport()) {
-      var ratio = getIntersectionRatio();
+    if (ScrollManager.isIntersectingViewport(divRef.current)) {
+      var ratio = ScrollManager.getIntersectionRatio(divRef.current);
       var new_ratio;
       var transformRatio;
 

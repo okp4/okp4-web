@@ -4,7 +4,6 @@ import Landing from "../components/pages/index/Landing";
 import Introduction from "../components/pages/index/Introduction";
 import Video from "../components/pages/index/Video";
 import Universe from "../components/pages/index/Universe";
-import Docs from "../components/pages/index/Docs";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <Introduction />
       <Video />
       <Universe />
-      {/* <Docs /> */}
     </Layout>
   );
 }

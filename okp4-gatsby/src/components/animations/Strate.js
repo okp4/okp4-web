@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import * as ScrollManager from "../../utils/ScrollManager.js";
 
 const Strate = ({ children, classContainer }) => {
   const divRef = useRef(null);
@@ -17,20 +18,12 @@ const Strate = ({ children, classContainer }) => {
     divRef.current.style.top = topPositionCss;
   };
 
-  const getScaleRatio = ({ startScale, endScale }) => {
-    let distance = endScale - startScale;
-    let parcouru = window.scrollY - startScale;
-    let ratio = 1 - (distance - parcouru) / distance;
-    return ratio;
-  };
-
   const perspective = () => {
-    let divAbsoluteTop = divRef.current.dataset.top;
     let startScale = divRef.current.dataset.start;
     let endScale = divRef.current.dataset.end;
 
     if (window.scrollY >= startScale && window.scrollY <= endScale) {
-      let ratio = getScaleRatio({ startScale, endScale });
+      let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
 
       let scaleRatio = (1 - ratio / 10).toFixed(4);
       let scaleCss =

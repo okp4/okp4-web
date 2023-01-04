@@ -9,7 +9,7 @@ import IconMedium from "../assets/images/socials/medium.inline.svg";
 import IconDiscord from "../assets/images/socials/discord.inline.svg";
 import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import Halo from "./animations/Halo.js";
-import Docs from "./pages/index/Docs.js";
+import Docs from "./Docs.js";
 
 const Footer = () => {
   return (

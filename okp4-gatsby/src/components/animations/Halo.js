@@ -33,7 +33,6 @@ const Halo = ({ classContainer = "halo--regular" }) => {
   }
 
   function handleMouseMove(event) {
-    // Update the position of the div based on the mouse position
     setTimeout(() => {
       let offsetY = divRef.current.getBoundingClientRect().y;
       let mouseX = event.clientX;

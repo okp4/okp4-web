@@ -53,32 +53,6 @@ const StickyUniverse = ({ children, classContainer }) => {
             .classList.add("is-active");
         }
       });
-      // const universeItems = divRef.current.querySelectorAll(".universe__item");
-      // const currentItem = divRef.current.querySelector(
-      //   ".universe__item.is-active"
-      // );
-      // let currentIllusSelector =
-      //   ".universe__illus__item[data-item='" + currentItem.dataset.item + "']";
-      // const currentKey = parseInt(currentItem.dataset.key);
-      // const nextKey = currentKey + 1;
-      // const item = universeItems[nextKey];
-
-      // if (item) {
-      //   const rect = item.getBoundingClientRect();
-      //   if (rect.top < halfScreen) {
-      //     currentItem.classList.remove("is-active");
-      //     item.classList.add("is-active");
-      //     let illusSelector =
-      //       ".universe__illus__item[data-item='" + item.dataset.item + "']";
-
-      //     divRef.current
-      //       .querySelector(currentIllusSelector)
-      //       .classList.remove("is-active");
-      //     divRef.current
-      //       .querySelector(illusSelector)
-      //       .classList.add("is-active");
-      //   }
-      // }
     }
   };
 
