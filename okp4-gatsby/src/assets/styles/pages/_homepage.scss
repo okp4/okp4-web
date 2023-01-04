@@ -347,6 +347,7 @@ main.homepage {
   .video {
     .strate__inner {
       background: #000000;
+      overflow: hidden;
     }
 
     .video__player {
@@ -356,7 +357,19 @@ main.homepage {
       width: 100%;
       aspect-ratio: 16/9;
 
+      .videoWrapper {
+        width: 100%;
+        height: 100%;
+
+        iframe {
+          pointer-events: none;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
       svg {
+        display: none;
         width: 75px;
         height: auto;
       }
