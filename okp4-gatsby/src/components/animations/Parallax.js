@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import * as ScrollManager from "../../utils/ScrollManager.js";
+import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 
 const Parallax = ({
   children,
@@ -39,14 +40,16 @@ const Parallax = ({
   };
 
   useEffect(() => {
-    setTimeout(function () {
-      setInitialPosition();
-      const animationFrame = requestAnimationFrame(handleParallax);
+    if (ResponsiveManager.isWindowLarger("md")) {
+      setTimeout(function () {
+        setInitialPosition();
+        const animationFrame = requestAnimationFrame(handleParallax);
 
-      return () => {
-        cancelAnimationFrame(animationFrame);
-      };
-    }, 1000);
+        return () => {
+          cancelAnimationFrame(animationFrame);
+        };
+      }, 1000);
+    }
   }, []);
 
   return (

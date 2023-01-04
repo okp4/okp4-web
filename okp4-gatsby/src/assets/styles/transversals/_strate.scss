@@ -5,6 +5,7 @@ section.strate {
   transform-origin: top;
 
   @include media-bp-down(md) {
+    position: relative;
     width: 100vw;
   }
 
@@ -31,6 +32,7 @@ section.strate {
     pointer-events: none;
 
     @include media-bp-down(md) {
+      display: none;
       border-radius: 20px;
     }
   }

@@ -6,18 +6,38 @@ footer.footer {
   background-size: contain;
   // background-color: $nightblue;
 
+  @include media-bp-down(md) {
+    padding-bottom: 0;
+  }
+
   .docs {
     position: relative;
-    padding: 120px 0 120px;
+    padding: 120px 0;
     margin-top: 0;
+
+    @include media-bp-down(md) {
+      padding: 60px 0 45px;
+    }
 
     .docs__header {
       margin-bottom: 60px;
+
+      @include media-bp-down(md) {
+        margin-bottom: 30px;
+        text-align: center;
+      }
 
       h3 {
         display: inline-block;
         width: 37%;
         margin-right: 33px;
+
+        @include media-bp-down(md) {
+          display: block;
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
       }
 
       p {
@@ -26,11 +46,21 @@ footer.footer {
         color: $white-80;
         font-size: 20px;
         line-height: 30px;
+
+        @include media-bp-down(md) {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+        }
       }
     }
 
     .docs__content {
       display: flex;
+
+      @include media-bp-down(md) {
+        display: block;
+      }
 
       .title {
         font-size: 25px;
@@ -47,27 +77,35 @@ footer.footer {
         padding: 32px 40px;
         border-radius: 20px;
         background-color: #fff;
-
         background: url("/images/grain.png"),
           linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
         background-repeat: repeat;
         background-size: contain;
-        // background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
-
         transition: background 0.25s ease;
 
-        &:hover {
-          background: url("/images/grain.png"),
-            linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
-          .title,
-          .description {
-            color: $white;
-          }
+        @include media-bp-down(md) {
+          display: block;
+          width: 100%;
+          height: initial;
+          min-height: 250px;
+          padding: 25px;
+          margin-bottom: 15px;
+        }
 
-          svg {
-            transform: translate3d(5px, -5px, 0);
-            path {
-              stroke: $white;
+        @include media-bp-up(md) {
+          &:hover {
+            background: url("/images/grain.png"),
+              linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
+            .title,
+            .description {
+              color: $white;
+            }
+
+            svg {
+              transform: translate3d(5px, -5px, 0);
+              path {
+                stroke: $white;
+              }
             }
           }
         }
@@ -84,6 +122,10 @@ footer.footer {
           color: $textblue;
           line-height: 27px;
           transition: color 0.25s ease;
+
+          @include media-bp-down(md) {
+            max-width: 100%;
+          }
         }
 
         svg {
@@ -93,6 +135,12 @@ footer.footer {
           width: 15px;
           height: auto;
           transition: transform 0.25s ease;
+
+          @include media-bp-down(md) {
+            right: 25px;
+            bottom: 25px;
+            width: 13px;
+          }
 
           path {
             stroke: #00b6b7;
@@ -109,6 +157,10 @@ footer.footer {
         width: 100%;
         flex: 1;
 
+        @include media-bp-down(md) {
+          display: block;
+        }
+
         .docs__content__item {
           display: flex;
           position: relative;
@@ -120,18 +172,27 @@ footer.footer {
           border: 1px solid $turquoise;
           border-radius: 20px;
 
-          &:hover {
-            background: linear-gradient(
-              39.81deg,
-              #006796 21.82%,
-              #00b6b7 98.43%
-            );
+          @include media-bp-down(md) {
+            width: 100%;
+            height: 100px;
+            padding: 0 25px;
+            margin-bottom: 15px;
+          }
 
-            .arrow {
-              transform: translate3d(5px, -5px, 0);
+          @include media-bp-up(md) {
+            &:hover {
+              background: linear-gradient(
+                39.81deg,
+                #006796 21.82%,
+                #00b6b7 98.43%
+              );
 
-              path {
-                stroke: $white;
+              .arrow {
+                transform: translate3d(5px, -5px, 0);
+
+                path {
+                  stroke: $white;
+                }
               }
             }
           }
@@ -147,6 +208,10 @@ footer.footer {
             width: 15px;
             height: auto;
             transition: transform 0.25s ease;
+
+            @include media-bp-down(md) {
+              width: 13px;
+            }
 
             path {
               transition: stroke 0.25s ease;
@@ -165,6 +230,10 @@ footer.footer {
   .footer__partenaires {
     text-align: center;
     padding-bottom: 55px;
+
+    @include media-bp-down(md) {
+      padding-bottom: 60px;
+    }
 
     p {
       font-size: 16px;
@@ -210,12 +279,22 @@ footer.footer {
     border-radius: 30px;
     overflow: hidden;
 
+    @include media-bp-down(md) {
+      width: 100%;
+      border-radius: 0;
+    }
+
     .footer__main__bg {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
+
+      @include media-bp-down(md) {
+        top: initial;
+        height: 145px;
+      }
 
       .imgWrapper {
         width: 100%;
@@ -229,6 +308,12 @@ footer.footer {
         bottom: 0;
         left: 0;
         object-fit: cover;
+
+        @include media-bp-down(md) {
+          top: initial;
+          object-fit: contain;
+          bottom: -15px;
+        }
       }
     }
 
@@ -243,8 +328,19 @@ footer.footer {
       margin-top: 64px;
       margin-bottom: 70px;
 
+      @include media-bp-down(md) {
+        display: block;
+        margin-top: 60px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
       .footer__main__top__logo {
         width: 152px;
+
+        @include media-bp-down(md) {
+          margin-bottom: 35px;
+        }
 
         svg {
           width: 152px;
@@ -259,15 +355,28 @@ footer.footer {
         margin-right: 0;
         margin-left: auto;
 
+        @include media-bp-down(md) {
+          display: block;
+          text-align: center;
+        }
+
         .footer__main__top__links__item {
           margin-left: 25px;
           transition: opacity 0.25s ease;
 
-          &:hover {
-            opacity: 0.5;
+          @include media-bp-down(md) {
+            display: block;
+            margin-left: 0;
+            margin-top: 30px;
+          }
 
-            svg {
-              transform: translate3d(5px, -5px, 0);
+          @include media-bp-up(md) {
+            &:hover {
+              opacity: 0.5;
+
+              svg {
+                transform: translate3d(5px, -5px, 0);
+              }
             }
           }
 
@@ -290,6 +399,12 @@ footer.footer {
           background-color: $orange;
           border-radius: 10px;
           text-align: center;
+
+          @include media-bp-down(md) {
+            display: inline-block;
+            margin-left: 0;
+            margin-top: 30px;
+          }
         }
       }
     }
@@ -300,11 +415,26 @@ footer.footer {
       justify-content: space-between;
       margin-bottom: 200px;
 
+      @include media-bp-down(md) {
+        width: 100%;
+        display: block;
+      }
+
       .footer__main__bottom__newsletter {
+        @include media-bp-down(md) {
+          width: 100%;
+        }
+
         p {
           display: block;
           margin-bottom: 20px;
           font-size: 25px;
+
+          @include media-bp-down(md) {
+            width: 80%;
+            margin: 0 auto 20px;
+            text-align: center;
+          }
 
           b {
             font-weight: 700;
@@ -351,6 +481,11 @@ footer.footer {
             align-items: center;
             justify-content: space-between;
 
+            @include media-bp-down(md) {
+              display: block;
+              width: 100%;
+            }
+
             input,
             .cta {
               width: 100%;
@@ -364,11 +499,22 @@ footer.footer {
 
             .input__container {
               width: 440px;
+              max-width: 100%;
               margin-right: 10px;
+
+              @include media-bp-down(md) {
+                width: 100%;
+                margin-bottom: 10px;
+                text-align: center;
+              }
 
               input {
                 padding: 0 20px;
                 background: $whitebg;
+
+                @include media-bp-down(md) {
+                  text-align: center;
+                }
               }
             }
 
@@ -384,11 +530,13 @@ footer.footer {
                 cursor: pointer;
                 transition: opacity 0.25s ease;
 
-                &:hover {
-                  opacity: 0.5;
+                @include media-bp-up(md) {
+                  &:hover {
+                    opacity: 0.5;
 
-                  svg {
-                    transform: translate3d(5px, -5px, 0);
+                    svg {
+                      transform: translate3d(5px, -5px, 0);
+                    }
                   }
                 }
 
@@ -422,12 +570,24 @@ footer.footer {
         align-items: center;
         justify-content: flex-end;
 
+        @include media-bp-down(md) {
+          justify-content: space-between;
+          top: initial;
+          margin-top: 50px;
+          width: 100%;
+          padding: 0 10px;
+        }
+
         .footer__main__bottom__socials__link {
           display: flex;
           align-items: center;
           justify-content: center;
           margin-left: 20px;
           transition: opacity 0.25s ease;
+
+          @include media-bp-down(md) {
+            margin-left: 0;
+          }
 
           &:hover {
             opacity: 0.5;
@@ -436,6 +596,10 @@ footer.footer {
           svg {
             width: 29px;
             height: auto;
+
+            @include media-bp-down(md) {
+              width: 34px;
+            }
           }
         }
       }

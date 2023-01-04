@@ -24,9 +24,11 @@ main.homepage {
       transform-origin: bottom;
 
       @include media-bp-down(md) {
-        top: 165px;
+        position: relative;
+        top: initial;
+        // margin-top: 165px;
         right: initial;
-        width: 100vw;
+        width: 100%;
       }
 
       h1 {
@@ -120,9 +122,12 @@ main.homepage {
 
       @include media-bp-down(md) {
         position: relative;
-        top: 340px;
-        left: -15vw;
+        // top: 340px;
+        top: initial;
+        margin-top: 20px;
+        left: -20vw;
         width: 130vw;
+        padding-bottom: 60px;
         overflow: hidden;
       }
 
@@ -138,9 +143,7 @@ main.homepage {
         // padding: 0 15px;
 
         @include media-bp-down(md) {
-          position: relative;
-          top: initial;
-          width: 100%;
+          display: none;
         }
       }
 
@@ -153,6 +156,7 @@ main.homepage {
           position: relative;
           top: initial;
           width: 100%;
+          opacity: 1;
         }
 
         img {
@@ -166,6 +170,10 @@ main.homepage {
         top: 0;
         left: 0;
         width: 100%;
+
+        @include media-bp-down(md) {
+          display: none;
+        }
 
         img {
           width: 100%;
@@ -200,7 +208,7 @@ main.homepage {
       background-size: contain;
 
       @include media-bp-down(md) {
-        padding: 60px 0 80px;
+        padding: 60px 0 60px;
       }
 
       .wrapper {
@@ -357,6 +365,10 @@ main.homepage {
       grid-row-gap: 32px;
       margin-top: 50px;
 
+      @include media-bp-down(md) {
+        grid-row-gap: 15px;
+      }
+
       .introduction__pushs__item {
         display: flex;
         grid-column: span 6;
@@ -384,10 +396,20 @@ main.homepage {
         height: 487px;
         padding: 50px;
 
+        @include media-bp-down(md) {
+          grid-row: span 1;
+          height: initial;
+          padding: 30px;
+        }
+
         .introduction__pushs__item__illus {
           width: 350px;
           margin-top: auto;
           margin-bottom: 0;
+
+          @include media-bp-down(md) {
+            width: 250px;
+          }
 
           img {
             width: 100%;
@@ -408,9 +430,20 @@ main.homepage {
         height: 100%;
         padding: 40px 75px 40px 40px;
 
+        @include media-bp-down(md) {
+          display: block;
+          padding: 30px;
+          height: initial;
+        }
+
         .introduction__pushs__item__illus {
           width: 115px;
           margin-right: 60px;
+
+          @include media-bp-down(md) {
+            margin-bottom: 30px;
+            margin-right: 0;
+          }
         }
 
         .introduction__pushs__item__texts {
@@ -445,8 +478,13 @@ main.homepage {
   .video {
     .strate__inner {
       background: #000000;
-      @include bg-grain;
       overflow: hidden;
+
+      @include media-bp-down(md) {
+        background: transparent;
+        padding: 15px;
+        // border-radius: none;
+      }
     }
 
     .video__player {
@@ -455,6 +493,11 @@ main.homepage {
       justify-content: center;
       width: 100%;
       aspect-ratio: 16/9;
+
+      @include media-bp-down(md) {
+        border-radius: 20px;
+        overflow: hidden;
+      }
 
       .videoWrapper {
         width: 100%;
@@ -484,14 +527,20 @@ main.homepage {
       background-repeat: repeat;
       background-size: contain;
       // @include bg-grain;
+
+      @include media-bp-down(md) {
+        padding: 60px 0;
+      }
     }
 
     .universe__title {
       display: block;
-      // position: sticky;
-      // top: 20px;
       margin-bottom: 120px;
       text-align: center;
+
+      @include media-bp-down(md) {
+        margin-bottom: 60px;
+      }
     }
 
     .universe__wrapper {
@@ -505,6 +554,11 @@ main.homepage {
       margin-top: 50vh;
       padding-bottom: 200px;
       vertical-align: top;
+
+      @include media-bp-down(md) {
+        width: 100%;
+        margin-top: 0;
+      }
 
       .universe__item {
         position: relative;
@@ -592,6 +646,10 @@ main.homepage {
       height: 100%;
       min-height: 595px;
       vertical-align: top;
+
+      @include media-bp-down(md) {
+        width: 100%;
+      }
 
       .universe__illus__item {
         position: absolute;

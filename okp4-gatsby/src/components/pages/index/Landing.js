@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
 import * as ScrollManager from "../../../utils/ScrollManager.js";
+import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
 
 const Landing = () => {
   const divRef = useRef(null);
@@ -54,24 +55,27 @@ const Landing = () => {
   };
 
   useEffect(() => {
-    var divDimensions = divRef.current.getBoundingClientRect();
-    var divAbsoluteTop = divDimensions.top + window.scrollY;
-    var startScale = 0;
-    // var endScale = windowHeight / 2;
-    var endScale = windowHeight;
-    divRef.current.dataset.top = divAbsoluteTop;
-    divRef.current.dataset.start = startScale;
-    divRef.current.dataset.end = endScale;
+    if (ResponsiveManager.isWindowLarger("md")) {
+      console.log("iam larger than md");
+      var divDimensions = divRef.current.getBoundingClientRect();
+      var divAbsoluteTop = divDimensions.top + window.scrollY;
+      var startScale = 0;
+      // var endScale = windowHeight / 2;
+      var endScale = windowHeight;
+      divRef.current.dataset.top = divAbsoluteTop;
+      divRef.current.dataset.start = startScale;
+      divRef.current.dataset.end = endScale;
 
-    setTimeout(function () {
-      const animationFrame = requestAnimationFrame(perspective);
-      window.addEventListener("scroll", scrollStarted);
+      setTimeout(function () {
+        const animationFrame = requestAnimationFrame(perspective);
+        window.addEventListener("scroll", scrollStarted);
 
-      return () => {
-        cancelAnimationFrame(animationFrame);
-        window.removeEventListener("scroll", scrollStarted);
-      };
-    }, 1000);
+        return () => {
+          cancelAnimationFrame(animationFrame);
+          window.removeEventListener("scroll", scrollStarted);
+        };
+      }, 1000);
+    }
   }, []);
 
   return (

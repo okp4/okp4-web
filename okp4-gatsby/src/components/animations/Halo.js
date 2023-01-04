@@ -1,27 +1,37 @@
 import React, { useEffect, useRef } from "react";
 
+import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
+
 const Halo = ({ classContainer = "halo--regular" }) => {
   const divRef = useRef(null);
 
   useEffect(() => {
-    divRef.current.parentNode.addEventListener("mouseenter", handleMouseEnter);
-    divRef.current.parentNode.addEventListener("mousemove", handleMouseMove);
-    divRef.current.parentNode.addEventListener("mouseleave", handleMouseLeave);
-
-    return () => {
-      divRef.current.parentNode.removeEventListener(
+    if (ResponsiveManager.isWindowLarger("md")) {
+      divRef.current.parentNode.addEventListener(
         "mouseenter",
         handleMouseEnter
       );
-      divRef.current.parentNode.removeEventListener(
-        "mousemove",
-        handleMouseMove
-      );
-      divRef.current.parentNode.removeEventListener(
+      divRef.current.parentNode.addEventListener("mousemove", handleMouseMove);
+      divRef.current.parentNode.addEventListener(
         "mouseleave",
         handleMouseLeave
       );
-    };
+
+      return () => {
+        divRef.current.parentNode.removeEventListener(
+          "mouseenter",
+          handleMouseEnter
+        );
+        divRef.current.parentNode.removeEventListener(
+          "mousemove",
+          handleMouseMove
+        );
+        divRef.current.parentNode.removeEventListener(
+          "mouseleave",
+          handleMouseLeave
+        );
+      };
+    }
   }, []);
 
   function handleMouseEnter(event) {
