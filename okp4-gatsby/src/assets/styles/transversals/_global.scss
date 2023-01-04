@@ -24,6 +24,12 @@ main {
   grid-column-gap: 32px;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
+
+  @include media-bp-down(md) {
+    grid-column-gap: 15px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-row-gap: 15px;
+  }
 }
 
 p,
@@ -53,14 +59,29 @@ h3 {
 h1 {
   font-size: 125px;
   line-height: 1;
+  letter-spacing: 0.03em;
+
+  @include media-bp-down(md) {
+    font-size: 65px;
+    line-height: 1.1;
+  }
 }
 
 h2 {
   font-size: 80px;
   line-height: 1;
+
+  @include media-bp-down(md) {
+    font-size: 40px;
+    line-height: 1.1;
+  }
 }
 
 h3 {
   font-size: 60px;
   line-height: 1.1;
+
+  @include media-bp-down(md) {
+    font-size: 40px;
+  }
 }

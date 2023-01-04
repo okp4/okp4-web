@@ -8,6 +8,8 @@ import IconGithub from "../assets/images/socials/github.inline.svg";
 import IconMedium from "../assets/images/socials/medium.inline.svg";
 import IconDiscord from "../assets/images/socials/discord.inline.svg";
 import IconTelegram from "../assets/images/socials/telegram.inline.svg";
+import IconBurger from "../assets/images/icons/burger.inline.svg";
+import IconBurgerCross from "../assets/images/icons/burger-cross.inline.svg";
 import { Link } from "gatsby";
 
 const Header = () => {
@@ -34,6 +36,10 @@ const Header = () => {
     }
   };
 
+  const toggleBurger = () => {
+    divRef.current.classList.toggle("burger-opened");
+  };
+
   useEffect(() => {
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
@@ -49,8 +55,20 @@ const Header = () => {
 
   return (
     <header className="header" ref={divRef}>
-      <div className="wrapper">
+      <div className="header--mobile">
+        <Link to="/" className="header--mobile__logo">
+          <IconLogo />
+        </Link>
+        <div className="header--mobile__burger" onClick={toggleBurger}>
+          <IconBurger className="header--mobile__burger__open" />
+          <IconBurgerCross className="header--mobile__burger__close" />
+        </div>
+      </div>
+      <div className="wrapper header--desktop">
         <div className="header__top">
+          <div className="header__top__message">
+            <p>Follow our adventures !</p>
+          </div>
           <div className="header__socials">
             <a href="" className="header__socials__link" target="_blank">
               <IconLinkedin />

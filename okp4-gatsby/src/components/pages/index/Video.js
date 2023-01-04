@@ -7,7 +7,7 @@ const Video = () => {
   return (
     <Strate classContainer={"video"}>
       <div className="video__player" data-reveal="1">
-        <VideoYoutube youtubeId="Dv5RHRYgSqA" />
+        <VideoYoutube youtubeId="Dt9O3-1bIDU" />
         <IconPlay />
       </div>
     </Strate>

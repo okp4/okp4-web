@@ -2,11 +2,18 @@ main.homepage {
   .landing {
     min-height: 100vh;
     padding-top: 35vh;
-    // padding-bottom: 70px;
     text-align: center;
+
+    @include media-bp-down(md) {
+      padding-top: 160px;
+    }
 
     .wrapper {
       position: relative;
+
+      @include media-bp-down(md) {
+        overflow: hidden;
+      }
     }
 
     .landing__fade {
@@ -16,29 +23,48 @@ main.homepage {
       right: 0;
       transform-origin: bottom;
 
+      @include media-bp-down(md) {
+        top: 165px;
+        right: initial;
+        width: 100vw;
+      }
+
       h1 {
         display: block;
+        width: 100%;
         max-width: 1200px;
         margin: 0 auto 10px;
         text-align: center;
         line-height: 1;
 
-        span {
-          display: block;
+        @include media-bp-down(md) {
+          line-height: 1.1;
+        }
+
+        .title-wrap {
+          display: inline-block;
           font-family: inherit;
           font-size: inherit;
           font-weight: inherit;
           line-height: 1;
-          margin-bottom: -10px;
           overflow: hidden;
+          margin: 0 10px -10px;
+
+          @include media-bp-down(md) {
+            line-height: 1.1;
+            margin: 0 5px -10px;
+          }
 
           span {
-            line-height: 1;
             display: inline-block;
             transform-origin: center;
             transform: translate3d(0, 50%, 0);
             opacity: 0;
             transition: all 1.1s cubic-bezier(0.43, 0.195, 0.02, 1);
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            line-height: inherit;
 
             body.is-fully-loaded & {
               transform: none;
@@ -50,6 +76,7 @@ main.homepage {
 
       p {
         display: block;
+        width: 100%;
         max-width: 765px;
         margin: 0 auto;
         color: $white-80;
@@ -58,6 +85,12 @@ main.homepage {
         line-height: 1.8;
         text-align: center;
         overflow: hidden;
+
+        @include media-bp-down(md) {
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: normal;
+        }
 
         span {
           display: inline-block;
@@ -85,6 +118,14 @@ main.homepage {
       pointer-events: none;
       padding-bottom: 100vh;
 
+      @include media-bp-down(md) {
+        position: relative;
+        top: 340px;
+        left: -15vw;
+        width: 130vw;
+        overflow: hidden;
+      }
+
       .landing__illus__wrapper {
         display: block;
         position: fixed;
@@ -95,12 +136,24 @@ main.homepage {
         // max-width: 1295px;
         margin: 0 auto;
         // padding: 0 15px;
+
+        @include media-bp-down(md) {
+          position: relative;
+          top: initial;
+          width: 100%;
+        }
       }
 
       .imgWrapper--base {
         opacity: 0;
         pointer-events: none;
         width: 70%;
+
+        @include media-bp-down(md) {
+          position: relative;
+          top: initial;
+          width: 100%;
+        }
 
         img {
           width: 100%;
@@ -124,6 +177,10 @@ main.homepage {
     &:not(.is-active) {
       .landing__illus {
         opacity: 0.02;
+
+        @include media-bp-down(md) {
+          opacity: 1;
+        }
       }
     }
 
@@ -142,6 +199,10 @@ main.homepage {
       background-repeat: repeat;
       background-size: contain;
 
+      @include media-bp-down(md) {
+        padding: 60px 0 80px;
+      }
+
       .wrapper {
         position: relative;
       }
@@ -151,6 +212,12 @@ main.homepage {
       max-width: 66%;
       margin: 0 auto 40px;
       text-align: center;
+
+      @include media-bp-down(md) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 35px;
+      }
     }
 
     .introduction__text {
@@ -160,6 +227,13 @@ main.homepage {
       font-size: 20px;
       line-height: 1.5;
       text-align: center;
+
+      @include media-bp-down(md) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 15px;
+        font-size: 18px;
+      }
 
       b {
         font-weight: 600;
@@ -191,6 +265,13 @@ main.homepage {
       font-size: 25px;
       font-weight: 700;
       text-align: center;
+
+      @include media-bp-down(md) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 60px;
+        font-size: 20px;
+      }
     }
 
     .title {
@@ -214,6 +295,12 @@ main.homepage {
         // background-repeat: repeat;
         // background-size: contain;
 
+        @include media-bp-down(md) {
+          grid-column: span 6;
+          width: auto;
+          height: 400px;
+        }
+
         .introduction__cards__item__illus {
           display: flex;
           align-items: center;
@@ -225,6 +312,10 @@ main.homepage {
             display: block;
             width: 290px;
             animation: floating-image 8s linear infinite;
+
+            @include media-bp-down(md) {
+              width: 250px;
+            }
 
             picture {
               display: flex;

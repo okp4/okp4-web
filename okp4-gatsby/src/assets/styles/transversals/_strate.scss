@@ -4,9 +4,17 @@ section.strate {
   margin: 0 auto;
   transform-origin: top;
 
+  @include media-bp-down(md) {
+    width: 100vw;
+  }
+
   .strate__inner {
     transform-origin: top;
     border-radius: 40px;
+
+    @include media-bp-down(md) {
+      border-radius: 20px;
+    }
   }
 
   .strate__layer {
@@ -21,6 +29,10 @@ section.strate {
     opacity: 0;
     background-color: #000000;
     pointer-events: none;
+
+    @include media-bp-down(md) {
+      border-radius: 20px;
+    }
   }
 
   // & + .strate {

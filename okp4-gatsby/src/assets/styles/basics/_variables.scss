@@ -9,3 +9,12 @@ $turquoise: #00b6b7;
 $orange: #ff9500;
 $font-title: "Norse", sans-serif;
 $font: "Barlow", sans-serif;
+$breakpoints: (
+  xxs: 0,
+  xs: 375px,
+  sm: 570px,
+  md: 770px,
+  lg: 1025px,
+  xl: 1200px,
+  xxl: 1500px,
+);

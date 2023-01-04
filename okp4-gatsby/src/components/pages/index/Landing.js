@@ -80,11 +80,24 @@ const Landing = () => {
       <div className="wrapper">
         <div className="landing__fade" ref={divFadeOut}>
           <h1>
-            <span>
+            {/* <span>
               <span>The open</span>
             </span>
             <span>
               <span>Knowledge protocol</span>
+            </span> */}
+            <span className="title-wrap">
+              <span>The</span>
+            </span>
+            <span className="title-wrap">
+              <span>open</span>
+            </span>
+            <br />
+            <span className="title-wrap">
+              <span>Knowledge</span>
+            </span>
+            <span className="title-wrap">
+              <span>protocol</span>
             </span>
           </h1>
           <p className="subtitle">
