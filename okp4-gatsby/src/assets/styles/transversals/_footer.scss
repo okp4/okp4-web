@@ -44,11 +44,18 @@ footer.footer {
         padding: 32px 40px;
         border-radius: 20px;
         background-color: #fff;
-        background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+
+        background: url("/images/grain.png"),
+          linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+        background-repeat: repeat;
+        background-size: contain;
+        // background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+
         transition: background 0.25s ease;
 
         &:hover {
-          background: linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
+          background: url("/images/grain.png"),
+            linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
           .title,
           .description {
             color: $white;

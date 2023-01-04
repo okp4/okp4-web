@@ -1,0 +1,5 @@
+@mixin bg-grain {
+  background-image: url("/images/grain.png");
+  background-repeat: repeat;
+  background-size: contain;
+}

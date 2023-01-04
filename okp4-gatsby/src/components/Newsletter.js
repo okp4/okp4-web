@@ -60,7 +60,7 @@ const Newsletter = () => {
                           id="EMAIL"
                           name="EMAIL"
                           placeholder="Email address"
-                          autocomplete="off"
+                          autoComplete="off"
                           data-required="true"
                           required
                         />
@@ -96,10 +96,10 @@ const Newsletter = () => {
               <input
                 type="text"
                 name="email_address_check"
-                value=""
+                defaultValue=""
                 className="input--hidden"
               />
-              <input type="hidden" name="locale" value="fr" />
+              <input type="hidden" name="locale" defaultValue="fr" />
             </form>
           </div>
         </div>

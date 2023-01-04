@@ -1,5 +1,7 @@
 body {
-  background-color: $nightblue;
+  background: url("/images/grain.png"), $nightblue;
+  background-repeat: repeat;
+  background-size: contain;
   color: $white;
   font-family: $font;
   font-weight: 400;

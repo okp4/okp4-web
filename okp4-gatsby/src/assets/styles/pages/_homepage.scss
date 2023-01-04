@@ -136,8 +136,11 @@ main.homepage {
 
   .introduction {
     .strate__inner {
-      padding: 160px 0;
-      background-color: $darkblue;
+      padding: 120px 0 160px;
+      // background-color: $darkblue;
+      background: url("/images/grain.png"), $darkblue;
+      background-repeat: repeat;
+      background-size: contain;
 
       .wrapper {
         position: relative;
@@ -205,10 +208,11 @@ main.homepage {
         width: 400px;
         height: 447px;
         padding: 10px 0 40px;
-        border: 1px solid $white;
+        // border: 1px solid $white;
         border-radius: 20px;
-        background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%),
-          #ffffff;
+        background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%);
+        // background-repeat: repeat;
+        // background-size: contain;
 
         .introduction__cards__item__illus {
           display: flex;
@@ -266,7 +270,10 @@ main.homepage {
         display: flex;
         grid-column: span 6;
         border-radius: 20px;
-        background: $pushblue;
+        // background: $pushblue;
+        background: url("/images/grain.png"), $pushblue;
+        background-repeat: repeat;
+        background-size: contain;
       }
 
       .title {
@@ -347,6 +354,7 @@ main.homepage {
   .video {
     .strate__inner {
       background: #000000;
+      @include bg-grain;
       overflow: hidden;
     }
 
@@ -379,7 +387,12 @@ main.homepage {
   .universe {
     .strate__inner {
       padding: 120px 0 80px;
-      background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%), #ffffff;
+      // background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%);
+      background: url("/images/grain.png"),
+        linear-gradient(180deg, #012c4f 0%, #003a68 77.08%);
+      background-repeat: repeat;
+      background-size: contain;
+      // @include bg-grain;
     }
 
     .universe__title {
