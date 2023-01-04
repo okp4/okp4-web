@@ -10,6 +10,7 @@ import IconDiscord from "../assets/images/socials/discord.inline.svg";
 import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import Halo from "./animations/Halo.js";
 import Docs from "./Docs.js";
+import Newsletter from "./Newsletter.js";
 
 const Footer = () => {
   return (
@@ -83,7 +84,9 @@ const Footer = () => {
               <p>
                 Follow our adventures and <b>stay up to date </b>!
               </p>
-              <div className="footer__main__bottom__newsletter__form"></div>
+              <div className="footer__main__bottom__newsletter__form">
+                <Newsletter />
+              </div>
             </div>
             <div className="footer__main__bottom__socials">
               <a
