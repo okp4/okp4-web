@@ -39,43 +39,48 @@ const Landing = () => {
       divFadeOut.current.style.opacity = opacityRatioOut;
     }
 
-    divRef.current.querySelectorAll("[data-parallax]").forEach((elem) => {
-      if (ScrollManager.isIntersectingViewport(divFadeIn.current)) {
-        var ratio = ScrollManager.getIntersectionRatio(divFadeIn.current);
-        var transformRatio;
-        var parallaxEnd = parseInt(elem.dataset.parallaxend);
-        transformRatio = ratio.toFixed(4) * parallaxEnd;
+    if (ResponsiveManager.isWindowLarger("md")) {
+      divRef.current.querySelectorAll("[data-parallax]").forEach((elem) => {
+        if (ScrollManager.isIntersectingViewport(divFadeIn.current)) {
+          var ratio = ScrollManager.getIntersectionRatio(divFadeIn.current);
+          var transformRatio;
+          var parallaxEnd = parseInt(elem.dataset.parallaxend);
+          transformRatio = ratio.toFixed(4) * parallaxEnd;
 
-        var transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
-        elem.style.transform = transformRatioCss;
-      }
-    });
+          var transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
+          elem.style.transform = transformRatioCss;
+        }
+      });
+    }
 
     requestAnimationFrame(perspective);
   };
 
   useEffect(() => {
-    if (ResponsiveManager.isWindowLarger("md")) {
-      console.log("iam larger than md");
-      var divDimensions = divRef.current.getBoundingClientRect();
-      var divAbsoluteTop = divDimensions.top + window.scrollY;
-      var startScale = 0;
-      // var endScale = windowHeight / 2;
-      var endScale = windowHeight;
-      divRef.current.dataset.top = divAbsoluteTop;
-      divRef.current.dataset.start = startScale;
-      divRef.current.dataset.end = endScale;
+    var divDimensions = divRef.current.getBoundingClientRect();
+    var divAbsoluteTop = divDimensions.top + window.scrollY;
+    var startScale = 0;
+    // var endScale = windowHeight / 2;
+    var endScale = windowHeight;
+    divRef.current.dataset.top = divAbsoluteTop;
+    divRef.current.dataset.start = startScale;
+    divRef.current.dataset.end = endScale;
 
-      setTimeout(function () {
-        const animationFrame = requestAnimationFrame(perspective);
+    setTimeout(function () {
+      const animationFrame = requestAnimationFrame(perspective);
+
+      if (ResponsiveManager.isWindowLarger("md")) {
         window.addEventListener("scroll", scrollStarted);
+      }
 
-        return () => {
-          cancelAnimationFrame(animationFrame);
+      return () => {
+        cancelAnimationFrame(animationFrame);
+
+        if (ResponsiveManager.isWindowLarger("md")) {
           window.removeEventListener("scroll", scrollStarted);
-        };
-      }, 1000);
-    }
+        }
+      };
+    }, 1000);
   }, []);
 
   return (

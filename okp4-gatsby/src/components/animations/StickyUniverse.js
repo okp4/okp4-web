@@ -1,10 +1,23 @@
 import React, { useEffect, useRef } from "react";
+import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 
 const StickyUniverse = ({ children, classContainer }) => {
   const divRef = useRef(null);
   const windowHeight =
     window.innerHeight || document.documentElement.clientHeight;
   const halfScreen = windowHeight / 2;
+
+  const setIllusMobile = () => {
+    const illustrations = divRef.current.querySelectorAll(
+      ".universe__illus__item"
+    );
+    illustrations.forEach((illus) => {
+      let item_selector =
+        "div.universe__item[data-item='" + illus.dataset.item + "']";
+      let item = divRef.current.querySelector(item_selector);
+      item.append(illus);
+    });
+  };
 
   const handleScroll = () => {
     var firstActive = divRef.current.querySelector(
@@ -57,6 +70,9 @@ const StickyUniverse = ({ children, classContainer }) => {
   };
 
   useEffect(() => {
+    if (ResponsiveManager.isWindowSmaller("md")) {
+      setIllusMobile();
+    }
     window.addEventListener("scroll", handleScroll);
 
     return () => {

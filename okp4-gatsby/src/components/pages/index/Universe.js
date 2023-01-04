@@ -109,7 +109,7 @@ const Universe = () => {
                 OKP4 is a blockchain built for the coordination of digital
                 resources.
                 <br /> This is is the only blockchain where
-                <b>developers can find the perfect environment</b> to build a
+                <b> developers can find the perfect environment</b> to build a
                 new generation of applications based on digital resources
                 (datasets, algorithms, storage, computation…){" "}
                 <b>shared by participants </b>
@@ -124,6 +124,7 @@ const Universe = () => {
               >
                 <div className="roadmap__item__layer"></div>
                 <div className="roadmap__item__container">
+                  <span className="roadmap__item__text--mobile">— Genesis</span>
                   <div className="roadmap__item__text">
                     <span className="title">— Genesis</span>
                     <p className="excerpt">
@@ -159,6 +160,7 @@ const Universe = () => {
               >
                 <div className="roadmap__item__layer"></div>
                 <div className="roadmap__item__container">
+                  <span className="roadmap__item__text--mobile">— Nemeton</span>
                   <div className="roadmap__item__text">
                     <span className="title">— Nemeton</span>
                     <p className="excerpt">
@@ -196,6 +198,7 @@ const Universe = () => {
               >
                 <div className="roadmap__item__layer"></div>
                 <div className="roadmap__item__container">
+                  <span className="roadmap__item__text--mobile">— Mirdin</span>
                   <div className="roadmap__item__text">
                     <span className="title">— Mirdin</span>
                     <p className="excerpt">
@@ -232,6 +235,7 @@ const Universe = () => {
               >
                 <div className="roadmap__item__layer"></div>
                 <div className="roadmap__item__container">
+                  <span className="roadmap__item__text--mobile">— Duir</span>
                   <div className="roadmap__item__text">
                     <span className="title">— Duir</span>
                     <p className="excerpt">
@@ -267,6 +271,7 @@ const Universe = () => {
               <div className="roadmap__item">
                 <div className="roadmap__item__layer"></div>
                 <div className="roadmap__item__container">
+                  <span className="roadmap__item__text--mobile">— Lugh</span>
                   <div className="roadmap__item__text">
                     <span className="title">— Lugh</span>
                     <p className="excerpt">

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import * as ScrollManager from "../../utils/ScrollManager.js";
+import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 
 const StrateRoadmap = ({
   children,
@@ -12,10 +13,17 @@ const StrateRoadmap = ({
     window.innerHeight || document.documentElement.clientHeight;
 
   const setStickyPosition = () => {
-    let divDimensions = divRef.current.getBoundingClientRect();
-    let topPositionSticky = parseInt(scaleTopSticky);
-    let topPositionCss = topPositionSticky + "px";
-    divRef.current.style.top = topPositionCss;
+    if (ResponsiveManager.isWindowLarger("md")) {
+      let divDimensions = divRef.current.getBoundingClientRect();
+      let topPositionSticky = parseInt(scaleTopSticky);
+      let topPositionCss = topPositionSticky + "px";
+      divRef.current.style.top = topPositionCss;
+    } else {
+      let divDimensions = divRef.current.getBoundingClientRect();
+      let topPositionSticky = -divDimensions.height + windowHeight;
+      let topPositionCss = topPositionSticky + "px";
+      divRef.current.style.top = topPositionCss;
+    }
   };
 
   const perspective = () => {
