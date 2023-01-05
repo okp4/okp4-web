@@ -16,7 +16,12 @@ const Docs = () => {
           </p>
         </div>
         <div className="docs__content">
-          <a href="" className="docs__content__item docs__content__item--large">
+          <a
+            href="https://docs.okp4.network/docs/whitepaper/abstract"
+            className="docs__content__item docs__content__item--large"
+            target="_blank"
+            rel="noreferrer"
+          >
             <p className="title">Whitepaper & documentation</p>
             <p className="description">
               Eager to understand OKP4 and join the community? Read our docs
@@ -24,7 +29,12 @@ const Docs = () => {
             </p>
             <IconArrowtr />
           </a>
-          <a href="" className="docs__content__item docs__content__item--large">
+          <a
+            href="https://blog.okp4.network/"
+            className="docs__content__item docs__content__item--large"
+            target="_blank"
+            rel="noreferrer"
+          >
             <p className="title">Our blog</p>
             <p className="description">
               Follow the latest content and publications on the OKP4 blog.
@@ -33,16 +43,20 @@ const Docs = () => {
           </a>
           <div className="docs__content__right">
             <a
-              href=""
+              href="https://github.com/okp4"
               className="docs__content__item docs__content__item--small"
+              target="_blank"
+              rel="noreferrer"
             >
               <IconGithub className="social" />
               <p className="title">Github</p>
               <IconArrowtr className="arrow" />
             </a>
             <a
-              href=""
+              href="https://discord.com/invite/okp4"
               className="docs__content__item docs__content__item--small"
+              target="_blank"
+              rel="noreferrer"
             >
               <IconDiscord className="social" />
               <p className="title">Discord</p>

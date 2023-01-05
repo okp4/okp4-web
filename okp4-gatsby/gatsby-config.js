@@ -13,21 +13,18 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: `gatsby-plugin-sass`,
-    //   options: {
-    //     sassOptions: {
-    //       file: "./src/assets/styles/index.scss",
-    //       includePaths: ["./src/assets/styles"],
-    //     },
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
           include: /\.inline\.svg$/,
         },
+      },
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "static/favicon.png",
       },
     },
   ],

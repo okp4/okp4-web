@@ -6,6 +6,7 @@ const VideoYoutube = ({ youtubeId }) => {
       <iframe
         width="80vw"
         height="45vw"
+        title="youtubeVideo"
         src={
           "https://www.youtube.com/embed/" +
           youtubeId +

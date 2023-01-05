@@ -61,6 +61,8 @@ const Footer = () => {
               <a
                 href="https://docs.okp4.network/faq"
                 className="footer__main__top__links__item"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span>FAQ</span>
                 <IconArrowtr />
@@ -68,6 +70,8 @@ const Footer = () => {
               <a
                 href="https://docs.okp4.network/docs/whitepaper/abstract"
                 className="footer__main__top__links__item"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span>Whitepaper</span>
                 <IconArrowtr />
@@ -75,6 +79,8 @@ const Footer = () => {
               <a
                 href="https://nemeton.okp4.network/"
                 className="footer__main__top__links__item"
+                target="_blank"
+                rel="noreferrer"
               >
                 <span>Nemeton program</span>
                 <IconArrowtr />
@@ -102,6 +108,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/okp4-open-knowledge-protocol-for/"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
+                rel="noreferrer"
               >
                 <IconLinkedin />
               </a>
@@ -109,6 +116,7 @@ const Footer = () => {
                 href="https://twitter.com/OKP4_Protocol"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
+                rel="noreferrer"
               >
                 <IconTwitter />
               </a>
@@ -116,6 +124,7 @@ const Footer = () => {
                 href="https://github.com/okp4"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
+                rel="noreferrer"
               >
                 <IconGithub />
               </a>
@@ -123,6 +132,7 @@ const Footer = () => {
                 href="https://blog.okp4.network/"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
+                rel="noreferrer"
               >
                 <IconMedium />
               </a>
@@ -130,6 +140,7 @@ const Footer = () => {
                 href="https://discord.com/invite/okp4"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
+                rel="noreferrer"
               >
                 <IconDiscord />
               </a>
@@ -137,6 +148,7 @@ const Footer = () => {
                 href="https://t.me/okp4network"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
+                rel="noreferrer"
               >
                 <IconTelegram />
               </a>

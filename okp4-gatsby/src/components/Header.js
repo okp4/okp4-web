@@ -14,10 +14,10 @@ import { Link } from "gatsby";
 
 const Header = () => {
   const divRef = useRef(null);
-  const windowHeight =
-    window.innerHeight || document.documentElement.clientHeight;
 
   const getRatio = () => {
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
     const scrollY = window.scrollY;
     const distance = windowHeight;
     let percentTravelled = (distance - scrollY) / distance;
@@ -27,6 +27,8 @@ const Header = () => {
   };
 
   const scrollStarted = () => {
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
     if (window.scrollY < windowHeight + 100) {
       divRef.current.classList.remove("is-reset");
       let ratio = getRatio();
@@ -41,9 +43,6 @@ const Header = () => {
   };
 
   useEffect(() => {
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-
     setTimeout(function () {
       window.addEventListener("scroll", scrollStarted);
 
@@ -74,6 +73,7 @@ const Header = () => {
               href="https://www.linkedin.com/company/okp4-open-knowledge-protocol-for/"
               className="header__socials__link"
               target="_blank"
+              rel="noreferrer"
             >
               <IconLinkedin />
             </a>
@@ -81,6 +81,7 @@ const Header = () => {
               href="https://twitter.com/OKP4_Protocol"
               className="header__socials__link"
               target="_blank"
+              rel="noreferrer"
             >
               <IconTwitter />
             </a>
@@ -88,6 +89,7 @@ const Header = () => {
               href="https://github.com/okp4"
               className="header__socials__link"
               target="_blank"
+              rel="noreferrer"
             >
               <IconGithub />
             </a>
@@ -95,6 +97,7 @@ const Header = () => {
               href="https://blog.okp4.network/"
               className="header__socials__link"
               target="_blank"
+              rel="noreferrer"
             >
               <IconMedium />
             </a>
@@ -102,6 +105,7 @@ const Header = () => {
               href="https://discord.com/invite/okp4"
               className="header__socials__link"
               target="_blank"
+              rel="noreferrer"
             >
               <IconDiscord />
             </a>
@@ -109,6 +113,7 @@ const Header = () => {
               href="https://t.me/okp4network"
               className="header__socials__link"
               target="_blank"
+              rel="noreferrer"
             >
               <IconTelegram />
             </a>
@@ -140,6 +145,8 @@ const Header = () => {
             <a
               href="https://docs.okp4.network/docs/whitepaper/abstract"
               className="header__resources__link"
+              target="_blank"
+              rel="noreferrer"
             >
               <span>Whitepaper</span>
               <IconArrowtr />
@@ -147,6 +154,8 @@ const Header = () => {
             <a
               href="/https://nemeton.okp4.network/"
               className="header__resources__link"
+              target="_blank"
+              rel="noreferrer"
             >
               <span>Nemeton program</span>
               <IconArrowtr />

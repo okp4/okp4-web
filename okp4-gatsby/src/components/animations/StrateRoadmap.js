@@ -9,8 +9,6 @@ const StrateRoadmap = ({
   scaleMax,
 }) => {
   const divRef = useRef(null);
-  const windowHeight =
-    window.innerHeight || document.documentElement.clientHeight;
 
   const setStickyPosition = () => {
     if (ResponsiveManager.isWindowLarger("md")) {
@@ -19,6 +17,8 @@ const StrateRoadmap = ({
       let topPositionCss = topPositionSticky + "px";
       divRef.current.style.top = topPositionCss;
     } else {
+      const windowHeight =
+        window.innerHeight || document.documentElement.clientHeight;
       let divDimensions = divRef.current.getBoundingClientRect();
       let topPositionSticky = -divDimensions.height + windowHeight;
       let topPositionCss = topPositionSticky + "px";

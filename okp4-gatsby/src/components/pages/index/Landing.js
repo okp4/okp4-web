@@ -8,8 +8,6 @@ const Landing = () => {
   const divRef = useRef(null);
   const divFadeOut = useRef(null);
   const divFadeIn = useRef(null);
-  const windowHeight =
-    window.innerHeight || document.documentElement.clientHeight;
 
   const scrollStarted = () => {
     if (window.scrollY < 410) {
@@ -61,6 +59,9 @@ const Landing = () => {
     var divAbsoluteTop = divDimensions.top + window.scrollY;
     var startScale = 0;
     // var endScale = windowHeight / 2;
+
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
     var endScale = windowHeight;
     divRef.current.dataset.top = divAbsoluteTop;
     divRef.current.dataset.start = startScale;

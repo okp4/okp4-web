@@ -3,9 +3,6 @@ import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 
 const StickyUniverse = ({ children, classContainer }) => {
   const divRef = useRef(null);
-  const windowHeight =
-    window.innerHeight || document.documentElement.clientHeight;
-  const halfScreen = windowHeight / 2;
 
   const setIllusMobile = () => {
     const illustrations = divRef.current.querySelectorAll(
@@ -24,6 +21,9 @@ const StickyUniverse = ({ children, classContainer }) => {
       ".universe__item.is-first-active"
     );
 
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+    const halfScreen = windowHeight / 2;
     if (firstActive) {
       const rect = firstActive.getBoundingClientRect();
       if (rect.top < halfScreen) {

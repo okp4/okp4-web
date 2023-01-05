@@ -4,10 +4,10 @@ import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 
 const Strate = ({ children, classContainer }) => {
   const divRef = useRef(null);
-  const windowHeight =
-    window.innerHeight || document.documentElement.clientHeight;
 
   const setStickyPosition = () => {
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
     let divDimensions = divRef.current.getBoundingClientRect();
     let topPositionSticky = -40;
 
@@ -41,6 +41,8 @@ const Strate = ({ children, classContainer }) => {
   useEffect(() => {
     if (ResponsiveManager.isWindowLarger("md")) {
       setTimeout(function () {
+        const windowHeight =
+          window.innerHeight || document.documentElement.clientHeight;
         var divDimensions = divRef.current.getBoundingClientRect();
         var divAbsoluteTop = divDimensions.top + window.scrollY;
         var startScale = divAbsoluteTop + divDimensions.height - windowHeight;
