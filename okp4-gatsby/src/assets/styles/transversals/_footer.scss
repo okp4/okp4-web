@@ -1,6 +1,6 @@
 footer.footer {
   position: relative;
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
   background: url("/images/grain.png"), $nightblue;
   background-repeat: repeat;
   background-size: contain;
@@ -8,6 +8,10 @@ footer.footer {
 
   @include media-bp-down(md) {
     padding-bottom: 0;
+  }
+
+  .footer__sticky {
+    position: sticky;
   }
 
   .docs {
@@ -273,10 +277,11 @@ footer.footer {
 
   .footer__main {
     position: relative;
+    top: 3px;
     width: calc(100% - 60px);
     margin: 0 auto;
     background: #121320;
-    border-radius: 30px;
+    border-radius: 30px 30px 0 0;
     overflow: hidden;
 
     @include media-bp-down(md) {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import IconLogo from "../assets/images/logo.inline.svg";
 import IconArrowtr from "../assets/images/icons/arrow-tr.inline.svg";
@@ -13,34 +13,52 @@ import Docs from "./Docs.js";
 import Newsletter from "./Newsletter.js";
 
 const Footer = () => {
+  const divRef = useRef(null);
+
+  const setStickyPosition = () => {
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+    let divDimensions = divRef.current.getBoundingClientRect();
+    let topPositionSticky = -(divDimensions.height - windowHeight);
+
+    let topPositionCss = topPositionSticky + "px";
+    divRef.current.style.top = topPositionCss;
+  };
+
+  useEffect(() => {
+    setStickyPosition();
+  }, []);
+
   return (
     <footer className="footer">
       <Halo />
-      <Docs />
-      <div className="footer__partenaires">
-        <div className="wrapper">
-          <p>Our actions are co-funded by</p>
-          <div className="footer__partenaires__items">
-            <div className="footer__partenaires__item">
-              <StaticImage
-                className="imgWrapper"
-                src="../assets/images/logos/occitanie.png"
-                alt="Logo Occitanie"
-              />
-            </div>
-            <div className="footer__partenaires__item">
-              <StaticImage
-                className="imgWrapper"
-                src="../assets/images/logos/bpi.png"
-                alt="Logo BPI France"
-              />
-            </div>
-            <div className="footer__partenaires__item">
-              <StaticImage
-                className="imgWrapper"
-                src="../assets/images/logos/bretagne.png"
-                alt="Logo Bretagne"
-              />
+      <div className="footer__sticky" ref={divRef}>
+        <Docs />
+        <div className="footer__partenaires">
+          <div className="wrapper">
+            <p>Our actions are co-funded by</p>
+            <div className="footer__partenaires__items">
+              <div className="footer__partenaires__item">
+                <StaticImage
+                  className="imgWrapper"
+                  src="../assets/images/logos/occitanie.png"
+                  alt="Logo Occitanie"
+                />
+              </div>
+              <div className="footer__partenaires__item">
+                <StaticImage
+                  className="imgWrapper"
+                  src="../assets/images/logos/bpi.png"
+                  alt="Logo BPI France"
+                />
+              </div>
+              <div className="footer__partenaires__item">
+                <StaticImage
+                  className="imgWrapper"
+                  src="../assets/images/logos/bretagne.png"
+                  alt="Logo Bretagne"
+                />
+              </div>
             </div>
           </div>
         </div>

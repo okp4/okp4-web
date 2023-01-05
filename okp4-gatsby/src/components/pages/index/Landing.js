@@ -16,7 +16,7 @@ const Landing = () => {
       let percentTravelled = scrollY / distance;
       if (percentTravelled > 1) percentTravelled = 1;
 
-      if (percentTravelled < 0.02) percentTravelled = 0.02;
+      if (percentTravelled < 0.01) percentTravelled = 0.01;
       divFadeIn.current.style.opacity = percentTravelled;
     }
   };
@@ -147,7 +147,7 @@ const Landing = () => {
             <div
               className="parallaxWrapper"
               data-parallax="1"
-              data-parallaxend="-420"
+              data-parallaxend="-400"
             >
               <StaticImage
                 className="imgWrapper"
@@ -173,7 +173,8 @@ const Landing = () => {
             <div
               className="parallaxWrapper"
               data-parallax="1"
-              data-parallaxend="-300"
+              // data-parallaxend="-300"
+              data-parallaxend="-430"
             >
               <StaticImage
                 className="imgWrapper"
@@ -182,11 +183,26 @@ const Landing = () => {
               />
             </div>
 
+            {/* Workflow engine */}
+            <div
+              className="parallaxWrapper"
+              data-parallax="1"
+              // data-parallaxend="-210"
+              data-parallaxend="-390"
+            >
+              <StaticImage
+                className="imgWrapper"
+                src="../../../assets/images/illus/index_landing_sprites/9.png"
+                alt="OKP4 hero image"
+              />
+            </div>
+
             {/* Identity */}
             <div
               className="parallaxWrapper"
               data-parallax="1"
-              data-parallaxend="-320"
+              // data-parallaxend="-320"
+              data-parallaxend="-360"
             >
               <StaticImage
                 className="imgWrapper"
@@ -195,39 +211,12 @@ const Landing = () => {
               />
             </div>
 
-            {/* Workflow engine */}
-            <div
-              className="parallaxWrapper"
-              data-parallax="1"
-              data-parallaxend="-300"
-            >
-              <StaticImage
-                data-parallax="1"
-                data-parallaxend="-290"
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/9.png"
-                alt="OKP4 hero image"
-              />
-            </div>
-
-            {/* Data */}
-            <div
-              className="parallaxWrapper"
-              data-parallax="1"
-              data-parallaxend="-270"
-            >
-              <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/6.png"
-                alt="OKP4 hero image"
-              />
-            </div>
-
             {/* Storage */}
             <div
               className="parallaxWrapper"
               data-parallax="1"
-              data-parallaxend="-400"
+              // data-parallaxend="-400"
+              data-parallaxend="-430"
             >
               <StaticImage
                 className="imgWrapper"
@@ -236,11 +225,26 @@ const Landing = () => {
               />
             </div>
 
+            {/* Data */}
+            <div
+              className="parallaxWrapper"
+              data-parallax="1"
+              // data-parallaxend="-270"
+              data-parallaxend="-390"
+            >
+              <StaticImage
+                className="imgWrapper"
+                src="../../../assets/images/illus/index_landing_sprites/6.png"
+                alt="OKP4 hero image"
+              />
+            </div>
+
             {/* Algorithm */}
             <div
               className="parallaxWrapper"
               data-parallax="1"
-              data-parallaxend="-320"
+              // data-parallaxend="-320"
+              data-parallaxend="-360"
             >
               <StaticImage
                 className="imgWrapper"

@@ -186,7 +186,7 @@ main.homepage {
 
     &:not(.is-active) {
       .landing__illus {
-        opacity: 0.02;
+        opacity: 0.01;
 
         @include media-bp-down(md) {
           opacity: 1;
@@ -537,8 +537,13 @@ main.homepage {
 
     .universe__title {
       display: block;
-      margin-bottom: 120px;
+      // margin-bottom: 120px;
       text-align: center;
+
+      position: sticky;
+      top: 20px;
+      padding-bottom: calc(100vh - 300px);
+      margin-bottom: 70px;
 
       @include media-bp-down(md) {
         margin-bottom: 60px;
@@ -553,8 +558,8 @@ main.homepage {
     .universe__items {
       display: inline-block;
       width: 41%;
-      margin-top: 50vh;
-      padding-bottom: 200px;
+      margin-top: calc(600px - 100vh);
+      padding-bottom: 100px;
       vertical-align: top;
 
       @include media-bp-down(md) {
@@ -683,7 +688,8 @@ main.homepage {
     .universe__illus {
       display: inline-flex;
       position: sticky;
-      top: 50px;
+      top: 170px;
+      margin-top: calc(300px - 100vh);
       align-items: flex-start;
       justify-content: flex-end;
       width: 58%;
@@ -779,6 +785,7 @@ main.homepage {
 
       .roadmap__items {
         width: 100%;
+        padding-bottom: 100px;
 
         .roadmap__item {
           position: sticky;
@@ -889,7 +896,7 @@ main.homepage {
             }
 
             .description {
-              color: $white-80;
+              // color: $white-80;
               line-height: 32px;
 
               b {
