@@ -70,35 +70,59 @@ const Header = () => {
             <p>Follow our adventures !</p>
           </div>
           <div className="header__socials">
-            <a href="" className="header__socials__link" target="_blank">
+            <a
+              href="https://www.linkedin.com/company/okp4-open-knowledge-protocol-for/"
+              className="header__socials__link"
+              target="_blank"
+            >
               <IconLinkedin />
             </a>
-            <a href="" className="header__socials__link" target="_blank">
+            <a
+              href="https://twitter.com/OKP4_Protocol"
+              className="header__socials__link"
+              target="_blank"
+            >
               <IconTwitter />
             </a>
-            <a href="" className="header__socials__link" target="_blank">
+            <a
+              href="https://github.com/okp4"
+              className="header__socials__link"
+              target="_blank"
+            >
               <IconGithub />
             </a>
-            <a href="" className="header__socials__link" target="_blank">
+            <a
+              href="https://blog.okp4.network/"
+              className="header__socials__link"
+              target="_blank"
+            >
               <IconMedium />
             </a>
-            <a href="" className="header__socials__link" target="_blank">
+            <a
+              href="https://discord.com/invite/okp4"
+              className="header__socials__link"
+              target="_blank"
+            >
               <IconDiscord />
             </a>
-            <a href="" className="header__socials__link" target="_blank">
+            <a
+              href="https://t.me/okp4network"
+              className="header__socials__link"
+              target="_blank"
+            >
               <IconTelegram />
             </a>
           </div>
-          <div className="header__lang">
+          {/* <div className="header__lang">
             <span>FR</span>
             <IconChevron />
-          </div>
+          </div> */}
         </div>
         <div className="header__bottom">
           <Link to="/" className="header__logo">
             <IconLogo />
           </Link>
-          <nav className="header__navigation">
+          {/* <nav className="header__navigation">
             <Link to="/" className="header__navigation__link">
               <span>Learn</span>
             </Link>
@@ -111,16 +135,22 @@ const Header = () => {
             <Link to="/" className="header__navigation__link">
               <span>Interact</span>
             </Link>
-          </nav>
+          </nav> */}
           <nav className="header__resources">
-            <Link to="/" className="header__resources__link">
+            <a
+              href="https://docs.okp4.network/docs/whitepaper/abstract"
+              className="header__resources__link"
+            >
               <span>Whitepaper</span>
               <IconArrowtr />
-            </Link>
-            <Link to="/" className="header__resources__link">
+            </a>
+            <a
+              href="/https://nemeton.okp4.network/"
+              className="header__resources__link"
+            >
               <span>Nemeton program</span>
               <IconArrowtr />
-            </Link>
+            </a>
           </nav>
         </div>
       </div>

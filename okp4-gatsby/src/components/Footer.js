@@ -58,20 +58,29 @@ const Footer = () => {
           <div className="footer__main__top">
             <IconLogo className="footer__main__top__logo" />
             <div className="footer__main__top__links">
-              <a href="" className="footer__main__top__links__item">
+              <a
+                href="https://docs.okp4.network/faq"
+                className="footer__main__top__links__item"
+              >
                 <span>FAQ</span>
                 <IconArrowtr />
               </a>
-              <a href="" className="footer__main__top__links__item">
+              <a
+                href="https://docs.okp4.network/docs/whitepaper/abstract"
+                className="footer__main__top__links__item"
+              >
                 <span>Whitepaper</span>
                 <IconArrowtr />
               </a>
-              <a href="" className="footer__main__top__links__item">
+              <a
+                href="https://nemeton.okp4.network/"
+                className="footer__main__top__links__item"
+              >
                 <span>Nemeton program</span>
                 <IconArrowtr />
               </a>
               <a
-                href=""
+                href="mailto:hello@okp4.network"
                 className="footer__main__top__links__item footer__main__top__links__item--button"
               >
                 <span>Let’s Get In Touch</span>
@@ -90,42 +99,42 @@ const Footer = () => {
             </div>
             <div className="footer__main__bottom__socials">
               <a
-                href=""
+                href="https://www.linkedin.com/company/okp4-open-knowledge-protocol-for/"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
               >
                 <IconLinkedin />
               </a>
               <a
-                href=""
+                href="https://twitter.com/OKP4_Protocol"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
               >
                 <IconTwitter />
               </a>
               <a
-                href=""
+                href="https://github.com/okp4"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
               >
                 <IconGithub />
               </a>
               <a
-                href=""
+                href="https://blog.okp4.network/"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
               >
                 <IconMedium />
               </a>
               <a
-                href=""
+                href="https://discord.com/invite/okp4"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
               >
                 <IconDiscord />
               </a>
               <a
-                href=""
+                href="https://t.me/okp4network"
                 className="footer__main__bottom__socials__link"
                 target="_blank"
               >

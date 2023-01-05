@@ -179,7 +179,7 @@ const Universe = () => {
                       vision of a new generation of applications enabled by
                       trust-minimized sharing of digital resources. <br />
                       The Nemeton era will result in a stable, battle-tested
-                      environment and will give birth to the OKP4 mainnet
+                      environment and will give birth to the OKP4 mainnet.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -215,8 +215,19 @@ const Universe = () => {
                       community of builders deploys many existing or innovative
                       governance rules for Data Spaces publicly for the first
                       time, enabling new mechanisms to align interests among
-                      participants (data providers, services providers,
-                      users...)
+                      participants (data providers, services providers, users…).
+                      The community of token holders and validators takes
+                      control, through governance proposals and votes, of the
+                      reins of the network. The incentives schemes enable the
+                      onboarding of many community members across all roles. The
+                      X era also sees the first generation of IBC channels
+                      enabling tokens to flow to and from the interchain, and
+                      the emergence of the first proto-interchain applications.
+                      At the end of the X era, impactful business & community
+                      powered-applications emerged, and the community has grown
+                      tremendously due to the many opportunities offered to
+                      them. The robust OKP4 SDK and Dataverse Gateways bring us
+                      into the next era: Y.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -244,14 +255,21 @@ const Universe = () => {
                       gradually.
                     </p>
                     <p className="description">
-                      The Dataverse reaches a critical network effect: the many
-                      datasets and services available provide unprecedented
-                      opportunities for builders and becomes a significant
-                      go-to-market fo data & services providers. An ecosystem of
-                      Data Space governance tokens emerges, providing healthy
-                      competition between them and steering open innovation to
-                      the next level.Real-life use cases and value flows into
-                      the network and the OKP4 public good continues to grow.
+                      While X was focused on building the infrastructure, the Y
+                      era is now focused on adoption. With each release relating
+                      to the SDK, the Dataverse Gateways or the governance
+                      templates, new opportunities emerged for builders, data &
+                      service providers and users. The Y era is the climax of
+                      adoption due to the easiness and straightforwardness of
+                      building and onboarding communities. The Dataverse reaches
+                      a critical network effect: the many datasets and services
+                      available provide unprecedented opportunities for builders
+                      and becomes a significant go-to-market fo data & services
+                      providers. An ecosystem of Data Space governance tokens
+                      emerges, providing healthy competition between them and
+                      steering open innovation to the next level. Real-life use
+                      cases and value flows into the network and the OKP4 public
+                      good continues to grow.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -275,25 +293,21 @@ const Universe = () => {
                   <div className="roadmap__item__text">
                     <span className="title">— Lugh</span>
                     <p className="excerpt">
-                      After more than two years of research and development
-                      using the Cosmos SDK as a starting point, OKP4 launched
-                      its Nemeton Public Testnet on the 17th of October, 2022.
+                      The Z era is the expression of the unstoppable nature of
+                      OKP4s design.
                     </p>
                     <p className="description">
-                      The Nemeton era is the <b>bootstrapping era</b>. This is
-                      when the ideas & concepts are expressed to the public.
-                      This is when the first validators join together to power
-                      the network, test its limits and contribute to its
-                      developments. This is when the first builders come to
-                      explore <b>Data Space</b>
-                      possibilities and opportunities for them and their
-                      communities. This is where the community unites around the
-                      vision of a new generation of applications enabled by
-                      trust-minimized sharing of digital resources.
-                      <br />
-                      <b>The Nemeton</b> era will result in a stable,
-                      battle-tested environment and will give birth to the OKP4
-                      mainnet.
+                      Inter-blockchain communication is now the norm and OKP4 is
+                      interoperable with every meaningful network to access any
+                      kind of datasets and services (decentralized storage,
+                      decentralized computation…), onboard communities from
+                      other chains easily, and seamless interchain applications.
+                      Due to OKP4 first-mover advantage and significant network
+                      effect reached, OKP4 becomes the default coordination
+                      layer for most applications based on distributed
+                      resources. Thousands of projects and teams across the web2
+                      and web3 worlds are building on OKP4: it has reached mass
+                      adoption.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
