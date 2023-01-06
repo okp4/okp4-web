@@ -2,6 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import StickyUniverse from "../../animations/StickyUniverse.js";
 import StrateRoadmap from "../../animations/StrateRoadmap.js";
+import Halo from "../../animations/Halo.js";
 
 const Universe = () => {
   return (
@@ -9,10 +10,11 @@ const Universe = () => {
       <div className="strate__inner">
         <div className="wrapper">
           <StickyUniverse classContainer="universe__wrapper">
+            <Halo></Halo>
             <h2 className="universe__title">Enter in the OKP4 universe</h2>
             <div className="universe__items">
               <div
-                className="universe__item is-first-active"
+                className="universe__item is-active"
                 data-item="blockchain"
                 data-key="0"
               >
@@ -89,7 +91,7 @@ const Universe = () => {
                 />
               </div>
               <div
-                className="universe__illus__item is-first-active"
+                className="universe__illus__item is-active"
                 data-item="blockchain"
               >
                 <StaticImage
@@ -202,8 +204,7 @@ const Universe = () => {
                   <div className="roadmap__item__text">
                     <span className="title">— Mirdin</span>
                     <p className="excerpt">
-                      The X era begins with the first iteration of our mainnet:
-                      a stable decentralized network ready to host many Data
+                      A stable decentralized network ready to host many Data
                       Spaces and Applications. The X era focuses on making OKP4
                       as easy to use as possible while being highly generic and
                       customizable.
@@ -215,19 +216,14 @@ const Universe = () => {
                       community of builders deploys many existing or innovative
                       governance rules for Data Spaces publicly for the first
                       time, enabling new mechanisms to align interests among
-                      participants (data providers, services providers, users…).
-                      The community of token holders and validators takes
-                      control, through governance proposals and votes, of the
-                      reins of the network. The incentives schemes enable the
-                      onboarding of many community members across all roles. The
-                      X era also sees the first generation of IBC channels
-                      enabling tokens to flow to and from the interchain, and
-                      the emergence of the first proto-interchain applications.
-                      At the end of the X era, impactful business & community
-                      powered-applications emerged, and the community has grown
-                      tremendously due to the many opportunities offered to
-                      them. The robust OKP4 SDK and Dataverse Gateways bring us
-                      into the next era: Y.
+                      participants. The community of token holders and
+                      validators takes control, through governance proposals and
+                      votes, of the reins of the network. The incentives schemes
+                      enable the onboarding of many community members across all
+                      roles. The X era also sees the first generation of IBC
+                      channels enabling tokens to flow to and from the
+                      interchain, and the emergence of the first
+                      proto-interchain applications.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -286,7 +282,7 @@ const Universe = () => {
               scaleTopSticky="150"
               scaleMax="0.08"
             > */}
-              <div className="roadmap__item">
+              <div className="roadmap__item roadmap__item--last">
                 <div className="roadmap__item__layer"></div>
                 <div className="roadmap__item__container">
                   <span className="roadmap__item__text--mobile">— Lugh</span>

@@ -7,7 +7,7 @@ header.header {
 
   @include media-bp-down(md) {
     width: 100vw;
-    margin-top: 70px;
+    margin-top: 30px;
   }
 
   &.is-reset {

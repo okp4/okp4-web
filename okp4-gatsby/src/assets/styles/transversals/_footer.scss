@@ -10,9 +10,9 @@ footer.footer {
     padding-bottom: 0;
   }
 
-  .footer__sticky {
-    position: sticky;
-  }
+  // .footer__sticky {
+  //   position: sticky;
+  // }
 
   .docs {
     position: relative;
@@ -316,7 +316,7 @@ footer.footer {
 
         @include media-bp-down(md) {
           top: initial;
-          object-fit: contain;
+          object-fit: contain !important;
           bottom: -15px;
         }
       }
@@ -527,6 +527,9 @@ footer.footer {
               // width: 100%;
 
               button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 padding: 18px 26px;
                 background-color: $orange;
                 border-radius: 10px;
@@ -550,6 +553,7 @@ footer.footer {
                   display: inline-block;
                   margin-right: 9px;
                   font-size: 16px;
+                  line-height: 1;
                 }
 
                 span.icon svg {

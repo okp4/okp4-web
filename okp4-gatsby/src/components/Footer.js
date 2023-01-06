@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from "react";
+// import React, { useEffect,  from "react";
+import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import IconLogo from "../assets/images/logo.inline.svg";
 import IconArrowtr from "../assets/images/icons/arrow-tr.inline.svg";
@@ -13,26 +14,26 @@ import Docs from "./Docs.js";
 import Newsletter from "./Newsletter.js";
 
 const Footer = () => {
-  const divRef = useRef(null);
+  // const divRef = useRef(null);
 
-  const setStickyPosition = () => {
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-    let divDimensions = divRef.current.getBoundingClientRect();
-    let topPositionSticky = -(divDimensions.height - windowHeight);
+  // const setStickyPosition = () => {
+  //   const windowHeight =
+  //     window.innerHeight || document.documentElement.clientHeight;
+  //   let divDimensions = divRef.current.getBoundingClientRect();
+  //   let topPositionSticky = -(divDimensions.height - windowHeight);
 
-    let topPositionCss = topPositionSticky + "px";
-    divRef.current.style.top = topPositionCss;
-  };
+  //   let topPositionCss = topPositionSticky + "px";
+  //   divRef.current.style.top = topPositionCss;
+  // };
 
-  useEffect(() => {
-    setStickyPosition();
-  }, []);
+  // useEffect(() => {
+  //   setStickyPosition();
+  // }, []);
 
   return (
     <footer className="footer">
       <Halo />
-      <div className="footer__sticky" ref={divRef}>
+      <div className="footer__sticky">
         <Docs />
         <div className="footer__partenaires">
           <div className="wrapper">

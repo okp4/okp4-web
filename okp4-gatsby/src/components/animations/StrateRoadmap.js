@@ -27,10 +27,10 @@ const StrateRoadmap = ({
   };
 
   const perspective = () => {
-    let divAbsoluteTop = divRef.current.dataset.top;
+    // let divAbsoluteTop = divRef.current.dataset.top;
+    // let height = divRef.current.dataset.height;
     let startScale = divRef.current.dataset.start;
     let endScale = divRef.current.dataset.end;
-    let height = divRef.current.dataset.height;
 
     if (window.scrollY >= startScale && window.scrollY <= endScale) {
       let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
@@ -39,6 +39,13 @@ const StrateRoadmap = ({
       let scaleCss =
         "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
       divRef.current.style.transform = scaleCss;
+
+      // let scaleTotal = parseFloat(scaleRatio) + parseFloat(scaleMax);
+      // if (scaleTotal < 1.01) {
+      //   divRef.current.classList.add("is-scaled");
+      // } else {
+      //   divRef.current.classList.remove("is-scaled");
+      // }
 
       // let translateRatio = ratio * height;
       // let translateCss = "translate3d(0," + translateRatio + "px, 0) ";
