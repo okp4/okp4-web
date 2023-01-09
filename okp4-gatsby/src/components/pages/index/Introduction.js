@@ -37,7 +37,7 @@ const Introduction = () => {
             parallaxEnd="-100"
             parallaxMiddle="0.5"
           >
-            <div className="introduction__cards__item__illus">
+            <div className="introduction__cards__item__illus" data-infinite="1">
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_card_1.png"
@@ -53,7 +53,7 @@ const Introduction = () => {
             parallaxEnd="-50"
             parallaxMiddle="0.5"
           >
-            <div className="introduction__cards__item__illus">
+            <div className="introduction__cards__item__illus" data-infinite="1">
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_card_2.png"
@@ -69,7 +69,7 @@ const Introduction = () => {
             parallaxEnd="-150"
             parallaxMiddle="0.5"
           >
-            <div className="introduction__cards__item__illus">
+            <div className="introduction__cards__item__illus" data-infinite="1">
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_card_3.png"
@@ -82,7 +82,7 @@ const Introduction = () => {
         </div>
         <div className="grid introduction__pushs">
           <div className="introduction__pushs__item introduction__pushs__item--left">
-            <div className="introduction__pushs__item__illus">
+            <div className="introduction__pushs__item__illus" data-infinite="1">
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_know.png"
@@ -99,7 +99,7 @@ const Introduction = () => {
             </div>
           </div>
           <div className="introduction__pushs__item introduction__pushs__item--right">
-            <div className="introduction__pushs__item__illus">
+            <div className="introduction__pushs__item__illus" data-infinite="1">
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_cosmos.png"

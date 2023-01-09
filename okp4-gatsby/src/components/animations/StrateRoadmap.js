@@ -61,22 +61,24 @@ const StrateRoadmap = ({
 
   useEffect(() => {
     setTimeout(function () {
-      var divDimensions = divRef.current.getBoundingClientRect();
-      var divAbsoluteTop = divDimensions.top + window.scrollY;
-      // var startScale = divAbsoluteTop + divDimensions.height - windowHeight;
-      var startScale = divAbsoluteTop - scaleTopSticky;
-      var endScale = divAbsoluteTop - scaleTopSticky + divDimensions.height;
-      divRef.current.dataset.top = divAbsoluteTop;
-      divRef.current.dataset.start = startScale;
-      divRef.current.dataset.end = endScale;
-      divRef.current.dataset.height = divDimensions.height;
+      if (ResponsiveManager.isWindowLarger("md")) {
+        var divDimensions = divRef.current.getBoundingClientRect();
+        var divAbsoluteTop = divDimensions.top + window.scrollY;
+        // var startScale = divAbsoluteTop + divDimensions.height - windowHeight;
+        var startScale = divAbsoluteTop - scaleTopSticky;
+        var endScale = divAbsoluteTop - scaleTopSticky + divDimensions.height;
+        divRef.current.dataset.top = divAbsoluteTop;
+        divRef.current.dataset.start = startScale;
+        divRef.current.dataset.end = endScale;
+        divRef.current.dataset.height = divDimensions.height;
 
-      setStickyPosition();
-      const animationFrame = requestAnimationFrame(perspective);
+        setStickyPosition();
+        const animationFrame = requestAnimationFrame(perspective);
 
-      return () => {
-        cancelAnimationFrame(animationFrame);
-      };
+        return () => {
+          cancelAnimationFrame(animationFrame);
+        };
+      }
     }, 3000);
   }, []);
 

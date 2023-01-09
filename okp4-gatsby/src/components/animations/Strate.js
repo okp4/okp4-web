@@ -9,10 +9,10 @@ const Strate = ({ children, classContainer }) => {
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
     let divDimensions = divRef.current.getBoundingClientRect();
-    let topPositionSticky = -40;
+    let topPositionSticky = -150;
 
     if (divDimensions.height > windowHeight) {
-      topPositionSticky = -(divDimensions.height - windowHeight);
+      topPositionSticky = -(divDimensions.height - windowHeight + 150);
     }
 
     let topPositionCss = topPositionSticky + "px";
@@ -45,7 +45,8 @@ const Strate = ({ children, classContainer }) => {
           window.innerHeight || document.documentElement.clientHeight;
         var divDimensions = divRef.current.getBoundingClientRect();
         var divAbsoluteTop = divDimensions.top + window.scrollY;
-        var startScale = divAbsoluteTop + divDimensions.height - windowHeight;
+        var startScale =
+          divAbsoluteTop + divDimensions.height - windowHeight + 150;
         if (divDimensions.height < windowHeight) {
           startScale = divAbsoluteTop;
         }
@@ -60,7 +61,7 @@ const Strate = ({ children, classContainer }) => {
         return () => {
           cancelAnimationFrame(animationFrame);
         };
-      }, 1000);
+      }, 3000);
     }
   }, []);
 

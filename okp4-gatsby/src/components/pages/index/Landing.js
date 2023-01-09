@@ -16,7 +16,7 @@ const Landing = () => {
       let percentTravelled = scrollY / distance;
       if (percentTravelled > 1) percentTravelled = 1;
 
-      if (percentTravelled < 0.01) percentTravelled = 0.01;
+      if (percentTravelled < 0.1) percentTravelled = 0.1;
       divFadeIn.current.style.opacity = percentTravelled;
     }
   };
@@ -45,7 +45,8 @@ const Landing = () => {
         var parallaxEnd = parseInt(elem.dataset.parallaxend);
 
         if (ResponsiveManager.isWindowSmaller("md")) {
-          parallaxEnd = parallaxEnd / 1.5;
+          // parallaxEnd = parallaxEnd / 1.5;
+          parallaxEnd = parallaxEnd;
           const scrollY = window.scrollY;
           const distance = 1000;
           ratio = scrollY / distance;

@@ -3,9 +3,29 @@ import React, { useEffect, useRef } from "react";
 const VideoYoutube = ({ youtubeId }) => {
   const divRef = useRef(null);
 
+  const revealVideo = () => {
+    var intersectionAppear;
+    var optionsAppear = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0,
+    };
+    intersectionAppear = new IntersectionObserver(appearInView, optionsAppear);
+    intersectionAppear.observe(divRef.current);
+  };
+
+  const appearInView = (entries, intersectionAppear) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        divRef.current.setAttribute("src", divRef.current.dataset.src);
+        intersectionAppear.unobserve(entry.target);
+      }
+    });
+  };
+
   useEffect(() => {
     setTimeout(() => {
-      divRef.current.setAttribute("src", divRef.current.dataset.src);
+      revealVideo();
     }, 1000);
   });
 

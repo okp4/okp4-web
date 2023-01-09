@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-
 import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 
 const Halo = ({ classContainer = "halo--regular" }) => {

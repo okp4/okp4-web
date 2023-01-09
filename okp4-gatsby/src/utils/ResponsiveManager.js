@@ -57,3 +57,26 @@ export function getCurrentBreakpoint() {
 
   return currentBreakpoint;
 }
+
+export function initViewportHeightForMobile() {
+  var fullVhInit = window.innerHeight;
+  document.documentElement.style.setProperty("--fullVH", `${fullVhInit}px`);
+
+  const callback = () => {
+    const fullVh = window.innerHeight;
+    const vh = fullVh * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+    document.documentElement.style.setProperty("--full-vh", `${fullVh}px`);
+    document.documentElement.style.setProperty("--fullVHAlways", `${fullVh}px`);
+
+    if (window.scrollY == 0) {
+      document.documentElement.style.setProperty("--fullVH", `${fullVh}px`);
+    }
+  };
+
+  callback();
+
+  // We listen to the resize event
+  window.addEventListener("resize", () => callback());
+}

@@ -9,13 +9,15 @@ main.homepage {
       top: 0;
       padding-top: 110px;
       min-height: 130vh;
+      width: 100%;
+      overflow: hidden;
     }
 
     .wrapper {
       position: relative;
 
       @include media-bp-down(md) {
-        overflow: hidden;
+        // overflow: hidden;
       }
     }
 
@@ -121,17 +123,19 @@ main.homepage {
       width: 100%;
       transition: opacity 0.4s ease;
       pointer-events: none;
-      padding-bottom: 100vh;
+      padding-bottom: 200vh;
 
       @include media-bp-down(md) {
         position: relative;
         // top: 340px;
         top: initial;
         margin-top: 20px;
-        left: -20vw;
-        width: 130vw;
-        padding-bottom: 60px;
-        overflow: hidden;
+        // left: -20vw;
+        // width: 130vw;
+        left: 0;
+        width: 100%;
+        padding-bottom: 50vh;
+        // overflow: hidden;
       }
 
       .landing__illus__wrapper {
@@ -140,23 +144,27 @@ main.homepage {
         top: 35vh;
         left: 0;
         right: 0;
-        width: 70%;
+        width: 65%;
         // max-width: 1295px;
         margin: 0 auto;
         // padding: 0 15px;
 
         @include media-bp-down(md) {
           // display: none;
-          top: 480px;
-          left: -17vw;
-          width: 130vw;
+          // top: 480px;
+          // left: -17vw;
+          // width: 130vw;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          left: 0;
         }
       }
 
       .imgWrapper--base {
         opacity: 0;
         pointer-events: none;
-        width: 70%;
+        width: 65%;
 
         @include media-bp-down(md) {
           position: relative;
@@ -179,6 +187,8 @@ main.homepage {
 
         @include media-bp-down(md) {
           // display: none;
+          width: 130%;
+          left: -15vw;
         }
 
         img {
@@ -190,7 +200,7 @@ main.homepage {
 
     &:not(.is-active) {
       .landing__illus {
-        opacity: 0.01;
+        opacity: 0.1;
 
         @include media-bp-down(md) {
           opacity: 1;
@@ -206,12 +216,17 @@ main.homepage {
   }
 
   .introduction {
+    @include media-bp-down(md) {
+      z-index: 2;
+    }
+
     .strate__inner {
       padding: 120px 0 160px;
       // background-color: $darkblue;
       background: url("/images/grain.png"), $darkblue;
       background-repeat: repeat;
       background-size: contain;
+      overflow: hidden;
 
       @include media-bp-down(md) {
         padding: 60px 0 60px;
@@ -300,7 +315,7 @@ main.homepage {
         grid-column: span 4;
         flex-direction: column;
         align-items: center;
-        width: 400px;
+        width: 100%;
         height: 447px;
         padding: 10px 0 40px;
         // border: 1px solid $white;
@@ -321,11 +336,11 @@ main.homepage {
           justify-content: center;
           flex: 1;
           width: 100%;
+          animation: floating-image 8s linear infinite;
 
           .imgWrapper {
             display: block;
             width: 290px;
-            animation: floating-image 8s linear infinite;
 
             @include media-bp-down(md) {
               width: 250px;
@@ -412,6 +427,7 @@ main.homepage {
           width: 350px;
           margin-top: auto;
           margin-bottom: 0;
+          animation: floating-image 8s linear infinite;
 
           @include media-bp-down(md) {
             width: 250px;
@@ -445,6 +461,9 @@ main.homepage {
         .introduction__pushs__item__illus {
           width: 115px;
           margin-right: 60px;
+          animation-delay: 3s;
+          animation-direction: reverse;
+          animation: floating-image 8s linear infinite;
 
           @include media-bp-down(md) {
             margin-bottom: 30px;
@@ -487,8 +506,9 @@ main.homepage {
       overflow: hidden;
 
       @include media-bp-down(md) {
+        margin-top: -50px;
         background: $nightblue;
-        padding: 15px;
+        padding: 65px 15px;
         // border-radius: none;
       }
     }
@@ -529,6 +549,9 @@ main.homepage {
   }
 
   .universe {
+    @include media-bp-down(md) {
+      z-index: 2;
+    }
     .strate__inner {
       padding: 120px 0 0;
       // background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%);
@@ -540,6 +563,7 @@ main.homepage {
 
       @include media-bp-down(md) {
         padding: 60px 0;
+        margin-top: -50px;
       }
     }
 
@@ -550,7 +574,7 @@ main.homepage {
 
       position: sticky;
       top: 20px;
-      padding-bottom: calc(100vh - 300px);
+      padding-bottom: calc(100vh - 400px);
       margin-bottom: 70px;
 
       @include media-bp-down(md) {
@@ -568,9 +592,9 @@ main.homepage {
 
     .universe__items {
       display: inline-block;
-      width: 41%;
-      margin-top: calc(550px - 100vh);
-      padding-bottom: 100px;
+      width: 44%;
+      margin-top: calc(650px - 100vh);
+      padding-bottom: 200px;
       vertical-align: top;
 
       @include media-bp-down(md) {
@@ -586,6 +610,7 @@ main.homepage {
 
         @include media-bp-down(md) {
           margin-bottom: 60px;
+          transition: opacity 0.5s ease;
         }
 
         .tag {
@@ -635,6 +660,11 @@ main.homepage {
           width: 250px;
           margin: 30px auto 0;
           transition: opacity 1s ease;
+          animation: floating-image 8s linear infinite;
+
+          @include media-bp-down(md) {
+            transition: opacity 0.5s ease;
+          }
 
           &:nth-of-type(1) {
             position: relative;
@@ -647,6 +677,10 @@ main.homepage {
 
           &:not(.is-active) {
             opacity: 0;
+
+            @include media-bp-down(md) {
+              opacity: 0.3;
+            }
           }
 
           &.is-active {
@@ -655,41 +689,63 @@ main.homepage {
         }
 
         &:not(.is-active) {
-          .title {
+          @include media-bp-up(md) {
+            // .title {
+            //   opacity: 0.15;
+            // }
+
+            .title {
+              opacity: 0.03;
+            }
+
+            .tag {
+              opacity: 0;
+              transform: translate3d(0, -20px, 0);
+            }
+
+            .text {
+              opacity: 0;
+              transform: translate3d(-50px, 0, 0);
+            }
+
+            .universe__illus__item {
+              opacity: 0;
+            }
+          }
+
+          @include media-bp-down(md) {
             opacity: 0.15;
-          }
-
-          .tag {
-            opacity: 0;
-            transform: translate3d(0, -20px, 0);
-          }
-
-          .text {
-            opacity: 0;
-            transform: translate3d(-50px, 0, 0);
-          }
-
-          .universe__illus__item {
-            opacity: 0;
           }
         }
 
         &.is-active {
-          .title {
-            opacity: 1;
+          @include media-bp-up(md) {
+            .title {
+              opacity: 1;
+            }
+
+            .tag {
+              opacity: 1;
+              transform: translate3d(0, 0, 0);
+            }
+
+            .text {
+              opacity: 1;
+              transform: translate3d(0, 0, 0);
+            }
+
+            .universe__illus__item {
+              opacity: 1;
+            }
+
+            & ~ .universe__item {
+              .title {
+                opacity: 0.15;
+              }
+            }
           }
 
-          .tag {
-            opacity: 1;
-            transform: translate3d(0, 0, 0);
-          }
-
-          .text {
-            opacity: 1;
-            transform: translate3d(0, 0, 0);
-          }
-
-          .universe__illus__item {
+          @include media-bp-down(md) {
             opacity: 1;
           }
         }
@@ -700,10 +756,10 @@ main.homepage {
       display: inline-flex;
       position: sticky;
       top: 170px;
-      margin-top: calc(300px - 100vh);
+      margin-top: calc(400px - 100vh);
       align-items: flex-start;
       justify-content: flex-end;
-      width: 58%;
+      width: 55%;
       height: 100%;
       min-height: 595px;
       vertical-align: top;
@@ -717,12 +773,12 @@ main.homepage {
         position: absolute;
         top: 0;
         width: 100%;
-        max-width: 595px;
+        max-width: 500px;
         transition: opacity 0.15s ease;
+        animation: floating-image 8s linear infinite;
 
-        .imgWrapper {
-          animation: floating-image 8s linear infinite;
-        }
+        // .imgWrapper {
+        // }
 
         &:nth-of-type(1) {
           position: relative;
@@ -820,6 +876,7 @@ main.homepage {
           }
 
           @include media-bp-down(md) {
+            position: static;
             min-height: calc(100vh - 20px);
             margin-bottom: 16px;
           }
@@ -945,6 +1002,20 @@ main.homepage {
                 position: absolute;
                 bottom: 0;
                 top: initial;
+              }
+            }
+
+            .imgWrapper--mobile {
+              display: none;
+            }
+
+            @include media-bp-down(md) {
+              .imgWrapper--mobile {
+                display: block;
+              }
+
+              .imgWrapper--desktop {
+                display: none;
               }
             }
 

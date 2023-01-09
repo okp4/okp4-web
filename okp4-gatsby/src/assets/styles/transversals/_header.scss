@@ -17,6 +17,9 @@ header.header {
 
   &.burger-opened {
     .header--mobile {
+      opacity: 1 !important;
+      transition: opacity 0.25s ease;
+
       .header--mobile__burger__open {
         opacity: 0 !important;
       }
@@ -89,7 +92,7 @@ header.header {
       top: 0;
       left: 0;
       width: 100vw;
-      height: 100vh;
+      height: var(--fullVHAlways);
       transform: translate3d(0, -101%, 0);
       opacity: 0;
       transition: all 1s cubic-bezier(0.43, 0.195, 0.02, 1);

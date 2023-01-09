@@ -5,10 +5,18 @@ body {
   color: $white;
   font-family: $font;
   font-weight: 400;
+
+  &.scroll-disabled {
+    overflow: hidden;
+  }
 }
 
 main {
   position: relative;
+
+  @include media-bp-down(md) {
+    overflow-x: clip;
+  }
 }
 
 .wrapper {

@@ -11,9 +11,12 @@ import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import IconBurger from "../assets/images/icons/burger.inline.svg";
 import IconBurgerCross from "../assets/images/icons/burger-cross.inline.svg";
 import { Link } from "gatsby";
+import * as ResponsiveManager from "../utils/ResponsiveManager.js";
+import * as ScrollManager from "../utils/ScrollManager.js";
 
 const Header = () => {
   const divRef = useRef(null);
+  const divMobile = useRef(null);
 
   const getRatio = () => {
     const windowHeight =
@@ -32,7 +35,11 @@ const Header = () => {
     if (window.scrollY < windowHeight + 100) {
       divRef.current.classList.remove("is-reset");
       let ratio = getRatio();
-      divRef.current.style.opacity = ratio;
+      if (ResponsiveManager.isWindowLarger("md")) {
+        divRef.current.style.opacity = ratio;
+      } else {
+        divMobile.current.style.opacity = ratio;
+      }
     } else {
       divRef.current.classList.add("is-reset");
     }
@@ -40,11 +47,17 @@ const Header = () => {
 
   const toggleBurger = () => {
     divRef.current.classList.toggle("burger-opened");
+    if (divRef.current.classList.contains("burger-opened")) {
+      ScrollManager.disableScroll();
+    } else {
+      ScrollManager.enableScroll();
+    }
   };
 
   useEffect(() => {
     setTimeout(function () {
       window.addEventListener("scroll", scrollStarted);
+      ResponsiveManager.initViewportHeightForMobile();
 
       return () => {
         window.removeEventListener("scroll", scrollStarted);
@@ -54,7 +67,7 @@ const Header = () => {
 
   return (
     <header className="header" ref={divRef}>
-      <div className="header--mobile">
+      <div className="header--mobile" ref={divMobile}>
         <Link to="/" className="header--mobile__logo">
           <IconLogo />
         </Link>

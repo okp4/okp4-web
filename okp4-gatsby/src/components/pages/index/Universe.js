@@ -69,21 +69,33 @@ const Universe = () => {
               </div>
             </div>
             <div className="universe__illus">
-              <div className="universe__illus__item" data-item="dataverseapps">
+              <div
+                className="universe__illus__item"
+                data-item="dataverseapps"
+                data-infinite="1"
+              >
                 <StaticImage
                   className="imgWrapper"
                   src="../../../assets/images/illus/index_universe_dataverse_apps.png"
                   alt="Dataverse Apps"
                 />
               </div>
-              <div className="universe__illus__item" data-item="dk">
+              <div
+                className="universe__illus__item"
+                data-item="dk"
+                data-infinite="1"
+              >
                 <StaticImage
                   className="imgWrapper"
                   src="../../../assets/images/illus/index_universe_dk.png"
                   alt="Development kit"
                 />
               </div>
-              <div className="universe__illus__item" data-item="dataverse">
+              <div
+                className="universe__illus__item"
+                data-item="dataverse"
+                data-infinite="1"
+              >
                 <StaticImage
                   className="imgWrapper"
                   src="../../../assets/images/illus/index_universe_dataverse.png"
@@ -93,6 +105,7 @@ const Universe = () => {
               <div
                 className="universe__illus__item is-active"
                 data-item="blockchain"
+                data-infinite="1"
               >
                 <StaticImage
                   className="imgWrapper"
@@ -148,8 +161,13 @@ const Universe = () => {
                   </div>
                   <div className="roadmap__item__illus">
                     <StaticImage
-                      className="imgWrapper"
+                      className="imgWrapper imgWrapper--desktop"
                       src="../../../assets/images/illus/index_roadmap_1.png"
+                      alt="Roadmap : Genesis"
+                    />
+                    <StaticImage
+                      className="imgWrapper imgWrapper--mobile"
+                      src="../../../assets/images/illus/index_roadmap_1_mobile.png"
                       alt="Roadmap : Genesis"
                     />
                   </div>
@@ -186,8 +204,13 @@ const Universe = () => {
                   </div>
                   <div className="roadmap__item__illus">
                     <StaticImage
-                      className="imgWrapper"
+                      className="imgWrapper imgWrapper--desktop"
                       src="../../../assets/images/illus/index_roadmap_2.png"
+                      alt="Roadmap : Nemeton"
+                    />
+                    <StaticImage
+                      className="imgWrapper imgWrapper--mobile"
+                      src="../../../assets/images/illus/index_roadmap_2_mobile.png"
                       alt="Roadmap : Nemeton"
                     />
                   </div>
@@ -228,8 +251,13 @@ const Universe = () => {
                   </div>
                   <div className="roadmap__item__illus">
                     <StaticImage
-                      className="imgWrapper"
+                      className="imgWrapper  imgWrapper--desktop"
                       src="../../../assets/images/illus/index_roadmap_3.png"
+                      alt="Roadmap : Mirdin"
+                    />
+                    <StaticImage
+                      className="imgWrapper imgWrapper--mobile"
+                      src="../../../assets/images/illus/index_roadmap_3_mobile.png"
                       alt="Roadmap : Mirdin"
                     />
                   </div>
@@ -270,8 +298,13 @@ const Universe = () => {
                   </div>
                   <div className="roadmap__item__illus">
                     <StaticImage
-                      className="imgWrapper"
+                      className="imgWrapper imgWrapper--desktop"
                       src="../../../assets/images/illus/index_roadmap_4.png"
+                      alt="Roadmap : Duir"
+                    />
+                    <StaticImage
+                      className="imgWrapper imgWrapper--mobile"
+                      src="../../../assets/images/illus/index_roadmap_4_mobile.png"
                       alt="Roadmap : Duir"
                     />
                   </div>
@@ -308,8 +341,13 @@ const Universe = () => {
                   </div>
                   <div className="roadmap__item__illus">
                     <StaticImage
-                      className="imgWrapper"
+                      className="imgWrapper imgWrapper--desktop"
                       src="../../../assets/images/illus/index_roadmap_5.png"
+                      alt="Roadmap : Lugh"
+                    />
+                    <StaticImage
+                      className="imgWrapper imgWrapper--mobile"
+                      src="../../../assets/images/illus/index_roadmap_5_mobile.png"
                       alt="Roadmap : Lugh"
                     />
                   </div>

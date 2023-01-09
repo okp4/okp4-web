@@ -18,3 +18,7 @@ $breakpoints: (
   xl: 1200px,
   xxl: 1500px,
 );
+:root {
+  --fullVH: 100vh;
+  --fullVHAlways: 100vh;
+}

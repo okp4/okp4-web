@@ -24,3 +24,11 @@ export function getScaleRatio({ startScale, endScale }) {
   let ratio = 1 - (distance - parcouru) / distance;
   return ratio;
 }
+
+export function disableScroll() {
+  document.body.classList.add("scroll-disabled");
+}
+
+export function enableScroll() {
+  document.body.classList.remove("scroll-disabled");
+}
