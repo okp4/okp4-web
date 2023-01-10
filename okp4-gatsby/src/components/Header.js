@@ -13,6 +13,8 @@ import IconBurgerCross from "../assets/images/icons/burger-cross.inline.svg";
 import { Link } from "gatsby";
 import * as ResponsiveManager from "../utils/ResponsiveManager.js";
 import * as ScrollManager from "../utils/ScrollManager.js";
+import contentSocials from "/content/transversals/socials.yaml";
+import contentHeader from "/content/transversals/header.yaml";
 
 const Header = () => {
   const divRef = useRef(null);
@@ -79,11 +81,13 @@ const Header = () => {
       <div className="wrapper header--desktop">
         <div className="header__top">
           <div className="header__top__message">
-            <p>Follow our adventures !</p>
+            <p
+              dangerouslySetInnerHTML={{ __html: contentHeader.messageSocial }}
+            ></p>
           </div>
           <div className="header__socials">
             <a
-              href="https://www.linkedin.com/company/okp4-open-knowledge-protocol-for/"
+              href={contentSocials.linkedin.url}
               className="header__socials__link"
               target="_blank"
               rel="noreferrer"
@@ -91,7 +95,7 @@ const Header = () => {
               <IconLinkedin />
             </a>
             <a
-              href="https://twitter.com/OKP4_Protocol"
+              href={contentSocials.twitter.url}
               className="header__socials__link"
               target="_blank"
               rel="noreferrer"
@@ -99,7 +103,7 @@ const Header = () => {
               <IconTwitter />
             </a>
             <a
-              href="https://github.com/okp4"
+              href={contentSocials.github.url}
               className="header__socials__link"
               target="_blank"
               rel="noreferrer"
@@ -107,7 +111,7 @@ const Header = () => {
               <IconGithub />
             </a>
             <a
-              href="https://blog.okp4.network/"
+              href={contentSocials.medium.url}
               className="header__socials__link"
               target="_blank"
               rel="noreferrer"
@@ -115,7 +119,7 @@ const Header = () => {
               <IconMedium />
             </a>
             <a
-              href="https://discord.com/invite/okp4"
+              href={contentSocials.discord.url}
               className="header__socials__link"
               target="_blank"
               rel="noreferrer"
@@ -123,7 +127,7 @@ const Header = () => {
               <IconDiscord />
             </a>
             <a
-              href="https://t.me/okp4network"
+              href={contentSocials.telegram.url}
               className="header__socials__link"
               target="_blank"
               rel="noreferrer"
@@ -156,21 +160,21 @@ const Header = () => {
           </nav> */}
           <nav className="header__resources">
             <a
-              href="https://docs.okp4.network/docs/whitepaper/abstract"
+              href={contentSocials.whitepaper.url}
               className="header__resources__link"
               target="_blank"
               rel="noreferrer"
             >
-              <span>Whitepaper</span>
+              <span>{contentSocials.whitepaper.label}</span>
               <IconArrowtr />
             </a>
             <a
-              href="/https://nemeton.okp4.network/"
+              href={contentSocials.nemeton.url}
               className="header__resources__link"
               target="_blank"
               rel="noreferrer"
             >
-              <span>Nemeton program</span>
+              <span>{contentSocials.nemeton.label}</span>
               <IconArrowtr />
             </a>
           </nav>
