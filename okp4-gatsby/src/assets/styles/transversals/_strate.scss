@@ -41,3 +41,13 @@ section.strate {
   //   margin-top: -80px;
   // }
 }
+.strate__monitoring {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+}

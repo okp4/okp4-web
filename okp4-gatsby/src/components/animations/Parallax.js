@@ -10,6 +10,28 @@ const Parallax = ({
   parallaxMiddle,
 }) => {
   const divRef = useRef(null);
+  var rafId = 0;
+
+  const monitorSection = () => {
+    var intersectionAppear;
+    var optionsAppear = {
+      root: null,
+      rootMargin: "10px",
+      threshold: 0,
+    };
+    intersectionAppear = new IntersectionObserver(appearSection, optionsAppear);
+    intersectionAppear.observe(divRef.current);
+  };
+
+  const appearSection = (entries, intersectionAppear) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        rafId = requestAnimationFrame(handleParallax);
+      } else {
+        cancelAnimationFrame(rafId);
+      }
+    });
+  };
 
   const setInitialPosition = () => {
     var transformRatioCss = "translate3d(0, " + parallaxStart + "px, 0)";
@@ -36,18 +58,19 @@ const Parallax = ({
       var transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
       divRef.current.style.transform = transformRatioCss;
     }
-    const animationFrame = requestAnimationFrame(handleParallax);
+    rafId = requestAnimationFrame(handleParallax);
   };
 
   useEffect(() => {
     if (ResponsiveManager.isWindowLarger("md")) {
       setTimeout(function () {
         setInitialPosition();
-        const animationFrame = requestAnimationFrame(handleParallax);
+        monitorSection();
+        // const animationFrame = requestAnimationFrame(handleParallax);
 
-        return () => {
-          cancelAnimationFrame(animationFrame);
-        };
+        // return () => {
+        //   cancelAnimationFrame(animationFrame);
+        // };
       }, 1000);
     }
   }, []);

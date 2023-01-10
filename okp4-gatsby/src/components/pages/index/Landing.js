@@ -8,6 +8,7 @@ const Landing = () => {
   const divRef = useRef(null);
   const divFadeOut = useRef(null);
   const divFadeIn = useRef(null);
+  var rafId = 0;
 
   const monitorSection = () => {
     var intersectionAppear;
@@ -22,18 +23,14 @@ const Landing = () => {
 
   const appearSection = (entries, intersectionAppear) => {
     entries.forEach((entry) => {
-      console.log(entry.target);
-      console.log(entry.intersectionRatio);
-      let animationFrame = parseInt(divRef.current.dataset.raf);
       if (entry.isIntersecting) {
-        animationFrame = requestAnimationFrame(perspective);
-        divRef.current.dataset.raf = animationFrame;
+        rafId = requestAnimationFrame(perspective);
 
         if (ResponsiveManager.isWindowLarger("md")) {
           window.addEventListener("scroll", scrollStarted);
         }
       } else {
-        cancelAnimationFrame(animationFrame);
+        cancelAnimationFrame(rafId);
 
         if (ResponsiveManager.isWindowLarger("md")) {
           window.removeEventListener("scroll", scrollStarted);
@@ -57,7 +54,6 @@ const Landing = () => {
   const perspective = () => {
     let startScale = divRef.current.dataset.start;
     let endScale = divRef.current.dataset.end;
-    // console.log("RAF perspective");
 
     if (window.scrollY >= startScale && window.scrollY <= endScale) {
       let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
@@ -95,9 +91,7 @@ const Landing = () => {
     });
     // }
 
-    let newRaf = requestAnimationFrame(perspective);
-    divRef.current.dataset.raf = newRaf;
-    // console.log(newRaf);
+    rafId = requestAnimationFrame(perspective);
   };
 
   useEffect(() => {
@@ -116,19 +110,6 @@ const Landing = () => {
 
     setTimeout(function () {
       monitorSection();
-      // const animationFrame = requestAnimationFrame(perspective);
-
-      // if (ResponsiveManager.isWindowLarger("md")) {
-      //   window.addEventListener("scroll", scrollStarted);
-      // }
-
-      // return () => {
-      //   cancelAnimationFrame(animationFrame);
-
-      //   if (ResponsiveManager.isWindowLarger("md")) {
-      //     window.removeEventListener("scroll", scrollStarted);
-      //   }
-      // };
     }, 1000);
   }, []);
 
@@ -138,12 +119,6 @@ const Landing = () => {
       <div className="wrapper">
         <div className="landing__fade" ref={divFadeOut}>
           <h1>
-            {/* <span>
-              <span>The open</span>
-            </span>
-            <span>
-              <span>Knowledge protocol</span>
-            </span> */}
             <span className="title-wrap">
               <span>The</span>
             </span>
@@ -171,13 +146,9 @@ const Landing = () => {
             className="imgWrapper--base"
             src="../../../assets/images/illus/index_landing.jpg"
             alt="OKP4 hero image"
+            load="eager"
           />
           <div className="landing__illus__wrapper">
-            {/* <StaticImage
-              className="imgWrapper--base"
-              src="../../../assets/images/illus/index_landing.png"
-              alt="OKP4 hero image"
-            /> */}
             {/* // Socle en bois */}
             <div
               className="parallaxWrapper"
@@ -188,6 +159,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/1.png"
                 alt="OKP4 hero image"
+                load="eager"
               />
             </div>
 
@@ -201,6 +173,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/2.png"
                 alt="OKP4 hero image"
+                load="eager"
               />
             </div>
 
@@ -214,6 +187,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/3.png"
                 alt="OKP4 hero image"
+                load="eager"
               />
             </div>
 
@@ -228,6 +202,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/5.png"
                 alt="OKP4 hero image"
+                load="eager"
               />
             </div>
 
@@ -242,6 +217,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/9.png"
                 alt="OKP4 hero image"
+                load="eager"
               />
             </div>
 
@@ -256,6 +232,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/7.png"
                 alt="OKP4 hero image"
+                load="eager"
               />
             </div>
 
@@ -270,6 +247,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/8.png"
                 alt="OKP4 hero image"
+                load="eager"
               />
             </div>
 
@@ -284,6 +262,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/6.png"
                 alt="OKP4 hero image"
+                load="eager"
               />
             </div>
 
@@ -298,6 +277,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/4.png"
                 alt="OKP4 hero image"
+                load="eager"
               />
             </div>
           </div>

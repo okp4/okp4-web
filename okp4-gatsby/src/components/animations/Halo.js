@@ -4,33 +4,57 @@ import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 const Halo = ({ classContainer = "halo--regular" }) => {
   const divRef = useRef(null);
 
-  useEffect(() => {
-    if (ResponsiveManager.isWindowLarger("md")) {
-      divRef.current.parentNode.addEventListener(
-        "mouseenter",
-        handleMouseEnter
-      );
-      divRef.current.parentNode.addEventListener("mousemove", handleMouseMove);
-      divRef.current.parentNode.addEventListener(
-        "mouseleave",
-        handleMouseLeave
-      );
+  const monitorSection = () => {
+    var intersectionAppear;
+    var optionsAppear = {
+      root: null,
+      rootMargin: "50px",
+      threshold: 0,
+    };
+    intersectionAppear = new IntersectionObserver(appearSection, optionsAppear);
+    intersectionAppear.observe(divRef.current.parentNode);
+  };
 
-      return () => {
-        divRef.current.parentNode.removeEventListener(
-          "mouseenter",
-          handleMouseEnter
-        );
-        divRef.current.parentNode.removeEventListener(
-          "mousemove",
-          handleMouseMove
-        );
-        divRef.current.parentNode.removeEventListener(
-          "mouseleave",
-          handleMouseLeave
-        );
-      };
-    }
+  const appearSection = (entries, intersectionAppear) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (ResponsiveManager.isWindowLarger("md")) {
+          divRef.current.parentNode.addEventListener(
+            "mouseenter",
+            handleMouseEnter
+          );
+          divRef.current.parentNode.addEventListener(
+            "mousemove",
+            handleMouseMove
+          );
+          divRef.current.parentNode.addEventListener(
+            "mouseleave",
+            handleMouseLeave
+          );
+        }
+      } else {
+        if (ResponsiveManager.isWindowLarger("md")) {
+          divRef.current.parentNode.removeEventListener(
+            "mouseenter",
+            handleMouseEnter
+          );
+          divRef.current.parentNode.removeEventListener(
+            "mousemove",
+            handleMouseMove
+          );
+          divRef.current.parentNode.removeEventListener(
+            "mouseleave",
+            handleMouseLeave
+          );
+        }
+      }
+    });
+  };
+
+  useEffect(() => {
+    setTimeout(function () {
+      monitorSection();
+    }, 1000);
   }, []);
 
   function handleMouseEnter(event) {

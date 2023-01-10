@@ -9,6 +9,28 @@ const StrateRoadmap = ({
   scaleMax,
 }) => {
   const divRef = useRef(null);
+  var rafId = 0;
+
+  const monitorSection = () => {
+    var intersectionAppear;
+    var optionsAppear = {
+      root: null,
+      rootMargin: "30px",
+      threshold: 0,
+    };
+    intersectionAppear = new IntersectionObserver(appearSection, optionsAppear);
+    intersectionAppear.observe(divRef.current);
+  };
+
+  const appearSection = (entries, intersectionAppear) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        rafId = requestAnimationFrame(perspective);
+      } else {
+        cancelAnimationFrame(rafId);
+      }
+    });
+  };
 
   const setStickyPosition = () => {
     if (ResponsiveManager.isWindowLarger("md")) {
@@ -56,7 +78,7 @@ const StrateRoadmap = ({
       divRef.current.querySelector(".roadmap__item__layer").style.opacity =
         opacityRatio;
     }
-    requestAnimationFrame(perspective);
+    rafId = requestAnimationFrame(perspective);
   };
 
   useEffect(() => {
@@ -73,11 +95,12 @@ const StrateRoadmap = ({
         divRef.current.dataset.height = divDimensions.height;
 
         setStickyPosition();
-        const animationFrame = requestAnimationFrame(perspective);
+        monitorSection();
+        // const animationFrame = requestAnimationFrame(perspective);
 
-        return () => {
-          cancelAnimationFrame(animationFrame);
-        };
+        // return () => {
+        //   cancelAnimationFrame(animationFrame);
+        // };
       }
     }, 3000);
   }, []);

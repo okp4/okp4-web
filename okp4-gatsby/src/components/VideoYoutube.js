@@ -7,7 +7,7 @@ const VideoYoutube = ({ youtubeId }) => {
     var intersectionAppear;
     var optionsAppear = {
       root: null,
-      rootMargin: "0px",
+      rootMargin: "300px",
       threshold: 0,
     };
     intersectionAppear = new IntersectionObserver(appearInView, optionsAppear);

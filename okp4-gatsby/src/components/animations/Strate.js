@@ -4,6 +4,29 @@ import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 
 const Strate = ({ children, classContainer }) => {
   const divRef = useRef(null);
+  const divMonitoring = useRef(null);
+  var rafId = 0;
+
+  const monitorSection = () => {
+    var intersectionAppear;
+    var optionsAppear = {
+      root: null,
+      rootMargin: "100px",
+      threshold: 0,
+    };
+    intersectionAppear = new IntersectionObserver(appearSection, optionsAppear);
+    intersectionAppear.observe(divMonitoring.current);
+  };
+
+  const appearSection = (entries, intersectionAppear) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        rafId = requestAnimationFrame(perspective);
+      } else {
+        cancelAnimationFrame(rafId);
+      }
+    });
+  };
 
   const setStickyPosition = () => {
     const windowHeight =
@@ -17,6 +40,13 @@ const Strate = ({ children, classContainer }) => {
 
     let topPositionCss = topPositionSticky + "px";
     divRef.current.style.top = topPositionCss;
+
+    let monitoringHeight =
+      parseFloat(divRef.current.dataset.end) -
+      parseFloat(divRef.current.dataset.start);
+    divMonitoring.current.style.top =
+      parseFloat(divRef.current.dataset.start) + "px";
+    divMonitoring.current.style.height = monitoringHeight + "px";
   };
 
   const perspective = () => {
@@ -35,7 +65,7 @@ const Strate = ({ children, classContainer }) => {
       divRef.current.querySelector(".strate__layer").style.opacity =
         opacityRatio;
     }
-    requestAnimationFrame(perspective);
+    rafId = requestAnimationFrame(perspective);
   };
 
   useEffect(() => {
@@ -56,22 +86,26 @@ const Strate = ({ children, classContainer }) => {
         divRef.current.dataset.end = endScale;
 
         setStickyPosition();
-        const animationFrame = requestAnimationFrame(perspective);
+        monitorSection();
+        // const animationFrame = requestAnimationFrame(perspective);
 
-        return () => {
-          cancelAnimationFrame(animationFrame);
-        };
+        // return () => {
+        //   cancelAnimationFrame(animationFrame);
+        // };
       }, 3000);
     }
   }, []);
 
   return (
-    <section className={"strate " + classContainer} ref={divRef}>
-      <div className="strate__inner">
-        <div className="strate__layer"></div>
-        {children}
-      </div>
-    </section>
+    <>
+      <section className={"strate " + classContainer} ref={divRef}>
+        <div className="strate__inner">
+          <div className="strate__layer"></div>
+          {children}
+        </div>
+      </section>
+      <div className="strate__monitoring" ref={divMonitoring}></div>
+    </>
   );
 };
 
