@@ -63,7 +63,7 @@ const Header = () => {
         window.removeEventListener("scroll", scrollStarted);
       };
     }, 1000);
-  }, []);
+  });
 
   return (
     <header className="header" ref={divRef}>

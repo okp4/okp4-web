@@ -94,7 +94,7 @@ const Strate = ({ children, classContainer }) => {
         // };
       }, 3000);
     }
-  }, []);
+  });
 
   return (
     <>

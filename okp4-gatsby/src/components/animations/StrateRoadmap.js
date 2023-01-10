@@ -34,7 +34,7 @@ const StrateRoadmap = ({
 
   const setStickyPosition = () => {
     if (ResponsiveManager.isWindowLarger("md")) {
-      let divDimensions = divRef.current.getBoundingClientRect();
+      // let divDimensions = divRef.current.getBoundingClientRect();
       let topPositionSticky = parseInt(scaleTopSticky);
       let topPositionCss = topPositionSticky + "px";
       divRef.current.style.top = topPositionCss;
@@ -103,7 +103,7 @@ const StrateRoadmap = ({
         // };
       }
     }, 3000);
-  }, []);
+  });
 
   return (
     <div className={classContainer} ref={divRef}>

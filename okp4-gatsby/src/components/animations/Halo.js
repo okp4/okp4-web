@@ -55,7 +55,7 @@ const Halo = ({ classContainer = "halo--regular" }) => {
     setTimeout(function () {
       monitorSection();
     }, 1000);
-  }, []);
+  });
 
   function handleMouseEnter(event) {
     divRef.current.classList.add("is-active");

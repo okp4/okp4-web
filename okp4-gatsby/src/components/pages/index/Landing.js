@@ -111,7 +111,7 @@ const Landing = () => {
     setTimeout(function () {
       monitorSection();
     }, 1000);
-  }, []);
+  });
 
   return (
     <section className="landing" ref={divRef}>

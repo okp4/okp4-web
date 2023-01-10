@@ -95,7 +95,7 @@ const StickyUniverse = ({ children, classContainer }) => {
       setIllusMobile();
     }
     monitorSection();
-  }, []);
+  });
 
   return (
     <div className={classContainer} ref={divRef}>

@@ -10,7 +10,7 @@ const Layout = ({ children, location }) => {
     setTimeout(function () {
       PerformanceManager.monitorInfiniteAnimations();
     }, 1000);
-  }, []);
+  });
 
   return (
     <>

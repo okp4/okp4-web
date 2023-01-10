@@ -51,7 +51,7 @@ const Parallax = ({
 
       if (ratio < 0.3334) {
         new_ratio = 1 - ratio * 3;
-        if (new_ratio == 0.9999) new_ratio = 1;
+        if (new_ratio === 0.9999) new_ratio = 1;
         transformRatio = new_ratio.toFixed(4) * parallaxStart;
       }
 
@@ -73,7 +73,7 @@ const Parallax = ({
         // };
       }, 1000);
     }
-  }, []);
+  });
 
   return (
     <div ref={divRef} className={classContainer}>
