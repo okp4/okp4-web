@@ -5,7 +5,7 @@ header.header {
   margin-top: 20px;
   margin-bottom: 30px;
 
-  @include media-bp-down(md) {
+  @include media-bp-down(lg) {
     width: 100vw;
     margin-top: 30px;
   }
@@ -44,7 +44,7 @@ header.header {
     justify-content: space-between;
     padding: 0 20px;
 
-    @include media-bp-up(md) {
+    @include media-bp-up(lg) {
       display: none;
     }
 
@@ -87,7 +87,7 @@ header.header {
   }
 
   .header--desktop {
-    @include media-bp-down(md) {
+    @include media-bp-down(lg) {
       position: fixed;
       top: 0;
       left: 0;
@@ -107,7 +107,7 @@ header.header {
       width: 100%;
       margin-bottom: 35px;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         display: block;
         position: absolute;
         bottom: 40px;
@@ -124,7 +124,7 @@ header.header {
         margin-left: 25px;
         cursor: pointer;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           display: none;
         }
 
@@ -146,7 +146,7 @@ header.header {
       .header__top__message {
         display: none;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           display: block;
           width: 100%;
           margin-bottom: 20px;
@@ -162,7 +162,7 @@ header.header {
         align-items: center;
         justify-content: flex-end;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           flex: 1;
           width: 100%;
           justify-content: space-between;
@@ -175,7 +175,7 @@ header.header {
           margin-left: 15px;
           transition: opacity 0.25s ease;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             margin: 0;
           }
 
@@ -187,7 +187,7 @@ header.header {
             width: 22px;
             height: auto;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               width: 34px;
             }
           }
@@ -201,7 +201,7 @@ header.header {
       align-items: center;
       justify-content: center;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         flex-direction: column;
         justify-content: flex-start;
         width: 100%;
@@ -214,7 +214,7 @@ header.header {
         left: 0;
         max-width: 150px;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           display: none;
         }
 
@@ -231,7 +231,7 @@ header.header {
         align-items: center;
         justify-content: flex-end;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           display: block;
           position: initial;
           right: initial;
@@ -242,7 +242,7 @@ header.header {
           margin-left: 35px;
           transition: opacity 0.25s ease;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             display: block;
             margin: 0 0 30px;
             text-align: center;
@@ -271,13 +271,13 @@ header.header {
       }
 
       .header__navigation {
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           margin-bottom: 60px;
         }
         .header__navigation__link {
           margin: 0 15px;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             display: block;
             margin: 0 0 30px;
             text-align: center;
@@ -290,7 +290,7 @@ header.header {
             line-height: 1.2;
             text-transform: uppercase;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               text-transform: initial;
             }
           }

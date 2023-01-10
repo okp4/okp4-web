@@ -11,10 +11,16 @@ body {
   }
 }
 
+// #___gatsby {
+//   @include media-bp-down(lg) {
+//     border: 10px red solid;
+//   }
+// }
+
 main {
   position: relative;
 
-  @include media-bp-down(md) {
+  @include media-bp-down(lg) {
     overflow-x: clip;
   }
 }
@@ -33,7 +39,7 @@ main {
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
 
-  @include media-bp-down(md) {
+  @include media-bp-down(lg) {
     grid-column-gap: 15px;
     grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 15px;
@@ -69,7 +75,7 @@ h1 {
   line-height: 1;
   letter-spacing: 0.03em;
 
-  @include media-bp-down(md) {
+  @include media-bp-down(lg) {
     font-size: 65px;
     line-height: 1.1;
   }
@@ -79,7 +85,7 @@ h2 {
   font-size: 80px;
   line-height: 1;
 
-  @include media-bp-down(md) {
+  @include media-bp-down(lg) {
     font-size: 40px;
     line-height: 1.1;
   }
@@ -89,7 +95,7 @@ h3 {
   font-size: 60px;
   line-height: 1.1;
 
-  @include media-bp-down(md) {
+  @include media-bp-down(lg) {
     font-size: 40px;
   }
 }

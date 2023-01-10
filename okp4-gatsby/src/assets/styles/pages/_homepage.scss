@@ -4,19 +4,19 @@ main.homepage {
     padding-top: 35vh;
     text-align: center;
 
-    @include media-bp-down(md) {
-      position: sticky;
-      top: 0;
+    @include media-bp-down(lg) {
+      // position: sticky;
+      // top: 0;
       padding-top: 110px;
-      min-height: 130vh;
+      // min-height: 130vh;
       width: 100%;
-      overflow: hidden;
+      // overflow: hidden;
     }
 
     .wrapper {
       position: relative;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         // overflow: hidden;
       }
     }
@@ -28,11 +28,11 @@ main.homepage {
       right: 0;
       transform-origin: bottom;
 
-      @include media-bp-down(md) {
-        position: relative;
-        top: initial;
+      @include media-bp-down(lg) {
+        // position: relative;
+        top: 110px;
         // margin-top: 165px;
-        right: initial;
+        // right: initial;
         width: 100%;
       }
 
@@ -44,7 +44,7 @@ main.homepage {
         text-align: center;
         line-height: 1;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           line-height: 1.1;
         }
 
@@ -57,7 +57,7 @@ main.homepage {
           overflow: hidden;
           margin: 0 10px -10px;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             line-height: 1.1;
             margin: 0 5px -10px;
           }
@@ -93,7 +93,8 @@ main.homepage {
         text-align: center;
         overflow: hidden;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
+          max-width: 500px;
           font-size: 20px;
           line-height: 30px;
           letter-spacing: normal;
@@ -125,17 +126,22 @@ main.homepage {
       pointer-events: none;
       padding-bottom: 200vh;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         position: relative;
-        // top: 340px;
-        top: initial;
-        margin-top: 20px;
+        // top: initial;
+        margin-top: 350px;
         // left: -20vw;
         // width: 130vw;
         left: 0;
         width: 100%;
-        padding-bottom: 50vh;
+        // padding-bottom: 50vh;
+        padding-bottom: 100px;
         // overflow: hidden;
+      }
+
+      @include media-bp-down(sm) {
+        margin-top: 500px;
+        padding-bottom: 20px;
       }
 
       .landing__illus__wrapper {
@@ -149,7 +155,7 @@ main.homepage {
         margin: 0 auto;
         // padding: 0 15px;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           // display: none;
           // top: 480px;
           // left: -17vw;
@@ -166,10 +172,10 @@ main.homepage {
         pointer-events: none;
         width: 65%;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           position: relative;
           top: initial;
-          width: 100%;
+          width: 130vw;
           // opacity: 1;
         }
 
@@ -185,7 +191,7 @@ main.homepage {
         left: 0;
         width: 100%;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           // display: none;
           width: 130%;
           left: -15vw;
@@ -202,7 +208,7 @@ main.homepage {
       .landing__illus {
         opacity: 0.1;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           opacity: 1;
         }
       }
@@ -216,7 +222,7 @@ main.homepage {
   }
 
   .introduction {
-    @include media-bp-down(md) {
+    @include media-bp-down(lg) {
       z-index: 2;
     }
 
@@ -228,7 +234,7 @@ main.homepage {
       background-size: contain;
       overflow: hidden;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         padding: 60px 0 60px;
       }
 
@@ -242,7 +248,7 @@ main.homepage {
       margin: 0 auto 40px;
       text-align: center;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         width: 100%;
         max-width: 100%;
         margin: 0 0 35px;
@@ -257,7 +263,7 @@ main.homepage {
       line-height: 1.5;
       text-align: center;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         width: 100%;
         max-width: 100%;
         margin: 0 0 15px;
@@ -295,7 +301,7 @@ main.homepage {
       font-weight: 700;
       text-align: center;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         width: 100%;
         max-width: 100%;
         margin: 0 0 60px;
@@ -324,7 +330,7 @@ main.homepage {
         // background-repeat: repeat;
         // background-size: contain;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           grid-column: span 6;
           width: auto;
           height: 400px;
@@ -342,7 +348,7 @@ main.homepage {
             display: block;
             width: 290px;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               width: 250px;
             }
 
@@ -386,7 +392,7 @@ main.homepage {
       grid-row-gap: 32px;
       margin-top: 50px;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         grid-row-gap: 15px;
       }
 
@@ -417,7 +423,7 @@ main.homepage {
         height: 487px;
         padding: 50px;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           grid-row: span 1;
           height: initial;
           padding: 30px;
@@ -429,7 +435,7 @@ main.homepage {
           margin-bottom: 0;
           animation: floating-image 8s linear infinite;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             width: 250px;
           }
 
@@ -452,7 +458,7 @@ main.homepage {
         height: 100%;
         padding: 40px 75px 40px 40px;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           display: block;
           padding: 30px;
           height: initial;
@@ -465,7 +471,7 @@ main.homepage {
           animation-direction: reverse;
           animation: floating-image 8s linear infinite;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             margin-bottom: 30px;
             margin-right: 0;
           }
@@ -505,7 +511,7 @@ main.homepage {
       background: #000000;
       overflow: hidden;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         margin-top: -50px;
         background: $nightblue;
         padding: 65px 15px;
@@ -520,7 +526,7 @@ main.homepage {
       width: 100%;
       aspect-ratio: 16/9;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         border-radius: 20px;
         overflow: hidden;
       }
@@ -534,7 +540,7 @@ main.homepage {
           width: 100%;
           height: 100%;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             pointer-events: initial;
           }
         }
@@ -549,7 +555,7 @@ main.homepage {
   }
 
   .universe {
-    @include media-bp-down(md) {
+    @include media-bp-down(lg) {
       z-index: 2;
     }
     .strate__inner {
@@ -561,7 +567,7 @@ main.homepage {
       background-size: contain;
       // @include bg-grain;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         padding: 60px 0;
         margin-top: -50px;
       }
@@ -577,7 +583,7 @@ main.homepage {
       padding-bottom: calc(100vh - 400px);
       margin-bottom: 70px;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         margin-bottom: 60px;
         padding-bottom: 0;
         position: relative;
@@ -597,7 +603,7 @@ main.homepage {
       padding-bottom: 200px;
       vertical-align: top;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         width: 100%;
         margin-top: 0;
         padding-bottom: 0;
@@ -608,7 +614,7 @@ main.homepage {
         width: 100%;
         margin-bottom: 140px;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           margin-bottom: 60px;
           transition: opacity 0.5s ease;
         }
@@ -640,7 +646,7 @@ main.homepage {
           font-weight: 600;
           line-height: 60px;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             font-size: 30px;
             line-height: 1.5;
             margin-bottom: 15px;
@@ -662,7 +668,7 @@ main.homepage {
           transition: opacity 1s ease;
           animation: floating-image 8s linear infinite;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             transition: opacity 0.5s ease;
           }
 
@@ -678,7 +684,7 @@ main.homepage {
           &:not(.is-active) {
             opacity: 0;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               opacity: 0.3;
             }
           }
@@ -689,7 +695,7 @@ main.homepage {
         }
 
         &:not(.is-active) {
-          @include media-bp-up(md) {
+          @include media-bp-up(lg) {
             // .title {
             //   opacity: 0.15;
             // }
@@ -713,13 +719,13 @@ main.homepage {
             }
           }
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             opacity: 0.15;
           }
         }
 
         &.is-active {
-          @include media-bp-up(md) {
+          @include media-bp-up(lg) {
             .title {
               opacity: 1;
             }
@@ -745,7 +751,7 @@ main.homepage {
             }
           }
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             opacity: 1;
           }
         }
@@ -764,7 +770,7 @@ main.homepage {
       min-height: 595px;
       vertical-align: top;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         display: none;
         width: 100%;
       }
@@ -807,7 +813,7 @@ main.homepage {
       width: 100%;
       margin-top: 180px;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         margin-top: 80px;
       }
 
@@ -830,7 +836,7 @@ main.homepage {
           font-size: 50px;
           font-weight: 600;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             max-width: 100%;
             font-size: 30px;
           }
@@ -843,7 +849,7 @@ main.homepage {
           font-size: 20px;
           line-height: 1.5;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             max-width: 100%;
             margin-bottom: 40px;
           }
@@ -858,7 +864,7 @@ main.homepage {
         width: 100%;
         padding-bottom: 60px;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           padding-bottom: 0;
         }
 
@@ -875,10 +881,14 @@ main.homepage {
             max-height: 600px;
           }
 
+          @include media-bp-down(lg) {
+            min-height: initial;
+          }
+
           @include media-bp-down(md) {
             position: static;
-            min-height: calc(100vh - 20px);
-            margin-bottom: 16px;
+            margin-bottom: 30px;
+            // min-height: calc(100vh - 20px);
           }
 
           .roadmap__item__layer {
@@ -900,9 +910,9 @@ main.homepage {
             position: sticky;
             width: 100%;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               flex-direction: column;
-              padding: 15px;
+              padding: 20px 15px 30px;
             }
           }
 
@@ -934,7 +944,7 @@ main.homepage {
           .roadmap__item__text--mobile {
             display: none;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               display: block;
               margin-bottom: 25px;
               font-size: 30px;
@@ -948,7 +958,7 @@ main.homepage {
             min-height: 100%;
             padding: 40px 75px 40px 40px;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               width: 100%;
               padding: 0;
               order: 2;
@@ -962,7 +972,7 @@ main.homepage {
               font-weight: 700;
               line-height: 42px;
 
-              @include media-bp-down(md) {
+              @include media-bp-down(lg) {
                 display: none;
               }
             }
@@ -989,14 +999,16 @@ main.homepage {
             width: 40%;
             min-height: 100%;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               position: relative;
               order: 1;
               width: 100%;
-              height: 210px;
+              // height: 210px;
+              height: initial;
               min-height: initial;
               border-radius: 15px;
               overflow: hidden;
+              padding-bottom: 55%;
 
               img {
                 position: absolute;
@@ -1005,13 +1017,18 @@ main.homepage {
               }
             }
 
+            @include media-bp-down(md) {
+              padding-bottom: 66%;
+            }
+
             .imgWrapper--mobile {
               display: none;
             }
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               .imgWrapper--mobile {
                 display: block;
+                position: absolute;
               }
 
               .imgWrapper--desktop {
@@ -1036,6 +1053,10 @@ main.homepage {
         .roadmap__item--last {
           position: sticky;
           top: 150px;
+
+          @include media-bp-down(lg) {
+            padding-bottom: 50px;
+          }
         }
 
         // .roadmap__items__bottom {
@@ -1045,113 +1066,4 @@ main.homepage {
       }
     }
   }
-
-  // .docs {
-  //   position: relative;
-  //   background-color: $nightblue;
-  //   padding: 120px 0 0;
-  //   margin-top: 0;
-
-  //   .docs__header {
-  //     margin-bottom: 60px;
-
-  //     h3 {
-  //       display: inline-block;
-  //       width: 37%;
-  //       margin-right: 33px;
-  //     }
-
-  //     p {
-  //       display: inline-block;
-  //       max-width: calc(63% - 40px);
-  //       color: $white-80;
-  //       font-size: 20px;
-  //       line-height: 30px;
-  //     }
-  //   }
-
-  //   .docs__content {
-  //     display: flex;
-
-  //     .title {
-  //       font-size: 25px;
-  //       font-weight: 600;
-  //       line-height: 1.3;
-  //     }
-
-  //     .docs__content__item--large {
-  //       width: 37%;
-  //       margin-right: 32px;
-  //       position: relative;
-  //       grid-column: span 5;
-  //       height: 250px;
-  //       padding: 32px 40px;
-  //       border-radius: 20px;
-  //       background-color: #fff;
-  //       background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
-
-  //       .title {
-  //         display: block;
-  //         margin-bottom: 16px;
-  //         color: $textblue;
-  //       }
-
-  //       p.description {
-  //         max-width: 85%;
-  //         color: $textblue;
-  //         line-height: 27px;
-  //       }
-
-  //       svg {
-  //         position: absolute;
-  //         right: 40px;
-  //         bottom: 40px;
-  //         width: 15px;
-  //         height: auto;
-
-  //         path {
-  //           stroke: #00b6b7;
-  //         }
-  //       }
-  //     }
-
-  //     .docs__content__right {
-  //       display: flex;
-  //       flex-direction: column;
-  //       justify-content: space-between;
-  //       grid-column: span 2;
-  //       width: 100%;
-  //       flex: 1;
-
-  //       .docs__content__item {
-  //         display: flex;
-  //         position: relative;
-  //         align-items: center;
-  //         justify-content: flex-start;
-  //         width: 100%;
-  //         height: calc(50% - 16px);
-  //         padding: 10px 32px;
-  //         border: 1px solid #006796;
-  //         border-radius: 20px;
-
-  //         .social {
-  //           width: 33px;
-  //           height: auto;
-  //         }
-
-  //         .arrow {
-  //           position: relative;
-  //           top: 2px;
-  //           width: 15px;
-  //           height: auto;
-  //         }
-
-  //         p.title {
-  //           margin-left: 14px;
-  //           margin-right: auto;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 }

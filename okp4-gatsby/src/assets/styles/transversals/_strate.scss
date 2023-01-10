@@ -4,7 +4,7 @@ section.strate {
   margin: 0 auto;
   transform-origin: top;
 
-  @include media-bp-down(md) {
+  @include media-bp-down(lg) {
     position: relative;
     width: 100vw;
   }
@@ -13,7 +13,7 @@ section.strate {
     transform-origin: top;
     border-radius: 40px;
 
-    @include media-bp-down(md) {
+    @include media-bp-down(lg) {
       border-radius: 20px;
     }
   }
@@ -31,7 +31,7 @@ section.strate {
     background-color: #000000;
     pointer-events: none;
 
-    @include media-bp-down(md) {
+    @include media-bp-down(lg) {
       display: none;
       border-radius: 20px;
     }

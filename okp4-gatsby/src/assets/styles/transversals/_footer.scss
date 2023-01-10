@@ -6,7 +6,7 @@ footer.footer {
   background-size: contain;
   // background-color: $nightblue;
 
-  @include media-bp-down(md) {
+  @include media-bp-down(lg) {
     padding-bottom: 0;
   }
 
@@ -19,14 +19,14 @@ footer.footer {
     padding: 120px 0;
     margin-top: 0;
 
-    @include media-bp-down(md) {
+    @include media-bp-down(lg) {
       padding: 60px 0 45px;
     }
 
     .docs__header {
       margin-bottom: 60px;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         margin-bottom: 30px;
         text-align: center;
       }
@@ -36,7 +36,7 @@ footer.footer {
         width: 37%;
         margin-right: 33px;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           display: block;
           width: 100%;
           margin-right: 0;
@@ -51,7 +51,7 @@ footer.footer {
         font-size: 20px;
         line-height: 30px;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           display: block;
           width: 100%;
           max-width: 100%;
@@ -62,7 +62,7 @@ footer.footer {
     .docs__content {
       display: flex;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         display: block;
       }
 
@@ -87,7 +87,7 @@ footer.footer {
         background-size: contain;
         transition: background 0.25s ease;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           display: block;
           width: 100%;
           height: initial;
@@ -96,7 +96,7 @@ footer.footer {
           margin-bottom: 15px;
         }
 
-        @include media-bp-up(md) {
+        @include media-bp-up(lg) {
           &:hover {
             background: url("/images/grain.png"),
               linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
@@ -127,7 +127,7 @@ footer.footer {
           line-height: 27px;
           transition: color 0.25s ease;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             max-width: 100%;
           }
         }
@@ -140,7 +140,7 @@ footer.footer {
           height: auto;
           transition: transform 0.25s ease;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             right: 25px;
             bottom: 25px;
             width: 13px;
@@ -161,7 +161,7 @@ footer.footer {
         width: 100%;
         flex: 1;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           display: block;
         }
 
@@ -176,14 +176,14 @@ footer.footer {
           border: 1px solid $turquoise;
           border-radius: 20px;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             width: 100%;
             height: 100px;
             padding: 0 25px;
             margin-bottom: 15px;
           }
 
-          @include media-bp-up(md) {
+          @include media-bp-up(lg) {
             &:hover {
               background: linear-gradient(
                 39.81deg,
@@ -213,7 +213,7 @@ footer.footer {
             height: auto;
             transition: transform 0.25s ease;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               width: 13px;
             }
 
@@ -235,7 +235,7 @@ footer.footer {
     text-align: center;
     padding-bottom: 55px;
 
-    @include media-bp-down(md) {
+    @include media-bp-down(lg) {
       padding-bottom: 60px;
     }
 
@@ -284,7 +284,7 @@ footer.footer {
     border-radius: 30px 30px 0 0;
     overflow: hidden;
 
-    @include media-bp-down(md) {
+    @include media-bp-down(lg) {
       width: 100%;
       border-radius: 0;
     }
@@ -296,7 +296,7 @@ footer.footer {
       bottom: 0;
       left: 0;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         top: initial;
         height: 145px;
       }
@@ -314,7 +314,7 @@ footer.footer {
         left: 0;
         object-fit: cover;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           top: initial;
           object-fit: contain !important;
           bottom: -15px;
@@ -333,7 +333,7 @@ footer.footer {
       margin-top: 64px;
       margin-bottom: 70px;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         display: block;
         margin-top: 60px;
         margin-bottom: 40px;
@@ -343,7 +343,7 @@ footer.footer {
       .footer__main__top__logo {
         width: 152px;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           margin-bottom: 35px;
         }
 
@@ -360,7 +360,7 @@ footer.footer {
         margin-right: 0;
         margin-left: auto;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           display: block;
           text-align: center;
         }
@@ -369,13 +369,13 @@ footer.footer {
           margin-left: 25px;
           transition: opacity 0.25s ease;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             display: block;
             margin-left: 0;
             margin-top: 30px;
           }
 
-          @include media-bp-up(md) {
+          @include media-bp-up(lg) {
             &:hover {
               opacity: 0.5;
 
@@ -405,7 +405,7 @@ footer.footer {
           border-radius: 10px;
           text-align: center;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             display: inline-block;
             margin-left: 0;
             margin-top: 30px;
@@ -420,13 +420,13 @@ footer.footer {
       justify-content: space-between;
       margin-bottom: 200px;
 
-      @include media-bp-down(md) {
+      @include media-bp-down(lg) {
         width: 100%;
         display: block;
       }
 
       .footer__main__bottom__newsletter {
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           width: 100%;
         }
 
@@ -435,7 +435,7 @@ footer.footer {
           margin-bottom: 20px;
           font-size: 25px;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             width: 80%;
             margin: 0 auto 20px;
             text-align: center;
@@ -486,7 +486,7 @@ footer.footer {
             align-items: center;
             justify-content: space-between;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               display: block;
               width: 100%;
             }
@@ -507,7 +507,7 @@ footer.footer {
               max-width: 100%;
               margin-right: 10px;
 
-              @include media-bp-down(md) {
+              @include media-bp-down(lg) {
                 width: 100%;
                 margin-bottom: 10px;
                 text-align: center;
@@ -517,7 +517,7 @@ footer.footer {
                 padding: 0 20px;
                 background: $whitebg;
 
-                @include media-bp-down(md) {
+                @include media-bp-down(lg) {
                   text-align: center;
                 }
               }
@@ -538,7 +538,7 @@ footer.footer {
                 cursor: pointer;
                 transition: opacity 0.25s ease;
 
-                @include media-bp-up(md) {
+                @include media-bp-up(lg) {
                   &:hover {
                     opacity: 0.5;
 
@@ -579,7 +579,7 @@ footer.footer {
         align-items: center;
         justify-content: flex-end;
 
-        @include media-bp-down(md) {
+        @include media-bp-down(lg) {
           justify-content: space-between;
           top: initial;
           margin-top: 50px;
@@ -594,7 +594,7 @@ footer.footer {
           margin-left: 20px;
           transition: opacity 0.25s ease;
 
-          @include media-bp-down(md) {
+          @include media-bp-down(lg) {
             margin-left: 0;
           }
 
@@ -606,7 +606,7 @@ footer.footer {
             width: 29px;
             height: auto;
 
-            @include media-bp-down(md) {
+            @include media-bp-down(lg) {
               width: 34px;
             }
           }

@@ -155,8 +155,13 @@ const Universe = () => {
                       decentralization. Realizing there was no decentralized
                       network specifically designed for such use cases, we
                       quickly concluded that we needed to create our own
-                      specific and sovereign blockchain. This was when we chose
-                      the Cosmos SDK.
+                      specific and sovereign blockchain. We then chose the
+                      Cosmos SDK to build it.
+                      <br />
+                      <br />
+                      After two more years of research and development using the
+                      Cosmos SDK as a starting point, OKP4 was ready for the
+                      Nemeton era.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -184,22 +189,31 @@ const Universe = () => {
                   <div className="roadmap__item__text">
                     <span className="title">— Nemeton</span>
                     <p className="excerpt">
-                      After more than two years of research and development
-                      using the Cosmos SDK as a starting point, OKP4 launched
-                      its Nemeton Public Testnet on the 17th of October, 2022.
+                      OKP4 launched its Nemeton Public Testnet on the 17th of
+                      October, 2022.
                     </p>
                     <p className="description">
                       The Nemeton era is the bootstrapping era. This is when the
-                      ideas & concepts are expressed to the public. This is when
-                      the first validators join together to power the network,
-                      test its limits and contribute to its developments. This
-                      is when the first builders come to explore Data Space
+                      ideas & concepts are expressed to the public.
+                      <br />
+                      This is when the first validators join together to power
+                      the network, test its limits and contribute to its
+                      developments.
+                      <br />
+                      This is when the first builders come to explore Data Space
                       possibilities and opportunities for them and their
-                      communities. This is where the community unites around the
-                      vision of a new generation of applications enabled by
-                      trust-minimized sharing of digital resources. <br />
-                      The Nemeton era will result in a stable, battle-tested
-                      environment and will give birth to the OKP4 mainnet.
+                      communities, resulting in the first OKP4-powered
+                      decentralized use cases operated by communities of
+                      pioneers.
+                      <br />
+                      This is where the community unites around the vision of a
+                      new generation of applications enabled by trust-minimized
+                      sharing of digital resources. Nemeton becomes the host for
+                      existing use cases.
+                      <br />
+                      <br />
+                      The Nemeton era results in a stable, battle-tested
+                      environment and gives birth to the OKP4 mainnet.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -223,36 +237,31 @@ const Universe = () => {
               >
                 <div className="roadmap__item__layer"></div>
                 <div className="roadmap__item__container">
-                  <span className="roadmap__item__text--mobile">— Mirdin</span>
+                  <span className="roadmap__item__text--mobile">— Myrddin</span>
                   <div className="roadmap__item__text">
-                    <span className="title">— Mirdin</span>
+                    <span className="title">— Myrddin</span>
                     <p className="excerpt">
-                      The Mirdin era begins with the first iteration of our
-                      mainnet: a stable decentralized network ready to host many
-                      Data Spaces and Applications. The Mirdin era focuses on
-                      making OKP4 as easy to use as possible while being highly
-                      generic and customizable.
+                      Get ready for the Myrddin era, where OKP4 mainnet is
+                      unleashed and the decentralized network come to life. The
+                      main focus is making OKP4 easy to use and highly
+                      customizable, hosted on a community-operated network
+                      secured by the scarce, publicly traded $KNOW token.
                     </p>
                     <p className="description">
-                      This environment is powered by a network of nodes operated
-                      by the community, which is economically secured through a
-                      sound, scarce and publicly traded $KNOW token. The
-                      community of builders deploys many existing or innovative
-                      governance rules for Data Spaces publicly for the first
-                      time, enabling new mechanisms to align interests among
-                      participants (data providers, services providers, users…).
-                      The community of token holders and validators takes
-                      control, through governance proposals and votes, of the
-                      reins of the network. The incentives schemes enable the
-                      onboarding of many community members across all roles. The
-                      Mirdin era also sees the first generation of IBC channels
-                      enabling tokens to flow to and from the interchain, and
-                      the emergence of the first proto-interchain applications.
-                      At the end of the Mirdin era, impactful business &
-                      community powered-applications emerged, and the community
-                      has grown tremendously due to the many opportunities
-                      offered to them. The robust OKP4 SDK and Dataverse
-                      Gateways bring us into the next era: Duir
+                      Watch as the community of builders deploys new governance
+                      rules for Data Spaces and participants find new designs to
+                      coordinate themselves and build epic innovative
+                      applications. Token holders and validators take control
+                      through governance proposals and votes, creating an
+                      involved and diverse community.
+                      <br />
+                      <br />
+                      IBC channels enable token flow between chains and pave the
+                      way for the first proto-interchain apps. By the end of the
+                      Myrddin era, we'll see impactful businesses and
+                      community-powered applications enabled by OKP4. The
+                      powerful OKP4 SDK and Dataverse Gateways releases take us
+                      into the Duir era...
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -280,27 +289,32 @@ const Universe = () => {
                   <div className="roadmap__item__text">
                     <span className="title">— Duir</span>
                     <p className="excerpt">
-                      Unlike the Mirdin era, which started at a single point in
+                      Unlike the Myrddin era, which starts at a single point in
                       time when the mainnet launched, the transition to Duir
-                      happened gradually.
+                      happen gradually.
                     </p>
                     <p className="description">
-                      While Mirdin was focused on building the infrastructure,
-                      the Duir era is now focused on adoption. With each release
+                      While Myrddin is focused on building the infrastructure,
+                      the Duir era is focused on adoption. With each release
                       relating to the SDK, the Dataverse Gateways or the
-                      governance templates, new opportunities emerged for
+                      governance templates, new opportunities emerge for
                       builders, data & service providers and users. The Duir era
                       is the climax of adoption due to the easiness and
                       straightforwardness of building and onboarding
-                      communities. The Dataverse reaches a critical network
-                      effect: the many datasets and services available provide
-                      unprecedented opportunities for builders and becomes a
-                      significant go-to-market fo data & services providers. An
-                      ecosystem of Data Space governance tokens emerges,
-                      providing healthy competition between them and steering
-                      open innovation to the next level. Real-life use cases and
-                      value flows into the network and the OKP4 public good
-                      continues to grow.
+                      communities.
+                      <br />
+                      <br />
+                      The Dataverse reaches a critical network effect: the many
+                      datasets and services available provide unprecedented
+                      opportunities for builders and becomes a significant
+                      go-to-market fo data & services providers. An ecosystem of
+                      Data Space governance tokens emerges, providing healthy
+                      competition between them and steering open innovation to
+                      the next level.
+                      <br />
+                      <br />
+                      Real-life use cases and value flows into the network and
+                      the OKP4 public good continues to grow.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -329,21 +343,25 @@ const Universe = () => {
                   <div className="roadmap__item__text">
                     <span className="title">— Lugh</span>
                     <p className="excerpt">
-                      The Z era is the expression of the unstoppable nature of
-                      OKP4s design.
+                      The Lugh era is the expression of the unstoppable nature
+                      of OKP4s design.
+                      <br />
+                      <br />
+                      Inter- blockchain communication is now the norm and OKP4
+                      is interoperable with every meaningful network to access
+                      any kind of datasets and services (decentralized storage,
+                      decentralized computation...), onboard communities from
+                      other chains easily, and seamless interchain applications.
                     </p>
                     <p className="description">
-                      Inter-blockchain communication is now the norm and OKP4 is
-                      interoperable with every meaningful network to access any
-                      kind of datasets and services (decentralized storage,
-                      decentralized computation…), onboard communities from
-                      other chains easily, and seamless interchain applications.
                       Due to OKP4 first-mover advantage and significant network
                       effect reached, OKP4 becomes the default coordination
                       layer for most applications based on distributed
-                      resources. Thousands of projects and teams across the web2
-                      and web3 worlds are building on OKP4: it has reached mass
-                      adoption.
+                      resources.
+                      <br />
+                      <br />
+                      Thousands of projects and teams across the web2 and web3
+                      worlds are building on OKP4: it has reached mass adoption.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">

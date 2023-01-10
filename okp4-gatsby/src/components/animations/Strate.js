@@ -69,7 +69,7 @@ const Strate = ({ children, classContainer }) => {
   };
 
   useEffect(() => {
-    if (ResponsiveManager.isWindowLarger("md")) {
+    if (ResponsiveManager.isWindowLarger("lg")) {
       setTimeout(function () {
         const windowHeight =
           window.innerHeight || document.documentElement.clientHeight;

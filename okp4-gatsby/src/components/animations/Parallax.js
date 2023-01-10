@@ -62,7 +62,7 @@ const Parallax = ({
   };
 
   useEffect(() => {
-    if (ResponsiveManager.isWindowLarger("md")) {
+    if (ResponsiveManager.isWindowLarger("lg")) {
       setTimeout(function () {
         setInitialPosition();
         monitorSection();

@@ -91,7 +91,7 @@ const StickyUniverse = ({ children, classContainer }) => {
   };
 
   useEffect(() => {
-    if (ResponsiveManager.isWindowSmaller("md")) {
+    if (ResponsiveManager.isWindowSmaller("lg")) {
       setIllusMobile();
     }
     monitorSection();

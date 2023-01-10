@@ -18,7 +18,7 @@ const Halo = ({ classContainer = "halo--regular" }) => {
   const appearSection = (entries, intersectionAppear) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        if (ResponsiveManager.isWindowLarger("md")) {
+        if (ResponsiveManager.isWindowLarger("lg")) {
           divRef.current.parentNode.addEventListener(
             "mouseenter",
             handleMouseEnter
@@ -33,7 +33,7 @@ const Halo = ({ classContainer = "halo--regular" }) => {
           );
         }
       } else {
-        if (ResponsiveManager.isWindowLarger("md")) {
+        if (ResponsiveManager.isWindowLarger("lg")) {
           divRef.current.parentNode.removeEventListener(
             "mouseenter",
             handleMouseEnter

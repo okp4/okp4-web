@@ -35,7 +35,7 @@ const Header = () => {
     if (window.scrollY < windowHeight + 100) {
       divRef.current.classList.remove("is-reset");
       let ratio = getRatio();
-      if (ResponsiveManager.isWindowLarger("md")) {
+      if (ResponsiveManager.isWindowLarger("lg")) {
         divRef.current.style.opacity = ratio;
       } else {
         divMobile.current.style.opacity = ratio;

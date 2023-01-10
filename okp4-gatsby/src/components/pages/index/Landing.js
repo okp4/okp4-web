@@ -26,13 +26,13 @@ const Landing = () => {
       if (entry.isIntersecting) {
         rafId = requestAnimationFrame(perspective);
 
-        if (ResponsiveManager.isWindowLarger("md")) {
+        if (ResponsiveManager.isWindowLarger("lg")) {
           window.addEventListener("scroll", scrollStarted);
         }
       } else {
         cancelAnimationFrame(rafId);
 
-        if (ResponsiveManager.isWindowLarger("md")) {
+        if (ResponsiveManager.isWindowLarger("lg")) {
           window.removeEventListener("scroll", scrollStarted);
         }
       }
@@ -67,27 +67,29 @@ const Landing = () => {
       divFadeOut.current.style.opacity = opacityRatioOut;
     }
 
-    // if (ResponsiveManager.isWindowLarger("md")) {
+    // if (ResponsiveManager.isWindowLarger("lg")) {
     divRef.current.querySelectorAll("[data-parallax]").forEach((elem) => {
-      if (ScrollManager.isIntersectingViewport(divFadeIn.current)) {
-        var ratio = ScrollManager.getIntersectionRatio(divFadeIn.current);
-        var transformRatio;
-        var parallaxEnd = parseInt(elem.dataset.parallaxend);
+      // if (ScrollManager.isIntersectingViewport(divFadeIn.current)) {
+      var ratio = ScrollManager.getIntersectionRatio(divFadeIn.current);
+      var transformRatio;
+      var parallaxEnd = parseInt(elem.dataset.parallaxend);
 
-        if (ResponsiveManager.isWindowSmaller("md")) {
-          // parallaxEnd = parallaxEnd / 1.5;
-          parallaxEnd = parallaxEnd;
-          const scrollY = window.scrollY;
-          const distance = 1000;
-          ratio = scrollY / distance;
-          if (ratio > 1) ratio = 1;
-        }
-
-        transformRatio = (ratio.toFixed(4) * parallaxEnd).toFixed(4);
-
-        var transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
-        elem.style.transform = transformRatioCss;
+      if (ResponsiveManager.isWindowSmaller("lg")) {
+        ratio = (ScrollManager.getIntersectionRatio(divRef.current) - 0.5) * 2;
+        parallaxEnd = parallaxEnd * -1;
+        // console.log(ratio);
+        // parallaxEnd = parallaxEnd;
+        // const scrollY = window.scrollY;
+        // const distance = 1000;
+        // ratio = scrollY / distance;
+        // if (ratio > 1) ratio = 1;
       }
+
+      transformRatio = (ratio.toFixed(4) * parallaxEnd).toFixed(4);
+
+      var transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
+      elem.style.transform = transformRatioCss;
+      // }
     });
     // }
 
