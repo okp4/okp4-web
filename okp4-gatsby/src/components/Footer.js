@@ -12,6 +12,8 @@ import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import Halo from "./animations/Halo.js";
 import Docs from "./Docs.js";
 import Newsletter from "./Newsletter.js";
+import contentSocials from "/content/transversals/socials.yaml";
+import contentFooter from "/content/transversals/footer.yaml";
 
 const Footer = () => {
   // const divRef = useRef(null);
@@ -78,53 +80,55 @@ const Footer = () => {
             <IconLogo className="footer__main__top__logo" />
             <div className="footer__main__top__links">
               <a
-                href="https://docs.okp4.network/faq"
+                href={contentSocials.faq.url}
                 className="footer__main__top__links__item"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>FAQ</span>
+                <span>{contentSocials.faq.label}</span>
                 <IconArrowtr />
               </a>
               <a
-                href="https://docs.okp4.network/docs/whitepaper/abstract"
+                href={contentSocials.whitepaper.url}
                 className="footer__main__top__links__item"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>Whitepaper</span>
+                <span>{contentSocials.whitepaper.label}</span>
                 <IconArrowtr />
               </a>
               <a
-                href="https://nemeton.okp4.network/"
+                href={contentSocials.nemeton.url}
                 className="footer__main__top__links__item"
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>Nemeton program</span>
+                <span>{contentSocials.nemeton.label}</span>
                 <IconArrowtr />
               </a>
               <a
-                href="mailto:hello@okp4.network"
+                href={contentSocials.contact.url}
                 className="footer__main__top__links__item footer__main__top__links__item--button"
               >
-                <span>Let’s Get In Touch</span>
+                <span>{contentSocials.contact.label}</span>
                 <IconArrowtr />
               </a>
             </div>
           </div>
           <div className="footer__main__bottom">
             <div className="footer__main__bottom__newsletter">
-              <p>
-                Follow our adventures and <b>stay up to date </b>!
-              </p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: contentFooter.messageNewsletter,
+                }}
+              ></p>
               <div className="footer__main__bottom__newsletter__form">
                 <Newsletter />
               </div>
             </div>
             <div className="footer__main__bottom__socials">
               <a
-                href="https://www.linkedin.com/company/okp4-open-knowledge-protocol-for/"
+                href={contentSocials.linkedin.url}
                 className="footer__main__bottom__socials__link"
                 target="_blank"
                 rel="noreferrer"
@@ -132,7 +136,7 @@ const Footer = () => {
                 <IconLinkedin />
               </a>
               <a
-                href="https://twitter.com/OKP4_Protocol"
+                href={contentSocials.twitter.url}
                 className="footer__main__bottom__socials__link"
                 target="_blank"
                 rel="noreferrer"
@@ -140,7 +144,7 @@ const Footer = () => {
                 <IconTwitter />
               </a>
               <a
-                href="https://github.com/okp4"
+                href={contentSocials.github.url}
                 className="footer__main__bottom__socials__link"
                 target="_blank"
                 rel="noreferrer"
@@ -148,7 +152,7 @@ const Footer = () => {
                 <IconGithub />
               </a>
               <a
-                href="https://blog.okp4.network/"
+                href={contentSocials.medium.url}
                 className="footer__main__bottom__socials__link"
                 target="_blank"
                 rel="noreferrer"
@@ -156,7 +160,7 @@ const Footer = () => {
                 <IconMedium />
               </a>
               <a
-                href="https://discord.com/invite/okp4"
+                href={contentSocials.discord.url}
                 className="footer__main__bottom__socials__link"
                 target="_blank"
                 rel="noreferrer"
@@ -164,7 +168,7 @@ const Footer = () => {
                 <IconDiscord />
               </a>
               <a
-                href="https://t.me/okp4network"
+                href={contentSocials.telegram.url}
                 className="footer__main__bottom__socials__link"
                 target="_blank"
                 rel="noreferrer"
