@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, getSrc } from "gatsby-plugin-image";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import Halo from "../../animations/Halo.js";
 import Strate from "../../animations/Strate.js";
 import Parallax from "../../animations/Parallax.js";
+import content from "/content/pages/index/opportunities.yaml";
 
 const Introduction = () => {
   return (
@@ -15,20 +16,28 @@ const Introduction = () => {
       </div>
       <div className="wrapper">
         <h2 className="introduction__title">
-          New opportunities for every digital ressource
+          {content.title}
+          {/* New opportunities for every digital ressource */}
         </h2>
-        <p className="introduction__text">
-          OKP4 is the only <b>public layer-1 blockchain</b> designed for
+        <p
+          className="introduction__text"
+          dangerouslySetInnerHTML={{
+            __html: content.description,
+          }}
+        >
+          {/* OKP4 is the only <b>public layer-1 blockchain</b> designed for
           coordination of digital assets such as datasets, algorithms, software,
           storage or computation. Anyone can build and join custom
           <Link className="cta--icon" to="/">
             <span>Data Spaces</span>
             <IconArrowtr />
           </Link>
-          where rules are shared and value flows between participants.
+          where rules are shared and value flows between participants. */}
+          {/* {content.description} */}
         </p>
         <p className="introduction__catch">
-          Let’s build amazing things together!
+          {/* Let’s build amazing things together! */}
+          {content.featuredText}
         </p>
         <div className="grid introduction__cards">
           <Parallax
@@ -40,12 +49,12 @@ const Introduction = () => {
             <div className="introduction__cards__item__illus" data-infinite="1">
               <StaticImage
                 className="imgWrapper"
-                src="../../../assets/images/illus/index_intro_card_1.png"
+                src="/src/assets/images/illus/index_intro_card_1.png"
                 alt="Easy to build data spaces and applications"
               />
             </div>
-            <p className="title">Easy to build</p>
-            <p className="text">Data Spaces and Applications</p>
+            <p className="title">{content.whitecard1.title}</p>
+            <p className="text">{content.whitecard1.description}</p>
           </Parallax>
           <Parallax
             classContainer="introduction__cards__item"
