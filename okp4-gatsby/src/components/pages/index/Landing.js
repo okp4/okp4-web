@@ -3,6 +3,7 @@ import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
 import * as ScrollManager from "../../../utils/ScrollManager.js";
 import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
+import contentLanding from "/content/pages/index/hero.yaml";
 
 const Landing = () => {
   const divRef = useRef(null);
@@ -115,13 +116,33 @@ const Landing = () => {
     }, 1000);
   });
 
+  const isSecondItem = (index, total) => {
+    if (index === total) return;
+    if ((index + 1) % 2 === 0) return <br />;
+  };
+
   return (
     <section className="landing" ref={divRef}>
       <Halo></Halo>
       <div className="wrapper">
         <div className="landing__fade" ref={divFadeOut}>
           <h1>
-            <span className="title-wrap">
+            {contentLanding.title.line1.split(" ").map((data, index) => {
+              return (
+                <span className="title-wrap" key={index}>
+                  <span>{data}</span>
+                </span>
+              );
+            })}
+            <br />
+            {contentLanding.title.line2.split(" ").map((data, index) => {
+              return (
+                <span className="title-wrap" key={index}>
+                  <span>{data}</span>
+                </span>
+              );
+            })}
+            {/* <span className="title-wrap">
               <span>The</span>
             </span>
             <span className="title-wrap">
@@ -133,13 +154,14 @@ const Landing = () => {
             </span>
             <span className="title-wrap">
               <span>protocol</span>
-            </span>
+            </span> */}
           </h1>
           <p className="subtitle">
-            <span>
-              OKP4 is an ever-expanding universe of applications powered by
-              shared digital resources.
-            </span>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: contentLanding.subtitle,
+              }}
+            ></span>
           </p>
         </div>
         <div className="landing__illus" ref={divFadeIn}>
