@@ -162,12 +162,12 @@ const Universe = () => {
                   <div className="roadmap__item__illus">
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
-                      src="../../../assets/images/illus/index_roadmap_1.png"
+                      src="../../../assets/images/illus/index_roadmap_1.jpg"
                       alt="Roadmap : Genesis"
                     />
                     <StaticImage
                       className="imgWrapper imgWrapper--mobile"
-                      src="../../../assets/images/illus/index_roadmap_1_mobile.png"
+                      src="../../../assets/images/illus/index_roadmap_1_mobile.jpg"
                       alt="Roadmap : Genesis"
                     />
                   </div>
@@ -205,12 +205,12 @@ const Universe = () => {
                   <div className="roadmap__item__illus">
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
-                      src="../../../assets/images/illus/index_roadmap_2.png"
+                      src="../../../assets/images/illus/index_roadmap_2.jpg"
                       alt="Roadmap : Nemeton"
                     />
                     <StaticImage
                       className="imgWrapper imgWrapper--mobile"
-                      src="../../../assets/images/illus/index_roadmap_2_mobile.png"
+                      src="../../../assets/images/illus/index_roadmap_2_mobile.jpg"
                       alt="Roadmap : Nemeton"
                     />
                   </div>
@@ -227,10 +227,11 @@ const Universe = () => {
                   <div className="roadmap__item__text">
                     <span className="title">— Mirdin</span>
                     <p className="excerpt">
-                      A stable decentralized network ready to host many Data
-                      Spaces and Applications. The X era focuses on making OKP4
-                      as easy to use as possible while being highly generic and
-                      customizable.
+                      The Mirdin era begins with the first iteration of our
+                      mainnet: a stable decentralized network ready to host many
+                      Data Spaces and Applications. The Mirdin era focuses on
+                      making OKP4 as easy to use as possible while being highly
+                      generic and customizable.
                     </p>
                     <p className="description">
                       This environment is powered by a network of nodes operated
@@ -239,25 +240,30 @@ const Universe = () => {
                       community of builders deploys many existing or innovative
                       governance rules for Data Spaces publicly for the first
                       time, enabling new mechanisms to align interests among
-                      participants. The community of token holders and
-                      validators takes control, through governance proposals and
-                      votes, of the reins of the network. The incentives schemes
-                      enable the onboarding of many community members across all
-                      roles. The X era also sees the first generation of IBC
-                      channels enabling tokens to flow to and from the
-                      interchain, and the emergence of the first
-                      proto-interchain applications.
+                      participants (data providers, services providers, users…).
+                      The community of token holders and validators takes
+                      control, through governance proposals and votes, of the
+                      reins of the network. The incentives schemes enable the
+                      onboarding of many community members across all roles. The
+                      Mirdin era also sees the first generation of IBC channels
+                      enabling tokens to flow to and from the interchain, and
+                      the emergence of the first proto-interchain applications.
+                      At the end of the Mirdin era, impactful business &
+                      community powered-applications emerged, and the community
+                      has grown tremendously due to the many opportunities
+                      offered to them. The robust OKP4 SDK and Dataverse
+                      Gateways bring us into the next era: Duir
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
                     <StaticImage
                       className="imgWrapper  imgWrapper--desktop"
-                      src="../../../assets/images/illus/index_roadmap_3.png"
+                      src="../../../assets/images/illus/index_roadmap_3.jpg"
                       alt="Roadmap : Mirdin"
                     />
                     <StaticImage
                       className="imgWrapper imgWrapper--mobile"
-                      src="../../../assets/images/illus/index_roadmap_3_mobile.png"
+                      src="../../../assets/images/illus/index_roadmap_3_mobile.jpg"
                       alt="Roadmap : Mirdin"
                     />
                   </div>
@@ -274,37 +280,38 @@ const Universe = () => {
                   <div className="roadmap__item__text">
                     <span className="title">— Duir</span>
                     <p className="excerpt">
-                      Unlike the X era, which started at a single point in time
-                      when the mainnet launched, the transition to Y happened
-                      gradually.
+                      Unlike the Mirdin era, which started at a single point in
+                      time when the mainnet launched, the transition to Duir
+                      happened gradually.
                     </p>
                     <p className="description">
-                      While X was focused on building the infrastructure, the Y
-                      era is now focused on adoption. With each release relating
-                      to the SDK, the Dataverse Gateways or the governance
-                      templates, new opportunities emerged for builders, data &
-                      service providers and users. The Y era is the climax of
-                      adoption due to the easiness and straightforwardness of
-                      building and onboarding communities. The Dataverse reaches
-                      a critical network effect: the many datasets and services
-                      available provide unprecedented opportunities for builders
-                      and becomes a significant go-to-market fo data & services
-                      providers. An ecosystem of Data Space governance tokens
-                      emerges, providing healthy competition between them and
-                      steering open innovation to the next level. Real-life use
-                      cases and value flows into the network and the OKP4 public
-                      good continues to grow.
+                      While Mirdin was focused on building the infrastructure,
+                      the Duir era is now focused on adoption. With each release
+                      relating to the SDK, the Dataverse Gateways or the
+                      governance templates, new opportunities emerged for
+                      builders, data & service providers and users. The Duir era
+                      is the climax of adoption due to the easiness and
+                      straightforwardness of building and onboarding
+                      communities. The Dataverse reaches a critical network
+                      effect: the many datasets and services available provide
+                      unprecedented opportunities for builders and becomes a
+                      significant go-to-market fo data & services providers. An
+                      ecosystem of Data Space governance tokens emerges,
+                      providing healthy competition between them and steering
+                      open innovation to the next level. Real-life use cases and
+                      value flows into the network and the OKP4 public good
+                      continues to grow.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
-                      src="../../../assets/images/illus/index_roadmap_4.png"
+                      src="../../../assets/images/illus/index_roadmap_4.jpg"
                       alt="Roadmap : Duir"
                     />
                     <StaticImage
                       className="imgWrapper imgWrapper--mobile"
-                      src="../../../assets/images/illus/index_roadmap_4_mobile.png"
+                      src="../../../assets/images/illus/index_roadmap_4_mobile.jpg"
                       alt="Roadmap : Duir"
                     />
                   </div>
@@ -342,12 +349,12 @@ const Universe = () => {
                   <div className="roadmap__item__illus">
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
-                      src="../../../assets/images/illus/index_roadmap_5.png"
+                      src="../../../assets/images/illus/index_roadmap_5.jpg"
                       alt="Roadmap : Lugh"
                     />
                     <StaticImage
                       className="imgWrapper imgWrapper--mobile"
-                      src="../../../assets/images/illus/index_roadmap_5_mobile.png"
+                      src="../../../assets/images/illus/index_roadmap_5_mobile.jpg"
                       alt="Roadmap : Lugh"
                     />
                   </div>

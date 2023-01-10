@@ -9,6 +9,39 @@ const Landing = () => {
   const divFadeOut = useRef(null);
   const divFadeIn = useRef(null);
 
+  const monitorSection = () => {
+    var intersectionAppear;
+    var optionsAppear = {
+      root: null,
+      rootMargin: "30px",
+      threshold: 0,
+    };
+    intersectionAppear = new IntersectionObserver(appearSection, optionsAppear);
+    intersectionAppear.observe(divRef.current);
+  };
+
+  const appearSection = (entries, intersectionAppear) => {
+    entries.forEach((entry) => {
+      console.log(entry.target);
+      console.log(entry.intersectionRatio);
+      let animationFrame = parseInt(divRef.current.dataset.raf);
+      if (entry.isIntersecting) {
+        animationFrame = requestAnimationFrame(perspective);
+        divRef.current.dataset.raf = animationFrame;
+
+        if (ResponsiveManager.isWindowLarger("md")) {
+          window.addEventListener("scroll", scrollStarted);
+        }
+      } else {
+        cancelAnimationFrame(animationFrame);
+
+        if (ResponsiveManager.isWindowLarger("md")) {
+          window.removeEventListener("scroll", scrollStarted);
+        }
+      }
+    });
+  };
+
   const scrollStarted = () => {
     if (window.scrollY < 410) {
       const scrollY = window.scrollY;
@@ -24,6 +57,7 @@ const Landing = () => {
   const perspective = () => {
     let startScale = divRef.current.dataset.start;
     let endScale = divRef.current.dataset.end;
+    // console.log("RAF perspective");
 
     if (window.scrollY >= startScale && window.scrollY <= endScale) {
       let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
@@ -61,7 +95,9 @@ const Landing = () => {
     });
     // }
 
-    requestAnimationFrame(perspective);
+    let newRaf = requestAnimationFrame(perspective);
+    divRef.current.dataset.raf = newRaf;
+    // console.log(newRaf);
   };
 
   useEffect(() => {
@@ -76,21 +112,23 @@ const Landing = () => {
     divRef.current.dataset.top = divAbsoluteTop;
     divRef.current.dataset.start = startScale;
     divRef.current.dataset.end = endScale;
+    divRef.current.dataset.raf = 0;
 
     setTimeout(function () {
-      const animationFrame = requestAnimationFrame(perspective);
+      monitorSection();
+      // const animationFrame = requestAnimationFrame(perspective);
 
-      if (ResponsiveManager.isWindowLarger("md")) {
-        window.addEventListener("scroll", scrollStarted);
-      }
+      // if (ResponsiveManager.isWindowLarger("md")) {
+      //   window.addEventListener("scroll", scrollStarted);
+      // }
 
-      return () => {
-        cancelAnimationFrame(animationFrame);
+      // return () => {
+      //   cancelAnimationFrame(animationFrame);
 
-        if (ResponsiveManager.isWindowLarger("md")) {
-          window.removeEventListener("scroll", scrollStarted);
-        }
-      };
+      //   if (ResponsiveManager.isWindowLarger("md")) {
+      //     window.removeEventListener("scroll", scrollStarted);
+      //   }
+      // };
     }, 1000);
   }, []);
 
@@ -131,15 +169,15 @@ const Landing = () => {
           {/* // Base Image used for dimensions (hidden opacity 0) */}
           <StaticImage
             className="imgWrapper--base"
-            src="../../../assets/images/illus/index_landing.png"
+            src="../../../assets/images/illus/index_landing.jpg"
             alt="OKP4 hero image"
           />
           <div className="landing__illus__wrapper">
-            <StaticImage
+            {/* <StaticImage
               className="imgWrapper--base"
               src="../../../assets/images/illus/index_landing.png"
               alt="OKP4 hero image"
-            />
+            /> */}
             {/* // Socle en bois */}
             <div
               className="parallaxWrapper"
