@@ -11,7 +11,55 @@ const Universe = () => {
         <div className="wrapper">
           <StickyUniverse classContainer="universe__wrapper">
             <Halo></Halo>
-            <h2 className="universe__title">Enter in the OKP4 universe</h2>
+            <div className="universe__sticky">
+              <h2 className="universe__title">Enter in the OKP4 universe</h2>
+              <div className="universe__illus">
+                <div
+                  className="universe__illus__item"
+                  data-item="dataverseapps"
+                  data-infinite="1"
+                >
+                  <StaticImage
+                    className="imgWrapper"
+                    src="../../../assets/images/illus/index_universe_dataverse_apps.png"
+                    alt="Dataverse Apps"
+                  />
+                </div>
+                <div
+                  className="universe__illus__item"
+                  data-item="dk"
+                  data-infinite="1"
+                >
+                  <StaticImage
+                    className="imgWrapper"
+                    src="../../../assets/images/illus/index_universe_dk.png"
+                    alt="Development kit"
+                  />
+                </div>
+                <div
+                  className="universe__illus__item"
+                  data-item="dataverse"
+                  data-infinite="1"
+                >
+                  <StaticImage
+                    className="imgWrapper"
+                    src="../../../assets/images/illus/index_universe_dataverse.png"
+                    alt="Blockchain"
+                  />
+                </div>
+                <div
+                  className="universe__illus__item is-active"
+                  data-item="blockchain"
+                  data-infinite="1"
+                >
+                  <StaticImage
+                    className="imgWrapper"
+                    src="../../../assets/images/illus/index_universe_blockchain.png"
+                    alt="Blockchain"
+                  />
+                </div>
+              </div>
+            </div>
             <div className="universe__items">
               <div
                 className="universe__item is-active"
@@ -66,52 +114,6 @@ const Universe = () => {
                   OKP4 Dataverse Gateways enable anyone to interact with, build
                   into, share and contribute and earn from the Dataverse.
                 </p>
-              </div>
-            </div>
-            <div className="universe__illus">
-              <div
-                className="universe__illus__item"
-                data-item="dataverseapps"
-                data-infinite="1"
-              >
-                <StaticImage
-                  className="imgWrapper"
-                  src="../../../assets/images/illus/index_universe_dataverse_apps.png"
-                  alt="Dataverse Apps"
-                />
-              </div>
-              <div
-                className="universe__illus__item"
-                data-item="dk"
-                data-infinite="1"
-              >
-                <StaticImage
-                  className="imgWrapper"
-                  src="../../../assets/images/illus/index_universe_dk.png"
-                  alt="Development kit"
-                />
-              </div>
-              <div
-                className="universe__illus__item"
-                data-item="dataverse"
-                data-infinite="1"
-              >
-                <StaticImage
-                  className="imgWrapper"
-                  src="../../../assets/images/illus/index_universe_dataverse.png"
-                  alt="Blockchain"
-                />
-              </div>
-              <div
-                className="universe__illus__item is-active"
-                data-item="blockchain"
-                data-infinite="1"
-              >
-                <StaticImage
-                  className="imgWrapper"
-                  src="../../../assets/images/illus/index_universe_blockchain.png"
-                  alt="Blockchain"
-                />
               </div>
             </div>
           </StickyUniverse>
@@ -310,11 +312,8 @@ const Universe = () => {
                       go-to-market fo data & services providers. An ecosystem of
                       Data Space governance tokens emerges, providing healthy
                       competition between them and steering open innovation to
-                      the next level.
-                      <br />
-                      <br />
-                      Real-life use cases and value flows into the network and
-                      the OKP4 public good continues to grow.
+                      the next level. Real-life use cases and value flows into
+                      the network and the OKP4 public good continues to grow.
                     </p>
                   </div>
                   <div className="roadmap__item__illus">

@@ -1,5 +1,6 @@
 body {
-  background: url("/images/grain.png"), $nightblue;
+  // background: url("/images/grain.png"), $nightblue;
+  background: $nightblue;
   background-repeat: repeat;
   background-size: contain;
   color: $white;
@@ -11,18 +12,12 @@ body {
   }
 }
 
-// #___gatsby {
-//   @include media-bp-down(lg) {
-//     border: 10px red solid;
-//   }
-// }
-
 main {
   position: relative;
 
-  @include media-bp-down(lg) {
-    overflow-x: clip;
-  }
+  // @include media-bp-down(lg) {
+  //   overflow-x: clip;
+  // }
 }
 
 .wrapper {

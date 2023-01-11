@@ -49,7 +49,7 @@ const Introduction = () => {
             <div className="introduction__cards__item__illus" data-infinite="1">
               <StaticImage
                 className="imgWrapper"
-                src="/src/assets/images/illus/index_intro_card_1.png"
+                src="../../../assets/images/illus/index_intro_card_1.png"
                 alt="Easy to build data spaces and applications"
               />
             </div>

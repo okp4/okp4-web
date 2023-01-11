@@ -17,7 +17,7 @@ main.homepage {
       position: relative;
 
       @include media-bp-down(lg) {
-        // overflow: hidden;
+        overflow: hidden;
       }
     }
 
@@ -141,7 +141,7 @@ main.homepage {
 
       @include media-bp-down(sm) {
         margin-top: 500px;
-        padding-bottom: 20px;
+        padding-bottom: 100px;
       }
 
       .landing__illus__wrapper {
@@ -151,7 +151,7 @@ main.homepage {
         left: 0;
         right: 0;
         width: 65%;
-        // max-width: 1295px;
+        max-width: 1295px;
         margin: 0 auto;
         // padding: 0 15px;
 
@@ -229,7 +229,8 @@ main.homepage {
     .strate__inner {
       padding: 120px 0 160px;
       // background-color: $darkblue;
-      background: url("/images/grain.png"), $darkblue;
+      // background: url("/images/grain.png"), $darkblue;
+      background: $darkblue;
       background-repeat: repeat;
       background-size: contain;
       overflow: hidden;
@@ -401,7 +402,8 @@ main.homepage {
         grid-column: span 6;
         border-radius: 20px;
         // background: $pushblue;
-        background: url("/images/grain.png"), $pushblue;
+        // background: url("/images/grain.png"), $pushblue;
+        background: $pushblue;
         background-repeat: repeat;
         background-size: contain;
       }
@@ -489,7 +491,12 @@ main.homepage {
       right: 0;
       bottom: 0;
       left: 0;
+      border-radius: 40px;
       overflow: hidden;
+
+      @include media-bp-down(lg) {
+        border-radius: 20px;
+      }
 
       .gradient__layer {
         position: absolute;
@@ -521,10 +528,11 @@ main.homepage {
 
     .video__player {
       display: flex;
+      position: relative;
       align-items: center;
       justify-content: center;
       width: 100%;
-      aspect-ratio: 16/9;
+      padding-bottom: 56%;
 
       @include media-bp-down(lg) {
         border-radius: 20px;
@@ -532,8 +540,17 @@ main.homepage {
       }
 
       .videoWrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
+
+        @include media-bp-down(lg) {
+          pointer-events: initial;
+          border-radius: 20px;
+          overflow: hidden;
+        }
 
         iframe {
           pointer-events: none;
@@ -560,9 +577,9 @@ main.homepage {
     }
     .strate__inner {
       padding: 120px 0 0;
-      // background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%);
-      background: url("/images/grain.png"),
-        linear-gradient(180deg, #012c4f 0%, #003a68 77.08%);
+      background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%);
+      // background: url("/images/grain.png"),
+      // linear-gradient(180deg, #012c4f 0%, #003a68 77.08%);
       background-repeat: repeat;
       background-size: contain;
       // @include bg-grain;
@@ -573,14 +590,21 @@ main.homepage {
       }
     }
 
+    .universe__sticky {
+      position: sticky;
+      top: 20px;
+      text-align: center;
+      width: 100%;
+    }
+
     .universe__title {
       display: block;
       // margin-bottom: 120px;
       text-align: center;
-
-      position: sticky;
-      top: 20px;
-      padding-bottom: calc(100vh - 400px);
+      // position: sticky;
+      // top: 20px;
+      // padding-bottom: calc(100vh - 400px);
+      // padding-bottom: 665px;
       margin-bottom: 70px;
 
       @include media-bp-down(lg) {
@@ -594,13 +618,20 @@ main.homepage {
     .universe__wrapper {
       display: block;
       width: 100%;
+      margin-bottom: 200px;
+
+      @include media-bp-down(lg) {
+        margin-bottom: 50px;
+      }
     }
 
     .universe__items {
       display: inline-block;
       width: 44%;
-      margin-top: calc(650px - 100vh);
-      padding-bottom: 200px;
+      // margin-top: calc(650px - 100vh);
+      margin-top: -300px;
+      // padding-bottom: 200px;
+      // padding-bottom: 100px;
       vertical-align: top;
 
       @include media-bp-down(lg) {
@@ -613,6 +644,10 @@ main.homepage {
         position: relative;
         width: 100%;
         margin-bottom: 140px;
+
+        &:last-of-type {
+          margin-bottom: 50px;
+        }
 
         @include media-bp-down(lg) {
           margin-bottom: 60px;
@@ -628,6 +663,11 @@ main.homepage {
           background-color: $white;
           text-align: center;
           transition: all 0.4s ease;
+
+          @include media-bp-down(lg) {
+            position: initial;
+            top: initial;
+          }
 
           span {
             color: $textblue;
@@ -759,15 +799,19 @@ main.homepage {
     }
 
     .universe__illus {
-      display: inline-flex;
-      position: sticky;
-      top: 170px;
-      margin-top: calc(400px - 100vh);
+      display: flex;
+      position: relative;
+      margin-left: auto;
+      margin-right: 0;
+      // display: inline-flex;
+      // position: sticky;
+      // top: 170px;
+      // margin-top: calc(400px - 100vh);
       align-items: flex-start;
       justify-content: flex-end;
       width: 55%;
       height: 100%;
-      min-height: 595px;
+      // min-height: 595px;
       vertical-align: top;
 
       @include media-bp-down(lg) {
@@ -786,7 +830,7 @@ main.homepage {
         // .imgWrapper {
         // }
 
-        &:nth-of-type(1) {
+        &:last-of-type {
           position: relative;
         }
 
@@ -811,7 +855,7 @@ main.homepage {
 
     .roadmap {
       width: 100%;
-      margin-top: 180px;
+      // margin-top: 180px;
 
       @include media-bp-down(lg) {
         margin-top: 80px;
@@ -894,10 +938,10 @@ main.homepage {
           .roadmap__item__layer {
             position: absolute;
             z-index: 999;
-            top: -10px;
-            right: -10px;
-            bottom: -10px;
-            left: -10px;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
             overflow: hidden;
             border-radius: 20px;
             opacity: 0;
@@ -1006,11 +1050,16 @@ main.homepage {
               // height: 210px;
               height: initial;
               min-height: initial;
-              border-radius: 15px;
-              overflow: hidden;
               padding-bottom: 55%;
 
+              .imgWrapper {
+                border-radius: 15px;
+                overflow: hidden;
+              }
+
               img {
+                border-radius: 15px;
+                overflow: hidden;
                 position: absolute;
                 bottom: 0;
                 top: initial;
@@ -1041,6 +1090,11 @@ main.homepage {
               width: 102%;
               height: 102%;
               object-fit: cover;
+
+              @include media-bp-down(lg) {
+                width: 100%;
+                height: 100%;
+              }
 
               img {
                 width: 100%;

@@ -170,7 +170,7 @@ const Landing = () => {
             className="imgWrapper--base"
             src="../../../assets/images/illus/index_landing.jpg"
             alt="OKP4 hero image"
-            load="eager"
+            loading="eager"
           />
           <div className="landing__illus__wrapper">
             {/* // Socle en bois */}
@@ -183,7 +183,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/1.png"
                 alt="OKP4 hero image"
-                load="eager"
+                loading="eager"
               />
             </div>
 
@@ -197,7 +197,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/2.png"
                 alt="OKP4 hero image"
-                load="eager"
+                loading="eager"
               />
             </div>
 
@@ -211,7 +211,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/3.png"
                 alt="OKP4 hero image"
-                load="eager"
+                loading="eager"
               />
             </div>
 
@@ -226,7 +226,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/5.png"
                 alt="OKP4 hero image"
-                load="eager"
+                loading="eager"
               />
             </div>
 
@@ -241,7 +241,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/9.png"
                 alt="OKP4 hero image"
-                load="eager"
+                loading="eager"
               />
             </div>
 
@@ -256,7 +256,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/7.png"
                 alt="OKP4 hero image"
-                load="eager"
+                loading="eager"
               />
             </div>
 
@@ -271,7 +271,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/8.png"
                 alt="OKP4 hero image"
-                load="eager"
+                loading="eager"
               />
             </div>
 
@@ -286,7 +286,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/6.png"
                 alt="OKP4 hero image"
-                load="eager"
+                loading="eager"
               />
             </div>
 
@@ -301,7 +301,7 @@ const Landing = () => {
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/4.png"
                 alt="OKP4 hero image"
-                load="eager"
+                loading="eager"
               />
             </div>
           </div>

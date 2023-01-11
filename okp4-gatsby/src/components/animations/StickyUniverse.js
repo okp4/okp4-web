@@ -3,6 +3,8 @@ import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 
 const StickyUniverse = ({ children, classContainer }) => {
   const divRef = useRef(null);
+  var scrollPos = 0;
+  var scrollDirection = "down";
 
   const monitorSection = () => {
     var intersectionAppear;
@@ -37,17 +39,26 @@ const StickyUniverse = ({ children, classContainer }) => {
     });
   };
 
-  const handleScroll = () => {
+  const handleScroll = (event) => {
+    if (document.body.getBoundingClientRect().top > scrollPos) {
+      scrollDirection = "up";
+    } else {
+      scrollDirection = "down";
+    }
+    scrollPos = document.body.getBoundingClientRect().top;
+
     var firstActive = divRef.current.querySelector(
       ".universe__item.is-first-active"
     );
 
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
-    const halfScreen = windowHeight / 2;
+    const halfScreen = windowHeight * (3 / 5);
+    let targetScroll = halfScreen;
+    if (scrollDirection == "up") targetScroll = windowHeight * (2 / 5);
     if (firstActive) {
       const rect = firstActive.getBoundingClientRect();
-      if (rect.top < halfScreen) {
+      if (rect.top < targetScroll) {
         firstActive.classList.remove("is-first-active");
         firstActive.classList.add("is-active");
         let illusSelector =
@@ -65,7 +76,7 @@ const StickyUniverse = ({ children, classContainer }) => {
         if (item.classList.contains("is-active")) return;
         let rect = item.getBoundingClientRect();
 
-        if (rect.top < halfScreen && rect.top > halfScreen - 100) {
+        if (rect.top < targetScroll && rect.top > targetScroll - 100) {
           universeItems.forEach((oldItem) => {
             if (oldItem.classList.contains("is-active")) {
               oldItem.classList.remove("is-active");
