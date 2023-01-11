@@ -86,12 +86,15 @@ const Strate = ({ children, classContainer }) => {
         divRef.current.dataset.end = endScale;
 
         setStickyPosition();
-        monitorSection();
-        // const animationFrame = requestAnimationFrame(perspective);
+        // Intersection Observer approach
+        // monitorSection();
 
-        // return () => {
-        //   cancelAnimationFrame(animationFrame);
-        // };
+        // Classic approach
+        rafId = requestAnimationFrame(perspective);
+
+        return () => {
+          cancelAnimationFrame(rafId);
+        };
       }, 3000);
     }
   });

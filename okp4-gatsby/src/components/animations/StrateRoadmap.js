@@ -95,12 +95,16 @@ const StrateRoadmap = ({
         divRef.current.dataset.height = divDimensions.height;
 
         setStickyPosition();
-        monitorSection();
-        // const animationFrame = requestAnimationFrame(perspective);
 
-        // return () => {
-        //   cancelAnimationFrame(animationFrame);
-        // };
+        //IntersectionObserver Approach
+        // monitorSection();
+
+        //Classic Approach
+        rafId = requestAnimationFrame(perspective);
+
+        return () => {
+          cancelAnimationFrame(rafId);
+        };
       }
     }, 3000);
   });

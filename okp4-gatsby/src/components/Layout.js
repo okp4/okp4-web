@@ -6,11 +6,11 @@ import Footer from "./Footer";
 import "../assets/styles/index.scss";
 
 const Layout = ({ children, location }) => {
-  useEffect(() => {
-    setTimeout(function () {
-      PerformanceManager.monitorInfiniteAnimations();
-    }, 1000);
-  });
+  // useEffect(() => {
+  //   setTimeout(function () {
+  //     PerformanceManager.monitorInfiniteAnimations();
+  //   }, 1000);
+  // });
 
   return (
     <>

@@ -105,7 +105,16 @@ const StickyUniverse = ({ children, classContainer }) => {
     if (ResponsiveManager.isWindowSmaller("lg")) {
       setIllusMobile();
     }
-    monitorSection();
+
+    //IntersectionObserver Approach
+    // monitorSection();
+
+    //Classic Approach
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   });
 
   return (

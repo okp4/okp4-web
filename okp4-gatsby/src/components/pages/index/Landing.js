@@ -70,27 +70,28 @@ const Landing = () => {
 
     // if (ResponsiveManager.isWindowLarger("lg")) {
     divRef.current.querySelectorAll("[data-parallax]").forEach((elem) => {
-      // if (ScrollManager.isIntersectingViewport(divFadeIn.current)) {
-      var ratio = ScrollManager.getIntersectionRatio(divFadeIn.current);
-      var transformRatio;
-      var parallaxEnd = parseInt(elem.dataset.parallaxend);
+      if (ScrollManager.isIntersectingViewport(divFadeIn.current)) {
+        var ratio = ScrollManager.getIntersectionRatio(divFadeIn.current);
+        var transformRatio;
+        var parallaxEnd = parseInt(elem.dataset.parallaxend);
 
-      if (ResponsiveManager.isWindowSmaller("lg")) {
-        ratio = (ScrollManager.getIntersectionRatio(divRef.current) - 0.5) * 2;
-        parallaxEnd = parallaxEnd * -1;
-        // console.log(ratio);
-        // parallaxEnd = parallaxEnd;
-        // const scrollY = window.scrollY;
-        // const distance = 1000;
-        // ratio = scrollY / distance;
-        // if (ratio > 1) ratio = 1;
+        if (ResponsiveManager.isWindowSmaller("lg")) {
+          ratio =
+            (ScrollManager.getIntersectionRatio(divRef.current) - 0.5) * 2;
+          parallaxEnd = parallaxEnd * -1;
+          // console.log(ratio);
+          // parallaxEnd = parallaxEnd;
+          // const scrollY = window.scrollY;
+          // const distance = 1000;
+          // ratio = scrollY / distance;
+          // if (ratio > 1) ratio = 1;
+        }
+
+        transformRatio = (ratio.toFixed(4) * parallaxEnd).toFixed(4);
+
+        var transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
+        elem.style.transform = transformRatioCss;
       }
-
-      transformRatio = (ratio.toFixed(4) * parallaxEnd).toFixed(4);
-
-      var transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
-      elem.style.transform = transformRatioCss;
-      // }
     });
     // }
 
@@ -112,14 +113,23 @@ const Landing = () => {
     divRef.current.dataset.raf = 0;
 
     setTimeout(function () {
-      monitorSection();
+      // Intersection Observer approach
+      // monitorSection();
+
+      // Classic approach
+      rafId = requestAnimationFrame(perspective);
+      if (ResponsiveManager.isWindowLarger("lg")) {
+        window.addEventListener("scroll", scrollStarted);
+      }
+      return () => {
+        cancelAnimationFrame(rafId);
+
+        if (ResponsiveManager.isWindowLarger("lg")) {
+          window.removeEventListener("scroll", scrollStarted);
+        }
+      };
     }, 1000);
   });
-
-  const isSecondItem = (index, total) => {
-    if (index === total) return;
-    if ((index + 1) % 2 === 0) return <br />;
-  };
 
   return (
     <section className="landing" ref={divRef}>
