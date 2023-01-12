@@ -24,7 +24,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "static/favicon.png",
+        icon: "static/favicon-blue.png",
         name: `OKP4`,
         short_name: `OKP4`,
         start_url: `/`,

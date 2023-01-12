@@ -36,7 +36,7 @@ footer.footer {
         width: 37%;
         margin-right: 33px;
 
-        @include media-bp-down(lg) {
+        @include media-bp-down(md) {
           display: block;
           width: 100%;
           margin-right: 0;
@@ -88,15 +88,27 @@ footer.footer {
         transition: background 0.25s ease;
 
         @include media-bp-down(lg) {
+          display: inline-block;
+          width: calc(50% - 10px);
+          margin-right: 0;
+          margin-bottom: 16px;
+          padding: 25px;
+          vertical-align: top;
+
+          &:first-of-type {
+            margin-right: 18px;
+          }
+        }
+
+        @include media-bp-down(md) {
           display: block;
           width: 100%;
           height: initial;
           min-height: 250px;
-          padding: 25px;
           margin-bottom: 15px;
         }
 
-        @include media-bp-up(lg) {
+        @include media-bp-up(md) {
           &:hover {
             background: url("/images/grain.png"),
               linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
@@ -127,7 +139,7 @@ footer.footer {
           line-height: 27px;
           transition: color 0.25s ease;
 
-          @include media-bp-down(lg) {
+          @include media-bp-down(md) {
             max-width: 100%;
           }
         }
@@ -140,7 +152,7 @@ footer.footer {
           height: auto;
           transition: transform 0.25s ease;
 
-          @include media-bp-down(lg) {
+          @include media-bp-down(md) {
             right: 25px;
             bottom: 25px;
             width: 13px;
@@ -163,6 +175,7 @@ footer.footer {
 
         @include media-bp-down(lg) {
           display: block;
+          width: 100%;
         }
 
         .docs__content__item {
@@ -298,7 +311,7 @@ footer.footer {
 
       @include media-bp-down(lg) {
         top: initial;
-        height: 145px;
+        // height: 145px;
       }
 
       .imgWrapper {
@@ -315,15 +328,19 @@ footer.footer {
         object-fit: cover;
 
         @include media-bp-down(lg) {
-          top: initial;
-          object-fit: contain !important;
-          bottom: -15px;
+          // top: initial;
+          // object-fit: contain !important;
+          // bottom: -15px;
         }
       }
     }
 
     .wrapper {
       position: relative;
+
+      @include media-bp-down(lg) {
+        max-width: 405px;
+      }
     }
 
     .footer__main__top {

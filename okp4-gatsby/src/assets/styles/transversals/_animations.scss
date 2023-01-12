@@ -4,7 +4,7 @@
   }
 
   25% {
-    transform: translate3d(0, 2px, 0) rotate(-1deg);
+    transform: translate3d(0, 2px, 0) rotate(-3deg);
   }
 
   50% {
@@ -12,7 +12,7 @@
   }
 
   75% {
-    transform: translate3d(0, 2px, 0) rotate(1deg);
+    transform: translate3d(0, 2px, 0) rotate(3deg);
   }
 
   100% {
@@ -20,6 +20,6 @@
   }
 }
 
-[data-infinite]:not(.is-in-view) {
-  animation: none !important;
-}
+// [data-infinite]:not(.is-in-view) {
+//   animation: none !important;
+// }

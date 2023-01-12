@@ -23,9 +23,13 @@ main {
 .wrapper {
   display: block;
   width: 100%;
-  max-width: 1295px;
+  max-width: 1325px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 30px;
+
+  @include media-bp-down(md) {
+    padding: 0 15px;
+  }
 }
 
 .grid {

@@ -120,37 +120,60 @@ main.homepage {
 
     .landing__illus {
       position: relative;
-      top: -50px;
+      margin-top: 200px;
       width: 100%;
       transition: opacity 0.4s ease;
       pointer-events: none;
-      padding-bottom: 200vh;
+      // padding-bottom: 200vh;
+      padding-bottom: 150px;
 
       @include media-bp-down(lg) {
         position: relative;
         // top: initial;
-        margin-top: 350px;
+        // margin-top: 350px;
         // left: -20vw;
         // width: 130vw;
-        left: 0;
-        width: 100%;
+        // left: 0;
+        // width: 100%;
         // padding-bottom: 50vh;
-        padding-bottom: 100px;
+        margin-top: 350px;
+        padding-bottom: 50px;
         // overflow: hidden;
       }
 
       @include media-bp-down(sm) {
-        margin-top: 500px;
-        padding-bottom: 100px;
+        margin-top: 400px;
+        padding-bottom: 0;
+      }
+
+      .imgWrapper--base {
+        opacity: 0;
+        pointer-events: none;
+        width: 100%;
+
+        @include media-bp-down(lg) {
+          position: relative;
+          top: initial;
+          width: 130vw;
+          // opacity: 1;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
 
       .landing__illus__wrapper {
         display: block;
-        position: fixed;
-        top: 35vh;
+        // position: fixed;
+        position: absolute;
+        // top: 35vh;
+        top: 0;
         left: 0;
-        right: 0;
-        width: 65%;
+        // right: 0;
+        width: 100%;
+        height: 100%;
         max-width: 1295px;
         margin: 0 auto;
         // padding: 0 15px;
@@ -164,24 +187,6 @@ main.homepage {
           top: 0;
           width: 100%;
           left: 0;
-        }
-      }
-
-      .imgWrapper--base {
-        opacity: 0;
-        pointer-events: none;
-        width: 65%;
-
-        @include media-bp-down(lg) {
-          position: relative;
-          top: initial;
-          width: 130vw;
-          // opacity: 1;
-        }
-
-        img {
-          width: 100%;
-          height: auto;
         }
       }
 
@@ -206,7 +211,7 @@ main.homepage {
 
     &:not(.is-active) {
       .landing__illus {
-        opacity: 0.1;
+        opacity: 0;
 
         @include media-bp-down(lg) {
           opacity: 1;
@@ -250,9 +255,15 @@ main.homepage {
       text-align: center;
 
       @include media-bp-down(lg) {
+        width: 60%;
+        max-width: 60%;
+      }
+
+      @include media-bp-down(md) {
         width: 100%;
         max-width: 100%;
         margin: 0 0 35px;
+        // margin: 0 0 35px;
       }
     }
 
@@ -265,10 +276,15 @@ main.homepage {
       text-align: center;
 
       @include media-bp-down(lg) {
+        width: 80%;
+        max-width: 80%;
+        font-size: 18px;
+      }
+
+      @include media-bp-down(md) {
         width: 100%;
         max-width: 100%;
         margin: 0 0 15px;
-        font-size: 18px;
       }
 
       b {
@@ -332,6 +348,11 @@ main.homepage {
         // background-size: contain;
 
         @include media-bp-down(lg) {
+          grid-column: span 2;
+          height: 330px;
+        }
+
+        @include media-bp-down(md) {
           grid-column: span 6;
           width: auto;
           height: 400px;
@@ -350,6 +371,10 @@ main.homepage {
             width: 290px;
 
             @include media-bp-down(lg) {
+              width: 200px;
+            }
+
+            @include media-bp-down(md) {
               width: 250px;
             }
 
@@ -373,6 +398,13 @@ main.homepage {
         .text {
           color: $textblue;
           text-align: center;
+          @include media-bp-down(lg) {
+            max-width: 70%;
+          }
+
+          @include media-bp-down(md) {
+            max-width: 100%;
+          }
         }
 
         .title {
@@ -381,9 +413,15 @@ main.homepage {
         }
 
         &:nth-of-type(2) {
-          .imgWrapper {
+          .introduction__cards__item__illus {
+            animation-delay: 1.5s;
+            animation-direction: reverse;
+          }
+        }
+
+        &:nth-of-type(3) {
+          .introduction__cards__item__illus {
             animation-delay: 2s;
-            animation-fill-mode: backwards;
           }
         }
       }
@@ -461,9 +499,29 @@ main.homepage {
         padding: 40px 75px 40px 40px;
 
         @include media-bp-down(lg) {
-          display: block;
-          padding: 30px;
+          flex-direction: column;
+          padding: 27px;
           height: initial;
+          min-height: 345px;
+          grid-column: span 3;
+
+          .introduction__pushs__item__texts {
+            display: flex;
+            flex-direction: column;
+
+            .title {
+              max-width: 90%;
+              margin-bottom: auto;
+              margin-top: 0;
+            }
+          }
+        }
+
+        @include media-bp-down(md) {
+          flex-direction: row;
+          min-height: initial;
+          display: block;
+          grid-column: span 6;
         }
 
         .introduction__pushs__item__illus {
@@ -471,7 +529,7 @@ main.homepage {
           margin-right: 60px;
           animation-delay: 3s;
           animation-direction: reverse;
-          animation: floating-image 8s linear infinite;
+          animation: floating-image 8s linear infinite 1s reverse;
 
           @include media-bp-down(lg) {
             margin-bottom: 30px;
@@ -515,13 +573,14 @@ main.homepage {
 
   .video {
     .strate__inner {
-      background: #000000;
+      background: $darkblue;
+      padding: 5%;
       overflow: hidden;
 
       @include media-bp-down(lg) {
         margin-top: -50px;
         background: $nightblue;
-        padding: 65px 15px;
+        padding: 80px 30px;
         // border-radius: none;
       }
     }
@@ -533,6 +592,7 @@ main.homepage {
       justify-content: center;
       width: 100%;
       padding-bottom: 56%;
+      margin: auto auto;
 
       @include media-bp-down(lg) {
         border-radius: 20px;
@@ -545,7 +605,7 @@ main.homepage {
         left: 0;
         width: 100%;
         height: 100%;
-        border-radius: 40px;
+        border-radius: 20px;
         overflow: hidden;
 
         @include media-bp-down(lg) {
@@ -555,7 +615,7 @@ main.homepage {
         }
 
         iframe {
-          pointer-events: none;
+          // pointer-events: none;
           width: 100%;
           height: 100%;
 
@@ -597,6 +657,10 @@ main.homepage {
       top: 20px;
       text-align: center;
       width: 100%;
+
+      @include media-bp-down(lg) {
+        position: initial;
+      }
     }
 
     .universe__title {
@@ -649,11 +713,19 @@ main.homepage {
 
         &:last-of-type {
           margin-bottom: 50px;
+
+          @include media-bp-down(lg) {
+            margin-bottom: 0;
+          }
         }
 
         @include media-bp-down(lg) {
-          margin-bottom: 60px;
+          margin-bottom: 100px;
           transition: opacity 0.5s ease;
+        }
+
+        @include media-bp-down(md) {
+          margin-bottom: 75px;
         }
 
         .tag {
@@ -689,9 +761,14 @@ main.homepage {
           line-height: 60px;
 
           @include media-bp-down(lg) {
+            max-width: 50%;
             font-size: 30px;
             line-height: 1.5;
             margin-bottom: 15px;
+          }
+
+          @include media-bp-down(md) {
+            max-width: 80%;
           }
         }
 
@@ -702,6 +779,14 @@ main.homepage {
           transition: all 0.4s ease;
           color: $white-80;
           line-height: 1.5;
+
+          @include media-bp-down(lg) {
+            max-width: 45%;
+          }
+
+          @include media-bp-down(md) {
+            max-width: 90%;
+          }
         }
 
         .universe__illus__item {
@@ -711,7 +796,22 @@ main.homepage {
           animation: floating-image 8s linear infinite;
 
           @include media-bp-down(lg) {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 30px;
+            max-width: 190px;
             transition: opacity 0.5s ease;
+          }
+
+          @include media-bp-down(md) {
+            bottom: initial;
+            top: 0;
+            right: 0;
+            max-width: 100px;
           }
 
           &:nth-of-type(1) {
@@ -811,23 +911,29 @@ main.homepage {
       // margin-top: calc(400px - 100vh);
       align-items: flex-start;
       justify-content: flex-end;
-      width: 55%;
+      // width: 55%;
+      width: 40%;
       height: 100%;
       // min-height: 595px;
       vertical-align: top;
 
       @include media-bp-down(lg) {
         display: none;
-        width: 100%;
+        width: 20%;
       }
 
       .universe__illus__item {
         position: absolute;
         top: 0;
         width: 100%;
-        max-width: 500px;
+        // max-width: 500px;
+        max-width: 400px;
         transition: opacity 0.15s ease;
         animation: floating-image 8s linear infinite;
+
+        @include media-bp-down(xl) {
+          max-width: 300px;
+        }
 
         // .imgWrapper {
         // }

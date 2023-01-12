@@ -47,7 +47,7 @@ const Landing = () => {
       let percentTravelled = scrollY / distance;
       if (percentTravelled > 1) percentTravelled = 1;
 
-      if (percentTravelled < 0.1) percentTravelled = 0.1;
+      if (percentTravelled < 0) percentTravelled = 0;
       divFadeIn.current.style.opacity = percentTravelled;
     }
   };
@@ -76,11 +76,11 @@ const Landing = () => {
         var parallaxEnd = parseInt(elem.dataset.parallaxend);
 
         if (ResponsiveManager.isWindowSmaller("lg")) {
-          ratio =
-            (ScrollManager.getIntersectionRatio(divRef.current) - 0.5) * 2;
-          parallaxEnd = parallaxEnd * -1;
+          // ratio =
+          //   (ScrollManager.getIntersectionRatio(divRef.current) - 0.5) * 2;
+          // parallaxEnd = parallaxEnd * -1;
           // console.log(ratio);
-          // parallaxEnd = parallaxEnd;
+          parallaxEnd = parallaxEnd / 2;
           // const scrollY = window.scrollY;
           // const distance = 1000;
           // ratio = scrollY / distance;
@@ -175,7 +175,7 @@ const Landing = () => {
           </p>
         </div>
         <div className="landing__illus" ref={divFadeIn}>
-          {/* // Base Image used for dimensions (hidden opacity 0) */}
+          {/* // Base Image used for dimensions (hidden : opacity 0) */}
           <StaticImage
             className="imgWrapper--base"
             src="../../../assets/images/illus/index_landing.jpg"
@@ -183,8 +183,62 @@ const Landing = () => {
             loading="eager"
           />
           <div className="landing__illus__wrapper">
-            {/* // Socle en bois */}
+            {/* 4 calques */}
             <div
+              className="parallaxWrapper"
+              data-parallax="1"
+              data-parallaxend="200"
+            >
+              <StaticImage
+                className="imgWrapper"
+                src="../../../assets/images/illus/index_landing_sprites/calque-1.png"
+                alt="OKP4 hero image"
+                loading="eager"
+              />
+            </div>
+
+            <div
+              className="parallaxWrapper"
+              // data-parallax="1"
+              // data-parallaxend="-100"
+            >
+              <StaticImage
+                className="imgWrapper"
+                src="../../../assets/images/illus/index_landing_sprites/calque-2.png"
+                alt="OKP4 hero image"
+                loading="eager"
+              />
+            </div>
+
+            <div
+              className="parallaxWrapper"
+              data-parallax="1"
+              data-parallaxend="200"
+            >
+              <StaticImage
+                className="imgWrapper"
+                src="../../../assets/images/illus/index_landing_sprites/calque-3.png"
+                alt="OKP4 hero image"
+                loading="eager"
+              />
+            </div>
+
+            <div
+              className="parallaxWrapper"
+              data-parallax="1"
+              data-parallaxend="350"
+            >
+              <StaticImage
+                className="imgWrapper"
+                src="../../../assets/images/illus/index_landing_sprites/calque-4.png"
+                alt="OKP4 hero image"
+                loading="eager"
+              />
+            </div>
+
+            {/* 9 calques : tous isolés */}
+            {/* // Socle en bois */}
+            {/* <div
               className="parallaxWrapper"
               data-parallax="1"
               data-parallaxend="-400"
@@ -195,10 +249,10 @@ const Landing = () => {
                 alt="OKP4 hero image"
                 loading="eager"
               />
-            </div>
+            </div> */}
 
             {/* Glow lumière */}
-            <div
+            {/* <div
               className="parallaxWrapper"
               data-parallax="1"
               data-parallaxend="-400"
@@ -209,10 +263,10 @@ const Landing = () => {
                 alt="OKP4 hero image"
                 loading="eager"
               />
-            </div>
+            </div> */}
 
             {/* Téléphone */}
-            <div
+            {/* <div
               className="parallaxWrapper"
               data-parallax="1"
               data-parallaxend="-400"
@@ -223,10 +277,10 @@ const Landing = () => {
                 alt="OKP4 hero image"
                 loading="eager"
               />
-            </div>
+            </div> */}
 
             {/* Computation */}
-            <div
+            {/* <div
               className="parallaxWrapper"
               data-parallax="1"
               // data-parallaxend="-300"
@@ -238,10 +292,10 @@ const Landing = () => {
                 alt="OKP4 hero image"
                 loading="eager"
               />
-            </div>
+            </div> */}
 
             {/* Workflow engine */}
-            <div
+            {/* <div
               className="parallaxWrapper"
               data-parallax="1"
               // data-parallaxend="-210"
@@ -253,10 +307,10 @@ const Landing = () => {
                 alt="OKP4 hero image"
                 loading="eager"
               />
-            </div>
+            </div> */}
 
             {/* Identity */}
-            <div
+            {/* <div
               className="parallaxWrapper"
               data-parallax="1"
               // data-parallaxend="-320"
@@ -268,10 +322,10 @@ const Landing = () => {
                 alt="OKP4 hero image"
                 loading="eager"
               />
-            </div>
+            </div> */}
 
             {/* Storage */}
-            <div
+            {/* <div
               className="parallaxWrapper"
               data-parallax="1"
               // data-parallaxend="-400"
@@ -283,10 +337,10 @@ const Landing = () => {
                 alt="OKP4 hero image"
                 loading="eager"
               />
-            </div>
+            </div> */}
 
             {/* Data */}
-            <div
+            {/* <div
               className="parallaxWrapper"
               data-parallax="1"
               // data-parallaxend="-270"
@@ -298,10 +352,10 @@ const Landing = () => {
                 alt="OKP4 hero image"
                 loading="eager"
               />
-            </div>
+            </div> */}
 
             {/* Algorithm */}
-            <div
+            {/* <div
               className="parallaxWrapper"
               data-parallax="1"
               // data-parallaxend="-320"
@@ -313,7 +367,7 @@ const Landing = () => {
                 alt="OKP4 hero image"
                 loading="eager"
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
