@@ -1148,8 +1148,34 @@ main.homepage {
           }
 
           .roadmap__item__illus {
+            position: relative;
             width: 40%;
             min-height: 100%;
+
+            .roadmap__item__date {
+              display: flex;
+              position: absolute;
+              z-index: 2;
+              border-radius: 10px;
+              top: 40px;
+              right: 45px;
+              align-items: center;
+              justify-content: center;
+              width: initial;
+              height: initial;
+              background: $white;
+              padding: 10px 20px;
+
+              @include media-bp-down(lg) {
+                top: 15px;
+                right: 18px;
+              }
+
+              span {
+                font-weight: 600;
+                color: $textblue;
+              }
+            }
 
             @include media-bp-down(lg) {
               position: relative;

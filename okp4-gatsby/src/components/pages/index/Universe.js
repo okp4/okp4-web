@@ -167,6 +167,9 @@ const Universe = () => {
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
+                    <div className="roadmap__item__date">
+                      <span>2018 - 2022</span>
+                    </div>
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
                       src="../../../assets/images/illus/index_roadmap_1.jpg"
@@ -219,6 +222,9 @@ const Universe = () => {
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
+                    <div className="roadmap__item__date">
+                      <span>Q4 2022 – Q2 2022</span>
+                    </div>
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
                       src="../../../assets/images/illus/index_roadmap_2.jpg"
@@ -267,6 +273,9 @@ const Universe = () => {
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
+                    <div className="roadmap__item__date">
+                      <span>Q3 2022</span>
+                    </div>
                     <StaticImage
                       className="imgWrapper  imgWrapper--desktop"
                       src="../../../assets/images/illus/index_roadmap_3.jpg"
@@ -317,6 +326,9 @@ const Universe = () => {
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
+                    <div className="roadmap__item__date">
+                      <span>Q2 2023</span>
+                    </div>
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
                       src="../../../assets/images/illus/index_roadmap_4.jpg"
@@ -364,6 +376,9 @@ const Universe = () => {
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
+                    <div className="roadmap__item__date">
+                      <span>Q1 2024</span>
+                    </div>
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
                       src="../../../assets/images/illus/index_roadmap_5.jpg"
