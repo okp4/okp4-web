@@ -33,19 +33,22 @@ const StrateRoadmap = ({
   };
 
   const setStickyPosition = () => {
-    if (ResponsiveManager.isWindowLarger("md")) {
-      // let divDimensions = divRef.current.getBoundingClientRect();
-      let topPositionSticky = parseInt(scaleTopSticky);
-      let topPositionCss = topPositionSticky + "px";
-      divRef.current.style.top = topPositionCss;
-    } else {
-      const windowHeight =
-        window.innerHeight || document.documentElement.clientHeight;
-      let divDimensions = divRef.current.getBoundingClientRect();
-      let topPositionSticky = -divDimensions.height + windowHeight;
-      let topPositionCss = topPositionSticky + "px";
-      divRef.current.style.top = topPositionCss;
+    // if (ResponsiveManager.isWindowLarger("md")) {
+    // let divDimensions = divRef.current.getBoundingClientRect();
+    let topPositionSticky = parseInt(scaleTopSticky);
+    if (ResponsiveManager.isWindowSmaller("md")) {
+      topPositionSticky = topPositionSticky / 2;
     }
+    let topPositionCss = topPositionSticky + "px";
+    divRef.current.style.top = topPositionCss;
+    // } else {
+    //   const windowHeight =
+    //     window.innerHeight || document.documentElement.clientHeight;
+    //   let divDimensions = divRef.current.getBoundingClientRect();
+    //   let topPositionSticky = -divDimensions.height + windowHeight;
+    //   let topPositionCss = topPositionSticky + "px";
+    //   divRef.current.style.top = topPositionCss;
+    // }
   };
 
   const perspective = () => {
@@ -83,29 +86,29 @@ const StrateRoadmap = ({
 
   useEffect(() => {
     setTimeout(function () {
-      if (ResponsiveManager.isWindowLarger("md")) {
-        var divDimensions = divRef.current.getBoundingClientRect();
-        var divAbsoluteTop = divDimensions.top + window.scrollY;
-        // var startScale = divAbsoluteTop + divDimensions.height - windowHeight;
-        var startScale = divAbsoluteTop - scaleTopSticky;
-        var endScale = divAbsoluteTop - scaleTopSticky + divDimensions.height;
-        divRef.current.dataset.top = divAbsoluteTop;
-        divRef.current.dataset.start = startScale;
-        divRef.current.dataset.end = endScale;
-        divRef.current.dataset.height = divDimensions.height;
+      // if (ResponsiveManager.isWindowLarger("md")) {
+      var divDimensions = divRef.current.getBoundingClientRect();
+      var divAbsoluteTop = divDimensions.top + window.scrollY;
+      // var startScale = divAbsoluteTop + divDimensions.height - windowHeight;
+      var startScale = divAbsoluteTop - scaleTopSticky;
+      var endScale = divAbsoluteTop - scaleTopSticky + divDimensions.height;
+      divRef.current.dataset.top = divAbsoluteTop;
+      divRef.current.dataset.start = startScale;
+      divRef.current.dataset.end = endScale;
+      divRef.current.dataset.height = divDimensions.height;
 
-        setStickyPosition();
+      setStickyPosition();
 
-        //IntersectionObserver Approach
-        // monitorSection();
+      //IntersectionObserver Approach
+      // monitorSection();
 
-        //Classic Approach
-        rafId = requestAnimationFrame(perspective);
+      //Classic Approach
+      rafId = requestAnimationFrame(perspective);
 
-        return () => {
-          cancelAnimationFrame(rafId);
-        };
-      }
+      return () => {
+        cancelAnimationFrame(rafId);
+      };
+      // }
     }, 3000);
   });
 

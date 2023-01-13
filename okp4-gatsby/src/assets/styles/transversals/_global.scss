@@ -9,6 +9,8 @@ body {
 
   &.scroll-disabled {
     overflow: hidden;
+    width: 100vw;
+    height: 100vh;
   }
 }
 

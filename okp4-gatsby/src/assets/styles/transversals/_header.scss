@@ -112,9 +112,12 @@ header.header {
         position: absolute;
         bottom: 40px;
         left: 0;
-        width: 100vw;
+        right: 0;
+        width: 100%;
+        max-width: 405px;
         padding: 0 25px;
         margin-bottom: 0;
+        margin: 0 auto;
       }
 
       .header__lang {

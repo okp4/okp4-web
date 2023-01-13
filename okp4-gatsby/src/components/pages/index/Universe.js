@@ -136,7 +136,7 @@ const Universe = () => {
             <div className="roadmap__items">
               <StrateRoadmap
                 classContainer={"roadmap__item"}
-                scaleTopSticky="30"
+                scaleTopSticky="20"
                 scaleMax="0.2"
               >
                 <div className="roadmap__item__layer"></div>
@@ -185,7 +185,7 @@ const Universe = () => {
               </StrateRoadmap>
               <StrateRoadmap
                 classContainer={"roadmap__item"}
-                scaleTopSticky="60"
+                scaleTopSticky="45"
                 scaleMax="0.15"
               >
                 <div className="roadmap__item__layer"></div>
@@ -199,22 +199,19 @@ const Universe = () => {
                     </p>
                     <p className="description">
                       The Nemeton era is the bootstrapping era. This is when the
-                      ideas & concepts are expressed to the public.
+                      ideas & concepts are expressed to the public.This is when
+                      the first validators join together to power the network,
+                      test its limits and contribute to its developments.
                       <br />
-                      This is when the first validators join together to power
-                      the network, test its limits and contribute to its
-                      developments.
                       <br />
                       This is when the first builders come to explore Data Space
                       possibilities and opportunities for them and their
                       communities, resulting in the first OKP4-powered
                       decentralized use cases operated by communities of
-                      pioneers.
-                      <br />
-                      This is where the community unites around the vision of a
-                      new generation of applications enabled by trust-minimized
-                      sharing of digital resources. Nemeton becomes the host for
-                      existing use cases.
+                      pioneers. This is where the community unites around the
+                      vision of a new generation of applications enabled by
+                      trust-minimized sharing of digital resources. Nemeton
+                      becomes the host for existing use cases.
                       <br />
                       <br />
                       The Nemeton era results in a stable, battle-tested
@@ -240,7 +237,7 @@ const Universe = () => {
               </StrateRoadmap>
               <StrateRoadmap
                 classContainer={"roadmap__item"}
-                scaleTopSticky="90"
+                scaleTopSticky="70"
                 scaleMax="0.1"
               >
                 <div className="roadmap__item__layer"></div>
@@ -291,7 +288,7 @@ const Universe = () => {
               </StrateRoadmap>
               <StrateRoadmap
                 classContainer={"roadmap__item"}
-                scaleTopSticky="120"
+                scaleTopSticky="95"
                 scaleMax="0.05"
               >
                 <div className="roadmap__item__layer"></div>

@@ -48,6 +48,9 @@ const Landing = () => {
       if (percentTravelled > 1) percentTravelled = 1;
 
       if (percentTravelled < 0) percentTravelled = 0;
+      if (ResponsiveManager.isWindowSmaller("lg")) {
+        if (percentTravelled < 0.1) percentTravelled = 0.1;
+      }
       divFadeIn.current.style.opacity = percentTravelled;
     }
   };
@@ -118,15 +121,15 @@ const Landing = () => {
 
       // Classic approach
       rafId = requestAnimationFrame(perspective);
-      if (ResponsiveManager.isWindowLarger("lg")) {
-        window.addEventListener("scroll", scrollStarted);
-      }
+      // if (ResponsiveManager.isWindowLarger("lg")) {
+      window.addEventListener("scroll", scrollStarted);
+      // }
       return () => {
         cancelAnimationFrame(rafId);
 
-        if (ResponsiveManager.isWindowLarger("lg")) {
-          window.removeEventListener("scroll", scrollStarted);
-        }
+        // if (ResponsiveManager.isWindowLarger("lg")) {
+        window.removeEventListener("scroll", scrollStarted);
+        // }
       };
     }, 1000);
   });

@@ -104,7 +104,7 @@ footer.footer {
           display: block;
           width: 100%;
           height: initial;
-          min-height: 250px;
+          min-height: 200px;
           margin-bottom: 15px;
         }
 
@@ -435,11 +435,12 @@ footer.footer {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      margin-bottom: 200px;
+      margin-bottom: 170px;
 
       @include media-bp-down(lg) {
         width: 100%;
         display: block;
+        margin-bottom: 40px;
       }
 
       .footer__main__bottom__newsletter {
@@ -498,6 +499,10 @@ footer.footer {
             }
           }
 
+          #sib-form-container {
+            position: relative;
+          }
+
           form {
             display: flex;
             align-items: center;
@@ -533,6 +538,10 @@ footer.footer {
               input {
                 padding: 0 20px;
                 background: $whitebg;
+                font-family: $font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1;
 
                 @include media-bp-down(lg) {
                   text-align: center;
@@ -549,11 +558,16 @@ footer.footer {
                 justify-content: center;
                 padding: 18px 26px;
                 background-color: $orange;
+                border: none;
                 border-radius: 10px;
                 color: $white !important;
                 text-align: center;
                 cursor: pointer;
                 transition: opacity 0.25s ease;
+                font-family: $font;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 1;
 
                 @include media-bp-up(lg) {
                   &:hover {
@@ -574,6 +588,7 @@ footer.footer {
                 }
 
                 span.icon svg {
+                  margin-left: 9px;
                   display: inline-block !important;
                   width: 9px;
                   height: auto;
@@ -627,6 +642,47 @@ footer.footer {
               width: 34px;
             }
           }
+        }
+      }
+    }
+
+    .footer__main__sitemap {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 24px;
+      width: 100%;
+
+      @include media-bp-down(lg) {
+        flex-direction: column;
+        margin-bottom: 70px;
+      }
+
+      .footer__main__sitemap__item {
+        font-size: 14px;
+        font-weight: 400;
+        margin-right: 20px;
+
+        @include media-bp-down(lg) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+
+        &.footer__main__sitemap__item--w2p {
+          margin-left: auto;
+          margin-right: 0;
+
+          @include media-bp-down(lg) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      a {
+        transition: opacity 0.25s ease;
+
+        &:hover {
+          opacity: 0.5;
         }
       }
     }

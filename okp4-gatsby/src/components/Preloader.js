@@ -7,7 +7,7 @@ const Header = () => {
   useEffect(() => {
     setTimeout(() => {
       document.body.classList.add("is-fully-loaded");
-    }, 2000);
+    }, 100);
   });
 
   return (
