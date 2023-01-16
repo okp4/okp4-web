@@ -17,8 +17,8 @@ header.header {
 
   &.burger-opened {
     .header--mobile {
-      opacity: 1 !important;
       transition: opacity 0.25s ease;
+      opacity: 1 !important;
 
       .header--mobile__burger__open {
         opacity: 0 !important;
@@ -31,8 +31,8 @@ header.header {
 
     .header--desktop {
       transform: none;
-      pointer-events: initial;
       opacity: 1;
+      pointer-events: initial;
     }
   }
 
@@ -59,9 +59,9 @@ header.header {
 
     .header--mobile__burger {
       display: flex;
+      position: relative;
       align-items: center;
       justify-content: center;
-      position: relative;
       width: 30px;
       height: 23px;
 
@@ -94,8 +94,8 @@ header.header {
       width: 100vw;
       height: var(--fullVHAlways);
       transform: translate3d(0, -101%, 0);
-      opacity: 0;
       transition: all 1s cubic-bezier(0.43, 0.195, 0.02, 1);
+      opacity: 0;
       background-color: #004073;
     }
 
@@ -110,14 +110,13 @@ header.header {
       @include media-bp-down(lg) {
         display: block;
         position: absolute;
+        right: 0;
         bottom: 40px;
         left: 0;
-        right: 0;
         width: 100%;
         max-width: 405px;
-        padding: 0 25px;
-        margin-bottom: 0;
         margin: 0 auto;
+        padding: 0 25px;
       }
 
       .header__lang {
@@ -154,9 +153,6 @@ header.header {
           width: 100%;
           margin-bottom: 20px;
           text-align: center;
-
-          p {
-          }
         }
       }
 
@@ -167,8 +163,8 @@ header.header {
 
         @include media-bp-down(lg) {
           flex: 1;
-          width: 100%;
           justify-content: space-between;
+          width: 100%;
         }
 
         .header__socials__link {
@@ -277,6 +273,7 @@ header.header {
         @include media-bp-down(lg) {
           margin-bottom: 60px;
         }
+
         .header__navigation__link {
           margin: 0 15px;
 

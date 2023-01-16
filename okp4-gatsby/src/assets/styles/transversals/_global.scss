@@ -8,18 +8,14 @@ body {
   font-weight: 400;
 
   &.scroll-disabled {
-    overflow: hidden;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
 }
 
 main {
   position: relative;
-
-  // @include media-bp-down(lg) {
-  //   overflow-x: clip;
-  // }
 }
 
 .wrapper {
@@ -42,8 +38,8 @@ main {
 
   @include media-bp-down(lg) {
     grid-column-gap: 15px;
-    grid-template-columns: repeat(6, 1fr);
     grid-row-gap: 15px;
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
@@ -73,8 +69,8 @@ h3 {
 
 h1 {
   font-size: 125px;
-  line-height: 1;
   letter-spacing: 0.03em;
+  line-height: 1;
 
   @include media-bp-down(lg) {
     font-size: 65px;

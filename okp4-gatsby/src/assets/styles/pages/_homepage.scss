@@ -5,30 +5,23 @@ main.homepage {
     text-align: center;
 
     @include media-bp-down(lg) {
-      padding-top: 110px;
       width: 100%;
+      padding-top: 110px;
     }
 
     .wrapper {
       position: relative;
-
-      // @include media-bp-down(lg) {
-      //   overflow: hidden;
-      // }
     }
 
     .landing__fade {
       position: fixed;
       top: 35vh;
-      left: 0;
       right: 0;
+      left: 0;
       transform-origin: bottom;
 
       @include media-bp-down(lg) {
-        // position: relative;
         top: 110px;
-        // margin-top: 165px;
-        // right: initial;
         width: 100%;
       }
 
@@ -37,8 +30,8 @@ main.homepage {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto 10px;
-        text-align: center;
         line-height: 1;
+        text-align: center;
 
         @include media-bp-down(lg) {
           line-height: 1.1;
@@ -46,24 +39,24 @@ main.homepage {
 
         .title-wrap {
           display: inline-block;
+          margin: 0 10px -10px;
+          overflow: hidden;
           font-family: inherit;
           font-size: inherit;
           font-weight: inherit;
           line-height: 1;
-          overflow: hidden;
-          margin: 0 10px -10px;
 
           @include media-bp-down(lg) {
-            line-height: 1.1;
             margin: 0 5px -10px;
+            line-height: 1.1;
           }
 
           span {
             display: inline-block;
-            transform-origin: center;
             transform: translate3d(0, 50%, 0);
-            opacity: 0;
+            transform-origin: center;
             transition: all 1.1s cubic-bezier(0.43, 0.195, 0.02, 1);
+            opacity: 0;
             font-family: inherit;
             font-size: inherit;
             font-weight: inherit;
@@ -82,18 +75,18 @@ main.homepage {
         width: 100%;
         max-width: 765px;
         margin: 0 auto;
+        overflow: hidden;
         color: $white-80;
         font-size: 26px;
         letter-spacing: 0.05em;
         line-height: 1.8;
         text-align: center;
-        overflow: hidden;
 
         @include media-bp-down(lg) {
           max-width: 500px;
           font-size: 20px;
-          line-height: 30px;
           letter-spacing: normal;
+          line-height: 30px;
         }
 
         @include media-bp-down(lg) {
@@ -102,13 +95,13 @@ main.homepage {
 
         span {
           display: inline-block;
+          transform: translate3d(0, 50%, 0);
+          transform-origin: center;
+          transition: all 1.1s cubic-bezier(0.43, 0.195, 0.02, 1);
+          opacity: 0;
           font-family: inherit;
           font-size: inherit;
           font-weight: inherit;
-          transform-origin: center;
-          transform: translate3d(0, 50%, 0);
-          opacity: 0;
-          transition: all 1.1s cubic-bezier(0.43, 0.195, 0.02, 1);
 
           body.is-fully-loaded & {
             transform: none;
@@ -120,32 +113,29 @@ main.homepage {
 
     .landing__illus {
       position: relative;
-      margin-top: 200px;
       width: 100%;
+      margin-top: 200px;
+      padding-bottom: 150px;
       transition: opacity 0.4s ease;
       pointer-events: none;
-      padding-bottom: 150px;
 
       @include media-bp-down(lg) {
         position: relative;
         margin-top: 350px;
-        // padding-bottom: 10px;
       }
 
       @include media-bp-down(sm) {
         margin-top: 400px;
-        // padding-bottom: 50px;
       }
 
       .imgWrapper--base {
+        width: 100%;
         opacity: 0;
         pointer-events: none;
-        width: 100%;
 
         @include media-bp-down(lg) {
           position: relative;
           top: initial;
-          // width: 130vw;
           width: 100%;
         }
 
@@ -161,16 +151,16 @@ main.homepage {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
         max-width: 1295px;
+        height: 100%;
         margin: 0 auto;
 
         @include media-bp-down(lg) {
           position: absolute;
           top: initial;
           bottom: 0;
-          width: 100%;
           left: 0;
+          width: 100%;
         }
       }
 
@@ -181,8 +171,6 @@ main.homepage {
         width: 100%;
 
         @include media-bp-down(lg) {
-          // width: 130%;
-          // left: -15vw;
           width: 100%;
         }
 
@@ -217,15 +205,13 @@ main.homepage {
 
     .strate__inner {
       padding: 120px 0 160px;
-      // background-color: $darkblue;
-      // background: url("/images/grain.png"), $darkblue;
+      overflow: hidden;
       background: $darkblue;
       background-repeat: repeat;
       background-size: contain;
-      overflow: hidden;
 
       @include media-bp-down(lg) {
-        padding: 60px 0 60px;
+        padding: 60px 0;
       }
 
       .wrapper {
@@ -247,7 +233,6 @@ main.homepage {
         width: 100%;
         max-width: 100%;
         margin: 0 0 35px;
-        // margin: 0 0 35px;
       }
     }
 
@@ -325,11 +310,8 @@ main.homepage {
         width: 100%;
         height: 447px;
         padding: 10px 0 40px;
-        // border: 1px solid $white;
         border-radius: 20px;
         background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%);
-        // background-repeat: repeat;
-        // background-size: contain;
 
         @include media-bp-down(lg) {
           grid-column: span 2;
@@ -344,9 +326,9 @@ main.homepage {
 
         .introduction__cards__item__illus {
           display: flex;
+          flex: 1;
           align-items: center;
           justify-content: center;
-          flex: 1;
           width: 100%;
           animation: floating-image 8s linear infinite;
 
@@ -382,6 +364,7 @@ main.homepage {
         .text {
           color: $textblue;
           text-align: center;
+
           @include media-bp-down(lg) {
             max-width: 70%;
           }
@@ -392,7 +375,6 @@ main.homepage {
         }
 
         .title {
-          // margin-top: auto;
           margin-bottom: 10px;
         }
 
@@ -423,8 +405,6 @@ main.homepage {
         display: flex;
         grid-column: span 6;
         border-radius: 20px;
-        // background: $pushblue;
-        // background: url("/images/grain.png"), $pushblue;
         background: $pushblue;
         background-repeat: repeat;
         background-size: contain;
@@ -483,11 +463,11 @@ main.homepage {
         padding: 40px 75px 40px 40px;
 
         @include media-bp-down(lg) {
+          grid-column: span 3;
           flex-direction: column;
-          padding: 27px;
           height: initial;
           min-height: 345px;
-          grid-column: span 3;
+          padding: 27px;
 
           .introduction__pushs__item__texts {
             display: flex;
@@ -495,29 +475,27 @@ main.homepage {
 
             .title {
               max-width: 90%;
-              margin-bottom: auto;
               margin-top: 0;
+              margin-bottom: auto;
             }
           }
         }
 
         @include media-bp-down(md) {
-          flex-direction: row;
-          min-height: initial;
           display: block;
           grid-column: span 6;
+          flex-direction: row;
+          min-height: initial;
         }
 
         .introduction__pushs__item__illus {
           width: 115px;
           margin-right: 60px;
-          animation-delay: 3s;
-          animation-direction: reverse;
           animation: floating-image 8s linear infinite 1s reverse;
 
           @include media-bp-down(lg) {
-            margin-bottom: 30px;
             margin-right: 0;
+            margin-bottom: 30px;
           }
         }
 
@@ -533,8 +511,8 @@ main.homepage {
       right: 0;
       bottom: 0;
       left: 0;
-      border-radius: 40px;
       overflow: hidden;
+      border-radius: 40px;
 
       @include media-bp-down(lg) {
         border-radius: 20px;
@@ -544,12 +522,12 @@ main.homepage {
         position: absolute;
         bottom: -50%;
         left: -30%;
-        height: 100%;
         width: 140%;
+        height: 100%;
         background: radial-gradient(
           50% 50% at 50% 50%,
-          rgba(255, 216, 119, 0.15) 0%,
-          rgba(217, 217, 217, 0) 100%
+          rgba(255, 216, 119, 15%) 0%,
+          rgba(217, 217, 217, 0%) 100%
         );
       }
     }
@@ -557,22 +535,20 @@ main.homepage {
 
   .video {
     .strate__inner {
-      background: $darkblue;
       padding: 5%;
       overflow: hidden;
+      background: $darkblue;
 
       @include media-bp-down(lg) {
         margin-top: -50px;
-        background: $nightblue;
         padding: 80px 30px;
-        // border-radius: none;
+        background: $nightblue;
       }
 
       @include media-bp-down(md) {
         margin-top: -50px;
-        background: $nightblue;
         padding: 65px 15px;
-        // border-radius: none;
+        background: $nightblue;
       }
     }
 
@@ -582,12 +558,12 @@ main.homepage {
       align-items: center;
       justify-content: center;
       width: 100%;
+      margin: auto;
       padding-bottom: 56%;
-      margin: auto auto;
 
       @include media-bp-down(lg) {
-        border-radius: 20px;
         overflow: hidden;
+        border-radius: 20px;
       }
 
       .videoWrapper {
@@ -596,18 +572,17 @@ main.homepage {
         left: 0;
         width: 100%;
         height: 100%;
-        border-radius: 20px;
         overflow: hidden;
+        border-radius: 20px;
 
         @include media-bp-down(lg) {
-          pointer-events: initial;
-          border-radius: 20px;
           overflow: hidden;
+          border-radius: 20px;
+          pointer-events: initial;
         }
 
         iframe,
         video {
-          // pointer-events: none;
           width: 100%;
           height: 100%;
 
@@ -629,26 +604,24 @@ main.homepage {
     @include media-bp-down(lg) {
       z-index: 2;
     }
+
     .strate__inner {
       padding: 120px 0 0;
       background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%);
-      // background: url("/images/grain.png"),
-      // linear-gradient(180deg, #012c4f 0%, #003a68 77.08%);
       background-repeat: repeat;
       background-size: contain;
-      // @include bg-grain;
 
       @include media-bp-down(lg) {
-        padding: 60px 0;
         margin-top: -50px;
+        padding: 60px 0;
       }
     }
 
     .universe__sticky {
       position: sticky;
       top: 20px;
-      text-align: center;
       width: 100%;
+      text-align: center;
 
       @include media-bp-down(lg) {
         position: initial;
@@ -657,19 +630,14 @@ main.homepage {
 
     .universe__title {
       display: block;
-      // margin-bottom: 120px;
-      text-align: center;
-      // position: sticky;
-      // top: 20px;
-      // padding-bottom: calc(100vh - 400px);
-      // padding-bottom: 665px;
       margin-bottom: 70px;
+      text-align: center;
 
       @include media-bp-down(lg) {
-        margin-bottom: 60px;
-        padding-bottom: 0;
         position: relative;
         top: initial;
+        margin-bottom: 60px;
+        padding-bottom: 0;
       }
     }
 
@@ -686,10 +654,7 @@ main.homepage {
     .universe__items {
       display: inline-block;
       width: 44%;
-      // margin-top: calc(650px - 100vh);
       margin-top: -300px;
-      // padding-bottom: 200px;
-      // padding-bottom: 100px;
       vertical-align: top;
 
       @include media-bp-down(lg) {
@@ -721,14 +686,14 @@ main.homepage {
         }
 
         .tag {
+          display: inline-block;
           position: absolute;
           top: -40px;
-          display: inline-block;
           padding: 6px 19px;
+          transition: all 0.4s ease;
           border-radius: 10px;
           background-color: $white;
           text-align: center;
-          transition: all 0.4s ease;
 
           @include media-bp-down(lg) {
             position: initial;
@@ -754,9 +719,9 @@ main.homepage {
 
           @include media-bp-down(lg) {
             max-width: 50%;
+            margin-bottom: 15px;
             font-size: 30px;
             line-height: 1.5;
-            margin-bottom: 15px;
           }
 
           @include media-bp-down(md) {
@@ -765,8 +730,6 @@ main.homepage {
         }
 
         .text {
-          // position: absolute;
-          // top: 95px;
           display: block;
           transition: all 0.4s ease;
           color: $white-80;
@@ -789,20 +752,20 @@ main.homepage {
 
           @include media-bp-down(lg) {
             display: flex;
-            align-items: center;
-            margin: 0;
             position: absolute;
             top: 0;
-            bottom: 0;
             right: 30px;
+            bottom: 0;
+            align-items: center;
             max-width: 190px;
+            margin: 0;
             transition: opacity 0.5s ease;
           }
 
           @include media-bp-down(md) {
-            bottom: initial;
             top: 0;
             right: 0;
+            bottom: initial;
             max-width: 100px;
           }
 
@@ -830,22 +793,18 @@ main.homepage {
 
         &:not(.is-active) {
           @include media-bp-up(lg) {
-            // .title {
-            //   opacity: 0.15;
-            // }
-
             .title {
               opacity: 0.03;
             }
 
             .tag {
-              opacity: 0;
               transform: translate3d(0, -20px, 0);
+              opacity: 0;
             }
 
             .text {
-              opacity: 0;
               transform: translate3d(-50px, 0, 0);
+              opacity: 0;
             }
 
             .universe__illus__item {
@@ -865,13 +824,13 @@ main.homepage {
             }
 
             .tag {
-              opacity: 1;
               transform: translate3d(0, 0, 0);
+              opacity: 1;
             }
 
             .text {
-              opacity: 1;
               transform: translate3d(0, 0, 0);
+              opacity: 1;
             }
 
             .universe__illus__item {
@@ -895,18 +854,12 @@ main.homepage {
     .universe__illus {
       display: flex;
       position: relative;
-      margin-left: auto;
-      margin-right: 0;
-      // display: inline-flex;
-      // position: sticky;
-      // top: 170px;
-      // margin-top: calc(400px - 100vh);
       align-items: flex-start;
       justify-content: flex-end;
-      // width: 55%;
       width: 40%;
       height: 100%;
-      // min-height: 595px;
+      margin-right: 0;
+      margin-left: auto;
       vertical-align: top;
 
       @include media-bp-down(lg) {
@@ -918,7 +871,6 @@ main.homepage {
         position: absolute;
         top: 0;
         width: 100%;
-        // max-width: 500px;
         max-width: 400px;
         transition: opacity 0.15s ease;
         animation: floating-image 8s linear infinite;
@@ -926,9 +878,6 @@ main.homepage {
         @include media-bp-down(xl) {
           max-width: 300px;
         }
-
-        // .imgWrapper {
-        // }
 
         &:last-of-type {
           position: relative;
@@ -955,7 +904,6 @@ main.homepage {
 
     .roadmap {
       width: 100%;
-      // margin-top: 180px;
 
       @include media-bp-down(lg) {
         margin-top: 80px;
@@ -1014,12 +962,12 @@ main.homepage {
 
         .roadmap__item {
           position: sticky;
+          width: 100%;
           min-height: 600px;
           margin-bottom: 64px;
-          width: 100%;
           overflow: hidden;
-          border-radius: 20px;
           transform-origin: top;
+          border-radius: 20px;
 
           &.is-scaled {
             max-height: 600px;
@@ -1030,11 +978,8 @@ main.homepage {
           }
 
           @include media-bp-down(md) {
-            // position: static;
-            // margin-bottom: 30px;
             height: calc(100vh - 70px);
             margin-bottom: 80px;
-            // overflow-y: scroll;
           }
 
           .roadmap__item__layer {
@@ -1112,27 +1057,27 @@ main.homepage {
             padding: 40px 65px 40px 40px;
 
             @include media-bp-down(lg) {
-              width: 100%;
-              padding: 0;
-              order: 2;
-              margin-top: 25px;
-              min-height: initial;
               flex: 1;
+              order: 2;
+              width: 100%;
+              min-height: initial;
+              margin-top: 25px;
+              padding: 0;
               overflow-y: scroll;
             }
 
             @include media-bp-down(md) {
               position: relative;
 
-              &:before {
+              &::before {
                 content: "Read more";
                 display: flex;
                 position: absolute;
-                align-items: center;
-                justify-content: center;
+                right: 0;
                 bottom: 0;
                 left: 0;
-                right: 0;
+                align-items: center;
+                justify-content: center;
                 height: 55px;
                 border: 2px solid $white;
                 border-radius: 15px;
@@ -1160,9 +1105,8 @@ main.homepage {
             }
 
             .description {
-              // color: $white-80;
-              line-height: 32px;
               font-size: 17px;
+              line-height: 32px;
 
               @include media-bp-down(md) {
                 max-height: 0;
@@ -1177,7 +1121,7 @@ main.homepage {
 
             &.show-more {
               @include media-bp-down(md) {
-                &:before {
+                &::before {
                   content: none;
                 }
 
@@ -1198,15 +1142,15 @@ main.homepage {
               display: flex;
               position: absolute;
               z-index: 2;
-              border-radius: 10px;
               top: 40px;
               right: 45px;
               align-items: center;
               justify-content: center;
               width: initial;
               height: initial;
-              background: $white;
               padding: 10px 20px;
+              border-radius: 10px;
+              background: $white;
 
               @include media-bp-down(lg) {
                 top: 15px;
@@ -1214,8 +1158,8 @@ main.homepage {
               }
 
               span {
-                font-weight: 600;
                 color: $textblue;
+                font-weight: 600;
               }
             }
 
@@ -1223,22 +1167,21 @@ main.homepage {
               position: relative;
               order: 1;
               width: 100%;
-              // height: 210px;
               height: initial;
               min-height: initial;
               padding-bottom: 55%;
 
               .imgWrapper {
-                border-radius: 15px;
                 overflow: hidden;
+                border-radius: 15px;
               }
 
               img {
-                border-radius: 15px;
-                overflow: hidden;
                 position: absolute;
-                bottom: 0;
                 top: initial;
+                bottom: 0;
+                overflow: hidden;
+                border-radius: 15px;
               }
             }
 
@@ -1292,11 +1235,6 @@ main.homepage {
             padding-bottom: 0;
           }
         }
-
-        // .roadmap__items__bottom {
-        //   width: 100%;
-        //   height: 300px;
-        // }
       }
     }
   }
