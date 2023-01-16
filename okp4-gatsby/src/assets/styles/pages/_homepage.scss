@@ -5,20 +5,16 @@ main.homepage {
     text-align: center;
 
     @include media-bp-down(lg) {
-      // position: sticky;
-      // top: 0;
       padding-top: 110px;
-      // min-height: 130vh;
       width: 100%;
-      // overflow: hidden;
     }
 
     .wrapper {
       position: relative;
 
-      @include media-bp-down(lg) {
-        overflow: hidden;
-      }
+      // @include media-bp-down(lg) {
+      //   overflow: hidden;
+      // }
     }
 
     .landing__fade {
@@ -100,6 +96,10 @@ main.homepage {
           letter-spacing: normal;
         }
 
+        @include media-bp-down(lg) {
+          padding: 0 25px;
+        }
+
         span {
           display: inline-block;
           font-family: inherit;
@@ -124,26 +124,17 @@ main.homepage {
       width: 100%;
       transition: opacity 0.4s ease;
       pointer-events: none;
-      // padding-bottom: 200vh;
       padding-bottom: 150px;
 
       @include media-bp-down(lg) {
         position: relative;
-        // top: initial;
-        // margin-top: 350px;
-        // left: -20vw;
-        // width: 130vw;
-        // left: 0;
-        // width: 100%;
-        // padding-bottom: 50vh;
         margin-top: 350px;
-        padding-bottom: 10px;
-        // overflow: hidden;
+        // padding-bottom: 10px;
       }
 
       @include media-bp-down(sm) {
         margin-top: 400px;
-        padding-bottom: 50px;
+        // padding-bottom: 50px;
       }
 
       .imgWrapper--base {
@@ -154,8 +145,8 @@ main.homepage {
         @include media-bp-down(lg) {
           position: relative;
           top: initial;
-          width: 130vw;
-          // opacity: 1;
+          // width: 130vw;
+          width: 100%;
         }
 
         img {
@@ -166,25 +157,18 @@ main.homepage {
 
       .landing__illus__wrapper {
         display: block;
-        // position: fixed;
         position: absolute;
-        // top: 35vh;
         top: 0;
         left: 0;
-        // right: 0;
         width: 100%;
         height: 100%;
         max-width: 1295px;
         margin: 0 auto;
-        // padding: 0 15px;
 
         @include media-bp-down(lg) {
-          // display: none;
-          // top: 480px;
-          // left: -17vw;
-          // width: 130vw;
           position: absolute;
-          top: 0;
+          top: initial;
+          bottom: 0;
           width: 100%;
           left: 0;
         }
@@ -197,9 +181,9 @@ main.homepage {
         width: 100%;
 
         @include media-bp-down(lg) {
-          // display: none;
-          width: 130%;
-          left: -15vw;
+          // width: 130%;
+          // left: -15vw;
+          width: 100%;
         }
 
         img {
@@ -1049,6 +1033,7 @@ main.homepage {
             // position: static;
             // margin-bottom: 30px;
             height: calc(100vh - 70px);
+            margin-bottom: 80px;
             // overflow-y: scroll;
           }
 
@@ -1132,12 +1117,26 @@ main.homepage {
               order: 2;
               margin-top: 25px;
               min-height: initial;
-            }
-
-            @include media-bp-down(lg) {
-              // height: 50vh;
               flex: 1;
               overflow-y: scroll;
+            }
+
+            @include media-bp-down(md) {
+              position: relative;
+
+              &:before {
+                content: "Read more";
+                display: flex;
+                position: absolute;
+                align-items: center;
+                justify-content: center;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 55px;
+                border: 2px solid $white;
+                border-radius: 15px;
+              }
             }
 
             .title {
@@ -1165,9 +1164,27 @@ main.homepage {
               line-height: 32px;
               font-size: 17px;
 
+              @include media-bp-down(md) {
+                max-height: 0;
+                overflow: hidden;
+              }
+
               b {
                 font-size: 17px;
                 font-weight: 700;
+              }
+            }
+
+            &.show-more {
+              @include media-bp-down(md) {
+                &:before {
+                  content: none;
+                }
+
+                .description {
+                  max-height: initial;
+                  overflow: initial;
+                }
               }
             }
           }
@@ -1269,6 +1286,10 @@ main.homepage {
 
           @include media-bp-down(lg) {
             padding-bottom: 50px;
+          }
+
+          @include media-bp-down(md) {
+            padding-bottom: 0;
           }
         }
 

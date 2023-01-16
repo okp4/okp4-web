@@ -108,7 +108,6 @@ const StrateRoadmap = ({
       return () => {
         cancelAnimationFrame(rafId);
       };
-      // }
     }, 3000);
   });
 

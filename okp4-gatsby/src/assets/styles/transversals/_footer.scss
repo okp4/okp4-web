@@ -508,10 +508,10 @@ footer.footer {
             align-items: center;
             justify-content: space-between;
 
-            @include media-bp-down(lg) {
-              display: block;
-              width: 100%;
-            }
+            // @include media-bp-down(lg) {
+            //   display: block;
+            //   width: 100%;
+            // }
 
             input,
             .cta {
@@ -530,8 +530,8 @@ footer.footer {
               margin-right: 10px;
 
               @include media-bp-down(lg) {
-                width: 100%;
-                margin-bottom: 10px;
+                // width: 100%;
+                // margin-bottom: 10px;
                 text-align: center;
               }
 
@@ -544,6 +544,7 @@ footer.footer {
                 line-height: 1;
 
                 @include media-bp-down(lg) {
+                  padding: 0 10px;
                   text-align: center;
                 }
               }

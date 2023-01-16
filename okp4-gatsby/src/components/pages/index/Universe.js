@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
 import StickyUniverse from "../../animations/StickyUniverse.js";
 import StrateRoadmap from "../../animations/StrateRoadmap.js";
 import Halo from "../../animations/Halo.js";
 
 const Universe = () => {
+  const roadmapItems = useRef(null);
+
+  const viewMoreText = (ev) => {
+    console.log("viewingMoreText");
+    ev.target.classList.add("show-more");
+  };
+
+  useEffect(() => {
+    if (ResponsiveManager.isWindowSmaller("md")) {
+      let items = roadmapItems.current.querySelectorAll(".roadmap__item__text");
+      items.forEach((item) => {
+        item.addEventListener("click", viewMoreText);
+      });
+    }
+  });
+
   return (
     <section className="universe strate">
       <div className="strate__inner">
@@ -133,7 +150,7 @@ const Universe = () => {
                 (communities and businesses).
               </p>
             </div>
-            <div className="roadmap__items">
+            <div className="roadmap__items" ref={roadmapItems}>
               <StrateRoadmap
                 classContainer={"roadmap__item"}
                 scaleTopSticky="20"
@@ -340,7 +357,7 @@ const Universe = () => {
                 </div>
               </StrateRoadmap>
               {/* <StrateRoadmap
-              classContainer={"roadmap__item"}
+              classContainer={"roadmap__item roadmap__item--last"}
               scaleTopSticky="150"
               scaleMax="0.08"
             > */}
