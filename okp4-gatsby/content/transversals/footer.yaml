@@ -1,2 +1,20 @@
 humanDescription: Content used for the footer at the bottom of the page
 messageNewsletter: Follow our adventures and <b>stay up to date </b>!
+messageCofounded: Our actions are co-funded by
+newsAndDocs:
+  title: News & Docs
+  text: Join our community of developers, data & service providers, users and businesses focused on building the next generation of applications.
+  whitecard1:
+    title: Whitepaper & documentation
+    text: Eager to understand OKP4 and join the community? Read our docs here.
+    url: https://docs.okp4.network/docs/whitepaper/abstract
+  whitecard2:
+    title: Our blog
+    text: Follow the latest content and publications on the OKP4 blog.
+    url: https://blog.okp4.network/
+sitemap:
+  url: /
+  text: Sitemap
+legals:
+  url: /
+  text: Legals & GDPR

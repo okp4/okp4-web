@@ -5,6 +5,7 @@ import StickyUniverse from "../../animations/StickyUniverse.js";
 import StrateRoadmap from "../../animations/StrateRoadmap.js";
 import Halo from "../../animations/Halo.js";
 import contentUniverse from "/content/pages/index/universe.yaml";
+import contentRoadmap from "/content/pages/index/roadmap.yaml";
 
 const Universe = () => {
   const roadmapItems = useRef(null);
@@ -184,17 +185,22 @@ const Universe = () => {
 
           <div className="roadmap">
             <div className="roadmap__intro">
-              <h2 className="roadmap__title">ROADMAP</h2>
-              <p className="title">The next era for the knowledge economy</p>
-              <p className="text">
-                OKP4 is a blockchain built for the coordination of digital
+              <h2 className="roadmap__title">{contentRoadmap.title}</h2>
+              <p className="title">{contentRoadmap.subtitle}</p>
+              <p
+                className="text"
+                dangerouslySetInnerHTML={{
+                  __html: contentRoadmap.description,
+                }}
+              >
+                {/* OKP4 is a blockchain built for the coordination of digital
                 resources.
                 <br /> This is is the only blockchain where
                 <b> developers can find the perfect environment</b> to build a
                 new generation of applications based on digital resources
                 (datasets, algorithms, storage, computation…){" "}
                 <b>shared by participants </b>
-                (communities and businesses).
+                (communities and businesses). */}
               </p>
             </div>
             <div className="roadmap__items" ref={roadmapItems}>

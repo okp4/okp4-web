@@ -69,7 +69,7 @@ const Footer = () => {
           <Docs />
           <div className="footer__partenaires">
             <div className="wrapper">
-              <p>Our actions are co-funded by</p>
+              <p>{contentFooter.messageCofounded}</p>
               <div className="footer__partenaires__items">
                 <div className="footer__partenaires__item">
                   <StaticImage
@@ -209,23 +209,23 @@ const Footer = () => {
             </div>
             <div className="footer__main__sitemap">
               <span className="footer__main__sitemap__item">
-                OKP4 2023 Copyright
+                OKP4 {new Date().getFullYear()} Copyright
               </span>
               <a
-                href="/"
+                href={contentFooter.sitemap.url}
                 className="footer__main__sitemap__item"
                 target="_blank"
                 rel="noreferrer"
               >
-                Sitemap
+                {contentFooter.sitemap.text}
               </a>
               <a
-                href="/"
+                href={contentFooter.legals.url}
                 className="footer__main__sitemap__item"
                 target="_blank"
                 rel="noreferrer"
               >
-                Legals & GDPR
+                {contentFooter.legals.text}
               </a>
               <a
                 href="https://w2p-digital.com/"
