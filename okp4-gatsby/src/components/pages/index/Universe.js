@@ -4,21 +4,50 @@ import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
 import StickyUniverse from "../../animations/StickyUniverse.js";
 import StrateRoadmap from "../../animations/StrateRoadmap.js";
 import Halo from "../../animations/Halo.js";
+import contentUniverse from "/content/pages/index/universe.yaml";
 
 const Universe = () => {
   const roadmapItems = useRef(null);
 
+  const setViewMore = () => {
+    let items = roadmapItems.current.querySelectorAll(".roadmap__item__text");
+
+    items.forEach((item) => {
+      let rectHeight = item.getBoundingClientRect().height;
+      rectHeight -= 40;
+      let title = item.querySelector(".title");
+      let titleHeight = title.getBoundingClientRect().height;
+      let excerpt = item.querySelector(".excerpt");
+      let excerptHeight = excerpt.getBoundingClientRect().height;
+      let description = item.querySelector(".description");
+      let descriptionHeight = description.getBoundingClientRect().height;
+      let realHeight = titleHeight + excerptHeight + descriptionHeight;
+
+      if (realHeight > rectHeight) {
+        item.classList.add("togglable");
+        item.addEventListener("click", viewMoreText);
+      }
+    });
+  };
+
   const viewMoreText = (ev) => {
-    console.log("viewingMoreText");
-    ev.target.classList.add("show-more");
+    let roadmap__item__text = ev.target.parentNode.parentNode;
+    if (roadmap__item__text.classList.contains("show-more")) {
+      roadmap__item__text.scroll(0, 0);
+    }
+    roadmap__item__text.classList.toggle("show-more");
   };
 
   useEffect(() => {
-    if (ResponsiveManager.isWindowSmaller("md")) {
-      let items = roadmapItems.current.querySelectorAll(".roadmap__item__text");
+    if (ResponsiveManager.isWindowSmaller("sm")) {
+      let items = roadmapItems.current.querySelectorAll(
+        ".roadmap__item__readMore"
+      );
       items.forEach((item) => {
         item.addEventListener("click", viewMoreText);
       });
+    } else {
+      setViewMore();
     }
   });
 
@@ -29,11 +58,11 @@ const Universe = () => {
           <StickyUniverse classContainer="universe__wrapper">
             <Halo></Halo>
             <div className="universe__sticky">
-              <h2 className="universe__title">Enter in the OKP4 universe</h2>
+              <h2 className="universe__title">{contentUniverse.title}</h2>
               <div className="universe__illus">
                 <div
                   className="universe__illus__item"
-                  data-item="dataverseapps"
+                  data-item="dg"
                   data-infinite="1"
                 >
                   <StaticImage
@@ -78,7 +107,25 @@ const Universe = () => {
               </div>
             </div>
             <div className="universe__items">
-              <div
+              {contentUniverse.items.map((item, index) => {
+                let isActive = "";
+                if (index === 0) isActive = " is-active";
+                return (
+                  <div
+                    className={`universe__item${isActive}`}
+                    data-item={item.identifiant}
+                    data-key={index}
+                    key={index}
+                  >
+                    <div className="tag">
+                      <span>{item.tag}</span>
+                    </div>
+                    <p className="title">{item.title}</p>
+                    <p className="text">{item.description}</p>
+                  </div>
+                );
+              })}
+              {/* <div
                 className="universe__item is-active"
                 data-item="blockchain"
                 data-key="0"
@@ -131,7 +178,7 @@ const Universe = () => {
                   OKP4 Dataverse Gateways enable anyone to interact with, build
                   into, share and contribute and earn from the Dataverse.
                 </p>
-              </div>
+              </div> */}
             </div>
           </StickyUniverse>
 
@@ -181,6 +228,10 @@ const Universe = () => {
                       After two more years of research and development using the
                       Cosmos SDK as a starting point, OKP4 was ready for the
                       Nemeton era.
+                      <span className="roadmap__item__readMore">
+                        <span className="readMore--closed">Read more</span>
+                        <span className="readMore--opened">Read less</span>
+                      </span>
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -233,6 +284,10 @@ const Universe = () => {
                       <br />
                       The Nemeton era results in a stable, battle-tested
                       environment and gives birth to the OKP4 mainnet.
+                      <span className="roadmap__item__readMore">
+                        <span className="readMore--closed">Read more</span>
+                        <span className="readMore--opened">Read less</span>
+                      </span>
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -284,6 +339,10 @@ const Universe = () => {
                       community-powered applications enabled by OKP4. The
                       powerful OKP4 SDK and Dataverse Gateways releases take us
                       into the Duir era...
+                      <span className="roadmap__item__readMore">
+                        <span className="readMore--closed">Read more</span>
+                        <span className="readMore--opened">Read less</span>
+                      </span>
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -337,6 +396,10 @@ const Universe = () => {
                       competition between them and steering open innovation to
                       the next level. Real-life use cases and value flows into
                       the network and the OKP4 public good continues to grow.
+                      <span className="roadmap__item__readMore">
+                        <span className="readMore--closed">Read more</span>
+                        <span className="readMore--opened">Read less</span>
+                      </span>
                     </p>
                   </div>
                   <div className="roadmap__item__illus">
@@ -370,15 +433,15 @@ const Universe = () => {
                     <p className="excerpt">
                       The Lugh era is the expression of the unstoppable nature
                       of OKP4s design.
-                      <br />
-                      <br />
+                    </p>
+                    <p className="description">
                       Inter- blockchain communication is now the norm and OKP4
                       is interoperable with every meaningful network to access
                       any kind of datasets and services (decentralized storage,
                       decentralized computation...), onboard communities from
                       other chains easily, and seamless interchain applications.
-                    </p>
-                    <p className="description">
+                      <br />
+                      <br />
                       Due to OKP4 first-mover advantage and significant network
                       effect reached, OKP4 becomes the default coordination
                       layer for most applications based on distributed
@@ -387,6 +450,10 @@ const Universe = () => {
                       <br />
                       Thousands of projects and teams across the web2 and web3
                       worlds are building on OKP4: it has reached mass adoption.
+                      <span className="roadmap__item__readMore">
+                        <span className="readMore--closed">Read more</span>
+                        <span className="readMore--opened">Read less</span>
+                      </span>
                     </p>
                   </div>
                   <div className="roadmap__item__illus">

@@ -48,9 +48,6 @@ const Landing = () => {
       if (percentTravelled > 1) percentTravelled = 1;
 
       if (percentTravelled < 0) percentTravelled = 0;
-      if (ResponsiveManager.isWindowSmaller("lg")) {
-        if (percentTravelled < 0.1) percentTravelled = 0.1;
-      }
       divFadeIn.current.style.opacity = percentTravelled;
     }
   };
@@ -79,15 +76,7 @@ const Landing = () => {
         var parallaxEnd = parseInt(elem.dataset.parallaxend);
 
         if (ResponsiveManager.isWindowSmaller("lg")) {
-          // ratio =
-          //   (ScrollManager.getIntersectionRatio(divRef.current) - 0.5) * 2;
-          // parallaxEnd = parallaxEnd * -1;
-          // console.log(ratio);
           parallaxEnd = parallaxEnd / 2;
-          // const scrollY = window.scrollY;
-          // const distance = 1000;
-          // ratio = scrollY / distance;
-          // if (ratio > 1) ratio = 1;
         }
 
         transformRatio = (ratio.toFixed(4) * parallaxEnd).toFixed(4);
@@ -105,7 +94,6 @@ const Landing = () => {
     var divDimensions = divRef.current.getBoundingClientRect();
     var divAbsoluteTop = divDimensions.top + window.scrollY;
     var startScale = 0;
-    // var endScale = windowHeight / 2;
 
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;

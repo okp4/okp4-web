@@ -50,6 +50,7 @@ const Introduction = () => {
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_card_1.png"
+                // src={content.whitecard1.image}
                 alt="Easy to build data spaces and applications"
               />
             </div>
@@ -69,8 +70,10 @@ const Introduction = () => {
                 alt="Built in Trust and custom governance"
               />
             </div>
-            <p className="title">Built in Trust</p>
-            <p className="text">and custom governance</p>
+            {/* <p className="title">Built in Trust</p>
+            <p className="text">and custom governance</p> */}
+            <p className="title">{content.whitecard2.title}</p>
+            <p className="text">{content.whitecard2.description}</p>
           </Parallax>
           <Parallax
             classContainer="introduction__cards__item"
@@ -85,8 +88,10 @@ const Introduction = () => {
                 alt="Optimal incentives for collaboration"
               />
             </div>
-            <p className="title">Optimal incentives</p>
-            <p className="text">for collaboration</p>
+            {/* <p className="title">Optimal incentives</p>
+            <p className="text">for collaboration</p> */}
+            <p className="title">{content.whitecard3.title}</p>
+            <p className="text">{content.whitecard3.description}</p>
           </Parallax>
         </div>
         <div className="grid introduction__pushs">
@@ -99,12 +104,14 @@ const Introduction = () => {
               />
             </div>
             <div className="introduction__pushs__item__texts">
-              <p className="title">Powered by the KNOW token</p>
-              <p className="text">
+              {/* <p className="title">Powered by the KNOW token</p> */}
+              <p className="title">{content.bluecard1.title}</p>
+              {/* <p className="text">
                 Incentives & value flows for the many use cases are enabled by
                 the $KNOW. Many B2B use cases are ready to be launched, more
                 community use cases will be built when the Testnet launches.
-              </p>
+              </p> */}
+              <p className="text">{content.bluecard1.description}</p>
             </div>
           </div>
           <div className="introduction__pushs__item introduction__pushs__item--right">
@@ -116,20 +123,14 @@ const Introduction = () => {
               />
             </div>
             <div className="introduction__pushs__item__texts">
-              <p className="title">Built on the Cosmos SDK</p>
-              <p className="text">
-                A smart contract hub specifically designed for Data Spaces.
-              </p>
+              <p className="title">{content.bluecard2.title}</p>
+              <p className="text">{content.bluecard2.description}</p>
             </div>
           </div>
           <div className="introduction__pushs__item introduction__pushs__item--right">
             <div className="introduction__pushs__item__texts">
-              <p className="title">Simplicity and transparency</p>
-              <p className="text">
-                Decentralization guarantees sovereignity of shared data and
-                services, trustlessness, transparency, easy managment and
-                customization of governance rules.
-              </p>
+              <p className="title">{content.bluecard3.title}</p>
+              <p className="text">{content.bluecard3.description}</p>
             </div>
           </div>
         </div>

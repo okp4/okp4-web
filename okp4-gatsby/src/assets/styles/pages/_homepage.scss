@@ -18,10 +18,15 @@ main.homepage {
       top: 35vh;
       right: 0;
       left: 0;
-      transform-origin: bottom;
+      transform-origin: center;
 
       @include media-bp-down(lg) {
-        top: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        top: 0;
+        height: var(--fullVHAlways);
         width: 100%;
       }
 
@@ -121,12 +126,13 @@ main.homepage {
 
       @include media-bp-down(lg) {
         position: relative;
-        margin-top: 350px;
+        margin-top: calc(100vh - 200px);
+        padding-bottom: 70px;
       }
 
-      @include media-bp-down(sm) {
-        margin-top: 400px;
-      }
+      // @include media-bp-down(sm) {
+      //   margin-top: 400px;
+      // }
 
       .imgWrapper--base {
         width: 100%;
@@ -184,10 +190,6 @@ main.homepage {
     &:not(.is-active) {
       .landing__illus {
         opacity: 0;
-
-        @include media-bp-down(lg) {
-          opacity: 0.1;
-        }
       }
     }
 
@@ -963,21 +965,18 @@ main.homepage {
         .roadmap__item {
           position: sticky;
           width: 100%;
-          min-height: 600px;
+          min-height: 500px;
+          max-height: calc(100vh - 100px);
           margin-bottom: 64px;
           overflow: hidden;
           transform-origin: top;
           border-radius: 20px;
 
-          &.is-scaled {
-            max-height: 600px;
-          }
-
           @include media-bp-down(lg) {
             min-height: initial;
           }
 
-          @include media-bp-down(md) {
+          @include media-bp-down(sm) {
             height: calc(100vh - 70px);
             margin-bottom: 80px;
           }
@@ -999,16 +998,19 @@ main.homepage {
           .roadmap__item__container {
             display: flex;
             width: 100%;
+            // height: 100%;
             height: 100%;
-            min-height: 600px;
+            // min-height: 600px;
+            min-height: 500px;
+            max-height: calc(100vh - 100px);
 
             @include media-bp-down(lg) {
               flex-direction: column;
-              min-height: initial;
+              min-height: calc(100vh - 100px);
               padding: 20px 15px 30px;
             }
 
-            @include media-bp-down(md) {
+            @include media-bp-down(sm) {
               flex-wrap: wrap;
               height: 100%;
             }
@@ -1016,27 +1018,57 @@ main.homepage {
 
           &:nth-child(1) {
             // top: 20px;
-            background-color: #00b6b7;
+            background-color: $turquoise;
+
+            // @include media-bp-down(md) {
+            .roadmap__item__readMore {
+              background: $turquoise;
+            }
+            // }
           }
 
           &:nth-child(2) {
             // top: 50px;
             background-color: #008fad;
+
+            // @include media-bp-down(md) {
+            .roadmap__item__readMore {
+              background: #008fad;
+            }
+            // }
           }
 
           &:nth-child(3) {
             // top: 80px;
             background-color: #006796;
+
+            // @include media-bp-down(md) {
+            .roadmap__item__readMore {
+              background: #006796;
+            }
+            // }
           }
 
           &:nth-child(4) {
             // top: 110px;
             background-color: #004073;
+
+            // @include media-bp-down(md) {
+            .roadmap__item__readMore {
+              background: #004073;
+            }
+            // }
           }
 
           &:nth-child(5) {
             // top: 140px;
             background-color: #032b4a;
+
+            // @include media-bp-down(md) {
+            .roadmap__item__readMore {
+              background: #032b4a;
+            }
+            // }
           }
 
           .roadmap__item__text--mobile {
@@ -1053,7 +1085,9 @@ main.homepage {
 
           .roadmap__item__text {
             width: 64%;
-            min-height: 100%;
+            height: 100%;
+            min-height: 500px;
+            max-height: calc(100vh - 100px);
             padding: 40px 65px 40px 40px;
 
             @include media-bp-down(lg) {
@@ -1061,32 +1095,23 @@ main.homepage {
               order: 2;
               width: 100%;
               min-height: initial;
+              max-height: initial;
+              height: initial;
               margin-top: 25px;
               padding: 0;
-              overflow-y: scroll;
+              overflow-y: hidden;
             }
 
-            @include media-bp-down(md) {
+            @include media-bp-down(sm) {
+              display: flex;
+              flex-direction: column;
               position: relative;
-
-              &::before {
-                content: "Read more";
-                display: flex;
-                position: absolute;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                align-items: center;
-                justify-content: center;
-                height: 55px;
-                border: 2px solid $white;
-                border-radius: 15px;
-              }
+              overflow-y: hidden;
             }
 
             .title {
               display: block;
-              margin-bottom: 32px;
+              padding-bottom: 32px;
               font-size: 34px;
               font-weight: 700;
               line-height: 40px;
@@ -1098,7 +1123,7 @@ main.homepage {
 
             .excerpt {
               display: block;
-              margin-bottom: 32px;
+              padding-bottom: 32px;
               font-size: 19px;
               font-weight: 700;
               line-height: 30px;
@@ -1108,28 +1133,74 @@ main.homepage {
               font-size: 17px;
               line-height: 32px;
 
-              @include media-bp-down(md) {
-                max-height: 0;
-                overflow: hidden;
-              }
-
               b {
                 font-size: 17px;
                 font-weight: 700;
               }
+
+              .roadmap__item__readMore {
+                display: none;
+
+                @include media-bp-down(sm) {
+                  display: flex;
+                }
+
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                align-items: center;
+                justify-content: center;
+                padding-top: 20px;
+
+                span {
+                  display: block;
+                  margin: 0 auto;
+                  padding: 10px 20px;
+                  border: 1px solid $white;
+                  border-radius: 20px;
+                  pointer-events: none;
+                }
+
+                .readMore--opened {
+                  display: none;
+                }
+              }
+            }
+
+            &.togglable {
+              display: flex;
+              flex-direction: column;
+              position: relative;
+              overflow-y: hidden;
+
+              .roadmap__item__readMore {
+                display: flex;
+                padding: 30px 0 20px;
+                cursor: pointer;
+              }
             }
 
             &.show-more {
-              @include media-bp-down(md) {
-                &::before {
-                  content: none;
-                }
+              // @include media-bp-down(md) {
+              overflow-y: scroll;
 
-                .description {
-                  max-height: initial;
-                  overflow: initial;
+              .description {
+                position: relative;
+
+                .roadmap__item__readMore {
+                  position: initial;
+
+                  .readMore--opened {
+                    display: block;
+                  }
+
+                  .readMore--closed {
+                    display: none;
+                  }
                 }
               }
+              // }
             }
           }
 
@@ -1231,7 +1302,7 @@ main.homepage {
             padding-bottom: 50px;
           }
 
-          @include media-bp-down(md) {
+          @include media-bp-down(sm) {
             padding-bottom: 0;
           }
         }
