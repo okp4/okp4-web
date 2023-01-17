@@ -1,13 +1,16 @@
 import React from "react";
-import { Link } from "gatsby";
-import { StaticImage, getSrc } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
+import * as ImageManager from "../../../utils/ImageManager.js";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import Halo from "../../animations/Halo.js";
 import Strate from "../../animations/Strate.js";
 import Parallax from "../../animations/Parallax.js";
-import content from "/content/pages/index/opportunities.yaml";
+import content from "/content/pages/index/introduction.yaml";
 
-const Introduction = () => {
+const Introduction = ({ files }) => {
+  // console.log({ files });
+  // console.log(ImageManager.GetImage("index_intro_card_1.png", files));
+
   return (
     <Strate classContainer={"introduction"}>
       <Halo classContainer={"halo--big"}></Halo>
@@ -15,30 +18,14 @@ const Introduction = () => {
         <div className="gradient__layer"></div>
       </div>
       <div className="wrapper">
-        <h2 className="introduction__title">
-          {content.title}
-          {/* New opportunities for every digital ressource */}
-        </h2>
+        <h2 className="introduction__title">{content.title}</h2>
         <p
           className="introduction__text"
           dangerouslySetInnerHTML={{
             __html: content.description,
           }}
-        >
-          {/* OKP4 is the only <b>public layer-1 blockchain</b> designed for
-          coordination of digital assets such as datasets, algorithms, software,
-          storage or computation. Anyone can build and join custom
-          <Link className="cta--icon" to="/">
-            <span>Data Spaces</span>
-            <IconArrowtr />
-          </Link>
-          where rules are shared and value flows between participants. */}
-          {/* {content.description} */}
-        </p>
-        <p className="introduction__catch">
-          {/* Let’s build amazing things together! */}
-          {content.featuredText}
-        </p>
+        ></p>
+        <p className="introduction__catch">{content.featuredText}</p>
         <div className="grid introduction__cards">
           <Parallax
             classContainer="introduction__cards__item"
@@ -47,10 +34,14 @@ const Introduction = () => {
             parallaxMiddle="0.5"
           >
             <div className="introduction__cards__item__illus" data-infinite="1">
-              <StaticImage
+              {/* <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_card_1.png"
-                // src={content.whitecard1.image}
+                alt="Easy to build data spaces and applications"
+              /> */}
+              <GatsbyImage
+                className="imgWrapper"
+                image={ImageManager.GetImage(content.whitecard1.image, files)}
                 alt="Easy to build data spaces and applications"
               />
             </div>
@@ -64,9 +55,14 @@ const Introduction = () => {
             parallaxMiddle="0.5"
           >
             <div className="introduction__cards__item__illus" data-infinite="1">
-              <StaticImage
+              {/* <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_card_2.png"
+                alt="Built in Trust and custom governance"
+              /> */}
+              <GatsbyImage
+                className="imgWrapper"
+                image={ImageManager.GetImage(content.whitecard2.image, files)}
                 alt="Built in Trust and custom governance"
               />
             </div>
@@ -82,10 +78,15 @@ const Introduction = () => {
             parallaxMiddle="0.5"
           >
             <div className="introduction__cards__item__illus" data-infinite="1">
-              <StaticImage
+              {/* <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_card_3.png"
                 alt="Optimal incentives for collaboration"
+              /> */}
+              <GatsbyImage
+                className="imgWrapper"
+                image={ImageManager.GetImage(content.whitecard3.image, files)}
+                alt="Built in Trust and custom governance"
               />
             </div>
             {/* <p className="title">Optimal incentives</p>
@@ -97,10 +98,15 @@ const Introduction = () => {
         <div className="grid introduction__pushs">
           <div className="introduction__pushs__item introduction__pushs__item--left">
             <div className="introduction__pushs__item__illus" data-infinite="1">
-              <StaticImage
+              {/* <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_know.png"
                 alt="OKP4 Know token"
+              /> */}
+              <GatsbyImage
+                className="imgWrapper"
+                image={ImageManager.GetImage(content.bluecard1.image, files)}
+                alt={content.bluecard1.title}
               />
             </div>
             <div className="introduction__pushs__item__texts">
@@ -116,10 +122,15 @@ const Introduction = () => {
           </div>
           <div className="introduction__pushs__item introduction__pushs__item--right">
             <div className="introduction__pushs__item__illus" data-infinite="1">
-              <StaticImage
+              {/* <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_intro_cosmos.png"
                 alt="cosmos sdk"
+              /> */}
+              <GatsbyImage
+                className="imgWrapper"
+                image={ImageManager.GetImage(content.bluecard2.image, files)}
+                alt={content.bluecard2.title}
               />
             </div>
             <div className="introduction__pushs__item__texts">
