@@ -1,3 +1,11 @@
+html {
+  &.scroll-disabled {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
 body {
   // background: url("/images/grain.png"), $nightblue;
   background: $nightblue;
