@@ -109,15 +109,10 @@ const Landing = () => {
 
       // Classic approach
       rafId = requestAnimationFrame(perspective);
-      // if (ResponsiveManager.isWindowLarger("lg")) {
       window.addEventListener("scroll", scrollStarted);
-      // }
       return () => {
         cancelAnimationFrame(rafId);
-
-        // if (ResponsiveManager.isWindowLarger("lg")) {
         window.removeEventListener("scroll", scrollStarted);
-        // }
       };
     }, 1000);
   });

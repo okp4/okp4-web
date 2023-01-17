@@ -1,3 +1,56 @@
+.scrollToTop {
+  position: fixed;
+  z-index: 99;
+  bottom: 30px;
+  right: 40px;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  .scrollToTop__container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 24px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    transform: translate3d(calc(100% - 64px), 0, 0);
+
+    svg {
+      margin-right: 12px;
+      width: 16px;
+      height: auto;
+    }
+
+    span {
+      transition: transform 0.3s ease;
+      transform: translate3d(14px, 0, 0);
+      font-size: 16px;
+    }
+  }
+  @include media-bp-up(lg) {
+    &:hover {
+      .scrollToTop__container {
+        transform: none;
+        background: rgba(255, 255, 255, 0.5);
+
+        span {
+          transform: none;
+        }
+      }
+    }
+  }
+
+  &:not(.is-active) {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+    pointer-events: none;
+  }
+}
+
 footer.footer {
   position: relative;
   background: url("/images/grain.png"), $nightblue;
