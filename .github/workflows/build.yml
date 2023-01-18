@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+      - main
+
+  push:
+    branches:
+      - main
+
+  workflow_call:
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Setup node environment (for building)
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.13.0
+
+      - name: Fetch dependencies
+        working-directory: okp4-gatsby
+        run: |
+          yarn --frozen-lockfile
+
+      - name: Build
+        working-directory: okp4-gatsby
+        run: |
+          yarn build
