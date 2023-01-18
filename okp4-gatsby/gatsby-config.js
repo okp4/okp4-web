@@ -8,6 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: `/okp4-web`,
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -27,7 +28,7 @@ module.exports = {
         icon: "static/favicon-blue.png",
         name: `OKP4`,
         short_name: `OKP4`,
-        start_url: `/okp4-web/`,
+        start_url: `/`,
         background_color: `#002131`,
         theme_color: `#002131`,
         lang: `en`,
