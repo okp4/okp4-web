@@ -1,0 +1,50 @@
+section.strate {
+  position: sticky;
+  width: calc(100vw - 60px);
+  margin: 0 auto;
+  transform-origin: top;
+
+  @include media-bp-down(lg) {
+    position: relative;
+    width: 100vw;
+  }
+
+  .strate__inner {
+    transform-origin: top;
+    border-radius: 40px;
+
+    @include media-bp-down(lg) {
+      border-radius: 20px;
+    }
+  }
+
+  .strate__layer {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 40px;
+    opacity: 0;
+    background-color: #000000;
+    pointer-events: none;
+
+    @include media-bp-down(lg) {
+      display: none;
+      border-radius: 20px;
+    }
+  }
+}
+
+.strate__monitoring {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+}

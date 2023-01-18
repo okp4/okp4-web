@@ -1,0 +1,106 @@
+html {
+  &.scroll-disabled {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+body {
+  // background: url("/images/grain.png"), $nightblue;
+  background: $nightblue;
+  background-repeat: repeat;
+  background-size: contain;
+  color: $white;
+  font-family: $font;
+  font-weight: 400;
+
+  &.scroll-disabled {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+main {
+  position: relative;
+}
+
+.wrapper {
+  display: block;
+  width: 100%;
+  max-width: 1325px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @include media-bp-down(md) {
+    padding: 0 15px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-column-gap: 32px;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+
+  @include media-bp-down(lg) {
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+p,
+span {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+
+  &:visited {
+    color: $white;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-title;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 125px;
+  letter-spacing: 0.03em;
+  line-height: 1;
+
+  @include media-bp-down(lg) {
+    font-size: 65px;
+    line-height: 1.1;
+  }
+}
+
+h2 {
+  font-size: 80px;
+  line-height: 1;
+
+  @include media-bp-down(lg) {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+}
+
+h3 {
+  font-size: 60px;
+  line-height: 1.1;
+
+  @include media-bp-down(lg) {
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,31 @@
+humanDescription: Links used across all website for socials and external links
+linkedin:
+  url: https://www.linkedin.com/company/okp4-open-knowledge-protocol-for/
+  label: Linkedin
+twitter:
+  url: https://twitter.com/OKP4_Protocol
+  label: Twitter
+github:
+  url: https://github.com/okp4
+  label: Github
+medium:
+  url: https://blog.okp4.network/
+  label: Medium
+discord:
+  url: https://discord.com/invite/okp4
+  label: Discord
+telegram:
+  url: https://t.me/okp4network
+  label: Telegram
+whitepaper:
+  url: https://docs.okp4.network/docs/whitepaper/abstract
+  label: Whitepaper
+nemeton:
+  url: https://nemeton.okp4.network/
+  label: Nemeton program
+faq:
+  url: https://docs.okp4.network/faq
+  label: FAQ
+contact:
+  url: mailto:hello@okp4.network
+  label: Let's get in touch

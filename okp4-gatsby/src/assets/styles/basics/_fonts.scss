@@ -1,0 +1,44 @@
+@font-face {
+  font-family: Norse;
+  font-style: "normal";
+  font-weight: "normal";
+  src: url("../fonts/Norse.woff2") format("woff2"),
+    url("../fonts/Norse.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Norse;
+  font-style: "normal";
+  font-weight: "bold";
+  src: url("../fonts/Norse-Bold.woff2") format("woff2"),
+    url("../fonts/Norse-Bold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Barlow;
+  font-style: "normal";
+  font-weight: 400;
+  src: url("../fonts/Barlow-Regular.woff2") format("woff2"),
+    url("../fonts/Barlow-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Barlow;
+  font-style: "normal";
+  font-weight: 600;
+  src: url("../fonts/Barlow-SemiBold.woff2") format("woff2"),
+    url("../fonts/Barlow-SemiBold.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Barlow;
+  font-style: "normal";
+  font-weight: 700;
+  src: url("../fonts/Barlow-Bold.woff2") format("woff2"),
+    url("../fonts/Barlow-Bold.woff") format("woff");
+  font-display: swap;
+}

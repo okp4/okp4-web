@@ -1,0 +1,26 @@
+$white: #ffffff;
+$white-80: #cccccc;
+$whitebg: #f9f9f9;
+$nightblue: #002131;
+$darkblue: #012c4f;
+$textblue: #15233d;
+$pushblue: #225089;
+$turquoise: #00b6b7;
+$orange: #ff9500;
+$font-title: "Norse", sans-serif;
+$font: "Barlow", sans-serif;
+$breakpoints: (
+  xxs: 0,
+  xs: 375px,
+  sm: 570px,
+  md: 770px,
+  lg: 1025px,
+  xl: 1200px,
+  xxl: 1500px,
+  xxxl: 1800px,
+);
+
+:root {
+  --fullVH: 100vh;
+  --fullVHAlways: 100vh;
+}

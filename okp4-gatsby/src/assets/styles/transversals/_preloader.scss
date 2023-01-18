@@ -1,0 +1,16 @@
+section.preloader {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  background-color: $nightblue;
+
+  body.is-fully-loaded & {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

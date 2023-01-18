@@ -1,0 +1,131 @@
+@mixin bg-grain {
+  background-image: url("/images/grain.png");
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+@function bp-next(
+  $name,
+  $breakpoints: $breakpoints,
+  $breakpoint-names: map-keys($breakpoints)
+) {
+  $n: index($breakpoint-names, $name);
+
+  @return if(
+    $n < length($breakpoint-names),
+    nth($breakpoint-names, $n + 1),
+    null
+  );
+}
+
+@function bp-min($name, $breakpoints: $breakpoints) {
+  $min: map-get($breakpoints, $name);
+
+  @return if($min != 0, $min, null);
+}
+
+@function bp-max($name, $breakpoints: $breakpoints) {
+  $next: bp-next($name, $breakpoints);
+
+  @return if($next, bp-min($next, $breakpoints) - 0.02px, null);
+}
+
+@function bp-infix($name, $breakpoints: $breakpoints) {
+  @return if(bp-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+@mixin media-bp-up($name, $breakpoints: $breakpoints) {
+  $min: bp-min($name, $breakpoints);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-bp-down($name, $breakpoints: $breakpoints) {
+  $max: bp-min($name, $breakpoints);
+
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-bp-between($lower, $upper, $breakpoints: $breakpoints) {
+  $min: bp-min($lower, $breakpoints);
+  $max: bp-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-bp-up($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-bp-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+@mixin media-bp-only($name, $breakpoints: $breakpoints) {
+  $min: bp-min($name, $breakpoints);
+  $max: bp-max($name, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-bp-up($name, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-bp-down($name, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+@mixin touch-bp-down($breakpoint) {
+  @include media-bp-down($breakpoint) {
+    & {
+      @content;
+    }
+  }
+
+  body.touch-device & {
+    @content;
+  }
+}
+
+@mixin touch-bp-up($breakpoint) {
+  @include media-bp-up($breakpoint) {
+    body:not(.touch-device) & {
+      @content;
+    }
+  }
+}
+
+:root {
+  $breakpoints-value: "";
+
+  @each $bp, $value in $breakpoints {
+    $breakpoints-value: "#{$breakpoints-value} #{$bp} #{$value},";
+
+    @include media-bp-only($bp) {
+      --current-breakpoint: #{$bp};
+    }
+  }
+
+  --breakpoints: #{$breakpoints-value};
+}
