@@ -44,3 +44,4 @@ jobs:
           publish_dir: okp4-gatsby/public
           commit-message: |
             chore: release okp4-web github pages ${{ steps.get_version.outputs.version }}
+          cname: okp4.network
