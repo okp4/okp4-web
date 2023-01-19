@@ -5,7 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "../assets/styles/index.scss";
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, files }) => {
   // useEffect(() => {
   //   setTimeout(function () {
   //     PerformanceManager.monitorInfiniteAnimations();
@@ -15,9 +15,9 @@ const Layout = ({ children, location }) => {
   return (
     <>
       <Preloader />
-      <Header />
+      <Header files={files} />
       <main className={location}>{children}</main>
-      <Footer />
+      <Footer files={files} />
     </>
   );
 };

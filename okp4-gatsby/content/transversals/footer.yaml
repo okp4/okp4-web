@@ -1,4 +1,5 @@
 humanDescription: Content used for the footer at the bottom of the page
+help: Please download all images in the /content/images folder and just indicate the filename ("filename.jpg")
 messageNewsletter: Follow our adventures and <b>stay up to date </b>!
 messageCofounded: Our actions are co-funded by
 newsAndDocs:
@@ -18,3 +19,6 @@ sitemap:
 legals:
   url: https://okp4.network/
   text: Legals & GDPR
+imageFooter:
+  url: footer.png
+  alt: Illustration OKP4 fleurs

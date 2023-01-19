@@ -1,6 +1,7 @@
 // import React, { useEffect,  from "react";
 import React, { useRef, useEffect } from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
+import * as MediaManager from "../utils/MediaManager.js";
 import IconLogo from "../assets/images/logo.inline.svg";
 import IconArrowtr from "../assets/images/icons/arrow-tr.inline.svg";
 import IconArrowtop from "../assets/images/icons/arrow-tc.inline.svg";
@@ -16,7 +17,7 @@ import Newsletter from "./Newsletter.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentFooter from "/content/transversals/footer.yaml";
 
-const Footer = () => {
+const Footer = ({ files }) => {
   const divScrollTop = useRef(null);
   var scrollPos = 0;
   var scrollDirection = "down";
@@ -99,10 +100,15 @@ const Footer = () => {
 
         <div className="footer__main">
           <div className="footer__main__bg">
-            <StaticImage
+            <GatsbyImage
               className="imgWrapper"
-              src="../assets/images/illus/footer.png"
-              alt="Illustration fleurs OKP4"
+              image={MediaManager.GetImage(
+                contentFooter.imageFooter.url,
+                files
+              )}
+              alt={contentFooter.imageFooter.alt}
+              objectFit="contain"
+              objectPosition="50% 100%"
             />
           </div>
           <div className="wrapper">

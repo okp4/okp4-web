@@ -10,7 +10,7 @@ import SEO from "../components/SEO";
 export default function Home({ data }) {
   const allFiles = data.allFile.edges;
   return (
-    <Layout location={"homepage"}>
+    <Layout location={"homepage"} files={allFiles}>
       <AnalyticsScript />
       <Landing files={allFiles} />
       <Introduction files={allFiles} />
