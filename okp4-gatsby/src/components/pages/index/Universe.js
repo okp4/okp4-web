@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
+import * as MediaManager from "../../../utils/MediaManager.js";
 import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
 import StickyUniverse from "../../animations/StickyUniverse.js";
 import StrateRoadmap from "../../animations/StrateRoadmap.js";
@@ -7,7 +8,7 @@ import Halo from "../../animations/Halo.js";
 import contentUniverse from "/content/pages/index/universe.yaml";
 import contentRoadmap from "/content/pages/index/roadmap.yaml";
 
-const Universe = () => {
+const Universe = ({ files }) => {
   const roadmapItems = useRef(null);
 
   const setViewMore = () => {
@@ -61,7 +62,26 @@ const Universe = () => {
             <div className="universe__sticky">
               <h2 className="universe__title">{contentUniverse.title}</h2>
               <div className="universe__illus">
-                <div
+                {contentUniverse.items.reverse().map((item, index) => {
+                  let isActive = "";
+                  if (index === 0) isActive = " is-active";
+                  return (
+                    <div
+                      className={`universe__illus__item${isActive}`}
+                      data-infinite="1"
+                      key={index}
+                      data-item={item.identifiant}
+                      data-key={index}
+                    >
+                      <GatsbyImage
+                        className="imgWrapper"
+                        image={MediaManager.GetImage(item.image, files)}
+                        alt={item.description}
+                      />
+                    </div>
+                  );
+                })}
+                {/* <div
                   className="universe__illus__item"
                   data-item="dg"
                   data-infinite="1"
@@ -104,7 +124,7 @@ const Universe = () => {
                     src="../../../assets/images/illus/index_universe_blockchain.png"
                     alt="Blockchain"
                   />
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="universe__items">
@@ -204,7 +224,64 @@ const Universe = () => {
               </p>
             </div>
             <div className="roadmap__items" ref={roadmapItems}>
-              <StrateRoadmap
+              {contentRoadmap.items.map((item, index) => {
+                let topRoadmapSticky = 20 + index * 30;
+                const scaleSteps = contentRoadmap.items.length - 1;
+                const isLastItem = index === scaleSteps;
+                let scaleStep = 0.2 / scaleSteps;
+                let scaleMax = 0.2 - scaleStep * index;
+                return (
+                  <StrateRoadmap
+                    classContainer={"roadmap__item"}
+                    scaleTopSticky={topRoadmapSticky}
+                    scaleMax={scaleMax}
+                    key={index}
+                    isLastItem={isLastItem}
+                  >
+                    <div className="roadmap__item__layer"></div>
+                    <div className="roadmap__item__container">
+                      <span className="roadmap__item__text--mobile">
+                        — {item.title}
+                      </span>
+                      <div className="roadmap__item__text">
+                        <span className="title">— {item.title}</span>
+                        <p className="excerpt">{item.subtitle}</p>
+                        <p className="description">
+                          <span
+                            className="text__content"
+                            dangerouslySetInnerHTML={{
+                              __html: item.description,
+                            }}
+                          ></span>
+                          <span className="roadmap__item__readMore">
+                            <span className="readMore--closed">Read more</span>
+                            <span className="readMore--opened">Read less</span>
+                          </span>
+                        </p>
+                      </div>
+                      <div className="roadmap__item__illus">
+                        <div className="roadmap__item__date">
+                          <span>{item.tag}</span>
+                        </div>
+                        <GatsbyImage
+                          className="imgWrapper imgWrapper--desktop"
+                          image={MediaManager.GetImage(
+                            item.imageDesktop,
+                            files
+                          )}
+                          alt={item.subtitle}
+                        />
+                        <GatsbyImage
+                          className="imgWrapper imgWrapper--mobile"
+                          image={MediaManager.GetImage(item.imageMobile, files)}
+                          alt={item.subtitle}
+                        />
+                      </div>
+                    </div>
+                  </StrateRoadmap>
+                );
+              })}
+              {/* <StrateRoadmap
                 classContainer={"roadmap__item"}
                 scaleTopSticky="20"
                 scaleMax="0.2"
@@ -424,13 +501,8 @@ const Universe = () => {
                     />
                   </div>
                 </div>
-              </StrateRoadmap>
-              {/* <StrateRoadmap
-              classContainer={"roadmap__item roadmap__item--last"}
-              scaleTopSticky="150"
-              scaleMax="0.08"
-            > */}
-              <div className="roadmap__item roadmap__item--last">
+              </StrateRoadmap> */}
+              {/* <div className="roadmap__item roadmap__item--last">
                 <div className="roadmap__item__layer"></div>
                 <div className="roadmap__item__container">
                   <span className="roadmap__item__text--mobile">— Lugh</span>
@@ -478,9 +550,7 @@ const Universe = () => {
                     />
                   </div>
                 </div>
-              </div>
-              {/* </StrateRoadmap> */}
-              {/* <div className="roadmap__items__bottom"></div> */}
+              </div> */}
             </div>
           </div>
         </div>

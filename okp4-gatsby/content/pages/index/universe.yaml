@@ -1,23 +1,24 @@
 humanDescription: Content used for the section "Universe" of the index page
+help: Please download all images in the /content/images folder and just indicate the filename ("filename.jpg")
 title: ENTER IN THE OKP4 UNIVERSE
 items:
   - title: Blockchain
     identifiant: blockchain
     description: The first blockchain designed for digital assets sharing & coordination.
     tag: OKP4
-    image: src/assets/images/illus/index_intro_card_1.png
+    image: index_universe_blockchain.png
   - title: Dataverse
     identifiant: dataverse
     description: The ever-extanding universe comprised of all the Datasets, Algorithms, Softwares, Infrastructures and other resources referenced in the Blockchain and shared within multiple Data Spaces.
     tag: OKP4
-    image: src/assets/images/illus/index_intro_card_1.png
+    image: index_universe_dataverse.png
   - title: Development kit
     identifiant: dk
     description: Tools and services dedicated to developers to create their own apps using the OKP4 protocol.
     tag: OKP4
-    image: src/assets/images/illus/index_intro_card_1.png
+    image: index_universe_dk_cropped.png
   - title: Dataverse Gateways
     identifiant: dg
     description: OKP4 Dataverse Gateways enable anyone to interact with, build into, share and contribute and earn from the Dataverse.
     tag: OKP4
-    image: src/assets/images/illus/index_intro_card_1.png
+    image: index_universe_dg.png

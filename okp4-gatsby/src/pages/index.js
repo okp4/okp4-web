@@ -27,6 +27,7 @@ export const pageQuery = graphql`
         node {
           id
           relativePath
+          publicURL
           childImageSharp {
             gatsbyImageData
           }

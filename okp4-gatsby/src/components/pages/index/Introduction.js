@@ -1,6 +1,6 @@
 import React from "react";
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
-import * as ImageManager from "../../../utils/ImageManager.js";
+import * as MediaManager from "../../../utils/MediaManager.js";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import Halo from "../../animations/Halo.js";
 import Strate from "../../animations/Strate.js";
@@ -8,9 +8,6 @@ import Parallax from "../../animations/Parallax.js";
 import content from "/content/pages/index/introduction.yaml";
 
 const Introduction = ({ files }) => {
-  // console.log({ files });
-  // console.log(ImageManager.GetImage("index_intro_card_1.png", files));
-
   return (
     <Strate classContainer={"introduction"}>
       <Halo classContainer={"halo--big"}></Halo>
@@ -41,7 +38,7 @@ const Introduction = ({ files }) => {
               /> */}
               <GatsbyImage
                 className="imgWrapper"
-                image={ImageManager.GetImage(content.whitecard1.image, files)}
+                image={MediaManager.GetImage(content.whitecard1.image, files)}
                 alt="Easy to build data spaces and applications"
               />
             </div>
@@ -62,7 +59,7 @@ const Introduction = ({ files }) => {
               /> */}
               <GatsbyImage
                 className="imgWrapper"
-                image={ImageManager.GetImage(content.whitecard2.image, files)}
+                image={MediaManager.GetImage(content.whitecard2.image, files)}
                 alt="Built in Trust and custom governance"
               />
             </div>
@@ -85,7 +82,7 @@ const Introduction = ({ files }) => {
               /> */}
               <GatsbyImage
                 className="imgWrapper"
-                image={ImageManager.GetImage(content.whitecard3.image, files)}
+                image={MediaManager.GetImage(content.whitecard3.image, files)}
                 alt="Built in Trust and custom governance"
               />
             </div>
@@ -105,7 +102,7 @@ const Introduction = ({ files }) => {
               /> */}
               <GatsbyImage
                 className="imgWrapper"
-                image={ImageManager.GetImage(content.bluecard1.image, files)}
+                image={MediaManager.GetImage(content.bluecard1.image, files)}
                 alt={content.bluecard1.title}
               />
             </div>
@@ -129,7 +126,7 @@ const Introduction = ({ files }) => {
               /> */}
               <GatsbyImage
                 className="imgWrapper"
-                image={ImageManager.GetImage(content.bluecard2.image, files)}
+                image={MediaManager.GetImage(content.bluecard2.image, files)}
                 alt={content.bluecard2.title}
               />
             </div>

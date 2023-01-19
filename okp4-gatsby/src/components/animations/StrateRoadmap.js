@@ -7,6 +7,7 @@ const StrateRoadmap = ({
   classContainer,
   scaleTopSticky,
   scaleMax,
+  isLastItem,
 }) => {
   const divRef = useRef(null);
   var rafId = 0;
@@ -33,27 +34,15 @@ const StrateRoadmap = ({
   };
 
   const setStickyPosition = () => {
-    // if (ResponsiveManager.isWindowLarger("md")) {
-    // let divDimensions = divRef.current.getBoundingClientRect();
     let topPositionSticky = parseInt(scaleTopSticky);
     if (ResponsiveManager.isWindowSmaller("md")) {
       topPositionSticky = topPositionSticky / 2;
     }
     let topPositionCss = topPositionSticky + "px";
     divRef.current.style.top = topPositionCss;
-    // } else {
-    //   const windowHeight =
-    //     window.innerHeight || document.documentElement.clientHeight;
-    //   let divDimensions = divRef.current.getBoundingClientRect();
-    //   let topPositionSticky = -divDimensions.height + windowHeight;
-    //   let topPositionCss = topPositionSticky + "px";
-    //   divRef.current.style.top = topPositionCss;
-    // }
   };
 
   const perspective = () => {
-    // let divAbsoluteTop = divRef.current.dataset.top;
-    // let height = divRef.current.dataset.height;
     let startScale = divRef.current.dataset.start;
     let endScale = divRef.current.dataset.end;
 
@@ -65,18 +54,6 @@ const StrateRoadmap = ({
         "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
       divRef.current.style.transform = scaleCss;
 
-      // let scaleTotal = parseFloat(scaleRatio) + parseFloat(scaleMax);
-      // if (scaleTotal < 1.01) {
-      //   divRef.current.classList.add("is-scaled");
-      // } else {
-      //   divRef.current.classList.remove("is-scaled");
-      // }
-
-      // let translateRatio = ratio * height;
-      // let translateCss = "translate3d(0," + translateRatio + "px, 0) ";
-      // let transformCss = translateCss + scaleCss;
-      // divRef.current.style.transform = transformCss;
-
       let opacityRatio = (ratio / 4).toFixed(4);
       divRef.current.querySelector(".roadmap__item__layer").style.opacity =
         opacityRatio;
@@ -85,30 +62,30 @@ const StrateRoadmap = ({
   };
 
   useEffect(() => {
-    setTimeout(function () {
-      // if (ResponsiveManager.isWindowLarger("md")) {
-      var divDimensions = divRef.current.getBoundingClientRect();
-      var divAbsoluteTop = divDimensions.top + window.scrollY;
-      // var startScale = divAbsoluteTop + divDimensions.height - windowHeight;
-      var startScale = divAbsoluteTop - scaleTopSticky;
-      var endScale = divAbsoluteTop - scaleTopSticky + divDimensions.height;
-      divRef.current.dataset.top = divAbsoluteTop;
-      divRef.current.dataset.start = startScale;
-      divRef.current.dataset.end = endScale;
-      divRef.current.dataset.height = divDimensions.height;
+    if (!isLastItem) {
+      setTimeout(function () {
+        var divDimensions = divRef.current.getBoundingClientRect();
+        var divAbsoluteTop = divDimensions.top + window.scrollY;
+        var startScale = divAbsoluteTop - scaleTopSticky;
+        var endScale = divAbsoluteTop - scaleTopSticky + divDimensions.height;
+        divRef.current.dataset.top = divAbsoluteTop;
+        divRef.current.dataset.start = startScale;
+        divRef.current.dataset.end = endScale;
+        divRef.current.dataset.height = divDimensions.height;
 
-      setStickyPosition();
+        setStickyPosition();
 
-      //IntersectionObserver Approach
-      // monitorSection();
+        //IntersectionObserver Approach
+        // monitorSection();
 
-      //Classic Approach
-      rafId = requestAnimationFrame(perspective);
+        //Classic Approach
+        rafId = requestAnimationFrame(perspective);
 
-      return () => {
-        cancelAnimationFrame(rafId);
-      };
-    }, 3000);
+        return () => {
+          cancelAnimationFrame(rafId);
+        };
+      }, 3000);
+    }
   });
 
   return (
