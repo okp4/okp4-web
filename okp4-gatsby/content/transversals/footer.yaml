@@ -13,8 +13,8 @@ newsAndDocs:
     text: Follow the latest content and publications on the OKP4 blog.
     url: https://blog.okp4.network/
 sitemap:
-  url: /
+  url: https://okp4.network/
   text: Sitemap
 legals:
-  url: /
+  url: https://okp4.network/
   text: Legals & GDPR
