@@ -1,11 +1,7 @@
 name: Publish
 
 on:
-  push:
-    branches:
-      - main
-    tags:
-      - v*
+  workflow_dispatch:
 
 concurrency:
   group: publish-${{ github.ref }}
@@ -37,11 +33,12 @@ jobs:
         run: |
           yarn build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Copy build output to OVH machine
+        uses: garygrossgarten/github-action-scp@release
         with:
-          github_token: ${{ secrets.OKP4_TOKEN }}
-          publish_dir: okp4-gatsby/public
-          commit-message: |
-            chore: release okp4-web github pages ${{ steps.get_version.outputs.version }}
-          cname: okp4.network
+          host: ${{ secrets.OKP4_OVH_SSH_HOST }}
+          username: ${{ secrets.OKP4_OVH_SSH_USERNAME }}
+          password: ${{ secrets.OKP4_OVH_SSH_PASSWORD }}
+          port: ${{ secrets.OKP4_OVH_SSH_PORT }}
+          local: "okp4-gatsby/public"
+          remote: "/homez.216/okpcomnvui/okp4-web"
