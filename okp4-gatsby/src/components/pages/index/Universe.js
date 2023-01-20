@@ -298,7 +298,7 @@ const Universe = () => {
                   </div>
                   <div className="roadmap__item__illus">
                     <div className="roadmap__item__date">
-                      <span>Q4 2022 – Q2 2022</span>
+                      <span>Q4 2022 – Q2 2023</span>
                     </div>
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
@@ -353,7 +353,7 @@ const Universe = () => {
                   </div>
                   <div className="roadmap__item__illus">
                     <div className="roadmap__item__date">
-                      <span>Q3 2022</span>
+                      <span>Q3 2023</span>
                     </div>
                     <StaticImage
                       className="imgWrapper  imgWrapper--desktop"
@@ -410,7 +410,7 @@ const Universe = () => {
                   </div>
                   <div className="roadmap__item__illus">
                     <div className="roadmap__item__date">
-                      <span>Q2 2023</span>
+                      <span>Q2 2024</span>
                     </div>
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
@@ -464,7 +464,7 @@ const Universe = () => {
                   </div>
                   <div className="roadmap__item__illus">
                     <div className="roadmap__item__date">
-                      <span>Q1 2024</span>
+                      <span>Q1 2025</span>
                     </div>
                     <StaticImage
                       className="imgWrapper imgWrapper--desktop"
