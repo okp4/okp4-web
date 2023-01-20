@@ -19,24 +19,24 @@ items:
   - title: Nemeton
     subtitle: OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022.
     description: The Nemeton era is the bootstrapping era. This is when the ideas & concepts are expressed to the public.This is when the first validators join together to power the network, test its limits and contribute to its developments. <br /> <br />This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities, resulting in the first OKP4-powered decentralized use cases operated by communities of pioneers. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources. Nemeton becomes the host for existing use cases. <br /> <br />The Nemeton era results in a stable, battle-tested environment and gives birth to the OKP4 mainnet.
-    tag: Q4 2022 – Q2 2022
+    tag: Q4 2022 – Q2 2023
     imageDesktop: src/assets/images/illus/index_roadmap_2.jpg
     imageMobile: src/assets/images/illus/index_roadmap_2_mobile.jpg
   - title: Myrddin
     subtitle: Get ready for the Myrddin era, where OKP4 mainnet is unleashed and the decentralized network come to life. The main focus is making OKP4 easy to use and highly customizable, hosted on a community-operated network secured by the scarce, publicly traded $KNOW token.
     description: Watch as the community of builders deploys new governance rules for Data Spaces and participants find new designs to coordinate themselves and build epic innovative applications. Token holders and validators take control through governance proposals and votes, creating an involved and diverse community.<br /><br />IBC channels enable token flow between chains and pave the way for the first proto-interchain apps. By the end of the Myrddin era, we'll see impactful businesses and community-powered applications enabled by OKP4. The powerful OKP4 SDK and Dataverse Gateways releases take us into the Duir era...
-    tag: Q3 2022
+    tag: Q3 2023
     imageDesktop: src/assets/images/illus/index_roadmap_3.jpg
     imageMobile: src/assets/images/illus/index_roadmap_3_mobile.jpg
   - title: Duir
     subtitle: Unlike the Myrddin era, which starts at a single point in time when the mainnet launched, the transition to Duir happen gradually.
     description: "While Myrddin is focused on building the infrastructure, the Duir era is focused on adoption. With each release relating to the SDK, the Dataverse Gateways or the governance templates, new opportunities emerge for builders, data & service providers and users. The Duir era is the climax of adoption due to the easiness and straightforwardness of building and onboarding communities.<br /><br />The Dataverse reaches a critical network effect: the many datasets and services available provide unprecedented opportunities for builders and becomes a significant go-to-market fo data & services providers. An ecosystem of Data Space governance tokens emerges, providing healthy competition between them and steering open innovation to the next level. Real-life use cases and value flows into the network and the OKP4 public good continues to grow."
-    tag: Q2 2023
+    tag: Q2 2024
     imageDesktop: src/assets/images/illus/index_roadmap_4.jpg
     imageMobile: src/assets/images/illus/index_roadmap_4_mobile.jpg
   - title: Lugh
     subtitle: The Lugh era is the expression of the unstoppable nature of OKP4s design.
     description: "Inter-blockchain communication is now the norm and OKP4 is interoperable with every meaningful network to access any kind of datasets and services (decentralized storage, decentralized computation...), onboard communities from other chains easily, and seamless interchain applications.<br /><br /> Due to OKP4 first-mover advantage and significant network effect reached, OKP4 becomes the default coordination layer for most applications based on distributed resources.<br /><br />Thousands of projects and teams across the web2 and web3 worlds are building on OKP4: it has reached mass adoption."
-    tag: Q1 2024
+    tag: Q1 2025
     imageDesktop: src/assets/images/illus/index_roadmap_5.jpg
     imageMobile: src/assets/images/illus/index_roadmap_5_mobile.jpg
