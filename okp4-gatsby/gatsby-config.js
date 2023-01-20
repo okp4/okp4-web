@@ -8,7 +8,6 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: `/okp4-web`,
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
