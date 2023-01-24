@@ -38,4 +38,4 @@ jobs:
           password: ${{ secrets.OKP4_OVH_SSH_PASSWORD }}
           port: ${{ secrets.OKP4_OVH_SSH_PORT }}
           local: "okp4-gatsby/public"
-          remote: "/homez.216/okpcomnvui/okp4-web"
+          remote: ${{ secrets.OKP4_OVH_SSH_PATH }}
