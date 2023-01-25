@@ -15,7 +15,7 @@ import * as ScrollManager from "../utils/ScrollManager.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentHeader from "/content/transversals/header.yaml";
 
-const Header = () => {
+const Header = ({ fixed = false }) => {
   const divRef = useRef(null);
   const divMobile = useRef(null);
 
@@ -73,7 +73,7 @@ const Header = () => {
   });
 
   return (
-    <header className="header" ref={divRef}>
+    <header className={`header ${fixed ? "fixed" : ""}`} ref={divRef}>
       <div className="header--mobile" ref={divMobile}>
         <Link to="/" className="header--mobile__logo">
           <IconLogo />
