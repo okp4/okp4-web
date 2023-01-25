@@ -2,6 +2,7 @@ main.legalMentions {
   .legalMentions {
     min-height: 100vh;
     padding-top: 25vh;
+    padding-bottom: 10vh;
 
     @include media-bp-down(lg) {
       width: 100%;
@@ -17,12 +18,21 @@ main.legalMentions {
       right: 0;
       left: 0;
       transform-origin: center;
+      display: grid;
+      gap: 40px;
+
+      .subtitle {
+        color: $white-80;
+        a {
+          color: $white-80;
+          text-decoration: underline;
+        }
+      }
 
       .legalMentions__items {
         .legalMentions__item {
           position: relative;
           width: 100%;
-          margin-bottom: 40px;
 
           .title {
             display: block;
@@ -36,6 +46,7 @@ main.legalMentions {
             color: $white-80;
 
             a {
+              color: $white-80;
               text-decoration: underline;
             }
 
