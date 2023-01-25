@@ -17,7 +17,7 @@ sitemap:
   url: https://okp4.network/
   text: Sitemap
 legals:
-  url: https://okp4.network/
+  url: /legal-mentions
   text: Legals & GDPR
 imageFooter:
   url: footer.png

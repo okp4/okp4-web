@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import * as MediaManager from "../utils/MediaManager.js";
+import { Link } from "gatsby";
 import IconLogo from "../assets/images/logo.inline.svg";
 import IconArrowtr from "../assets/images/icons/arrow-tr.inline.svg";
 import IconArrowtop from "../assets/images/icons/arrow-tc.inline.svg";
@@ -233,14 +234,12 @@ const Footer = ({ files }) => {
               >
                 {contentFooter.sitemap.text}
               </a>
-              <a
-                href={contentFooter.legals.url}
+              <Link
                 className="footer__main__sitemap__item"
-                target="_blank"
-                rel="noreferrer"
+                to="/legal-mentions"
               >
                 {contentFooter.legals.text}
-              </a>
+              </Link>
               <a
                 href="https://w2p-digital.com/"
                 className="footer__main__sitemap__item footer__main__sitemap__item--w2p"
