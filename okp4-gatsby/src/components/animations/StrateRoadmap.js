@@ -21,8 +21,8 @@ const StrateRoadmap = ({
   };
 
   const perspective = () => {
-    let startScale = divRef.current.dataset.start;
-    let endScale = divRef.current.dataset.end;
+    let startScale = divRef.current?.dataset.start;
+    let endScale = divRef.current?.dataset.end;
 
     if (window.scrollY >= startScale && window.scrollY <= endScale) {
       let ratio = ScrollManager.getScaleRatio({ startScale, endScale });

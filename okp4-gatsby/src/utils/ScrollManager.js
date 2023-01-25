@@ -1,10 +1,9 @@
 export function isIntersectingViewport(elem) {
-  const rect = elem.getBoundingClientRect();
+  const rect = elem?.getBoundingClientRect();
   const windowHeight =
     window.innerHeight || document.documentElement.clientHeight;
 
-  if (rect.top < windowHeight && rect.top > -rect.height) return true;
-  else return false;
+  return rect && rect.top < windowHeight && rect.top > -rect.height;
 }
 
 export function getIntersectionRatio(elem) {

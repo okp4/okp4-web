@@ -33,16 +33,18 @@ const Header = () => {
   const scrollStarted = () => {
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
+
     if (window.scrollY < windowHeight + 100) {
-      divRef.current.classList.remove("is-reset");
+      divRef.current?.classList.remove("is-reset");
       let ratio = getRatio();
-      if (ResponsiveManager.isWindowLarger("lg")) {
+
+      if (ResponsiveManager.isWindowLarger("lg") && divRef.current) {
         divRef.current.style.opacity = ratio;
-      } else {
+      } else if (divMobile.current) {
         divMobile.current.style.opacity = ratio;
       }
     } else {
-      divRef.current.classList.add("is-reset");
+      divRef.current?.classList.add("is-reset");
     }
   };
 

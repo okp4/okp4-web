@@ -11,7 +11,7 @@ const Landing = () => {
   const divFadeIn = useRef(null);
 
   const scrollStarted = () => {
-    if (window.scrollY < 410) {
+    if (window.scrollY < 410 && divFadeIn.current) {
       const scrollY = window.scrollY;
       const distance = 400;
       let percentTravelled = scrollY / distance;
@@ -23,8 +23,8 @@ const Landing = () => {
   };
 
   const perspective = () => {
-    let startScale = divRef.current.dataset.start;
-    let endScale = divRef.current.dataset.end;
+    let startScale = divRef.current?.dataset.start;
+    let endScale = divRef.current?.dataset.end;
 
     if (window.scrollY >= startScale && window.scrollY <= endScale) {
       let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
@@ -38,7 +38,8 @@ const Landing = () => {
       divFadeOut.current.style.opacity = opacityRatioOut;
     }
 
-    divRef.current.querySelectorAll("[data-parallax]").forEach((elem) => {
+    // if (ResponsiveManager.isWindowLarger("lg")) {
+    divRef.current?.querySelectorAll("[data-parallax]").forEach((elem) => {
       if (ScrollManager.isIntersectingViewport(divFadeIn.current)) {
         var ratio = ScrollManager.getIntersectionRatio(divFadeIn.current);
         var transformRatio;
