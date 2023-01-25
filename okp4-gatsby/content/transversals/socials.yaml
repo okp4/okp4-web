@@ -23,6 +23,9 @@ whitepaper:
 nemeton:
   url: https://nemeton.okp4.network/
   label: Nemeton program
+pollen:
+  url: https://pollen-by-okp4.com/
+  label: Discover Pollen
 faq:
   url: https://docs.okp4.network/faq
   label: FAQ
