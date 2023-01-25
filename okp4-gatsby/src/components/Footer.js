@@ -13,11 +13,12 @@ import IconDiscord from "../assets/images/socials/discord.inline.svg";
 import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import Halo from "./animations/Halo.js";
 import Docs from "./Docs.js";
+import Partners from "./Partners";
 import Newsletter from "./Newsletter.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentFooter from "/content/transversals/footer.yaml";
 
-const Footer = ({ files }) => {
+const Footer = ({ files, withDocsAndPartners = false }) => {
   const divScrollTop = useRef(null);
   var scrollPos = 0;
   var scrollDirection = "down";
@@ -66,37 +67,12 @@ const Footer = ({ files }) => {
       </div>
       <footer className="footer">
         <Halo />
-        <div className="footer__sticky">
-          <Docs />
-          <div className="footer__partenaires">
-            <div className="wrapper">
-              <p>{contentFooter.messageCofounded}</p>
-              <div className="footer__partenaires__items">
-                <div className="footer__partenaires__item">
-                  <StaticImage
-                    className="imgWrapper"
-                    src="../assets/images/logos/occitanie.png"
-                    alt="Logo Occitanie"
-                  />
-                </div>
-                <div className="footer__partenaires__item">
-                  <StaticImage
-                    className="imgWrapper"
-                    src="../assets/images/logos/bpi.png"
-                    alt="Logo BPI France"
-                  />
-                </div>
-                <div className="footer__partenaires__item">
-                  <StaticImage
-                    className="imgWrapper"
-                    src="../assets/images/logos/bretagne.png"
-                    alt="Logo Bretagne"
-                  />
-                </div>
-              </div>
-            </div>
+        {withDocsAndPartners && (
+          <div className="footer__sticky">
+            <Docs />
+            <Partners />
           </div>
-        </div>
+        )}
 
         <div className="footer__main">
           <div className="footer__main__bg">

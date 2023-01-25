@@ -8,9 +8,9 @@ const Layout = ({ children, location, files }) => {
   return (
     <>
       <Preloader />
-      <Header files={files} fixed={fixedHeader} />
+      <Header files={files} fixed={homepage} />
       <main className={location}>{children}</main>
-      <Footer files={files} />
+      <Footer files={files} withDocsAndPartners={homepage} />
     </>
   );
 };
