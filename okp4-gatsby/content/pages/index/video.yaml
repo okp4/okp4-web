@@ -1,0 +1,5 @@
+humanDescription: Content used for the section "video" of the index page
+help: Please download all videos in the /content/videos folder in mp4 and webm format and just indicate the filename ("filename.mp4")
+video:
+  mp4: okp4-720p.mp4
+  webm: okp4-720p.webm

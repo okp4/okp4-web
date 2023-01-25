@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Script } from "gatsby";
+import { Script, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Landing from "../components/pages/index/Landing";
 import Introduction from "../components/pages/index/Introduction";
@@ -7,17 +7,35 @@ import Video from "../components/pages/index/Video";
 import Universe from "../components/pages/index/Universe";
 import SEO from "../components/SEO";
 
-export default function Home() {
+export default function Home({ data }) {
+  const allFiles = data.allFile.edges;
   return (
-    <Layout location={"homepage"}>
+    <Layout location={"homepage"} files={allFiles}>
       <AnalyticsScript />
-      <Landing />
-      <Introduction />
-      <Video />
-      <Universe />
+      <Landing files={allFiles} />
+      <Introduction files={allFiles} />
+      <Video files={allFiles} />
+      <Universe files={allFiles} />
     </Layout>
   );
 }
+
+export const pageQuery = graphql`
+  query AllImages {
+    allFile {
+      edges {
+        node {
+          id
+          relativePath
+          publicURL
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+  }
+`;
 
 export const Head = () => <SEO></SEO>;
 
