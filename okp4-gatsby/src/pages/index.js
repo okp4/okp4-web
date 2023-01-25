@@ -8,7 +8,6 @@ import Universe from "../components/pages/index/Universe";
 import Seo from "../components/SEO";
 
 export default function Home({ data }) {
-  // const allFiles = data.allFile.edges;
   return (
     <Layout location={"homepage"} files={data}>
       <AnalyticsScript />
