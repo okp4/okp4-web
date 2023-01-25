@@ -1,6 +1,6 @@
 export function GetImage(filename, allFiles) {
   let imageData;
-  const image = allFiles.find((file) => {
+  const image = allFiles.allImages.edges.find((file) => {
     return file.node.relativePath === filename;
   });
 
@@ -15,7 +15,7 @@ export function GetImage(filename, allFiles) {
 
 export function GetVideo(filename, allFiles) {
   let videoData;
-  const video = allFiles.find((file) => {
+  const video = allFiles.allVideos.edges.find((file) => {
     return file.node.relativePath === filename;
   });
 
@@ -27,33 +27,3 @@ export function GetVideo(filename, allFiles) {
 
   return videoData;
 }
-
-// export const query = graphql`
-//   query AllImages {
-//     allFile {
-//       edges {
-//         node {
-//           id
-//           childImageSharp {
-//             gatsbyImageData
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
-
-// const data = useStaticQuery(graphql`
-//   query ImageQuery {
-//     allFile(filter: { relativePath: { eq: "index_intro_card_1.png" } }) {
-//       edges {
-//         node {
-//           id
-//           childImageSharp {
-//             gatsbyImageData
-//           }
-//         }
-//       }
-//     }
-//   }
-// `);

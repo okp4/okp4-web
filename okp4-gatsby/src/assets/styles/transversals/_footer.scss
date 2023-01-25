@@ -372,12 +372,6 @@ footer.footer {
         bottom: 0;
         left: 0;
         object-fit: cover;
-
-        @include media-bp-down(lg) {
-          // top: initial;
-          // object-fit: contain !important;
-          // bottom: -15px;
-        }
       }
     }
 
@@ -554,11 +548,6 @@ footer.footer {
             align-items: center;
             justify-content: space-between;
 
-            // @include media-bp-down(lg) {
-            //   display: block;
-            //   width: 100%;
-            // }
-
             input,
             .cta {
               width: 100%;
@@ -576,8 +565,6 @@ footer.footer {
               margin-right: 10px;
 
               @include media-bp-down(lg) {
-                // width: 100%;
-                // margin-bottom: 10px;
                 text-align: center;
               }
 
@@ -597,8 +584,6 @@ footer.footer {
             }
 
             .button__container {
-              // width: 100%;
-
               button {
                 display: flex;
                 align-items: center;

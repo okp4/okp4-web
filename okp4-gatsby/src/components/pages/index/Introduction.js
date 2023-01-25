@@ -1,7 +1,6 @@
 import React from "react";
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../utils/MediaManager.js";
-import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import Halo from "../../animations/Halo.js";
 import Strate from "../../animations/Strate.js";
 import Parallax from "../../animations/Parallax.js";
@@ -31,11 +30,6 @@ const Introduction = ({ files }) => {
             parallaxMiddle="0.5"
           >
             <div className="introduction__cards__item__illus" data-infinite="1">
-              {/* <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_intro_card_1.png"
-                alt="Easy to build data spaces and applications"
-              /> */}
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.whitecard1.image, files)}
@@ -52,19 +46,12 @@ const Introduction = ({ files }) => {
             parallaxMiddle="0.5"
           >
             <div className="introduction__cards__item__illus" data-infinite="1">
-              {/* <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_intro_card_2.png"
-                alt="Built in Trust and custom governance"
-              /> */}
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.whitecard2.image, files)}
                 alt="Built in Trust and custom governance"
               />
             </div>
-            {/* <p className="title">Built in Trust</p>
-            <p className="text">and custom governance</p> */}
             <p className="title">{content.whitecard2.title}</p>
             <p className="text">{content.whitecard2.description}</p>
           </Parallax>
@@ -75,19 +62,12 @@ const Introduction = ({ files }) => {
             parallaxMiddle="0.5"
           >
             <div className="introduction__cards__item__illus" data-infinite="1">
-              {/* <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_intro_card_3.png"
-                alt="Optimal incentives for collaboration"
-              /> */}
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.whitecard3.image, files)}
                 alt="Built in Trust and custom governance"
               />
             </div>
-            {/* <p className="title">Optimal incentives</p>
-            <p className="text">for collaboration</p> */}
             <p className="title">{content.whitecard3.title}</p>
             <p className="text">{content.whitecard3.description}</p>
           </Parallax>
@@ -95,11 +75,6 @@ const Introduction = ({ files }) => {
         <div className="grid introduction__pushs">
           <div className="introduction__pushs__item introduction__pushs__item--left">
             <div className="introduction__pushs__item__illus" data-infinite="1">
-              {/* <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_intro_know.png"
-                alt="OKP4 Know token"
-              /> */}
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.bluecard1.image, files)}
@@ -107,23 +82,12 @@ const Introduction = ({ files }) => {
               />
             </div>
             <div className="introduction__pushs__item__texts">
-              {/* <p className="title">Powered by the KNOW token</p> */}
               <p className="title">{content.bluecard1.title}</p>
-              {/* <p className="text">
-                Incentives & value flows for the many use cases are enabled by
-                the $KNOW. Many B2B use cases are ready to be launched, more
-                community use cases will be built when the Testnet launches.
-              </p> */}
               <p className="text">{content.bluecard1.description}</p>
             </div>
           </div>
           <div className="introduction__pushs__item introduction__pushs__item--right">
             <div className="introduction__pushs__item__illus" data-infinite="1">
-              {/* <StaticImage
-                className="imgWrapper"
-                src="../../../assets/images/illus/index_intro_cosmos.png"
-                alt="cosmos sdk"
-              /> */}
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.bluecard2.image, files)}

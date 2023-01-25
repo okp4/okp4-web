@@ -63,7 +63,9 @@ const Newsletter = () => {
                       />
                     </div>
                   </div>
-                  <label className="entry__error entry__error--primary"></label>
+                  <label // eslint-disable-line jsx-a11y/label-has-associated-control
+                    className="entry__error entry__error--primary"
+                  ></label>
                 </div>
               </div>
             </div>

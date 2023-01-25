@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import IconLogo from "../assets/images/logo.inline.svg";
 import IconArrowtr from "../assets/images/icons/arrow-tr.inline.svg";
-import IconChevron from "../assets/images/icons/chevron.inline.svg";
 import IconLinkedin from "../assets/images/socials/linkedin.inline.svg";
 import IconTwitter from "../assets/images/socials/twitter.inline.svg";
 import IconGithub from "../assets/images/socials/github.inline.svg";
@@ -56,6 +55,10 @@ const Header = () => {
     }
   };
 
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 13) toggleBurger();
+  };
+
   useEffect(() => {
     setTimeout(function () {
       window.addEventListener("scroll", scrollStarted);
@@ -73,7 +76,13 @@ const Header = () => {
         <Link to="/" className="header--mobile__logo">
           <IconLogo />
         </Link>
-        <div className="header--mobile__burger" onClick={toggleBurger}>
+        <div
+          className="header--mobile__burger"
+          onClick={toggleBurger}
+          onKeyDown={handleKeyDown}
+          role="button"
+          tabIndex={0}
+        >
           <IconBurger className="header--mobile__burger__open" />
           <IconBurgerCross className="header--mobile__burger__close" />
         </div>
@@ -135,29 +144,11 @@ const Header = () => {
               <IconTelegram />
             </a>
           </div>
-          {/* <div className="header__lang">
-            <span>FR</span>
-            <IconChevron />
-          </div> */}
         </div>
         <div className="header__bottom">
           <Link to="/" className="header__logo">
             <IconLogo />
           </Link>
-          {/* <nav className="header__navigation">
-            <Link to="/" className="header__navigation__link">
-              <span>Learn</span>
-            </Link>
-            <Link to="/" className="header__navigation__link">
-              <span>Develop</span>
-            </Link>
-            <Link to="/" className="header__navigation__link">
-              <span>Explore</span>
-            </Link>
-            <Link to="/" className="header__navigation__link">
-              <span>Interact</span>
-            </Link>
-          </nav> */}
           <nav className="header__resources">
             <a
               href={contentSocials.whitepaper.url}

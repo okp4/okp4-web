@@ -5,24 +5,24 @@ import Landing from "../components/pages/index/Landing";
 import Introduction from "../components/pages/index/Introduction";
 import Video from "../components/pages/index/Video";
 import Universe from "../components/pages/index/Universe";
-import SEO from "../components/SEO";
+import Seo from "../components/SEO";
 
 export default function Home({ data }) {
-  const allFiles = data.allFile.edges;
+  // const allFiles = data.allFile.edges;
   return (
-    <Layout location={"homepage"} files={allFiles}>
+    <Layout location={"homepage"} files={data}>
       <AnalyticsScript />
-      <Landing files={allFiles} />
-      <Introduction files={allFiles} />
-      <Video files={allFiles} />
-      <Universe files={allFiles} />
+      <Landing files={data} />
+      <Introduction files={data} />
+      <Video files={data} />
+      <Universe files={data} />
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query AllImages {
-    allFile {
+  query FilesQuery {
+    allImages: allFile(filter: { extension: { nin: ["mp4", "ogg", "webm"] } }) {
       edges {
         node {
           id
@@ -34,10 +34,19 @@ export const pageQuery = graphql`
         }
       }
     }
+    allVideos: allFile(filter: { extension: { in: ["mp4", "ogg", "webm"] } }) {
+      edges {
+        node {
+          id
+          relativePath
+          publicURL
+        }
+      }
+    }
   }
 `;
 
-export const Head = () => <SEO></SEO>;
+export const Head = () => <Seo></Seo>;
 
 const AnalyticsScript = () => (
   <Script>
