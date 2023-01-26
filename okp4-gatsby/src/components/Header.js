@@ -177,15 +177,6 @@ const Header = ({ isPositionFixed = false }) => {
               <span>{contentSocials.nemeton.label}</span>
               <IconArrowtr />
             </a>
-            <a
-              href={contentSocials.pollen.url}
-              className="header__resources__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>{contentSocials.pollen.label}</span>
-              <IconArrowtr />
-            </a>
           </nav>
         </div>
       </div>
