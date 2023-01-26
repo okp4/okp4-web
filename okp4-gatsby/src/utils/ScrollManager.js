@@ -2,7 +2,6 @@ export function isIntersectingViewport(elem) {
   const rect = elem.getBoundingClientRect();
   const windowHeight =
     window.innerHeight || document.documentElement.clientHeight;
-  const windowWidth = window.innerWidth || document.documentElement.clientWidth;
 
   if (rect.top < windowHeight && rect.top > -rect.height) return true;
   else return false;

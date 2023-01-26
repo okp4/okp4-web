@@ -1,4 +1,3 @@
-// import React, { useEffect,  from "react";
 import React, { useRef, useEffect } from "react";
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import * as MediaManager from "../utils/MediaManager.js";
@@ -26,6 +25,10 @@ const Footer = ({ files }) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 13) scrollTop();
+  };
+
   const scrollStarted = () => {
     if (window.scrollY > scrollPos) {
       scrollDirection = "down";
@@ -33,23 +36,12 @@ const Footer = ({ files }) => {
       scrollDirection = "up";
     }
     scrollPos = window.scrollY;
-    if (scrollPos > 100 && scrollDirection == "up")
+    if (scrollPos > 100 && scrollDirection === "up")
       divScrollTop.current.classList.add("is-active");
     else divScrollTop.current.classList.remove("is-active");
   };
 
-  // const setStickyPosition = () => {
-  //   const windowHeight =
-  //     window.innerHeight || document.documentElement.clientHeight;
-  //   let divDimensions = divRef.current.getBoundingClientRect();
-  //   let topPositionSticky = -(divDimensions.height - windowHeight);
-
-  //   let topPositionCss = topPositionSticky + "px";
-  //   divRef.current.style.top = topPositionCss;
-  // };
-
   useEffect(() => {
-    //   setStickyPosition();
     window.addEventListener("scroll", scrollStarted);
     return () => {
       window.removeEventListener("scroll", scrollStarted);
@@ -58,7 +50,14 @@ const Footer = ({ files }) => {
 
   return (
     <>
-      <div className="scrollToTop" ref={divScrollTop} onClick={scrollTop}>
+      <div
+        className="scrollToTop"
+        ref={divScrollTop}
+        onClick={scrollTop}
+        onKeyDown={handleKeyDown}
+        role="button"
+        tabIndex={0}
+      >
         <div className="scrollToTop__container">
           <IconArrowtop />
           <span>Back to top</span>

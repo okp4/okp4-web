@@ -6,27 +6,6 @@ const StickyUniverse = ({ children, classContainer }) => {
   var scrollPos = 0;
   var scrollDirection = "down";
 
-  const monitorSection = () => {
-    var intersectionAppear;
-    var optionsAppear = {
-      root: null,
-      rootMargin: "50px",
-      threshold: 0,
-    };
-    intersectionAppear = new IntersectionObserver(appearSection, optionsAppear);
-    intersectionAppear.observe(divRef.current);
-  };
-
-  const appearSection = (entries, intersectionAppear) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        window.addEventListener("scroll", handleScroll);
-      } else {
-        window.removeEventListener("scroll", handleScroll);
-      }
-    });
-  };
-
   const setIllusMobile = () => {
     const illustrations = divRef.current.querySelectorAll(
       ".universe__illus__item"
@@ -55,7 +34,7 @@ const StickyUniverse = ({ children, classContainer }) => {
       window.innerHeight || document.documentElement.clientHeight;
     const halfScreen = windowHeight * (3 / 5);
     let targetScroll = halfScreen;
-    if (scrollDirection == "up") targetScroll = windowHeight * (2 / 5);
+    if (scrollDirection === "up") targetScroll = windowHeight * (2 / 5);
     if (firstActive) {
       const rect = firstActive.getBoundingClientRect();
       if (rect.top < targetScroll) {
@@ -106,10 +85,6 @@ const StickyUniverse = ({ children, classContainer }) => {
       setIllusMobile();
     }
 
-    //IntersectionObserver Approach
-    // monitorSection();
-
-    //Classic Approach
     window.addEventListener("scroll", handleScroll);
 
     return () => {

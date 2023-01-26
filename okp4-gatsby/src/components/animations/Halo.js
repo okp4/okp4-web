@@ -4,59 +4,8 @@ import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 const Halo = ({ classContainer = "halo--regular" }) => {
   const divRef = useRef(null);
 
-  const monitorSection = () => {
-    var intersectionAppear;
-    var optionsAppear = {
-      root: null,
-      rootMargin: "50px",
-      threshold: 0,
-    };
-    intersectionAppear = new IntersectionObserver(appearSection, optionsAppear);
-    intersectionAppear.observe(divRef.current.parentNode);
-  };
-
-  const appearSection = (entries, intersectionAppear) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        if (ResponsiveManager.isWindowLarger("lg")) {
-          divRef.current.parentNode.addEventListener(
-            "mouseenter",
-            handleMouseEnter
-          );
-          divRef.current.parentNode.addEventListener(
-            "mousemove",
-            handleMouseMove
-          );
-          divRef.current.parentNode.addEventListener(
-            "mouseleave",
-            handleMouseLeave
-          );
-        }
-      } else {
-        if (ResponsiveManager.isWindowLarger("lg")) {
-          divRef.current.parentNode.removeEventListener(
-            "mouseenter",
-            handleMouseEnter
-          );
-          divRef.current.parentNode.removeEventListener(
-            "mousemove",
-            handleMouseMove
-          );
-          divRef.current.parentNode.removeEventListener(
-            "mouseleave",
-            handleMouseLeave
-          );
-        }
-      }
-    });
-  };
-
   useEffect(() => {
     setTimeout(function () {
-      //IntersectionObserver Approach
-      // monitorSection();
-
-      //Classic Approach
       if (ResponsiveManager.isWindowLarger("lg")) {
         divRef.current.parentNode.addEventListener(
           "mouseenter",

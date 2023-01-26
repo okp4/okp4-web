@@ -10,28 +10,6 @@ const Parallax = ({
   parallaxMiddle,
 }) => {
   const divRef = useRef(null);
-  var rafId = 0;
-
-  const monitorSection = () => {
-    var intersectionAppear;
-    var optionsAppear = {
-      root: null,
-      rootMargin: "10px",
-      threshold: 0,
-    };
-    intersectionAppear = new IntersectionObserver(appearSection, optionsAppear);
-    intersectionAppear.observe(divRef.current);
-  };
-
-  const appearSection = (entries, intersectionAppear) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        rafId = requestAnimationFrame(handleParallax);
-      } else {
-        cancelAnimationFrame(rafId);
-      }
-    });
-  };
 
   const setInitialPosition = () => {
     var transformRatioCss = "translate3d(0, " + parallaxStart + "px, 0)";
@@ -58,22 +36,18 @@ const Parallax = ({
       var transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
       divRef.current.style.transform = transformRatioCss;
     }
-    rafId = requestAnimationFrame(handleParallax);
+    divRef.current.rafId = requestAnimationFrame(handleParallax);
   };
 
   useEffect(() => {
     if (ResponsiveManager.isWindowLarger("md")) {
       setTimeout(function () {
+        divRef.current.rafId = 0;
         setInitialPosition();
-
-        //IntersectionObserver Approach
-        // monitorSection();
-
-        //Classic Approach
-        rafId = requestAnimationFrame(handleParallax);
+        divRef.current.rafId = requestAnimationFrame(handleParallax);
 
         return () => {
-          cancelAnimationFrame(rafId);
+          cancelAnimationFrame(divRef.current.rafId);
         };
       }, 1000);
     }
