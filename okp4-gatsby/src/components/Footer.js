@@ -143,6 +143,15 @@ const Footer = ({ files }) => {
                   <IconArrowtr />
                 </a>
                 <a
+                  href={contentSocials.pollen.url}
+                  className="footer__main__top__links__item"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{contentSocials.pollen.label}</span>
+                  <IconArrowtr />
+                </a>
+                <a
                   href={contentSocials.contact.url}
                   className="footer__main__top__links__item footer__main__top__links__item--button"
                 >
