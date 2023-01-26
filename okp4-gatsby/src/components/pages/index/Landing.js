@@ -23,40 +23,43 @@ const Landing = () => {
   };
 
   const perspective = () => {
-    let startScale = divRef.current?.dataset.start;
-    let endScale = divRef.current?.dataset.end;
+    if (divRef.current) {
+      let startScale = divRef.current.dataset.start;
+      let endScale = divRef.current.dataset.end;
 
-    if (window.scrollY >= startScale && window.scrollY <= endScale) {
-      let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
+      if (window.scrollY >= startScale && window.scrollY <= endScale) {
+        let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
 
-      let scaleRatio = (1 - ratio / 10).toFixed(4);
-      let scaleCss =
-        "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
-      divFadeOut.current.style.transform = scaleCss;
+        let scaleRatio = (1 - ratio / 10).toFixed(4);
+        if (divFadeOut.current) {
+          let scaleCss =
+            "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
+          divFadeOut.current.style.transform = scaleCss;
 
-      let opacityRatioOut = (1 - ratio * 2).toFixed(4);
-      divFadeOut.current.style.opacity = opacityRatioOut;
-    }
-
-    // if (ResponsiveManager.isWindowLarger("lg")) {
-    divRef.current?.querySelectorAll("[data-parallax]").forEach((elem) => {
-      if (ScrollManager.isIntersectingViewport(divFadeIn.current)) {
-        var ratio = ScrollManager.getIntersectionRatio(divFadeIn.current);
-        var transformRatio;
-        var parallaxEnd = parseInt(elem.dataset.parallaxend);
-
-        if (ResponsiveManager.isWindowSmaller("lg")) {
-          parallaxEnd = parallaxEnd / 2;
+          let opacityRatioOut = (1 - ratio * 2).toFixed(4);
+          divFadeOut.current.style.opacity = opacityRatioOut;
         }
-
-        transformRatio = (ratio.toFixed(4) * parallaxEnd).toFixed(4);
-
-        var transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
-        elem.style.transform = transformRatioCss;
       }
-    });
 
-    divRef.current.rafId = requestAnimationFrame(perspective);
+      divRef.current.querySelectorAll("[data-parallax]").forEach((elem) => {
+        if (ScrollManager.isIntersectingViewport(divFadeIn.current)) {
+          var ratio = ScrollManager.getIntersectionRatio(divFadeIn.current);
+          var transformRatio;
+          var parallaxEnd = parseInt(elem.dataset.parallaxend);
+
+          if (ResponsiveManager.isWindowSmaller("lg")) {
+            parallaxEnd = parallaxEnd / 2;
+          }
+
+          transformRatio = (ratio.toFixed(4) * parallaxEnd).toFixed(4);
+
+          var transformRatioCss = "translate3d(0, " + transformRatio + "px, 0)";
+          elem.style.transform = transformRatioCss;
+        }
+      });
+
+      divRef.current.rafId = requestAnimationFrame(perspective);
+    }
   };
 
   useEffect(() => {

@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import * as MediaManager from "../utils/MediaManager.js";
 import { Link } from "gatsby";
 import IconLogo from "../assets/images/logo.inline.svg";

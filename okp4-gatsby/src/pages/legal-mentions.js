@@ -4,17 +4,16 @@ import Layout from "../components/Layout";
 import LegalMentionsAndCookiePolicy from "../components/pages/legal/LegalMentionsAndCookiePolicy";
 
 export default function LegalMentions({ data }) {
-  const allFiles = data.allFile.edges;
   return (
-    <Layout location={"legalMentions"} files={allFiles}>
+    <Layout location={"legalMentions"} files={data}>
       <LegalMentionsAndCookiePolicy />
     </Layout>
   );
 }
 
 export const pageQuery = graphql`
-  query AllImages {
-    allFile {
+  query FilesQuery {
+    allImages: allFile(filter: { extension: { nin: ["mp4", "ogg", "webm"] } }) {
       edges {
         node {
           id

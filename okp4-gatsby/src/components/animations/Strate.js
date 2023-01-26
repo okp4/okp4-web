@@ -9,17 +9,17 @@ const Strate = ({ children, classContainer }) => {
   const setStickyPosition = () => {
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
-    let divDimensions = divRef.current.getBoundingClientRect();
+    const divDimensions = divRef.current.getBoundingClientRect();
     let topPositionSticky = -150;
 
     if (divDimensions.height > windowHeight) {
       topPositionSticky = -(divDimensions.height - windowHeight + 150);
     }
 
-    let topPositionCss = topPositionSticky + "px";
+    const topPositionCss = topPositionSticky + "px";
     divRef.current.style.top = topPositionCss;
 
-    let monitoringHeight =
+    const monitoringHeight =
       parseFloat(divRef.current.dataset.end) -
       parseFloat(divRef.current.dataset.start);
     divMonitoring.current.style.top =
@@ -28,22 +28,24 @@ const Strate = ({ children, classContainer }) => {
   };
 
   const perspective = () => {
-    let startScale = divRef.current?.dataset.start;
-    let endScale = divRef.current?.dataset.end;
+    if (divRef.current) {
+      const startScale = divRef.current.dataset.start;
+      const endScale = divRef.current.dataset.end;
 
-    if (window.scrollY >= startScale && window.scrollY <= endScale) {
-      let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
+      if (window.scrollY >= startScale && window.scrollY <= endScale) {
+        const ratio = ScrollManager.getScaleRatio({ startScale, endScale });
 
-      let scaleRatio = (1 - ratio / 10).toFixed(4);
-      let scaleCss =
-        "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
-      divRef.current.style.transform = scaleCss;
+        const scaleRatio = (1 - ratio / 10).toFixed(4);
+        const scaleCss =
+          "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
+        divRef.current.style.transform = scaleCss;
 
-      let opacityRatio = (ratio / 2).toFixed(4);
-      divRef.current.querySelector(".strate__layer").style.opacity =
-        opacityRatio;
+        const opacityRatio = (ratio / 2).toFixed(4);
+        divRef.current.querySelector(".strate__layer").style.opacity =
+          opacityRatio;
+      }
+      divRef.current.rafId = requestAnimationFrame(perspective);
     }
-    divRef.current.rafId = requestAnimationFrame(perspective);
   };
 
   useEffect(() => {
@@ -51,14 +53,14 @@ const Strate = ({ children, classContainer }) => {
       setTimeout(function () {
         const windowHeight =
           window.innerHeight || document.documentElement.clientHeight;
-        var divDimensions = divRef.current.getBoundingClientRect();
-        var divAbsoluteTop = divDimensions.top + window.scrollY;
-        var startScale =
+        const divDimensions = divRef.current.getBoundingClientRect();
+        const divAbsoluteTop = divDimensions.top + window.scrollY;
+        let startScale =
           divAbsoluteTop + divDimensions.height - windowHeight + 150;
         if (divDimensions.height < windowHeight) {
           startScale = divAbsoluteTop;
         }
-        var endScale = divAbsoluteTop + divDimensions.height;
+        const endScale = divAbsoluteTop + divDimensions.height;
         divRef.current.dataset.top = divAbsoluteTop;
         divRef.current.dataset.start = startScale;
         divRef.current.dataset.end = endScale;
