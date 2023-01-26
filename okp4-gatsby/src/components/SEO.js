@@ -3,26 +3,22 @@ import React from "react";
 const SEO = () => {
   return (
     <>
-      <title>OKP4 - Unleash the Knowledge Economy</title>
+      <title>OKP4 - The Open Knowledge Protocol </title>
       <meta
         name="description"
         content="
-        OKP4 is a domain-specific layer-1 dedicated to trust-minimized data
-        sharing. The blockchain orchestrates assets shared by participants into
-        the Dataverse."
+        OKP4 is an ever-expanding universe of applications powered by shared digital resources."
       />
       <meta name="image" content="/images/twitter.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"
-        content="OKP4 - Unleash the Knowledge Economy"
+        content="OKP4 - The Open Knowledge Protocol"
       />
       <meta name="twitter:url" content="https://twitter.com/OKP4_Protocol" />
       <meta
         name="twitter:description"
-        content="OKP4 is a domain-specific layer-1 dedicated to trust-minimized data
-        sharing. The blockchain orchestrates assets shared by participants into
-        the Dataverse."
+        content="OKP4 is an ever-expanding universe of applications powered by shared digital resources."
       />
       <meta name="twitter:image" content="/images/twitter.jpg" />
       <meta name="twitter:creator" content="@OKP4_Protocol" />
