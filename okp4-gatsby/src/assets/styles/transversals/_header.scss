@@ -1,9 +1,13 @@
 header.header {
-  position: fixed;
+  position: absolute;
   z-index: 99;
   width: 100%;
   margin-top: 20px;
   margin-bottom: 30px;
+
+  &.fixed {
+    position: fixed;
+  }
 
   @include media-bp-down(lg) {
     width: 100vw;

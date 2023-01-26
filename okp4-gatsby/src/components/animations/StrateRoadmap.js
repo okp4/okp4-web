@@ -21,31 +21,33 @@ const StrateRoadmap = ({
   };
 
   const perspective = () => {
-    let startScale = divRef.current.dataset.start;
-    let endScale = divRef.current.dataset.end;
+    if (divRef.current) {
+      const startScale = divRef.current?.dataset.start;
+      const endScale = divRef.current?.dataset.end;
 
-    if (window.scrollY >= startScale && window.scrollY <= endScale) {
-      let ratio = ScrollManager.getScaleRatio({ startScale, endScale });
+      if (window.scrollY >= startScale && window.scrollY <= endScale) {
+        const ratio = ScrollManager.getScaleRatio({ startScale, endScale });
 
-      let scaleRatio = (1 - ratio * scaleMax).toFixed(4);
-      let scaleCss =
-        "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
-      divRef.current.style.transform = scaleCss;
+        const scaleRatio = (1 - ratio * scaleMax).toFixed(4);
+        const scaleCss =
+          "scale3d(" + scaleRatio + "," + scaleRatio + "," + scaleRatio + ")";
+        divRef.current.style.transform = scaleCss;
 
-      let opacityRatio = (ratio / 4).toFixed(4);
-      divRef.current.querySelector(".roadmap__item__layer").style.opacity =
-        opacityRatio;
+        const opacityRatio = (ratio / 4).toFixed(4);
+        divRef.current.querySelector(".roadmap__item__layer").style.opacity =
+          opacityRatio;
+      }
+      divRef.current.rafId = requestAnimationFrame(perspective);
     }
-    divRef.current.rafId = requestAnimationFrame(perspective);
   };
 
   useEffect(() => {
     if (!isLastItem) {
       setTimeout(function () {
-        var divDimensions = divRef.current.getBoundingClientRect();
-        var divAbsoluteTop = divDimensions.top + window.scrollY;
-        var startScale = divAbsoluteTop - scaleTopSticky;
-        var endScale = divAbsoluteTop - scaleTopSticky + divDimensions.height;
+        const divDimensions = divRef.current.getBoundingClientRect();
+        const divAbsoluteTop = divDimensions.top + window.scrollY;
+        const startScale = divAbsoluteTop - scaleTopSticky;
+        const endScale = divAbsoluteTop - scaleTopSticky + divDimensions.height;
         divRef.current.dataset.top = divAbsoluteTop;
         divRef.current.dataset.start = startScale;
         divRef.current.dataset.end = endScale;

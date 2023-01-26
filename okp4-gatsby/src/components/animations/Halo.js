@@ -49,12 +49,14 @@ const Halo = ({ classContainer = "halo--regular" }) => {
 
   function handleMouseMove(event) {
     setTimeout(() => {
-      let offsetY = divRef.current.getBoundingClientRect().y;
-      let mouseX = event.clientX;
-      let mouseY = event.clientY - offsetY;
-      let transformCss = "translate3d(" + mouseX + "px, " + mouseY + "px, 0)";
-      divRef.current.querySelector(".halo__light").style.transform =
-        transformCss;
+      if (divRef.current) {
+        let offsetY = divRef.current.getBoundingClientRect().y;
+        let mouseX = event.clientX;
+        let mouseY = event.clientY - offsetY;
+        let transformCss = "translate3d(" + mouseX + "px, " + mouseY + "px, 0)";
+        divRef.current.querySelector(".halo__light").style.transform =
+          transformCss;
+      }
     }, 100);
   }
 

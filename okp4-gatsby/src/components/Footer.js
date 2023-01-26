@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
-import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import * as MediaManager from "../utils/MediaManager.js";
+import { Link } from "gatsby";
 import IconLogo from "../assets/images/logo.inline.svg";
 import IconArrowtr from "../assets/images/icons/arrow-tr.inline.svg";
 import IconArrowtop from "../assets/images/icons/arrow-tc.inline.svg";
@@ -12,11 +13,12 @@ import IconDiscord from "../assets/images/socials/discord.inline.svg";
 import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import Halo from "./animations/Halo.js";
 import Docs from "./Docs.js";
+import Partners from "./Partners";
 import Newsletter from "./Newsletter.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentFooter from "/content/transversals/footer.yaml";
 
-const Footer = ({ files }) => {
+const Footer = ({ files, withDocsAndPartners = false }) => {
   const divScrollTop = useRef(null);
   var scrollPos = 0;
   var scrollDirection = "down";
@@ -65,37 +67,12 @@ const Footer = ({ files }) => {
       </div>
       <footer className="footer">
         <Halo />
-        <div className="footer__sticky">
-          <Docs />
-          <div className="footer__partenaires">
-            <div className="wrapper">
-              <p>{contentFooter.messageCofounded}</p>
-              <div className="footer__partenaires__items">
-                <div className="footer__partenaires__item">
-                  <StaticImage
-                    className="imgWrapper"
-                    src="../assets/images/logos/occitanie.png"
-                    alt="Logo Occitanie"
-                  />
-                </div>
-                <div className="footer__partenaires__item">
-                  <StaticImage
-                    className="imgWrapper"
-                    src="../assets/images/logos/bpi.png"
-                    alt="Logo BPI France"
-                  />
-                </div>
-                <div className="footer__partenaires__item">
-                  <StaticImage
-                    className="imgWrapper"
-                    src="../assets/images/logos/bretagne.png"
-                    alt="Logo Bretagne"
-                  />
-                </div>
-              </div>
-            </div>
+        {withDocsAndPartners && (
+          <div className="footer__sticky">
+            <Docs />
+            <Partners />
           </div>
-        </div>
+        )}
 
         <div className="footer__main">
           <div className="footer__main__bg">
@@ -233,14 +210,12 @@ const Footer = ({ files }) => {
               >
                 {contentFooter.sitemap.text}
               </a>
-              <a
-                href={contentFooter.legals.url}
+              <Link
                 className="footer__main__sitemap__item"
-                target="_blank"
-                rel="noreferrer"
+                to="/legal-mentions"
               >
                 {contentFooter.legals.text}
-              </a>
+              </Link>
               <a
                 href="https://w2p-digital.com/"
                 className="footer__main__sitemap__item footer__main__sitemap__item--w2p"

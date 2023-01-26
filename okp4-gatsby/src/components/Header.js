@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import classNames from "classnames";
 import IconLogo from "../assets/images/logo.inline.svg";
 import IconArrowtr from "../assets/images/icons/arrow-tr.inline.svg";
 import IconLinkedin from "../assets/images/socials/linkedin.inline.svg";
@@ -15,7 +16,7 @@ import * as ScrollManager from "../utils/ScrollManager.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentHeader from "/content/transversals/header.yaml";
 
-const Header = () => {
+const Header = ({ isPositionFixed = false }) => {
   const divRef = useRef(null);
   const divMobile = useRef(null);
 
@@ -33,16 +34,19 @@ const Header = () => {
   const scrollStarted = () => {
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
-    if (window.scrollY < windowHeight + 100) {
-      divRef.current.classList.remove("is-reset");
-      let ratio = getRatio();
-      if (ResponsiveManager.isWindowLarger("lg")) {
-        divRef.current.style.opacity = ratio;
+    if (divRef.current) {
+      if (window.scrollY < windowHeight + 100) {
+        divRef.current.classList.remove("is-reset");
+        let ratio = getRatio();
+
+        if (ResponsiveManager.isWindowLarger("lg")) {
+          divRef.current.style.opacity = ratio;
+        } else if (divMobile.current) {
+          divMobile.current.style.opacity = ratio;
+        }
       } else {
-        divMobile.current.style.opacity = ratio;
+        divRef.current.classList.add("is-reset");
       }
-    } else {
-      divRef.current.classList.add("is-reset");
     }
   };
 
@@ -71,7 +75,12 @@ const Header = () => {
   });
 
   return (
-    <header className="header" ref={divRef}>
+    <header
+      className={classNames(`header`, {
+        fixed: isPositionFixed,
+      })}
+      ref={divRef}
+    >
       <div className="header--mobile" ref={divMobile}>
         <Link to="/" className="header--mobile__logo">
           <IconLogo />
