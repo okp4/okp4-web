@@ -15,6 +15,7 @@ import * as ResponsiveManager from "../utils/ResponsiveManager.js";
 import * as ScrollManager from "../utils/ScrollManager.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentHeader from "/content/transversals/header.yaml";
+import Menu from "./Menu";
 
 const Header = ({ isPositionFixed = false }) => {
   const divRef = useRef(null);
@@ -158,6 +159,7 @@ const Header = ({ isPositionFixed = false }) => {
           <Link to="/" className="header__logo">
             <IconLogo />
           </Link>
+          <Menu />
           <nav className="header__resources">
             <a
               href={contentSocials.whitepaper.url}

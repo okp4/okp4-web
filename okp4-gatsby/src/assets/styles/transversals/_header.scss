@@ -1,12 +1,12 @@
 header.header {
-  position: absolute;
+  position: fixed;
   z-index: 99;
   width: 100%;
   margin-top: 20px;
   margin-bottom: 30px;
 
   &.fixed {
-    position: fixed;
+    position: absolute;
   }
 
   @include media-bp-down(lg) {
@@ -210,6 +210,55 @@ header.header {
         width: 100%;
         height: 100%;
         padding-top: 160px;
+      }
+
+      .header__tabs {
+        .header__menu__item {
+          display: inline-block;
+          padding: 10px;
+          font-weight: 700;
+          cursor: pointer;
+
+          &:hover {
+            background: linear-gradient(
+              39.81deg,
+              #006796 21.82%,
+              #00b6b7 98.43%
+            );
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        .active {
+          background: linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .header__submenu {
+          position: absolute;
+
+          .header__submenu__container {
+            display: grid;
+            grid-template-columns: auto auto;
+            column-gap: 20px;
+            position: absolute;
+            min-width: 250px;
+            height: fit-content;
+            padding: 20px 30px;
+            border-radius: 20px;
+            background: $darkblue;
+            background-repeat: repeat;
+            background-size: contain;
+
+            .separator {
+              margin: 5px 0;
+              border-top: 0.1px solid $white-80;
+              width: 100%;
+            }
+          }
+        }
       }
 
       .header__logo {
