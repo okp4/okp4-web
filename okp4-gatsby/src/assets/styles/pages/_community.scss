@@ -1,0 +1,50 @@
+.community {
+  min-height: 100vh;
+  padding-top: 25vh;
+  padding-bottom: 10vh;
+
+  @include media-bp-down(lg) {
+    width: 100%;
+    padding-top: 110px;
+  }
+
+  .wrapper {
+    position: relative;
+  }
+
+  .community__content {
+    top: 25vh;
+    right: 0;
+    left: 0;
+    transform-origin: center;
+    display: grid;
+    gap: 40px;
+
+    .subtitle {
+      color: $white-80;
+      a {
+        color: $white-80;
+        text-decoration: underline;
+      }
+    }
+
+    .community__items {
+      .community__item {
+        position: relative;
+        width: 100%;
+
+        .title {
+          display: block;
+          margin-top: 25px;
+          margin-bottom: 35px;
+          font-size: 20px;
+          line-height: 20px;
+        }
+
+        .text {
+          color: $white-80;
+        }
+      }
+    }
+  }
+}
