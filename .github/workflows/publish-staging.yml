@@ -39,4 +39,4 @@ jobs:
           publish_dir: okp4-gatsby/public
           commit-message: |
             chore: deploy okp4-web github pages ${{ steps.get_version.outputs.version }} on staging
-          cname: web.staging.okp4.network
+          cname: web-staging.okp4.network
