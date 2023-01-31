@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import menu from "/content/transversals/menu.yaml";
 import classNames from "classnames";
 import { useOnHoverOutside } from "../hook/useOnHoverOutside";
+import { useLocation } from "@reach/router";
 
 const SubMenu = ({ subMenu }) => {
   return (
@@ -21,6 +22,7 @@ const SubMenu = ({ subMenu }) => {
 };
 
 const Menu = () => {
+  const location = useLocation();
   const [subMenu, setSubMenu] = useState(null);
   const [isSubMenuOpen, setSubMenuOpen] = useState(false);
 
@@ -36,11 +38,18 @@ const Menu = () => {
     setSubMenuOpen(!!subMenuItems);
   }, []);
 
+  const isActiveMenu = useCallback(
+    (menuItem) => location.pathname.startsWith(menuItem.prefixPath),
+    []
+  );
+
   return (
     <nav className="header__tabs" ref={subMenuRef}>
       {menu.items.map((menuItem) => (
         <div
-          className={classNames(`header__menu__item`, { active: false })}
+          className={classNames(`header__menu__item`, {
+            active: isActiveMenu(menuItem),
+          })}
           onMouseOver={() => handleMouseOver(menuItem.subMenuItems)}
         >
           {menuItem.name}

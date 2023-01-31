@@ -10,7 +10,7 @@ export function useOnHoverOutside(ref, handler) {
     };
     document.addEventListener("mouseover", listener);
     return () => {
-      document.removeEventListener("mouseout", listener);
+      document.removeEventListener("mouseover", listener);
     };
   }, [ref, handler]);
 }
