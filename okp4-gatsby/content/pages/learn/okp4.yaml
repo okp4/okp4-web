@@ -1,4 +1,10 @@
 humanDescription: Content used for the section "Legal mentions" of the legals page
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Learn
+  - name: OKP4
+    link: /learn/okp4
 presentation:
   title: WITH OKP4, UNLOCK THE POWER OF KNOWLEDGE
   introduction: In our digitalized world, one of the most efficient ways to unlock knowledge is through data. But data is rarely shared. It stays in silos, isolated and protected. As such, data is under-used and under-valued.
