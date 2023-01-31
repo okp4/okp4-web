@@ -4,15 +4,20 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "../assets/styles/index.scss";
 
-const Layout = ({ children, location, files }) => {
-  const isHomePage = location === "homepage";
-
+const Layout = ({
+  children,
+  location,
+  files,
+  isStatic = false,
+  withDocs = true,
+  withPartners = true,
+}) => {
   return (
     <>
       <Preloader />
-      <Header isPositionFixed={isHomePage} />
+      <Header isPositionFixed={isStatic} />
       <main className={location}>{children}</main>
-      <Footer files={files} withDocsAndPartners={isHomePage} />
+      <Footer files={files} withDocs={withDocs} withPartners={withPartners} />
     </>
   );
 };

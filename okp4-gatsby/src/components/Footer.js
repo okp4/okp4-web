@@ -18,7 +18,7 @@ import Newsletter from "./Newsletter.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentFooter from "/content/transversals/footer.yaml";
 
-const Footer = ({ files, withDocsAndPartners = false }) => {
+const Footer = ({ files, withDocs = true, withPartners = true }) => {
   const divScrollTop = useRef(null);
   var scrollPos = 0;
   var scrollDirection = "down";
@@ -67,12 +67,10 @@ const Footer = ({ files, withDocsAndPartners = false }) => {
       </div>
       <footer className="footer">
         <Halo />
-        {withDocsAndPartners && (
-          <div className="footer__sticky">
-            <Docs />
-            <Partners />
-          </div>
-        )}
+        <div className="footer__sticky">
+          {withDocs && <Docs />}
+          {withPartners && <Partners />}
+        </div>
 
         <div className="footer__main">
           <div className="footer__main__bg">
