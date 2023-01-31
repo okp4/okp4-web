@@ -1,0 +1,226 @@
+.okp4 {
+  min-height: 100vh;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+
+  .wrapper {
+    position: relative;
+  }
+
+  .okp4__text__primary {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .okp4__text__secondary {
+    color: $white-80;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .okp4__text__emphase {
+    margin: auto;
+    color: #15233d;
+    line-height: 1.5;
+    width: 100%;
+    height: fit-content;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background: url("/images/grain.png"),
+      linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+    background-repeat: repeat;
+    background-size: contain;
+    a {
+      color: #15233d;
+      font-weight: 700;
+    }
+  }
+
+  .okp4__image {
+    margin: auto;
+    padding: 30px;
+    animation: floating-image 8s linear infinite;
+  }
+
+  .imgWrapper {
+    min-height: 100%;
+  }
+
+  .okp4__presentation {
+    min-height: 100vh;
+    margin: 0 15%;
+
+    .okp4__title {
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: center;
+      margin-bottom: 90px;
+    }
+
+    .okp4__presentation__text {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 60px;
+      @include media-bp-down(lg) {
+        grid-template-columns: auto;
+        text-align: center;
+      }
+    }
+
+    .okp4__introduction {
+      font-weight: 700;
+      font-size: 25px;
+    }
+  }
+
+  .okp4__section {
+    margin: 0 2%;
+    .okp4__section__content {
+      background: $darkblue;
+      border-radius: 40px;
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+    .okp4__section__description {
+      padding: 40px;
+
+      @include media-bp-down(lg) {
+        text-align: center;
+      }
+
+      .okp4__text-part {
+        margin-top: 20px;
+        color: $white-80;
+        line-height: 1.5;
+
+        b {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .okp4__data-sharing {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    overflow: hidden;
+    background: $darkblue;
+    background-repeat: repeat;
+    background-size: contain;
+
+    @include media-bp-down(lg) {
+      grid-template: revert;
+    }
+  }
+
+  .okp4__know {
+    margin-top: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    .okp4__know__title {
+      margin-left: 10%;
+      margin-right: 10%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .okp4__know__content {
+      display: grid;
+      grid-template-areas:
+        "introduction description description"
+        "know image image";
+      row-gap: 45px;
+      column-gap: 90px;
+
+      @include media-bp-down(lg) {
+        grid-template-areas:
+          "introduction"
+          "know"
+          "description"
+          "image";
+      }
+
+      .okp4__know__introduction {
+        grid-area: introduction;
+        font-weight: 700;
+      }
+
+      .okp4__know__description {
+        grid-area: description;
+      }
+
+      .okp4__know__know {
+        grid-area: know;
+      }
+
+      .okp4__know__image {
+        grid-area: image;
+        padding: 60px;
+      }
+    }
+  }
+
+  .okp4__cosmos {
+    padding: 60px;
+    @include media-bp-down(lg) {
+      padding: 25px 5px;
+    }
+
+    .okp4__cosmos__title {
+      margin: 0 10%;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .okp4__cosmos__content {
+      margin: 0 5%;
+      display: grid;
+      grid-template-areas:
+        "introduction introduction"
+        "image link"
+        "image description"
+        "button button";
+      row-gap: 45px;
+      column-gap: 90px;
+
+      @include media-bp-down(lg) {
+        grid-template-areas:
+          "introduction"
+          "link"
+          "description"
+          "image"
+          "button";
+      }
+
+      .okp4__cosmos__link {
+        grid-area: link;
+      }
+
+      .okp4__cosmos__introduction {
+        grid-area: introduction;
+        margin: auto;
+        text-align: center;
+        font-weight: 700;
+        width: 67%;
+        @include media-bp-down(lg) {
+          width: 100%;
+        }
+      }
+
+      .okp4__cosmos__description {
+        grid-area: description;
+        @include media-bp-down(lg) {
+          text-align: center;
+        }
+      }
+
+      .okp4__cosmos__image {
+        grid-area: image;
+      }
+    }
+  }
+}
