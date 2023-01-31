@@ -8,6 +8,7 @@ export default function Community({ data }) {
   return (
     <Layout location={"community"} files={data}>
       <JoinUs />
+      <LatestNews />
     </Layout>
   );
 }

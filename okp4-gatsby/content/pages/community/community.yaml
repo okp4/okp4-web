@@ -1,29 +1,35 @@
 humanDescription: Content for the Community page
 title: JOIN THE DRUID COMMUNITY
 subtitle: Join our community of developers and data enthusiasts to build the next revolution of data sharing
-cards:
-  - title: Whitepaper
-    content: Want to know more about the basics of OKP4? We have written a whitepaper for the community to help you understand the interest of the OKP4 project!
-    url: https://docs.okp4.network/whitepaper/abstract
-  - title: Docs
-    content: Whether you are a developer or a community member, this documentation is made for you! You will find in this document a list of tutorials that could be useful in case of problem.
-    url: https://docs.okp4.network/nodes/introduction
-  - title: Our blog
-    content: Do you like reading articles? We regularly publish articles on our Medium page to inform the community of important OKP4 events. Come and follow our page to not miss anything!
-    url: https://blog.okp4.network/
+card1:
+  title: Whitepaper
+  content: Want to know more about the basics of OKP4? We have written a whitepaper for the community to help you understand the interest of the OKP4 project!
+  url: https://docs.okp4.network/whitepaper/abstract
+card2:
+  title: Docs
+  content: Whether you are a developer or a community member, this documentation is made for you! You will find in this document a list of tutorials that could be useful in case of problem.
+  url: https://docs.okp4.network/nodes/introduction
+card3:
+  title: Our blog
+  content: Do you like reading articles? We regularly publish articles on our Medium page to inform the community of important OKP4 events. Come and follow our page to not miss anything!
+  url: https://blog.okp4.network/
 news:
-  - date: Nov 25
+  title: LATEST NEWS
+  news1:
+    date: Nov 25
     title: "OKP4 Incentivized Testnet: Who are the 150 druids"
     content: The entire OKP4 community and team are looking forward to this day! 🥳 ...
     tag: Nemetonprogram
-    url:
-  - date: Nov 2
+    url: https://blog.okp4.network/okp4-incentivized-testnet-who-are-the-150-druids-selected-beae6f8ce766
+  news2:
+    date: Nov 2
     title: What is the KNOW?
     content: When bitcoin was created to serve as a Peer-to-Peer Electronic Cash System...
     tag: Blockchain
-    url:
-  - date: Sept 13
+    url: https://blog.okp4.network/what-is-the-know-daf12a722b25
+  news3:
+    date: Sept 13
     title: "OKP4 Incentivized Testnet: how to join the Nemeton..."
     content: The OKP4 team is excited to announce its first incentivized testnet program! ...
     tag: Token
-    url:
+    url: https://blog.okp4.network/okp4-incentivized-testnet-how-to-join-the-nemeton-program-1830e45148f
