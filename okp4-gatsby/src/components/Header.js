@@ -16,8 +16,9 @@ import * as ScrollManager from "../utils/ScrollManager.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentHeader from "/content/transversals/header.yaml";
 import Menu from "./Menu";
+import Breadcrumbs from "./Breadcrumbs";
 
-const Header = ({ isPositionFixed = false }) => {
+const Header = ({ isPositionFixed = false, breadcrumbs }) => {
   const divRef = useRef(null);
   const divMobile = useRef(null);
 
@@ -182,6 +183,7 @@ const Header = ({ isPositionFixed = false }) => {
           </nav>
         </div>
       </div>
+      <Breadcrumbs breadcrumbs={breadcrumbs} />
     </header>
   );
 };
