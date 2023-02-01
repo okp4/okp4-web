@@ -52,12 +52,24 @@
       margin-bottom: 40px;
       margin-top: 40px;
 
+      @include media-bp-down(lg) {
+        display: flex;
+        flex-direction: column;
+      }
+
       .community_titles {
         display: flex;
         flex-direction: column;
         width: 35%;
         margin-right: 200px;
         margin-left: 80px;
+
+        @include media-bp-down(lg) {
+          margin: 10px;
+          line-height: 1.1;
+          text-align: center;
+          width: 100%;
+        }
       }
 
       .img {
@@ -65,6 +77,15 @@
         width: 250px;
         border-radius: 20px;
         transform: rotate(-5deg);
+
+        @include media-bp-down(lg) {
+          //position: relative;
+          margin-top: 30px;
+          padding-bottom: 70px;
+          align-self: center;
+          width: 80%;
+          height: auto;
+        }
       }
     }
 
@@ -138,7 +159,8 @@
 
         @include media-bp-down(lg) {
           grid-column: span 2;
-          height: 330px;
+          height: 200px;
+          margin: 30px;
         }
 
         @include media-bp-down(md) {
@@ -155,6 +177,7 @@
 
           @include media-bp-down(lg) {
             max-width: 70%;
+            font-size: 18;
           }
 
           @include media-bp-down(md) {
