@@ -1,4 +1,7 @@
 .breadcrumbs {
+  @include media-bp-down(lg) {
+    display: none;
+  }
   padding: 15px 30px;
 
   .breadcrumbs__item {

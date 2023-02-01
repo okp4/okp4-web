@@ -3,19 +3,31 @@
   padding-top: 15vh;
   padding-bottom: 5vh;
 
+  .learn-okp4 {
+    padding-top: 10vh;
+  }
+
   .wrapper {
     position: relative;
+    padding: 0;
+    max-width: 1920px;
   }
 
   .okp4__text__primary {
     font-size: 20px;
     line-height: 1.5;
+    @include media-bp-down(lg) {
+      text-align: center;
+    }
   }
 
   .okp4__text__secondary {
     color: $white-80;
     font-size: 18px;
     line-height: 1.5;
+    @include media-bp-down(lg) {
+      text-align: center;
+    }
   }
 
   .okp4__text__emphase {
@@ -47,43 +59,40 @@
   }
 
   .okp4__presentation {
-    position: relative;
     padding-bottom: 95px;
-
-    .okp4__presentation__image {
-      position: absolute;
-      width: 300px;
-      height: 300px;
-      bottom: 0;
-      right: 0;
-    }
+    position: relative;
 
     .okp4__title {
-      margin-left: 10%;
-      margin-right: 10%;
+      margin: 0 20% 90px;
       text-align: center;
       margin-bottom: 90px;
     }
 
     .okp4__presentation__text {
-      margin: 0 10%;
+      margin: 0 15%;
       display: grid;
-      grid-template-columns: auto auto;
-      column-gap: 60px;
+      grid-template-columns: 1fr 1fr;
+      @include media-bp-up(lg) {
+        padding-right: 60px;
+      }
       @include media-bp-down(lg) {
+        margin: 0 5%;
         grid-template-columns: auto;
+        row-gap: 20px;
         text-align: center;
       }
     }
 
-    .okp4__introduction {
+    .okp4__presentation__introduction {
       font-weight: 700;
-      font-size: 25px;
+      @include media-bp-up(lg) {
+        padding-right: 60px;
+      }
     }
   }
 
   .okp4__section {
-    margin: 0 2%;
+    position: relative;
     .okp4__section__content {
       background: $darkblue;
       border-radius: 40px;
@@ -94,7 +103,11 @@
     }
 
     .okp4__section__description {
-      padding: 40px;
+      padding: 60px 0;
+      margin: 0 5%;
+      @include media-bp-up(lg) {
+        padding-right: 25%;
+      }
 
       @include media-bp-down(lg) {
         text-align: center;
@@ -114,7 +127,7 @@
 
   .okp4__data-sharing {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 1fr 1fr;
     overflow: hidden;
     background: $darkblue;
     background-repeat: repeat;
@@ -122,6 +135,12 @@
 
     @include media-bp-down(lg) {
       grid-template: revert;
+    }
+
+    .okp4__section__image {
+      @include media-bp-up(lg) {
+        padding-right: 60px;
+      }
     }
   }
 
@@ -168,7 +187,9 @@
 
       .okp4__know__image {
         grid-area: image;
-        padding: 60px;
+        @include media-bp-up(lg) {
+          padding: 75px;
+        }
       }
     }
   }
@@ -176,7 +197,7 @@
   .okp4__cosmos {
     padding: 60px;
     @include media-bp-down(lg) {
-      padding: 25px 5px;
+      padding: 25px 0;
     }
 
     .okp4__cosmos__title {
@@ -194,7 +215,7 @@
         "image description"
         "button button";
       row-gap: 45px;
-      column-gap: 90px;
+      column-gap: 45px;
 
       @include media-bp-down(lg) {
         grid-template-areas:
@@ -211,10 +232,8 @@
 
       .okp4__cosmos__introduction {
         grid-area: introduction;
-        margin: auto;
         text-align: center;
         font-weight: 700;
-        width: 67%;
         @include media-bp-down(lg) {
           width: 100%;
         }
