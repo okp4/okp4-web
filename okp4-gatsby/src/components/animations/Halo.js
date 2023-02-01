@@ -5,38 +5,40 @@ const Halo = ({ classContainer = "halo--regular" }) => {
   const divRef = useRef(null);
 
   useEffect(() => {
-    setTimeout(function () {
-      if (ResponsiveManager.isWindowLarger("lg")) {
-        divRef.current.parentNode.addEventListener(
-          "mouseenter",
-          handleMouseEnter
-        );
-        divRef.current.parentNode.addEventListener(
-          "mousemove",
-          handleMouseMove
-        );
-        divRef.current.parentNode.addEventListener(
-          "mouseleave",
-          handleMouseLeave
-        );
-      }
-      return () => {
+    if (divRef.current) {
+      setTimeout(function () {
         if (ResponsiveManager.isWindowLarger("lg")) {
-          divRef.current.parentNode.removeEventListener(
+          divRef.current.parentNode.addEventListener(
             "mouseenter",
             handleMouseEnter
           );
-          divRef.current.parentNode.removeEventListener(
+          divRef.current.parentNode.addEventListener(
             "mousemove",
             handleMouseMove
           );
-          divRef.current.parentNode.removeEventListener(
+          divRef.current.parentNode.addEventListener(
             "mouseleave",
             handleMouseLeave
           );
         }
-      };
-    }, 1000);
+        return () => {
+          if (ResponsiveManager.isWindowLarger("lg")) {
+            divRef.current.parentNode.removeEventListener(
+              "mouseenter",
+              handleMouseEnter
+            );
+            divRef.current.parentNode.removeEventListener(
+              "mousemove",
+              handleMouseMove
+            );
+            divRef.current.parentNode.removeEventListener(
+              "mouseleave",
+              handleMouseLeave
+            );
+          }
+        };
+      }, 1000);
+    }
   });
 
   function handleMouseEnter(event) {

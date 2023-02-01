@@ -42,7 +42,7 @@ const StrateRoadmap = ({
   };
 
   useEffect(() => {
-    if (!isLastItem) {
+    if (divRef.current && !isLastItem) {
       setTimeout(function () {
         const divDimensions = divRef.current.getBoundingClientRect();
         const divAbsoluteTop = divDimensions.top + window.scrollY;

@@ -33,22 +33,24 @@ const Okp4 = ({ files }) => (
         </div>
       </section>
       <div className="okp4__section">
-        <div className="okp4__section__content okp4__data-sharing">
-          <div className="okp4__section__image">
-            <GatsbyImage
-              className="imgWrapper"
-              image={MediaManager.GetImage(content.dataSharing.image, files)}
-              alt={content.dataSharing.title}
-            />
-          </div>
-          <div className=" okp4__section__description">
-            <h3 className="okp4__title">{content.dataSharing.title}</h3>
-            <div
-              className="okp4__text__secondary okp4__text-part"
-              dangerouslySetInnerHTML={{
-                __html: content.dataSharing.text,
-              }}
-            ></div>
+        <div className="okp4__section__content">
+          <div className="okp4__data-sharing">
+            <div className="okp4__section__image">
+              <GatsbyImage
+                className="imgWrapper"
+                image={MediaManager.GetImage(content.dataSharing.image, files)}
+                alt={content.dataSharing.title}
+              />
+            </div>
+            <div className=" okp4__section__description">
+              <h3 className="okp4__title">{content.dataSharing.title}</h3>
+              <div
+                className="okp4__text__secondary okp4__text-part"
+                dangerouslySetInnerHTML={{
+                  __html: content.dataSharing.text,
+                }}
+              ></div>
+            </div>
           </div>
         </div>
       </div>
