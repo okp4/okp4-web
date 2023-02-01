@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 import Okp4 from "../../components/pages/learn/Okp4";
 import content from "/content/pages/learn/okp4.yaml";
 
-export default function LegalMentions({ data }) {
+export default function LearnOkp4({ data }) {
   return (
     <Layout
       location={"okp4"}
