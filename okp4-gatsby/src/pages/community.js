@@ -8,7 +8,7 @@ export default function Community({ data }) {
   return (
     <Layout location={"community"} files={data}>
       <JoinUs />
-      <LatestNews />
+      <LatestNews posts={data.mediumPosts.edges} />
     </Layout>
   );
 }
@@ -24,6 +24,22 @@ export const pageQuery = graphql`
           publicURL
           childImageSharp {
             gatsbyImageData
+          }
+        }
+      }
+    }
+    mediumPosts: allMediumPost(limit: 3, sort: { createdAt: DESC }) {
+      edges {
+        node {
+          id
+          uniqueSlug
+          title
+          createdAt(formatString: "DD MMM")
+          virtuals {
+            subtitle
+            tags {
+              name
+            }
           }
         }
       }
