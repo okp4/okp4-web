@@ -8,6 +8,11 @@ const Okp4 = ({ files }) => {
   return (
     <div className="learn-okp4">
       <Halo classContainer={"halo--big"}></Halo>
+      <GatsbyImage
+        className="okp4__presentation_image"
+        image={MediaManager.GetImage(content.presentation.image, files)}
+        alt={content.presentation.title}
+      />
       <div className="wrapper">
         <section className="okp4__presentation">
           <div>
@@ -28,8 +33,12 @@ const Okp4 = ({ files }) => {
             </div>
           </div>
         </section>
-
         <div className="okp4__section">
+          <GatsbyImage
+            className="okp4__presentation_image"
+            image={MediaManager.GetImage(content.presentation.image, files)}
+            alt={content.presentation.title}
+          />
           <div className="okp4__section__content okp4__data-sharing">
             <div className="okp4__section__image">
               <GatsbyImage

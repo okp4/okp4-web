@@ -4,7 +4,28 @@
   padding-bottom: 5vh;
 
   .learn-okp4 {
+    display: grid;
     padding-top: 10vh;
+  }
+
+  .okp4__presentation_image {
+    position: absolute;
+    z-index: -1;
+    max-width: 721px;
+    justify-self: right;
+    top: 350px;
+
+    @media screen and (max-width: 1025px) {
+      display: none;
+    }
+
+    @media screen and (min-height: 1000px) {
+      top: 520px;
+    }
+
+    @media screen and (max-width: 1530px) and (min-height: 1500px) {
+      top: 630px;
+    }
   }
 
   .wrapper {
@@ -92,8 +113,11 @@
   }
 
   .okp4__section {
+    display: grid;
     position: relative;
+
     .okp4__section__content {
+      width: 100%;
       background: $darkblue;
       border-radius: 40px;
     }
