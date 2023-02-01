@@ -45,19 +45,27 @@
       margin: 20px;
     }
 
-    .community_titles {
-      display: flex;
-      flex-direction: column;
-      width: 35%;
-      margin-right: 200px;
-      margin-left: 100px;
-    }
-
     .community_landing_wrapper {
       display: flex;
       width: 100%;
-      align-items: center;
+      align-items: flex-start;
       margin-bottom: 40px;
+      margin-top: 40px;
+
+      .community_titles {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        margin-right: 200px;
+        margin-left: 80px;
+      }
+
+      .img {
+        height: 350px;
+        width: 250px;
+        border-radius: 20px;
+        transform: rotate(-5deg);
+      }
     }
 
     .social_media {
@@ -81,8 +89,18 @@
         margin: 0;
       }
 
-      &:hover {
-        opacity: 0.5;
+      .icon_colored {
+        display: none;
+      }
+
+      @include media-bp-up(md) {
+        &:hover {
+          svg {
+            path {
+              fill: $turquoise;
+            }
+          }
+        }
       }
 
       svg {
@@ -192,6 +210,25 @@
             animation-delay: 2s;
           }
         }
+        @include media-bp-up(md) {
+          &:hover {
+            background: url("/images/grain.png"),
+              linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
+
+            .title,
+            .text {
+              color: $white;
+            }
+
+            svg {
+              transform: translate3d(5px, -5px, 0);
+
+              path {
+                stroke: $white;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -221,6 +258,10 @@
     transform-origin: center;
     display: grid;
     gap: 40px;
+
+    h3 {
+      margin-left: 50px;
+    }
 
     .title {
       display: block;
@@ -267,12 +308,7 @@
           height: 370px;
           margin-right: 32px;
           padding: 32px 40px;
-          //transition: background 0.25s ease;
           border-radius: 20px;
-          //   background: url("/images/grain.png"),
-          //     linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
-          //   background-repeat: repeat;
-          //   background-size: contain;
           background-color: $darkblue;
           border-color: $white;
           border-style: solid;

@@ -4,10 +4,15 @@ import Parallax from "../../animations/Parallax";
 import contentCommunity from "../../../../content/pages/community/community.yaml";
 import contentSocials from "../../../../content/transversals/socials.yaml";
 import IconLinkedin from "../../../assets/images/socials/linkedin.inline.svg";
+import IconLinkedinColored from "../../../assets/images/socials/linkedin.colored.svg";
 import IconTwitter from "../../../assets/images/socials/twitter.inline.svg";
+import IconTwitterColored from "../../../assets/images/socials/twitter.colored.svg";
 import IconGithub from "../../../assets/images/socials/github.inline.svg";
+import IconGithubColored from "../../../assets/images/socials/github.colored.svg";
 import IconDiscord from "../../../assets/images/socials/discord.inline.svg";
+import { ReactComponent as IconDiscordColored } from "../../../assets/images/socials/discord.colored.svg";
 import IconTelegram from "../../../assets/images/socials/telegram.inline.svg";
+import IconTelegramColored from "../../../assets/images/socials/telegram.colored.svg";
 import IconArrowtr from "../../../assets/images/icons/arrow-tr.inline.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -18,12 +23,12 @@ const JoinUs = () => (
       <div className="community__content">
         <div className="community_landing_wrapper">
           <div className="community_titles">
-            <h3>{contentCommunity.title}</h3>
+            <h2>{contentCommunity.title}</h2>
             <p className="subtitle">{contentCommunity.subtitle}</p>
           </div>
           <StaticImage
             className="img"
-            src="../../../assets/images/illus/community.png"
+            src="../../../assets/images/illus/community_Beltaine.png"
             alt="OKP4 community image"
             loading="eager"
           />
@@ -36,6 +41,7 @@ const JoinUs = () => (
             rel="noreferrer"
           >
             <IconLinkedin />
+            <div className="icon_colored">{/* <IconLinkedinColored /> */}</div>
             <span>
               <p className="text">{contentSocials.linkedin.label}</p>
               <IconArrowtr />
