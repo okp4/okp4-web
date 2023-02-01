@@ -39,7 +39,8 @@ cosmos:
   introduction: The Inter-Blockchain Communication (IBC) protocol will enable OKP4 to be a hub for interchain applications leveraging many other cosmos-based networks such as Juno, Secret network, Osmosis, Akash, Stargaze, and more.
   cosmos: |
     <p>
-    OKP4 blockchain is based on the <a target='_blank' rel='noreferrer' href='https://v1.cosmos.network/sdk'>Cosmos SDK technology</a>.
+    OKP4 blockchain is based on the <a target='_blank' rel='noreferrer' href='https://v1.cosmos.network/sdk'>Cosmos SDK technology <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.25 1.25H8.75V7.75M1.25 8.75L8.75 1.25" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg></a> .
     </p>
   description: |
     <p>
