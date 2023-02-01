@@ -15,21 +15,4 @@ card3:
   url: https://blog.okp4.network/
 news:
   title: LATEST NEWS
-  news1:
-    date: Nov 25
-    title: "OKP4 Incentivized Testnet: Who are the 150 druids"
-    content: The entire OKP4 community and team are looking forward to this day! 🥳 ...
-    tag: Nemetonprogram
-    url: https://blog.okp4.network/okp4-incentivized-testnet-who-are-the-150-druids-selected-beae6f8ce766
-  news2:
-    date: Nov 2
-    title: What is the KNOW?
-    content: When bitcoin was created to serve as a Peer-to-Peer Electronic Cash System...
-    tag: Blockchain
-    url: https://blog.okp4.network/what-is-the-know-daf12a722b25
-  news3:
-    date: Sept 13
-    title: "OKP4 Incentivized Testnet: how to join the Nemeton..."
-    content: The OKP4 team is excited to announce its first incentivized testnet program! ...
-    tag: Token
-    url: https://blog.okp4.network/okp4-incentivized-testnet-how-to-join-the-nemeton-program-1830e45148f
+  url: https://blog.okp4.network/
