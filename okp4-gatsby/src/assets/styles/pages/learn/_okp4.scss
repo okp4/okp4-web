@@ -47,8 +47,16 @@
   }
 
   .okp4__presentation {
-    min-height: 100vh;
-    margin: 0 15%;
+    position: relative;
+    padding-bottom: 95px;
+
+    .okp4__presentation__image {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      bottom: 0;
+      right: 0;
+    }
 
     .okp4__title {
       margin-left: 10%;
@@ -58,6 +66,7 @@
     }
 
     .okp4__presentation__text {
+      margin: 0 10%;
       display: grid;
       grid-template-columns: auto auto;
       column-gap: 60px;

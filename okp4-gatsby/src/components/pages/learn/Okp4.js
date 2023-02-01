@@ -9,6 +9,13 @@ const Okp4 = ({ files }) => {
     <div className="okp4">
       <section className="okp4__presentation">
         <Halo classContainer={"halo--big"}></Halo>
+        <div className="okp4__presentation__image" data-infinite="1">
+          <GatsbyImage
+            className="imgWrapper"
+            image={MediaManager.GetImage(content.presentation.image, files)}
+            alt={content.presentation.title}
+          />
+        </div>
         <div className="wrapper">
           <h2 className="okp4__title">{content.presentation.title}</h2>
           <div className="okp4__presentation__text">
