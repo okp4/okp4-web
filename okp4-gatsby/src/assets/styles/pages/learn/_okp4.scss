@@ -162,9 +162,10 @@
     background-repeat: repeat;
     background-size: contain;
     border-radius: 40px;
-
-    @include media-bp-down(md) {
-      margin-right: 40px;
+    @media screen and (min-width: 771px) {
+      @include media-bp-down(md) {
+        margin-right: 40px;
+      }
     }
     @include media-bp-down(lg) {
       grid-template: revert;
