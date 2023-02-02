@@ -42,11 +42,15 @@ const Halo = ({ classContainer = "halo--regular" }) => {
   });
 
   function handleMouseEnter(event) {
-    divRef.current.classList.add("is-active");
+    if (divRef.current) {
+      divRef.current.classList.add("is-active");
+    }
   }
 
   function handleMouseLeave(event) {
-    divRef.current.classList.remove("is-active");
+    if (divRef.current) {
+      divRef.current.classList.remove("is-active");
+    }
   }
 
   function handleMouseMove(event) {

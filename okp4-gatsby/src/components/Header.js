@@ -53,11 +53,13 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
   };
 
   const toggleBurger = () => {
-    divRef.current.classList.toggle("burger-opened");
-    if (divRef.current.classList.contains("burger-opened")) {
-      ScrollManager.disableScroll();
-    } else {
-      ScrollManager.enableScroll();
+    if (divRef.current) {
+      divRef.current.classList.toggle("burger-opened");
+      if (divRef.current.classList.contains("burger-opened")) {
+        ScrollManager.disableScroll();
+      } else {
+        ScrollManager.enableScroll();
+      }
     }
   };
 

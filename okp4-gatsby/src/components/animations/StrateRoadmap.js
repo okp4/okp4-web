@@ -12,12 +12,14 @@ const StrateRoadmap = ({
   const divRef = useRef(null);
 
   const setStickyPosition = () => {
-    let topPositionSticky = parseInt(scaleTopSticky);
-    if (ResponsiveManager.isWindowSmaller("md")) {
-      topPositionSticky = topPositionSticky / 2;
+    if (divRef.current) {
+      let topPositionSticky = parseInt(scaleTopSticky);
+      if (ResponsiveManager.isWindowSmaller("md")) {
+        topPositionSticky = topPositionSticky / 2;
+      }
+      let topPositionCss = topPositionSticky + "px";
+      divRef.current.style.top = topPositionCss;
     }
-    let topPositionCss = topPositionSticky + "px";
-    divRef.current.style.top = topPositionCss;
   };
 
   const perspective = () => {
@@ -42,24 +44,27 @@ const StrateRoadmap = ({
   };
 
   useEffect(() => {
-    if (divRef.current && !isLastItem) {
+    if (!isLastItem) {
       setTimeout(function () {
-        const divDimensions = divRef.current.getBoundingClientRect();
-        const divAbsoluteTop = divDimensions.top + window.scrollY;
-        const startScale = divAbsoluteTop - scaleTopSticky;
-        const endScale = divAbsoluteTop - scaleTopSticky + divDimensions.height;
-        divRef.current.dataset.top = divAbsoluteTop;
-        divRef.current.dataset.start = startScale;
-        divRef.current.dataset.end = endScale;
-        divRef.current.dataset.height = divDimensions.height;
+        if (divRef.current) {
+          const divDimensions = divRef.current.getBoundingClientRect();
+          const divAbsoluteTop = divDimensions.top + window.scrollY;
+          const startScale = divAbsoluteTop - scaleTopSticky;
+          const endScale =
+            divAbsoluteTop - scaleTopSticky + divDimensions.height;
+          divRef.current.dataset.top = divAbsoluteTop;
+          divRef.current.dataset.start = startScale;
+          divRef.current.dataset.end = endScale;
+          divRef.current.dataset.height = divDimensions.height;
 
-        setStickyPosition();
-        divRef.current.rafId = 0;
-        divRef.current.rafId = requestAnimationFrame(perspective);
+          setStickyPosition();
+          divRef.current.rafId = 0;
+          divRef.current.rafId = requestAnimationFrame(perspective);
 
-        return () => {
-          cancelAnimationFrame(divRef.current.rafId);
-        };
+          return () => {
+            cancelAnimationFrame(divRef.current.rafId);
+          };
+        }
       }, 3000);
     }
   });
