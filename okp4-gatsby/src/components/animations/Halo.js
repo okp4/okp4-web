@@ -5,8 +5,8 @@ const Halo = ({ classContainer = "halo--regular" }) => {
   const divRef = useRef(null);
 
   useEffect(() => {
-    if (divRef.current) {
-      setTimeout(function () {
+    setTimeout(function () {
+      if (divRef.current) {
         if (ResponsiveManager.isWindowLarger("lg")) {
           divRef.current.parentNode.addEventListener(
             "mouseenter",
@@ -37,8 +37,8 @@ const Halo = ({ classContainer = "halo--regular" }) => {
             );
           }
         };
-      }, 1000);
-    }
+      }
+    }, 1000);
   });
 
   function handleMouseEnter(event) {

@@ -263,9 +263,6 @@ header.header {
             @include media-bp-down(lg) {
               position: relative;
             }
-            display: grid;
-            grid-template-columns: auto auto;
-            column-gap: 20px;
             position: absolute;
             min-width: 250px;
             height: fit-content;

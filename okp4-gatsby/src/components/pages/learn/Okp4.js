@@ -15,7 +15,7 @@ const Okp4 = ({ files }) => (
     <div className="wrapper">
       <section className="okp4__presentation">
         <div>
-          <h2 className="okp4__title">{content.presentationPart.title}</h2>
+          <h1 className="okp4__title">{content.presentationPart.title}</h1>
           <div className="okp4__presentation__text">
             <p
               className="okp4__text__primary okp4__presentation__introduction"
@@ -46,7 +46,7 @@ const Okp4 = ({ files }) => (
               />
             </div>
             <div className=" okp4__section__description">
-              <h3 className="okp4__title">{content.dataSharingPart.title}</h3>
+              <h2 className="okp4__title">{content.dataSharingPart.title}</h2>
               <div
                 className="okp4__text__secondary okp4__text-part"
                 dangerouslySetInnerHTML={{
@@ -59,7 +59,7 @@ const Okp4 = ({ files }) => (
       </div>
 
       <div className="okp4__know">
-        <h3 className="okp4__know__title">{content.knowPart.title}</h3>
+        <h2 className="okp4__know__title">{content.knowPart.title}</h2>
         <div className="okp4__know__content">
           <div
             className=" okp4__text__primary okp4__know__introduction"
@@ -90,7 +90,7 @@ const Okp4 = ({ files }) => (
 
       <div className="okp4__section">
         <div className="okp4__section__content okp4__cosmos">
-          <h3 className="okp4__cosmos__title">{content.cosmosPart.title}</h3>
+          <h2 className="okp4__cosmos__title">{content.cosmosPart.title}</h2>
           <div className="okp4__cosmos__content">
             <div
               className="okp4__text__primary okp4__cosmos__introduction"

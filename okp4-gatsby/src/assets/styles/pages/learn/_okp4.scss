@@ -1,33 +1,22 @@
 .okp4 {
   min-height: 100vh;
   padding-top: 15vh;
-  padding-bottom: 5vh;
 
   .learn-okp4 {
-    display: grid;
     padding-top: 10vh;
-    width: calc(100vw - 60px);
     margin: 0 auto;
   }
 
   .okp4__presentation_image {
-    position: absolute;
-    z-index: -1;
-    max-width: 721px;
-    justify-self: right;
-    top: 350px;
-
-    @media screen and (max-width: 1025px) {
+    @include media-bp-down(lg) {
       display: none;
     }
-
-    @media screen and (min-height: 1000px) {
-      top: 520px;
-    }
-
-    @media screen and (max-width: 1530px) and (min-height: 1500px) {
-      top: 630px;
-    }
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    justify-self: right;
+    top: 500px;
+    opacity: 0.1;
   }
 
   .wrapper {
@@ -37,7 +26,7 @@
   }
 
   .okp4__text__primary {
-    font-size: 20px;
+    font-size: 25px;
     line-height: 1.5;
     @include media-bp-down(lg) {
       text-align: center;
@@ -46,8 +35,9 @@
 
   .okp4__text__secondary {
     color: $white-80;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
+    font-weight: 400;
     @include media-bp-down(lg) {
       text-align: center;
     }
@@ -57,7 +47,6 @@
     margin: auto;
     color: #15233d;
     line-height: 1.5;
-    width: 100%;
     height: fit-content;
     padding: 20px 30px;
     border-radius: 20px;
@@ -86,17 +75,19 @@
     position: relative;
 
     .okp4__title {
-      margin: 0 20% 90px;
       text-align: center;
       margin-bottom: 90px;
+      @include media-bp-up(lg) {
+        margin: 0 328px 90px;
+      }
     }
 
     .okp4__presentation__text {
-      margin: 0 15%;
+      margin: 0 328px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       @include media-bp-up(lg) {
-        padding-right: 60px;
+        column-gap: 140px;
       }
       @include media-bp-down(lg) {
         margin: 0 5%;
@@ -107,22 +98,19 @@
     }
 
     .okp4__presentation__introduction {
-      font-weight: 700;
-      @include media-bp-up(lg) {
-        padding-right: 60px;
-      }
+      font-weight: 600;
     }
   }
 
   .okp4__section {
-    display: grid;
     position: relative;
+    @include media-bp-up(lg) {
+      margin: 110px 30px;
+    }
 
     .okp4__section__content {
-      width: 100%;
       background: $darkblue;
       border-radius: 40px;
-      width: 100%;
     }
 
     .wrapper {
@@ -130,11 +118,8 @@
     }
 
     .okp4__section__description {
-      padding: 60px 0;
-      margin: auto;
-      padding-right: 5%;
-      @include media-bp-up(xl) {
-        padding-right: 25%;
+      @include media-bp-up(lg) {
+        margin: 126px auto;
       }
 
       @include media-bp-down(lg) {
@@ -142,10 +127,27 @@
         padding: 20px;
       }
 
+      .okp4__title {
+        font-weight: 700;
+        @include media-bp-up(lg) {
+          margin-right: 308px;
+        }
+        @include media-bp-down(lg) {
+          margin-top: 32px;
+          margin-bottom: 24px;
+        }
+      }
+
       .okp4__text-part {
-        margin-top: 20px;
-        color: $white-80;
-        line-height: 1.5;
+        @include media-bp-up(lg) {
+          margin-top: 30px;
+          margin-right: 298px;
+        }
+
+        p {
+          @extend .okp4__text__secondary;
+          line-height: 1.8;
+        }
 
         b {
           font-weight: 700;
@@ -155,8 +157,11 @@
   }
 
   .okp4__data-sharing {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    @include media-bp-up(lg) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 140px;
+    }
     overflow: hidden;
     background: $darkblue;
     background-repeat: repeat;
@@ -173,40 +178,33 @@
 
     .okp4__section__image {
       border-radius: 40px;
-      @include media-bp-up(lg) {
-        padding-right: 60px;
-      }
-
-      @media screen and (min-width: 1025px) {
-        max-width: 750px;
-      }
     }
   }
 
   .okp4__know {
-    margin-top: 60px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 60px 15px;
+    @include media-bp-up(lg) {
+      margin: 120px 328px;
+    }
 
     .okp4__know__title {
-      margin-left: 10%;
-      margin-right: 10%;
       text-align: center;
-      margin-bottom: 40px;
+      margin: auto;
     }
 
     .okp4__know__content {
+      margin-top: 60px;
+
       display: grid;
       grid-template-areas:
-        "introduction description description"
-        "know image image";
-      row-gap: 45px;
-      column-gap: 90px;
+        "introduction description"
+        "presentation image";
+      column-gap: 140px;
 
       @include media-bp-down(lg) {
         grid-template-areas:
           "introduction"
-          "know"
+          "presentation"
           "description"
           "image";
       }
@@ -214,54 +212,61 @@
       .okp4__know__introduction {
         grid-area: introduction;
         font-weight: 700;
+        @include media-bp-up(lg) {
+          max-width: 400px;
+        }
       }
 
       .okp4__know__description {
         grid-area: description;
+        p {
+          @extend .okp4__text__secondary;
+          line-height: 1.8;
+        }
       }
 
       .okp4__know__know {
-        grid-area: know;
+        grid-area: presentation;
+        max-width: 400px;
+        margin: 40px auto;
+        @include media-bp-up(lg) {
+          margin: 60px 0 12px;
+        }
       }
 
       .okp4__know__image {
         grid-area: image;
-        @include media-bp-up(lg) {
-          padding: 75px;
-        }
+        max-width: 477px;
+        max-height: 252px;
       }
     }
   }
 
   .okp4__cosmos {
-    padding: 60px;
-
+    padding: 100px 0;
     @include media-bp-down(lg) {
-      padding: 25px 0;
+      padding: 32px 15px;
+      margin-bottom: 60px;
     }
 
     .okp4__cosmos__title {
-      margin: 0 10%;
       text-align: center;
       margin-bottom: 40px;
     }
 
     .okp4__cosmos__content {
-      margin: auto;
-      padding: 0 5%;
-      width: 70%;
+      @include media-bp-up(lg) {
+        margin: 30px 298px 96px;
+      }
       display: grid;
       grid-template-areas:
         "introduction introduction"
         "image link"
         "image description"
         "button button";
-      row-gap: 45px;
-      column-gap: 45px;
+      column-gap: 120px;
+      row-gap: 34px;
 
-      @include media-bp-down(xl) {
-        width: 100%;
-      }
       @include media-bp-down(lg) {
         grid-template-areas:
           "introduction"
@@ -273,19 +278,25 @@
 
       .okp4__cosmos__link {
         grid-area: link;
+        margin-top: 21px;
       }
 
       .okp4__cosmos__introduction {
         grid-area: introduction;
         text-align: center;
-        font-weight: 700;
-        @include media-bp-down(lg) {
-          width: 100%;
+        font-weight: 600;
+        @include media-bp-up(lg) {
+          margin: 0 108px;
         }
       }
 
       .okp4__cosmos__description {
         grid-area: description;
+
+        p {
+          @extend .okp4__text__secondary;
+          line-height: 1.8;
+        }
         @include media-bp-down(lg) {
           text-align: center;
         }
@@ -293,6 +304,7 @@
 
       .okp4__cosmos__image {
         grid-area: image;
+        max-width: 488px;
       }
     }
   }
