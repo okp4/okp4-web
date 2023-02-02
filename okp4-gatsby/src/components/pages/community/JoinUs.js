@@ -4,15 +4,10 @@ import Parallax from "../../animations/Parallax";
 import contentCommunity from "../../../../content/pages/community/community.yaml";
 import contentSocials from "../../../../content/transversals/socials.yaml";
 import IconLinkedin from "../../../assets/images/socials/linkedin.inline.svg";
-import IconLinkedinColored from "../../../assets/images/socials/linkedin.colored.svg";
 import IconTwitter from "../../../assets/images/socials/twitter.inline.svg";
-import IconTwitterColored from "../../../assets/images/socials/twitter.colored.svg";
 import IconGithub from "../../../assets/images/socials/github.inline.svg";
-import IconGithubColored from "../../../assets/images/socials/github.colored.svg";
 import IconDiscord from "../../../assets/images/socials/discord.inline.svg";
-import { ReactComponent as IconDiscordColored } from "../../../assets/images/socials/discord.colored.svg";
 import IconTelegram from "../../../assets/images/socials/telegram.inline.svg";
-import IconTelegramColored from "../../../assets/images/socials/telegram.colored.svg";
 import IconArrowtr from "../../../assets/images/icons/arrow-tr.inline.svg";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -36,7 +31,7 @@ const JoinUs = () => (
         <div class="social_media">
           <a
             href={contentSocials.linkedin.url}
-            className="socials__link"
+            className="socials__link linkedin"
             target="_blank"
             rel="noreferrer"
           >
@@ -50,7 +45,7 @@ const JoinUs = () => (
 
           <a
             href={contentSocials.twitter.url}
-            className="socials__link"
+            className="socials__link twitter"
             target="_blank"
             rel="noreferrer"
           >
@@ -63,7 +58,7 @@ const JoinUs = () => (
 
           <a
             href={contentSocials.github.url}
-            className="socials__link"
+            className="socials__link github"
             target="_blank"
             rel="noreferrer"
           >
@@ -76,7 +71,7 @@ const JoinUs = () => (
 
           <a
             href={contentSocials.discord.url}
-            className="socials__link"
+            className="socials__link discord"
             target="_blank"
             rel="noreferrer"
           >
@@ -89,7 +84,7 @@ const JoinUs = () => (
 
           <a
             href={contentSocials.telegram.url}
-            className="socials__link"
+            className="socials__link telegram"
             target="_blank"
             rel="noreferrer"
           >

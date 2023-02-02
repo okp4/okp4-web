@@ -97,50 +97,87 @@
       width: 100%;
       margin-bottom: 35px;
       margin-top: 50px;
-    }
 
-    .socials__link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      transition: opacity 0.25s ease;
-
-      @include media-bp-down(lg) {
-        margin: 0;
-      }
-
-      .icon_colored {
-        display: none;
-      }
-
-      @include media-bp-up(md) {
-        &:hover {
-          svg {
-            path {
-              fill: $turquoise;
+      &:hover {
+        .socials__link:hover {
+          &.linkedin {
+            > svg {
+              path {
+                fill: #0077b5;
+              }
             }
+          }
+
+          &.twitter {
+            > svg {
+              path {
+                fill: #1da1f2;
+              }
+            }
+          }
+          &.github {
+            > svg {
+              path {
+                fill: #4078c0;
+              }
+            }
+          }
+          &.discord {
+            > svg {
+              path {
+                fill: #5865f2;
+              }
+            }
+          }
+          &.telegram {
+            > svg {
+              path {
+                fill: #0088cc;
+              }
+            }
+          }
+        }
+
+        :not(.socials__link:hover) {
+          > svg {
+            opacity: 0.5;
           }
         }
       }
 
-      svg {
-        width: 80px;
-        height: auto;
+      .socials__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transition: opacity 0.25s ease;
 
         @include media-bp-down(lg) {
-          width: 34px;
+          margin: 0;
         }
-      }
 
-      span {
-        display: inline-flex;
-        font-size: 16px;
+        .icon_colored {
+          display: none;
+        }
 
         svg {
-          width: 9px;
+          width: 80px;
           height: auto;
-          transition: transform 0.25s ease;
+
+          @include media-bp-down(lg) {
+            width: 34px;
+          }
+        }
+
+        span {
+          display: inline-flex;
+          font-size: 16px;
+
+          svg {
+            width: 9px;
+            height: auto;
+            transition: transform 0.25s ease;
+          }
         }
       }
     }
