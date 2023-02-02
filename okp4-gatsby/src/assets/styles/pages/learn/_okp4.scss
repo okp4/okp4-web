@@ -25,6 +25,14 @@
     max-width: 1920px;
   }
 
+  .content__wrapper {
+    max-width: 1264px;
+    @include media-bp-down(xxl) {
+      padding: 0 30px;
+    }
+    margin: auto;
+  }
+
   .okp4__text__primary {
     font-size: 25px;
     line-height: 1.5;
@@ -76,14 +84,10 @@
 
     .okp4__title {
       text-align: center;
-      margin-bottom: 90px;
-      @include media-bp-up(lg) {
-        margin: 0 328px 90px;
-      }
+      margin: 0 auto 90px;
     }
 
     .okp4__presentation__text {
-      margin: 0 328px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       @include media-bp-up(lg) {
@@ -118,20 +122,20 @@
     }
 
     .okp4__section__description {
+      max-width: 616px;
       @include media-bp-up(lg) {
-        margin: 126px auto;
+        margin: 126px 0;
+        margin-right: 70px;
       }
 
       @include media-bp-down(lg) {
         text-align: center;
         padding: 20px;
+        margin: 32px auto;
       }
 
       .okp4__title {
         font-weight: 700;
-        @include media-bp-up(lg) {
-          margin-right: 308px;
-        }
         @include media-bp-down(lg) {
           margin-top: 32px;
           margin-bottom: 24px;
@@ -141,7 +145,6 @@
       .okp4__text-part {
         @include media-bp-up(lg) {
           margin-top: 30px;
-          margin-right: 298px;
         }
 
         p {
@@ -184,7 +187,7 @@
   .okp4__know {
     margin: 60px 15px;
     @include media-bp-up(lg) {
-      margin: 120px 328px;
+      margin: 120px 0;
     }
 
     .okp4__know__title {
@@ -256,7 +259,7 @@
 
     .okp4__cosmos__content {
       @include media-bp-up(lg) {
-        margin: 30px 298px 96px;
+        margin: 30px auto 0;
       }
       display: grid;
       grid-template-areas:

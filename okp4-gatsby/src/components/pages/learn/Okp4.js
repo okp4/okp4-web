@@ -14,7 +14,7 @@ const Okp4 = ({ files }) => (
     />
     <div className="wrapper">
       <section className="okp4__presentation">
-        <div>
+        <div className="content__wrapper">
           <h1 className="okp4__title">{content.presentationPart.title}</h1>
           <div className="okp4__presentation__text">
             <p
@@ -32,6 +32,7 @@ const Okp4 = ({ files }) => (
           </div>
         </div>
       </section>
+
       <div className="okp4__section">
         <div className="okp4__section__content">
           <div className="okp4__data-sharing">
@@ -60,7 +61,7 @@ const Okp4 = ({ files }) => (
 
       <div className="okp4__know">
         <h2 className="okp4__know__title">{content.knowPart.title}</h2>
-        <div className="okp4__know__content">
+        <div className="okp4__know__content content__wrapper">
           <div
             className=" okp4__text__primary okp4__know__introduction"
             dangerouslySetInnerHTML={{
@@ -91,7 +92,7 @@ const Okp4 = ({ files }) => (
       <div className="okp4__section">
         <div className="okp4__section__content okp4__cosmos">
           <h2 className="okp4__cosmos__title">{content.cosmosPart.title}</h2>
-          <div className="okp4__cosmos__content">
+          <div className="okp4__cosmos__content content__wrapper">
             <div
               className="okp4__text__primary okp4__cosmos__introduction"
               dangerouslySetInnerHTML={{
