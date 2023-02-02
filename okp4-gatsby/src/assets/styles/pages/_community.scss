@@ -20,25 +20,6 @@
     display: grid;
     gap: 40px;
 
-    .subtitle {
-      color: $white-80;
-      font-size: 17px;
-      margin-top: 10px;
-      a {
-        color: $white-80;
-        text-decoration: underline;
-      }
-    }
-
-    .title {
-      display: block;
-      margin-top: 25px;
-      margin-bottom: 35px;
-      font-size: 20px;
-      line-height: 20px;
-      color: $white-80;
-    }
-
     .text {
       color: $white;
       font-weight: bold;
@@ -60,9 +41,6 @@
       .community_titles {
         display: flex;
         flex-direction: column;
-        width: 35%;
-        margin-right: 200px;
-        margin-left: 80px;
 
         @include media-bp-down(lg) {
           margin: 10px;
@@ -70,16 +48,31 @@
           text-align: center;
           width: 100%;
         }
+
+        .title {
+          position: absolute;
+          width: 724px;
+          height: 276px;
+          left: 328px;
+          top: 204px;
+        }
+
+        .subtitle {
+          width: 508px;
+          opacity: 0.8;
+          font-size: 20px;
+          line-height: 150%;
+        }
       }
 
       .img {
-        height: 350px;
-        width: 250px;
         border-radius: 20px;
-        transform: rotate(-5deg);
+        transform: rotate(-4.72deg);
+        width: 310.33px;
+        height: 398.16px;
+        margin-left: 98.87px;
 
         @include media-bp-down(lg) {
-          //position: relative;
           margin-top: 30px;
           padding-bottom: 70px;
           align-self: center;
@@ -118,7 +111,7 @@
           &.github {
             > svg {
               path {
-                fill: #4078c0;
+                fill: $white;
               }
             }
           }
@@ -156,10 +149,6 @@
           margin: 0;
         }
 
-        .icon_colored {
-          display: none;
-        }
-
         svg {
           width: 80px;
           height: auto;
@@ -188,8 +177,8 @@
         grid-column: span 4;
         flex-direction: column;
         margin-top: 50px;
-        width: 100%;
-        height: 350px;
+        width: 400px;
+        height: 351px;
         padding: 10px 0 40px;
         border-radius: 20px;
         background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%);
@@ -206,11 +195,25 @@
           height: 400px;
         }
 
+        .card_title {
+          margin-top: 10px;
+          text-align: left;
+          margin-left: 35px;
+          color: $textblue;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 130%;
+        }
+
         .text {
           color: $textblue;
           text-align: left;
-          font-weight: lighter;
+          font-weight: 400;
           font-size: 18;
+          line-height: 150%;
+          margin-left: 35px;
+          margin-right: 35px;
 
           @include media-bp-down(lg) {
             max-width: 70%;
@@ -222,16 +225,6 @@
           }
         }
 
-        .title {
-          margin-bottom: 10px;
-          font-weight: bold;
-          text-align: left;
-          margin-left: 25px;
-          color: $textblue;
-          font-size: 25;
-        }
-
-        //to be fixed more
         .arrow_icon {
           align-self: flex-end;
           margin-bottom: 0px;
@@ -319,17 +312,14 @@
     display: grid;
     gap: 40px;
 
-    h3 {
-      margin-left: 50px;
-    }
-
-    .title {
-      display: block;
-      margin-top: 25px;
-      margin-bottom: 35px;
-      font-size: 20px;
-      line-height: 20px;
-      color: $white-80;
+    .news_title {
+      color: $white;
+      bottom: 73.89%;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 80px;
+      line-height: 88px;
+      text-align: center;
     }
 
     .text {
@@ -341,7 +331,6 @@
     .community_news_cards {
       position: relative;
       margin-top: 0;
-      //padding: 120px 0;
 
       @include media-bp-down(lg) {
         padding: 60px 0 45px;
@@ -364,15 +353,13 @@
         .community_news_cards_item {
           position: relative;
           grid-column: span 5;
-          width: 37%;
-          height: 370px;
+          width: 400px;
+          height: 351px;
           margin-right: 32px;
           padding: 32px 40px;
           border-radius: 20px;
           background-color: $darkblue;
-          border-color: $white;
-          border-style: solid;
-          border-width: 0.8px;
+          border: 1px solid $white;
 
           @include media-bp-down(lg) {
             display: inline-block;
@@ -420,13 +407,19 @@
             margin-bottom: 16px;
             transition: color 0.25s ease;
             color: $white;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 130%;
           }
 
           p.description {
-            max-width: 85%;
             transition: color 0.25s ease;
             color: $white;
-            line-height: 27px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
 
             @include media-bp-down(md) {
               max-width: 100%;
@@ -436,25 +429,37 @@
           .date {
             color: $white-80;
             align-self: flex-start;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            margin-bottom: 16px;
           }
 
           .news_bottom_wrapper {
             display: flex;
 
-            .tag {
-              background-color: $nightblue;
-              border-radius: 15px;
-              color: $white-80;
-              padding: 8px;
+            .tags {
+              display: flex;
+              flex-wrap: wrap;
               position: absolute;
-              left: 40px;
-              bottom: 40px;
+              bottom: 20px;
+              left: 20px;
+
+              .tag {
+                background-color: $nightblue;
+                border-radius: 15px;
+                color: $white-80;
+                padding: 8px;
+                margin-left: 3px;
+              }
             }
 
             svg {
               position: absolute;
-              right: 40px;
-              bottom: 40px;
+              margin-right: 10px;
+              right: 5px;
+              bottom: 30px;
               width: 15px;
               height: auto;
               transition: transform 0.25s ease;

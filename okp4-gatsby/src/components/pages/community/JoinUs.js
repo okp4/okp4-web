@@ -18,7 +18,7 @@ const JoinUs = () => (
       <div className="community__content">
         <div className="community_landing_wrapper">
           <div className="community_titles">
-            <h2>{contentCommunity.title}</h2>
+            <h1>{contentCommunity.title}</h1>
             <p className="subtitle">{contentCommunity.subtitle}</p>
           </div>
           <StaticImage
@@ -36,7 +36,6 @@ const JoinUs = () => (
             rel="noreferrer"
           >
             <IconLinkedin />
-            <div className="icon_colored">{/* <IconLinkedinColored /> */}</div>
             <span>
               <p className="text">{contentSocials.linkedin.label}</p>
               <IconArrowtr />
@@ -103,7 +102,7 @@ const JoinUs = () => (
             parallaxEnd="-100"
             parallaxMiddle="0.5"
           >
-            <p className="title">{contentCommunity.card1.title}</p>
+            <p className="card_title">{contentCommunity.card1.title}</p>
             <p className="text">{contentCommunity.card1.content}</p>
             <a
               className="arrow_icon"
@@ -120,7 +119,7 @@ const JoinUs = () => (
             parallaxEnd="-50"
             parallaxMiddle="0.5"
           >
-            <p className="title">{contentCommunity.card2.title}</p>
+            <p className="card_title">{contentCommunity.card2.title}</p>
             <p className="text">{contentCommunity.card2.content}</p>
             <a
               className="arrow_icon"
@@ -137,7 +136,7 @@ const JoinUs = () => (
             parallaxEnd="-150"
             parallaxMiddle="0.5"
           >
-            <p className="title">{contentCommunity.card3.title}</p>
+            <p className="card_title">{contentCommunity.card3.title}</p>
             <p className="text">{contentCommunity.card3.content}</p>
             <a
               className="arrow_icon"
