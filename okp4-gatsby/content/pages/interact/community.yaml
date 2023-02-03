@@ -1,0 +1,25 @@
+humanDescription: Content for the Community page
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Intercat
+  - name: Community
+    link: /interact/community
+image: community_Beltaine.png
+title: JOIN THE DRUID COMMUNITY
+subtitle: Join our community of developers and data enthusiasts to build the next revolution of data sharing
+card1:
+  title: Whitepaper
+  content: Want to know more about the basics of OKP4? We have written a whitepaper for the community to help you understand the interest of the OKP4 project!
+  url: https://docs.okp4.network/whitepaper/abstract
+card2:
+  title: Docs
+  content: Whether you are a developer or a community member, this documentation is made for you! You will find in this document a list of tutorials that could be useful in case of problem.
+  url: https://docs.okp4.network/nodes/introduction
+card3:
+  title: Our blog
+  content: Do you like reading articles? We regularly publish articles on our Medium page to inform the community of important OKP4 events. Come and follow our page to not miss anything!
+  url: https://blog.okp4.network/
+news:
+  title: LATEST NEWS
+  url: https://blog.okp4.network/

@@ -1,13 +1,20 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
-import JoinUs from "../../components/pages/interact/JoinUs";
-import LatestNews from "../../components/pages/interact/LatestNews";
+import JoinUs from "../../components/pages/interact/community/JoinUs";
+import LatestNews from "../../components/pages/interact/community/LatestNews";
+import content from "/content/pages/interact/community.yaml";
 
 export default function Community({ data }) {
   return (
-    <Layout location={"community"} files={data}>
-      <JoinUs />
+    <Layout
+      location={"community"}
+      files={data}
+      breadcrumbs={content.breadcrumbs}
+      isStatic
+      withDocs={false}
+    >
+      <JoinUs files={data} />
       <LatestNews posts={data.mediumPosts.edges} />
     </Layout>
   );
