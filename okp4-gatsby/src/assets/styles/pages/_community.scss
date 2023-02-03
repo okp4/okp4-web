@@ -1,7 +1,6 @@
 .community {
   min-height: 100vh;
   padding-top: 10vh;
-  padding-bottom: 10vh;
 
   @include media-bp-down(lg) {
     width: 100%;
@@ -18,7 +17,6 @@
     left: 0;
     transform-origin: center;
     display: grid;
-    // gap: 40px;
 
     .text {
       color: $white;
@@ -31,7 +29,7 @@
       width: 100%;
       align-items: flex-start;
       // margin-bottom: 40px;
-      // margin-top: 40px;
+      //margin-top: 40px;
 
       @include media-bp-down(lg) {
         display: flex;
@@ -107,6 +105,10 @@
         width: 100%;
         top: 420px;
       }
+
+      @include media-bp-down(lg) {
+        opacity: 0;
+      }
     }
 
     .social_media {
@@ -115,8 +117,6 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      // margin-bottom: 35px;
-      // margin-top: 50px;
       margin-top: 100px;
       margin-bottom: 86px;
 
@@ -355,7 +355,7 @@
 }
 
 .latest_news {
-  min-height: 100vh;
+  height: 720px;
   padding-top: 10vh;
   padding-bottom: 10vh;
   background-color: $darkblue;
@@ -373,12 +373,11 @@
   }
 
   .latest_news__content {
-    // top: 25vh;
-    // right: 0;
-    // left: 0;
     transform-origin: center;
     display: grid;
     gap: 60px;
+    justify-content: center;
+    align-items: center;
 
     .news_title {
       color: $white;
