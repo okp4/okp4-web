@@ -1,8 +1,8 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import JoinUs from "../components/pages/community/JoinUs";
-import LatestNews from "../components/pages/community/LatestNews";
+import Layout from "../../components/Layout";
+import JoinUs from "../../components/pages/interact/JoinUs";
+import LatestNews from "../../components/pages/interact/LatestNews";
 
 export default function Community({ data }) {
   return (

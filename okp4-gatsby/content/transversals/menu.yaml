@@ -8,3 +8,7 @@ items:
   - name: DEVELOP
   - name: EXPLORE
   - name: INTERACT
+    prefixPath: /interact
+    subMenuItems:
+      - name: Community
+        link: /interact/community
