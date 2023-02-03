@@ -70,7 +70,9 @@
         transform: rotate(-4.72deg);
         width: 310.33px;
         height: 398.16px;
-        margin-left: 98.87px;
+        position: sticky;
+        left: 1150.87px;
+        top: 230.49px;
 
         @include media-bp-down(lg) {
           margin-top: 30px;
@@ -79,6 +81,28 @@
           width: 80%;
           height: auto;
         }
+      }
+    }
+
+    .background_img {
+      float: left;
+      height: 721px;
+      width: 721px;
+      opacity: 15%;
+      position: fixed;
+      left: 7px;
+      top: 472px;
+      margin-left: 0;
+      background-image: url("../../assets/images/illus/cropped_footer_image.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &:hover {
+        opacity: 1;
+        background-image: url("../../assets/images/illus/footer.png");
+        background-size: contain;
+        width: 100%;
+        top: 420px;
       }
     }
 

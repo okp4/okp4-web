@@ -28,6 +28,9 @@ const JoinUs = () => (
             loading="eager"
           />
         </div>
+
+        <div className="background_img"></div>
+
         <div class="social_media">
           <a
             href={contentSocials.linkedin.url}
