@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+  schedule:
+    - cron: "0 0 * * *"
+
 concurrency:
   group: publish-staging-${{ github.ref }}
   cancel-in-progress: true
