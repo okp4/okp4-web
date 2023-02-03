@@ -92,6 +92,11 @@
       margin-top: 50px;
 
       &:hover {
+        span:hover {
+          p.text {
+            color: $white;
+          }
+        }
         .socials__link:hover {
           &.linkedin {
             > svg {
@@ -132,6 +137,9 @@
         }
 
         :not(.socials__link:hover) {
+          .text {
+            opacity: 0.5;
+          }
           > svg {
             opacity: 0.5;
           }
