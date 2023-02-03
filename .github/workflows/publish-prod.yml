@@ -7,6 +7,9 @@ on:
     tags:
       - "v*"
 
+  schedule:
+    - cron: "0 0 * * *"
+
 concurrency:
   group: publish-${{ github.ref }}
   cancel-in-progress: true
