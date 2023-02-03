@@ -13,7 +13,7 @@ import IconTelegram from "../../../../assets/images/socials/telegram.inline.svg"
 import IconArrowtr from "../../../../assets/images/icons/arrow-tr.inline.svg";
 
 const JoinUs = ({ files }) => (
-  <section className="community">
+  <section className="community--join_us">
     <Halo />
     <div className="wrapper">
       <div className="community__content">

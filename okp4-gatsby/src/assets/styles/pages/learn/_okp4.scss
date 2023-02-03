@@ -48,6 +48,9 @@
     @include media-bp-down(lg) {
       text-align: center;
     }
+    @include media-bp-between(lg, xxl) {
+      font-size: 22px;
+    }
   }
 
   .okp4__text__secondary {
@@ -57,6 +60,9 @@
     font-weight: 400;
     @include media-bp-down(lg) {
       text-align: center;
+    }
+    @include media-bp-between(lg, xxl) {
+      font-size: 18px;
     }
   }
 
@@ -94,6 +100,10 @@
     .okp4__title {
       text-align: center;
       margin: 0 auto 90px;
+      @include media-bp-between(lg, xxl) {
+        font-size: 100px;
+        max-width: 1025px;
+      }
     }
 
     .okp4__presentation__text {
@@ -102,6 +112,10 @@
       @include media-bp-up(lg) {
         column-gap: 140px;
       }
+      @include media-bp-down(xxl) {
+        column-gap: 70px;
+      }
+
       @include media-bp-down(lg) {
         margin: 0 5%;
         grid-template-columns: auto;
@@ -174,6 +188,9 @@
       grid-template-columns: 1fr 1fr;
       column-gap: 140px;
     }
+    @include media-bp-down(xxl) {
+      column-gap: 70px;
+    }
     overflow: hidden;
     background: $darkblue;
     background-repeat: repeat;
@@ -212,6 +229,9 @@
         "introduction description"
         "presentation image";
       column-gap: 140px;
+      @include media-bp-down(xxl) {
+        column-gap: 70px;
+      }
 
       @include media-bp-down(lg) {
         grid-template-areas:
