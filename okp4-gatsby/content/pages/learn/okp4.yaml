@@ -1,0 +1,53 @@
+humanDescription: Content used for the section "Legal mentions" of the legals page
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Learn
+  - name: OKP4
+    link: /learn/okp4
+presentationPart:
+  title: With OKP4, unlock the power of knowledge
+  introduction: In our digitalized world, one of the most efficient ways to unlock knowledge is through data. But data is rarely shared. It stays in silos, isolated and protected. As such, data is under-used and under-valued.
+  description: Generating knowledge from data is theoretically infinite. That's why an incommensurable amount of value could be unlocked through data sharing. Today's problem is that individuals and companies restrict access to data and information because of risk, complexity, costs and lack of incentive. With OKP4, we provide tools to build applications with fair use of data efficiently.
+  image: learn-okp4-presentation.png
+dataSharingPart:
+  title: How to mainstream Data Sharing?
+  image: learn-okp4-section1.png
+  text: |
+    <p>
+    A decentralized data-sharing infrastructure could enable many new opportunities for data way beyond data exchange. OKP4 is a public PoS layer 1 blockchain built for trust-minimized data sharing. It is specifically designed to enable communities to share data, algorithms, and resources to create a sovereign Dataverse and an environment of applications on top of it. (illustration Digital innovation).
+    </p>
+    <br />
+    <p>
+    OKP4 protocol allows the creation of fully customizable Data Spaces where communities can agree on rules and contribute with any digital resource (dataset, algorithm, storage or computation resource) to create new knowledge and applications. Any identity and consent solutions can be indexed and orchestrated by the protocol according to defined rules to minimize risks and costs and maximize opportunities while keeping data sovereignty.
+    </p>
+knowPart:
+  title: Providing value to Data Ecosystems
+  introduction: Thanks to shared algorithms, new valuable knowledge can be created, and each participant can be retributed for the data and services they shared.
+  knowDescription: |
+    <p>
+    <b>The $KNOW</b> is the native token within the OKP4 network, used for payments, governance, and to secure the proof-of-stake chain.
+    </p>
+  ecosystemDescription: |
+    <p>
+    The whole system is decentralized since no dominant third party dictates the rules.
+    While the blockchain is governed and operated by the decentralized community, <b>each Data Space can have its own governance mechanisms</b>, enabling companies to benefit from web3 while giving users & data providers complete ownership and transparency.
+    </p>
+  image: learn-okp4-know.png
+cosmosPart:
+  title: Powered by Cosmos to skyrocket IBC!
+  introduction: The Inter-Blockchain Communication (IBC) protocol will enable OKP4 to be a hub for interchain applications leveraging many other cosmos-based networks such as Juno, Secret network, Osmosis, Akash, Stargaze, and more.
+  cosmosLink: |
+    <p>
+    OKP4 blockchain is based on the <a target='_blank' rel='noreferrer' href='https://v1.cosmos.network/sdk'>Cosmos SDK technology <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.25 1.25H8.75V7.75M1.25 8.75L8.75 1.25" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg></a> .
+    </p>
+  description: |
+    <p>
+    Cosmos enables us to design the ideal blockchain & ecosystem for such specific applications <b>to provide the perfect environment</b> for developers, data and service providers, and users to build, contribute and thrive in the Dataverse.
+    </p>
+    <br />
+    <p>
+    The OKP4 protocol enables stakeholders to create Data Spaces to make <b>their raw data available to the network without exposing it</b> to other members.
+    </p>
+  image: learn-okp4-cosmos.png

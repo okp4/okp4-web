@@ -7,24 +7,26 @@ const Strate = ({ children, classContainer }) => {
   const divMonitoring = useRef(null);
 
   const setStickyPosition = () => {
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-    const divDimensions = divRef.current.getBoundingClientRect();
-    let topPositionSticky = -150;
+    if (divRef.current) {
+      const windowHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+      const divDimensions = divRef.current.getBoundingClientRect();
+      let topPositionSticky = -150;
 
-    if (divDimensions.height > windowHeight) {
-      topPositionSticky = -(divDimensions.height - windowHeight + 150);
+      if (divDimensions.height > windowHeight) {
+        topPositionSticky = -(divDimensions.height - windowHeight + 150);
+      }
+
+      const topPositionCss = topPositionSticky + "px";
+      divRef.current.style.top = topPositionCss;
+
+      const monitoringHeight =
+        parseFloat(divRef.current.dataset.end) -
+        parseFloat(divRef.current.dataset.start);
+      divMonitoring.current.style.top =
+        parseFloat(divRef.current.dataset.start) + "px";
+      divMonitoring.current.style.height = monitoringHeight + "px";
     }
-
-    const topPositionCss = topPositionSticky + "px";
-    divRef.current.style.top = topPositionCss;
-
-    const monitoringHeight =
-      parseFloat(divRef.current.dataset.end) -
-      parseFloat(divRef.current.dataset.start);
-    divMonitoring.current.style.top =
-      parseFloat(divRef.current.dataset.start) + "px";
-    divMonitoring.current.style.height = monitoringHeight + "px";
   };
 
   const perspective = () => {
@@ -51,27 +53,29 @@ const Strate = ({ children, classContainer }) => {
   useEffect(() => {
     if (ResponsiveManager.isWindowLarger("lg")) {
       setTimeout(function () {
-        const windowHeight =
-          window.innerHeight || document.documentElement.clientHeight;
-        const divDimensions = divRef.current.getBoundingClientRect();
-        const divAbsoluteTop = divDimensions.top + window.scrollY;
-        let startScale =
-          divAbsoluteTop + divDimensions.height - windowHeight + 150;
-        if (divDimensions.height < windowHeight) {
-          startScale = divAbsoluteTop;
+        if (divRef.current) {
+          const windowHeight =
+            window.innerHeight || document.documentElement.clientHeight;
+          const divDimensions = divRef.current.getBoundingClientRect();
+          const divAbsoluteTop = divDimensions.top + window.scrollY;
+          let startScale =
+            divAbsoluteTop + divDimensions.height - windowHeight + 150;
+          if (divDimensions.height < windowHeight) {
+            startScale = divAbsoluteTop;
+          }
+          const endScale = divAbsoluteTop + divDimensions.height;
+          divRef.current.dataset.top = divAbsoluteTop;
+          divRef.current.dataset.start = startScale;
+          divRef.current.dataset.end = endScale;
+
+          setStickyPosition();
+          divRef.current.rafId = 0;
+          divRef.current.rafId = requestAnimationFrame(perspective);
+
+          return () => {
+            cancelAnimationFrame(divRef.current.rafId);
+          };
         }
-        const endScale = divAbsoluteTop + divDimensions.height;
-        divRef.current.dataset.top = divAbsoluteTop;
-        divRef.current.dataset.start = startScale;
-        divRef.current.dataset.end = endScale;
-
-        setStickyPosition();
-        divRef.current.rafId = 0;
-        divRef.current.rafId = requestAnimationFrame(perspective);
-
-        return () => {
-          cancelAnimationFrame(divRef.current.rafId);
-        };
       }, 3000);
     }
   });

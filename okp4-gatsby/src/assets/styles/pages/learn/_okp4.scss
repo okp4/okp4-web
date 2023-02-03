@@ -1,0 +1,330 @@
+.okp4 {
+  min-height: 100vh;
+  padding-top: 15vh;
+
+  .learn-okp4 {
+    padding-top: 10vh;
+    margin: 0 auto;
+  }
+
+  .okp4__presentation_image--container {
+    position: absolute;
+    bottom: 0;
+    @include media-bp-down(lg) {
+      display: none;
+    }
+    @media screen and (min-width: 1920px) {
+      display: none;
+    }
+    z-index: -1;
+    width: 100%;
+    mix-blend-mode: luminosity;
+    opacity: 0.5;
+  }
+  .okp4__presentation_image {
+    float: right;
+    max-width: 721px;
+    mix-blend-mode: luminosity;
+    border-radius: 0px;
+  }
+
+  .wrapper {
+    position: relative;
+    padding: 0;
+    max-width: 1920px;
+  }
+
+  .content__wrapper {
+    max-width: 1264px;
+    @include media-bp-down(xxl) {
+      padding: 0 30px;
+    }
+    margin: auto;
+  }
+
+  .okp4__text__primary {
+    font-size: 25px;
+    line-height: 1.5;
+    @include media-bp-down(lg) {
+      text-align: center;
+    }
+  }
+
+  .okp4__text__secondary {
+    color: $white-80;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+    @include media-bp-down(lg) {
+      text-align: center;
+    }
+  }
+
+  .okp4__text__emphase {
+    margin: auto;
+    color: #15233d;
+    line-height: 1.5;
+    height: fit-content;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background: url("/images/grain.png"),
+      linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+    background-repeat: repeat;
+    background-size: contain;
+    a {
+      color: #15233d;
+      font-weight: 700;
+    }
+  }
+
+  .okp4__image {
+    margin: auto;
+    padding: 30px;
+    animation: floating-image 8s linear infinite;
+  }
+
+  .imgWrapper {
+    min-height: 100%;
+  }
+
+  .okp4__presentation {
+    padding-bottom: 95px;
+    position: relative;
+
+    .okp4__title {
+      text-align: center;
+      margin: 0 auto 90px;
+    }
+
+    .okp4__presentation__text {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      @include media-bp-up(lg) {
+        column-gap: 140px;
+      }
+      @include media-bp-down(lg) {
+        margin: 0 5%;
+        grid-template-columns: auto;
+        row-gap: 20px;
+        text-align: center;
+      }
+    }
+
+    .okp4__presentation__introduction {
+      font-weight: 600;
+    }
+  }
+
+  .okp4__section {
+    position: relative;
+    @include media-bp-up(lg) {
+      margin: 0 30px;
+    }
+
+    .okp4__section__content {
+      background: $darkblue;
+      border-radius: 40px;
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+    .okp4__section__description {
+      max-width: 616px;
+      @include media-bp-up(lg) {
+        margin: 126px 0;
+        margin-right: 70px;
+      }
+
+      @include media-bp-down(lg) {
+        text-align: center;
+        padding: 20px;
+        margin: 32px auto;
+      }
+
+      .okp4__title {
+        font-weight: 700;
+        @include media-bp-down(lg) {
+          margin-top: 32px;
+          margin-bottom: 24px;
+        }
+      }
+
+      .okp4__text-part {
+        @include media-bp-up(lg) {
+          margin-top: 30px;
+        }
+
+        p {
+          @extend .okp4__text__secondary;
+          line-height: 1.8;
+        }
+
+        b {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .okp4__data-sharing {
+    @include media-bp-up(lg) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 140px;
+    }
+    overflow: hidden;
+    background: $darkblue;
+    background-repeat: repeat;
+    background-size: contain;
+    border-radius: 40px;
+    @media screen and (min-width: 771px) {
+      @include media-bp-down(md) {
+        margin-right: 40px;
+      }
+    }
+    @include media-bp-down(lg) {
+      grid-template: revert;
+    }
+
+    .okp4__section__image {
+      border-radius: 40px;
+    }
+  }
+
+  .okp4__know {
+    margin: 60px 15px;
+    @include media-bp-up(lg) {
+      margin: 120px 0;
+    }
+
+    .okp4__know__title {
+      text-align: center;
+      margin: auto;
+    }
+
+    .okp4__know__content {
+      margin-top: 60px;
+
+      display: grid;
+      grid-template-areas:
+        "introduction description"
+        "presentation image";
+      column-gap: 140px;
+
+      @include media-bp-down(lg) {
+        grid-template-areas:
+          "introduction"
+          "presentation"
+          "description"
+          "image";
+      }
+
+      .okp4__know__introduction {
+        grid-area: introduction;
+        font-weight: 700;
+        @include media-bp-up(lg) {
+          max-width: 400px;
+        }
+      }
+
+      .okp4__know__description {
+        grid-area: description;
+        p {
+          @extend .okp4__text__secondary;
+          line-height: 1.8;
+        }
+      }
+
+      .okp4__know__know {
+        grid-area: presentation;
+        max-width: 400px;
+        margin: 40px auto;
+        @include media-bp-up(lg) {
+          margin: 60px 0 12px;
+        }
+      }
+
+      .okp4__know__image {
+        grid-area: image;
+        max-width: 477px;
+        max-height: 252px;
+      }
+    }
+  }
+
+  .okp4__section--cosmos {
+    margin-bottom: 120px;
+    @include media-bp-down(lg) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .okp4__cosmos {
+    padding: 100px 0;
+    @include media-bp-down(lg) {
+      padding: 32px 15px;
+      margin-bottom: 60px;
+    }
+
+    .okp4__cosmos__title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .okp4__cosmos__content {
+      @include media-bp-up(lg) {
+        margin: 30px auto 0;
+      }
+      display: grid;
+      grid-template-areas:
+        "introduction introduction"
+        "image link"
+        "image description"
+        "button button";
+      column-gap: 120px;
+      row-gap: 34px;
+
+      @include media-bp-down(lg) {
+        grid-template-areas:
+          "introduction"
+          "link"
+          "description"
+          "image"
+          "button";
+      }
+
+      .okp4__cosmos__link {
+        grid-area: link;
+        margin-top: 21px;
+      }
+
+      .okp4__cosmos__introduction {
+        grid-area: introduction;
+        text-align: center;
+        font-weight: 600;
+        @include media-bp-up(lg) {
+          margin: 0 108px;
+        }
+      }
+
+      .okp4__cosmos__description {
+        grid-area: description;
+
+        p {
+          @extend .okp4__text__secondary;
+          line-height: 1.8;
+        }
+        @include media-bp-down(lg) {
+          text-align: center;
+        }
+      }
+
+      .okp4__cosmos__image {
+        grid-area: image;
+        max-width: 488px;
+      }
+    }
+  }
+}

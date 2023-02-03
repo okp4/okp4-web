@@ -1,13 +1,21 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
+import Preloader from "../components/Preloader";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import "../assets/styles/index.scss";
 import LegalMentionsAndCookiePolicy from "../components/pages/legal/LegalMentionsAndCookiePolicy";
 
 export default function LegalMentions({ data }) {
   return (
-    <Layout location={"legalMentions"} files={data}>
-      <LegalMentionsAndCookiePolicy />
-    </Layout>
+    <>
+      <Preloader />
+      <Header isPositionFixed />
+      <main className="legalMentions">
+        <LegalMentionsAndCookiePolicy />
+      </main>
+      <Footer files={data} withDocs={false} withPartners={false} />
+    </>
   );
 }
 

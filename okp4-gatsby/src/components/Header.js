@@ -15,8 +15,10 @@ import * as ResponsiveManager from "../utils/ResponsiveManager.js";
 import * as ScrollManager from "../utils/ScrollManager.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentHeader from "/content/transversals/header.yaml";
+import Menu from "./Menu";
+import Breadcrumbs from "./Breadcrumbs";
 
-const Header = ({ isPositionFixed = false }) => {
+const Header = ({ isPositionFixed = false, breadcrumbs }) => {
   const divRef = useRef(null);
   const divMobile = useRef(null);
 
@@ -51,11 +53,13 @@ const Header = ({ isPositionFixed = false }) => {
   };
 
   const toggleBurger = () => {
-    divRef.current.classList.toggle("burger-opened");
-    if (divRef.current.classList.contains("burger-opened")) {
-      ScrollManager.disableScroll();
-    } else {
-      ScrollManager.enableScroll();
+    if (divRef.current) {
+      divRef.current.classList.toggle("burger-opened");
+      if (divRef.current.classList.contains("burger-opened")) {
+        ScrollManager.disableScroll();
+      } else {
+        ScrollManager.enableScroll();
+      }
     }
   };
 
@@ -158,6 +162,7 @@ const Header = ({ isPositionFixed = false }) => {
           <Link to="/" className="header__logo">
             <IconLogo />
           </Link>
+          <Menu />
           <nav className="header__resources">
             <a
               href={contentSocials.whitepaper.url}
@@ -180,6 +185,7 @@ const Header = ({ isPositionFixed = false }) => {
           </nav>
         </div>
       </div>
+      <Breadcrumbs breadcrumbs={breadcrumbs} />
     </header>
   );
 };

@@ -16,7 +16,7 @@ const VideoYoutube = ({ youtubeId }) => {
 
   const appearInView = (entries, intersectionAppear) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && divRef.current) {
         divRef.current.setAttribute("src", divRef.current.dataset.src);
         intersectionAppear.unobserve(entry.target);
       }

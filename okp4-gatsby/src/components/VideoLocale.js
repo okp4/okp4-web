@@ -17,7 +17,7 @@ const VideoLocale = ({ files, mp4, webm }) => {
 
   const appearInView = (entries, intersectionAppear) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && divRef.current) {
         divRef.current.play();
         intersectionAppear.unobserve(entry.target);
       }

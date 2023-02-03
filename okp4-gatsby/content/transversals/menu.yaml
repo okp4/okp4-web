@@ -1,0 +1,10 @@
+humanDescription: Links used across all website for the tab menu
+items:
+  - name: LEARN
+    prefixPath: /learn
+    subMenuItems:
+      - name: OKP4
+        link: /learn/okp4
+  - name: DEVELOP
+  - name: EXPLORE
+  - name: INTERACT

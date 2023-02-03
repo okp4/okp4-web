@@ -6,45 +6,51 @@ const Halo = ({ classContainer = "halo--regular" }) => {
 
   useEffect(() => {
     setTimeout(function () {
-      if (ResponsiveManager.isWindowLarger("lg")) {
-        divRef.current.parentNode.addEventListener(
-          "mouseenter",
-          handleMouseEnter
-        );
-        divRef.current.parentNode.addEventListener(
-          "mousemove",
-          handleMouseMove
-        );
-        divRef.current.parentNode.addEventListener(
-          "mouseleave",
-          handleMouseLeave
-        );
-      }
-      return () => {
+      if (divRef.current) {
         if (ResponsiveManager.isWindowLarger("lg")) {
-          divRef.current.parentNode.removeEventListener(
+          divRef.current.parentNode.addEventListener(
             "mouseenter",
             handleMouseEnter
           );
-          divRef.current.parentNode.removeEventListener(
+          divRef.current.parentNode.addEventListener(
             "mousemove",
             handleMouseMove
           );
-          divRef.current.parentNode.removeEventListener(
+          divRef.current.parentNode.addEventListener(
             "mouseleave",
             handleMouseLeave
           );
         }
-      };
+        return () => {
+          if (ResponsiveManager.isWindowLarger("lg")) {
+            divRef.current.parentNode.removeEventListener(
+              "mouseenter",
+              handleMouseEnter
+            );
+            divRef.current.parentNode.removeEventListener(
+              "mousemove",
+              handleMouseMove
+            );
+            divRef.current.parentNode.removeEventListener(
+              "mouseleave",
+              handleMouseLeave
+            );
+          }
+        };
+      }
     }, 1000);
   });
 
   function handleMouseEnter(event) {
-    divRef.current.classList.add("is-active");
+    if (divRef.current) {
+      divRef.current.classList.add("is-active");
+    }
   }
 
   function handleMouseLeave(event) {
-    divRef.current.classList.remove("is-active");
+    if (divRef.current) {
+      divRef.current.classList.remove("is-active");
+    }
   }
 
   function handleMouseMove(event) {

@@ -12,8 +12,10 @@ const Parallax = ({
   const divRef = useRef(null);
 
   const setInitialPosition = () => {
-    var transformRatioCss = "translate3d(0, " + parallaxStart + "px, 0)";
-    divRef.current.style.transform = transformRatioCss;
+    if (divRef.current) {
+      var transformRatioCss = "translate3d(0, " + parallaxStart + "px, 0)";
+      divRef.current.style.transform = transformRatioCss;
+    }
   };
 
   const handleParallax = () => {
@@ -44,13 +46,15 @@ const Parallax = ({
   useEffect(() => {
     if (ResponsiveManager.isWindowLarger("md")) {
       setTimeout(function () {
-        divRef.current.rafId = 0;
-        setInitialPosition();
-        divRef.current.rafId = requestAnimationFrame(handleParallax);
+        if (divRef.current) {
+          divRef.current.rafId = 0;
+          setInitialPosition();
+          divRef.current.rafId = requestAnimationFrame(handleParallax);
 
-        return () => {
-          cancelAnimationFrame(divRef.current.rafId);
-        };
+          return () => {
+            cancelAnimationFrame(divRef.current.rafId);
+          };
+        }
       }, 1000);
     }
   });

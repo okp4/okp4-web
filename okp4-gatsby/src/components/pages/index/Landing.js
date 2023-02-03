@@ -63,27 +63,29 @@ const Landing = () => {
   };
 
   useEffect(() => {
-    divRef.current.rafId = 0;
-    var divDimensions = divRef.current.getBoundingClientRect();
-    var divAbsoluteTop = divDimensions.top + window.scrollY;
-    var startScale = 0;
+    if (divRef.current) {
+      divRef.current.rafId = 0;
+      var divDimensions = divRef.current.getBoundingClientRect();
+      var divAbsoluteTop = divDimensions.top + window.scrollY;
+      var startScale = 0;
 
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-    var endScale = windowHeight;
-    divRef.current.dataset.top = divAbsoluteTop;
-    divRef.current.dataset.start = startScale;
-    divRef.current.dataset.end = endScale;
-    divRef.current.dataset.raf = 0;
+      const windowHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+      var endScale = windowHeight;
+      divRef.current.dataset.top = divAbsoluteTop;
+      divRef.current.dataset.start = startScale;
+      divRef.current.dataset.end = endScale;
+      divRef.current.dataset.raf = 0;
 
-    setTimeout(function () {
-      divRef.current.rafId = requestAnimationFrame(perspective);
-      window.addEventListener("scroll", scrollStarted);
-      return () => {
-        cancelAnimationFrame(divRef.current.rafId);
-        window.removeEventListener("scroll", scrollStarted);
-      };
-    }, 1000);
+      setTimeout(function () {
+        divRef.current.rafId = requestAnimationFrame(perspective);
+        window.addEventListener("scroll", scrollStarted);
+        return () => {
+          cancelAnimationFrame(divRef.current.rafId);
+          window.removeEventListener("scroll", scrollStarted);
+        };
+      }, 1000);
+    }
   });
 
   return (
