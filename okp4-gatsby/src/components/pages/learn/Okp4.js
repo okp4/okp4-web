@@ -7,13 +7,15 @@ import content from "/content/pages/learn/okp4.yaml";
 const Okp4 = ({ files }) => (
   <div className="learn-okp4">
     <Halo classContainer={"halo--big"}></Halo>
-    <GatsbyImage
-      className="okp4__presentation_image"
-      image={MediaManager.GetImage(content.presentationPart.image, files)}
-      alt={content.presentationPart.title}
-    />
     <div className="wrapper">
       <section className="okp4__presentation">
+        <div className="okp4__presentation_image--container">
+          <GatsbyImage
+            className="okp4__presentation_image"
+            image={MediaManager.GetImage(content.presentationPart.image, files)}
+            alt={content.presentationPart.title}
+          />
+        </div>
         <div className="content__wrapper">
           <h1 className="okp4__title">{content.presentationPart.title}</h1>
           <div className="okp4__presentation__text">
@@ -89,7 +91,7 @@ const Okp4 = ({ files }) => (
         </div>
       </div>
 
-      <div className="okp4__section">
+      <div className="okp4__section okp4__section--cosmos">
         <div className="okp4__section__content okp4__cosmos">
           <h2 className="okp4__cosmos__title">{content.cosmosPart.title}</h2>
           <div className="okp4__cosmos__content content__wrapper">
