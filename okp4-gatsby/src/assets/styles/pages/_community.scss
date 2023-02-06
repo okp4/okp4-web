@@ -110,11 +110,13 @@
       }
 
       @include media-bp-down(lg) {
-        opacity: 0;
+        display: none;
       }
     }
 
     .social_media {
+      z-index: 2;
+      position: relative;
       display: grid;
       grid-template-columns: repeat(5, 100px);
       column-gap: 120px;
@@ -145,69 +147,26 @@
           }
         }
         .socials__link:hover {
-          &.linkedin {
-            .text {
-              opacity: 1;
-            }
-            .arrow {
-              opacity: 1;
-            }
-            > svg {
-              path {
-                fill: #0077b5;
-              }
-            }
-          }
+          $social_medias: (
+            linkedin: #0077b5,
+            twitter: #1da1f2,
+            github: black,
+            discord: #5865f2,
+            telegram: #0088cc,
+          );
 
-          &.twitter {
-            .text {
-              opacity: 1;
-            }
-            .arrow {
-              opacity: 1;
-            }
-            > svg {
-              path {
-                fill: #1da1f2;
+          @each $social_media, $color in $social_medias {
+            &.#{$social_media} {
+              .text {
+                opacity: 1;
               }
-            }
-          }
-          &.github {
-            .text {
-              opacity: 1;
-            }
-            .arrow {
-              opacity: 1;
-            }
-            > svg {
-              path {
-                fill: black;
+              .arrow {
+                opacity: 1;
               }
-            }
-          }
-          &.discord {
-            .text {
-              opacity: 1;
-            }
-            .arrow {
-              opacity: 1;
-            }
-            > svg {
-              path {
-                fill: #5865f2;
-              }
-            }
-          }
-          &.telegram {
-            .text {
-              opacity: 1;
-            }
-            .arrow {
-              opacity: 1;
-            }
-            > svg {
-              path {
-                fill: #0088cc;
+              > svg {
+                path {
+                  fill: $color;
+                }
               }
             }
           }
@@ -485,7 +444,6 @@
             min-height: 325px;
             max-height: fit-content;
             width: auto;
-            height: auto;
           }
 
           @include media-bp-up(md) {
@@ -521,6 +479,12 @@
             font-weight: 600;
             font-size: 25px;
             line-height: 130%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
           }
 
           p.description {
@@ -530,6 +494,12 @@
             font-weight: 400;
             font-size: 18px;
             line-height: 150%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
 
             @include media-bp-down(md) {
               max-width: 100%;
@@ -555,13 +525,14 @@
               position: absolute;
               bottom: 20px;
               left: 20px;
+              margin-right: 40px;
 
               .tag {
                 background-color: $nightblue;
                 border-radius: 15px;
                 color: $white-80;
                 padding: 8px;
-                margin-left: 3px;
+                margin: 2px;
               }
             }
 

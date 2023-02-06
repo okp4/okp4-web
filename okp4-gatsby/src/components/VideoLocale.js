@@ -12,7 +12,9 @@ const VideoLocale = ({ files, mp4, webm }) => {
       threshold: 0,
     };
     intersectionAppear = new IntersectionObserver(appearInView, optionsAppear);
-    intersectionAppear.observe(divRef.current);
+    if (divRef.current) {
+      intersectionAppear.observe(divRef.current);
+    }
   };
 
   const appearInView = (entries, intersectionAppear) => {

@@ -13,14 +13,14 @@ const LatestNews = ({ posts }) => (
         <div className="community_news_cards">
           <div className="community_news_cards_content">
             {posts.slice(0, 3).map((post) => (
-              <div className="community_news_cards_item">
-                <a
-                  key={post.node.uniqueSlug}
-                  href={`${contentCommunity.news.url}${post.node.uniqueSlug}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="community_news_cards_item--content"
-                >
+              <a
+                key={post.node.uniqueSlug}
+                href={`${contentCommunity.news.url}${post.node.uniqueSlug}`}
+                target="_blank"
+                rel="noreferrer"
+                className="community_news_cards_item--content"
+              >
+                <div className="community_news_cards_item">
                   <p className="date">{post.node.createdAt}</p>
                   <p className="title">{post.node.title}</p>
                   <p className="description">{post.node.virtuals.subtitle}</p>
@@ -34,8 +34,8 @@ const LatestNews = ({ posts }) => (
                     </div>
                     <IconArrowtr />
                   </div>
-                </a>
-              </div>
+                </div>
+              </a>
             ))}
           </div>
         </div>

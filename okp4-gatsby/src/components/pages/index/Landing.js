@@ -78,12 +78,14 @@ const Landing = () => {
       divRef.current.dataset.raf = 0;
 
       setTimeout(function () {
-        divRef.current.rafId = requestAnimationFrame(perspective);
-        window.addEventListener("scroll", scrollStarted);
-        return () => {
-          cancelAnimationFrame(divRef.current.rafId);
-          window.removeEventListener("scroll", scrollStarted);
-        };
+        if (divRef.current) {
+          divRef.current.rafId = requestAnimationFrame(perspective);
+          window.addEventListener("scroll", scrollStarted);
+          return () => {
+            cancelAnimationFrame(divRef.current.rafId);
+            window.removeEventListener("scroll", scrollStarted);
+          };
+        }
       }, 1000);
     }
   });
