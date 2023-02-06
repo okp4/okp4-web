@@ -2,11 +2,11 @@ humanDescription: Content for the Community page
 breadcrumbs:
   - name: Home
     link: /
-  - name: Intercat
+  - name: Interact
   - name: Community
     link: /interact/community
 image: community_Beltaine.png
-title: JOIN THE DRUID COMMUNITY
+title: Join the druid community
 subtitle: Join our community of developers and data enthusiasts to build the next revolution of data sharing
 card1:
   title: Whitepaper
@@ -21,5 +21,5 @@ card3:
   content: Do you like reading articles? We regularly publish articles on our Medium page to inform the community of important OKP4 events. Come and follow our page to not miss anything!
   url: https://blog.okp4.network/
 news:
-  title: LATEST NEWS
+  title: Latest news
   url: https://blog.okp4.network/
