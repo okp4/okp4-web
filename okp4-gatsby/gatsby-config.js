@@ -47,5 +47,11 @@ module.exports = {
         lang: `en`,
       },
     },
+    {
+      resolve: "gatsby-source-medium",
+      options: {
+        username: "okp4",
+      },
+    },
   ],
 };
