@@ -104,10 +104,9 @@
 
       &:hover {
         opacity: 1;
-        background-image: url("../../assets/images/illus/footer.png");
+        background-image: url("../../assets/images/illus/cropped_footer_image.png");
         background-size: contain;
         width: 100%;
-        top: 420px;
       }
 
       @include media-bp-down(lg) {
