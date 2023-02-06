@@ -107,15 +107,16 @@ const JoinUs = ({ files }) => (
             parallaxEnd="-100"
             parallaxMiddle="0.5"
           >
-            <p className="card_title">{contentCommunity.card1.title}</p>
-            <p className="text">{contentCommunity.card1.content}</p>
             <a
-              className="arrow_icon"
               href={contentCommunity.card1.url}
               target="_blank"
               rel="noreferrer"
             >
-              <IconArrowtr />
+              <p className="card_title">{contentCommunity.card1.title}</p>
+              <p className="text">{contentCommunity.card1.content}</p>
+              <div className="arrow_icon">
+                <IconArrowtr />
+              </div>
             </a>
           </Parallax>
           <Parallax
@@ -124,15 +125,16 @@ const JoinUs = ({ files }) => (
             parallaxEnd="-50"
             parallaxMiddle="0.5"
           >
-            <p className="card_title">{contentCommunity.card2.title}</p>
-            <p className="text">{contentCommunity.card2.content}</p>
             <a
-              className="arrow_icon"
               href={contentCommunity.card2.url}
               target="_blank"
               rel="noreferrer"
             >
-              <IconArrowtr />
+              <p className="card_title">{contentCommunity.card2.title}</p>
+              <p className="text">{contentCommunity.card2.content}</p>
+              <div className="arrow_icon">
+                <IconArrowtr />
+              </div>
             </a>
           </Parallax>
           <Parallax
@@ -141,15 +143,16 @@ const JoinUs = ({ files }) => (
             parallaxEnd="-150"
             parallaxMiddle="0.5"
           >
-            <p className="card_title">{contentCommunity.card3.title}</p>
-            <p className="text">{contentCommunity.card3.content}</p>
             <a
-              className="arrow_icon"
               href={contentCommunity.card3.url}
               target="_blank"
               rel="noreferrer"
             >
-              <IconArrowtr />
+              <p className="card_title">{contentCommunity.card3.title}</p>
+              <p className="text">{contentCommunity.card3.content}</p>
+              <div className="arrow_icon">
+                <IconArrowtr />
+              </div>
             </a>
           </Parallax>
         </div>
