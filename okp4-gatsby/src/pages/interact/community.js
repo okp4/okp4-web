@@ -42,7 +42,7 @@ export const pageQuery = graphql`
           id
           uniqueSlug
           title
-          createdAt(formatString: "DD MMM")
+          createdAt(formatString: "MMM DD")
           virtuals {
             subtitle
             tags {
