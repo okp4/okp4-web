@@ -900,14 +900,14 @@ main.homepage {
       }
     }
 
-    .roadmap {
+    .homepage__roadmap {
       width: 100%;
 
       @include media-bp-down(lg) {
         margin-top: 80px;
       }
 
-      .roadmap__intro {
+      .homepage__roadmap__intro {
         text-align: center;
 
         p {
@@ -950,7 +950,7 @@ main.homepage {
         }
       }
 
-      .roadmap__items {
+      .homepage__roadmap__items {
         width: 100%;
         padding-bottom: 60px;
 
@@ -958,7 +958,7 @@ main.homepage {
           padding-bottom: 0;
         }
 
-        .roadmap__item {
+        .homepage__roadmap__item {
           position: sticky;
           width: 100%;
           min-height: 500px;
@@ -977,7 +977,7 @@ main.homepage {
             margin-bottom: 80px;
           }
 
-          .roadmap__item__layer {
+          .homepage__roadmap__item__layer {
             position: absolute;
             z-index: 999;
             top: 0;
@@ -991,7 +991,7 @@ main.homepage {
             pointer-events: none;
           }
 
-          .roadmap__item__container {
+          .homepage__roadmap__item__container {
             display: flex;
             width: 100%;
             height: 100%;
@@ -1013,7 +1013,7 @@ main.homepage {
           &:nth-child(1) {
             background-color: $turquoise;
 
-            .roadmap__item__readMore {
+            .homepage__roadmap__item__readMore {
               background: $turquoise;
             }
           }
@@ -1021,7 +1021,7 @@ main.homepage {
           &:nth-child(2) {
             background-color: #008fad;
 
-            .roadmap__item__readMore {
+            .homepage__roadmap__item__readMore {
               background: #008fad;
             }
           }
@@ -1029,7 +1029,7 @@ main.homepage {
           &:nth-child(3) {
             background-color: #006796;
 
-            .roadmap__item__readMore {
+            .homepage__roadmap__item__readMore {
               background: #006796;
             }
           }
@@ -1037,7 +1037,7 @@ main.homepage {
           &:nth-child(4) {
             background-color: #004073;
 
-            .roadmap__item__readMore {
+            .homepage__roadmap__item__readMore {
               background: #004073;
             }
           }
@@ -1045,12 +1045,12 @@ main.homepage {
           &:nth-child(5) {
             background-color: #032b4a;
 
-            .roadmap__item__readMore {
+            .homepage__roadmap__item__readMore {
               background: #032b4a;
             }
           }
 
-          .roadmap__item__text--mobile {
+          .homepage__roadmap__item__text--mobile {
             display: none;
 
             @include media-bp-down(lg) {
@@ -1062,7 +1062,7 @@ main.homepage {
             }
           }
 
-          .roadmap__item__text {
+          .homepage__roadmap__item__text {
             width: 64%;
             height: 100%;
             min-height: 500px;
@@ -1117,7 +1117,7 @@ main.homepage {
                 font-weight: 700;
               }
 
-              .roadmap__item__readMore {
+              .homepage__roadmap__item__readMore {
                 display: none;
 
                 @include media-bp-down(sm) {
@@ -1153,7 +1153,7 @@ main.homepage {
               position: relative;
               overflow-y: hidden;
 
-              .roadmap__item__readMore {
+              .homepage__roadmap__item__readMore {
                 display: flex;
                 padding: 30px 0 20px;
                 cursor: pointer;
@@ -1166,7 +1166,7 @@ main.homepage {
               .description {
                 position: relative;
 
-                .roadmap__item__readMore {
+                .homepage__roadmap__item__readMore {
                   position: initial;
 
                   .readMore--opened {
@@ -1181,12 +1181,12 @@ main.homepage {
             }
           }
 
-          .roadmap__item__illus {
+          .homepage__roadmap__item__illus {
             position: relative;
             width: 36%;
             min-height: 100%;
 
-            .roadmap__item__date {
+            .homepage__roadmap__item__date {
               display: flex;
               position: absolute;
               z-index: 2;
@@ -1271,7 +1271,7 @@ main.homepage {
           }
         }
 
-        .roadmap__item--last {
+        .homepage__roadmap__item--last {
           position: sticky;
           top: 150px;
 
