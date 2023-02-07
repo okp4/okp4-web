@@ -241,7 +241,6 @@
         @include media-bp-up(lg) {
           max-height: 351px;
         }
-        padding: 10px 0 40px;
         border-radius: 20px;
         background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%);
 
@@ -256,6 +255,24 @@
           max-height: 400px;
         }
         cursor: pointer;
+
+        a {
+          padding: 10px 0 40px;
+          width: 100%;
+          min-height: 351px;
+          @include media-bp-up(lg) {
+            max-height: 351px;
+          }
+
+          @include media-bp-down(lg) {
+            min-height: 300px;
+          }
+
+          @include media-bp-down(md) {
+            width: auto;
+            max-height: 400px;
+          }
+        }
 
         .card_title {
           margin-top: 10px;
