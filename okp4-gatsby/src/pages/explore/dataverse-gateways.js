@@ -1,9 +1,10 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
+import DataverseGateways from "../../components/pages/explore/DataverseGateways";
 import content from "/content/pages/explore/dataverse-gateways.yaml";
 
-export default function DataverseGateways({ data }) {
+export default function ExploreDataverseGateways({ data }) {
   return (
     <Layout
       location={"dataverseGateways"}
@@ -12,7 +13,9 @@ export default function DataverseGateways({ data }) {
       isStatic
       withDocs={false}
       withPartners={false}
-    ></Layout>
+    >
+      <DataverseGateways files={data} />
+    </Layout>
   );
 }
 
