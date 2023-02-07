@@ -260,14 +260,16 @@ header.header {
             position: relative;
           }
           .header__submenu__container {
-            @include media-bp-down(lg) {
-              position: relative;
-            }
             position: absolute;
-            min-width: 250px;
+            min-width: 100px;
             height: fit-content;
             padding: 20px 0;
             background: transparent;
+
+            @include media-bp-down(lg) {
+              position: relative;
+              min-width: 200px;
+            }
 
             .header__submenu__content {
               padding: 20px 30px;
