@@ -19,9 +19,6 @@ sitemap:
 legals:
   url: /legal-mentions
   text: Legals & GDPR
-community:
-  url: /community
-  text: Community
 imageFooter:
   url: footer.png
   alt: Illustration OKP4 fleurs
