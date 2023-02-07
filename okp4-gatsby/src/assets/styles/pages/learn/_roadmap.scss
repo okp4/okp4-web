@@ -22,6 +22,12 @@
     }
   }
 
+  .roadmap__content__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 250px;
+    z-index: 1;
+
     .roadmap__title {
       max-width: 615px;
       font-size: 125px;
@@ -39,4 +45,89 @@
         margin-left: 15px;
       }
     }
+
+    .roadmap__cards {
+      display: grid;
+      grid-template: 470px / repeat(5, 345px);
+      margin: auto 0;
+
+      .roadmap__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 20px;
+        padding: 20px;
+
+        &.Genesis {
+          background: center / cover no-repeat
+            url("../images/illus/index_roadmap_1.jpg");
+        }
+
+        &.Nemeton {
+          background: center / cover no-repeat
+            url("../images/illus/index_roadmap_2.jpg");
+        }
+
+        &.Myrddin {
+          background: center / cover no-repeat
+            url("../images/illus/index_roadmap_3.jpg");
+        }
+
+        &.Duir {
+          background: center / cover no-repeat
+            url("../images/illus/index_roadmap_4.jpg");
+        }
+
+        &.Lugh {
+          background: center / cover no-repeat
+            url("../images/illus/index_roadmap_5.jpg");
+        }
+
+        .roadmap__card__period {
+          background-color: $white;
+          border-radius: 10px;
+          color: $darkblue;
+          width: fit-content;
+          padding: 10px 20px;
+          max-height: 39px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+        }
+
+        .roadmap__card__content__wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .roadmap__card__title {
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 42px;
+            margin: 15px 10px;
+          }
+
+          .roadmap__card__button {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            align-self: end;
+            background-color: $orange;
+            color: $white;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            padding: 17px 0;
+            width: 100%;
+            border: none;
+
+            svg {
+              vertical-align: bottom;
+            }
+          }
+        }
+      }
+    }
+  }
 }
