@@ -45,11 +45,12 @@
   .okp4__text__primary {
     font-size: 25px;
     line-height: 1.5;
-    @include media-bp-down(lg) {
-      text-align: center;
-    }
     @include media-bp-between(lg, xxl) {
       font-size: 22px;
+    }
+    @include media-bp-down(lg) {
+      text-align: center;
+      font-size: 20px;
     }
   }
 
@@ -60,9 +61,6 @@
     font-weight: 400;
     @include media-bp-down(lg) {
       text-align: center;
-    }
-    @include media-bp-between(lg, xxl) {
-      font-size: 18px;
     }
   }
 
