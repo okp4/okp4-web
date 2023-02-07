@@ -1,3 +1,5 @@
+$menu-color: linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
+
 header.header {
   position: fixed;
   z-index: 99;
@@ -233,12 +235,7 @@ header.header {
             cursor: pointer;
             @include media-bp-up(lg) {
               &:hover {
-                background: linear-gradient(
-                    89.85deg,
-                    #006796 37.02%,
-                    #00b6b7 99.89%
-                  ),
-                  #ffffff;
+                background: $menu-color;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
               }
@@ -246,12 +243,7 @@ header.header {
           }
 
           .active {
-            background: linear-gradient(
-                89.85deg,
-                #006796 37.02%,
-                #00b6b7 99.89%
-              ),
-              #ffffff;
+            background: $menu-color;
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
