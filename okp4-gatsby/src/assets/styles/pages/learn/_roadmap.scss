@@ -4,4 +4,21 @@
   padding-top: 181px;
   min-height: calc(100vh - 505px);
 
+  .roadmap__background__image {
+    position: absolute;
+    opacity: 0.15;
+    width: 40%;
+    height: 60%;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
+  }
 }
