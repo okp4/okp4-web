@@ -21,4 +21,22 @@
       display: none;
     }
   }
+
+    .roadmap__title {
+      max-width: 615px;
+      font-size: 125px;
+      margin-left: 328px;
+
+      @media screen and (max-width: 1440px) {
+        margin-left: 94px;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 65px;
+        line-height: 72px;
+        text-align: center;
+        max-width: 345px;
+        margin-left: 15px;
+      }
+    }
 }
