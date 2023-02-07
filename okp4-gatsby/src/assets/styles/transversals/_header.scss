@@ -228,14 +228,17 @@ header.header {
           }
 
           .header__menu__item--name {
+            text-transform: uppercase;
+            font-size: 18px;
             cursor: pointer;
             @include media-bp-up(lg) {
               &:hover {
                 background: linear-gradient(
-                  39.81deg,
-                  #006796 21.82%,
-                  #00b6b7 98.43%
-                );
+                    89.85deg,
+                    #006796 37.02%,
+                    #00b6b7 99.89%
+                  ),
+                  #ffffff;
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
               }
@@ -244,10 +247,11 @@ header.header {
 
           .active {
             background: linear-gradient(
-              39.81deg,
-              #006796 21.82%,
-              #00b6b7 98.43%
-            );
+                89.85deg,
+                #006796 37.02%,
+                #00b6b7 99.89%
+              ),
+              #ffffff;
             background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -281,6 +285,7 @@ header.header {
               .header__submenu__item {
                 color: $white-80;
                 font-weight: 100;
+                font-size: 18px;
               }
 
               .separator {
