@@ -1,16 +1,70 @@
+@mixin roadmap-background-images {
+  &.Genesis {
+    background: center / cover no-repeat
+      url("../images/illus/index_roadmap_1.jpg");
+  }
+
+  &.Nemeton {
+    background: center / cover no-repeat
+      url("../images/illus/index_roadmap_2.jpg");
+  }
+
+  &.Myrddin {
+    background: center / cover no-repeat
+      url("../images/illus/index_roadmap_3.jpg");
+  }
+
+  &.Duir {
+    background: center / cover no-repeat
+      url("../images/illus/index_roadmap_4.jpg");
+  }
+
+  &.Lugh {
+    background: center / cover no-repeat
+      url("../images/illus/index_roadmap_5.jpg");
+  }
+}
+
+@mixin descriptive-text {
+  opacity: 0.8;
+  font-size: 18px;
+  color: $textblue;
+  font-weight: 400;
+  line-height: 180%;
+}
+
+@mixin bold-text {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+@mixin dash($bottom, $marginRight, $color) {
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    bottom: $bottom;
+    width: 20px;
+    height: 4px;
+    margin-right: $marginRight;
+    background-color: $color;
+  }
+}
+
 .roadmap__main {
-  position: relative;
   display: flex;
-  padding-top: 181px;
+  position: relative;
   min-height: calc(100vh - 505px);
+  padding-top: 181px;
 
   .roadmap__background__image {
     position: absolute;
-    opacity: 0.15;
-    width: 40%;
-    height: 60%;
-    bottom: 0;
     right: 0;
+    bottom: 0;
+    width: 40%;
+    opacity: 0.15;
+    height: 60%;
     z-index: 0;
 
     &:hover {
@@ -24,63 +78,177 @@
 
   .roadmap__content__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 250px;
+    position: relative;
+    grid-template-columns: 615px 1fr;
     z-index: 1;
+    margin: 20px 0 250px 328px;
+    row-gap: 60px;
+
+    @media screen and (max-width: 1440px) {
+      margin-left: 94px;
+    }
+
+    @media only screen and (max-width: 1025px) {
+      grid-template-columns: unset;
+      margin: 45px 15px 60px;
+    }
+
+    &.cards-only {
+      grid-template-columns: unset;
+      margin: 20px 0 35px 60px;
+      overflow: auto;
+
+      .roadmap__title {
+        display: none;
+      }
+    }
 
     .roadmap__title {
-      max-width: 615px;
       font-size: 125px;
-      margin-left: 328px;
 
-      @media screen and (max-width: 1440px) {
-        margin-left: 94px;
+      @media only screen and (max-width: 1025px) {
+        text-align: center;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 800px) {
+        justify-self: center;
+        max-width: 345px;
         font-size: 65px;
         line-height: 72px;
-        text-align: center;
-        max-width: 345px;
-        margin-left: 15px;
       }
     }
 
     .roadmap__cards {
-      display: grid;
-      grid-template: 470px / repeat(5, 345px);
+      display: flex;
       margin: auto 0;
+      overflow: auto;
 
       .roadmap__card {
         display: flex;
         flex-direction: column;
+        flex-shrink: 0;
         justify-content: space-between;
         border-radius: 20px;
         padding: 20px;
+        height: 430px;
+        width: 305px;
+        box-sizing: content-box;
+        @include roadmap-background-images();
 
-        &.Genesis {
-          background: center / cover no-repeat
-            url("../images/illus/index_roadmap_1.jpg");
-        }
+        &.opened {
+          width: 55vw;
+          min-width: 300px;
+          height: 745px;
+          background: unset;
+          padding: 0;
 
-        &.Nemeton {
-          background: center / cover no-repeat
-            url("../images/illus/index_roadmap_2.jpg");
-        }
+          .roadmap__card__opened__wrapper {
+            display: grid;
+            grid-template-columns: minmax(350px, 2fr) 1fr;
+            height: 100%;
 
-        &.Myrddin {
-          background: center / cover no-repeat
-            url("../images/illus/index_roadmap_3.jpg");
-        }
+            .roadmap__card__opened__content {
+              background-color: $white;
+              border: none;
+              border-radius: 20px 0 0 20px;
+              padding: 30px;
+              overflow: scroll;
 
-        &.Duir {
-          background: center / cover no-repeat
-            url("../images/illus/index_roadmap_4.jpg");
-        }
+              .roadmap__card__opened__header {
+                display: flex;
+                justify-content: space-between;
+                white-space: nowrap;
 
-        &.Lugh {
-          background: center / cover no-repeat
-            url("../images/illus/index_roadmap_5.jpg");
+                .roadmap__card__title {
+                  @include dash(10px, 10px, $textblue);
+                  @include bold-text();
+                  color: $textblue;
+                }
+
+                .roadmap__card__period {
+                  @media only screen and (max-width: 1025px) {
+                    display: none;
+                  }
+                }
+              }
+
+              .roadmap__card__introduction {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 180%;
+                color: $textblue;
+                margin: 10px 15px;
+              }
+
+              .roadmap__card__description {
+                @include descriptive-text();
+                margin: 10px 15px;
+
+                p {
+                  margin: 20px 0px;
+                }
+              }
+
+              .roadmap__card__year {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 180%;
+                color: $textblue;
+                margin: 10px 65px;
+                opacity: 0.8;
+              }
+
+              .roadmap__card__timeline > div > p {
+                @include descriptive-text();
+                @include dash(4px, 30px, $textblue);
+              }
+            }
+
+            .roadmap__card__opened__image__wrapper {
+              position: relative;
+              padding: 30px;
+              border-radius: 0px 20px 20px 0px;
+              @include roadmap-background-images();
+
+              .roadmap__card__opened__image__content {
+                display: flex;
+                justify-content: right;
+
+                .roadmap__card__period {
+                  display: none;
+                }
+
+                .roadmap__card__opened__close {
+                  all: unset;
+                  cursor: pointer;
+                }
+              }
+            }
+
+            @media only screen and (max-width: 1025px) {
+              grid-template-columns: unset;
+
+              .roadmap__card__opened__content {
+                grid-area: 2 / 1;
+                border-radius: 0 0 20px 20px;
+              }
+
+              .roadmap__card__opened__image__wrapper {
+                grid-area: 1 / 1;
+                height: 260px;
+                border-radius: 20px 20px 0 0;
+
+                .roadmap__card__opened__image__content {
+                  justify-content: space-between;
+
+                  .roadmap__card__period {
+                    display: unset;
+                    white-space: nowrap;
+                  }
+                }
+              }
+            }
+          }
         }
 
         .roadmap__card__period {
@@ -100,29 +268,30 @@
           flex-direction: column;
           justify-content: space-between;
 
-          .roadmap__card__title {
-            font-weight: 700;
-            font-size: 35px;
-            line-height: 42px;
-            margin: 15px 10px;
+          .roadmap__title__wrapper {
+            display: flex;
+            align-items: baselin;
+            gap: 15px;
+
+            .roadmap__card__title {
+              @include dash(10px, 10px, $white);
+              @include bold-text();
+              margin: 15px 10px;
+            }
           }
 
           .roadmap__card__button {
-            display: flex;
-            justify-content: center;
-            gap: 5px;
-            align-self: end;
             background-color: $orange;
             color: $white;
             border-radius: 10px;
-            font-weight: 400;
             font-size: 16px;
-            line-height: 19px;
             padding: 17px 0;
             width: 100%;
             border: none;
+            cursor: pointer;
 
             svg {
+              margin-left: 3px;
               vertical-align: bottom;
             }
           }
