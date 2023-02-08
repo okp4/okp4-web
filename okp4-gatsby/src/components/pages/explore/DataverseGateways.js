@@ -5,7 +5,7 @@ import Halo from "../../animations/Halo.js";
 import content from "/content/pages/explore/dataverse-gateways.yaml";
 import Parallax from "../../animations/Parallax.js";
 
-const parallax = [100, 150, 50, 125];
+const parallaxLandscapeCard = [100, 150, 50, 125];
 
 const DataverseGateways = ({ files }) => (
   <div className="dataverse_gateways">
@@ -25,8 +25,8 @@ const DataverseGateways = ({ files }) => (
           {content.landscape.cards.map((card, index) => (
             <Parallax
               classContainer="dg__landscape__cards__item"
-              parallaxStart={parallax[index]}
-              parallaxEnd={-parallax[index]}
+              parallaxStart={parallaxLandscapeCard[index]}
+              parallaxEnd={-parallaxLandscapeCard[index]}
               parallaxMiddle="0.5"
             >
               <div
@@ -44,6 +44,66 @@ const DataverseGateways = ({ files }) => (
               </div>
             </Parallax>
           ))}
+        </div>
+
+        <div className="dg__protocol">
+          <div className="dg__protocol__cards_container">
+            {content.protocol.cards.map((card) => (
+              <div className="dg__protocol__card">
+                <GatsbyImage
+                  image={MediaManager.GetImage("explore/" + card, files)}
+                  alt={card}
+                />
+              </div>
+            ))}
+          </div>
+          <div className="dg__protocol__book">
+            <div className="dg__protocol__book--element">
+              <GatsbyImage
+                image={MediaManager.GetImage(
+                  "explore/protocol-book.png",
+                  files
+                )}
+                alt="OKP4 Protocol"
+              />
+            </div>
+            <div className="dg__protocol__book--element page page1">
+              <GatsbyImage
+                image={MediaManager.GetImage(
+                  "explore/protocol-page-lb.png",
+                  files
+                )}
+                alt="OKP4 Protocol"
+              />
+            </div>
+            <div className="dg__protocol__book--element page page2">
+              <GatsbyImage
+                image={MediaManager.GetImage(
+                  "explore/protocol-page-lt.png",
+                  files
+                )}
+                alt="OKP4 Protocol"
+              />
+            </div>
+            <div className="dg__protocol__book--element page page3">
+              <GatsbyImage
+                image={MediaManager.GetImage(
+                  "explore/protocol-page-rb.png",
+                  files
+                )}
+                alt="OKP4 Protocol"
+              />
+            </div>
+            <div className="dg__protocol__book--element page page4">
+              <GatsbyImage
+                image={MediaManager.GetImage(
+                  "explore/protocol-page-rt.png",
+                  files
+                )}
+                alt="OKP4 Protocol"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 .dataverse_gateways {
   min-height: 100vh;
-  padding-top: 15vh;
+  padding-top: 300px;
 
   .wrapper {
     position: relative;
@@ -14,7 +14,6 @@
   .dg__first_page {
     padding-top: 10vh;
     margin: 0 auto;
-    height: 100vh;
 
     .dg__main_title {
       text-align: center;
@@ -22,6 +21,7 @@
     }
 
     .dg__keywords__container {
+      align-self: flex-end;
       height: 327px;
       @include media-bp-down(lg) {
         height: 345px;
@@ -112,6 +112,62 @@
             line-height: 1.5;
           }
         }
+      }
+    }
+  }
+
+  .dg__protocol {
+    margin: 0 auto 100px;
+    position: relative;
+    width: 1264px;
+    height: 929px;
+
+    .dg__protocol__cards_container {
+      display: grid;
+      grid-auto-flow: column;
+      position: absolute;
+      z-index: 2;
+      &:hover {
+        .dg__protocol__card:hover {
+          opacity: 1;
+          z-index: 3;
+          transition: transform 0.5s;
+          transform: scale(1.2);
+        }
+
+        :not(.dg__protocol__card:hover) {
+          div {
+            opacity: 0.2;
+          }
+        }
+      }
+    }
+
+    .dg__protocol__book {
+      height: max-content;
+      width: max-content;
+      .dg__protocol__book--element {
+        position: absolute;
+      }
+      .page {
+        animation: floating-image 8s linear infinite;
+      }
+
+      .page1 {
+        animation-delay: 4s;
+      }
+
+      .page2 {
+        animation-delay: 1.5s;
+        animation-direction: reverse;
+      }
+
+      .page3 {
+        animation-delay: 2s;
+      }
+
+      .page4 {
+        animation-duration: 4s;
       }
     }
   }

@@ -34,3 +34,14 @@ landscape:
       text: |
         to view and search the contents of the OKP4 blockchain.
       image: blockchain-explorers.png
+protocol:
+  cards:
+    - cards-portal.png
+    - cards-dataset-register.png
+    - cards-catalog.png
+    - cards-workflow-builder.png
+    - cards-app.png
+    - cards-ontology-database.png
+    - cards-blockchain-explorer.png
+    - cards-apis.png
+    - cards-wallet.png
