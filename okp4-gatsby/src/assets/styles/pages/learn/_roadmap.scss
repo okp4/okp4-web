@@ -52,6 +52,34 @@
   }
 }
 
+@mixin card-animation {
+  animation: rotation 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+
+  @keyframes rotation {
+    from {
+      transform: rotate(-10deg);
+    }
+
+    25% {
+      transform: rotate(10deg);
+    }
+
+    50% {
+      transform: rotate(-10deg);
+    }
+
+    75% {
+      transform: rotate(10deg);
+    }
+
+    to {
+      transform: rotate(-10deg);
+    }
+  }
+}
+
 .roadmap__main {
   display: flex;
   position: relative;
@@ -164,6 +192,8 @@
         height: 430px;
         width: 305px;
         box-sizing: content-box;
+        transition: all 0.5s ease-out;
+        @include card-animation();
         @include roadmap-background-images();
 
         &.opened {
@@ -172,6 +202,7 @@
           height: 745px;
           background: unset;
           padding: 0;
+          animation: unset;
 
           @media screen and (max-width: 1025px) {
             width: 97%;

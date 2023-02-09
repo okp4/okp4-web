@@ -5,6 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
 import ExitIcon from "../../../assets/images/icons/exit-icon.inline.svg";
+import { useHorizontalScroll } from "../../../hook/useHorizontalScroll";
 
 const Card = ({
   title,
@@ -97,6 +98,13 @@ const Card = ({
 
 const Roadmap = () => {
   const [openedCard, setOpenedCard] = useState(null);
+  const scrollRef = useHorizontalScroll(() => {
+    const percent =
+      scrollRef.current?.scrollLeft /
+      (scrollRef.current?.scrollWidth - scrollRef.current?.clientWidth);
+    document.body.style.setProperty("--scroll", percent);
+  });
+
   const handleCardOpen = useCallback(
     (cardTitle) => () => {
       setOpenedCard(cardTitle);
@@ -127,6 +135,7 @@ const Roadmap = () => {
           className={classNames("roadmap__cards", {
             "card-opened": openedCard,
           })}
+          ref={scrollRef}
         >
           {contentRoadmap.cards.map(
             ({ title, period, introduction, description, timeline }) => (
