@@ -86,6 +86,10 @@
   min-height: calc(100vh - 505px);
   padding-top: 181px;
 
+  @media screen and (max-width: 1025px) {
+    padding-top: 90px;
+  }
+
   .roadmap__background__image {
     position: absolute;
     right: 0;
@@ -155,6 +159,7 @@
 
     .roadmap__title {
       font-size: 125px;
+      align-self: center;
 
       @media only screen and (max-width: 1025px) {
         text-align: center;
