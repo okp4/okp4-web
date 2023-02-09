@@ -95,11 +95,33 @@
 
     &.cards-only {
       grid-template-columns: unset;
-      margin: 20px 0 35px 60px;
+      margin: 20px 3% 35px 3%;
       overflow: auto;
 
       .roadmap__title {
         display: none;
+      }
+
+      &.Genesis {
+        @media only screen and (min-width: 1025px) {
+          .roadmap__cards {
+            &::before {
+              content: "";
+              margin-left: calc(45vw / 2 - 3%);
+            }
+          }
+        }
+      }
+
+      &.Lugh {
+        @media only screen and (min-width: 1025px) {
+          .roadmap__cards {
+            &::after {
+              content: "";
+              margin-right: calc(45vw / 2 - 3%);
+            }
+          }
+        }
       }
     }
 
@@ -122,6 +144,15 @@
       display: flex;
       margin: auto 0;
       overflow: auto;
+      padding-right: 328px;
+
+      @media screen and (max-width: 1440px) {
+        padding-right: 94px;
+      }
+
+      &.card-opened {
+        padding-right: unset;
+      }
 
       .roadmap__card {
         display: flex;
@@ -141,6 +172,12 @@
           height: 745px;
           background: unset;
           padding: 0;
+
+          @media screen and (max-width: 1025px) {
+            width: 97%;
+            height: 100%;
+            max-height: 1200px;
+          }
 
           .roadmap__card__opened__wrapper {
             display: grid;
@@ -268,16 +305,10 @@
           flex-direction: column;
           justify-content: space-between;
 
-          .roadmap__title__wrapper {
-            display: flex;
-            align-items: baselin;
-            gap: 15px;
-
-            .roadmap__card__title {
-              @include dash(10px, 10px, $white);
-              @include bold-text();
-              margin: 15px 10px;
-            }
+          .roadmap__card__title {
+            @include dash(10px, 10px, $white);
+            @include bold-text();
+            margin: 15px 10px;
           }
 
           .roadmap__card__button {
