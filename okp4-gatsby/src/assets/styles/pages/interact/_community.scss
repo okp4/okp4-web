@@ -420,7 +420,7 @@
           width: 400px;
           height: 351px;
           padding: 32px 40px;
-          @media screen and (max-width: 1400px) {
+          @include media-bp-down(xxl) {
             padding: 24px;
             max-width: 400px;
             max-height: 351px;
