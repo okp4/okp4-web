@@ -16,6 +16,7 @@ const Card = ({
   handleCardOpen,
   timeline,
   isOpen,
+  buttonDisabled,
 }) => {
   const cardRef = useRef(null);
 
@@ -83,6 +84,7 @@ const Card = ({
           <div className="roadmap__card__content__wrapper">
             <p className="roadmap__card__title">{title}</p>
             <button
+              disabled={buttonDisabled}
               className="roadmap__card__button"
               onClick={handleCardOpen(title)}
             >
@@ -148,6 +150,7 @@ const Roadmap = () => {
                 handleCardOpen={handleCardOpen}
                 timeline={timeline}
                 isOpen={openedCard === title}
+                buttonDisabled={!!openedCard}
               />
             )
           )}
