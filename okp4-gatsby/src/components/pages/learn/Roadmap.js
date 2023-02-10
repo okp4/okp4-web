@@ -103,7 +103,7 @@ const Roadmap = () => {
       scrollRef.current?.scrollLeft /
       (scrollRef.current?.scrollWidth - scrollRef.current?.clientWidth);
     document.body.style.setProperty("--scroll", percent);
-  });
+  }, openedCard);
 
   const handleCardOpen = useCallback(
     (cardTitle) => () => {

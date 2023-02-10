@@ -176,8 +176,8 @@
     .roadmap__cards {
       display: flex;
       margin: auto 0;
-      overflow: auto;
-      padding-right: 328px;
+      overflow: hidden;
+      padding: 50px 328px 50px 0;
 
       @media screen and (max-width: 1440px) {
         padding-right: 94px;
@@ -188,6 +188,7 @@
       }
 
       .roadmap__card {
+        z-index: 2;
         display: flex;
         flex-direction: column;
         flex-shrink: 0;
@@ -202,6 +203,7 @@
         @include roadmap-background-images();
 
         &.opened {
+          z-index: 3;
           width: 55vw;
           min-width: 300px;
           height: 745px;
@@ -219,6 +221,7 @@
             display: grid;
             grid-template-columns: minmax(350px, 2fr) 1fr;
             height: 100%;
+            z-index: 4;
 
             .roadmap__card__opened__content {
               background-color: $white;

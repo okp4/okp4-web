@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react";
 
-export const useHorizontalScroll = (eventCallBackFn) => {
+export const useHorizontalScroll = (eventCallBackFn, openedCard) => {
   const ref = useRef();
 
   useEffect(() => {
@@ -13,7 +13,10 @@ export const useHorizontalScroll = (eventCallBackFn) => {
       eventCallBackFn();
     };
     current?.addEventListener("wheel", handleWheelEvent);
+    if (openedCard) {
+      current?.removeEventListener("wheel", handleWheelEvent);
+    }
     return () => current?.removeEventListener("wheel", handleWheelEvent);
-  }, [ref, eventCallBackFn]);
+  }, [ref, eventCallBackFn, openedCard]);
   return ref;
 };
