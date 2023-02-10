@@ -232,45 +232,45 @@
     }
 
     .community_white_cards {
-      .community_white_cards_item {
+      display: grid;
+      grid-template: minmax(351px, auto) / repeat(3, 1fr);
+      column-gap: 30px;
+      row-gap: 15px;
+
+      @include media-bp-down(md) {
+        grid-template: repeat(3, minmax(300px, 1fr)) / auto;
+      }
+
+      a {
         display: flex;
-        grid-column: span 4;
+        padding: 10px 0 40px;
+
         flex-direction: column;
-        width: 100%;
-        min-height: 351px;
-        @include media-bp-up(lg) {
-          max-height: 351px;
-        }
+        height: 100%;
         border-radius: 20px;
         background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%);
-
-        @include media-bp-down(lg) {
-          grid-column: span 2;
-          min-height: 300px;
-        }
-
-        @include media-bp-down(md) {
-          grid-column: span 6;
-          width: auto;
-          max-height: 400px;
-        }
         cursor: pointer;
 
-        a {
-          padding: 10px 0 40px;
-          width: 100%;
-          min-height: 351px;
-          @include media-bp-up(lg) {
-            max-height: 351px;
-          }
+        @include media-bp-down(lg) {
+        }
 
-          @include media-bp-down(lg) {
-            min-height: 300px;
-          }
+        @include media-bp-up(md) {
+          &:hover {
+            background: url("/images/grain.png"),
+              linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
 
-          @include media-bp-down(md) {
-            width: auto;
-            max-height: 400px;
+            .title,
+            .text {
+              color: $white;
+            }
+
+            svg {
+              transform: translate3d(5px, -5px, 0);
+
+              path {
+                stroke: $white;
+              }
+            }
           }
         }
 
@@ -305,22 +305,14 @@
         }
 
         .arrow_icon {
-          align-self: flex-end;
-          margin-bottom: 0px;
-          margin-top: 20px;
-          margin-right: 20px;
+          margin: auto 0 0 calc(100% - 13px - 45px);
 
           svg {
-            position: absolute;
-            right: 40px;
-            bottom: 40px;
             width: 15px;
             height: auto;
             transition: transform 0.25s ease;
 
             @include media-bp-down(md) {
-              right: 25px;
-              bottom: 25px;
               width: 13px;
             }
 
@@ -340,25 +332,6 @@
         &:nth-of-type(3) {
           .introduction__cards__item__illus {
             animation-delay: 2s;
-          }
-        }
-        @include media-bp-up(md) {
-          &:hover {
-            background: url("/images/grain.png"),
-              linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
-
-            .title,
-            .text {
-              color: $white;
-            }
-
-            svg {
-              transform: translate3d(5px, -5px, 0);
-
-              path {
-                stroke: $white;
-              }
-            }
           }
         }
       }
