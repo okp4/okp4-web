@@ -17,12 +17,6 @@
     left: 0;
     transform-origin: center;
 
-    .text {
-      color: $white;
-      font-weight: bold;
-      margin: 20px;
-    }
-
     .community_landing_wrapper {
       display: grid;
       @include media-bp-up(lg) {
@@ -118,13 +112,15 @@
       display: grid;
       grid-template-columns: repeat(5, 100px);
       column-gap: 120px;
-      @include media-bp-down(lg) {
-        column-gap: 60px;
-      }
+      margin-bottom: 86px;
       place-items: center;
       align-items: center;
       justify-content: center;
       margin-top: 100px;
+
+      @include media-bp-down(lg) {
+        column-gap: 60px;
+      }
 
       @include media-bp-down(md) {
         margin-top: 60px;
@@ -136,7 +132,6 @@
           "linkedin linkedin twitter twitter github github"
           "empty1 telegram telegram discord discord empty2";
       }
-      margin-bottom: 86px;
 
       &:hover {
         span:hover {
@@ -212,6 +207,13 @@
             grid-area: discord;
           }
         }
+
+        .text {
+          color: $white;
+          font-weight: bold;
+          margin: 20px;
+        }
+
         svg {
           width: 50px;
           height: auto;
