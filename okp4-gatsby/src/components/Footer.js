@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useMemo } from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import * as MediaManager from "../utils/MediaManager.js";
 import { Link } from "gatsby";
@@ -42,6 +42,69 @@ const Footer = ({ files, withDocs = true, withPartners = true }) => {
       divScrollTop.current.classList.add("is-active");
     else divScrollTop.current.classList.remove("is-active");
   };
+
+  const topLinks = useMemo(
+    () => [
+      {
+        label: contentSocials.socials[8].label,
+        url: contentSocials.socials[8].url,
+        className: "footer__main__top__links__item",
+      },
+      {
+        label: contentSocials.socials[6].label,
+        url: contentSocials.socials[6].url,
+        className: "footer__main__top__links__item",
+      },
+      {
+        label: contentSocials.socials[7].label,
+        url: contentSocials.socials[7].url,
+        className: "footer__main__top__links__item",
+      },
+      {
+        label: contentSocials.socials[9].label,
+        url: contentSocials.socials[9].url,
+        className:
+          "footer__main__top__links__item footer__main__top__links__item--button",
+      },
+    ],
+    []
+  );
+
+  const bottomSocials = useMemo(
+    () => [
+      {
+        label: contentSocials.socials[0].label,
+        url: contentSocials.socials[0].url,
+        icon: <IconLinkedin />,
+      },
+      {
+        label: contentSocials.socials[1].label,
+        url: contentSocials.socials[1].url,
+        icon: <IconTwitter />,
+      },
+      {
+        label: contentSocials.socials[2].label,
+        url: contentSocials.socials[2].url,
+        icon: <IconGithub />,
+      },
+      {
+        label: contentSocials.socials[3].label,
+        url: contentSocials.socials[3].url,
+        icon: <IconMedium />,
+      },
+      {
+        label: contentSocials.socials[4].label,
+        url: contentSocials.socials[4].url,
+        icon: <IconDiscord />,
+      },
+      {
+        label: contentSocials.socials[5].label,
+        url: contentSocials.socials[5].url,
+        icon: <IconTelegram />,
+      },
+    ],
+    []
+  );
 
   useEffect(() => {
     window.addEventListener("scroll", scrollStarted);
@@ -89,40 +152,18 @@ const Footer = ({ files, withDocs = true, withPartners = true }) => {
             <div className="footer__main__top">
               <IconLogo className="footer__main__top__logo" />
               <div className="footer__main__top__links">
-                <a
-                  href={contentSocials.faq.url}
-                  className="footer__main__top__links__item"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{contentSocials.faq.label}</span>
-                  <IconArrowtr />
-                </a>
-                <a
-                  href={contentSocials.whitepaper.url}
-                  className="footer__main__top__links__item"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{contentSocials.whitepaper.label}</span>
-                  <IconArrowtr />
-                </a>
-                <a
-                  href={contentSocials.nemeton.url}
-                  className="footer__main__top__links__item"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{contentSocials.nemeton.label}</span>
-                  <IconArrowtr />
-                </a>
-                <a
-                  href={contentSocials.contact.url}
-                  className="footer__main__top__links__item footer__main__top__links__item--button"
-                >
-                  <span>{contentSocials.contact.label}</span>
-                  <IconArrowtr />
-                </a>
+                {topLinks.map(({ label, url, className }) => (
+                  <a
+                    href={url}
+                    className={className}
+                    key={label}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span>{label}</span>
+                    <IconArrowtr />
+                  </a>
+                ))}
               </div>
             </div>
             <div className="footer__main__bottom">
@@ -137,54 +178,17 @@ const Footer = ({ files, withDocs = true, withPartners = true }) => {
                 </div>
               </div>
               <div className="footer__main__bottom__socials">
-                <a
-                  href={contentSocials.linkedin.url}
-                  className="footer__main__bottom__socials__link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <IconLinkedin />
-                </a>
-                <a
-                  href={contentSocials.twitter.url}
-                  className="footer__main__bottom__socials__link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <IconTwitter />
-                </a>
-                <a
-                  href={contentSocials.github.url}
-                  className="footer__main__bottom__socials__link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <IconGithub />
-                </a>
-                <a
-                  href={contentSocials.medium.url}
-                  className="footer__main__bottom__socials__link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <IconMedium />
-                </a>
-                <a
-                  href={contentSocials.discord.url}
-                  className="footer__main__bottom__socials__link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <IconDiscord />
-                </a>
-                <a
-                  href={contentSocials.telegram.url}
-                  className="footer__main__bottom__socials__link"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <IconTelegram />
-                </a>
+                {bottomSocials.map(({ label, url, icon }) => (
+                  <a
+                    href={url}
+                    className="footer__main__bottom__socials__link"
+                    key={label}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {icon}
+                  </a>
+                ))}
               </div>
             </div>
             <div className="footer__main__sitemap">

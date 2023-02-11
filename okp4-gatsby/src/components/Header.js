@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import classNames from "classnames";
 import IconLogo from "../assets/images/logo.inline.svg";
 import IconArrowtr from "../assets/images/icons/arrow-tr.inline.svg";
@@ -67,6 +67,56 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
     if (event.keyCode === 13) toggleBurger();
   };
 
+  const resourceLinks = useMemo(
+    () => [
+      {
+        label: contentSocials.socials[8].label,
+        url: contentSocials.socials[8].url,
+      },
+      {
+        label: contentSocials.socials[7].label,
+        url: contentSocials.socials[7].url,
+      },
+    ],
+    []
+  );
+
+  const socialIcons = useMemo(
+    () => [
+      {
+        label: contentSocials.socials[0].label,
+        url: contentSocials.socials[0].url,
+        icon: <IconLinkedin />,
+      },
+      {
+        label: contentSocials.socials[1].label,
+        url: contentSocials.socials[1].url,
+        icon: <IconTwitter />,
+      },
+      {
+        label: contentSocials.socials[2].label,
+        url: contentSocials.socials[2].url,
+        icon: <IconGithub />,
+      },
+      {
+        label: contentSocials.socials[3].label,
+        url: contentSocials.socials[3].url,
+        icon: <IconMedium />,
+      },
+      {
+        label: contentSocials.socials[4].label,
+        url: contentSocials.socials[4].url,
+        icon: <IconDiscord />,
+      },
+      {
+        label: contentSocials.socials[5].label,
+        url: contentSocials.socials[5].url,
+        icon: <IconTelegram />,
+      },
+    ],
+    []
+  );
+
   useEffect(() => {
     setTimeout(function () {
       window.addEventListener("scroll", scrollStarted);
@@ -108,54 +158,17 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
             ></p>
           </div>
           <div className="header__socials">
-            <a
-              href={contentSocials.linkedin.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconLinkedin />
-            </a>
-            <a
-              href={contentSocials.twitter.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconTwitter />
-            </a>
-            <a
-              href={contentSocials.github.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconGithub />
-            </a>
-            <a
-              href={contentSocials.medium.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconMedium />
-            </a>
-            <a
-              href={contentSocials.discord.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconDiscord />
-            </a>
-            <a
-              href={contentSocials.telegram.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconTelegram />
-            </a>
+            {socialIcons.map(({ label, url, icon }) => (
+              <a
+                href={url}
+                className="header__socials__link"
+                key={label}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {icon}
+              </a>
+            ))}
           </div>
         </div>
         <div className="header__bottom">
@@ -164,24 +177,18 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
           </Link>
           <Menu />
           <nav className="header__resources">
-            <a
-              href={contentSocials.whitepaper.url}
-              className="header__resources__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>{contentSocials.whitepaper.label}</span>
-              <IconArrowtr />
-            </a>
-            <a
-              href={contentSocials.nemeton.url}
-              className="header__resources__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>{contentSocials.nemeton.label}</span>
-              <IconArrowtr />
-            </a>
+            {resourceLinks.map(({ url, label }) => (
+              <a
+                href={url}
+                className="header__resources__link"
+                key={label}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>{label}</span>
+                <IconArrowtr />
+              </a>
+            ))}
           </nav>
         </div>
       </div>

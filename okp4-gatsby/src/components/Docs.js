@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import IconGithub from "/src/assets/images/socials/github.inline.svg";
 import IconDiscord from "/src/assets/images/socials/discord.inline.svg";
@@ -6,6 +6,22 @@ import contentFooter from "/content/transversals/footer.yaml";
 import contentSocials from "/content/transversals/socials.yaml";
 
 const Docs = () => {
+  const socials = useMemo(
+    () => [
+      {
+        label: contentSocials.socials[2].label,
+        url: contentSocials.socials[2].url,
+        icon: <IconGithub className="social" />,
+      },
+      {
+        label: contentSocials.socials[4].label,
+        url: contentSocials.socials[4].url,
+        icon: <IconDiscord className="social" />,
+      },
+    ],
+    []
+  );
+
   return (
     <section className="docs">
       <div className="wrapper">
@@ -43,26 +59,19 @@ const Docs = () => {
             <IconArrowtr />
           </a>
           <div className="docs__content__right">
-            <a
-              href={contentSocials.github.url}
-              className="docs__content__item docs__content__item--small"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconGithub className="social" />
-              <p className="title">{contentSocials.github.label}</p>
-              <IconArrowtr className="arrow" />
-            </a>
-            <a
-              href={contentSocials.discord.url}
-              className="docs__content__item docs__content__item--small"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconDiscord className="social" />
-              <p className="title">{contentSocials.discord.label}</p>
-              <IconArrowtr className="arrow" />
-            </a>
+            {socials.map(({ label, url, icon }) => (
+              <a
+                href={url}
+                className="docs__content__item docs__content__item--small"
+                key={label}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {icon}
+                <p className="title">{label}</p>
+                <IconArrowtr className="arrow" />
+              </a>
+            ))}
           </div>
         </div>
       </div>

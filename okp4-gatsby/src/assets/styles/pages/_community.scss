@@ -193,6 +193,27 @@
           margin: 0;
         }
 
+        @include media-bp-down(md) {
+          &.linkedin {
+            grid-area: linkedin;
+          }
+
+          &.twitter {
+            grid-area: twitter;
+          }
+
+          &.github {
+            grid-area: github;
+          }
+
+          &.telegram {
+            grid-area: telegram;
+          }
+
+          &.discord {
+            grid-area: discord;
+          }
+        }
         svg {
           width: 50px;
           height: auto;
@@ -210,23 +231,6 @@
             height: auto;
             transition: transform 0.25s ease;
           }
-        }
-      }
-      @include media-bp-down(md) {
-        .socials__link:nth-child(1) {
-          grid-area: linkedin;
-        }
-        .socials__link:nth-child(2) {
-          grid-area: twitter;
-        }
-        .socials__link:nth-child(3) {
-          grid-area: github;
-        }
-        .socials__link:nth-child(4) {
-          grid-area: telegram;
-        }
-        .socials__link:nth-child(5) {
-          grid-area: discord;
         }
       }
     }
