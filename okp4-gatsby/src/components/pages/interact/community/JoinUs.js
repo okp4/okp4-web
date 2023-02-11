@@ -64,7 +64,7 @@ const JoinUs = ({ files }) => {
             </div>
           </div>
 
-        <div className="background_img"></div>
+          <div className="background_img" />
 
           <div class="social_media">
             {socials.map(({ label, url, icon }) => (
