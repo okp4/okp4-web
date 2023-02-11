@@ -84,6 +84,26 @@ const JoinUs = ({ files }) => {
             ))}
           </div>
 
+          <div className="community_white_cards">
+            {contentCommunity.infoCards.map(
+              ({ title, content, url, parallaxStart, parallaxEnd }) => (
+                <Parallax
+                  parallaxStart={parallaxStart}
+                  parallaxEnd={parallaxEnd}
+                  parallaxMiddle="0.5"
+                  key={title}
+                >
+                  <a href={url} target="_blank" rel="noreferrer">
+                    <p className="card_title">{title}</p>
+                    <p className="text">{content}</p>
+                    <div className="arrow_icon">
+                      <IconArrowtr />
+                    </div>
+                  </a>
+                </Parallax>
+              )
+            )}
+          </div>
         </div>
       </div>
     </section>
