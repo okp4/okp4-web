@@ -90,14 +90,12 @@
     }
 
     .background_img {
-      float: left;
       height: 721px;
       width: 721px;
       opacity: 15%;
       position: fixed;
       left: 7px;
       top: 472px;
-      margin-left: 0;
       background-image: url("../../assets/images/illus/cropped_footer_image.png");
       background-size: cover;
       background-repeat: no-repeat;
@@ -280,10 +278,8 @@
 
         .card_title {
           margin-top: 10px;
-          text-align: left;
           margin-left: 35px;
           color: $textblue;
-          font-style: normal;
           font-weight: 600;
           font-size: 25px;
           line-height: 130%;
@@ -291,16 +287,13 @@
 
         .text {
           color: $textblue;
-          text-align: left;
           font-weight: 400;
-          font-size: 18;
           line-height: 150%;
           margin-left: 35px;
           margin-right: 35px;
 
           @include media-bp-down(lg) {
             max-width: 70%;
-            font-size: 18;
           }
 
           @include media-bp-down(md) {
@@ -332,18 +325,6 @@
               transition: stroke 0.25s ease;
               stroke: #00b6b7;
             }
-          }
-        }
-        &:nth-of-type(2) {
-          .introduction__cards__item__illus {
-            animation-delay: 1.5s;
-            animation-direction: reverse;
-          }
-        }
-
-        &:nth-of-type(3) {
-          .introduction__cards__item__illus {
-            animation-delay: 2s;
           }
         }
         @include media-bp-up(md) {
