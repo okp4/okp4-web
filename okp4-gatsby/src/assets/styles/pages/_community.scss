@@ -130,7 +130,7 @@
         row-gap: 33px;
         grid-template-areas:
           "linkedin linkedin twitter twitter github github"
-          "empty1 telegram telegram discord discord empty2";
+          ". telegram telegram discord discord .";
       }
 
       &:hover {
