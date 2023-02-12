@@ -109,12 +109,14 @@
   }
 
   .roadmap__content__wrapper {
-    display: grid;
     position: relative;
+    display: grid;
     grid-template-columns: 615px 1fr;
     z-index: 1;
     margin: 20px 0 250px 328px;
-    row-gap: 60px;
+    column-gap: 60px;
+    overflow: hidden;
+    width: 100%;
 
     @media screen and (max-width: 1440px) {
       margin-left: 94px;
@@ -176,7 +178,7 @@
     .roadmap__cards {
       display: flex;
       margin: auto 0;
-      overflow: hidden;
+
       padding: 50px 328px 50px 0;
 
       @media screen and (max-width: 1440px) {

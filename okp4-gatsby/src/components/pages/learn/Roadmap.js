@@ -1,4 +1,10 @@
-import React, { useState, useCallback, useEffect, useRef } from "react";
+import React, {
+  useState,
+  useCallback,
+  useEffect,
+  useRef,
+  createRef,
+} from "react";
 import contentRoadmap from "/content/pages/learn/roadmap.yaml";
 import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
@@ -6,6 +12,7 @@ import classNames from "classnames";
 import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
 import ExitIcon from "../../../assets/images/icons/exit-icon.inline.svg";
 import { useHorizontalScroll } from "../../../hook/useHorizontalScroll";
+import { useMemo } from "react";
 
 const Card = ({
   title,
@@ -17,89 +24,77 @@ const Card = ({
   timeline,
   isOpen,
   buttonDisabled,
-}) => {
-  const cardRef = useRef(null);
-
-  useEffect(() => {
-    if (isOpen) {
-      cardRef.current?.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-      });
-    }
-  }, [isOpen]);
-
-  return (
-    <div
-      className={classNames("roadmap__card", title, {
-        opened: isOpen,
-      })}
-      key={title}
-    >
-      {isOpen ? (
-        <div className="roadmap__card__opened__wrapper" ref={cardRef}>
-          <div className="roadmap__card__opened__content">
-            <div className="roadmap__card__opened__header">
-              <p className="roadmap__card__title">{title}</p>
-              <p className="roadmap__card__period">{period}</p>
-            </div>
-            <p className="roadmap__card__introduction">{introduction}</p>
-            <div
-              className="roadmap__card__description"
-              dangerouslySetInnerHTML={{
-                __html: description,
-              }}
-            />
-            {timeline.map(({ year, milestones }, index) => (
-              <div className="roadmap__card__timeline" key={index}>
-                <p className="roadmap__card__year">{year}</p>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: milestones,
-                  }}
-                />
-              </div>
-            ))}
-          </div>
-          <div
-            className={classNames(
-              "roadmap__card__opened__image__wrapper",
-              title
-            )}
-          >
-            <div className="roadmap__card__opened__image__content">
-              <p className="roadmap__card__period">{period}</p>
-              <button
-                className="roadmap__card__opened__close"
-                onClick={handleCardClose}
-              >
-                <ExitIcon />
-              </button>
-            </div>
-          </div>
-        </div>
-      ) : (
-        <>
-          <p className="roadmap__card__period">{period}</p>
-          <div className="roadmap__card__content__wrapper">
+  index,
+  cardRef,
+}) => (
+  <div
+    className={classNames("roadmap__card", title, {
+      opened: isOpen,
+    })}
+    key={title}
+    ref={cardRef}
+  >
+    {isOpen ? (
+      <div className="roadmap__card__opened__wrapper">
+        <div className="roadmap__card__opened__content">
+          <div className="roadmap__card__opened__header">
             <p className="roadmap__card__title">{title}</p>
+            <p className="roadmap__card__period">{period}</p>
+          </div>
+          <p className="roadmap__card__introduction">{introduction}</p>
+          <div
+            className="roadmap__card__description"
+            dangerouslySetInnerHTML={{
+              __html: description,
+            }}
+          />
+          {timeline.map(({ year, milestones }, index) => (
+            <div className="roadmap__card__timeline" key={index}>
+              <p className="roadmap__card__year">{year}</p>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: milestones,
+                }}
+              />
+            </div>
+          ))}
+        </div>
+        <div
+          className={classNames("roadmap__card__opened__image__wrapper", title)}
+        >
+          <div className="roadmap__card__opened__image__content">
+            <p className="roadmap__card__period">{period}</p>
             <button
-              disabled={buttonDisabled}
-              className="roadmap__card__button"
-              onClick={handleCardOpen(title)}
+              className="roadmap__card__opened__close"
+              onClick={handleCardClose}
             >
-              Discover
-              <ExpandIcon />
+              <ExitIcon />
             </button>
           </div>
-        </>
-      )}
-    </div>
-  );
-};
+        </div>
+      </div>
+    ) : (
+      <>
+        <p className="roadmap__card__period">{period}</p>
+        <div className="roadmap__card__content__wrapper">
+          <p className="roadmap__card__title">{title}</p>
+          <button
+            disabled={buttonDisabled}
+            className="roadmap__card__button"
+            onClick={handleCardOpen(title, index)}
+          >
+            Discover
+            <ExpandIcon />
+          </button>
+        </div>
+      </>
+    )}
+  </div>
+);
 
 const Roadmap = () => {
   const [openedCard, setOpenedCard] = useState(null);
+  const [refs, setRefs] = useState([]);
   const scrollRef = useHorizontalScroll(() => {
     const percent =
       scrollRef.current?.scrollLeft /
@@ -107,11 +102,33 @@ const Roadmap = () => {
     document.body.style.setProperty("--scroll", percent);
   }, openedCard);
 
+  const cardsLength = useMemo(
+    () => contentRoadmap.cards.length,
+    [contentRoadmap]
+  );
+
+  useEffect(
+    () =>
+      setRefs(
+        Array(cardsLength)
+          .fill()
+          .map((_) => createRef())
+      ),
+    [cardsLength]
+  );
+
   const handleCardOpen = useCallback(
-    (cardTitle) => () => {
+    (cardTitle, index) => () => {
       setOpenedCard(cardTitle);
+      setTimeout(() => {
+        refs[index].current?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "center",
+        });
+      }, 500);
     },
-    [setOpenedCard]
+    [setOpenedCard, refs]
   );
 
   const handleCardClose = useCallback(() => {
@@ -127,6 +144,7 @@ const Roadmap = () => {
         className="roadmap__background__image"
       />
       <div
+        ref={scrollRef}
         className={classNames("roadmap__content__wrapper", openedCard, {
           "cards-only": openedCard,
         })}
@@ -137,11 +155,11 @@ const Roadmap = () => {
           className={classNames("roadmap__cards", {
             "card-opened": openedCard,
           })}
-          ref={scrollRef}
         >
           {contentRoadmap.cards.map(
-            ({ title, period, introduction, description, timeline }) => (
+            ({ title, period, introduction, description, timeline }, index) => (
               <Card
+                key={index}
                 title={title}
                 period={period}
                 introduction={introduction}
@@ -151,6 +169,8 @@ const Roadmap = () => {
                 timeline={timeline}
                 isOpen={openedCard === title}
                 buttonDisabled={!!openedCard}
+                index={index}
+                cardRef={refs[index]}
               />
             )
           )}
