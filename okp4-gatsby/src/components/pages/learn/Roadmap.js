@@ -2,17 +2,17 @@ import React, {
   useState,
   useCallback,
   useEffect,
-  useRef,
+  useMemo,
   createRef,
 } from "react";
+import { useHorizontalScroll } from "../../../hook/useHorizontalScroll";
 import contentRoadmap from "/content/pages/learn/roadmap.yaml";
+import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
 import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
 import ExitIcon from "../../../assets/images/icons/exit-icon.inline.svg";
-import { useHorizontalScroll } from "../../../hook/useHorizontalScroll";
-import { useMemo } from "react";
 
 const Card = ({
   title,
@@ -30,6 +30,7 @@ const Card = ({
   <div
     className={classNames("roadmap__card", title, {
       opened: isOpen,
+      closed: !isOpen,
     })}
     key={title}
     ref={cardRef}
@@ -102,10 +103,7 @@ const Roadmap = () => {
     document.body.style.setProperty("--scroll", percent);
   }, openedCard);
 
-  const cardsLength = useMemo(
-    () => contentRoadmap.cards.length,
-    [contentRoadmap]
-  );
+  const cardsLength = useMemo(() => contentRoadmap.cards.length, []);
 
   useEffect(
     () =>
@@ -120,13 +118,15 @@ const Roadmap = () => {
   const handleCardOpen = useCallback(
     (cardTitle, index) => () => {
       setOpenedCard(cardTitle);
-      setTimeout(() => {
-        refs[index].current?.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
-          inline: "center",
-        });
-      }, 500);
+      if (ResponsiveManager.isWindowLarger("lg")) {
+        setTimeout(() => {
+          refs[index].current?.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "center",
+          });
+        }, 500);
+      }
     },
     [setOpenedCard, refs]
   );
