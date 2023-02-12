@@ -143,6 +143,7 @@ const Roadmap = () => {
         alt="background image"
         className="roadmap__background__image"
       />
+      <h1 className="roadmap__title--mobile">{contentRoadmap.title}</h1>
       <div
         ref={scrollRef}
         className={classNames("roadmap__content__wrapper", openedCard, {

@@ -90,6 +90,10 @@
     padding-top: 90px;
   }
 
+  @include media-bp-down(lg) {
+    display: block;
+  }
+
   .roadmap__background__image {
     position: absolute;
     right: 0;
@@ -108,23 +112,36 @@
     }
   }
 
+  .roadmap__title--mobile {
+    @include media-bp-up(lg) {
+      display: none;
+    }
+    margin: 20px auto;
+    padding: 0 15px;
+    text-align: center;
+    justify-self: center;
+    max-width: 345px;
+    font-size: 65px;
+    line-height: 72px;
+  }
+
   .roadmap__content__wrapper {
     position: relative;
     display: grid;
     grid-template-columns: 615px 1fr;
     z-index: 1;
-    margin: 20px 0 250px 328px;
+    margin: 20px auto 250px;
+    padding-left: 30px;
     column-gap: 60px;
     overflow: hidden;
     width: 100%;
 
-    @media screen and (max-width: 1440px) {
-      margin-left: 94px;
+    @media screen and (min-width: 1325px) {
+      padding-left: calc((100vw - 1265px) / 2);
     }
 
-    @media only screen and (max-width: 1025px) {
-      grid-template-columns: unset;
-      margin: 45px 15px 60px;
+    @include media-bp-down(lg) {
+      margin: 20px 0;
     }
 
     &.cards-only {
@@ -163,15 +180,8 @@
       font-size: 125px;
       align-self: center;
 
-      @media only screen and (max-width: 1025px) {
-        text-align: center;
-      }
-
-      @media screen and (max-width: 800px) {
-        justify-self: center;
-        max-width: 345px;
-        font-size: 65px;
-        line-height: 72px;
+      @include media-bp-down(lg) {
+        display: none;
       }
     }
 
@@ -203,6 +213,11 @@
         transition: all 0.5s ease-out;
         @include card-animation();
         @include roadmap-background-images();
+
+        @include media-bp-down(lg) {
+          height: 345px;
+          width: 253px;
+        }
 
         &.opened {
           z-index: 3;
