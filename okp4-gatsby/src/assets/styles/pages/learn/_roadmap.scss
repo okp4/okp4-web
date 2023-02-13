@@ -118,11 +118,12 @@
   min-height: calc(100vh - 505px);
   padding-top: 181px;
 
-  @media screen and (max-width: 1025px) {
-    padding-top: 90px;
+  @media screen and (max-height: 1025px) {
+    min-height: 100vh;
   }
 
   @include media-bp-down(lg) {
+    padding: 90px 0 60px;
     display: block;
   }
 
@@ -159,16 +160,18 @@
   .roadmap__content__wrapper {
     position: relative;
     display: grid;
-    grid-template-columns: 615px 1fr;
+    grid-template-columns: 625px 1fr;
     z-index: 1;
     margin: 20px auto 250px;
+    padding-bottom: 50px;
 
     column-gap: 60px;
     overflow: hidden;
     @include media-bp-down(lg) {
       overflow: auto;
-      padding: 0 40px;
-      margin: 20px 0;
+      padding: 60px 40px;
+      margin: 20px;
+      column-gap: 30px;
       &.cards-only {
         padding: 0;
         overflow-x: hidden;
@@ -216,6 +219,7 @@
     .roadmap__title {
       font-size: 125px;
       align-self: center;
+      margin-left: 94px;
 
       @include media-bp-down(lg) {
         display: none;
@@ -226,6 +230,7 @@
       display: flex;
       column-gap: 60px;
       margin: auto 0;
+      padding: 50px 328px 60px 0;
       scroll-behavior: smooth;
 
       @include media-bp-down(lg) {
