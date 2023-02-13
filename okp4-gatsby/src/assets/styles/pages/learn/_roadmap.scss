@@ -243,6 +243,11 @@
 
       &.card-opened {
         padding-right: unset;
+        .roadmap__card
+          > .roadmap__card__content__wrapper
+          > .roadmap__card__button {
+          cursor: auto;
+        }
       }
 
       .roadmap__card {
