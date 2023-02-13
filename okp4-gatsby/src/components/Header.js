@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useCallback } from "react";
 import classNames from "classnames";
 import IconLogo from "../assets/images/logo.inline.svg";
 import IconArrowtr from "../assets/images/icons/arrow-tr.inline.svg";
@@ -22,7 +22,7 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
   const divRef = useRef(null);
   const divMobile = useRef(null);
 
-  const getRatio = () => {
+  const getRatio = useCallback(() => {
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
     const scrollY = window.scrollY;
@@ -31,9 +31,9 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
     if (percentTravelled < 0) percentTravelled = 0;
 
     return percentTravelled;
-  };
+  }, []);
 
-  const scrollStarted = () => {
+  const scrollStarted = useCallback(() => {
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
     if (divRef.current) {
@@ -50,7 +50,7 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
         divRef.current.classList.add("is-reset");
       }
     }
-  };
+  }, [divRef, divMobile, getRatio]);
 
   const toggleBurger = () => {
     if (divRef.current) {
@@ -71,12 +71,13 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
     setTimeout(function () {
       window.addEventListener("scroll", scrollStarted);
       ResponsiveManager.initViewportHeightForMobile();
-
-      return () => {
-        window.removeEventListener("scroll", scrollStarted);
-      };
     }, 1000);
-  });
+
+    return () => {
+      window.removeEventListener("scroll", scrollStarted);
+      ScrollManager.enableScroll();
+    };
+  }, [scrollStarted]);
 
   return (
     <header
