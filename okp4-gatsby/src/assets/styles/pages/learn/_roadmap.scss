@@ -170,8 +170,8 @@
       padding: 0 40px;
       margin: 20px 0;
       &.cards-only {
-        overflow: unset;
         padding: 0;
+        overflow-x: hidden;
       }
     }
 
@@ -274,7 +274,7 @@
           animation: unset;
 
           @media screen and (max-width: 1025px) {
-            width: 100%;
+            width: calc(100vw - 40px);
             height: max-content;
 
             &.Genesis {
