@@ -116,15 +116,19 @@ const Roadmap = () => {
   const handleCardOpen = useCallback(
     (cardTitle, index) => () => {
       setOpenedCard(cardTitle);
-      if (ResponsiveManager.isWindowLarger("lg")) {
-        setTimeout(() => {
-          refs[index].current?.scrollIntoView({
-            behavior: "smooth",
-            block: "center",
-            inline: "center",
-          });
-        }, 500);
-      }
+
+      setTimeout(() => {
+        ResponsiveManager.isWindowLarger("lg")
+          ? refs[index].current?.scrollIntoView({
+              behavior: "smooth",
+              block: "center",
+              inline: "center",
+            })
+          : refs[index].current?.scrollIntoView({
+              behavior: "smooth",
+              inline: "start",
+            });
+      }, 500);
     },
     [setOpenedCard, refs]
   );
