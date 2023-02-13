@@ -25,7 +25,6 @@ const Card = ({
   <div
     className={classNames("roadmap__card", title, {
       opened: isOpen,
-      closed: !isOpen,
     })}
     key={title}
     ref={cardRef}
@@ -184,7 +183,7 @@ const Roadmap = () => {
           {contentRoadmap.cards.map(
             ({ title, period, introduction, description, timeline }, index) => (
               <Card
-                key={index}
+                key={title}
                 title={title}
                 period={period}
                 introduction={introduction}
