@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useCallback,
-  useEffect,
-  useMemo,
-  createRef,
-} from "react";
+import React, { useState, useCallback, useEffect, createRef } from "react";
 import { useHorizontalScroll } from "../../../hook/useHorizontalScroll";
 import contentRoadmap from "/content/pages/learn/roadmap.yaml";
 import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
@@ -13,6 +7,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
 import ExitIcon from "../../../assets/images/icons/exit-icon.inline.svg";
+import * as ScrollManager from "../../../utils/ScrollManager";
 
 const Card = ({
   title,
@@ -96,22 +91,49 @@ const Card = ({
 const Roadmap = () => {
   const [openedCard, setOpenedCard] = useState(null);
   const [refs, setRefs] = useState([]);
-  const scrollRef = useHorizontalScroll(() => {
-    const percent =
-      scrollRef.current?.scrollLeft /
-      (scrollRef.current?.scrollWidth - scrollRef.current?.clientWidth);
-    document.body.style.setProperty("--scroll", percent);
-  }, openedCard);
+  const [scrollRef, setWheelEventHandler] = useHorizontalScroll();
 
-  useEffect(
-    () =>
-      setRefs(
-        Array(contentRoadmap.cards.length)
-          .fill()
-          .map((_) => createRef())
-      ),
-    [contentRoadmap.cards.length]
+  const handleWheelEvent = useCallback(
+    () => (event) => {
+      const isScrolling =
+        scrollRef.current?.scrollLeft !== 0 &&
+        !(
+          scrollRef.current?.scrollLeft + scrollRef.current?.clientWidth + 1 >
+          scrollRef.current?.scrollWidth
+        );
+
+      isScrolling
+        ? ScrollManager.disableScroll()
+        : ScrollManager.enableScroll();
+
+      const scrollProgress =
+        scrollRef.current?.scrollLeft /
+        (scrollRef.current?.scrollWidth - scrollRef.current?.clientWidth);
+
+      document.body.style.setProperty("--scroll", scrollProgress);
+
+      !openedCard &&
+        scrollRef.current?.scrollTo({
+          left: scrollRef.current?.scrollLeft + event.deltaY,
+        });
+    },
+    [scrollRef, openedCard]
   );
+
+  useEffect(() => {
+    setRefs(
+      Array(contentRoadmap.cards.length)
+        .fill()
+        .map((_) => createRef())
+    );
+  }, [setRefs]);
+
+  useEffect(() => {
+    setWheelEventHandler(handleWheelEvent);
+    return () => {
+      ScrollManager.enableScroll();
+    };
+  }, [setWheelEventHandler, handleWheelEvent]);
 
   const handleCardOpen = useCallback(
     (cardTitle, index) => () => {
