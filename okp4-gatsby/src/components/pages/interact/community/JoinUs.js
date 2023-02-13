@@ -100,13 +100,8 @@ const JoinUs = ({ files }) => (
           </a>
         </div>
 
-        <div className="grid community_white_cards">
-          <Parallax
-            classContainer="community_white_cards_item"
-            parallaxStart="100"
-            parallaxEnd="-100"
-            parallaxMiddle="0.5"
-          >
+        <div className="community_white_cards">
+          <Parallax parallaxStart="100" parallaxEnd="-100" parallaxMiddle="0.5">
             <a
               href={contentCommunity.card1.url}
               target="_blank"
@@ -119,12 +114,7 @@ const JoinUs = ({ files }) => (
               </div>
             </a>
           </Parallax>
-          <Parallax
-            classContainer="community_white_cards_item"
-            parallaxStart="50"
-            parallaxEnd="-50"
-            parallaxMiddle="0.5"
-          >
+          <Parallax parallaxStart="50" parallaxEnd="-50" parallaxMiddle="0.5">
             <a
               href={contentCommunity.card2.url}
               target="_blank"
@@ -137,12 +127,7 @@ const JoinUs = ({ files }) => (
               </div>
             </a>
           </Parallax>
-          <Parallax
-            classContainer="community_white_cards_item"
-            parallaxStart="150"
-            parallaxEnd="-150"
-            parallaxMiddle="0.5"
-          >
+          <Parallax parallaxStart="150" parallaxEnd="-150" parallaxMiddle="0.5">
             <a
               href={contentCommunity.card3.url}
               target="_blank"
