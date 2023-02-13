@@ -116,6 +116,7 @@ header.header {
       @include media-bp-down(lg) {
         display: block;
         position: absolute;
+        z-index: 1;
         right: 0;
         bottom: 40px;
         left: 0;
