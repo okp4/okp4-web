@@ -1,22 +1,13 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
-export const useHorizontalScroll = (eventCallBackFn, openedCard) => {
+export const useHorizontalScroll = () => {
+  const [handleWheelEvent, setHandleWheelEvent] = useState(() => {});
   const ref = useRef();
 
   useEffect(() => {
     const current = ref.current;
-    const handleWheelEvent = (event) => {
-      event.preventDefault();
-      current?.scrollTo({
-        left: current?.scrollLeft + event.deltaY,
-      });
-      eventCallBackFn();
-    };
     current?.addEventListener("wheel", handleWheelEvent);
-    if (openedCard) {
-      current?.removeEventListener("wheel", handleWheelEvent);
-    }
     return () => current?.removeEventListener("wheel", handleWheelEvent);
-  }, [ref, eventCallBackFn, openedCard]);
-  return ref;
+  }, [ref, handleWheelEvent]);
+  return [ref, setHandleWheelEvent];
 };
