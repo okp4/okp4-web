@@ -53,29 +53,61 @@
 }
 
 @mixin card-animation {
-  animation: rotation 1s linear infinite;
+  position: relative;
+  animation: wave 2s linear infinite;
   animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
 
-  @keyframes rotation {
+  &.Genesis {
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-direction: reverse;
+  }
+
+  &.Nemeton {
+    animation-delay: calc(var(--scroll) * -0.9s);
+  }
+
+  &.Myrddin {
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-direction: reverse;
+  }
+
+  &.Duir {
+    animation-delay: calc(var(--scroll) * -0.7s);
+  }
+
+  &.Lugh {
+    animation-delay: calc(var(--scroll) * -1s);
+    animation-direction: reverse;
+  }
+
+  @keyframes wave {
     from {
-      transform: rotate(-10deg);
+      transform: rotate(-18deg);
+      top: 20px;
     }
 
     25% {
-      transform: rotate(10deg);
+      transform: rotate(4deg);
+      top: 90px;
+      left: 0px;
     }
 
     50% {
-      transform: rotate(-10deg);
+      transform: rotate(-3deg);
+      top: 0;
+      left: 100px;
     }
 
     75% {
       transform: rotate(10deg);
+      top: 90px;
+      left: 0px;
     }
 
     to {
-      transform: rotate(-10deg);
+      transform: rotate(2deg);
+      top: 0;
+      left: 100px;
     }
   }
 }
@@ -192,9 +224,13 @@
 
     .roadmap__cards {
       display: flex;
+      column-gap: 60px;
       margin: auto 0;
+      scroll-behavior: smooth;
 
-      padding: 50px 328px 50px 0;
+      @include media-bp-down(lg) {
+        column-gap: 20px;
+      }
 
       @media screen and (max-width: 1440px) {
         padding-right: 94px;
@@ -219,6 +255,10 @@
         @include card-animation();
         @include roadmap-background-images();
 
+        &.Genesis {
+          margin-left: -100px;
+        }
+
         @include media-bp-down(lg) {
           height: 345px;
           width: 253px;
@@ -236,6 +276,10 @@
           @media screen and (max-width: 1025px) {
             width: 100%;
             height: max-content;
+
+            &.Genesis {
+              margin-left: unset;
+            }
           }
 
           .roadmap__card__opened__wrapper {
