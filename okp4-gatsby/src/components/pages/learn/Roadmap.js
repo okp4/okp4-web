@@ -103,16 +103,14 @@ const Roadmap = () => {
     document.body.style.setProperty("--scroll", percent);
   }, openedCard);
 
-  const cardsLength = useMemo(() => contentRoadmap.cards.length, []);
-
   useEffect(
     () =>
       setRefs(
-        Array(cardsLength)
+        Array(contentRoadmap.cards.length)
           .fill()
           .map((_) => createRef())
       ),
-    [cardsLength]
+    [contentRoadmap.cards.length]
   );
 
   const handleCardOpen = useCallback(
