@@ -22,6 +22,8 @@ header.header {
   }
 
   &.burger-opened {
+    position: fixed;
+
     .header--mobile {
       transition: opacity 0.25s ease;
       opacity: 1 !important;
@@ -108,6 +110,7 @@ header.header {
     .header__top {
       display: flex;
       position: relative;
+      z-index: 2;
       align-items: center;
       justify-content: flex-end;
       width: 100%;
