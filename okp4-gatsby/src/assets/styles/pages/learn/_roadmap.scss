@@ -248,6 +248,12 @@
           > .roadmap__card__button {
           cursor: auto;
         }
+
+        @include media-bp-down(lg) {
+          .closed {
+            display: none;
+          }
+        }
       }
 
       .roadmap__card {

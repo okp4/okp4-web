@@ -25,6 +25,7 @@ const Card = ({
   <div
     className={classNames("roadmap__card", title, {
       opened: isOpen,
+      closed: !isOpen,
     })}
     key={title}
     ref={cardRef}
