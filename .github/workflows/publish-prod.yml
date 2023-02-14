@@ -7,6 +7,9 @@ on:
     tags:
       - "v*"
 
+  schedule:
+    - cron: "0 0 * * *"
+
 concurrency:
   group: publish-${{ github.ref }}
   cancel-in-progress: true
@@ -16,8 +19,14 @@ jobs:
   publish-gh-pages:
     runs-on: ubuntu-22.04
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+      - id: get_latest_tag
+        uses: oprypin/find-latest-tag@v1
+        with:
+          repository: okp4/okp4-web
+
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ steps.get_latest_tag.outputs.tag }}
 
       - name: Setup node environment (for building)
         uses: actions/setup-node@v3

@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+  schedule:
+    - cron: "0 0 * * *"
+
 concurrency:
   group: publish-staging-${{ github.ref }}
   cancel-in-progress: true
@@ -38,5 +41,5 @@ jobs:
           github_token: ${{ secrets.OKP4_TOKEN }}
           publish_dir: okp4-gatsby/public
           commit-message: |
-            chore: deploy okp4-web github pages ${{ steps.get_version.outputs.version }} on staging
+            chore: deploy okp4-web github pages on staging
           cname: web-staging.okp4.network
