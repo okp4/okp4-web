@@ -184,8 +184,8 @@
 
     &.cards-only {
       grid-template-columns: unset;
+      overflow-x: hidden;
       @include media-bp-up(lg) {
-        overflow: auto;
         margin: 20px 3% 35px 3%;
       }
 
@@ -229,7 +229,7 @@
     .roadmap__cards {
       display: flex;
       column-gap: 60px;
-      margin: auto 0;
+      margin: auto 100px auto 0;
       padding: 50px 328px 60px 0;
       scroll-behavior: smooth;
 
