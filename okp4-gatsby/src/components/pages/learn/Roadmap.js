@@ -179,7 +179,7 @@ const Roadmap = () => {
   );
 
   useEffect(() => {
-    if (openedCardState?.id) {
+    if (openedCardState) {
       if (ResponsiveManager.isWindowLarger("lg")) {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
@@ -196,7 +196,7 @@ const Roadmap = () => {
   }, [openedCardState, refs]);
 
   const handleCardTransitionEnd = useCallback(() => {
-    if (openedCardState?.id) {
+    if (openedCardState) {
       if (ResponsiveManager.isWindowLarger("lg")) {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
