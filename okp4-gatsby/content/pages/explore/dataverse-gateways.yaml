@@ -7,7 +7,7 @@ breadcrumbs:
     link: /explore/dataverse-gateways
 title: OKP4 Dataverse Gateways
 featured:
-  introduction: Now, anyone is enable to
+  introduction: Now, anyone is enabled to
   keywords:
     - Interact
     - Build
@@ -18,21 +18,21 @@ landscape:
   introduction: |
     The Dataverse Gateways include all the applications, web or mobile, wired with the protocol to offer a wide range of services exploiting the decentralized resources of the dataverse, among which:
   cards:
-    - title: BI applications
+    - title: Applications
       text: |
-        and more generally applications that help companies and organizations to analyze and visualize data from the dataverse to make more informed business decisions.
+        Any web or mobile app can leverage resources from the dataverse and contribute back to it. From a company-operated business intelligence app to a DAO-owned chatbot interface.
       image: bi-applications.png
     - title: A web portal
       text: |
-        to navigate and explore the dataverse, bringing together several Dataverse gateways such as wallets, explorers, dataset deposit, workflow builder, blockchain explorer and more...
+        Navigate and explore the dataverse: a catalog of Data Spaces, Datasets and Services, create Data Spaces, contribute with your own resources, build workflows and more...
       image: portal.png
     - title: Wallets
       text: |
-        to manage identities and associated assets circulating in the Dataverse.
+        Use any compatible wallet to manage assets and identities, and to interact with the Dataverse without any trusted intermediary.
       image: wallets.png
     - title: Blockchain explorers
       text: |
-        to view and search the contents of the OKP4 blockchain.
+        View, search and verify the contents and activities on the OKP4 blockchain.
       image: blockchain-explorers.png
 protocol:
   cards:
