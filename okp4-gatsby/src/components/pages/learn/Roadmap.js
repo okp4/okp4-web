@@ -102,7 +102,7 @@ const Roadmap = () => {
 
   const handleWheelEvent = useCallback(
     (event) => {
-      if (scrollRef && cardsRef) {
+      if (scrollRef && cardsRef && !openedCardState) {
         if (ResponsiveManager.isWindowLarger("lg")) {
           const viewportMiddle = window.innerHeight / 2;
           const cardsRect = cardsRef.current.getBoundingClientRect();
@@ -147,6 +147,9 @@ const Roadmap = () => {
 
         document.body.style.setProperty("--scroll", scrollProgress);
       }
+      openedCardState && ResponsiveManager.isWindowLarger("lg")
+        ? ScrollManager.disableScroll()
+        : ScrollManager.enableScroll();
     },
     [scrollRef, openedCardState]
   );
