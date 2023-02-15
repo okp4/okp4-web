@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import JoinUs from "../../components/pages/interact/community/JoinUs";
 import LatestNews from "../../components/pages/interact/community/LatestNews";
 import content from "/content/pages/interact/community.yaml";
+import Seo from "../../components/SEO";
 
 export default function Community({ data }) {
   return (
@@ -21,7 +22,6 @@ export default function Community({ data }) {
   );
 }
 
-// this down stays
 export const pageQuery = graphql`
   query FilesQuery {
     allImages: allFile(filter: { extension: { nin: ["mp4", "ogg", "webm"] } }) {
@@ -54,3 +54,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export const Head = () => <Seo></Seo>;
