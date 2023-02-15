@@ -11,8 +11,11 @@ const SubMenu = ({ subMenu }) => (
       <div className="header__submenu__content">
         {subMenu &&
           subMenu.map((submenuItem, index) => (
-            <div key={index} className="header__submenu__item">
-              <Link to={submenuItem.link}>{submenuItem.name}</Link>
+            <div key={index}>
+              <div className="header__submenu__item">
+                <Link to={submenuItem.link}>{submenuItem.name}</Link>
+              </div>
+              {subMenu.length > 1 && <div className="separator" />}
             </div>
           ))}
       </div>

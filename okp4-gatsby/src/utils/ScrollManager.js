@@ -25,10 +25,8 @@ export function getScaleRatio({ startScale, endScale }) {
 
 export function disableScroll() {
   document.body.classList.add("scroll-disabled");
-  document.documentElement.classList.add("scroll-disabled");
 }
 
 export function enableScroll() {
   document.body.classList.remove("scroll-disabled");
-  document.documentElement.classList.remove("scroll-disabled");
 }

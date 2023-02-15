@@ -1,0 +1,119 @@
+# Content used for the section Learn/Roadmap page
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Learn
+  - name: Roadmap
+    link: /learn/roadmap
+title: The next era for the knowledge economy
+cards:
+  - title: Genesis
+    period: 2018 - 2022
+    introduction: |
+      The story began in 2018 with a vision of addressing the two main issues relating to data sharing: lack of trust and lack of interest alignment between participants.
+    description: |
+      <p>It led to the first B2B use cases with OKP4 Company as a centralized coordinator to experiment with the many governance rules and refine our value proposition. After two years of experimentation, we were ready to work on decentralization. Realizing there was no decentralized network specifically designed for such use cases, we quickly concluded that we needed to create our own specific and sovereign blockchain. We then chose the Cosmos SDK to build it.</p>
+
+       <p>After two more years of research and development using the Cosmos SDK as a starting point, OKP4 was ready for the Nemeton era.</p>
+    timeline:
+      - year: 2018
+        milestones: |
+          <p> Preliminary market research & ideation </p>
+      - year: 2019
+        milestones: |
+          <p> Technical primer </p>
+          <p> B2B proof of concept </p>
+      - year: 2020
+        milestones: |
+          <p> Development of essential off-chain OKP4 services</p>
+          <p> First B2B commercial use cases: private ecosystems in agriculture and logistics with custom BI applications leveraging the shared data. </p>
+      - year: 2021
+        milestones: |
+          <p> Team growth from 10 to 20 </p>
+          <p> Cosmos SDK choice & developments </p>
+          <p> Migration of use cases on private blockchain networks</p>
+      - year: 2022
+        milestones: |
+          <p> Out of stealth-mode: Beginning of our community (communication about the protocol, the incentivized testnet and coming mainnet) </p>
+          <p> OKP4 whitepaper & docs released </p>
+          <p> Released OKP4 Alphanet </p>
+  - title: Nemeton
+    period: Q4 2022 – Q2 2023
+    introduction: |
+      OKP4 launched its Nemeton Public Testnet on the 17th of October, 2022. The Nemeton era is the bootstrapping era. This is when the ideas & concepts are expressed to the public. This is when the first validators join together to power the network, test its limits and contribute to its developments.
+    description: |
+      <p> This is when the first builders come to explore Data Space possibilities and opportunities for them and their communities, resulting in the first OKP4-powered decentralised use cases operated by communities of pioneers. This is where the community unites around the vision of a new generation of applications enabled by trust-minimized sharing of digital resources. Nemeton becomes the host for existing use cases. </p>
+
+      <p> The Nemeton era results in a stable, battle-tested environment and gives birth to the OKP4 mainnet. </p>
+    timeline:
+      - year:
+        milestones: |
+          <p>  Nemeton Testnet Launch with 150 validators</p>
+          <p>  Incentivized program for validators to build, secure, interact, and push the blockchain to its limits </p>
+          <p>  Release of Anything as a Service: blockchain interactions with off-chain resources such as workflow engines, ontologies, storage, computation... </p>
+          <p>  Core blockchain developments: custom modules, smart contracts, Data Space rules implementation, Data Space governance implementation... </p>
+          <p> Core ecosystem development connected to the blockchain (workflow engine, event streaming, orchestration system...) </p>
+          <p>  Core interface releases – portal, catalogue, resource sharing, data space governance, workflow builders...</p>
+          <p>  Open sourcing of protocol developments </p>
+          <p>  Global community building: participation and organization of many events, ambassadors and moderators</p>
+          <p>  Advisor program launch </p>
+          <p>  Builders program launch </p>
+  - title: Myrddin
+    period: Q3 2023 - Q1 2024
+    introduction: |
+      The Myrddin era begins with the first iteration of our mainnet: a stable decentralized network ready to host many Data Spaces and Applications. The Myrddin era focuses on making OKP4 as easy to use as possible while being highly generic and customisable.
+    description: |
+      <p> This environment is powered by a network of nodes operated by the community, which is economically secured through a sound, scarce and publicly traded $KNOW token. <p>
+
+      <p> The community of builders deploys many existing or innovative governance rules for Data Spaces publicly for the first time, enabling new mechanisms to align interests among participants (data providers, services providers, users…). <p>
+
+      <p> The community of token holders and validators takes control, through governance proposals and votes, of the reins of the network. The incentives schemes enable the onboarding of many community members across all roles. The Myrddin era also sees the first generation of IBC channels enabling tokens to flow to and from the interchain, and the emergence of the first proto-interchain applications. <p>
+
+      <p> At the end of the Myrddin era, impactful business & community powered-applications emerge, and the community grows tremendously due to the many opportunities offered to them. The robust OKP4 SDK and Dataverse Gateways bring us into the next era: Duir. <p>
+    timeline:
+      - year:
+        milestones: |
+          <p>  Mainnet launch </p>
+          <p>  $KNOW listing </p>
+          <p>  DAO Grants & Treasury launched </p>
+          <p>  IBC connection with synergetic Cosmos chains </p>
+          <p>  Foundation’s grants program </p>
+          <p>  OKP4 SDK v1 release </p>
+          <p>  Strategic enterprise partners disclosed </p>
+          <p>  cw20 & cw721 Data Space governance tokens </p>
+          <p>  cw20 & cw721 for data & service access control </p>
+  - title: Duir
+    period: Q2 2024 - Q4 2024
+    introduction: |
+      Unlike the Myrddin era, which starts at a single point in time when the mainnet launched, the transition to Duir happens gradually.
+    description: |
+      <p> While Myrddin is focused on building the infrastructure, the Duir era is focused on adoption. With each release relating to the SDK, the Dataverse Gateways or the governance templates, new opportunities emerge for builders, data & service providers and users. The Duir era is the climax of adoption due to the easiness and straightforwardness of building and onboarding communities. </p>
+
+      <p> The Dataverse reaches a critical network effect: the many datasets and services available provide unprecedented opportunities for builders and become a significant go-to-market fo data & services providers. An ecosystem of Data Space governance tokens emerges, providing healthy competition between them and steering open innovation to the next level. </p>
+
+      <p> Real-life use cases and value flows into the network and the OKP4 public good continues to grow. </p>
+
+    timeline:
+      - year:
+        milestones: |
+          <p>  OKP4 SDK v2 release (ZK data-sharing, Data Space as a service for any existing web2 application, new governance & business model templates...) </p>
+          <p>  New governance, knowledge graph and workflow builder interfaces </p>
+          <p>  Hundred of businesses and communities are building applications on top of OKP4 </p>
+          <p>  IBC connections to Ethereum, any other L1 or rollup. </p>
+          <p>  First OKP4-native dapps are launched (i.e. AMM for governance tokens, resource lending protocols...) </p>
+  - title: Lugh
+    period: Q1 2025 & beyond
+    introduction: |
+      The Lugh era is the expression of the unstoppable nature of OKP4s design. Inter-blockchain communication is now the norm and OKP4 is interoperable with every meaningful network to access any kind of datasets and services (decentralized storage, decentralized computation…), onboard communities from other chains easily, and seamless interchain applications.
+    description: |
+      <p> Due to OKP4 first-mover advantage and significant network effect reached, OKP4 becomes the default coordination layer for most applications based on distributed resources. </p>
+
+      <p> Thousands of projects and teams across the web2 and web3 worlds are building on OKP4: it has reached mass adoption. </p>
+    timeline:
+      - year:
+        milestones: |
+          <p>  OKP4 becomes an institutional standard for sovereign, secure, efficient, fair & transparent data-sharing ecosystems </p>
+          <p>  Network effect of shared resources reaches a point of no return':' exponential value is created, the opportunity cost not to share becomes very high </p>
+          <p>  Every business sector adopts Data Space technology to build new applications thanks to mutual interest, implicit trust and OKP4 reliable & generic infrastructure layer. </p>
+          <p>  Interchain applications UX becomes seamless (any token can be used in any Data Space for governance or payment, any workflow can be triggered from transactions on other chains...) </p>
+          <p>  OKP4-native dapps continue to be launched (i.e. resource-based derivatives, synthetics, insurance, stables...) </p>

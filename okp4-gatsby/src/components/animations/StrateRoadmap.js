@@ -36,8 +36,9 @@ const StrateRoadmap = ({
         divRef.current.style.transform = scaleCss;
 
         const opacityRatio = (ratio / 4).toFixed(4);
-        divRef.current.querySelector(".roadmap__item__layer").style.opacity =
-          opacityRatio;
+        divRef.current.querySelector(
+          ".homepage__roadmap__item__layer"
+        ).style.opacity = opacityRatio;
       }
       divRef.current.rafId = requestAnimationFrame(perspective);
     }
