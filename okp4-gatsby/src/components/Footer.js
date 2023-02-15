@@ -99,6 +99,15 @@ const Footer = ({ files, withDocs = true, withPartners = true }) => {
                   <IconArrowtr />
                 </a>
                 <a
+                  href={contentSocials.pollen.url}
+                  className="footer__main__top__links__item"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{contentSocials.pollen.label}</span>
+                  <IconArrowtr />
+                </a>
+                <a
                   href={contentSocials.whitepaper.url}
                   className="footer__main__top__links__item"
                   target="_blank"

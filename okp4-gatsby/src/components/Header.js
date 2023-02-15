@@ -166,6 +166,15 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
           <Menu />
           <nav className="header__resources">
             <a
+              href={contentSocials.pollen.url}
+              className="header__resources__link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>{contentSocials.pollen.label}</span>
+              <IconArrowtr />
+            </a>
+            <a
               href={contentSocials.whitepaper.url}
               className="header__resources__link"
               target="_blank"
