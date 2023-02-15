@@ -33,7 +33,7 @@ const JoinUs = ({ files }) => (
 
         <div className="background_img"></div>
 
-        <div class="social_media">
+        <div className="social_media">
           <a
             href={contentSocials.linkedin.url}
             className="socials__link linkedin"
