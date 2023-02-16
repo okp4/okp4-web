@@ -114,7 +114,7 @@ const Roadmap = () => {
         if (isLarge && event.type === "wheel") {
           const scrollRate = 0.25;
           const viewportMiddle = window.innerHeight / 2;
-          const cardsRect = cardsRef.current.getBoundingClientRect();
+          const cardsRect = cardsRef.current?.getBoundingClientRect();
           const cardsMiddle = cardsRect.top + cardsRect.height / 2;
           const startOfScroll = scrollRef.current?.scrollLeft === 0;
           const endOfScroll =
