@@ -162,7 +162,10 @@ const Roadmap = () => {
           scrollRef.current?.scrollLeft /
           (scrollRef.current?.scrollWidth - scrollRef.current?.clientWidth);
 
-        document.body.style.setProperty("--scroll", scrollProgress);
+        document.body.style.setProperty(
+          "--scroll",
+          scrollProgress < 0 ? 0 : scrollProgress
+        );
       }
     },
     [scrollRef, openedCardState, scrollState, isLarge]
