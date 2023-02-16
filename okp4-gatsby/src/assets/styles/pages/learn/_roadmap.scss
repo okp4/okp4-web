@@ -190,9 +190,6 @@
     &.cards-only {
       grid-template-columns: unset;
       overflow-x: hidden;
-      @include media-bp-up(lg) {
-        margin: 20px 3% 35px 3%;
-      }
 
       .roadmap__title {
         display: none;
@@ -214,6 +211,7 @@
           .roadmap__cards {
             &::after {
               content: "";
+              width: 50vw;
               margin-right: calc(45vw / 2 - 3%);
             }
           }
