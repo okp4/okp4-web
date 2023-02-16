@@ -13,6 +13,53 @@ newsAndDocs:
     title: Our blog
     text: Follow the latest content and publications on the OKP4 blog.
     url: https://blog.okp4.network/
+associates:
+  companies:
+    title: They trust us
+    logos:
+      - label: ChainLayer
+        url: https://www.chainlayer.io/
+      - label: Interchain
+        url: https://interchain.io/
+      - label: CC validators
+        url: https://ccvalidators.com/
+      - label: B-Harvest
+        url: https://bharvest.io/
+      - label: Stakelab
+        url: https://www.stakelab.fr/
+      - label: P2P
+        url: https://p2p.org/
+      - label: Polkachu
+        url: https://polkachu.com/
+      - label: Notional
+        url: https://notional.ventures/
+      - label: Imperator
+        url: https://imperator.co/
+      - label: Citadel.one
+        url: https://citadel.one/staking/
+      - label: Staking Cabin
+        url: https://stakingcabin.com/
+      - label: NodeStake
+        url: https://nodestake.top/
+      - label: Informal Systems
+        url: https://informal.systems/
+      - label: Cros-Nest
+        url: https://cros-nest.com/
+  advisors:
+    title: Our advisors
+    people:
+      - name: Peter
+        lastname: Van Mourik
+        job: CEO, ChainLayer
+      - name: Benjamin
+        lastname: Santi
+        job: CEO, Web3 Studio
+      - name: Jasvin
+        lastname: Bhasin
+        job: Strategic Advisor
+      - name: Sébastien
+        lastname: Couture
+        job: Founder, Epicenter
 sitemap:
   url: https://okp4.network/
   text: Sitemap
