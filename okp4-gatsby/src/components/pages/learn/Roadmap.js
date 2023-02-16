@@ -113,9 +113,9 @@ const Roadmap = () => {
       if (scrollRef && cardsRef && !openedCardState) {
         if (isLarge && event.type === "wheel") {
           const scrollRate = 0.25;
-          const viewportMiddle = window.innerHeight / 2;
+          const viewportBottom = window.innerHeight;
           const cardsRect = cardsRef.current?.getBoundingClientRect();
-          const cardsMiddle = cardsRect.top + cardsRect.height / 2;
+          const cardsBottom = cardsRect.top + cardsRect.height;
           const startOfScroll = scrollRef.current?.scrollLeft === 0;
           const endOfScroll =
             scrollRef.current?.scrollLeft +
@@ -138,19 +138,12 @@ const Roadmap = () => {
             });
           };
 
+          scrollState === "page" && scrollPage();
           if (event.deltaY > 0) {
-            if (scrollState === "page") {
-              startOfScroll &&
-                scrollPage(
-                  event.deltaY > cardsRect.top ? cardsRect.top : event.deltaY
-                );
-              endOfScroll && scrollPage();
-            }
-            cardsMiddle < viewportMiddle && !endOfScroll
+            cardsBottom < viewportBottom && !endOfScroll
               ? setScrollState("cards")
               : setScrollState("page");
           } else {
-            scrollState === "page" && scrollPage();
             cardsRect.top > 0 && !startOfScroll
               ? setScrollState("cards")
               : setScrollState("page");
@@ -200,7 +193,7 @@ const Roadmap = () => {
       if (isLarge) {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
-          block: "center",
+          block: "end",
           inline: "center",
         });
       } else {
@@ -217,7 +210,7 @@ const Roadmap = () => {
       if (isLarge) {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
-          block: "center",
+          block: "end",
           inline: "center",
         });
       } else {
