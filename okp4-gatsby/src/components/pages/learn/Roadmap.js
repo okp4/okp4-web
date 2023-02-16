@@ -111,7 +111,7 @@ const Roadmap = () => {
   const handleWheelEvent = useCallback(
     (event) => {
       if (scrollRef && cardsRef && !openedCardState) {
-        if (isLarge) {
+        if (isLarge && event.type === "wheel") {
           const scrollRate = 0.25;
           const viewportMiddle = window.innerHeight / 2;
           const cardsRect = cardsRef.current.getBoundingClientRect();
@@ -170,8 +170,10 @@ const Roadmap = () => {
 
   useEffect(() => {
     window?.addEventListener("wheel", handleWheelEvent, { passive: false });
+    window?.addEventListener("touchmove", handleWheelEvent);
     return () => {
       window?.removeEventListener("wheel", handleWheelEvent);
+      window?.removeEventListener("touchmove", handleWheelEvent);
     };
   }, [handleWheelEvent]);
 
