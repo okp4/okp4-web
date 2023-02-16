@@ -12,5 +12,5 @@ const breakpoints = {
 };
 
 export const useBreakpoint = () => ({
-  isMobile: useMediaType(`(max-width: ${breakpoints.lg})`),
+  isLarge: useMediaType(`(min-width: ${breakpoints.lg})`),
 });

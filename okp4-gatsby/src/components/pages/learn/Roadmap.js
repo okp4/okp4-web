@@ -96,25 +96,22 @@ const Card = ({
 const Roadmap = () => {
   const [openedCardState, setOpenedCardState] = useState(null);
   const [refs, setRefs] = useState([]);
-  const pageRef = useRef();
   const cardsRef = useRef();
   const scrollRef = useRef();
   const [scrollState, setScrollState] = useState("page");
-  const { isMobile } = useBreakpoint();
+  const { isLarge } = useBreakpoint();
 
   useEffect(() => {
-    if (!isMobile) {
-      ScrollManager.disableScroll();
-    }
+    isLarge && ScrollManager.disableScroll();
     return () => {
       ScrollManager.enableScroll();
     };
-  }, [isMobile]);
+  }, [isLarge]);
 
   const handleWheelEvent = useCallback(
     (event) => {
-      if (pageRef && scrollRef && cardsRef && !openedCardState) {
-        if (!isMobile) {
+      if (scrollRef && cardsRef && !openedCardState) {
+        if (isLarge) {
           const scrollRate = 0.25;
           const viewportMiddle = window.innerHeight / 2;
           const cardsRect = cardsRef.current.getBoundingClientRect();
@@ -130,10 +127,9 @@ const Roadmap = () => {
           event.stopPropagation();
 
           const scrollHorizontally = () => {
-            scrollState &&
-              scrollRef.current?.scrollTo({
-                left: scrollRef.current?.scrollLeft + event.deltaY * scrollRate,
-              });
+            scrollRef.current?.scrollTo({
+              left: scrollRef.current?.scrollLeft + event.deltaY * scrollRate,
+            });
           };
 
           const scrollPage = (delta = event.deltaY) => {
@@ -144,33 +140,22 @@ const Roadmap = () => {
 
           if (event.deltaY > 0) {
             if (scrollState === "page") {
-              if (startOfScroll) {
+              startOfScroll &&
                 scrollPage(
                   event.deltaY > cardsRect.top ? cardsRect.top : event.deltaY
                 );
-              }
-              if (endOfScroll) {
-                scrollPage();
-              }
+              endOfScroll && scrollPage();
             }
-            if (cardsMiddle < viewportMiddle && !endOfScroll) {
-              setScrollState("cards");
-            } else {
-              setScrollState("page");
-            }
-          } else if (event.deltaY < 0) {
-            if (scrollState === "page") {
-              scrollPage();
-            }
-            if (cardsRect.top > 0 && !startOfScroll) {
-              setScrollState("cards");
-            } else {
-              setScrollState("page");
-            }
+            cardsMiddle < viewportMiddle && !endOfScroll
+              ? setScrollState("cards")
+              : setScrollState("page");
+          } else {
+            scrollState === "page" && scrollPage();
+            cardsRect.top > 0 && !startOfScroll
+              ? setScrollState("cards")
+              : setScrollState("page");
           }
-          if (scrollState === "cards") {
-            scrollHorizontally();
-          }
+          scrollState === "cards" && scrollHorizontally();
         }
 
         const scrollProgress =
@@ -180,7 +165,7 @@ const Roadmap = () => {
         document.body.style.setProperty("--scroll", scrollProgress);
       }
     },
-    [pageRef, scrollRef, openedCardState, scrollState, isMobile]
+    [scrollRef, openedCardState, scrollState, isLarge]
   );
 
   useEffect(() => {
@@ -207,7 +192,7 @@ const Roadmap = () => {
 
   useEffect(() => {
     if (openedCardState) {
-      if (!isMobile) {
+      if (isLarge) {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
           block: "center",
@@ -220,11 +205,11 @@ const Roadmap = () => {
         });
       }
     }
-  }, [openedCardState, refs, isMobile]);
+  }, [openedCardState, refs, isLarge]);
 
   const handleCardTransitionEnd = useCallback(() => {
     if (openedCardState) {
-      if (!isMobile) {
+      if (isLarge) {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
           block: "center",
@@ -237,7 +222,7 @@ const Roadmap = () => {
         });
       }
     }
-  }, [openedCardState, refs, isMobile]);
+  }, [openedCardState, refs, isLarge]);
 
   useEffect(() => {
     refs[openedCardState?.id]?.current?.addEventListener(
@@ -257,7 +242,7 @@ const Roadmap = () => {
   }, [setOpenedCardState]);
 
   return (
-    <div className="roadmap__main" ref={pageRef}>
+    <div className="roadmap__main">
       <Halo />
       <StaticImage
         src="../../../assets/images/illus/background_img_roadmap.png"
