@@ -6,13 +6,13 @@ import React, {
   useRef,
 } from "react";
 import contentRoadmap from "/content/pages/learn/roadmap.yaml";
-import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
 import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
 import ExitIcon from "../../../assets/images/icons/exit-icon.inline.svg";
 import * as ScrollManager from "../../../utils/ScrollManager";
+import { useBreakpoint } from "../../../hook/useBreakpoint";
 
 const Card = ({
   title,
@@ -100,13 +100,21 @@ const Roadmap = () => {
   const cardsRef = useRef();
   const scrollRef = useRef();
   const [scrollState, setScrollState] = useState("page");
+  const { isMobile } = useBreakpoint();
 
-  useEffect(() => ScrollManager.disableScroll(), []);
+  useEffect(() => {
+    if (!isMobile) {
+      ScrollManager.disableScroll();
+    }
+    return () => {
+      ScrollManager.enableScroll();
+    };
+  }, [isMobile]);
 
   const handleWheelEvent = useCallback(
     (event) => {
       if (pageRef && scrollRef && cardsRef && !openedCardState) {
-        if (ResponsiveManager.isWindowLarger("lg")) {
+        if (!isMobile) {
           const scrollRate = 0.25;
           const viewportMiddle = window.innerHeight / 2;
           const cardsRect = cardsRef.current.getBoundingClientRect();
@@ -172,7 +180,7 @@ const Roadmap = () => {
         document.body.style.setProperty("--scroll", scrollProgress);
       }
     },
-    [pageRef, scrollRef, openedCardState, scrollState]
+    [pageRef, scrollRef, openedCardState, scrollState, isMobile]
   );
 
   useEffect(() => {
@@ -199,7 +207,7 @@ const Roadmap = () => {
 
   useEffect(() => {
     if (openedCardState) {
-      if (ResponsiveManager.isWindowLarger("lg")) {
+      if (!isMobile) {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
           block: "center",
@@ -212,11 +220,11 @@ const Roadmap = () => {
         });
       }
     }
-  }, [openedCardState, refs]);
+  }, [openedCardState, refs, isMobile]);
 
   const handleCardTransitionEnd = useCallback(() => {
     if (openedCardState) {
-      if (ResponsiveManager.isWindowLarger("lg")) {
+      if (!isMobile) {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
           block: "center",
@@ -229,7 +237,7 @@ const Roadmap = () => {
         });
       }
     }
-  }, [openedCardState, refs]);
+  }, [openedCardState, refs, isMobile]);
 
   useEffect(() => {
     refs[openedCardState?.id]?.current?.addEventListener(
