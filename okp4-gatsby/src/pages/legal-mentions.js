@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../assets/styles/index.scss";
 import LegalMentionsAndCookiePolicy from "../components/pages/legal/LegalMentionsAndCookiePolicy";
+import Seo from "../components/SEO";
 
 export default function LegalMentions({ data }) {
   return (
@@ -35,3 +36,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export const Head = () => <Seo></Seo>;

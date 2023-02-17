@@ -6,13 +6,13 @@ import React, {
   useRef,
 } from "react";
 import contentRoadmap from "/content/pages/learn/roadmap.yaml";
-import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
 import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
 import ExitIcon from "../../../assets/images/icons/exit-icon.inline.svg";
 import * as ScrollManager from "../../../utils/ScrollManager";
+import { useBreakpoint } from "../../../hook/useBreakpoint";
 
 const Card = ({
   title,
@@ -96,72 +96,82 @@ const Card = ({
 const Roadmap = () => {
   const [openedCardState, setOpenedCardState] = useState(null);
   const [refs, setRefs] = useState([]);
-  const pageRef = useRef();
   const cardsRef = useRef();
   const scrollRef = useRef();
+  const [scrollState, setScrollState] = useState("page");
+  const { isLarge } = useBreakpoint();
+
+  useEffect(() => {
+    isLarge && ScrollManager.disableScroll();
+    return () => {
+      ScrollManager.enableScroll();
+    };
+  }, [isLarge]);
 
   const handleWheelEvent = useCallback(
     (event) => {
       if (scrollRef && cardsRef && !openedCardState) {
-        if (ResponsiveManager.isWindowLarger("lg")) {
-          const viewportMiddle = window.innerHeight / 2;
-          const cardsRect = cardsRef.current.getBoundingClientRect();
-          const cardsMiddle = cardsRect.top + cardsRect.height / 2;
+        if (isLarge && event.type === "wheel") {
+          const scrollRate = 0.25;
+          const viewportBottom = window.innerHeight;
+          const cardsRect = cardsRef.current?.getBoundingClientRect();
+          const cardsBottom = cardsRect.top + cardsRect.height;
+          const startOfScroll = scrollRef.current?.scrollLeft === 0;
           const endOfScroll =
             scrollRef.current?.scrollLeft +
               scrollRef.current?.clientWidth +
               100 >
             scrollRef.current?.scrollWidth;
 
+          event.preventDefault();
+          event.stopPropagation();
+
           const scrollHorizontally = () => {
-            !openedCardState &&
-              scrollRef.current?.scrollTo({
-                left: scrollRef.current?.scrollLeft + event.deltaY,
-              });
+            scrollRef.current?.scrollTo({
+              left: scrollRef.current?.scrollLeft + event.deltaY * scrollRate,
+            });
           };
 
+          const scrollPage = (delta = event.deltaY) => {
+            window.scrollTo({
+              top: window.scrollY + delta * scrollRate,
+            });
+          };
+
+          scrollState === "page" && scrollPage();
           if (event.deltaY > 0) {
-            if (cardsMiddle < viewportMiddle && !endOfScroll) {
-              ScrollManager.disableScroll();
-              event.preventDefault();
-              event.stopPropagation();
-              scrollHorizontally();
-            } else {
-              ScrollManager.enableScroll();
-            }
+            cardsBottom < viewportBottom && !endOfScroll
+              ? setScrollState("cards")
+              : setScrollState("page");
           } else {
-            if (cardsRect.top > 0 && scrollRef.current?.scrollLeft !== 0) {
-              ScrollManager.disableScroll();
-              event.preventDefault();
-              event.stopPropagation();
-              scrollHorizontally();
-            } else {
-              ScrollManager.enableScroll();
-            }
+            cardsRect.top > 0 && !startOfScroll
+              ? setScrollState("cards")
+              : setScrollState("page");
           }
+          scrollState === "cards" && scrollHorizontally();
         }
 
         const scrollProgress =
           scrollRef.current?.scrollLeft /
           (scrollRef.current?.scrollWidth - scrollRef.current?.clientWidth);
 
-        document.body.style.setProperty("--scroll", scrollProgress);
+        document.body.style.setProperty(
+          "--scroll",
+          scrollProgress < 0 ? 0 : scrollProgress
+        );
       }
-      openedCardState && ResponsiveManager.isWindowLarger("lg")
-        ? ScrollManager.disableScroll()
-        : ScrollManager.enableScroll();
     },
-    [scrollRef, openedCardState]
+    [scrollRef, openedCardState, scrollState, isLarge]
   );
 
   useEffect(() => {
-    const current = pageRef.current;
-    current?.addEventListener("wheel", handleWheelEvent);
+    window?.addEventListener("wheel", handleWheelEvent, { passive: false });
+    window?.addEventListener("touchmove", handleWheelEvent);
     return () => {
-      current?.removeEventListener("wheel", handleWheelEvent);
-      ScrollManager.enableScroll();
+      window?.removeEventListener("wheel", handleWheelEvent);
+      window?.removeEventListener("touchmove", handleWheelEvent);
     };
-  }, [pageRef, handleWheelEvent]);
+  }, [handleWheelEvent]);
 
   useEffect(() => {
     setRefs(
@@ -175,15 +185,15 @@ const Roadmap = () => {
     (cardTitle, cardIndex) => () => {
       setOpenedCardState({ title: cardTitle, id: cardIndex });
     },
-    [setOpenedCardState, refs]
+    [setOpenedCardState]
   );
 
   useEffect(() => {
     if (openedCardState) {
-      if (ResponsiveManager.isWindowLarger("lg")) {
+      if (isLarge) {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
-          block: "center",
+          block: "end",
           inline: "center",
         });
       } else {
@@ -193,14 +203,14 @@ const Roadmap = () => {
         });
       }
     }
-  }, [openedCardState, refs]);
+  }, [openedCardState, refs, isLarge]);
 
   const handleCardTransitionEnd = useCallback(() => {
     if (openedCardState) {
-      if (ResponsiveManager.isWindowLarger("lg")) {
+      if (isLarge) {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
-          block: "center",
+          block: "end",
           inline: "center",
         });
       } else {
@@ -210,7 +220,7 @@ const Roadmap = () => {
         });
       }
     }
-  }, [openedCardState, refs]);
+  }, [openedCardState, refs, isLarge]);
 
   useEffect(() => {
     refs[openedCardState?.id]?.current?.addEventListener(
@@ -223,14 +233,14 @@ const Roadmap = () => {
         handleCardTransitionEnd
       );
     };
-  }, [openedCardState, refs]);
+  }, [openedCardState, refs, handleCardTransitionEnd]);
 
   const handleCardClose = useCallback(() => {
     setOpenedCardState(null);
   }, [setOpenedCardState]);
 
   return (
-    <div className="roadmap__main" ref={pageRef}>
+    <div className="roadmap__main">
       <Halo />
       <StaticImage
         src="../../../assets/images/illus/background_img_roadmap.png"
