@@ -35,3 +35,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+// TODO : SEO

@@ -192,60 +192,83 @@ main.dataverseGateways {
       }
     }
 
-    .dg__protocol {
-      margin: 0 auto 100px;
-      position: relative;
-      width: 1264px;
-      height: 929px;
+    .dg__protocol--container {
+      // position: sticky;
+      // top: 0;
+      // transform-origin: top;
+      // height: 200vh;
+      // z-index: 1;
 
-      .dg__protocol__cards_container {
-        display: grid;
-        grid-auto-flow: column;
-        position: absolute;
-        z-index: 2;
-        .dg__protocol__card {
-          margin: 0 5px;
-          opacity: 0.8;
-          &:hover {
-            z-index: 3;
-            opacity: 1;
+      .dg__protocol {
+        margin: 0 auto 100px;
+        position: relative;
+        width: 1264px;
+        height: 929px;
+
+        .dg__protocol__cards_container {
+          display: grid;
+          grid-auto-flow: column;
+          position: absolute;
+          z-index: 2;
+
+          .dg__protocol__card {
+            margin: 0 5px;
+            opacity: 0.8;
+            &:hover {
+              z-index: 3;
+              opacity: 1;
+            }
+            &.current {
+              transition: 0.2s ease;
+              transform: scale(1.7);
+            }
+            :not(.current) {
+              div {
+                div {
+                  transition: opacity 0.2s ease;
+                  opacity: 0.2;
+                }
+              }
+            }
           }
-        }
-        &:hover {
-          :not(.dg__protocol__card:hover) {
-            div {
-              transition: opacity 0.2s ease;
-              opacity: 0.2;
+          &:hover {
+            :not(.dg__protocol__card:hover) {
+              div {
+                div {
+                  transition: opacity 0.2s ease;
+                  opacity: 0.2;
+                }
+              }
             }
           }
         }
-      }
 
-      .dg__protocol__book {
-        height: max-content;
-        width: max-content;
-        .dg__protocol__book--element {
-          position: absolute;
-        }
-        .page {
-          animation: floating-image 8s linear infinite;
-        }
+        .dg__protocol__book {
+          height: max-content;
+          width: max-content;
+          .dg__protocol__book--element {
+            position: absolute;
+          }
+          .page {
+            animation: floating-image 8s linear infinite;
+          }
 
-        .page1 {
-          animation-delay: 4s;
-        }
+          .page1 {
+            animation-delay: 4s;
+          }
 
-        .page2 {
-          animation-delay: 1.5s;
-          animation-direction: reverse;
-        }
+          .page2 {
+            animation-delay: 1.5s;
+            animation-direction: reverse;
+          }
 
-        .page3 {
-          animation-delay: 2s;
-        }
+          .page3 {
+            animation-delay: 2s;
+          }
 
-        .page4 {
-          animation-duration: 4s;
+          .page4 {
+            animation-duration: 4s;
+          }
         }
       }
     }
