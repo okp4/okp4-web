@@ -1,0 +1,6 @@
+humanDescription: Content used for the contact page
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Contact
+    link: /contact
