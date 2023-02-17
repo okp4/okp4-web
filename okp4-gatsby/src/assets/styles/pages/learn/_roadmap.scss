@@ -146,9 +146,6 @@
   }
 
   .roadmap__title--mobile {
-    @include media-bp-up(lg) {
-      display: none;
-    }
     margin: 20px auto 10px;
     padding: 0 15px;
     text-align: center;
@@ -224,7 +221,12 @@
       align-self: center;
 
       @include media-bp-down(lg) {
-        display: none;
+        margin: 20px auto 10px;
+        padding: 0 15px;
+        text-align: center;
+        justify-self: center;
+        font-size: 65px;
+        line-height: 72px;
       }
     }
 
@@ -325,6 +327,10 @@
               border-radius: 20px 0 0 20px;
               padding: 30px;
               overflow: scroll;
+
+              @include media-bp-down(lg) {
+                overflow: hidden;
+              }
 
               .roadmap__card__opened__header {
                 display: flex;
