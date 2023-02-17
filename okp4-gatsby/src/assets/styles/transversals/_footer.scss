@@ -380,9 +380,30 @@ footer.footer {
         .associates__advisor__card {
           padding: 0;
 
+          .associates__advisors__image {
+            border-radius: 20px;
+            max-width: 186px;
+            max-height: 260px;
+            margin: 0;
+            background: linear-gradient(
+              rgba(0, 64, 115, 0.26),
+              rgba(0, 64, 115, 0.26) 50%,
+              $orange 50%,
+              $orange
+            );
+            background-size: 100% 200%;
+            transition: background 0.4s;
+
+            @media (max-width: 500px) {
+              max-width: 164px;
+              max-height: 293px;
+              margin: 5px;
+            }
+          }
+
           &:hover {
             .associates__advisors__image {
-              box-shadow: inset 0px -260px 0 0 $orange;
+              background-position: 100% 100%;
             }
             .advisor__fullname {
               color: $orange;
@@ -402,26 +423,6 @@ footer.footer {
           .advisor__job__position {
             opacity: 0.6;
             font-weight: 400;
-          }
-
-          .associates__advisors__image {
-            border-radius: 20px;
-            max-width: 186px;
-            max-height: 260px;
-            margin: 0;
-            background: linear-gradient(
-              0deg,
-              rgba(0, 64, 115, 0.26),
-              rgba(0, 64, 115, 0.26)
-            );
-            transition: all ease 0.5s;
-            box-shadow: inset 0 0 0 0;
-
-            @media (max-width: 500px) {
-              max-width: 164px;
-              max-height: 293px;
-              margin: 5px;
-            }
           }
         }
       }
