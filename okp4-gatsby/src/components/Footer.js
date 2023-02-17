@@ -221,6 +221,9 @@ const Footer = ({
               >
                 {contentFooter.legals.text}
               </Link>
+              <Link className="footer__main__sitemap__item" to="/contact">
+                {contentFooter.contact.text}
+              </Link>
             </div>
           </div>
         </div>
