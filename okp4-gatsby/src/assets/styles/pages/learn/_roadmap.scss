@@ -161,9 +161,9 @@
     z-index: 1;
     padding-bottom: 50px;
     margin-bottom: 160px;
-
     column-gap: 60px;
     overflow: hidden;
+
     @include media-bp-down(lg) {
       overflow: auto;
       padding: 0 15px;
@@ -293,12 +293,15 @@
           z-index: 3;
           width: 100%;
           max-width: 1045px;
-          max-height: 796px;
           min-height: 495px;
-          height: calc(100vh - 181px);
           background: unset;
           padding: 0;
           animation: unset;
+
+          @include media-bp-up(lg) {
+            max-height: 796px;
+            height: calc(100vh - 181px);
+          }
 
           @media screen and (max-width: 1025px) {
             width: 100vw;
