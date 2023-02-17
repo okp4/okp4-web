@@ -230,9 +230,9 @@ const Associates = () => {
     },
 
     {
-      name: contentFooter.associates.advisors.people[3].name,
-      lastname: contentFooter.associates.advisors.people[3].lastname,
-      job: contentFooter.associates.advisors.people[3].job,
+      name: contentFooter.associates.advisors.people[2].name,
+      lastname: contentFooter.associates.advisors.people[2].lastname,
+      job: contentFooter.associates.advisors.people[2].job,
       image: (
         <StaticImage
           className="associates__advisors__image"
