@@ -199,7 +199,6 @@ const Roadmap = () => {
       } else {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
-          inline: "start",
         });
       }
     }
@@ -216,8 +215,8 @@ const Roadmap = () => {
       } else {
         refs[openedCardState.id].current?.scrollIntoView({
           behavior: "smooth",
-          inline: "start",
         });
+        window.scrollBy({ top: -15, behavior: "smooth" });
       }
     }
   }, [openedCardState, refs, isLarge]);
@@ -247,7 +246,9 @@ const Roadmap = () => {
         alt="background image"
         className="roadmap__background__image"
       />
-      <h1 className="roadmap__title--mobile">{contentRoadmap.title}</h1>
+      {!isLarge && (
+        <h1 className="roadmap__title--mobile">{contentRoadmap.title}</h1>
+      )}
       <div
         ref={scrollRef}
         className={classNames(
@@ -258,7 +259,7 @@ const Roadmap = () => {
           }
         )}
       >
-        <h1 className="roadmap__title">{contentRoadmap.title}</h1>
+        {isLarge && <h1 className="roadmap__title">{contentRoadmap.title}</h1>}
 
         <div
           ref={cardsRef}
