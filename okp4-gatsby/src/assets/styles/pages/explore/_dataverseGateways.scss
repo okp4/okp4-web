@@ -13,9 +13,12 @@ main.dataverseGateways {
 
     .dg__first_page {
       display: grid;
-      min-height: 100vh;
       margin: 0 auto;
-      padding-top: 200px;
+      padding-top: 140px;
+      @include media-bp-up(lg) {
+        min-height: 100vh;
+        padding-top: 200px;
+      }
 
       .dg__main_title {
         text-align: center;
@@ -25,29 +28,77 @@ main.dataverseGateways {
       .dg__keywords {
         overflow: hidden;
         align-self: flex-end;
-        margin-bottom: 30px;
-        height: 327px;
-        @include media-bp-down(lg) {
-          height: 345px;
-        }
+        margin: 30px 0;
+        min-height: 305px;
+        max-width: 1860px;
+        max-height: 929px;
         background: linear-gradient(180deg, #012c4f 0%, #003a68 77.08%);
         border-radius: 40px;
 
+        @include media-bp-down(lg) {
+          margin: 110px 15px 0;
+          max-height: 305px;
+        }
+
         .dg__keywords__container {
+          margin-bottom: 24px;
           .introduction {
-            margin: 96px auto 24px;
+            margin: 85px auto 24px;
             font-size: 35px;
             font-weight: 500;
             line-height: 42px;
             text-align: center;
+            @include media-bp-down(lg) {
+              font-size: 22px;
+              line-height: 1.5;
+              margin: 24px auto;
+            }
           }
 
           .keywords--container {
-            display: block;
             text-align: center;
+            max-width: min-content;
+            overflow-x: hidden;
+            white-space: nowrap;
+            display: flex;
+            @include media-bp-down(lg) {
+              margin: auto;
+              overflow-y: scroll;
+            }
+
             .keywords {
-              position: relative;
-              display: inline-block;
+              display: flex;
+
+              // background: linear-gradient(
+              //   to right,
+              //   rgba(255, 255, 255, 0),
+              //   #ffffff,
+              //   rgba(255, 255, 255, 0)
+              // );
+              // -webkit-background-clip: text;
+              // -webkit-text-fill-color: transparent;
+              // background-clip: text;
+
+              @include media-bp-down(lg) {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+              }
+
+              .keyword {
+                font-size: 60px;
+                font-weight: 600;
+                line-height: 72px;
+                margin: 0 25px;
+                @include media-bp-down(lg) {
+                  font-size: 30px;
+                  line-height: 36px;
+                }
+
+                &.mainKeyword {
+                  color: #ffffff;
+                }
+              }
 
               .keywords--aside {
                 position: absolute;
@@ -86,13 +137,6 @@ main.dataverseGateways {
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 opacity: 0.3;
-              }
-
-              .keyword {
-                font-size: 60px;
-                font-weight: 600;
-                line-height: 72px;
-                margin: 0 25px;
               }
             }
           }
@@ -136,6 +180,8 @@ main.dataverseGateways {
 
         @include media-bp-down(lg) {
           grid-auto-flow: row;
+          grid-template-columns: auto;
+          grid-template-rows: repeat(4, row);
         }
 
         .dg__landscape__cards__item {
@@ -145,8 +191,8 @@ main.dataverseGateways {
           padding: 20px 25px 25px;
           @include media-bp-down(lg) {
             max-width: 354px;
-            width: max-content;
             height: 351px;
+            width: auto;
           }
           border-radius: 20px;
           background: linear-gradient(
@@ -193,13 +239,8 @@ main.dataverseGateways {
     }
 
     .dg__protocol--container {
-      // position: sticky;
-      // top: 0;
-      // transform-origin: top;
-      // height: 200vh;
-      // z-index: 1;
-
       .dg__protocol {
+        display: flex;
         margin: 0 auto 100px;
         position: relative;
         width: 1264px;
@@ -209,11 +250,15 @@ main.dataverseGateways {
           display: grid;
           grid-auto-flow: column;
           position: absolute;
-          z-index: 2;
+          left: 0;
+          right: 0;
 
           .dg__protocol__card {
             margin: 0 5px;
             opacity: 0.8;
+            height: 185px;
+            width: 120px;
+
             &:hover {
               z-index: 3;
               opacity: 1;
@@ -244,8 +289,13 @@ main.dataverseGateways {
         }
 
         .dg__protocol__book {
+          display: flex;
           height: max-content;
           width: max-content;
+          @include media-bp-down(lg) {
+            width: 375px;
+            height: 278px;
+          }
           .dg__protocol__book--element {
             position: absolute;
           }

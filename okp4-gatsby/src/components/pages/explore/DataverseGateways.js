@@ -14,6 +14,7 @@ import * as ScrollManager from "../../../utils/ScrollManager.js";
 import Halo from "../../animations/Halo.js";
 import content from "/content/pages/explore/dataverse-gateways.yaml";
 import Parallax from "../../animations/Parallax.js";
+import classNames from "classnames";
 
 const parallaxLandscapeCard = [100, 150, 50, 125];
 const cardStyles = [
@@ -64,20 +65,45 @@ const Keyword = ({ keywords, mainIndex, distance }) => (
 const DataverseGateways = ({ files }) => {
   const [scrollState, setScrollState] = useState("scrollWords");
   const ref = useRef(null);
-  const keywordsRef = useRef(null);
+  const keywordsContainerRef = useRef(null);
   const [keywordsInitialPos, setKeywordsInitialPos] = useState(0);
-  const [mainKeywordIndex, setMainKeywordIndex] = useState(0);
-  const keywords = content.featured.keywords;
+  const [mainKeywordIndex, setMainKeywordIndex] = useState(3);
+  const keywords = [
+    ...content.featured.keywords.slice(-3),
+    ...content.featured.keywords,
+    ...content.featured.keywords.slice(0, 3),
+  ];
+  const [keywordRefs, setKeywordRefs] = useState([]);
   const landscapeRef = useRef(null);
   const protocolRef = useRef(null);
   const [cardRefs, setCardRefs] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(-1);
 
   useEffect(() => {
-    setKeywordsInitialPos(keywordsRef?.current?.getBoundingClientRect().top);
+    setKeywordsInitialPos(
+      keywordsContainerRef?.current?.getBoundingClientRect().top
+    );
   }, []);
 
+  useEffect(
+    () =>
+      setKeywordRefs(
+        Array(keywords.length)
+          .fill()
+          .map((_) => createRef())
+      ),
+    [keywords.length]
+  );
+
   const cardsLength = useMemo(() => content.protocol.cards.length, []);
+
+  useEffect(() => {
+    keywordRefs[mainKeywordIndex]?.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  }, [keywordRefs, mainKeywordIndex]);
 
   useEffect(
     () =>
@@ -90,15 +116,21 @@ const DataverseGateways = ({ files }) => {
   );
 
   const handleScrollKeywords = useCallback(
-    (e) => {
-      e.preventDefault();
-      if (e.deltaY < 0 && mainKeywordIndex > 0) {
+    (event) => {
+      event.preventDefault();
+
+      if (event.deltaY < 0 && mainKeywordIndex > 0) {
         setMainKeywordIndex(mainKeywordIndex - 1);
-      } else if (e.deltaY > 0 && mainKeywordIndex < keywords.length - 1) {
+      } else if (event.deltaY > 0 && mainKeywordIndex < keywords.length - 1) {
         setMainKeywordIndex(mainKeywordIndex + 1);
       }
 
-      if (e.deltaY > 0 && mainKeywordIndex >= keywords.length - 1) {
+      keywordsContainerRef.current?.scrollBy({
+        left: event.deltaY,
+        behavior: "smooth",
+      });
+
+      if (event.deltaY > 0 && mainKeywordIndex >= keywords.length - 1) {
         setScrollState("scrollPage");
       }
     },
@@ -173,8 +205,8 @@ const DataverseGateways = ({ files }) => {
   const handleScroll = () => {
     if (
       keywordsInitialPos ===
-        keywordsRef?.current?.getBoundingClientRect().top &&
-      ScrollManager.isIntersectingViewport(keywordsRef?.current)
+        keywordsContainerRef?.current?.getBoundingClientRect().top &&
+      ScrollManager.isIntersectingViewport(keywordsContainerRef?.current)
     ) {
       setScrollState("scrollWords");
     }
@@ -194,38 +226,22 @@ const DataverseGateways = ({ files }) => {
         <div className="dg__first_page">
           <h1 className="dg__main_title">{content.title}</h1>
 
-          <div className="dg__keywords" ref={keywordsRef}>
+          <div className="dg__keywords">
             <div className="dg__keywords__container">
               <p className="introduction">{content.featured.introduction}</p>
-              <div className="keywords--container">
+              <div className="keywords--container" ref={keywordsContainerRef}>
                 <div className="keywords">
-                  <div className="keywords--aside keywords--previous">
-                    {[-3, -2, -1].map((distance) => (
-                      <Keyword
-                        key={distance}
-                        keywords={keywords}
-                        mainIndex={mainKeywordIndex}
-                        distance={distance}
-                      />
-                    ))}
-                  </div>
-                  <div>
-                    <Keyword
-                      keywords={keywords}
-                      mainIndex={mainKeywordIndex}
-                      distance={0}
-                    />
-                  </div>
-                  <div className="keywords--aside keywords--next">
-                    {[1, 2, 3].map((distance) => (
-                      <Keyword
-                        key={distance}
-                        keywords={keywords}
-                        mainIndex={mainKeywordIndex}
-                        distance={distance}
-                      />
-                    ))}
-                  </div>
+                  {keywords.map((keyword, index) => (
+                    <div
+                      key={index}
+                      ref={keywordRefs[index]}
+                      className={classNames("keyword", {
+                        mainKeyword: index === mainKeywordIndex,
+                      })}
+                    >
+                      {keyword}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -266,7 +282,7 @@ const DataverseGateways = ({ files }) => {
           </div>
 
           <div className="dg__protocol--container">
-            <figure className="dg__protocol">
+            <div className="dg__protocol">
               <div className="dg__protocol__cards_container" ref={protocolRef}>
                 {content.protocol.cards.map((card, index) => (
                   <div
@@ -337,7 +353,7 @@ const DataverseGateways = ({ files }) => {
                   />
                 </div>
               </div>
-            </figure>
+            </div>
           </div>
         </div>
       </div>
