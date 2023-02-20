@@ -732,6 +732,7 @@ main.homepage {
           transition: all 0.4s ease;
           color: $white-80;
           line-height: 1.5;
+          margin-bottom: 60px;
 
           @include media-bp-down(lg) {
             max-width: 45%;
@@ -740,6 +741,13 @@ main.homepage {
           @include media-bp-down(md) {
             max-width: 90%;
           }
+        }
+
+        .cta__button {
+          background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
+            #00b6b7;
+          border-radius: 10px;
+          padding: 18px 30px;
         }
 
         .universe__illus__item {
@@ -800,6 +808,10 @@ main.homepage {
               opacity: 0;
             }
 
+            .cta__button {
+              opacity: 0;
+            }
+
             .text {
               transform: translate3d(-50px, 0, 0);
               opacity: 0;
@@ -823,6 +835,16 @@ main.homepage {
 
             .tag {
               transform: translate3d(0, 0, 0);
+              opacity: 1;
+            }
+
+            // div[data-item="dataverse"] {
+            //   .cta__button {
+            //     display: none;
+            //   }
+            // }
+
+            .cta__button {
               opacity: 1;
             }
 

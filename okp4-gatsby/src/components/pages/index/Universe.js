@@ -7,6 +7,7 @@ import StrateRoadmap from "../../animations/StrateRoadmap.js";
 import Halo from "../../animations/Halo.js";
 import contentUniverse from "/content/pages/index/universe.yaml";
 import contentRoadmap from "/content/pages/index/roadmap.yaml";
+import { Link } from "gatsby";
 
 const Universe = ({ files }) => {
   const roadmapItems = useRef(null);
@@ -101,6 +102,9 @@ const Universe = ({ files }) => {
                     </div>
                     <p className="title">{item.title}</p>
                     <p className="text">{item.description}</p>
+                    <Link to={item.link} className="cta__button">
+                      <span>{item.button}</span>
+                    </Link>
                   </div>
                 );
               })}
