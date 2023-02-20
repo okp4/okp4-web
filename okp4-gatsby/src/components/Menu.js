@@ -4,6 +4,7 @@ import menu from "/content/transversals/menu.yaml";
 import classNames from "classnames";
 import { useOnHoverOutside } from "../hook/useOnHoverOutside";
 import { useLocation } from "@reach/router";
+import { useBreakpoint } from "../hook/useBreakpoint";
 
 const SubMenu = ({ subMenu }) => (
   <div className="header__submenu">
@@ -24,21 +25,31 @@ const SubMenu = ({ subMenu }) => (
 );
 
 const Menu = () => {
+  const { isLarge } = useBreakpoint();
   const location = useLocation();
-  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
 
   const subMenuRef = useRef(null);
   const closeSubMenu = useCallback(() => {
-    setIsSubMenuOpen(false);
+    setSelectedMenu(null);
   }, []);
 
   useOnHoverOutside(subMenuRef, closeSubMenu);
 
   const handleMouseOver = useCallback(
     (menuItem) => {
-      menuItem.name !== selectedMenu && setSelectedMenu(menuItem.name);
-      setIsSubMenuOpen(!!menuItem.subMenuItems);
+      isLarge &&
+        menuItem.name !== selectedMenu &&
+        setSelectedMenu(menuItem.name);
+    },
+    [isLarge, selectedMenu]
+  );
+
+  const handleClick = useCallback(
+    (menuItem) => {
+      const { name } = menuItem;
+      const isMenuItemSelected = name === selectedMenu;
+      setSelectedMenu(isMenuItemSelected ? null : name);
     },
     [selectedMenu]
   );
@@ -56,6 +67,8 @@ const Menu = () => {
           className="header__menu__item"
           onMouseOver={() => handleMouseOver(menuItem)}
           onFocus={() => handleMouseOver(menuItem)}
+          onClick={() => handleClick(menuItem)}
+          onKeyDown={() => handleClick(menuItem)}
           role="menuitem"
           tabIndex={0}
         >
@@ -66,7 +79,7 @@ const Menu = () => {
           >
             {menuItem.name}
           </div>
-          {isSubMenuOpen && selectedMenu === menuItem.name && (
+          {selectedMenu === menuItem.name && menuItem.subMenuItems && (
             <SubMenu subMenu={menuItem.subMenuItems} />
           )}
         </div>
