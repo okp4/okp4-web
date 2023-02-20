@@ -2,8 +2,10 @@ import React from "react";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import IconGithub from "/src/assets/images/socials/github.inline.svg";
 import IconDiscord from "/src/assets/images/socials/discord.inline.svg";
+import IconCommunity from "/src/assets/images/icons/community.inline.svg";
 import contentFooter from "/content/transversals/footer.yaml";
 import contentSocials from "/content/transversals/socials.yaml";
+import { Link } from "gatsby";
 
 const Docs = () => {
   return (
@@ -63,6 +65,14 @@ const Docs = () => {
               <p className="title">{contentSocials.discord.label}</p>
               <IconArrowtr className="arrow" />
             </a>
+            <Link
+              to="/interact/community"
+              className="docs__content__item docs__content__item--small"
+            >
+              <IconCommunity className="social" />
+              <p className="title">Community</p>
+              <IconArrowtr className="arrow" />
+            </Link>
           </div>
         </div>
       </div>
