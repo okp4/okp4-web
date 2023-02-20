@@ -234,9 +234,10 @@ footer.footer {
           justify-content: flex-start;
           width: 100%;
           height: calc(50% - 16px);
-          padding: 10px 32px;
+          padding: 16px 32px;
           border: 1px solid $turquoise;
           border-radius: 20px;
+          margin-bottom: 26px;
 
           @include media-bp-down(lg) {
             width: 100%;
@@ -286,7 +287,10 @@ footer.footer {
 
           p.title {
             margin-right: auto;
-            margin-left: 14px;
+            margin-left: 12px;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 100%;
           }
         }
       }

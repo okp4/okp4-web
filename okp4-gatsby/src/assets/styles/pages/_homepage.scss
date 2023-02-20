@@ -756,7 +756,8 @@ main.homepage {
             line-height: 19px;
           }
           &:hover {
-            background: $white;
+            background: url("/images/grain.png"),
+              linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
             color: $textblue;
           }
 
@@ -965,7 +966,7 @@ main.homepage {
 
         p.text {
           max-width: 70%;
-          margin-bottom: 70px;
+          margin-bottom: 40px;
           color: $white-80;
           font-size: 20px;
           line-height: 1.5;
@@ -992,7 +993,8 @@ main.homepage {
             line-height: 19px;
           }
           &:hover {
-            background: $white;
+            background: url("/images/grain.png"),
+              linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
             color: $textblue;
           }
 
