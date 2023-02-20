@@ -102,9 +102,11 @@ const Universe = ({ files }) => {
                     </div>
                     <p className="title">{item.title}</p>
                     <p className="text">{item.description}</p>
-                    <Link to={item.link} className="cta__button">
-                      <span>{item.button}</span>
-                    </Link>
+                    {item.identifiant === "blockchain" && (
+                      <Link to={item.link} className="cta__button">
+                        <span>{item.button}</span>
+                      </Link>
+                    )}
                   </div>
                 );
               })}
