@@ -59,7 +59,7 @@ associates:
         url: https://cros-nest.com/
         image: logo-nest.png
   advisors:
-    title: Our advisors
+    title: Our Advisors
     people:
       - name: Peter
         lastname: Van Mourik
