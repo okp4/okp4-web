@@ -104,7 +104,7 @@ const Universe = ({ files }) => {
                     <p className="text">{item.description}</p>
                     {item.identifiant === "blockchain" && (
                       <Link to={item.link} className="cta__button">
-                        <span>{item.button}</span>
+                        <span className="cta__button__text">{item.button}</span>
                       </Link>
                     )}
                   </div>
@@ -125,6 +125,11 @@ const Universe = ({ files }) => {
                   __html: contentRoadmap.description,
                 }}
               ></p>
+              <Link to={contentRoadmap.link} className="cta__button">
+                <span className="cta__button__text">
+                  {contentRoadmap.button}
+                </span>
+              </Link>
             </div>
             <div className="homepage__roadmap__items" ref={roadmapItems}>
               {contentRoadmap.items.map((item, index) => {

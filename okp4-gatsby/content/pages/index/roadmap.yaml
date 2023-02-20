@@ -10,6 +10,8 @@ description: OKP4 is a blockchain built for the coordination of digital
   (datasets, algorithms, storage, computation…)
   <b>shared by participants </b>
   (communities and businesses).
+button: Discover the detailed roadmap
+link: /learn/roadmap
 items:
   - title: Genesis
     subtitle: "The story began in 2018 with a vision of addressing the two main issues relating to data sharing: lack of trust and lack of interest alignment between participants."

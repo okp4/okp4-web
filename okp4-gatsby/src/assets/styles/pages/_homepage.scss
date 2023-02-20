@@ -748,6 +748,21 @@ main.homepage {
             #00b6b7;
           border-radius: 10px;
           padding: 18px 30px;
+          text-align: center;
+
+          .cta__button__text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+          }
+          &:hover {
+            background: $white;
+            color: $textblue;
+          }
+
+          @media (max-width: 600px) {
+            display: block;
+          }
         }
 
         .universe__illus__item {
@@ -837,12 +852,6 @@ main.homepage {
               transform: translate3d(0, 0, 0);
               opacity: 1;
             }
-
-            // div[data-item="dataverse"] {
-            //   .cta__button {
-            //     display: none;
-            //   }
-            // }
 
             .cta__button {
               opacity: 1;
@@ -970,11 +979,33 @@ main.homepage {
             font-weight: 600;
           }
         }
+        .cta__button {
+          background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
+            #00b6b7;
+          border-radius: 10px;
+          padding: 18px 30px;
+          margin-bottom: 60px;
+
+          .cta__button__text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+          }
+          &:hover {
+            background: $white;
+            color: $textblue;
+          }
+
+          @media (max-width: 600px) {
+            display: block;
+          }
+        }
       }
 
       .homepage__roadmap__items {
         width: 100%;
         padding-bottom: 60px;
+        margin-top: 60px;
 
         @include media-bp-down(lg) {
           padding-bottom: 0;
