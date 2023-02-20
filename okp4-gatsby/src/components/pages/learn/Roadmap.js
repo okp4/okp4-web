@@ -101,6 +101,20 @@ const Roadmap = () => {
   const [scrollState, setScrollState] = useState("page");
   const { isLarge } = useBreakpoint();
 
+  const resetCardsScroll = useCallback(() => {
+    if (isLarge && scrollRef && window.scrollY === 0) {
+      scrollRef.current?.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
+    }
+  }, [isLarge, scrollRef]);
+
+  useEffect(() => {
+    window.addEventListener("scroll", resetCardsScroll);
+    return () => window.removeEventListener("scroll", resetCardsScroll);
+  }, [resetCardsScroll]);
+
   useEffect(() => {
     isLarge && ScrollManager.disableScroll();
     return () => {
