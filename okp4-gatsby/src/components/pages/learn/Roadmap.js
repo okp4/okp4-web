@@ -13,6 +13,7 @@ import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
 import ExitIcon from "../../../assets/images/icons/exit-icon.inline.svg";
 import * as ScrollManager from "../../../utils/ScrollManager";
 import { useBreakpoint } from "../../../hook/useBreakpoint";
+import { useOnEventOutside } from "../../../hook/useOnEventOutside.js";
 
 const Card = ({
   title,
@@ -23,7 +24,6 @@ const Card = ({
   handleCardOpen,
   timeline,
   isOpen,
-  buttonDisabled,
   cardIndex,
   cardRef,
 }) => (
@@ -80,7 +80,6 @@ const Card = ({
         <div className="roadmap__card__content__wrapper">
           <p className="roadmap__card__title">{title}</p>
           <button
-            disabled={buttonDisabled}
             className="roadmap__card__button"
             onClick={handleCardOpen(title, cardIndex)}
           >
@@ -252,6 +251,8 @@ const Roadmap = () => {
     setOpenedCardState(null);
   }, [setOpenedCardState]);
 
+  useOnEventOutside(refs[openedCardState?.id], "click", handleCardClose, true);
+
   return (
     <div className="roadmap__main">
       <Halo />
@@ -293,7 +294,6 @@ const Roadmap = () => {
                 handleCardOpen={handleCardOpen}
                 timeline={timeline}
                 isOpen={openedCardState?.title === title}
-                buttonDisabled={!!openedCardState}
                 cardIndex={index}
                 cardRef={refs[index]}
               />
