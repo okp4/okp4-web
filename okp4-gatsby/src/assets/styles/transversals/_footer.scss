@@ -302,22 +302,21 @@ footer.footer {
 
     .associates__wrapper {
       .associates__title {
-        margin: 120px 40px 50px;
-        font-size: 19px;
+        font-size: 16px;
+        margin-bottom: 40px;
 
         @media only screen and (max-width: 700px) {
-          margin: 60px 30px 36px 30px;
+          margin-bottom: 36px;
         }
       }
 
       .associates__logos__wrapper {
+        margin: 40px 0 120px 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
         gap: 5px;
-        margin-left: 200px;
-        margin-right: 200px;
 
         @media (min-width: 2150px) {
           margin-left: 600px;
@@ -340,18 +339,17 @@ footer.footer {
         }
 
         @media (max-width: 767px) {
-          margin-left: 0px;
-          margin-right: 0px;
+          margin: 0 15px 60px 15px;
         }
 
         .associates__logos__image {
           max-width: 200px;
           max-height: 60px;
-          margin: 10px;
+          margin: 15px;
           padding: 0;
 
           @media screen and (max-width: 900px) {
-            max-width: 110px;
+            max-width: 100px;
             max-height: 40px;
             margin: 5px;
 
@@ -370,11 +368,11 @@ footer.footer {
         flex-wrap: wrap;
         justify-content: center;
         gap: 60px;
-        margin: 10px 20px 110px 20px;
+        margin: 10px 20px 120px 20px;
 
         @media (max-width: 500px) {
-          gap: 5px;
-          margin: 20px 0px 70px 0px;
+          gap: 30px 15px;
+          margin: 20px 0px 60px 0px;
         }
 
         p {
@@ -391,8 +389,8 @@ footer.footer {
             max-height: 260px;
             margin: 0;
             background: linear-gradient(
-              rgba(0, 64, 115, 0.26),
-              rgba(0, 64, 115, 0.26) 50%,
+              #003661,
+              #005ca6 50%,
               $orange 50%,
               $orange
             );
@@ -435,7 +433,7 @@ footer.footer {
     }
   }
   .footer__partenaires {
-    padding-bottom: 55px;
+    padding-bottom: 120px;
     text-align: center;
 
     @include media-bp-down(lg) {
