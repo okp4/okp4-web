@@ -391,6 +391,33 @@
               border-radius: 0px 20px 20px 0px;
               @include roadmap-background-images();
 
+              @include media-bp-down(lg) {
+                &.Genesis {
+                  background: center / cover no-repeat
+                    url("../images/illus/index_roadmap_1_mobile.jpg");
+                }
+
+                &.Nemeton {
+                  background: center / cover no-repeat
+                    url("../images/illus/index_roadmap_2_mobile.jpg");
+                }
+
+                &.Myrddin {
+                  background: center / cover no-repeat
+                    url("../images/illus/index_roadmap_3_mobile.jpg");
+                }
+
+                &.Duir {
+                  background: center / cover no-repeat
+                    url("../images/illus/index_roadmap_4_mobile.jpg");
+                }
+
+                &.Lugh {
+                  background: top / cover no-repeat
+                    url("../images/illus/index_roadmap_5_mobile.jpg");
+                }
+              }
+
               .roadmap__card__opened__image__content {
                 display: flex;
                 justify-content: right;
