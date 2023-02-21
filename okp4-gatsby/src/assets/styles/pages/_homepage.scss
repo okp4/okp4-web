@@ -732,6 +732,7 @@ main.homepage {
           transition: all 0.4s ease;
           color: $white-80;
           line-height: 1.5;
+          margin-bottom: 60px;
 
           @include media-bp-down(lg) {
             max-width: 45%;
@@ -739,6 +740,32 @@ main.homepage {
 
           @include media-bp-down(md) {
             max-width: 90%;
+          }
+          @include media-bp-down(sm) {
+            margin-bottom: 16px;
+          }
+        }
+
+        .cta__button {
+          background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
+            #00b6b7;
+          border-radius: 10px;
+          padding: 18px 30px;
+          text-align: center;
+
+          .cta__button__text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+          }
+          &:hover {
+            background: url("/images/grain.png"),
+              linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+            color: $textblue;
+          }
+
+          @media (max-width: 600px) {
+            display: block;
           }
         }
 
@@ -800,6 +827,10 @@ main.homepage {
               opacity: 0;
             }
 
+            .cta__button {
+              opacity: 0;
+            }
+
             .text {
               transform: translate3d(-50px, 0, 0);
               opacity: 0;
@@ -823,6 +854,10 @@ main.homepage {
 
             .tag {
               transform: translate3d(0, 0, 0);
+              opacity: 1;
+            }
+
+            .cta__button {
               opacity: 1;
             }
 
@@ -934,7 +969,7 @@ main.homepage {
 
         p.text {
           max-width: 70%;
-          margin-bottom: 70px;
+          margin-bottom: 40px;
           color: $white-80;
           font-size: 20px;
           line-height: 1.5;
@@ -944,8 +979,38 @@ main.homepage {
             margin-bottom: 40px;
           }
 
+          @include media-bp-down(sm) {
+            margin-bottom: 20px;
+          }
+
           b {
             font-weight: 600;
+          }
+        }
+        .cta__button {
+          background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
+            #00b6b7;
+          border-radius: 10px;
+          padding: 18px 30px;
+          margin-bottom: 60px;
+
+          @include media-bp-down(sm) {
+            margin-bottom: 40px;
+          }
+
+          .cta__button__text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+          }
+          &:hover {
+            background: url("/images/grain.png"),
+              linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+            color: $textblue;
+          }
+
+          @media (max-width: 600px) {
+            display: block;
           }
         }
       }
@@ -953,9 +1018,13 @@ main.homepage {
       .homepage__roadmap__items {
         width: 100%;
         padding-bottom: 60px;
+        margin-top: 60px;
 
         @include media-bp-down(lg) {
           padding-bottom: 0;
+        }
+        @include media-bp-down(sm) {
+          margin-top: unset;
         }
 
         .homepage__roadmap__item {
