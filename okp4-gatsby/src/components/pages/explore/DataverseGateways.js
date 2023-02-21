@@ -8,13 +8,14 @@ import {
   createRef,
 } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../utils/MediaManager.js";
 import * as ScrollManager from "../../../utils/ScrollManager.js";
 import Halo from "../../animations/Halo.js";
 import content from "/content/pages/explore/dataverse-gateways.yaml";
 import Parallax from "../../animations/Parallax.js";
 import classNames from "classnames";
+import { useBreakpoint } from "../../../hook/useBreakpoint";
 
 const parallaxLandscapeCard = [100, 150, 50, 125];
 const cardStyles = [
@@ -65,8 +66,8 @@ const Keyword = ({ keywords, mainIndex, distance }) => (
 const DataverseGateways = ({ files }) => {
   const [scrollState, setScrollState] = useState("scrollWords");
   const ref = useRef(null);
+  const firstPageRef = useRef(null);
   const keywordsContainerRef = useRef(null);
-  const [keywordsInitialPos, setKeywordsInitialPos] = useState(0);
   const [mainKeywordIndex, setMainKeywordIndex] = useState(3);
   const keywords = [
     ...content.featured.keywords.slice(-3),
@@ -78,12 +79,7 @@ const DataverseGateways = ({ files }) => {
   const protocolRef = useRef(null);
   const [cardRefs, setCardRefs] = useState([]);
   const [activeCardIndex, setActiveCardIndex] = useState(-1);
-
-  useEffect(() => {
-    setKeywordsInitialPos(
-      keywordsContainerRef?.current?.getBoundingClientRect().top
-    );
-  }, []);
+  const { isLarge } = useBreakpoint();
 
   useEffect(
     () =>
@@ -118,23 +114,46 @@ const DataverseGateways = ({ files }) => {
   const handleScrollKeywords = useCallback(
     (event) => {
       event.preventDefault();
+      event.stopPropagation();
 
-      if (event.deltaY < 0 && mainKeywordIndex > 0) {
+      const scrollHorizontally = () => {
+        keywordsContainerRef.current?.scrollBy({
+          left: event.deltaY,
+          behavior: "smooth",
+        });
+      };
+
+      const scrollPage = (delta = event.deltaY) => {
+        window.scrollTo({
+          top: window.scrollY + delta,
+          behavior: "smooth",
+        });
+      };
+
+      if (event.deltaY < 0 && mainKeywordIndex > 3) {
         setMainKeywordIndex(mainKeywordIndex - 1);
-      } else if (event.deltaY > 0 && mainKeywordIndex < keywords.length - 1) {
+        scrollHorizontally();
+      } else if (event.deltaY > 0 && mainKeywordIndex < keywords.length - 4) {
         setMainKeywordIndex(mainKeywordIndex + 1);
+        scrollHorizontally();
       }
 
-      keywordsContainerRef.current?.scrollBy({
-        left: event.deltaY,
-        behavior: "smooth",
-      });
-
-      if (event.deltaY > 0 && mainKeywordIndex >= keywords.length - 1) {
+      if (event.deltaY > 0 && mainKeywordIndex >= keywords.length - 4) {
         setScrollState("scrollPage");
+        scrollPage();
+      }
+
+      if (scrollState === "scrollPage") {
+        scrollPage();
       }
     },
-    [keywords, mainKeywordIndex, setMainKeywordIndex, setScrollState]
+    [
+      keywords,
+      mainKeywordIndex,
+      setMainKeywordIndex,
+      scrollState,
+      setScrollState,
+    ]
   );
 
   const handleScrollCards = useCallback(
@@ -180,10 +199,12 @@ const DataverseGateways = ({ files }) => {
       case "scrollPage":
         ref?.current?.removeEventListener("wheel", handleScrollKeywords);
         ref?.current?.removeEventListener("wheel", handleScrollCards);
+        ScrollManager.enableScroll();
         break;
       case "scrollWords":
         if (ref && ref.current) {
           ref.current.addEventListener("wheel", handleScrollKeywords);
+          ScrollManager.disableScroll();
         }
         break;
       case "scrollCards":
@@ -199,15 +220,16 @@ const DataverseGateways = ({ files }) => {
     return () => {
       ref?.current?.removeEventListener("wheel", handleScrollKeywords);
       ref?.current?.removeEventListener("wheel", handleScrollCards);
+      ScrollManager.enableScroll();
     };
   }, [scrollState, ref, handleScrollKeywords, handleScrollCards]);
 
   const handleScroll = () => {
-    if (
-      keywordsInitialPos ===
-        keywordsContainerRef?.current?.getBoundingClientRect().top &&
-      ScrollManager.isIntersectingViewport(keywordsContainerRef?.current)
-    ) {
+    const firstPageRect = firstPageRef?.current?.getBoundingClientRect();
+    const viewportBottom = window.innerHeight;
+    const firstPageBottom = firstPageRect.top + firstPageRect.height;
+    const isFirstPageToBottom = firstPageBottom >= viewportBottom;
+    if (isFirstPageToBottom) {
       setScrollState("scrollWords");
     }
   };
@@ -223,11 +245,12 @@ const DataverseGateways = ({ files }) => {
     <div className="dataverse_gateways" ref={ref}>
       <Halo />
       <div className="wrapper">
-        <div className="dg__first_page">
+        <div className="dg__first_page" ref={firstPageRef}>
           <h1 className="dg__main_title">{content.title}</h1>
 
           <div className="dg__keywords">
             <div className="dg__keywords__container">
+              <div className="keywords_color_layer" />
               <p className="introduction">{content.featured.introduction}</p>
               <div className="keywords--container" ref={keywordsContainerRef}>
                 <div className="keywords">
@@ -281,9 +304,9 @@ const DataverseGateways = ({ files }) => {
             ))}
           </div>
 
-          <div className="dg__protocol--container">
-            <div className="dg__protocol">
-              <div className="dg__protocol__cards_container" ref={protocolRef}>
+          <div className="dg__protocol">
+            <div className="dg__protocol__cards--container" ref={protocolRef}>
+              <div className="dg__protocol__cards" ref={protocolRef}>
                 {content.protocol.cards.map((card, index) => (
                   <div
                     key={index}
@@ -293,10 +316,12 @@ const DataverseGateways = ({ files }) => {
                     <motion.div
                       whileHover={{ scale: 1.7 }}
                       transition={{ duration: 0.2 }}
-                      style={{
-                        marginTop: `${cardStyles[index].margin}px`,
-                        rotate: `${cardStyles[index].rotate}deg`,
-                      }}
+                      style={
+                        isLarge && {
+                          marginTop: `${cardStyles[index].margin}px`,
+                          rotate: `${cardStyles[index].rotate}deg`,
+                        }
+                      }
                     >
                       <GatsbyImage
                         image={MediaManager.GetImage("explore/" + card, files)}
@@ -306,49 +331,51 @@ const DataverseGateways = ({ files }) => {
                   </div>
                 ))}
               </div>
+            </div>
+            <div className="dg__protocol__book--container">
               <div className="dg__protocol__book">
                 <div className="dg__protocol__book--element">
-                  <GatsbyImage
-                    image={MediaManager.GetImage(
-                      "explore/protocol-book.png",
-                      files
-                    )}
+                  <StaticImage
+                    className="imgWrapper"
+                    imgClassName="img"
+                    objectFit="contain"
+                    src="../../../assets/images/illus/explore/protocol-book.png"
                     alt="OKP4 Protocol"
                   />
                 </div>
                 <div className="dg__protocol__book--element page page1">
-                  <GatsbyImage
-                    image={MediaManager.GetImage(
-                      "explore/protocol-page-lb.png",
-                      files
-                    )}
+                  <StaticImage
+                    className="imgWrapper"
+                    imgClassName="img"
+                    objectFit="contain"
+                    src="../../../assets/images/illus/explore/protocol-page-lb.png"
                     alt="OKP4 Protocol"
                   />
                 </div>
                 <div className="dg__protocol__book--element page page2">
-                  <GatsbyImage
-                    image={MediaManager.GetImage(
-                      "explore/protocol-page-lt.png",
-                      files
-                    )}
+                  <StaticImage
+                    className="imgWrapper"
+                    imgClassName="img"
+                    objectFit="contain"
+                    src="../../../assets/images/illus/explore/protocol-page-lt.png"
                     alt="OKP4 Protocol"
                   />
                 </div>
                 <div className="dg__protocol__book--element page page3">
-                  <GatsbyImage
-                    image={MediaManager.GetImage(
-                      "explore/protocol-page-rb.png",
-                      files
-                    )}
+                  <StaticImage
+                    className="imgWrapper"
+                    imgClassName="img"
+                    objectFit="contain"
+                    src="../../../assets/images/illus/explore/protocol-page-rb.png"
                     alt="OKP4 Protocol"
                   />
                 </div>
                 <div className="dg__protocol__book--element page page4">
-                  <GatsbyImage
-                    image={MediaManager.GetImage(
-                      "explore/protocol-page-rt.png",
-                      files
-                    )}
+                  <StaticImage
+                    className="imgWrapper"
+                    imgClassName="img"
+                    objectFit="contain"
+                    src="../../../assets/images/illus/explore/protocol-page-rt.png"
                     alt="OKP4 Protocol"
                   />
                 </div>
