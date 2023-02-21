@@ -1,0 +1,7 @@
+# Content used for the learn/dataspace page
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Learn
+  - name: Data Space
+    link: /learn/dataspace
