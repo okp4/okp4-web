@@ -15,6 +15,7 @@ export default function Community({ data }) {
       isStatic
       withDocs={false}
       withPartners={false}
+      withAssociates={false}
     >
       <JoinUs files={data} />
       <LatestNews posts={data.mediumPosts.edges} />

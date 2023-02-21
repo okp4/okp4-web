@@ -14,11 +14,17 @@ import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import Halo from "./animations/Halo.js";
 import Docs from "./Docs.js";
 import Partners from "./Partners";
+import Associates from "./Associates";
 import Newsletter from "./Newsletter.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentFooter from "/content/transversals/footer.yaml";
 
-const Footer = ({ files, withDocs = true, withPartners = true }) => {
+const Footer = ({
+  files,
+  withDocs = true,
+  withAssociates = true,
+  withPartners = true,
+}) => {
   const divScrollTop = useRef(null);
   var scrollPos = 0;
   var scrollDirection = "down";
@@ -69,6 +75,7 @@ const Footer = ({ files, withDocs = true, withPartners = true }) => {
         <Halo />
         <div className="footer__sticky">
           {withDocs && <Docs />}
+          {withAssociates && <Associates files={files} />}
           {withPartners && <Partners />}
         </div>
 

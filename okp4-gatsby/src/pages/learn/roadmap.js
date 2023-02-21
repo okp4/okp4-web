@@ -14,6 +14,7 @@ export default function LearnRoadmap({ data }) {
       isStatic
       withDocs={false}
       withPartners={false}
+      withAssociates={false}
     >
       <Roadmap />
     </Layout>

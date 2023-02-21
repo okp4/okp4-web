@@ -11,6 +11,7 @@ const Layout = ({
   breadcrumbs,
   isStatic = false,
   withDocs = true,
+  withAssociates = true,
   withPartners = true,
 }) => {
   return (
@@ -18,7 +19,12 @@ const Layout = ({
       <Preloader />
       <Header isPositionFixed={isStatic} breadcrumbs={breadcrumbs} />
       <main className={location}>{children}</main>
-      <Footer files={files} withDocs={withDocs} withPartners={withPartners} />
+      <Footer
+        files={files}
+        withDocs={withDocs}
+        withAssociates={withAssociates}
+        withPartners={withPartners}
+      />
     </>
   );
 };

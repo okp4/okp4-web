@@ -293,8 +293,147 @@ footer.footer {
     }
   }
 
+  .associates {
+    text-align: center;
+    margin-bottom: 110px;
+    @media only screen and (max-width: 700px) {
+      margin-bottom: 60px;
+    }
+
+    .associates__wrapper {
+      .associates__title {
+        font-size: 16px;
+        margin-bottom: 40px;
+
+        @media only screen and (max-width: 700px) {
+          margin-bottom: 36px;
+        }
+      }
+
+      .associates__logos__wrapper {
+        margin: 40px 0 120px 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+
+        @media (min-width: 2150px) {
+          margin-left: 600px;
+          margin-right: 600px;
+        }
+
+        @media (max-width: 2150px) {
+          margin-left: 400px;
+          margin-right: 400px;
+        }
+
+        @media (max-width: 1800px) {
+          margin-left: 250px;
+          margin-right: 250px;
+        }
+
+        @media (max-width: 1580px) {
+          margin-left: 150px;
+          margin-right: 150px;
+        }
+
+        @media (max-width: 767px) {
+          margin: 0 15px 60px 15px;
+        }
+
+        .associates__logos__image {
+          max-width: 200px;
+          max-height: 60px;
+          margin: 15px;
+          padding: 0;
+
+          @media screen and (max-width: 900px) {
+            max-width: 100px;
+            max-height: 40px;
+            margin: 5px;
+
+            &.Cros-Nest,
+            &.Notional,
+            &.NodeStake {
+              max-width: 48px;
+              max-height: 48px;
+            }
+          }
+        }
+      }
+
+      .associates__advisors__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 60px;
+        margin: 10px 20px 120px 20px;
+
+        @media (max-width: 500px) {
+          gap: 30px 15px;
+          margin: 20px 0px 60px 0px;
+        }
+
+        p {
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        .associates__advisor__card {
+          padding: 0;
+
+          .associates__advisors__image {
+            border-radius: 20px;
+            max-width: 186px;
+            max-height: 260px;
+            margin: 0;
+            background: linear-gradient(
+              #003661,
+              #005ca6 50%,
+              $orange 50%,
+              $orange
+            );
+            background-size: 100% 200%;
+            transition: background 0.4s;
+
+            @media (max-width: 500px) {
+              max-width: 164px;
+              max-height: 293px;
+              margin: 5px;
+            }
+          }
+
+          &:hover {
+            .associates__advisors__image {
+              background-position: 100% 100%;
+            }
+            .advisor__fullname {
+              color: $orange;
+            }
+          }
+          .advisor__fullname {
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+            margin-top: 15px;
+
+            .advisor__lastname {
+              text-transform: uppercase;
+            }
+          }
+
+          .advisor__job__position {
+            opacity: 0.6;
+            font-weight: 400;
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+  }
   .footer__partenaires {
-    padding-bottom: 55px;
+    padding-bottom: 120px;
     text-align: center;
 
     @include media-bp-down(lg) {
