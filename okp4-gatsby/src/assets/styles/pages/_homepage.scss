@@ -741,6 +741,9 @@ main.homepage {
           @include media-bp-down(md) {
             max-width: 90%;
           }
+          @include media-bp-down(sm) {
+            margin-bottom: 16px;
+          }
         }
 
         .cta__button {
@@ -976,6 +979,10 @@ main.homepage {
             margin-bottom: 40px;
           }
 
+          @include media-bp-down(sm) {
+            margin-bottom: 20px;
+          }
+
           b {
             font-weight: 600;
           }
@@ -986,6 +993,10 @@ main.homepage {
           border-radius: 10px;
           padding: 18px 30px;
           margin-bottom: 60px;
+
+          @include media-bp-down(sm) {
+            margin-bottom: 40px;
+          }
 
           .cta__button__text {
             font-weight: 600;
@@ -1011,6 +1022,9 @@ main.homepage {
 
         @include media-bp-down(lg) {
           padding-bottom: 0;
+        }
+        @include media-bp-down(sm) {
+          margin-top: unset;
         }
 
         .homepage__roadmap__item {
