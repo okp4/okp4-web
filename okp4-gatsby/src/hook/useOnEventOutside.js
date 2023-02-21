@@ -1,6 +1,6 @@
 import { useEffect, useCallback } from "react";
 
-export const useOnClickOutside = (ref, handler, mouseEvent, options) => {
+export const useOnEventOutside = (ref, listener, handler, options) => {
   const callback = useCallback(
     (event) => {
       const el = ref?.current;
@@ -15,8 +15,8 @@ export const useOnClickOutside = (ref, handler, mouseEvent, options) => {
   );
 
   useEffect(() => {
-    window.addEventListener(mouseEvent, callback, options);
+    window.addEventListener(listener, callback, options);
 
-    return () => window.removeEventListener(mouseEvent, callback, options);
-  }, [callback, mouseEvent]);
+    return () => window.removeEventListener(listener, callback, options);
+  }, [callback, listener, options]);
 };

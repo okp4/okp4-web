@@ -13,7 +13,7 @@ import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
 import ExitIcon from "../../../assets/images/icons/exit-icon.inline.svg";
 import * as ScrollManager from "../../../utils/ScrollManager";
 import { useBreakpoint } from "../../../hook/useBreakpoint";
-import { useOnClickOutside } from "../../../hook/useOnClickOutside.js";
+import { useOnEventOutside } from "../../../hook/useOnEventOutside.js";
 
 const Card = ({
   title,
@@ -253,7 +253,7 @@ const Roadmap = () => {
     setOpenedCardState(null);
   }, [setOpenedCardState]);
 
-  useOnClickOutside(refs[openedCardState?.id], handleCardClose, "click", true);
+  useOnEventOutside(refs[openedCardState?.id], "click", handleCardClose, true);
 
   return (
     <div className="roadmap__main">

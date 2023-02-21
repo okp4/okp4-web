@@ -2,9 +2,9 @@ import React, { useCallback, useState, useRef } from "react";
 import { Link } from "gatsby";
 import menu from "/content/transversals/menu.yaml";
 import classNames from "classnames";
-import { useOnHoverOutside } from "../hook/useOnHoverOutside";
 import { useLocation } from "@reach/router";
 import { useBreakpoint } from "../hook/useBreakpoint";
+import { useOnEventOutside } from "../hook/useOnEventOutside";
 
 const SubMenu = ({ subMenu }) => (
   <div className="header__submenu">
@@ -34,7 +34,7 @@ const Menu = () => {
     setSelectedMenu(null);
   }, []);
 
-  useOnHoverOutside(subMenuRef, closeSubMenu);
+  useOnEventOutside(subMenuRef, "mouseover", closeSubMenu);
 
   const handleMouseOver = useCallback(
     (menuItem) => {
