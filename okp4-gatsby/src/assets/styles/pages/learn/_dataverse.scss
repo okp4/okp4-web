@@ -20,7 +20,7 @@ main.dataverse {
   }
 
   p {
-    font-size: 20px; //TODO : some exists at 18px
+    font-size: 20px;
   }
 
   .dataverse_button {
@@ -134,7 +134,7 @@ main.dataverse {
     background: $darkblue;
     border-radius: 40px;
     @include media-bp-down(lg) {
-      margin: 20px 0 0;
+      margin: 60px 0 0;
       padding-bottom: 32px;
       border-radius: 20px;
       text-align: center;
@@ -162,19 +162,22 @@ main.dataverse {
     }
 
     &--content_wrapper {
-      margin: 20px 20px 0;
+      margin: 32px auto 0;
+      padding: 0 20px;
+      max-width: 724px;
       @include media-bp-up(lg) {
         margin: 20px 32px 32px;
         grid-area: web2content;
         margin: auto 0;
-        justify-self: end;
         padding-left: calc(((min(100vw, 1850px) - 1325px) / 2));
+        max-width: unset;
       }
     }
 
     @include media-bp-up(lg) {
       &--content_wrapper > * {
         margin: 0 30px;
+        max-width: 610px;
       }
     }
 
@@ -195,9 +198,9 @@ main.dataverse {
       @include media-bp-down(lg) {
         margin-top: 24px;
         p {
-          font-size: 18px;
-          line-height: 150%;
-          opacity: 0.8;
+          @include media-bp-down(lg) {
+            opacity: 0.8;
+          }
         }
       }
     }
@@ -248,7 +251,8 @@ main.dataverse {
       margin: auto;
       @include media-bp-down(lg) {
         max-width: 256px;
-        margin: 60px auto;
+        margin: 0 auto 60px;
+        padding: 20px;
       }
     }
 
@@ -256,6 +260,7 @@ main.dataverse {
       max-width: 724px;
       @include media-bp-down(lg) {
         text-align: center;
+        margin: 0 auto;
       }
 
       &--title {
@@ -270,8 +275,8 @@ main.dataverse {
         font-size: 20px;
         p {
           font-size: 20px;
+          line-height: 150%;
         }
-        line-height: 150%;
         @include media-bp-down(lg) {
           margin: 20px 0 0;
         }
@@ -295,13 +300,13 @@ main.dataverse {
 
       &--synergy_links {
         margin: 20px 0;
-        display: grid;
-        grid-auto-flow: column;
+        display: flex;
         column-gap: 20px;
         @include media-bp-down(lg) {
           text-align: left;
           grid-auto-flow: row;
           row-gap: 20px;
+          display: grid;
         }
       }
 
@@ -316,15 +321,25 @@ main.dataverse {
         text-decoration: none;
         opacity: 0.8;
         position: relative;
+        @include media-bp-up(lg) {
+          padding: 10px 25px 10px 30px;
+          display: flex;
+          white-space: nowrap;
+          align-items: center;
+          position: unset;
+        }
 
         .arrow {
           position: absolute;
           top: 0;
           right: 0;
           width: 16px;
-          transition: transform 0.25s ease;
           margin: 22px 25px 21px;
           opacity: 0.8;
+          @include media-bp-up(lg) {
+            position: unset;
+            margin: 6px 0 6px 14px;
+          }
           path {
             stroke: $darkblue;
           }
@@ -341,11 +356,15 @@ main.dataverse {
   }
 
   .architecture {
-    margin-top: 180px;
+    margin-top: 160px;
     text-align: center;
 
     @include media-bp-down(lg) {
-      margin-top: 60px;
+      margin-top: 40px;
+      p {
+        font-size: 18px;
+        line-height: 150%;
+      }
     }
 
     &--title {
@@ -374,6 +393,7 @@ main.dataverse {
         grid-row-gap: 16px;
         grid-template-columns: repeat(1, 1fr);
         margin-top: unset;
+        place-items: center;
       }
     }
 
@@ -382,6 +402,7 @@ main.dataverse {
       flex-direction: column;
       place-items: center;
       justify-content: center;
+      width: 100%;
       max-width: 400px;
       height: 447px;
       padding: 10px 50px;
@@ -390,6 +411,12 @@ main.dataverse {
       border-radius: 20px;
       color: $textblue;
       line-height: 33px;
+
+      @include media-bp-down(lg) {
+        width: 100%;
+        max-width: 345px;
+        max-height: 400px;
+      }
 
       &--image {
         display: flex;

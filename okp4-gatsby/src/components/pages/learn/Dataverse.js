@@ -106,7 +106,7 @@ const Dataverse = ({ files }) => (
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {link.name}
+                    <p>{link.name}</p>
                     <IconArrowtr className="arrow" />
                   </a>
                 ))}
