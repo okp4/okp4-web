@@ -203,6 +203,18 @@
         }
       }
 
+      &.Duir {
+        @media only screen and (min-width: 1025px) {
+          .roadmap__cards {
+            &::after {
+              content: "";
+              width: 50vw;
+              margin-right: calc(45vw / 2 - 3%);
+            }
+          }
+        }
+      }
+
       &.Lugh {
         @media only screen and (min-width: 1025px) {
           .roadmap__cards {
