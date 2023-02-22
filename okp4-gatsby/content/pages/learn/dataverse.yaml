@@ -5,3 +5,87 @@ breadcrumbs:
   - name: Learn
   - name: Dataverse
     link: /learn/dataverse
+okp4Universe:
+  title: The OKP4 universe
+  description: The Dataverse is an ever-expanding universe comprised of all the Datasets, Algorithms, Software, Storage resources, Computation resources, Identity management solutions, workflow engines, oracles, and many other resources referenced in the blockchain.
+  image: index_universe_dataverse.png
+buildDataverse:
+  title: Let's build the dataverse
+  description: |
+    <p>
+      OKP4 is a general-purpose Ecosystem that enables <a href='https://en.wikipedia.org/wiki/As_a_service'>XaaS</a> (Anything as a Service) integration. Anything that is <br>
+      presented to the Protocol as a Service, whatever it does, wherever it is hosted or deployed, whoever provides it, <br>
+      can be used by the Protocol. Therein lies the integration power of the protocol, which brings infinite scalability <br>
+      and extensibility to the distributed Dataverse.
+    </p>
+web2Okp4:
+  title: Connecting the web2 world with OKP4
+  description: |
+    <p>
+      All existing off-chain services are supported by the Protocol:  
+    </p>
+  image: index_roadmap_3.jpg
+  services:
+    - title: Data-agnostic
+      description: Any dataset or data stream can be shared
+    - title: Service-agnostic
+      description: Any algorithm or software application can be shared
+    - title: Cloud-agnostic
+      description: Any kind of existing cloud infrastructure can be leveraged
+    - title: Cloud-ready
+      description: Leverage OKP4 within any existing cloud infrastructure
+  button:
+    name: Discover OKP4 Protocol
+    link: /learn/okp4
+ibc:
+  title: Expanding the dataverse with on-chain synergies
+  description: |
+    <p>
+      Thanks to <a href='https://ibc.cosmos.network/'>IBC</a> (Inter Blockchain Communication), integrate any resources from other ecosystems and become the hub for on-chain enabled synergies, for examples:
+    </p>
+  image: index_universe_blockchain.png
+  synergies:
+    - title: Datasets from
+      links:
+        - name: Ocean Protocol
+          link: https://oceanprotocol.com/
+        - name: Medibloc
+          link: https://medibloc.com/en/
+        - name: Regen Network
+          link: https://www.regen.network/
+    - title: Storage resources from
+      links:
+        - name: Filecoin
+          link: https://filecoin.io/
+        - name: Arweave
+          link: https://www.arweave.org/
+        - name: Kyve
+          link: https://www.kyve.network/
+    - title: Computation from
+      links:
+        - name: Akash
+          link: https://akash.network/
+        - name: Holo
+          link: https://holo.host/
+        - name: Aleph.im
+          link: https://aleph.im/
+    - title: Data space governance from any existing token
+      internalLink:
+        name: Discover Data Space
+        link: /learn/dataspace
+architecture:
+  title: An elegant architecture, for an abundant ecosystem
+  description: |
+    <p>
+      OKP4 is based on a fully decentralized, open and agnostic architecture, which is:
+    </p>
+  cards:
+    - title: Scalable
+      image: scalable.png
+      description: designed to scale to infinity
+    - title: Interoperable
+      image: interoperable.png
+      description: ensure maximum integration with existing and future services
+    - title: Auditable
+      image: auditable.png
+      description: provide a complete topology of the Ecosystem recorded as an ontology on-chain
