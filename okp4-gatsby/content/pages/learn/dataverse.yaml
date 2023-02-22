@@ -1,0 +1,7 @@
+humanDescription: Content used for the Dataverse page.
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Learn
+  - name: Dataverse
+    link: /learn/dataverse
