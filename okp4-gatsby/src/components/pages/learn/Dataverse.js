@@ -5,6 +5,7 @@ import Halo from "../../animations/Halo.js";
 import content from "/content/pages/learn/dataverse.yaml";
 import { Link } from "gatsby";
 import Parallax from "../../animations/Parallax.js";
+import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 
 const parallax = [100, 50, 150];
 
@@ -96,7 +97,15 @@ const Dataverse = ({ files }) => (
               <h4 className="ibc--content--synergy_title">{synergy.title}</h4>
               <div className="ibc--content--synergy_links">
                 {synergy.links?.map((link) => (
-                  <div className="ibc--content--synergy_link">{link.name}</div>
+                  <a
+                    className="ibc--content--synergy_link"
+                    href={link.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {link.name}
+                    <IconArrowtr className="arrow" />
+                  </a>
                 ))}
                 {synergy.internalLink && (
                   <Link

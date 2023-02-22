@@ -13,7 +13,7 @@ buildDataverse:
   title: Let's build the dataverse
   description: |
     <p>
-      OKP4 is a general-purpose Ecosystem that enables <a href='https://en.wikipedia.org/wiki/As_a_service'>XaaS</a> (Anything as a Service) integration. Anything that is <br>
+      OKP4 is a general-purpose Ecosystem that enables <a target='_blank' rel='noreferrer' href='https://en.wikipedia.org/wiki/As_a_service'>XaaS</a> (Anything as a Service) integration. Anything that is <br>
       presented to the Protocol as a Service, whatever it does, wherever it is hosted or deployed, whoever provides it, <br>
       can be used by the Protocol. Therein lies the integration power of the protocol, which brings infinite scalability <br>
       and extensibility to the distributed Dataverse.
@@ -22,7 +22,7 @@ web2Okp4:
   title: Connecting the web2 world with OKP4
   description: |
     <p>
-      All existing off-chain services are supported by the Protocol:  
+      All existing off-chain services are supported by the Protocol:
     </p>
   image: index_roadmap_3.jpg
   services:
@@ -41,34 +41,34 @@ ibc:
   title: Expanding the dataverse with on-chain synergies
   description: |
     <p>
-      Thanks to <a href='https://ibc.cosmos.network/'>IBC</a> (Inter Blockchain Communication), integrate any resources from other ecosystems and become the hub for on-chain enabled synergies, for examples:
+      Thanks to <a target='_blank' rel='noreferrer' href='https://ibc.cosmos.network/'>IBC</a> (Inter Blockchain Communication), integrate any resources from other ecosystems and become the hub for on-chain enabled synergies, for examples:
     </p>
   image: index_universe_blockchain.png
   synergies:
     - title: Datasets from
       links:
         - name: Ocean Protocol
-          link: https://oceanprotocol.com/
+          url: https://oceanprotocol.com/
         - name: Medibloc
-          link: https://medibloc.com/en/
+          url: https://medibloc.com/en/
         - name: Regen Network
-          link: https://www.regen.network/
+          url: https://www.regen.network/
     - title: Storage resources from
       links:
         - name: Filecoin
-          link: https://filecoin.io/
+          url: https://filecoin.io/
         - name: Arweave
-          link: https://www.arweave.org/
+          url: https://www.arweave.org/
         - name: Kyve
-          link: https://www.kyve.network/
+          url: https://www.kyve.network/
     - title: Computation from
       links:
         - name: Akash
-          link: https://akash.network/
+          url: https://akash.network/
         - name: Holo
-          link: https://holo.host/
+          url: https://holo.host/
         - name: Aleph.im
-          link: https://aleph.im/
+          url: https://aleph.im/
     - title: Data space governance from any existing token
       internalLink:
         name: Discover Data Space
