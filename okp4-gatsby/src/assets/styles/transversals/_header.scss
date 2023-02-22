@@ -282,6 +282,21 @@ header.header {
                 color: $white-80;
                 font-weight: 100;
                 font-size: 18px;
+
+                .header__submenu__external__link {
+                  display: flex;
+                  flex-wrap: nowrap;
+                  align-items: center;
+                  cursor: pointer;
+
+                  @include media-bp-down(lg) {
+                    justify-content: center;
+                  }
+
+                  a {
+                    margin-right: 10px;
+                  }
+                }
               }
 
               .separator {

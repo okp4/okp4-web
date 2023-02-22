@@ -5,6 +5,7 @@ import classNames from "classnames";
 import { useLocation } from "@reach/router";
 import { useBreakpoint } from "../hook/useBreakpoint";
 import { useOnEventOutside } from "../hook/useOnEventOutside";
+import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 
 const SubMenu = ({ subMenu }) => (
   <div className="header__submenu">
@@ -14,7 +15,16 @@ const SubMenu = ({ subMenu }) => (
           subMenu.map((submenuItem, index) => (
             <div key={index}>
               <div className="header__submenu__item">
-                <Link to={submenuItem.link}>{submenuItem.name}</Link>
+                {submenuItem.link ? (
+                  <Link to={submenuItem.link}>{submenuItem.name}</Link>
+                ) : (
+                  <div className="header__submenu__external__link">
+                    <a href={submenuItem.url} rel="noreferrer" target="_blank">
+                      {submenuItem.name}
+                    </a>
+                    <IconArrowtr className="arrow" />
+                  </div>
+                )}
               </div>
               {subMenu.length > 1 && <div className="separator" />}
             </div>
