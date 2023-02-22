@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useRef } from "react";
+import React, { useEffect, useCallback, useState, useRef } from "react";
 import { Link } from "gatsby";
 import menu from "/content/transversals/menu.yaml";
 import classNames from "classnames";
@@ -24,7 +24,7 @@ const SubMenu = ({ subMenu }) => (
   </div>
 );
 
-const Menu = () => {
+const Menu = ({ handleMenuItemClick }) => {
   const { isLarge } = useBreakpoint();
   const location = useLocation();
   const [selectedMenu, setSelectedMenu] = useState(null);
@@ -39,8 +39,8 @@ const Menu = () => {
   const handleMouseOver = useCallback(
     (menuItem) => {
       isLarge &&
-        menuItem.name !== selectedMenu &&
-        setSelectedMenu(menuItem.name);
+        menuItem.name !== selectedMenu?.name &&
+        setSelectedMenu(menuItem);
     },
     [isLarge, selectedMenu]
   );
@@ -48,11 +48,15 @@ const Menu = () => {
   const handleClick = useCallback(
     (menuItem) => {
       const { name } = menuItem;
-      const isMenuItemSelected = name === selectedMenu;
-      setSelectedMenu(isMenuItemSelected ? null : name);
+      const isMenuItemSelected = name === selectedMenu?.name;
+      setSelectedMenu(isMenuItemSelected ? null : menuItem);
     },
     [selectedMenu]
   );
+
+  useEffect(() => {
+    handleMenuItemClick(!!selectedMenu?.subMenuItems?.length);
+  }, [handleMenuItemClick, selectedMenu]);
 
   const isActiveMenu = useCallback(
     (menuItem) => location.pathname.startsWith(menuItem.prefixPath),
@@ -79,7 +83,7 @@ const Menu = () => {
           >
             {menuItem.name}
           </div>
-          {selectedMenu === menuItem.name && menuItem.subMenuItems && (
+          {selectedMenu?.name === menuItem.name && menuItem.subMenuItems && (
             <SubMenu subMenu={menuItem.subMenuItems} />
           )}
         </div>
