@@ -40,37 +40,40 @@ const Dataverse = ({ files }) => (
       </div>
     </div>
 
-    <div className="web2_okp4">
-      <div className="web2_okp4--wrapper">
-        <div className="web2_okp4--image">
-          <GatsbyImage
-            image={MediaManager.GetImage(content.web2Okp4.image, files)}
-            alt={content.web2Okp4.title}
-          />
-        </div>
-        <div className="web2_okp4--content_wrapper">
-          <h2>{content.web2Okp4.title}</h2>
-          <p
-            className="web2_okp4--description"
-            dangerouslySetInnerHTML={{
-              __html: content.web2Okp4.description,
-            }}
-          ></p>
-          <div className="web2_okp4--services">
-            {content.web2Okp4.services.map((service) => (
-              <div className="web2_okp4--service">
-                <h4 className="web2_okp4--subtitle">{service.title}</h4>
-                <p>{service.description}</p>
-              </div>
-            ))}
+    <div className="web2_okp4_wrapper">
+      <div className="web2_okp4">
+        <div className="web2_okp4--container">
+          <div className="web2_okp4--image">
+            <GatsbyImage
+              className="imgWrapper"
+              image={MediaManager.GetImage(content.web2Okp4.image, files)}
+              alt={content.web2Okp4.title}
+            />
           </div>
-          <div className="web2_okp4--discover_button">
-            <Link
-              to={content.web2Okp4.button.link}
-              className="dataverse_button web2_okp4--button"
-            >
-              <span>{content.web2Okp4.button.name}</span>
-            </Link>
+          <div className="web2_okp4--content_wrapper">
+            <h2>{content.web2Okp4.title}</h2>
+            <p
+              className="web2_okp4--description"
+              dangerouslySetInnerHTML={{
+                __html: content.web2Okp4.description,
+              }}
+            ></p>
+            <div className="web2_okp4--services">
+              {content.web2Okp4.services.map((service) => (
+                <div className="web2_okp4--service">
+                  <h4 className="web2_okp4--subtitle">{service.title}</h4>
+                  <p>{service.description}</p>
+                </div>
+              ))}
+            </div>
+            <div className="web2_okp4--discover_button">
+              <Link
+                to={content.web2Okp4.button.link}
+                className="dataverse_button"
+              >
+                <span>{content.web2Okp4.button.name}</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

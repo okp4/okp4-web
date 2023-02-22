@@ -124,36 +124,57 @@ main.dataverse {
     }
   }
 
+  .web2_okp4_wrapper {
+    max-width: 1860px;
+    margin: 0 auto;
+  }
+
   .web2_okp4 {
     margin: 170px 25px 0;
     background: $darkblue;
     border-radius: 40px;
     @include media-bp-down(lg) {
       margin: 20px 0 0;
+      padding-bottom: 32px;
+      border-radius: 20px;
       text-align: center;
     }
 
-    &--wrapper {
+    &--container {
       @include media-bp-up(lg) {
         display: grid;
-        grid-template-areas: "web2content image";
-        grid-template-columns: 1fr 1fr;
-        column-gap: 140px;
-        justify-content: space-around;
+        grid-template-areas: "web2content web2content web2content image image";
+        grid-template-columns: repeat(5, 1fr);
+        max-height: 941px;
       }
     }
 
     &--image {
-      grid-area: image;
+      @include media-bp-up(lg) {
+        grid-area: image;
+        justify-self: end;
+
+        .imgWrapper {
+          border-radius: 0 40px 40px 0;
+          height: 941px;
+        }
+      }
     }
 
     &--content_wrapper {
-      grid-area: web2content;
-      max-width: 610px;
-      margin: auto 0;
-      justify-self: end;
-      @include media-bp-down(lg) {
+      margin: 20px 20px 0;
+      @include media-bp-up(lg) {
         margin: 20px 32px 32px;
+        grid-area: web2content;
+        margin: auto 0;
+        justify-self: end;
+        padding-left: calc(((min(100vw, 1850px) - 1325px) / 2));
+      }
+    }
+
+    @include media-bp-up(lg) {
+      &--content_wrapper > * {
+        margin: 0 30px;
       }
     }
 
@@ -201,10 +222,11 @@ main.dataverse {
 
     &--discover_button {
       display: grid;
-    }
-
-    &--button {
       max-width: 227px;
+      @include media-bp-down(lg) {
+        margin: 0 auto;
+        max-width: unset;
+      }
     }
   }
 
@@ -260,6 +282,7 @@ main.dataverse {
         row-gap: 14px;
         @include media-bp-down(lg) {
           margin-top: 20px;
+          row-gap: 0;
         }
       }
 
