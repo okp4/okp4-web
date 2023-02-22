@@ -5,3 +5,33 @@ breadcrumbs:
   - name: Learn
   - name: Data Space
     link: /learn/dataspace
+dataSpaces:
+  build:
+    header: build data spaces
+    description: Define any rules. Share any Data & Services within it. Build powerful value-generating applications while keeping complete sovereignty over anything shared.
+  purposes:
+    header: data spaces purposes
+    descriptions:
+      - OKP4 enables anyone to create and join Data Spaces. A Data Space is a set of custom rules applied to datasets and services shared within it, to generate value out of them.
+      - "Rules can be applied to anything: business models, identity management, metadata requirements for shared data & services…"
+      - This way, a Data Space gives a predictable environment for the interaction of data and services (algorithms, computing resources, etc.) shared by the participants to build applications on top of them.
+  share:
+    header: share anything as a service
+    description: Datasets, algorithms, software, storage, computation, identity management services… Any digital resource can be shared through metadata within one or many Data Spaces defined in the OKP4 blockchain.
+governance:
+  header: build in trust and custom governance
+  cards:
+    - header: Easily define governance rules
+      description: OKP4 enables frictionless Data Space creation in a personalized, sovereign, secure and predictable environment. Anyone can easily leverage no-code interfaces and Data Space templates! All rules are customizable in every aspect.
+    - header: Define any kind of governance
+      description: A Data Space can have any governance mechanism to change its rules. It can mint its own governance token, leverage any existing token, be controlled by consortiums or even single entities.
+    - header: Build applications based on resources shared within Data Spaces
+      description: Once rules are defined and resources are pooled, participants can easily initiate workflows using the datasets and services of the Data Space. The outputs of these workflows can be used in any application.
+decentralizedProtocol:
+  header: based on a decentralized protocol
+  descriptions:
+    - OKP4 is a decentralized and open-source protocol based on a public blockchain.
+    - Data Spaces are defined within on-chain smart contracts, enabling the interaction of any off-chain resource.
+  button:
+    description: About OKP4
+    link: /learn/okp4
