@@ -8,9 +8,16 @@ items:
       - name: Roadmap
         link: /learn/roadmap
   - name: DEVELOP
+    subMenuItems:
+      - name: Docs
+        url: https://docs.okp4.network/
+      - name: Participate
+        url: https://github.com/okp4
   - name: EXPLORE
   - name: INTERACT
     prefixPath: /interact
     subMenuItems:
       - name: Community
         link: /interact/community
+      - name: Blog
+        url: https://blog.okp4.network/
