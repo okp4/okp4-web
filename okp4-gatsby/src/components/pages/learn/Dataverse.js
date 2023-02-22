@@ -64,7 +64,7 @@ const Dataverse = ({ files }) => (
               </div>
             ))}
           </div>
-          <div>
+          <div className="web2_okp4--discover_button">
             <Link
               to={content.web2Okp4.button.link}
               className="dataverse_button web2_okp4--button"

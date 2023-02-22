@@ -182,7 +182,7 @@ main.dataverse {
     }
 
     &--service {
-      margin-bottom: 60px;
+      margin-bottom: 40px;
       @include media-bp-down(lg) {
         margin-bottom: 24px;
       }
@@ -199,9 +199,12 @@ main.dataverse {
       }
     }
 
+    &--discover_button {
+      display: grid;
+    }
+
     &--button {
       max-width: 227px;
-      margin-top: 40px;
     }
   }
 
