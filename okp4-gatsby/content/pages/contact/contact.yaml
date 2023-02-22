@@ -9,15 +9,15 @@ addressPart:
   addressTitle: Address
   address: |
     OKP4<br />
-    1, passage de l'Europe<br /> 
+    1, passage de l'Europe<br />
     31400 Toulouse<br />
     France
 businessPart:
   businessTitle: Business
   email: hello@network.com
 contactFormTitle: Have a question?
-name: Name
+name: Name *
 country: Country
-email: Email address
-message: Message
+email: Email address *
+message: Message *
 send: Send the message
