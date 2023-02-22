@@ -207,14 +207,6 @@ const Footer = ({ files, withDocsAndPartners = false }) => {
               >
                 {contentFooter.legals.text}
               </Link>
-              <a
-                href="https://w2p-digital.com/"
-                className="footer__main__sitemap__item footer__main__sitemap__item--w2p"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Made by W2P Digital
-              </a>
             </div>
           </div>
         </div>
