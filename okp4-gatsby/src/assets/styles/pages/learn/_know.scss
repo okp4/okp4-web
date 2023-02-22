@@ -4,7 +4,158 @@
   min-height: calc(100vh - 505px);
   padding-top: 181px;
 
-  h1 {
+  p {
+    font-size: 22.1911px;
+    line-height: 180%;
+    letter-spacing: 0.05em;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .know__intro {
+    display: flex;
     margin-top: 170px;
+    align-items: flex-start;
+    column-gap: 180px;
+
+    .know__intro__text {
+      display: flex;
+      flex-direction: column;
+      max-width: 650px;
+
+      .know__intro__title {
+        font-size: 106.688px;
+        line-height: 80%;
+        margin-bottom: 35px;
+      }
+    }
+
+    .know__intro__image {
+      max-width: 420px;
+      max-height: 213px;
+      filter: drop-shadow(100px 200px 3px rgba(226, 246, 255, 0.12));
+    }
+  }
+
+  .know__middle__wrapper {
+    background-color: #006796;
+    margin: 311px 5px;
+    padding: 132px;
+    text-align: center;
+    border-radius: 20px;
+
+    .know__middle__about {
+      .know__about__whitecards {
+        margin: 141px 0;
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        justify-content: center;
+        align-items: center;
+        .whitecard {
+          display: flex;
+          padding: 10px 0 40px;
+          flex-direction: column;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          width: 400px;
+          height: 436px;
+          padding: 60px 53px;
+          border-radius: 20px;
+          background: url("/images/grain.png"),
+            linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%);
+          .whitecard__image__bottles {
+            max-height: 134px;
+            max-width: 193px;
+            margin-bottom: 19px;
+          }
+          .whitecard__image__wallet {
+            max-height: 115px;
+            max-width: 115px;
+            margin-bottom: 19px;
+          }
+          .whitecard__title {
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 132%;
+            color: $textblue;
+          }
+          .whitecard__text {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color: $textblue;
+          }
+        }
+      }
+    }
+
+    .know__middle__possibilities {
+      .know__possibilities__image {
+        max-width: 530px;
+        max-height: 530px;
+      }
+    }
+  }
+  .know__governance {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 40px;
+    align-items: flex-start;
+
+    .know__governance__text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .know__governance__image {
+      max-width: 423px;
+      max-height: 423px;
+      filter: drop-shadow(60px 40px 100px $white);
+    }
+  }
+
+  .know__more {
+    max-width: 741px;
+    text-align: center;
+    margin: 220px auto;
+
+    .know__more__description {
+      margin-bottom: 40px;
+    }
+    .know__more__button {
+      background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
+        #00b6b7;
+      border-radius: 10px;
+      padding: 18px 30px;
+      text-align: center;
+      margin: 40px;
+
+      .know__more__button__text {
+        font-size: 16px;
+        line-height: 19px;
+
+        svg {
+          margin-left: 8px;
+        }
+      }
+
+      &:hover {
+        background: url("/images/grain.png"),
+          linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+        color: $textblue;
+
+        svg {
+          transform: translate3d(3px, -3px, 0);
+          path {
+            stroke: #00b6b7;
+          }
+        }
+      }
+    }
   }
 }

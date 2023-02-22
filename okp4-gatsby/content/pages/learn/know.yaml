@@ -6,13 +6,14 @@ breadcrumbs:
   - name: KNOW
     link: /learn/know
 introPart:
-  title: The $KNOW a native token
+  title1: The $KNOW
+  title2: A native token
   description: The KNOW is a cryptocurrency. It is the native token of the OKP4 blockchain.
 aboutPart:
   title: About the $KNOW
   description: The KNOW token is not traded anywhere yet & OKP4 is not doing any public sale.
   whitecards:
-    - title: Free token
+    - title: Fee token
       text: Just like ETH for Ethereum and BTC for Bitcoin, you hold your KNOW in a wallet and spend it when you want to use OKP4.
     - title: Medium of exchange
       text: The KNOW token is the primary medium of exchange within the OKP4 ecosystem. It is needed if you want to access data and services provided by OKP4 and its network of participants.
@@ -25,7 +26,8 @@ governancePart:
   title: Governance
   description: Your staked tokens give you the right to vote on any on-chain governance proposal. This way you can affect many things, like blockchain parameters, revenue mechanisms, DAO treasury spending…
 morePart:
-  title: Many More
+  title: |
+    & Many More
   description: The KNOW token is also used for many other purposes, like staking on your services to give insurance for consumers, bet on datasets & services as a curator to give awareness and get a portion of the rewards, bring liquidity on DEXs to get rewards…
   button: More details
   url: https://docs.okp4.network/whitepaper/tokenomics

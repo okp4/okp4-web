@@ -12,7 +12,7 @@ export default function LearnKnow({ data }) {
       files={data}
       breadcrumbs={content.breadcrumbs}
       isStatic
-      withDocs={false}
+      withDocs={true}
       withPartners={false}
     >
       <Know />
