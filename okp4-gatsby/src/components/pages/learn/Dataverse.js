@@ -18,11 +18,12 @@ const Dataverse = ({ files }) => (
         <p className="okp4_universe--description">
           {content.okp4Universe.description}
         </p>
-        <GatsbyImage
-          className="okp4_universe--image"
-          image={MediaManager.GetImage(content.okp4Universe.image, files)}
-          alt={content.okp4Universe.title}
-        />
+        <div className="okp4_universe--image">
+          <GatsbyImage
+            image={MediaManager.GetImage(content.okp4Universe.image, files)}
+            alt={content.okp4Universe.title}
+          />
+        </div>
       </div>
     </div>
 
@@ -75,11 +76,12 @@ const Dataverse = ({ files }) => (
     </div>
 
     <div className="ibc">
-      <GatsbyImage
-        className="ibc--image"
-        image={MediaManager.GetImage(content.ibc.image, files)}
-        alt={content.ibc.title}
-      />
+      <div className="ibc--image">
+        <GatsbyImage
+          image={MediaManager.GetImage(content.ibc.image, files)}
+          alt={content.ibc.title}
+        />
+      </div>
       <div className="ibc--content">
         <h2 className="ibc--content--title">{content.ibc.title}</h2>
         <p

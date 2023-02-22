@@ -43,6 +43,16 @@ main.dataverse {
     }
   }
 
+  .image {
+    animation: floating-image 8s linear infinite;
+    width: 100%;
+    max-width: 400px;
+    @include media-bp-down(lg) {
+      max-width: 300px;
+      margin: auto;
+    }
+  }
+
   .okp4_universe {
     display: grid;
     grid-template-areas:
@@ -61,8 +71,11 @@ main.dataverse {
     &--title {
       grid-area: title;
       font-weight: 700;
-      // font-size: 106.688px; // TODO : check that
       text-transform: uppercase;
+      @include media-bp-up(lg) {
+        font-size: 106.688px;
+        max-width: 348px;
+      }
     }
 
     &--description {
@@ -83,6 +96,7 @@ main.dataverse {
 
     &--image {
       grid-area: image;
+      @extend .image;
     }
   }
 
@@ -136,7 +150,8 @@ main.dataverse {
     &--content_wrapper {
       grid-area: web2content;
       max-width: 610px;
-      margin: auto;
+      margin: auto 0;
+      justify-self: end;
       @include media-bp-down(lg) {
         margin: 20px 32px 32px;
       }
@@ -204,12 +219,19 @@ main.dataverse {
     }
 
     &--image {
-      max-width: 597px;
+      @extend .image;
+      margin: auto;
+      @include media-bp-down(lg) {
+        max-width: 256px;
+        margin: 60px auto;
+      }
     }
 
     &--content {
       max-width: 724px;
-      text-align: center;
+      @include media-bp-down(lg) {
+        text-align: center;
+      }
 
       &--title {
         @include media-bp-up(lg) {
