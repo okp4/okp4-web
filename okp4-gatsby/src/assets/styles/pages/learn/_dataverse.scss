@@ -99,23 +99,23 @@ main.dataverse {
     position: absolute;
     z-index: -1;
     width: 1344px;
+  }
 
-    &--build_dataverse {
-      transform: rotate(30deg);
-      left: -20%;
-      @include media-bp-down(lg) {
-        width: 526px;
-        bottom: -20%;
-        left: -40%;
-        transform: rotate(-125.79deg);
-      }
+  .background_light__build_dataverse {
+    transform: rotate(30deg);
+    left: -20%;
+    @include media-bp-down(lg) {
+      width: 526px;
+      bottom: -20%;
+      left: -40%;
+      transform: rotate(-125.79deg);
     }
+  }
 
-    &--ibc {
-      top: 0;
-      left: -200%;
-      transform: rotate(-30deg);
-    }
+  .background_light__ibc {
+    top: 0;
+    left: -200%;
+    transform: rotate(-30deg);
   }
 
   .okp4_universe {
@@ -133,7 +133,7 @@ main.dataverse {
       text-align: center;
     }
 
-    &--title {
+    .okp4_universe__title {
       grid-area: title;
       font-weight: 700;
       text-transform: uppercase;
@@ -143,7 +143,7 @@ main.dataverse {
       }
     }
 
-    &--description {
+    .okp4_universe__description {
       grid-area: description;
       line-height: 150%;
       font-size: 18px;
@@ -159,7 +159,7 @@ main.dataverse {
       }
     }
 
-    &--image_wrapper {
+    .okp4_universe__image_wrapper {
       grid-area: image;
       margin: auto;
       position: relative;
@@ -174,7 +174,7 @@ main.dataverse {
       margin-top: 60px;
     }
 
-    &--description {
+    .build_dataverse__description {
       margin: 40px auto 0;
       font-weight: 400;
       font-size: 20px;
@@ -210,7 +210,7 @@ main.dataverse {
       text-align: center;
     }
 
-    &--container {
+    .web2_okp4__container {
       @include media-bp-up(lg) {
         display: grid;
         grid-template-areas: "web2content web2content web2content image image";
@@ -220,7 +220,7 @@ main.dataverse {
       }
     }
 
-    &--image {
+    .web2_okp4__image {
       @include media-bp-up(lg) {
         grid-area: image;
         justify-self: end;
@@ -232,7 +232,7 @@ main.dataverse {
       }
     }
 
-    &--content_wrapper {
+    .web2_okp4__content_wrapper {
       margin: 32px auto 0;
       padding: 0 20px;
       max-width: 720px;
@@ -246,13 +246,13 @@ main.dataverse {
     }
 
     @include media-bp-up(lg) {
-      &--content_wrapper > * {
+      .web2_okp4__content_wrapper > * {
         margin: 0 30px;
         max-width: 610px;
       }
     }
 
-    &--description {
+    .web2_okp4__description {
       margin-top: 40px;
       @include media-bp-down(lg) {
         margin-top: 24px;
@@ -264,7 +264,7 @@ main.dataverse {
       }
     }
 
-    &--services {
+    .web2_okp4__services {
       margin-top: 34px;
       @include media-bp-down(lg) {
         margin-top: 24px;
@@ -276,7 +276,7 @@ main.dataverse {
       }
     }
 
-    &--service {
+    .web2_okp4__service {
       margin-bottom: 40px;
       @include media-bp-down(up) {
         p {
@@ -288,7 +288,7 @@ main.dataverse {
       }
     }
 
-    &--subtitle {
+    .web2_okp4__subtitle {
       font-weight: 400;
       font-size: 16px;
       line-height: 100%;
@@ -299,7 +299,7 @@ main.dataverse {
       }
     }
 
-    &--discover_button {
+    .web2_okp4__discover_button {
       position: relative;
       z-index: 1;
       display: grid;
@@ -324,7 +324,7 @@ main.dataverse {
       margin: 48px 15px 0;
     }
 
-    &--image {
+    .ibc__image {
       @extend .dataverse_image;
       margin: auto;
       @include media-bp-down(lg) {
@@ -334,20 +334,20 @@ main.dataverse {
       }
     }
 
-    &--content {
+    .ibc__content {
       max-width: 720px;
       @include media-bp-down(lg) {
         text-align: center;
         margin: 0 auto;
       }
 
-      &--title {
+      .ibc__content__title {
         @include media-bp-up(lg) {
           text-align: left;
         }
       }
 
-      &--description {
+      .ibc__content__description {
         margin: 40px 0 24px;
         font-weight: 400;
         font-size: 20px;
@@ -360,7 +360,7 @@ main.dataverse {
         }
       }
 
-      &--synergies {
+      .ibc__content__synergies {
         display: grid;
         row-gap: 14px;
         @include media-bp-down(lg) {
@@ -369,14 +369,14 @@ main.dataverse {
         }
       }
 
-      &--synergy_title {
+      .ibc__content__synergy_title {
         font-weight: 400;
         font-size: 16px;
         line-height: 150%;
         text-transform: uppercase;
       }
 
-      &--synergy_links {
+      .ibc__content__synergy_links {
         margin: 20px 0;
         display: flex;
         column-gap: 20px;
@@ -388,7 +388,7 @@ main.dataverse {
         }
       }
 
-      &--synergy_link {
+      .ibc__content__synergy_link {
         transition: background 0.25s ease;
         background: url("/images/grain.png"),
           linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
@@ -452,7 +452,7 @@ main.dataverse {
         }
       }
 
-      &--synergy_internal_link {
+      .ibc__content__synergy_internal_link {
         max-width: 204px;
         @include media-bp-down(lg) {
           max-width: unset;
@@ -473,12 +473,12 @@ main.dataverse {
       }
     }
 
-    &--title {
+    .architecture__title {
       margin: auto;
       max-width: 795px;
     }
 
-    &--description {
+    .architecture__description {
       margin: 40px auto;
       max-width: 957px;
       font-weight: 400;
@@ -489,7 +489,7 @@ main.dataverse {
       }
     }
 
-    &--cards {
+    .architecture__cards {
       margin-top: 85px;
       display: grid;
       grid-column-gap: 32px;
@@ -503,7 +503,7 @@ main.dataverse {
       }
     }
 
-    &--card {
+    .architecture__card {
       display: flex;
       flex-direction: column;
       place-items: center;
@@ -524,7 +524,7 @@ main.dataverse {
         max-height: 400px;
       }
 
-      &--image {
+      .architecture__card__image {
         display: flex;
         flex: 1;
         align-items: center;
@@ -534,24 +534,24 @@ main.dataverse {
         max-height: 194px;
       }
       &:nth-of-type(2) {
-        .architecture--card--image {
+        .architecture__card__image {
           animation-delay: 1.5s;
           animation-direction: reverse;
         }
       }
       &:nth-of-type(3) {
-        .architecture--card--image {
+        .architecture__card__image {
           animation-delay: 2s;
         }
       }
 
-      &--title {
+      .architecture__card__title {
         margin: 20px auto;
         font-weight: 600;
         font-size: 25px;
       }
 
-      &--description {
+      .architecture__card__description {
         margin: 0 auto;
         text-align: center;
         font-weight: 400;

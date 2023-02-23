@@ -18,11 +18,11 @@ const Dataverse = ({ files }) => {
 
       <div className="wrapper">
         <div className="okp4_universe">
-          <h1 className="okp4_universe--title">{content.okp4Universe.title}</h1>
-          <p className="okp4_universe--description">
+          <h1 className="okp4_universe__title">{content.okp4Universe.title}</h1>
+          <p className="okp4_universe__description">
             {content.okp4Universe.description}
           </p>
-          <div className="okp4_universe--image_wrapper">
+          <div className="okp4_universe__image_wrapper">
             <div className="background_halo" />
             <GatsbyImage
               className="dataverse_image"
@@ -35,7 +35,7 @@ const Dataverse = ({ files }) => {
 
       <div className="wrapper">
         <StaticImage
-          className="background_light background_light--build_dataverse"
+          className="background_light background_light__build_dataverse"
           src="../../../assets/images/illus/background_img_northern_light.png"
           alt="build dataverse"
           loading="eager"
@@ -43,7 +43,7 @@ const Dataverse = ({ files }) => {
         <div className="build_dataverse">
           <h2>{content.buildDataverse.title}</h2>
           <p
-            className="build_dataverse--description"
+            className="build_dataverse__description"
             dangerouslySetInnerHTML={{
               __html: content.buildDataverse.description,
             }}
@@ -53,33 +53,33 @@ const Dataverse = ({ files }) => {
 
       <div className="web2_okp4_wrapper">
         <div className="web2_okp4">
-          <div className="web2_okp4--container">
+          <div className="web2_okp4__container">
             <div className="background_small_ellipse_halo" />
             <div className="background_large_ellipse_halo" />
-            <div className="web2_okp4--image">
+            <div className="web2_okp4__image">
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.web2Okp4.image, files)}
                 alt={content.web2Okp4.title}
               />
             </div>
-            <div className="web2_okp4--content_wrapper">
+            <div className="web2_okp4__content_wrapper">
               <h2>{content.web2Okp4.title}</h2>
               <p
-                className="web2_okp4--description"
+                className="web2_okp4__description"
                 dangerouslySetInnerHTML={{
                   __html: content.web2Okp4.description,
                 }}
               ></p>
-              <div className="web2_okp4--services">
+              <div className="web2_okp4__services">
                 {content.web2Okp4.services.map((service, index) => (
-                  <div key={index} className="web2_okp4--service">
-                    <h4 className="web2_okp4--subtitle">{service.title}</h4>
+                  <div key={index} className="web2_okp4__service">
+                    <h4 className="web2_okp4__subtitle">{service.title}</h4>
                     <p>{service.description}</p>
                   </div>
                 ))}
               </div>
-              <div className="web2_okp4--discover_button">
+              <div className="web2_okp4__discover_button">
                 <Link
                   to={content.web2Okp4.button.link}
                   className="dataverse_button"
@@ -93,10 +93,10 @@ const Dataverse = ({ files }) => {
       </div>
 
       <div className="ibc">
-        <div className="ibc--image">
+        <div className="ibc__image">
           {isLarge ? (
             <StaticImage
-              className="background_light background_light--ibc"
+              className="background_light background_light__ibc"
               src="../../../assets/images/illus/background_img_northern_light.png"
               alt="build dataverse"
               loading="eager"
@@ -110,23 +110,23 @@ const Dataverse = ({ files }) => {
             alt={content.ibc.title}
           />
         </div>
-        <div className="ibc--content">
-          <h2 className="ibc--content--title">{content.ibc.title}</h2>
+        <div className="ibc__content">
+          <h2 className="ibc__content__title">{content.ibc.title}</h2>
           <p
-            className="ibc--content--description"
+            className="ibc__content__description"
             dangerouslySetInnerHTML={{
               __html: content.ibc.description,
             }}
           />
-          <div className="ibc--content--synergies">
+          <div className="ibc__content__synergies">
             {content.ibc.synergies.map((synergy) => (
               <div key={synergy.title}>
-                <h4 className="ibc--content--synergy_title">{synergy.title}</h4>
-                <div className="ibc--content--synergy_links">
+                <h4 className="ibc__content__synergy_title">{synergy.title}</h4>
+                <div className="ibc__content__synergy_links">
                   {synergy.links?.map((link) => (
                     <a
                       key={link.name}
-                      className="ibc--content--synergy_link"
+                      className="ibc__content__synergy_link"
                       href={link.url}
                       target="_blank"
                       rel="noreferrer"
@@ -138,7 +138,7 @@ const Dataverse = ({ files }) => {
                   {synergy.internalLink && (
                     <Link
                       to={synergy.internalLink.link}
-                      className="dataverse_button ibc--content--synergy_internal_link"
+                      className="dataverse_button ibc__content__synergy_internal_link"
                     >
                       <span>{synergy.internalLink.name}</span>
                     </Link>
@@ -152,31 +152,31 @@ const Dataverse = ({ files }) => {
 
       <div className="wrapper">
         <div className="architecture">
-          <h2 className="architecture--title">{content.architecture.title}</h2>
+          <h2 className="architecture__title">{content.architecture.title}</h2>
           <p
-            className="architecture--description"
+            className="architecture__description"
             dangerouslySetInnerHTML={{
               __html: content.architecture.description,
             }}
           ></p>
 
-          <div className="architecture--cards">
+          <div className="architecture__cards">
             {content.architecture.cards.map((card, index) => (
               <Parallax
                 key={index}
-                classContainer="architecture--card"
+                classContainer="architecture__card"
                 parallaxStart={parallax[index]}
                 parallaxEnd={-parallax[index]}
                 parallaxMiddle="0.5"
               >
-                <div className="architecture--card--image" data-infinite="1">
+                <div className="architecture__card__image" data-infinite="1">
                   <GatsbyImage
                     image={MediaManager.GetImage(card.image, files)}
                     alt={card.title}
                   />
                 </div>
-                <p className="architecture--card--title">{card.title}</p>
-                <p className="architecture--card--description">
+                <p className="architecture__card__title">{card.title}</p>
+                <p className="architecture__card__description">
                   {card.description}
                 </p>
               </Parallax>
