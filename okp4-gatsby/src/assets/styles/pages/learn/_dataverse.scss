@@ -48,7 +48,6 @@ main.dataverse {
     width: 100%;
     max-width: 400px;
     @include media-bp-down(lg) {
-      max-width: 300px;
       margin: auto;
     }
   }
@@ -100,7 +99,6 @@ main.dataverse {
     position: absolute;
     z-index: -1;
     width: 1344px;
-    opacity: 0.4;
 
     &--build_dataverse {
       transform: rotate(30deg);
@@ -114,7 +112,6 @@ main.dataverse {
     }
 
     &--ibc {
-      opacity: 0.6;
       top: 0;
       left: -200%;
       transform: rotate(-30deg);
@@ -170,7 +167,7 @@ main.dataverse {
   }
 
   .build_dataverse {
-    margin-top: 160px;
+    margin-top: 175px;
     text-align: center;
 
     @include media-bp-down(lg) {
@@ -194,12 +191,15 @@ main.dataverse {
   }
 
   .web2_okp4_wrapper {
-    max-width: 1860px;
-    margin: 0 auto;
+    margin: 0 25px;
+    @include media-bp-down(lg) {
+      margin: 0;
+    }
   }
 
   .web2_okp4 {
-    margin: 170px 25px 0; // TODO : check that
+    max-width: 1860px;
+    margin: 170px auto 0;
     background: $darkblue;
     overflow: hidden;
     border-radius: 40px;
@@ -235,7 +235,7 @@ main.dataverse {
     &--content_wrapper {
       margin: 32px auto 0;
       padding: 0 20px;
-      max-width: 724px;
+      max-width: 720px;
       @include media-bp-up(lg) {
         margin: 20px 32px 32px;
         grid-area: web2content;
@@ -278,6 +278,11 @@ main.dataverse {
 
     &--service {
       margin-bottom: 40px;
+      @include media-bp-down(up) {
+        p {
+          margin-top: 7px;
+        }
+      }
       @include media-bp-down(lg) {
         margin-bottom: 24px;
       }
@@ -328,7 +333,7 @@ main.dataverse {
     }
 
     &--content {
-      max-width: 724px;
+      max-width: 720px;
       @include media-bp-down(lg) {
         text-align: center;
         margin: 0 auto;
@@ -455,7 +460,7 @@ main.dataverse {
     }
 
     &--cards {
-      margin-top: 70px;
+      margin-top: 85px;
       display: grid;
       grid-column-gap: 32px;
       grid-template-columns: repeat(3, 1fr);

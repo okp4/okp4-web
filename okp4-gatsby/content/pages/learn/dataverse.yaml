@@ -13,10 +13,7 @@ buildDataverse:
   title: Let's build the dataverse
   description: |
     <p>
-      OKP4 is a general-purpose Ecosystem that enables <a target='_blank' rel='noreferrer' href='https://en.wikipedia.org/wiki/As_a_service'>XaaS</a> (Anything as a Service) integration. Anything that is <br>
-      presented to the Protocol as a Service, whatever it does, wherever it is hosted or deployed, whoever provides it, <br>
-      can be used by the Protocol. Therein lies the integration power of the protocol, which brings infinite scalability <br>
-      and extensibility to the distributed Dataverse.
+      OKP4 is a general-purpose Ecosystem that enables <a target='_blank' rel='noreferrer' href='https://en.wikipedia.org/wiki/As_a_service'>XaaS</a> (Anything as a Service) integration. Anything that is presented to the Protocol as a Service, whatever it does, wherever it is hosted or deployed, whoever provides it, can be used by the Protocol. Therein lies the integration power of the protocol, which brings infinite scalability and extensibility to the distributed Dataverse.
     </p>
 web2Okp4:
   title: Connecting the web2 world with OKP4
