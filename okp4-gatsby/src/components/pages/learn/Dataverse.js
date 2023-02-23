@@ -8,10 +8,10 @@ import Parallax from "../../animations/Parallax.js";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import { useBreakpoint } from "../../../hook/useBreakpoint";
 
-const parallax = [100, 50, 150];
-
 const Dataverse = ({ files }) => {
   const { isLarge } = useBreakpoint();
+  const parallax = React.useMemo(() => [100, 50, 150], []);
+
   return (
     <div>
       <Halo />
