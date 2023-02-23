@@ -7,6 +7,9 @@ whitecard1:
   title: Easy to build
   description: Data Spaces and Applications
   image: index_intro_card_1.png
+  button:
+    label: Learn about Data Spaces
+    link: /learn/dataspace
 whitecard2:
   title: Built in Trust
   description: and custom governance

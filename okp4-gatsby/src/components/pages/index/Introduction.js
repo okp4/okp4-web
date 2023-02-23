@@ -5,6 +5,7 @@ import Halo from "../../animations/Halo.js";
 import Strate from "../../animations/Strate.js";
 import Parallax from "../../animations/Parallax.js";
 import content from "/content/pages/index/introduction.yaml";
+import { Link } from "gatsby";
 
 const Introduction = ({ files }) => {
   return (
@@ -38,6 +39,11 @@ const Introduction = ({ files }) => {
             </div>
             <p className="title">{content.whitecard1.title}</p>
             <p className="text">{content.whitecard1.description}</p>
+            <Link to={content.whitecard1.button.link} className="cta__button">
+              <span className="cta__button__text">
+                {content.whitecard1.button.label}
+              </span>
+            </Link>
           </Parallax>
           <Parallax
             classContainer="introduction__cards__item"

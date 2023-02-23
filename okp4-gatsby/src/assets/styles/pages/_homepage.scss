@@ -313,7 +313,8 @@ main.homepage {
 
         @include media-bp-down(lg) {
           grid-column: span 2;
-          height: 330px;
+          max-height: 420px;
+          padding: 10px 31px 21px;
         }
 
         @include media-bp-down(md) {
@@ -374,6 +375,33 @@ main.homepage {
 
         .title {
           margin-bottom: 10px;
+        }
+
+        .cta__button {
+          margin-top: 16px;
+          @include media-bp-down(lg) {
+            width: 100%;
+          }
+          background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
+            #00b6b7;
+          border-radius: 10px;
+          padding: 18px 30px;
+          text-align: center;
+
+          .cta__button__text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+          }
+          &:hover {
+            background: url("/images/grain.png"),
+              linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+            color: $textblue;
+          }
+
+          @media (max-width: 600px) {
+            display: block;
+          }
         }
 
         &:nth-of-type(2) {
