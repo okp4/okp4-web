@@ -265,6 +265,7 @@ header.header {
             height: fit-content;
             padding: 20px 0;
             background: transparent;
+            white-space: nowrap;
 
             @include media-bp-down(lg) {
               position: relative;
