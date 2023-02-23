@@ -14,18 +14,29 @@ const Know = () => (
         <div className="know__intro__text">
           <h1 className="know__intro__title">{contentKnow.introPart.title1}</h1>
           <h1 className="know__intro__title">{contentKnow.introPart.title2}</h1>
-          <p>{contentKnow.introPart.description}</p>
+          <p className="know__intro__description">
+            {contentKnow.introPart.description}
+          </p>
         </div>
-        <StaticImage
-          src="../../../../content/images/learn-know-token.png"
-          alt="Know token"
-          className="know__intro__image"
-        />
+        <div className="know__intro__img__wrapper">
+          <StaticImage
+            src="../../../../content/images/learn-know-token.png"
+            alt="Know token"
+            className="know__intro__image"
+          />
+          <StaticImage
+            src="../../../../content/images/learn-know-shadow.png"
+            alt="Know token"
+            className="know__intro__image__shadow"
+          />
+          <div className="know__intro__image__background__halo" />
+        </div>
       </div>
       <div className="know__middle__wrapper">
         <div className="know__middle__about">
           <h2>{contentKnow.aboutPart.title}</h2>
           <p>{contentKnow.aboutPart.description}</p>
+          <div className="know__middle__background__halo" />
           <div className="know__about__whitecards">
             <Parallax
               parallaxStart="100"
@@ -56,21 +67,29 @@ const Know = () => (
                 <p className="whitecard__title">
                   {contentKnow.aboutPart.whitecards[1].title}
                 </p>
-                <p className="whitecard__text">
-                  {contentKnow.aboutPart.whitecards[1].text}
-                </p>
+                <div
+                  className="whitecard__text"
+                  dangerouslySetInnerHTML={{
+                    __html: contentKnow.aboutPart.whitecards[1].text,
+                  }}
+                />
               </div>
             </Parallax>
           </div>
         </div>
         <div className="know__middle__possibilities">
           <h2>{contentKnow.possibilitiesPart.title}</h2>
-          <p>{contentKnow.possibilitiesPart.description}</p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: contentKnow.possibilitiesPart.description,
+            }}
+          />
           <StaticImage
             src="../../../../content/images/learn-know-silver-coins.png"
             alt="Silver coins"
             className="know__possibilities__image"
           />
+          <div className="know__middle__background__ellipse" />
         </div>
       </div>
       <div className="know__governance">
@@ -83,6 +102,7 @@ const Know = () => (
           alt="Blockchain"
           className="know__governance__image"
         />
+        <div className="know__governance__halo" />
       </div>
       <div className="know__more">
         <h2>{contentKnow.morePart.title}</h2>
