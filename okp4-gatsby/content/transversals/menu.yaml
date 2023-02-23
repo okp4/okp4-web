@@ -22,6 +22,10 @@ items:
       - name: Participate
         url: https://github.com/okp4
   - name: EXPLORE
+    prefixPath: /explore
+    subMenuItems:
+      - name: Portal
+        link: /explore/portal
   - name: INTERACT
     prefixPath: /interact
     subMenuItems:

@@ -1,0 +1,7 @@
+# Content used for the Portal page
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Explore
+  - name: Portal
+    link: /explore/portal
