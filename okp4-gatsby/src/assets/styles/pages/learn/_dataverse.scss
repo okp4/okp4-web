@@ -389,7 +389,11 @@ main.dataverse {
       }
 
       &--synergy_link {
-        background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%);
+        transition: background 0.25s ease;
+        background: url("/images/grain.png"),
+          linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+        background-repeat: repeat;
+        background-size: contain;
         border-radius: 20px;
         padding: 10px 30px;
         font-weight: 400;
@@ -399,12 +403,31 @@ main.dataverse {
         text-decoration: none;
         opacity: 0.8;
         position: relative;
+
         @include media-bp-up(lg) {
           padding: 10px 25px 10px 30px;
           display: flex;
           white-space: nowrap;
           align-items: center;
           position: unset;
+        }
+
+        &:hover {
+          background: url("/images/grain.png"),
+            linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
+
+          p {
+            color: $white;
+          }
+
+          svg {
+            transition: transform 0.25s ease;
+            transform: translate3d(5px, -5px, 0);
+
+            path {
+              stroke: $white;
+            }
+          }
         }
 
         .arrow {
@@ -418,8 +441,13 @@ main.dataverse {
             position: unset;
             margin: 6px 0 6px 14px;
           }
+
+          svg {
+            transition: transform 0.25s ease;
+          }
           path {
-            stroke: $darkblue;
+            transition: stroke 0.25s ease;
+            stroke: #00b6b7;
           }
         }
       }
