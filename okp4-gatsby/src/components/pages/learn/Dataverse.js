@@ -72,8 +72,8 @@ const Dataverse = ({ files }) => {
                 }}
               ></p>
               <div className="web2_okp4--services">
-                {content.web2Okp4.services.map((service) => (
-                  <div className="web2_okp4--service">
+                {content.web2Okp4.services.map((service, index) => (
+                  <div key={index} className="web2_okp4--service">
                     <h4 className="web2_okp4--subtitle">{service.title}</h4>
                     <p>{service.description}</p>
                   </div>
@@ -120,11 +120,12 @@ const Dataverse = ({ files }) => {
           />
           <div className="ibc--content--synergies">
             {content.ibc.synergies.map((synergy) => (
-              <div>
+              <div key={synergy.title}>
                 <h4 className="ibc--content--synergy_title">{synergy.title}</h4>
                 <div className="ibc--content--synergy_links">
                   {synergy.links?.map((link) => (
                     <a
+                      key={link.name}
                       className="ibc--content--synergy_link"
                       href={link.url}
                       target="_blank"
@@ -162,6 +163,7 @@ const Dataverse = ({ files }) => {
           <div className="architecture--cards">
             {content.architecture.cards.map((card, index) => (
               <Parallax
+                key={index}
                 classContainer="architecture--card"
                 parallaxStart={parallax[index]}
                 parallaxEnd={-parallax[index]}
@@ -170,7 +172,7 @@ const Dataverse = ({ files }) => {
                 <div className="architecture--card--image" data-infinite="1">
                   <GatsbyImage
                     image={MediaManager.GetImage(card.image, files)}
-                    alt={card.name}
+                    alt={card.title}
                   />
                 </div>
                 <p className="architecture--card--title">{card.title}</p>
