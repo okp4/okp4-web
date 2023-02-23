@@ -300,6 +300,8 @@ main.dataverse {
     }
 
     &--discover_button {
+      position: relative;
+      z-index: 1;
       display: grid;
       max-width: 227px;
       @include media-bp-down(lg) {
