@@ -43,13 +43,81 @@ main.dataverse {
     }
   }
 
-  .image {
+  .dataverse_image {
     animation: floating-image 8s linear infinite;
     width: 100%;
     max-width: 400px;
     @include media-bp-down(lg) {
       max-width: 300px;
       margin: auto;
+    }
+  }
+
+  .background_halo {
+    position: absolute;
+    width: 140%;
+    height: 140%;
+    top: -20%;
+    left: -20%;
+    z-index: -1;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0.4;
+  }
+
+  .background_large_ellipse_halo {
+    position: absolute;
+    width: 2253px;
+    height: 1117.94px;
+    top: 50%;
+    right: 0;
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 216, 119, 0.15) 0%,
+      rgba(217, 217, 217, 0) 100%
+    );
+  }
+
+  .background_small_ellipse_halo {
+    position: absolute;
+    width: 1293px;
+    height: 641.83px;
+    bottom: 0;
+    left: 50%;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(153, 191, 248, 0.2) 0%,
+      rgba(217, 217, 217, 0) 100%
+    );
+  }
+
+  .background_light {
+    position: absolute;
+    z-index: -1;
+    width: 1344px;
+    opacity: 0.4;
+
+    &--build_dataverse {
+      transform: rotate(30deg);
+      left: -20%;
+      @include media-bp-down(lg) {
+        width: 526px;
+        bottom: -20%;
+        left: -40%;
+        transform: rotate(-125.79deg);
+      }
+    }
+
+    &--ibc {
+      opacity: 0.6;
+      top: 0;
+      left: -200%;
+      transform: rotate(-30deg);
     }
   }
 
@@ -94,9 +162,10 @@ main.dataverse {
       }
     }
 
-    &--image {
+    &--image_wrapper {
       grid-area: image;
-      @extend .image;
+      margin: auto;
+      position: relative;
     }
   }
 
@@ -130,8 +199,9 @@ main.dataverse {
   }
 
   .web2_okp4 {
-    margin: 170px 25px 0;
+    margin: 170px 25px 0; // TODO : check that
     background: $darkblue;
+    overflow: hidden;
     border-radius: 40px;
     @include media-bp-down(lg) {
       margin: 60px 0 0;
@@ -146,6 +216,7 @@ main.dataverse {
         grid-template-areas: "web2content web2content web2content image image";
         grid-template-columns: repeat(5, 1fr);
         max-height: 941px;
+        position: relative;
       }
     }
 
@@ -247,7 +318,7 @@ main.dataverse {
     }
 
     &--image {
-      @extend .image;
+      @extend .dataverse_image;
       margin: auto;
       @include media-bp-down(lg) {
         max-width: 256px;
