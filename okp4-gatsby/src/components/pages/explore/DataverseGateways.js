@@ -57,189 +57,20 @@ const cardStyles = [
   },
 ];
 
-const Keyword = ({ keywords, mainIndex, distance }) => (
-  <div className={`keyword`}>
-    {keywords[(keywords.length + mainIndex + distance) % keywords.length]}
-  </div>
-);
-
 const DataverseGateways = ({ files }) => {
-  const [scrollState, setScrollState] = useState("scrollWords");
   const ref = useRef(null);
-  const firstPageRef = useRef(null);
-  const keywordsContainerRef = useRef(null);
-  const [mainKeywordIndex, setMainKeywordIndex] = useState(3);
-  const keywords = [
-    ...content.featured.keywords.slice(-3),
-    ...content.featured.keywords,
-    ...content.featured.keywords.slice(0, 3),
-  ];
-  const [keywordRefs, setKeywordRefs] = useState([]);
   const landscapeRef = useRef(null);
+  const firstPageRef = useRef(null);
   const protocolRef = useRef(null);
-  const [cardRefs, setCardRefs] = useState([]);
-  const [activeCardIndex, setActiveCardIndex] = useState(-1);
+  const keywordsContainerRef = useRef(null);
   const { isLarge } = useBreakpoint();
+  const cardRefs = useRef([]);
 
-  useEffect(
-    () =>
-      setKeywordRefs(
-        Array(keywords.length)
-          .fill()
-          .map((_) => createRef())
-      ),
-    [keywords.length]
-  );
+  const mainKeywordIndex = 0;
+
+  const keywords = useMemo(() => content.featured.keywords, []);
 
   const cardsLength = useMemo(() => content.protocol.cards.length, []);
-
-  useEffect(() => {
-    keywordRefs[mainKeywordIndex]?.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
-  }, [keywordRefs, mainKeywordIndex]);
-
-  useEffect(
-    () =>
-      setCardRefs(
-        Array(cardsLength)
-          .fill()
-          .map((_) => createRef())
-      ),
-    [cardsLength]
-  );
-
-  const handleScrollKeywords = useCallback(
-    (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-
-      const scrollHorizontally = () => {
-        keywordsContainerRef.current?.scrollBy({
-          left: event.deltaY,
-          behavior: "smooth",
-        });
-      };
-
-      const scrollPage = (delta = event.deltaY) => {
-        window.scrollTo({
-          top: window.scrollY + delta,
-          behavior: "smooth",
-        });
-      };
-
-      if (event.deltaY < 0 && mainKeywordIndex > 3) {
-        setMainKeywordIndex(mainKeywordIndex - 1);
-        scrollHorizontally();
-      } else if (event.deltaY > 0 && mainKeywordIndex < keywords.length - 4) {
-        setMainKeywordIndex(mainKeywordIndex + 1);
-        scrollHorizontally();
-      }
-
-      if (event.deltaY > 0 && mainKeywordIndex >= keywords.length - 4) {
-        setScrollState("scrollPage");
-        scrollPage();
-      }
-
-      if (scrollState === "scrollPage") {
-        scrollPage();
-      }
-    },
-    [
-      keywords,
-      mainKeywordIndex,
-      setMainKeywordIndex,
-      scrollState,
-      setScrollState,
-    ]
-  );
-
-  const handleScrollCards = useCallback(
-    (e) => {
-      e.preventDefault();
-
-      const isScrollDown = e.deltaY > 0;
-      const isScrollUp = e.deltaY < 0;
-      const firstCard = cardRefs[0].current;
-      const lastCard = cardRefs[cardsLength - 1].current;
-
-      if (isScrollDown) {
-        if (activeCardIndex <= -1) {
-          firstCard.classList.add("current");
-          setActiveCardIndex(0);
-        } else if (activeCardIndex >= cardsLength) {
-          lastCard.classList.remove("current");
-          setScrollState("scrollPage");
-        } else {
-          cardRefs[activeCardIndex]?.current.classList.remove("current");
-          cardRefs[activeCardIndex + 1]?.current.classList.add("current");
-          setActiveCardIndex(activeCardIndex + 1);
-        }
-      } else if (isScrollUp) {
-        if (activeCardIndex >= cardsLength) {
-          lastCard.classList.add("current");
-          setActiveCardIndex(cardsLength - 1);
-        } else if (activeCardIndex <= -1) {
-          firstCard.classList.remove("current");
-          setScrollState("scrollPage");
-        } else {
-          cardRefs[activeCardIndex]?.current.classList.remove("current");
-          cardRefs[activeCardIndex - 1]?.current.classList.add("current");
-          setActiveCardIndex(activeCardIndex - 1);
-        }
-      }
-    },
-    [cardRefs, activeCardIndex, setActiveCardIndex]
-  );
-
-  useEffect(() => {
-    switch (scrollState) {
-      case "scrollPage":
-        ref?.current?.removeEventListener("wheel", handleScrollKeywords);
-        ref?.current?.removeEventListener("wheel", handleScrollCards);
-        ScrollManager.enableScroll();
-        break;
-      case "scrollWords":
-        if (ref && ref.current) {
-          ref.current.addEventListener("wheel", handleScrollKeywords);
-          ScrollManager.disableScroll();
-        }
-        break;
-      case "scrollCards":
-        if (ref && ref.current) {
-          ref.current.addEventListener("wheel", handleScrollCards);
-        }
-        break;
-      default:
-        ref?.current?.removeEventListener("wheel", handleScrollKeywords);
-        ref?.current?.removeEventListener("wheel", handleScrollCards);
-        break;
-    }
-    return () => {
-      ref?.current?.removeEventListener("wheel", handleScrollKeywords);
-      ref?.current?.removeEventListener("wheel", handleScrollCards);
-      ScrollManager.enableScroll();
-    };
-  }, [scrollState, ref, handleScrollKeywords, handleScrollCards]);
-
-  const handleScroll = () => {
-    const firstPageRect = firstPageRef?.current?.getBoundingClientRect();
-    const viewportBottom = window.innerHeight;
-    const firstPageBottom = firstPageRect.top + firstPageRect.height;
-    const isFirstPageToBottom = firstPageBottom >= viewportBottom;
-    if (isFirstPageToBottom) {
-      setScrollState("scrollWords");
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [handleScroll]);
 
   return (
     <div className="dataverse_gateways" ref={ref}>
@@ -257,10 +88,7 @@ const DataverseGateways = ({ files }) => {
                   {keywords.map((keyword, index) => (
                     <div
                       key={index}
-                      ref={keywordRefs[index]}
-                      className={classNames("keyword", {
-                        mainKeyword: index === mainKeywordIndex,
-                      })}
+                      className="keyword"
                     >
                       {keyword}
                     </div>
