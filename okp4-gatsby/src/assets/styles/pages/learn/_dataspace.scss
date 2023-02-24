@@ -271,7 +271,7 @@ body {
         "rules build";
       max-width: 1264px;
       gap: 30px;
-      padding: 140px 0 190px;
+      padding: 140px 30px 190px;
       margin: 0 auto;
 
       @include media-bp-down(lg) {
