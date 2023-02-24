@@ -1,0 +1,7 @@
+humanDescription: Content used for the Validator page.
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Develop
+  - name: Validators
+    link: /develop/validator
