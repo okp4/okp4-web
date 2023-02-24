@@ -291,39 +291,29 @@
         }
       }
 
-      .know__governance__image {
-        padding: 0;
+      .know__governance__image__wrapper {
         max-width: 423px;
         max-height: 423px;
-        animation: floating-image 8s linear infinite;
-      }
+        position: relative;
 
-      .know__governance__halo {
-        position: absolute;
-        border-radius: 50%;
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          rgba(255 255 255 / 20%) 0%,
-          rgba(255 255 255 / 0%) 100%
-        );
-        bottom: 9%;
-        right: 10%;
-        z-index: -1;
-        width: 30%;
-        height: 12%;
-
-        @media (max-width: 1440px) {
-          bottom: 9%;
-          right: 0%;
-          width: 34%;
-          height: 12%;
+        .know__governance__image {
+          padding: 0;
+          animation: floating-image 8s linear infinite;
+          z-index: 2;
         }
 
-        @media (max-width: 500px) {
-          bottom: 8.5%;
-          right: 11%;
-          width: 90%;
-          height: 10%;
+        .know__governance__halo {
+          position: absolute;
+          border-radius: 50%;
+          background: radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(255 255 255 / 20%) 0%,
+            rgba(255 255 255 / 0%) 100%
+          );
+          top: 0;
+          z-index: -1;
+          width: 120%;
+          height: 120%;
         }
       }
     }

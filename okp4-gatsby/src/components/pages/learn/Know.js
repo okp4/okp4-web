@@ -97,12 +97,14 @@ const Know = () => (
           <h2>{contentKnow.governancePart.title}</h2>
           <p>{contentKnow.governancePart.description}</p>
         </div>
-        <StaticImage
-          src="../../../../content/images/learn-know-governance-mechanism.png"
-          alt="Blockchain"
-          className="know__governance__image"
-        />
-        <div className="know__governance__halo" />
+        <div className="know__governance__image__wrapper">
+          <StaticImage
+            src="../../../../content/images/learn-know-governance-mechanism.png"
+            alt="Blockchain"
+            className="know__governance__image"
+          />
+          <div className="know__governance__halo" />
+        </div>
       </div>
       <div className="know__more">
         <h2>{contentKnow.morePart.title}</h2>
