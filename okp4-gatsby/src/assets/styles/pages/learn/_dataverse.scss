@@ -1,6 +1,7 @@
 main.dataverse {
   min-height: 100vh;
   padding-top: 279px;
+  overflow: hidden;
   @include media-bp-down(lg) {
     padding-top: 163px;
   }
@@ -79,6 +80,9 @@ main.dataverse {
       rgba(255, 216, 119, 0.15) 0%,
       rgba(217, 217, 217, 0) 100%
     );
+    @include media-bp-down(lg) {
+      display: none;
+    }
   }
 
   .background_small_ellipse_halo {
@@ -87,12 +91,14 @@ main.dataverse {
     height: 641.83px;
     bottom: 0;
     left: 50%;
-
     background: radial-gradient(
       50% 50% at 50% 50%,
       rgba(153, 191, 248, 0.2) 0%,
       rgba(217, 217, 217, 0) 100%
     );
+    @include media-bp-down(lg) {
+      display: none;
+    }
   }
 
   .background_light {
@@ -139,7 +145,7 @@ main.dataverse {
       text-transform: uppercase;
       @include media-bp-up(lg) {
         font-size: 106.688px;
-        max-width: 348px;
+        max-width: 650px;
       }
     }
 
@@ -211,12 +217,12 @@ main.dataverse {
     }
 
     .web2_okp4__container {
+      position: relative;
       @include media-bp-up(lg) {
         display: grid;
         grid-template-areas: "web2content web2content web2content image image";
         grid-template-columns: repeat(5, 1fr);
         max-height: 941px;
-        position: relative;
       }
     }
 
@@ -312,6 +318,7 @@ main.dataverse {
   }
 
   .ibc {
+    position: relative;
     margin: 180px auto 0;
     display: grid;
     grid-template-columns: auto auto;
@@ -463,10 +470,12 @@ main.dataverse {
 
   .architecture {
     margin-top: 160px;
+    padding-bottom: 50px;
     text-align: center;
 
     @include media-bp-down(lg) {
       margin-top: 40px;
+      padding-bottom: 0;
       p {
         font-size: 18px;
         line-height: 150%;
@@ -512,11 +521,14 @@ main.dataverse {
       max-width: 400px;
       height: 447px;
       padding: 10px 50px;
-      background: linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%);
       border: 1px solid #ffffff;
       border-radius: 20px;
       color: $textblue;
       line-height: 33px;
+      background: url("/images/grain.png"),
+        linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+      background-repeat: repeat;
+      background-size: contain;
 
       @include media-bp-down(lg) {
         width: 100%;
