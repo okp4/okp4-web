@@ -1,6 +1,6 @@
 export function GetImage(filename, allFiles) {
   let imageData;
-  const image = allFiles.allImages.edges.find((file) => {
+  const image = allFiles?.allImages.edges.find((file) => {
     return file.node.relativePath === filename;
   });
 
@@ -15,7 +15,7 @@ export function GetImage(filename, allFiles) {
 
 export function GetVideo(filename, allFiles) {
   let videoData;
-  const video = allFiles.allVideos.edges.find((file) => {
+  const video = allFiles?.allVideos.edges.find((file) => {
     return file.node.relativePath === filename;
   });
 
