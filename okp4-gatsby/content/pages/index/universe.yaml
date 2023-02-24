@@ -15,18 +15,16 @@ items:
     tag: OKP4
     image: index_universe_dataverse.png
     button: Discover more
-    link: /
+    link: /learn/dataverse
   - title: Development kit
     identifiant: dk
     description: Tools and services dedicated to developers to create their own apps using the OKP4 protocol.
     tag: OKP4
     image: index_universe_dk_cropped.png
     button: Learn more
-    link: /
   - title: Dataverse Gateways
     identifiant: dg
     description: OKP4 Dataverse Gateways enable anyone to interact with, build into, share and contribute and earn from the Dataverse.
     tag: OKP4
     image: index_universe_dg.png
     button: Discover
-    link: /
