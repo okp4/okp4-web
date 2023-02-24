@@ -3,7 +3,7 @@ breadcrumbs:
   - name: Home
     link: /
   - name: Learn
-  - name: KNOW
+  - name: $KNOW
     link: /learn/know
 introPart:
   title1: The $KNOW

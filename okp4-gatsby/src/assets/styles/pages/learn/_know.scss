@@ -1,8 +1,9 @@
 .know__main {
   min-height: calc(100vh - 505px);
   padding-top: 181px;
+  overflow-x: hidden;
 
-  @media (max-width: 500px) {
+  @media (max-width: 1025px) {
     padding-top: 0;
     margin-top: 0;
   }
@@ -18,7 +19,7 @@
       font-size: 20px;
       line-height: 150%;
 
-      @media (max-width: 500px) {
+      @media (max-width: 1025px) {
         font-size: 18px;
       }
     }
@@ -26,7 +27,7 @@
     h2 {
       margin-bottom: 40px;
 
-      @media (max-width: 500px) {
+      @media (max-width: 1025px) {
         font-size: 40px;
       }
     }
@@ -34,15 +35,12 @@
     .know__intro {
       display: flex;
       margin-top: 130px;
-      margin-left: 88px;
       align-items: flex-start;
       column-gap: 115px;
+      justify-content: center;
+      padding: 0 30px;
 
-      @media (min-width: 1920px) {
-        margin-left: 328px;
-      }
-
-      @media (max-width: 500px) {
+      @media (max-width: 1025px) {
         flex-direction: column;
         gap: 60px;
         align-items: center;
@@ -56,8 +54,8 @@
         max-width: 650px;
         padding-top: 40px;
 
-        @media (max-width: 500px) {
-          margin-top: 100px;
+        @media (max-width: 1025px) {
+          margin-top: 50px;
           max-width: 345px;
         }
 
@@ -66,11 +64,16 @@
           line-height: 80%;
           margin-bottom: 35px;
 
-          @media (max-width: 500px) {
+          @media (max-width: 1025px) {
             align-self: center;
             font-size: 65px;
             line-height: 100%;
             margin: 0px 15px;
+          }
+
+          @media (max-width: 1440px) {
+            line-height: 100%;
+            margin-bottom: 0px;
           }
         }
 
@@ -79,7 +82,7 @@
           line-height: 180%;
           font-size: 22.1911px;
 
-          @media (max-width: 500px) {
+          @media (max-width: 1025px) {
             margin-top: 16px;
             font-size: 18px;
             line-height: 150%;
@@ -87,29 +90,11 @@
         }
       }
 
-      .know__intro__img__wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
+      .know__intro__img {
         position: relative;
-        animation: floating-image 8s linear infinite;
-        max-width: 503px;
-        height: 370px;
 
-        .know__intro__image {
-          padding-top: 0;
-          max-width: 420px;
-          max-height: 213px;
-          z-index: 2;
-        }
-
-        .know__intro__image__shadow {
-          position: absolute;
-          padding-top: 0;
-          max-width: 420px;
-          max-height: 100%;
-          z-index: 1;
-          top: 3px;
+        @media screen and (max-width: 450px) {
+          margin-bottom: 100px;
         }
 
         .know__intro__image__background__halo {
@@ -118,58 +103,120 @@
           background: radial-gradient(
             50% 50% at 50% 50%,
             rgba(255 255 255 / 20%) 0%,
-            rgba(255 255 255 / 0%) 100%
+            rgba(255 255 255 / 0%) 95%
           );
-          top: -45%;
-          left: -20%;
+          bottom: 0;
+          left: -25%;
           z-index: -1;
-          width: 160%;
-          height: 120%;
+          width: 165%;
+          height: 165%;
 
-          @media (max-width: 500px) {
+          @media (max-width: 1025px) {
             top: -5%;
             left: -15%;
-            width: 120%;
+            width: 100vw;
+            height: 100vw;
+            max-width: 520px;
+            max-height: 520px;
+          }
+        }
+        .know__intro__img__wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 0;
+          position: relative;
+          animation: floating-image 8s linear infinite;
+          max-width: 503px;
+          height: 370px;
+
+          @media screen and (max-width: 450px) {
+            max-height: 200px;
+          }
+
+          .know__intro__image__token__wrapper {
+            position: relative;
             height: 100%;
+
+            .know__intro__image {
+              padding-top: 0;
+              max-width: 420px;
+              max-height: 213px;
+              z-index: 2;
+            }
+          }
+          .know__intro__image__shadow {
+            position: absolute;
+            opacity: 0.12;
+            transform: rotate(180deg) scaleX(-1);
+            filter: blur(4px);
+            top: 50%;
           }
         }
       }
     }
 
     .know__middle__wrapper {
+      position: relative;
+      overflow: hidden;
       background-color: #012c4f;
       padding: 132px;
       text-align: center;
-
-      margin: 200px 30px 93px 30px;
+      margin: 200px 30px 160px 30px;
       border-radius: 40px;
+
       @media (max-width: 1440px) {
-        margin: 200px 0 93px 0;
+        margin: 200px 0 160px 0;
         border-radius: 0;
       }
 
-      @media (max-width: 500px) {
+      @media (max-width: 1025px) {
         background-color: #003661;
         margin: 0;
         border-radius: 20px;
         padding: 60px 15px;
       }
 
-      .know__middle__about {
-        .know__middle__background__halo {
-          position: absolute;
-          width: 735.5px;
-          height: 386.67px;
-          left: 0;
-          top: 1300px;
-          background: #00b6b7;
-          filter: blur(100px);
-          transform: matrix(-1, 0, 0, 1, 0, 0);
-          //z-index: -1;
+      .know__middle__background__halo {
+        position: absolute;
+        width: 735.5px;
+        height: 386.67px;
+        left: 0;
+        top: 200px;
+        background: #00b6b7;
+        filter: blur(100px);
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+        z-index: 0;
 
-          @media (max-width: 500px) {
-            display: none;
-          }
+        @include media-bp-down(xxl) {
+          left: -200px;
+        }
+
+        @media (max-width: 1025px) {
+          display: none;
+        }
+      }
+      .know__middle__background__ellipse {
+        position: absolute;
+        width: 2253px;
+        height: 2254.89px;
+        left: -400px;
+        top: 800px;
+
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(255, 216, 119, 0.15) 0%,
+          rgba(217, 217, 217, 0) 100%
+        );
+
+        @media (max-width: 1025px) {
+          display: none;
+        }
+      }
+      .know__middle__about {
+        h2,
+        p {
+          position: relative;
+          z-index: 2;
         }
         .know__about__whitecards {
           margin: 141px 0;
@@ -179,7 +226,7 @@
           justify-content: center;
           align-items: center;
 
-          @media (max-width: 500px) {
+          @media (max-width: 1025px) {
             flex-direction: column;
             gap: 5px;
             margin: 60px 15px;
@@ -197,10 +244,10 @@
             background: url("/images/grain.png"),
               linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%);
 
-            @media (max-width: 500px) {
+            @media (max-width: 1025px) {
               width: 345px;
               height: 420px;
-              padding: 24px 32px;
+              padding: 32px 24px;
             }
             .whitecard__image__bottles {
               max-height: 134px;
@@ -232,29 +279,23 @@
       .know__middle__possibilities {
         max-width: 795px;
         margin: auto;
+
+        h2 {
+          @include media-bp-down(lg) {
+            margin-bottom: 20px;
+          }
+        }
+
+        p {
+          @media (max-width: 1025px) {
+            margin-bottom: 20px;
+          }
+        }
         .know__possibilities__image {
           margin-top: 32px;
           max-width: 530px;
           max-height: 530px;
           animation: floating-image 8s linear infinite;
-        }
-
-        .know__middle__background__ellipse {
-          position: absolute;
-          width: 2253px;
-          height: 2254.89px;
-          left: -342px;
-          top: 1500px;
-
-          background: radial-gradient(
-            50% 50% at 50% 50%,
-            rgba(255, 216, 119, 0.15) 0%,
-            rgba(217, 217, 217, 0) 100%
-          );
-
-          @media (max-width: 500px) {
-            display: none;
-          }
         }
       }
     }
@@ -264,20 +305,22 @@
       justify-content: flex-start;
       gap: 89px;
       align-items: flex-start;
-      margin-left: 88px;
       z-index: 1;
+      margin: 0 auto;
+      padding: 0px 88px;
 
       @media (min-width: 1920px) {
         margin-left: 328px;
       }
 
-      @media (max-width: 500px) {
+      @media (max-width: 1025px) {
         flex-direction: column;
         justify-content: center;
         text-align: center;
         align-items: center;
         gap: 60px;
-        margin: 60px 15px;
+        margin: 0px 15px 60px 15px;
+        padding: unset;
       }
 
       .know__governance__text {
@@ -288,6 +331,11 @@
 
         p {
           opacity: 0.8;
+        }
+
+        @include media-bp-down(lg) {
+          padding-top: unset;
+          margin-top: 60px;
         }
       }
 
@@ -310,10 +358,16 @@
             rgba(255 255 255 / 20%) 0%,
             rgba(255 255 255 / 0%) 100%
           );
+          opacity: 0.8;
           top: 0;
           z-index: -1;
           width: 120%;
           height: 120%;
+
+          @media (max-width: 1025px) {
+            width: 100%;
+            height: 110%;
+          }
         }
       }
     }
@@ -323,14 +377,24 @@
       text-align: center;
       margin: 100px auto;
 
-      @media (max-width: 500px) {
-        margin: 60px 15px;
+      @media (max-width: 1025px) {
+        padding: 0 15px;
+        margin: unset;
+
+        h2 {
+          margin-bottom: 20px;
+        }
       }
 
       .know__more__description {
         margin-bottom: 40px;
         opacity: 0.8;
+
+        @include media-bp-down(lg) {
+          margin-bottom: 20px;
+        }
       }
+
       .know__more__button {
         background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
           #00b6b7;
@@ -339,9 +403,10 @@
         text-align: center;
         margin: 40px;
 
-        @media (max-width: 500px) {
+        @media (max-width: 1025px) {
           display: block;
-          margin: 20px 15px;
+          margin: 0px auto;
+          text-align: center;
         }
 
         .know__more__button__text {

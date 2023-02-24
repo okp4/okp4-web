@@ -18,25 +18,29 @@ const Know = () => (
             {contentKnow.introPart.description}
           </p>
         </div>
-        <div className="know__intro__img__wrapper">
-          <StaticImage
-            src="../../../../content/images/learn-know-token.png"
-            alt="Know token"
-            className="know__intro__image"
-          />
-          <StaticImage
-            src="../../../../content/images/learn-know-shadow.png"
-            alt="Know token"
-            className="know__intro__image__shadow"
-          />
+        <div className="know__intro__img">
           <div className="know__intro__image__background__halo" />
+          <div className="know__intro__img__wrapper">
+            <div className="know__intro__image__token__wrapper">
+              <StaticImage
+                src="../../../../content/images/learn-know-token.png"
+                alt="Know token"
+                className="know__intro__image"
+              />
+            </div>
+            <StaticImage
+              src="../../../../content/images/learn-know-token.png"
+              alt="Know token"
+              className="know__intro__image__shadow"
+            />
+          </div>
         </div>
       </div>
       <div className="know__middle__wrapper">
+        <div className="know__middle__background__halo" />
         <div className="know__middle__about">
           <h2>{contentKnow.aboutPart.title}</h2>
           <p>{contentKnow.aboutPart.description}</p>
-          <div className="know__middle__background__halo" />
           <div className="know__about__whitecards">
             <Parallax
               parallaxStart="100"
@@ -77,6 +81,7 @@ const Know = () => (
             </Parallax>
           </div>
         </div>
+        <div className="know__middle__background__ellipse" />
         <div className="know__middle__possibilities">
           <h2>{contentKnow.possibilitiesPart.title}</h2>
           <div
@@ -89,7 +94,6 @@ const Know = () => (
             alt="Silver coins"
             className="know__possibilities__image"
           />
-          <div className="know__middle__background__ellipse" />
         </div>
       </div>
       <div className="know__governance">
