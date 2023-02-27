@@ -332,7 +332,6 @@
         flex-direction: column;
         max-width: 741px;
         padding-top: 66px;
-        //gap: 40px;
 
         p {
           opacity: 0.8;
@@ -384,10 +383,9 @@
 
       @media (max-width: 1025px) {
         padding: 0 15px;
-        margin: 60px auto 0 auto;
       }
 
-      @media (max-width: 375px) {
+      @media (max-width: 390px) {
         margin: 104px auto 0 auto;
       }
 
