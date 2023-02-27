@@ -5,3 +5,38 @@ breadcrumbs:
   - name: Develop
   - name: Validators
     link: /develop/validator
+introduction:
+  title: Secure the network
+  description: |
+    By becoming a validator, you can take part in the decentralized network and help to secure it.
+  image: validator-network.png
+join:
+  title: Join the Movement to Build a Decentralized Future
+  description: Decentralization is at the forefront of this change, offering a new way to interact with digital networks that is more secure, transparent and efficient. As a result, many people are looking to become validators as a way to support and contribute to this exciting new paradigm.
+  button:
+    label: Become a Validator
+    url: https://docs.okp4.network/whitepaper/tokenomics
+whatIs:
+  title: What is a validator?
+  description: |
+    A <i>validator</i> is a virtual entity that process transactions and participates in the consensus of the OKP4 protocol.<br />
+    Each validator make the OKP4 network more secure, stable and censorship resistant.
+  image: what-is-validator.png
+  imageBg: what-is-validator-bg.png
+nemeton:
+  title: The nemeton program
+  description: |
+    OKP4 Nemeton program onboarded 150 validators to perform many tasks on your testnet during 5 different phases. From uptime wars to coordinated upgrades, Nemeton is giving birth to OKP4 mainnet.
+  button:
+    label: Discover the Nemeton Program
+    url: https://nemeton.okp4.network/
+  image: nemeton-program.gif
+staking:
+  image: validator-staking.png
+  title: Validator & staking rewards
+  description:
+    paragraph1: |
+      Validators can bond their own tokens or have them <a target='_blank' rel='noreferrer' href='https://hub.cosmos.network/main/delegators/delegator-faq.html'>"delegated"</a> to them by token holders, this is called staking.<br />
+      Each new block created has a fixed, protocol-defined token issuance to reward validators and stakers.<br />
+    paragraph2: |
+      Which validators have the responsibility to do their job as well as possible, stakers have the responsibility to delegate to not-too-powerful validators to decentralize the network as much as possible!
