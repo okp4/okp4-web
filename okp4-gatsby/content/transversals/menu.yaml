@@ -11,6 +11,8 @@ items:
         link: /learn/dataverse
       - name: Data Space
         link: /learn/dataspace
+      - name: $KNOW
+        link: /learn/know
   - name: DEVELOP
     subMenuItems:
       - name: Docs
