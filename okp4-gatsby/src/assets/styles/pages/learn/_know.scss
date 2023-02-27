@@ -47,6 +47,7 @@
         align-items: center;
         text-align: center;
         margin: 20px 15px 100px 15px;
+        padding: 0;
       }
 
       .know__intro__text {
@@ -84,6 +85,7 @@
           line-height: 180%;
           font-size: 22.1911px;
           max-width: 650px;
+          margin-top: 20px;
 
           @media (max-width: 1025px) {
             margin-top: 16px;
@@ -96,8 +98,12 @@
       .know__intro__img {
         position: relative;
 
+        @media (max-width: 1025px) {
+          padding: 0 10px;
+        }
+
         @media screen and (max-width: 450px) {
-          margin-bottom: 100px;
+          margin-bottom: 10px;
         }
 
         .know__intro__image__background__halo {
@@ -284,12 +290,6 @@
         max-width: 724px;
         margin: auto;
 
-        h2 {
-          @include media-bp-down(lg) {
-            margin-bottom: 20px;
-          }
-        }
-
         p {
           @media (max-width: 1025px) {
             margin-bottom: 20px;
@@ -300,6 +300,10 @@
           max-width: 530px;
           max-height: 530px;
           animation: floating-image 8s linear infinite;
+
+          @media (max-width: 1025px) {
+            margin-top: 0;
+          }
         }
       }
     }
@@ -309,13 +313,9 @@
       justify-content: flex-start;
       gap: 89px;
       align-items: flex-start;
-      z-index: 1;
+      max-width: 1265px;
       margin: 0 auto;
       padding: 0px 88px;
-
-      @media (min-width: 1920px) {
-        margin-left: 328px;
-      }
 
       @media (max-width: 1025px) {
         flex-direction: column;
@@ -387,8 +387,12 @@
         margin: 60px auto 0 auto;
       }
 
+      @media (max-width: 375px) {
+        margin: 104px auto 0 auto;
+      }
+
       .know__more__description {
-        margin-bottom: 40px;
+        margin-bottom: 58px;
         opacity: 0.8;
 
         @include media-bp-down(lg) {

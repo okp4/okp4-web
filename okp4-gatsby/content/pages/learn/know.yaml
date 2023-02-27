@@ -6,8 +6,8 @@ breadcrumbs:
   - name: $KNOW
     link: /learn/know
 introPart:
-  title: |
-    <h1> The $KNOW </br> a native token </h1>
+  titlePartOne: The $KNOW
+  titlePartTwo: a native token
   description: The KNOW is a cryptocurrency. It is the native token of the OKP4 blockchain.
 aboutPart:
   title: About the $KNOW
