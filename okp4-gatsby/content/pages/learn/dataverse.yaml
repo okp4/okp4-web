@@ -21,7 +21,7 @@ web2Okp4:
     <p>
       All existing off-chain services are supported by the Protocol:
     </p>
-  image: index_roadmap_3.jpg
+  image: connecting-web2-with-okp4.jpg
   services:
     - title: Data-agnostic
       description: Any dataset or data stream can be shared
