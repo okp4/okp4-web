@@ -29,6 +29,8 @@ items:
   - name: INTERACT
     prefixPath: /interact
     subMenuItems:
+      - name: Developers
+        link: /interact/developers
       - name: Community
         link: /interact/community
       - name: Blog

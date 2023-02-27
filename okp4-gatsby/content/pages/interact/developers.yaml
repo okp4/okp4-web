@@ -6,13 +6,6 @@ breadcrumbs:
     link: /interact/developers
 title: Developers
 description: OKP4 is the revolutionary public layer-1 blockchain designed to coordinate any digital resources. As a developer looking to build a new generation of applications and join a dynamic community changing the game in the world of data and knowledge economy, you've come to the right place.
-socials:
-  - title: Github
-    url: https://github.com/okp4/
-    icon:
-  - title: Discord
-    url: https://discord.com/invite/okp4
-    icon:
 blocks:
   - title: Ecosystem
     text: Join the OKP4 ecosystem and be at the forefront of creating unique applications in the ecosystem.

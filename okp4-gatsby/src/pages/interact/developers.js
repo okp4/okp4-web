@@ -5,7 +5,7 @@ import Developers from "../../components/pages/interact/Developers";
 import content from "/content/pages/interact/developers.yaml";
 import Seo from "../../components/SEO";
 
-export default function Developers({ data }) {
+export default function InteractDevelopers({ data }) {
   return (
     <Layout
       location={"developers"}
