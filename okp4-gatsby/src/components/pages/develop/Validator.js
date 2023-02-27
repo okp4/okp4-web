@@ -24,7 +24,7 @@ const Validator = ({ files }) => {
             }}
           />
         </div>
-        <div className="validator__image-wrapper">
+        <div className="introduction__image-wrapper">
           <div className="background_halo" />
           <GatsbyImage
             className="introduction__image"
@@ -104,11 +104,13 @@ const Validator = ({ files }) => {
       </div>
 
       <div className="staking wrapper">
-        <GatsbyImage
-          className="staking__image"
-          image={MediaManager.GetImage(content.staking.image, files)}
-          alt={content.staking.title}
-        />
+        <div className="introduction__image-wrapper">
+          <GatsbyImage
+            className="staking__image"
+            image={MediaManager.GetImage(content.staking.image, files)}
+            alt={content.staking.title}
+          />
+        </div>
         <div className="staking__text">
           <h2>{content.staking.title}</h2>
           <p
@@ -117,6 +119,7 @@ const Validator = ({ files }) => {
             }}
           />
           <p
+            className="staking__text__paragraph2"
             dangerouslySetInnerHTML={{
               __html: content.staking.description.paragraph2,
             }}

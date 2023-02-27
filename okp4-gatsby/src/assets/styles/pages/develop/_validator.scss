@@ -4,7 +4,7 @@ main.validator {
   padding-top: 131px;
   text-align: center;
   @include media-bp-up(lg) {
-    padding-top: 157px;
+    padding-top: 181px;
     text-align: start;
   }
 
@@ -36,11 +36,6 @@ main.validator {
       margin-top: 40px;
       font-size: 20px;
     }
-  }
-
-  .validator__image-wrapper {
-    margin: auto;
-    position: relative;
   }
 
   .validator__button {
@@ -96,15 +91,15 @@ main.validator {
 
   .background_halo {
     position: absolute;
-    width: 140%;
-    height: 140%;
-    top: -20%;
-    left: -20%;
+    width: 85%;
+    height: 85%;
+    bottom: -5%;
+    right: -5%;
     z-index: -1;
 
     background: radial-gradient(
       50% 50% at 50% 50%,
-      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.7) 0%,
       rgba(255, 255, 255, 0) 100%
     );
     opacity: 0.4;
@@ -156,13 +151,21 @@ main.validator {
       }
     }
 
-    .introduction__image {
-      animation: floating-image 8s linear infinite;
+    .introduction__image-wrapper {
+      margin: 25px auto 0;
+      position: relative;
       max-width: 709px;
-      margin-top: 75px;
+      max-height: 709px;
       @include media-bp-up(lg) {
         margin: auto;
       }
+      @media screen and (max-width: 306px) {
+        padding: 0;
+      }
+    }
+
+    .introduction__image {
+      animation: floating-image 8s linear infinite;
     }
   }
 
@@ -170,6 +173,9 @@ main.validator {
     margin-top: 60px;
     text-align: center;
     max-width: 957px;
+    @include media-bp-up(lg) {
+      margin-top: 105px;
+    }
   }
 
   .what-is {
@@ -277,6 +283,10 @@ main.validator {
       }
     }
 
+    .staking__image-wrapper {
+      margin: 0 auto;
+    }
+
     .staking__image {
       animation: floating-image 8s linear infinite;
       max-width: 540px;
@@ -294,9 +304,14 @@ main.validator {
       }
 
       @include media-bp-down(lg) {
-        :last-child {
+        .staking__text__paragraph2 {
           margin-top: 60px;
         }
+      }
+
+      @include media-bp-up(lg) {
+        margin: 0;
+        padding-right: 24px;
       }
     }
 
@@ -304,6 +319,7 @@ main.validator {
       width: 100%;
       display: grid;
       grid-template-columns: minmax(auto, 540px) minmax(724px, auto);
+      align-items: center;
     }
   }
 }
