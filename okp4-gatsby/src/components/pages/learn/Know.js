@@ -12,8 +12,12 @@ const Know = () => (
     <div className="wrapper">
       <div className="know__intro">
         <div className="know__intro__text">
-          <h1 className="know__intro__title">{contentKnow.introPart.title1}</h1>
-          <h1 className="know__intro__title">{contentKnow.introPart.title2}</h1>
+          <div
+            className="know__intro__title"
+            dangerouslySetInnerHTML={{
+              __html: contentKnow.introPart.title,
+            }}
+          />
           <p className="know__intro__description">
             {contentKnow.introPart.description}
           </p>

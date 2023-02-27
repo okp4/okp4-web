@@ -29,6 +29,7 @@
 
       @media (max-width: 1025px) {
         font-size: 40px;
+        margin-bottom: 20px;
       }
     }
 
@@ -45,13 +46,13 @@
         gap: 60px;
         align-items: center;
         text-align: center;
-        margin: 20px 15px 6px 15px;
+        margin: 20px 15px 100px 15px;
       }
 
       .know__intro__text {
         display: flex;
         flex-direction: column;
-        max-width: 650px;
+        max-width: 700px;
         padding-top: 40px;
 
         @media (max-width: 1025px) {
@@ -60,9 +61,10 @@
         }
 
         .know__intro__title {
+          font-weight: 700;
           font-size: 106.688px;
-          line-height: 80%;
-          margin-bottom: 35px;
+          line-height: 117px;
+          letter-spacing: 0.03em;
 
           @media (max-width: 1025px) {
             align-self: center;
@@ -81,6 +83,7 @@
           letter-spacing: 0.05em;
           line-height: 180%;
           font-size: 22.1911px;
+          max-width: 650px;
 
           @media (max-width: 1025px) {
             margin-top: 16px;
@@ -159,9 +162,10 @@
       position: relative;
       overflow: hidden;
       background-color: #012c4f;
-      padding: 132px;
+      padding-top: 132px;
+      padding-bottom: 102px;
       text-align: center;
-      margin: 200px 30px 160px 30px;
+      margin: 230px 30px 93px 30px;
       border-radius: 40px;
 
       @media (max-width: 1440px) {
@@ -277,7 +281,7 @@
       }
 
       .know__middle__possibilities {
-        max-width: 795px;
+        max-width: 724px;
         margin: auto;
 
         h2 {
@@ -319,7 +323,7 @@
         text-align: center;
         align-items: center;
         gap: 60px;
-        margin: 0px 15px 60px 15px;
+        margin: 0px 15px;
         padding: unset;
       }
 
@@ -327,7 +331,8 @@
         display: flex;
         flex-direction: column;
         max-width: 741px;
-        padding-top: 80px;
+        padding-top: 66px;
+        //gap: 40px;
 
         p {
           opacity: 0.8;
@@ -375,15 +380,11 @@
     .know__more {
       max-width: 741px;
       text-align: center;
-      margin: 100px auto;
+      margin: 220px auto 100px auto;
 
       @media (max-width: 1025px) {
         padding: 0 15px;
-        margin: unset;
-
-        h2 {
-          margin-bottom: 20px;
-        }
+        margin: 60px auto 0 auto;
       }
 
       .know__more__description {
