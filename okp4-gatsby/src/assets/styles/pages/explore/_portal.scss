@@ -16,9 +16,13 @@
     display: grid;
     justify-items: center;
     text-align: center;
-    margin: 150px auto 60px;
+    margin: 150px auto 46px;
     padding: 0 90px;
     max-width: 1354px;
+
+    @media screen and (max-width: 1440px) {
+      margin-bottom: 66px;
+    }
 
     @include media-bp-down(lg) {
       margin: 20px auto 60px;
@@ -287,9 +291,13 @@
 
     .portal__tool__descriptions {
       display: grid;
-      row-gap: 185px;
-      margin: 225px 0 170px;
+      row-gap: 263px;
+      margin: 246px 0 217px;
       text-align: initial;
+
+      @media screen and (max-width: 1440px) {
+        margin-bottom: 170px;
+      }
 
       @include media-bp-down(lg) {
         margin: 100px auto 60px;
