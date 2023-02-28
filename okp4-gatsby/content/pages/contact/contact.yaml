@@ -21,3 +21,8 @@ country: Country
 email: Email address *
 message: Message *
 send: Send the message
+formMessage:
+  mandatoryFieldMissing: Please fill in all mandatory fields.
+  messageSent: Your message has been sent.
+  wrongEmailFormat: The format is not correct.
+  error: An error occurred while sending the message. Try again later.

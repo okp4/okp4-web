@@ -1,12 +1,13 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import content from "/content/pages/contact/contact.yaml";
 import RightArrowIcon from "../../../assets/images/icons/arrow-mr.inline.svg";
+import ErrorIcon from "../../../assets/images/icons/error_circle_rounded.inline.svg";
+import MessageSentIcon from "../../../assets/images/icons/mark_email_read.inline.svg";
+import axios from "axios";
 
-const validateEmailFormat = (email) => {
-  return email.match(
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  );
-};
+const SENDINBLUE_ENDPOINT = "https://api.sendinblue.com/v3/contacts";
+const EMAIL_REGEX =
+  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,15 +16,71 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [isEmailValid, setEmailValid] = useState(true);
+  const [formState, setFormState] = useState("notSubmitted");
+
+  const checkEmailFormat = (email) => email.match(EMAIL_REGEX);
+
+  const isEachMandatoryFieldFilled = useCallback(
+    () =>
+      formData.name !== "" && formData.email !== "" && formData.message !== "",
+    [formData]
+  );
 
   const handleFormChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const submitForm = (event) => {
-    event.preventDefault();
-    console.log(formData);
-  };
+  const handleSubmit = useCallback(
+    (event) => {
+      event.preventDefault();
+      console.log("handleSubmit", { formData });
+      const isEmailFormatValid = checkEmailFormat(formData.email);
+      setEmailValid(isEmailFormatValid);
+
+      if (!isEachMandatoryFieldFilled()) {
+        console.log("mandatoryFieldMissing");
+        setFormState("mandatoryFieldMissing");
+      } else if (isEmailFormatValid) {
+        const config = {
+          headers: {
+            accept: "application/json",
+            "content-type": "application/json",
+            "api-key":
+              "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",
+          },
+        };
+
+        const body = {
+          email: formData.email,
+          attributes: {
+            NAME: formData.name,
+            COUNTRY: formData.country,
+            EMAIL: formData.email,
+            MESSAGE: formData.message,
+          },
+        };
+
+        axios
+          .post(SENDINBLUE_ENDPOINT, JSON.stringify(body), config)
+          .then((response) => {
+            if (response.status === 400) {
+              setFormState("error");
+            } else {
+              setFormData({
+                name: "",
+                country: "",
+                email: "",
+                message: "",
+              });
+              setFormState("success");
+            }
+          })
+          .catch((err) => setFormState("error"));
+      }
+    },
+    [formData]
+  );
 
   return (
     <div className="contact__okp4">
@@ -77,15 +134,24 @@ const Contact = () => {
                   value={formData.country}
                   onChange={handleFormChange}
                 />
-
-                <input
-                  className="input__email"
-                  type="email"
-                  name="email"
-                  placeholder={content.email}
-                  value={formData.email}
-                  onChange={handleFormChange}
-                />
+                <div className="contact__fields--email">
+                  <input
+                    className="input__email"
+                    type="email"
+                    name="email"
+                    placeholder={content.email}
+                    value={formData.email}
+                    onChange={handleFormChange}
+                  />
+                  {!isEmailValid && (
+                    <div className="form__message form__message__email">
+                      <ErrorIcon />
+                      <p className="form__error">
+                        {content.formMessage.wrongEmailFormat}
+                      </p>
+                    </div>
+                  )}
+                </div>
                 <textarea
                   className="input__message"
                   type="text"
@@ -95,9 +161,31 @@ const Contact = () => {
                   onChange={handleFormChange}
                 />
               </div>
-              <button onClick={submitForm}>
+              <button onClick={handleSubmit}>
                 {content.send} <RightArrowIcon />
               </button>
+              {formState === "mandatoryFieldMissing" && (
+                <div className="form__message">
+                  <ErrorIcon />
+                  <p className="form__error">
+                    {content.formMessage.mandatoryFieldMissing}
+                  </p>
+                </div>
+              )}
+              {formState === "error" && (
+                <div className="form__message">
+                  <ErrorIcon />
+                  <p className="form__error">{content.formMessage.error}</p>
+                </div>
+              )}
+              {formState === "success" && (
+                <div className="form__message">
+                  <MessageSentIcon />
+                  <p className="form__success">
+                    {content.formMessage.messageSent}
+                  </p>
+                </div>
+              )}
             </form>
           </div>
           <div className="image_wrapper">

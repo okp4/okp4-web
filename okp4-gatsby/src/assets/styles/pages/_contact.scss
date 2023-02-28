@@ -177,11 +177,18 @@
 
           .contact__fields {
             display: grid;
-            grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+            grid-template: 1fr auto 1fr 1fr / repeat(2, 1fr);
             gap: 16px;
 
             @media screen and (max-width: 1330px) {
-              grid-template: repeat(5, 1fr) / 1fr;
+              grid-template: 1fr 1fr auto 1fr 1fr / 1fr;
+            }
+
+            &--email {
+              grid-area: 2 / 1 / 2 / 3;
+              @media screen and (max-width: 1330px) {
+                grid-area: 3 / 1;
+              }
             }
 
             input,
@@ -213,13 +220,11 @@
               }
 
               &.input__email {
-                grid-area: 2 / 1 / 2 / 3;
-                @media screen and (max-width: 1330px) {
-                  grid-area: 3 / 1;
-                }
+                width: 100%;
               }
 
               &.input__message {
+                padding-top: 16px;
                 grid-area: 3 / 1 / 5 / 3;
                 height: 100%;
                 @media screen and (max-width: 1330px) {
@@ -229,7 +234,6 @@
             }
 
             ::placeholder {
-              padding-top: 16px;
               color: #fff;
             }
 
@@ -274,6 +278,40 @@
               margin-top: 16px;
               width: 100%;
             }
+          }
+
+          .form__message {
+            margin-top: 16px;
+            display: flex;
+            justify-content: end;
+
+            p {
+              margin: 0;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 19px;
+              text-align: end;
+            }
+
+            svg {
+              margin: auto 6px;
+              width: 15px;
+              height: 15px;
+            }
+          }
+
+          .form__error {
+            color: #ff3648;
+          }
+
+          .form__success {
+            color: #00b6b7;
+          }
+
+          .form__message__email {
+            margin-top: 8px;
+            display: flex;
+            justify-content: start;
           }
         }
       }
