@@ -77,7 +77,7 @@ const Portal = () => {
         <p>
           The OKP4 portal is a web app that allows navigating the entire OKP4
           ecosystem. It aggregates all the information and resources to explore{" "}
-          <Link className="portal__inline__link" to="/learn/okp4">
+          <Link className="portal__inline__link" to="/learn/dataverse/">
             the Dataverse
           </Link>
           .
