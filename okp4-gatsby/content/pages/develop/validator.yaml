@@ -4,7 +4,7 @@ breadcrumbs:
     link: /
   - name: Develop
   - name: Validators
-    link: /develop/validator
+    link: /develop/validators
 introduction:
   title: Secure the network
   description: |

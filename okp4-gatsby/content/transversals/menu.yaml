@@ -16,7 +16,7 @@ items:
   - name: DEVELOP
     subMenuItems:
       - name: Validators
-        link: /develop/validator
+        link: /develop/validators
       - name: Docs
         url: https://docs.okp4.network/
       - name: Participate
