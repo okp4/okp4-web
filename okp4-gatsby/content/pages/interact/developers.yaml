@@ -9,19 +9,21 @@ description: OKP4 is the revolutionary public layer-1 blockchain designed to coo
 blocks:
   - title: Ecosystem
     text: Join the OKP4 ecosystem and be at the forefront of creating unique applications in the ecosystem.
-    icon:
+    icon: |
+      <DevEcosystem />
   - title: Design System
     text: Create impactful web3 applications that leverage the unique capabilities of the ecosystem using the OKP4 Design System.
-    icon:
+    icon: <DevDesign />
   - title: Resources
     text: |
       Explore the infinite possibilities of the dataverse to unlock new opportunities to build on top of any shared resources: datasets, algorithms, storage, computation...
-    icon:
+    icon: <DevResources />
   - title: Web2/Web3 bridges
     text: Build web2/web3 bridges by developing interoperability solutions that seamlessly connect traditional centralized systems with decentralized blockchain networks.
-    icon:
+    icon: <DevWeb />
   - title: IBC
     text: Benefit from other Cosmos blockchains using the Inter-Blockchain Communication (IBC) protocol and unleash the power of the internet of blockchains.
-    icon:
-paragrapgh: |
-  <p> Our developer community is known for being <a href="Our developer community is known for being egoless, where collaboration, mutual respect, and knowledge sharing are highly valued. We believe that everyone has something valuable to contribute, and together, we can create innovative and impactful solutions that benefit the entire ecosystem." > egoless </a>, where collaboration, mutual respect, and knowledge sharing are highly valued. We believe that everyone has something valuable to contribute, and together, we can create innovative and impactful solutions that benefit the entire ecosystem. </p>
+    icon: <DevIBC />
+paragraph: |
+  <p> Our developer community is known for being 
+  <a href="https://en.wikipedia.org/wiki/Egoless_programming" target="_blank" rel="noreferrer"> <u> egoless </u> </a>, where collaboration, mutual respect, and knowledge sharing are highly valued. We believe that everyone has something valuable to contribute, and together, we can create innovative and impactful solutions that benefit the entire ecosystem. </p>
