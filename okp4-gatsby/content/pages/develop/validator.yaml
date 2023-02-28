@@ -15,7 +15,7 @@ join:
   description: Decentralization is at the forefront of this change, offering a new way to interact with digital networks that is more secure, transparent and efficient. As a result, many people are looking to become validators as a way to support and contribute to this exciting new paradigm.
   button:
     label: Become a Validator
-    url: https://docs.okp4.network/whitepaper/tokenomics
+    url: https://docs.okp4.network/nodes/introduction
 whatIs:
   title: What is a validator?
   description: |
