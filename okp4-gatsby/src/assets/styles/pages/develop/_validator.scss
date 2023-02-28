@@ -140,6 +140,10 @@ main.validator {
       grid-template-columns: 1fr minmax(1fr, 709px);
       align-items: center;
 
+      p {
+        margin-top: 20px;
+      }
+
       .introduction__text {
         max-width: 650px;
 
@@ -316,6 +320,7 @@ main.validator {
     }
 
     @include media-bp-up(lg) {
+      margin: 60px auto 180px;
       width: 100%;
       display: grid;
       grid-template-columns: minmax(auto, 540px) minmax(724px, auto);
