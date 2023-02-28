@@ -4,8 +4,11 @@ import RightArrowIcon from "../../../assets/images/icons/arrow-mr.inline.svg";
 import ErrorIcon from "../../../assets/images/icons/error_circle_rounded.inline.svg";
 import MessageSentIcon from "../../../assets/images/icons/mark_email_read.inline.svg";
 import axios from "axios";
+import {
+  SENDINBLUE_API_ENDPOINT,
+  SENDINBLUE_API_KEY,
+} from "gatsby-env-variables";
 
-const SENDINBLUE_ENDPOINT = "https://api.sendinblue.com/v3/contacts";
 const EMAIL_REGEX =
   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -34,7 +37,10 @@ const Contact = () => {
   const handleSubmit = useCallback(
     (event) => {
       event.preventDefault();
-      console.log("handleSubmit", { formData });
+      console.log("handleSubmit", {
+        SENDINBLUE_API_ENDPOINT,
+        SENDINBLUE_API_KEY,
+      });
       const isEmailFormatValid = checkEmailFormat(formData.email);
       setEmailValid(isEmailFormatValid);
 
@@ -46,8 +52,7 @@ const Contact = () => {
           headers: {
             accept: "application/json",
             "content-type": "application/json",
-            "api-key":
-              "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",
+            "api-key": SENDINBLUE_API_KEY,
           },
         };
 
@@ -62,7 +67,7 @@ const Contact = () => {
         };
 
         axios
-          .post(SENDINBLUE_ENDPOINT, JSON.stringify(body), config)
+          .post(SENDINBLUE_API_ENDPOINT, JSON.stringify(body), config)
           .then((response) => {
             if (response.status === 400) {
               setFormState("error");

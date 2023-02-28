@@ -53,5 +53,11 @@ module.exports = {
         username: "okp4",
       },
     },
+    {
+      resolve: `gatsby-env-variables`,
+      options: {
+        envFolderPath: `src/env/`,
+      },
+    },
   ],
 };
