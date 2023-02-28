@@ -16,9 +16,11 @@ whitecard3:
   description: for collaboration
   image: index_intro_card_3.png
 bluecard1:
-  title: Powered by the KNOW token
+  title: Powered by the $KNOW token
   description: Incentives & value flows for the many use cases are enabled by the $KNOW. Many B2B use cases are ready to be launched, more community use cases will be built when the Testnet launches.
   image: index_intro_know.png
+  button: What is $KNOW?
+  url: /learn/know
 bluecard2:
   title: Built on the Cosmos SDK
   description: A smart contract hub specifically designed for Data Spaces.

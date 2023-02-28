@@ -432,9 +432,8 @@ main.homepage {
         }
 
         .introduction__pushs__item__illus {
-          width: 350px;
-          margin-top: auto;
-          margin-bottom: 0;
+          width: 279px;
+          margin-top: 52px;
           animation: floating-image 8s linear infinite;
 
           @include media-bp-down(lg) {
@@ -448,8 +447,37 @@ main.homepage {
         }
 
         .introduction__pushs__item__texts {
-          margin-top: 40px;
+          margin-top: 28px;
           margin-bottom: 0;
+        }
+
+        .cta__button {
+          border: 1px solid $white;
+          border-radius: 10px;
+          padding: 18px 30px;
+          margin-top: 18px;
+          display: flex;
+          text-align: center;
+          align-self: flex-start;
+
+          .cta__button__text {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+          }
+          &:hover {
+            background: linear-gradient(
+              39.81deg,
+              #006796 21.82%,
+              #00b6b7 98.43%
+            );
+          }
+
+          @media (max-width: 1025px) {
+            display: block;
+            margin-top: 32px;
+            align-self: stretch;
+          }
         }
       }
 

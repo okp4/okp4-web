@@ -5,6 +5,7 @@ import Halo from "../../animations/Halo.js";
 import Strate from "../../animations/Strate.js";
 import Parallax from "../../animations/Parallax.js";
 import content from "/content/pages/index/introduction.yaml";
+import { Link } from "gatsby";
 
 const Introduction = ({ files }) => {
   return (
@@ -85,6 +86,11 @@ const Introduction = ({ files }) => {
               <p className="title">{content.bluecard1.title}</p>
               <p className="text">{content.bluecard1.description}</p>
             </div>
+            <Link to={content.bluecard1.url} className="cta__button">
+              <span className="cta__button__text">
+                {content.bluecard1.button}
+              </span>
+            </Link>
           </div>
           <div className="introduction__pushs__item introduction__pushs__item--right">
             <div className="introduction__pushs__item__illus" data-infinite="1">
