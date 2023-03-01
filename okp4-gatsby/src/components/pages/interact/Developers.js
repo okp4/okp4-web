@@ -4,6 +4,7 @@ import contentSocials from "../../../../content/transversals/socials.yaml";
 import IconGithub from "../../../assets/images/socials/github.inline.svg";
 import IconDiscord from "../../../assets/images/socials/discord.inline.svg";
 import { StaticImage } from "gatsby-plugin-image";
+import Halo from "../../animations/Halo";
 import IconArrowtr from "../../../assets/images/icons/arrow-tr.inline.svg";
 import DevDesign from "../../../assets/images/icons/developers/dev-design-icon.inline.svg";
 import DevEcosystem from "../../../assets/images/icons/developers/dev-ecosystem-icon.inline.svg";
@@ -67,51 +68,45 @@ const Developers = () => {
 
   return (
     <div className="developers__main">
+      <Halo />
       <div className="wrapper">
         <div className="developers__intro">
-          <div className="developers__intro__left">
-            <h1>{contentDevelopers.title}</h1>
-            <p>{contentDevelopers.description}</p>
-            <div className="social__media">
-              <a
-                href={contentSocials.github.url}
-                className="socials__link github"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <IconGithub />
-                <span>
-                  <p className="text">{contentSocials.github.label}</p>
-                  <IconArrowtr className="arrow" />
-                </span>
-              </a>
+          <h1 className="developers__title">{contentDevelopers.title}</h1>
+          <p className="developers__description">
+            {contentDevelopers.description}
+          </p>
+          <div className="social__media">
+            <a
+              href={contentSocials.github.url}
+              className="socials__link github"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <IconGithub />
+              <span>
+                <p className="text">{contentSocials.github.label}</p>
+                <IconArrowtr className="arrow" />
+              </span>
+            </a>
 
-              <a
-                href={contentSocials.discord.url}
-                className="socials__link discord"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <IconDiscord />
-                <span>
-                  <p className="text">{contentSocials.discord.label}</p>
-                  <IconArrowtr className="arrow" />
-                </span>{" "}
-              </a>
-            </div>
+            <a
+              href={contentSocials.discord.url}
+              className="socials__link discord"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <IconDiscord />
+              <span>
+                <p className="text">{contentSocials.discord.label}</p>
+                <IconArrowtr className="arrow" />
+              </span>{" "}
+            </a>
           </div>
-          <div className="developers__intro__image__wrapper">
-            <StaticImage
-              className="developers__intro__image"
-              src="../../../../content/images/developers-intro-laptop.png"
-              alt="developers OKP4"
-            />
-            {/* <StaticImage
-              className="developers__logo__image"
-              src="../../../../content/images/developers-logo-okp4.png"
-              alt="logo OKP4"
-            /> */}
-          </div>
+          <StaticImage
+            className="developers__intro__image"
+            src="../../../../content/images/developers-intro.png"
+            alt="developers OKP4"
+          />
         </div>
         <div className="developers__blocks">
           {devBlocks.map(({ title, description, icon, label }) => (

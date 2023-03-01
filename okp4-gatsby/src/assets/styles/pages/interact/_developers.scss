@@ -3,7 +3,7 @@
   padding-top: 181px;
 
   @media (max-width: 1025px) {
-    padding-top: 100px;
+    padding-top: 90px;
   }
 
   p {
@@ -14,133 +14,145 @@
   }
 
   .developers__intro {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 620px);
+    grid-template-rows: 130px 130px 150px;
+    grid-template-areas:
+      "title picture"
+      "description picture"
+      "socials picture";
+    column-gap: 145px;
+    row-gap: 20px;
 
     @media (max-width: 1025px) {
-      flex-direction: column;
+      grid-template-columns: 1fr;
+      grid-template-rows: 100px 190px 370px 160px;
+      grid-template-areas:
+        "title"
+        "description"
+        "picture"
+        "socials ";
+      justify-items: center;
       text-align: center;
-      align-items: center;
+      row-gap: 10px;
     }
 
-    .developers__intro__left {
+    .developers__title {
+      grid-area: title;
+      margin-top: 6px;
+
+      @media (max-width: 1025px) {
+        margin-top: 30px;
+        margin-bottom: 6px;
+      }
+    }
+
+    .developers__description {
+      grid-area: description;
+
+      @media (max-width: 1025px) {
+        font-size: 18px;
+        // margin: 16px auto;
+        color: $white;
+      }
+    }
+
+    .social__media {
+      grid-area: socials;
+      margin-top: 60px;
+      z-index: 2;
       display: flex;
-      flex-direction: column;
-      max-width: 616px;
+      flex-direction: row;
+      column-gap: 60px;
 
-      p {
-        margin-top: 18px;
+      @media (max-width: 1025px) {
+        align-items: center;
+        justify-content: center;
+        margin-top: 0;
+        //margin: 10px auto 60px auto;
+      }
+      .socials__link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        transition: opacity 0.25s ease;
+        gap: 15px;
 
-        @media (max-width: 1025px) {
-          font-size: 18px;
-          margin: 16px auto;
+        svg {
+          width: 50px;
+          height: auto;
+          align-self: center;
+        }
+        span {
+          display: inline-flex;
+          gap: 10px;
+          justify-items: center;
+
+          p {
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 150%;
+            color: $white;
+          }
+
+          svg {
+            width: 9px;
+            height: auto;
+            transition: transform 0.25s ease;
+          }
         }
       }
 
-      .social__media {
-        margin-top: 70px;
-        z-index: 2;
-        display: flex;
-        flex-direction: row;
-        column-gap: 60px;
-
-        @media (max-width: 1025px) {
-          align-items: center;
-          justify-content: center;
-          margin: 10px auto 60px auto;
-        }
-        .socials__link {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          transition: opacity 0.25s ease;
-
-          svg {
-            width: 50px;
-            height: auto;
-          }
-          span {
-            display: inline-flex;
-            gap: 10px;
-
-            p {
-              font-weight: 700;
-              font-size: 25px;
-              line-height: 150%;
-              color: $white;
-            }
-
-            svg {
-              width: 9px;
-              height: auto;
-              transition: transform 0.25s ease;
-            }
+      &:hover {
+        span:hover {
+          p.text {
+            color: $white;
           }
         }
+        .socials__link:hover {
+          $social__medias: (
+            github: black,
+            discord: #5865f2,
+          );
 
-        &:hover {
-          span:hover {
-            p.text {
-              color: $white;
-            }
-          }
-          .socials__link:hover {
-            $social__medias: (
-              github: black,
-              discord: #5865f2,
-            );
-
-            @each $social__media, $color in $social__medias {
-              &.#{$social__media} {
-                .text {
-                  opacity: 1;
-                }
-                .arrow {
-                  opacity: 1;
-                }
-                > svg {
-                  path {
-                    fill: $color;
-                  }
+          @each $social__media, $color in $social__medias {
+            &.#{$social__media} {
+              .text {
+                opacity: 1;
+              }
+              .arrow {
+                opacity: 1;
+              }
+              > svg {
+                path {
+                  fill: $color;
                 }
               }
             }
           }
+        }
 
-          :not(.socials__link:hover) {
-            .text {
-              opacity: 0.5;
-            }
-            > svg {
-              opacity: 0.5;
-            }
+        :not(.socials__link:hover) {
+          .text {
+            opacity: 0.5;
+          }
+          > svg {
+            opacity: 0.5;
           }
         }
       }
     }
 
-    .developers__intro__image__wrapper {
-      margin-left: 165px;
-      position: relative;
+    .developers__intro__image {
+      grid-area: picture;
+      max-width: 508px;
+      max-height: 513px;
 
       @media (max-width: 1050px) {
-        order: 3;
-        margin-left: 0;
-      }
-      .developers__intro__image {
-        max-width: 622px;
-        max-height: 629px;
-        padding: 0;
-        margin-top: 0;
-      }
-
-      .developers__logo__image {
-        max-width: 220px;
-        max-height: 207px;
-        position: absolute;
-        right: 100px;
-        top: 50px;
+        max-height: 328px;
+        max-width: 360px;
+        margin-top: 30px;
       }
     }
   }
@@ -150,7 +162,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 32px;
-    row-gap: 72px;
+    row-gap: 42px;
     margin: 150px auto;
 
     @media (max-width: 1025px) {
