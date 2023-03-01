@@ -1,0 +1,7 @@
+# Content used for the SDK page.
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Develop
+  - name: OKP4 Development Kit
+    link: /develop/okp4developmentkit
