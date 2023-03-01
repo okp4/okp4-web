@@ -78,23 +78,14 @@ const DataverseGateways = ({ files }) => {
       <div className="wrapper">
         <div className="dg__first_page" ref={firstPageRef}>
           <h1 className="dg__main_title">{content.title}</h1>
-
-          <div className="dg__keywords">
-            <div className="dg__keywords__container">
-              <div className="keywords_color_layer" />
-              <p className="introduction">{content.featured.introduction}</p>
-              <div className="keywords--container" ref={keywordsContainerRef}>
-                <div className="keywords">
-                  {keywords.map((keyword, index) => (
-                    <div
-                      key={index}
-                      className="keyword"
-                    >
-                      {keyword}
-                    </div>
-                  ))}
-                </div>
-              </div>
+          <p className="introduction">{content.featured.introduction}</p>
+          <div className="keywords--container" ref={keywordsContainerRef}>
+            <div className="halo" />
+            <div className="keywords">
+              <div className="keyword share">Share & Contribute</div>
+              <div className="keyword benefit">Benefit & earn</div>
+              <div className="keyword interact">Interact</div>
+              <div className="keyword build">Build</div>
             </div>
           </div>
         </div>
