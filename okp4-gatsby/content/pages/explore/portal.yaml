@@ -1,0 +1,28 @@
+# Content used for the Portal page
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Explore
+  - name: Portal
+    link: /explore/portal
+discover:
+  header: discover the endless possibilities of the dataverse
+  button:
+    text: Get the app
+    link: https://docs.okp4.network/whitepaper/tokenomics
+    soon: Soon available
+featuresHeader: A complete tool with multiple features
+features:
+  - feature: explore
+    description: Easily discover data spaces, datasets and data management services.
+  - feature: create
+    description: Analyze data and leveraging services to derive insights and create new knowledge.
+  - feature: monitor
+    description: Access real-time analysis of your shared resources.
+  - feature: build
+    description: Create impactful web3 applications using the OKP4 Design System.
+descriptions:
+  - header: explore data spaces & applications
+    description: Explore the many Data Spaces and find the ones that fit your interests. Check their rules and the resources shared within it and see if there is an opportunity for you. Use the portal to stay updated on your favorite Data Spaces. The portal enables you to access the many applications built on top of Data Spaces.
+  - header: monitor your shared resources!
+    description: Through the OKP4 Portal, you are informed in real time of the activities related to the Data Spaces you’re interested in and the digital resources you share. Follow how the protocol uses your data and services. Monitor your contribution to knowledge creation, including token rewards.
