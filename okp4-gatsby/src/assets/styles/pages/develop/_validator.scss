@@ -89,22 +89,6 @@ main.validator {
     }
   }
 
-  .background_halo {
-    position: absolute;
-    width: 85%;
-    height: 85%;
-    bottom: -5%;
-    right: -5%;
-    z-index: -1;
-
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      rgba(255, 255, 255, 0.7) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    opacity: 0.4;
-  }
-
   .background_light {
     position: absolute;
     z-index: -1;

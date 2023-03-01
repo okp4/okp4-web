@@ -25,7 +25,6 @@ const Validator = ({ files }) => {
           />
         </div>
         <div className="introduction__image-wrapper">
-          <div className="background_halo" />
           <GatsbyImage
             className="introduction__image"
             image={MediaManager.GetImage(content.introduction.image, files)}
