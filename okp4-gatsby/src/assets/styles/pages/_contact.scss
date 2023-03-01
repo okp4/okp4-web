@@ -57,9 +57,10 @@
 
         .form__ellipse {
           position: absolute;
+          z-index: -1;
           width: 721px;
           height: 721px;
-          left: -475px;
+          left: -242px;
           top: 450px;
           background: radial-gradient(
             50% 50% at 50% 50%,
@@ -69,6 +70,9 @@
           opacity: 0.4;
           @include media-bp-down(lg) {
             display: none;
+          }
+          @media screen and (max-width: 1440px) {
+            left: -475px;
           }
         }
 
