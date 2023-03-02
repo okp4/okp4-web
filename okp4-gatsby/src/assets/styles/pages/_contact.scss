@@ -284,6 +284,10 @@
             }
           }
 
+          .grecaptcha-badge {
+            visibility: hidden;
+          }
+
           .form__message {
             margin-top: 16px;
             display: flex;
@@ -320,6 +324,14 @@
         }
       }
 
+      .captcha {
+        text-align: end;
+        font-size: 12px;
+        margin: 15px 0 0 auto;
+        a {
+          text-decoration: underline;
+        }
+      }
       .image_wrapper {
         display: flex;
         flex-direction: column;

@@ -210,6 +210,13 @@ const Contact = () => {
                 </div>
               )}
             </form>
+            <div className="captcha">
+              This site is protected by reCAPTCHA and the Google{" "}
+              <a href="https://policies.google.com/privacy">Privacy Policy</a>{" "}
+              and{" "}
+              <a href="https://policies.google.com/terms">Terms of Service</a>{" "}
+              apply.
+            </div>
           </div>
           <div className="image_wrapper">
             <div className="world_image" />
