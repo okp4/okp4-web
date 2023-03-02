@@ -1,0 +1,35 @@
+# Content used for the SDK page.
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Develop
+  - name: OKP4 Development Kit
+    link: /develop/okp4developmentkit
+empower:
+  header: empower your innovation
+  description: With a comprehensive set of tools and resources, you'll be able to create your project faster and more efficiently than ever before.
+create:
+  header: create innovative web3 apps with OKP4 development kit
+  description: The OKP4 Development Kit is a comprehensive set of software development tools and resources made available by OKP4 and the community. This Development Kit empowers developers to create innovative Web3 applications using the OKP4 protocol. With OKP4 DK, you have access to a Web3 Design System, Data Space Governance Templates, many command line tools, a large set of open-source libraries (functions, connectors) for various different technologies, and a comprehensive documentation that makes it easier to build secure and efficient web3 applications. Whether you're an experienced developer or just starting out, the OKP4 Development Kit equips you with the tools you need to turn your ideas into reality. Join the growing family of OKP4 builders and bring your vision to life.
+designSystem:
+  header: a web3 design system to swiftly develop user-friendly interfaces
+  description: The OKP4 Design System is an open-source set of components and resources created to facilitate the design and development of web interfaces in the OKP4 Ecosystem. This design system is a reference for teams working in the OKP4 Ecosystem, enabling you to design and develop web interfaces with speed, consistency and quality.
+  button: Design System
+  soon: Soon available
+governanceTemplates:
+  header: data space governance templates
+  description:
+    - Import predefined rule templates for resource sharing models, business models, or governance tokens in just a few clicks.
+    - "Create your own template library: your rules, your governance. Governance Templates can also reference each other to build more advanced sets and promote sharing of common elements."
+tools:
+  header: a large set of CLI tools
+  description: The OKP4 DK provides a wide range of open-source command-line tools that seamlessly enable you to interoperate and integrate with the OKP4 blockchain. Using these open-source tools, you can reduce development time, and leverage the power of OKP4 to create innovative solutions based on the protocol.
+protocol:
+  header: protocol integrations
+  description: In order to make platforms compatible with the OKP4 protocol, connectors and libraries to develop connectors are provided. As the OKP4 protocol will act as the bandmaster for off-chain components, those components shall be strongly coupled with the protocol. For instance, to allow a service to use a dataset, a connector shall make it possible by using the protocol as the source of truth for access control.
+documentation:
+  header: deep documentation
+  description:
+    - All the technical documentation related to the blockchain and its modules dedicated to developers and validators is available here&colon; <a href="https://docs.okp4.network" rel="noreferrer" target="_blank">https://docs.okp4.network</a>
+    - "It includes API documentation to interact with smart contracts & modules: define any custom rule, connect any service..."
+    - You can find all the resources on the <a href="https://github.com/okp4/awesome" rel="noreferrer" target="_blank">Awesome OKP4</a>, a curated list of awesome resources, documents, and tools for OKP4.

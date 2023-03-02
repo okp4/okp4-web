@@ -1,0 +1,388 @@
+.developmentkit__main {
+  min-height: calc(100vh - 505px);
+  padding-top: 181px;
+  overflow-x: hidden;
+
+  @include media-bp-down(lg) {
+    padding-top: 90px;
+  }
+
+  .developmentkit__description__wrapper {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    padding: 0 30px;
+
+    @include media-bp-down(lg) {
+      margin: 0 15px;
+      text-align: center;
+      row-gap: 20px;
+      padding: unset;
+    }
+
+    .developmentkit__description__image {
+      grid-area: image;
+
+      &.cauldron {
+        animation: floating-image 8s linear infinite;
+      }
+    }
+
+    .developmentkit__description {
+      display: flex;
+      flex-direction: column;
+      grid-area: description;
+
+      :nth-child(3) {
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-size: 80px;
+        margin-bottom: 40px;
+
+        @include media-bp-down(lg) {
+          font-size: 40px;
+          line-height: 110%;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 150%;
+
+        @include media-bp-down(lg) {
+          font-size: 18px;
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    &.empower {
+      grid-template-areas: "description image";
+      max-width: 1322px;
+      margin-bottom: 160px;
+
+      @include media-bp-down(lg) {
+        grid-template-areas:
+          "description"
+          "image";
+        margin-bottom: 100px;
+      }
+
+      .developmentkit__description {
+        row-gap: 50px;
+        max-width: 650px;
+
+        @include media-bp-down(lg) {
+          row-gap: 20px;
+        }
+
+        h2 {
+          font-size: 106.688px;
+          line-height: 85px;
+          letter-spacing: 0.03em;
+
+          @include media-bp-down(lg) {
+            font-size: 65px;
+            line-height: 72px;
+          }
+        }
+
+        p {
+          font-size: 22.1911px;
+          line-height: 180%;
+          letter-spacing: 0.05em;
+
+          @include media-bp-down(lg) {
+            font-size: 18px;
+            line-height: 150%;
+          }
+        }
+      }
+    }
+
+    &.create {
+      max-width: 1732px;
+      text-align: center;
+      grid-template-areas:
+        "description"
+        "image";
+      row-gap: 83px;
+      margin-bottom: 252px;
+
+      @include media-bp-down(lg) {
+        margin-bottom: 60px;
+      }
+
+      @media screen and (max-width: 420px) {
+        row-gap: 20px;
+      }
+
+      .developmentkit__description {
+        max-width: 1262px;
+
+        h2 {
+          max-width: 795px;
+          margin: 0 auto;
+        }
+
+        p {
+          @include media-bp-down(lg) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    &.design-system {
+      max-width: 1262px;
+      grid-template-areas: "image description";
+      column-gap: 80px;
+      margin-bottom: 195px;
+
+      @include media-bp-down(lg) {
+        grid-template-areas:
+          "description"
+          "image";
+        margin-bottom: 60px;
+      }
+
+      .developmentkit__description__image__wrapper {
+        @include media-bp-down(lg) {
+          padding: 0 30px;
+        }
+      }
+
+      .developmentkit__description {
+        max-width: 724px;
+
+        .developmentkit__button__wrapper {
+          width: fit-content;
+
+          @include media-bp-down(lg) {
+            margin: 0 auto;
+          }
+
+          .developmentkit__button {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 10px;
+            margin-bottom: 10px;
+            background: linear-gradient(
+                78.68deg,
+                #006796 49.23%,
+                #00b6b7 114.06%
+              ),
+              #00b6b7;
+            border-radius: 10px;
+            padding: 18px 30px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+            white-space: nowrap;
+
+            &.disabled {
+              background: white;
+              color: #233a4b;
+              opacity: 15%;
+              pointer-events: none;
+
+              svg {
+                path {
+                  stroke: #04213a;
+                }
+              }
+            }
+
+            &:hover {
+              background: url("/images/grain.png"),
+                linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+              color: $textblue;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 17px;
+            color: #ffffff99;
+            text-align: center;
+          }
+        }
+
+        p {
+          @include media-bp-down(lg) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    &.governance-templates {
+      position: relative;
+      grid-template-areas: "description image";
+      background-color: #012c4f;
+      overflow: hidden;
+      padding: 50px;
+      margin-bottom: 220px;
+
+      @include media-bp-up(xxl) {
+        border-radius: 20px;
+        margin: 0 30px 220px;
+      }
+
+      @include media-bp-down(lg) {
+        grid-template-areas:
+          "description"
+          "image";
+        margin: 0 0 60px 0;
+        padding: 60px 15px;
+        border-radius: 20px;
+        background-color: #003661;
+      }
+
+      .developmentkit__description__image {
+        z-index: 1;
+      }
+
+      .developmentkit__description {
+        max-width: 724px;
+        z-index: 1;
+        row-gap: unset;
+
+        @include media-bp-down(lg) {
+          row-gap: inherit;
+        }
+
+        h2 {
+          margin-bottom: 40px;
+
+          @include media-bp-down(lg) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      .developmentkit__background__halo {
+        position: absolute;
+        bottom: -50%;
+        width: 150%;
+        height: 100%;
+        background: radial-gradient(
+          50% 50% at 50% 50%,
+          rgba(59, 183, 168, 0.15) 0%,
+          rgba(217, 217, 217, 0) 100%
+        );
+
+        @include media-bp-down(lg) {
+          display: none;
+        }
+      }
+    }
+
+    &.tools {
+      position: relative;
+      max-width: 675px;
+      text-align: center;
+      margin-bottom: 125px;
+
+      @include media-bp-down(lg) {
+        margin: 0 auto 80px;
+        padding: 0 15px;
+      }
+
+      .developmentkit__description {
+        h2 {
+          font-size: 78px;
+
+          @include media-bp-down(lg) {
+            font-size: 40px;
+          }
+        }
+      }
+
+      .developmentkit__background__light {
+        position: absolute;
+        opacity: 0.12;
+        width: 735.5px;
+        height: 386.67px;
+        left: 100%;
+        background: #f3f0a4;
+        filter: blur(100px);
+        transform: matrix(-0.83, 0.56, 0.56, 0.83, 0, 0);
+      }
+    }
+
+    &.protocol {
+      max-width: 1281px;
+      grid-template-areas: "image description";
+      margin-bottom: 85px;
+
+      @include media-bp-down(lg) {
+        grid-template-areas:
+          "image"
+          "description";
+        margin-bottom: 60px;
+      }
+
+      .developmentkit__description {
+        max-width: 724px;
+
+        h2 {
+          line-height: 88px;
+
+          @include media-bp-down(lg) {
+            line-height: 110%;
+          }
+        }
+
+        p {
+          opacity: 80%;
+        }
+      }
+    }
+
+    &.documentation {
+      grid-template-areas: "description";
+      padding: 140px 0 210px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(0, 33, 58, 0) 50%, #00213a 100%),
+        center / cover no-repeat
+          url("../images/illus/background_img_3d_boxes.png");
+
+      @include media-bp-up(xxl) {
+        border-radius: 20px 20px 0 0;
+        margin: 0 30px;
+      }
+
+      @include media-bp-down(lg) {
+        border-radius: 20px 20px 0 0;
+        padding: 60px 15px 80px;
+        margin: unset;
+        background: linear-gradient(
+            0deg,
+            rgba(4, 33, 58, 0.8) 0%,
+            rgba(0, 54, 97, 0.8) 100%
+          ),
+          center / cover no-repeat
+            url("../images/illus/background_img_3d_boxes_mobile.png");
+      }
+
+      .developmentkit__description {
+        max-width: 724px;
+      }
+
+      p {
+        @include media-bp-down(lg) {
+          font-size: 20px;
+        }
+      }
+
+      p:last-of-type > a {
+        border-bottom: 1px solid #ffffff;
+      }
+    }
+  }
+}
