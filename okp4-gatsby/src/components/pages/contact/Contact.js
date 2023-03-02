@@ -34,12 +34,10 @@ const Contact = () => {
   const handleSubmit = useCallback(
     (event) => {
       event.preventDefault();
-      console.log("handleSubmit", { formData });
       const isEmailFormatValid = checkEmailFormat(formData.email);
       setEmailValid(isEmailFormatValid);
 
       if (!isEachMandatoryFieldFilled()) {
-        console.log("mandatoryFieldMissing");
         setFormState("mandatoryFieldMissing");
       } else if (isEmailFormatValid) {
         const config = {
