@@ -14,22 +14,6 @@ import DevWeb from "../../../assets/images/icons/developers/dev-web-bridges-icon
 import classNames from "classnames";
 
 const Developers = () => {
-  const devSocials = useMemo(
-    () => [
-      {
-        icon: <IconGithub />,
-        title: contentSocials.github.label,
-        url: contentSocials.github.url,
-      },
-      {
-        icon: <IconDiscord />,
-        title: contentSocials.discord.label,
-        url: contentSocials.discord.url,
-      },
-    ],
-    []
-  );
-
   const devBlocks = useMemo(
     () => [
       {
@@ -102,11 +86,12 @@ const Developers = () => {
               </span>{" "}
             </a>
           </div>
-          <StaticImage
-            className="developers__intro__image"
-            src="../../../assets/images/illus/okp4-open-laptop.png"
-            alt="developers OKP4"
-          />
+          <div className="developers__intro__image">
+            <StaticImage
+              src="../../../assets/images/illus/okp4-open-laptop.png"
+              alt="developers OKP4"
+            />
+          </div>
         </div>
         <div className="developers__blocks">
           {devBlocks.map(({ title, description, icon, label }) => (
