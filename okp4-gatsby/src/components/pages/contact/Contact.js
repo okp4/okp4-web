@@ -4,10 +4,12 @@ import RightArrowIcon from "../../../assets/images/icons/arrow-mr.inline.svg";
 import ErrorIcon from "../../../assets/images/icons/error_circle_rounded.inline.svg";
 import MessageSentIcon from "../../../assets/images/icons/mark_email_read.inline.svg";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 import {
-  SENDINBLUE_API_ENDPOINT,
-  SENDINBLUE_API_KEY,
-} from "gatsby-env-variables";
+  getSendinblueApiEndpoint,
+  getSendinblueApiKey,
+  getCaptchaSiteKey,
+} from "../../../utils/Utils";
 
 const EMAIL_REGEX =
   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -21,6 +23,7 @@ const Contact = () => {
   });
   const [isEmailValid, setEmailValid] = useState(true);
   const [formState, setFormState] = useState("notSubmitted");
+  const recaptchaRef = React.useRef(null);
 
   const checkEmailFormat = (email) => email.match(EMAIL_REGEX);
 
@@ -35,24 +38,25 @@ const Contact = () => {
   };
 
   const handleSubmit = useCallback(
-    (event) => {
+    async (event) => {
       event.preventDefault();
-      console.log("handleSubmit", {
-        SENDINBLUE_API_ENDPOINT,
-        SENDINBLUE_API_KEY,
-      });
+
+      const token = await recaptchaRef.current.executeAsync();
+      recaptchaRef.current.reset();
+
+      // TODO : check if token is valid
+
       const isEmailFormatValid = checkEmailFormat(formData.email);
       setEmailValid(isEmailFormatValid);
 
       if (!isEachMandatoryFieldFilled()) {
-        console.log("mandatoryFieldMissing");
         setFormState("mandatoryFieldMissing");
       } else if (isEmailFormatValid) {
         const config = {
           headers: {
             accept: "application/json",
             "content-type": "application/json",
-            "api-key": SENDINBLUE_API_KEY,
+            "api-key": getSendinblueApiKey(),
           },
         };
 
@@ -67,7 +71,7 @@ const Contact = () => {
         };
 
         axios
-          .post(SENDINBLUE_API_ENDPOINT, JSON.stringify(body), config)
+          .post(getSendinblueApiEndpoint(), JSON.stringify(body), config)
           .then((response) => {
             if (response.status === 400) {
               setFormState("error");
@@ -84,7 +88,7 @@ const Contact = () => {
           .catch((err) => setFormState("error"));
       }
     },
-    [formData]
+    [formData, recaptchaRef]
   );
 
   return (
@@ -166,6 +170,20 @@ const Contact = () => {
                   onChange={handleFormChange}
                 />
               </div>
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={getCaptchaSiteKey()}
+                size="invisible"
+                onChange={() => {
+                  console.log("Captcha onChange");
+                  const recaptchaValue = recaptchaRef.current.getValue();
+                  console.log({ recaptchaValue });
+                }}
+                onErrored={() => console.log("Captcha onErrored")}
+                onExpired={() => {
+                  console.log("Captcha onExpired");
+                }}
+              />
               <button onClick={handleSubmit}>
                 {content.send} <RightArrowIcon />
               </button>
