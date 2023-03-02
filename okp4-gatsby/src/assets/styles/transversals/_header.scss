@@ -269,9 +269,12 @@ header.header {
           .header__submenu {
             position: absolute;
             z-index: 100;
+
             @include media-bp-down(lg) {
+              animation: fade-in 1s linear;
               position: relative;
             }
+
             .header__submenu__container {
               position: absolute;
               min-width: 100px;

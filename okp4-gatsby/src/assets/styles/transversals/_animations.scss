@@ -19,3 +19,13 @@
     transform: translate3d(0, -2px, 0) rotate(0deg);
   }
 }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
