@@ -75,8 +75,8 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
   };
 
   useEffect(() => {
+    window.addEventListener("scroll", scrollStarted);
     setTimeout(function () {
-      window.addEventListener("scroll", scrollStarted);
       ResponsiveManager.initViewportHeightForMobile();
     }, 1000);
 
