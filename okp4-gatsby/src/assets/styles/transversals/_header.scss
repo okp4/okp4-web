@@ -104,7 +104,7 @@ header.header {
       transform: translate3d(0, -101%, 0);
       transition: all 1s cubic-bezier(0.43, 0.195, 0.02, 1);
       opacity: 0;
-      background-color: #004073;
+      background-color: #002745;
     }
 
     .header__top {
@@ -211,99 +211,124 @@ header.header {
 
       @include media-bp-down(lg) {
         flex-direction: column;
-        justify-content: flex-start;
         width: 100%;
         height: 100%;
-        padding-top: 160px;
+        padding: 193px 0 126px;
       }
 
-      .header__tabs {
-        margin-bottom: 20px;
-        @include media-bp-up(lg) {
-          margin-left: 210px;
-          margin-bottom: 0;
-        }
-        .header__menu__item {
-          display: inline-block;
-          padding: 10px;
-          font-weight: 700;
-
-          @include media-bp-down(lg) {
-            display: block;
-            text-align: center;
-          }
-
-          .header__menu__item--name {
-            text-transform: uppercase;
-            font-size: 18px;
-            cursor: pointer;
-            @include media-bp-up(lg) {
-              &:hover {
-                background: $menu-color;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-              }
-            }
-          }
-
-          .active {
-            background: $menu-color;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-        }
-
-        .header__submenu {
+      .menu__main {
+        .menu__button__back {
+          display: flex;
           position: absolute;
-          z-index: 100;
+          left: 15px;
+          top: 113px;
+          align-items: center;
+          column-gap: 7px;
+        }
+
+        .header__tabs {
+          margin-left: 210px;
+
           @include media-bp-down(lg) {
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            margin: unset;
           }
-          .header__submenu__container {
-            position: absolute;
-            min-width: 100px;
-            height: fit-content;
-            padding: 20px 0;
-            background: transparent;
-            white-space: nowrap;
+          .header__menu__item {
+            display: inline-block;
+            padding: 10px;
+            font-weight: 700;
 
             @include media-bp-down(lg) {
-              position: relative;
-              min-width: 200px;
+              display: block;
+              text-align: center;
+              padding: unset;
             }
 
-            .header__submenu__content {
-              padding: 20px 30px;
-              border-radius: 20px;
-              background: $pushblue;
-              background-repeat: repeat;
-              background-size: contain;
-
-              .header__submenu__item {
-                color: $white-80;
-                font-weight: 100;
-                font-size: 18px;
-
-                .header__submenu__external__link {
-                  display: flex;
-                  flex-wrap: nowrap;
-                  align-items: center;
-                  cursor: pointer;
-
-                  @include media-bp-down(lg) {
-                    justify-content: center;
-                  }
-
-                  a {
-                    margin-right: 10px;
-                  }
+            .header__menu__item--name {
+              text-transform: uppercase;
+              font-size: 18px;
+              cursor: pointer;
+              @include media-bp-up(lg) {
+                &:hover {
+                  background: $menu-color;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
                 }
               }
+            }
 
-              .separator {
-                margin: 9px 0;
-                border-top: 0.1px solid $white-80;
-                width: 100%;
+            .active {
+              background: $menu-color;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+
+          .header__submenu {
+            position: absolute;
+            z-index: 100;
+            @include media-bp-down(lg) {
+              position: relative;
+            }
+            .header__submenu__container {
+              position: absolute;
+              min-width: 100px;
+              height: fit-content;
+              padding: 20px 0;
+              background: transparent;
+              white-space: nowrap;
+
+              @include media-bp-down(lg) {
+                position: relative;
+                min-width: 200px;
+                padding: 37px 0 0;
+              }
+
+              .header__submenu__content {
+                padding: 20px 30px;
+                border-radius: 20px;
+                background: $pushblue;
+
+                background-repeat: repeat;
+                background-size: contain;
+
+                @include media-bp-down(lg) {
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: 20px;
+                  padding: unset;
+                  background: none;
+                }
+
+                .header__submenu__item {
+                  color: $white-80;
+                  font-weight: 100;
+                  font-size: 18px;
+
+                  .header__submenu__external__link {
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    cursor: pointer;
+
+                    @include media-bp-down(lg) {
+                      justify-content: center;
+                    }
+
+                    a {
+                      margin-right: 10px;
+                    }
+                  }
+                }
+
+                .header__submenu__item__separator {
+                  margin: 14px auto 0;
+                  border-top: 0.1px solid $white-80;
+                  width: 107px;
+                  opacity: 20%;
+                }
               }
             }
           }
@@ -333,21 +358,12 @@ header.header {
         justify-content: flex-end;
 
         @include media-bp-down(lg) {
-          display: block;
-          position: initial;
-          right: initial;
-          text-align: center;
+          display: none;
         }
 
         .header__resources__link {
           margin-left: 35px;
           transition: opacity 0.25s ease;
-
-          @include media-bp-down(lg) {
-            display: block;
-            margin: 0 0 30px;
-            text-align: center;
-          }
 
           span {
             display: inline-block;
