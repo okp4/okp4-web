@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback, useState, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "gatsby";
 import menu from "/content/transversals/menu.yaml";
 import classNames from "classnames";
@@ -36,7 +36,7 @@ const SubMenu = ({ subMenu }) => (
   </div>
 );
 
-const Menu = () => {
+const Menu = ({ handleMenuItemClick }) => {
   const { isLarge } = useBreakpoint();
   const location = useLocation();
   const [selectedMenu, setSelectedMenu] = useState(null);
@@ -66,6 +66,10 @@ const Menu = () => {
     },
     [selectedMenu]
   );
+
+  useEffect(() => {
+    handleMenuItemClick(!!selectedMenu?.subMenuItems?.length);
+  }, [handleMenuItemClick, selectedMenu]);
 
   const isActiveMenu = useCallback(
     (menuItem) =>
