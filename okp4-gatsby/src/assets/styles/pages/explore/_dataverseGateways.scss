@@ -259,8 +259,14 @@ main.dataverseGateways {
             padding: 100px 0;
           }
 
-          &:hover .dg__protocol__card {
-            opacity: 0.2;
+          @include media-bp-up(lg) {
+            &:hover .dg__protocol__card {
+              opacity: 0.2;
+            }
+          }
+
+          .dg__protocol__card--container {
+            height: fit-content;
           }
 
           .dg__protocol__card {
