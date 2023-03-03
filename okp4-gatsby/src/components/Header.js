@@ -17,10 +17,15 @@ import contentSocials from "/content/transversals/socials.yaml";
 import contentHeader from "/content/transversals/header.yaml";
 import Menu from "./Menu";
 import Breadcrumbs from "./Breadcrumbs";
+import { useBreakpoint } from "../hook/useBreakpoint";
 
 const Header = ({ isPositionFixed = false, breadcrumbs }) => {
+  const { isLarge } = useBreakpoint();
+  const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const divRef = useRef(null);
   const divMobile = useRef(null);
+
+  const showSocials = isLarge || !isSubMenuOpen;
 
   const getRatio = useCallback(() => {
     const windowHeight =
@@ -67,6 +72,10 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
     if (event.keyCode === 13) toggleBurger();
   };
 
+  const handleMenuItemClick = (hasSubMenu) => {
+    setIsSubMenuOpen(hasSubMenu);
+  };
+
   useEffect(() => {
     setTimeout(function () {
       window.addEventListener("scroll", scrollStarted);
@@ -102,70 +111,72 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
         </div>
       </div>
       <div className="wrapper header--desktop">
-        <div className="header__top">
-          <div className="header__top__message">
-            <p
-              dangerouslySetInnerHTML={{
-                __html: contentHeader.messageSocial,
-              }}
-            ></p>
+        {showSocials && (
+          <div className="header__top">
+            <div className="header__top__message">
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: contentHeader.messageSocial,
+                }}
+              ></p>
+            </div>
+            <div className="header__socials">
+              <a
+                href={contentSocials.linkedin.url}
+                className="header__socials__link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconLinkedin />
+              </a>
+              <a
+                href={contentSocials.twitter.url}
+                className="header__socials__link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconTwitter />
+              </a>
+              <a
+                href={contentSocials.github.url}
+                className="header__socials__link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconGithub />
+              </a>
+              <a
+                href={contentSocials.medium.url}
+                className="header__socials__link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconMedium />
+              </a>
+              <a
+                href={contentSocials.discord.url}
+                className="header__socials__link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconDiscord />
+              </a>
+              <a
+                href={contentSocials.telegram.url}
+                className="header__socials__link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IconTelegram />
+              </a>
+            </div>
           </div>
-          <div className="header__socials">
-            <a
-              href={contentSocials.linkedin.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconLinkedin />
-            </a>
-            <a
-              href={contentSocials.twitter.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconTwitter />
-            </a>
-            <a
-              href={contentSocials.github.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconGithub />
-            </a>
-            <a
-              href={contentSocials.medium.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconMedium />
-            </a>
-            <a
-              href={contentSocials.discord.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconDiscord />
-            </a>
-            <a
-              href={contentSocials.telegram.url}
-              className="header__socials__link"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IconTelegram />
-            </a>
-          </div>
-        </div>
+        )}
         <div className="header__bottom">
           <Link to="/" className="header__logo">
             <IconLogo />
           </Link>
-          <Menu />
+          <Menu handleMenuItemClick={handleMenuItemClick} />
           <nav className="header__resources">
             <a
               href={contentSocials.pollen.url}
