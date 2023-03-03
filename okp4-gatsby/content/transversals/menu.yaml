@@ -1,6 +1,6 @@
 humanDescription: Links used across all website for the tab menu
 items:
-  - name: LEARN
+  - name: Learn
     prefixPath: /learn
     subMenuItems:
       - name: OKP4
@@ -13,7 +13,7 @@ items:
         link: /learn/dataspace
       - name: $KNOW
         link: /learn/know
-  - name: DEVELOP
+  - name: Develop
     prefixPath: /develop
     subMenuItems:
       - name: OKP4 Development Kit
@@ -24,12 +24,14 @@ items:
         url: https://docs.okp4.network/
       - name: Participate
         url: https://github.com/okp4
-  - name: EXPLORE
+  - name: Explore
     prefixPath: /explore
     subMenuItems:
       - name: Portal
         link: /explore/portal
-  - name: INTERACT
+      - name: Dataverse Gateways
+        link: /explore/dataverse-gateways
+  - name: Interact
     prefixPath: /interact
     subMenuItems:
       - name: Developers

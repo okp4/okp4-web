@@ -8,6 +8,7 @@ const Parallax = ({
   parallaxStart,
   parallaxEnd,
   parallaxMiddle,
+  size = "md",
 }) => {
   const divRef = useRef(null);
 
@@ -44,7 +45,7 @@ const Parallax = ({
   };
 
   useEffect(() => {
-    if (ResponsiveManager.isWindowLarger("md")) {
+    if (ResponsiveManager.isWindowLarger(size)) {
       setTimeout(function () {
         if (divRef.current) {
           divRef.current.rafId = 0;

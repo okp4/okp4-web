@@ -249,16 +249,15 @@ header.header {
 
             .header__menu__item--name {
               text-transform: uppercase;
-              font-size: 18px;
               cursor: pointer;
-              @include media-bp-up(lg) {
-                &:hover {
-                  background: $menu-color;
-                  background-clip: text;
-                  -webkit-text-fill-color: transparent;
-                }
+            @include media-bp-up(lg) {
+              &:hover {
+                background: $menu-color;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
               }
             }
+          }
 
             .active {
               background: $menu-color;
@@ -300,12 +299,9 @@ header.header {
                   flex-direction: column;
                   padding: unset;
                   background: none;
-                }
-
-                .header__submenu__item {
-                  color: $white-80;
-                  font-weight: 100;
-                  font-size: 18px;
+                }.header__submenu__item {
+                color: $white-80;
+                font-weight: 100;
 
                   .header__submenu__external__link {
                     display: flex;
