@@ -48,7 +48,7 @@ main.dataverseGateways {
           width: 100%;
         }
         @include media-bp-down(lg) {
-          min-width: none;
+          min-width: unset;
         }
 
         @media screen and (max-width: 420px) {
@@ -220,26 +220,31 @@ main.dataverseGateways {
 
     .dg__protocol {
       position: relative;
-      padding-top: 100px;
       margin: 0 auto 100px;
       max-width: 1329px;
       max-height: 1037px;
       min-height: 929px;
+      display: flex;
+      flex-direction: column-reverse;
+      height: 100%;
+      width: 100%;
+      justify-content: flex-end;
 
       @include media-bp-down(xl) {
         min-height: 830px;
       }
       @include media-bp-down(md) {
-        min-height: 632px;
+        min-height: 630px;
         padding: 0;
+        margin-bottom: 30px;
       }
 
       .dg__protocol__cards--container {
         position: absolute;
         padding: 0 60px;
+        width: inherit;
 
         @include media-bp-down(lg) {
-          width: 100vw;
           overflow-x: auto;
           white-space: nowrap;
         }
@@ -251,7 +256,6 @@ main.dataverseGateways {
           z-index: 4;
 
           @include media-bp-down(lg) {
-            width: 1329px;
             padding: 100px 0;
           }
 
@@ -277,10 +281,10 @@ main.dataverseGateways {
 
             @for $i from 0 through $nb-element - 1 {
               $angle: calc($min-angle + ($i * $step));
-              $angle-in-rad: calc( $angle * math.$pi / 180);
+              $angle-in-rad: calc($angle * math.$pi / 180);
 
               &.offset-#{$i} {
-                margin-top: #{ 14 * math.abs($i - $middle) }px;
+                margin-top: #{14 * math.abs($i - $middle)}px;
                 transform: rotate(#{$angle}deg);
                 transform-origin: 50% bottom;
               }
@@ -296,9 +300,9 @@ main.dataverseGateways {
 
       .dg__protocol__book--container {
         display: flex;
+        width: 100%;
 
         @include media-bp-down(lg) {
-          padding: 150px 0;
           top: 0;
           bottom: 0;
           width: 100%;
@@ -315,9 +319,10 @@ main.dataverseGateways {
             height: 100%;
             width: 100%;
             padding: 185px 0 0;
+            margin-top: 240px;
           }
           @include media-bp-down(md) {
-            margin-top: 75px;
+            margin-top: 275px;
           }
 
           .dg__protocol__book--element {
