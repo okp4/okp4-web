@@ -5,7 +5,7 @@ header.header {
   z-index: 99;
   width: 100%;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 
   &.fixed {
     position: absolute;
@@ -441,7 +441,7 @@ header.header {
     @include media-bp-down(lg) {
       display: none;
     }
-    padding: 20px 0;
+    padding-top: 30px;
 
     .breadcrumbs__item {
       display: inline-block;

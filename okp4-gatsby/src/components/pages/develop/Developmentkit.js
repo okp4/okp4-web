@@ -9,7 +9,7 @@ const DevelopmentKit = () => (
   <div className="developmentkit__main">
     <div className="developmentkit__description__wrapper empower">
       <div className="developmentkit__description">
-        <h2>{contentDevelopmentKit.empower.header}</h2>
+        <h1>{contentDevelopmentKit.empower.header}</h1>
         <p>{contentDevelopmentKit.empower.description}</p>
       </div>
       <StaticImage
@@ -22,7 +22,14 @@ const DevelopmentKit = () => (
     <div className="developmentkit__description__wrapper create">
       <div className="developmentkit__description">
         <h2>{contentDevelopmentKit.create.header}</h2>
-        <p>{contentDevelopmentKit.create.description}</p>
+        {contentDevelopmentKit.create.description.map((part) => (
+          <p
+            className="text"
+            dangerouslySetInnerHTML={{
+              __html: part,
+            }}
+          ></p>
+        ))}
       </div>
       <StaticImage
         className="developmentkit__description__image"

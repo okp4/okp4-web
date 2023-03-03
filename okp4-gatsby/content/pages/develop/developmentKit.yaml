@@ -10,7 +10,10 @@ empower:
   description: With a comprehensive set of tools and resources, you'll be able to create your project faster and more efficiently than ever before.
 create:
   header: create innovative web3 apps with OKP4 development kit
-  description: The OKP4 Development Kit is a comprehensive set of software development tools and resources made available by OKP4 and the community. This Development Kit empowers developers to create innovative Web3 applications using the OKP4 protocol. With OKP4 DK, you have access to a Web3 Design System, Data Space Governance Templates, many command line tools, a large set of open-source libraries (functions, connectors) for various different technologies, and a comprehensive documentation that makes it easier to build secure and efficient web3 applications. Whether you're an experienced developer or just starting out, the OKP4 Development Kit equips you with the tools you need to turn your ideas into reality. Join the growing family of OKP4 builders and bring your vision to life.
+  description:
+    - The OKP4 Development Kit is a comprehensive set of software development tools and resources made available by OKP4 and the community.
+    - This Development Kit empowers developers to create innovative Web3 applications using the OKP4 protocol. With OKP4 DK, you have access to a Web3 Design System, Data Space Governance Templates, many command line tools, a large set of open-source libraries (functions, connectors) for various different technologies, and a comprehensive documentation that makes it easier to build secure and efficient web3 applications.
+    - Whether you're an experienced developer or just starting out, the OKP4 Development Kit equips you with the tools you need to turn your ideas into reality. Join the growing family of OKP4 builders and bring your vision to life.
 designSystem:
   header: a web3 design system to swiftly develop user-friendly interfaces
   description: The OKP4 Design System is an open-source set of components and resources created to facilitate the design and development of web interfaces in the OKP4 Ecosystem. This design system is a reference for teams working in the OKP4 Ecosystem, enabling you to design and develop web interfaces with speed, consistency and quality.

@@ -9,7 +9,7 @@ const LegalMentionsAndCookiePolicy = () => (
     <div className="wrapper">
       <div className="legalMentions__content">
         <div>
-          <h3>{contentLegalMentions.title}</h3>
+          <h1>{contentLegalMentions.title}</h1>
           <div className="legalMentions__items">
             {contentLegalMentions.items.map((item, index) => (
               <div data-key={index} key={index} className="legalMentions__item">

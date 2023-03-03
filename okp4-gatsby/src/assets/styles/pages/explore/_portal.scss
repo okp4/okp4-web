@@ -4,7 +4,7 @@
   overflow-x: hidden;
 
   @include media-bp-down(lg) {
-    padding-top: 90px;
+    padding-top: 70px;
   }
 
   .portal__inline__link {
@@ -16,8 +16,7 @@
     display: grid;
     justify-items: center;
     text-align: center;
-    margin: 150px auto 46px;
-    padding: 0 90px;
+    margin: 122px auto 46px;
     max-width: 1354px;
 
     @media screen and (max-width: 1440px) {
@@ -25,13 +24,12 @@
     }
 
     @include media-bp-down(lg) {
-      margin: 20px auto 60px;
+      margin: 46px auto 60px;
       padding: 0 15px;
     }
 
     h1 {
       font-weight: 700;
-      font-size: 106.688px;
       line-height: 99px;
       letter-spacing: 0.03em;
       margin-bottom: 27px;

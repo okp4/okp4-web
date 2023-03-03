@@ -120,12 +120,17 @@ const Know = () => (
         <p className="know__more__description">
           {contentKnow.morePart.description}
         </p>
-        <Link to={contentKnow.morePart.url} className="know__more__button">
+        <a
+          href={contentKnow.morePart.url}
+          className="know__more__button"
+          target="_blank"
+          rel="noreferrer"
+        >
           <span className="know__more__button__text">
             {contentKnow.morePart.button}
             <IconArrowtr />
           </span>
-        </Link>
+        </a>
       </div>
     </div>
   </div>
