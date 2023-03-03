@@ -50,7 +50,7 @@
   $max: bp-min($name, $breakpoints);
 
   @if $max {
-    @media (max-width: $max) {
+    @media (max-width: ($max - 1px)) {
       @content;
     }
   } @else {
