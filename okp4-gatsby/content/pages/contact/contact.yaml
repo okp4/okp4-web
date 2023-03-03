@@ -1,0 +1,28 @@
+humanDescription: Content used for the contact page
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Contact
+    link: /contact
+contactTitle: contact us
+addressPart:
+  addressTitle: Address
+  address: |
+    OKP4<br />
+    1, passage de l'Europe<br />
+    31400 Toulouse<br />
+    France
+businessPart:
+  businessTitle: Business
+  email: hello@network.com
+contactFormTitle: Have a question?
+name: Name *
+country: Country
+email: Email address *
+message: Message *
+send: Send the message
+formMessage:
+  mandatoryFieldMissing: Please fill in all mandatory fields.
+  messageSent: Your message has been sent.
+  wrongEmailFormat: The format is not correct.
+  error: An error occurred while sending the message. Try again later.
