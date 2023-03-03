@@ -13,7 +13,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-
   publish-gh-pages:
     runs-on: ubuntu-22.04
     steps:
@@ -34,6 +33,7 @@ jobs:
         working-directory: okp4-gatsby
         run: |
           yarn build
+          cp ../.github/workflows/scripts/env.staging.js public/scripts/env.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
