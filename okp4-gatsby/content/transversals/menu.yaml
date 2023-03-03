@@ -27,11 +27,9 @@ items:
   - name: Explore
     prefixPath: /explore
     subMenuItems:
-      prefixPath: /explore
-    subMenuItems:
       - name: Portal
         link: /explore/portal
-  - name: Dataverse Gateways
+      - name: Dataverse Gateways
         link: /explore/dataverse-gateways
   - name: Interact
     prefixPath: /interact
