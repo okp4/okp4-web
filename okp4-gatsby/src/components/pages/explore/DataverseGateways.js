@@ -1,61 +1,14 @@
 import * as React from "react";
-import {
-  useEffect,
-  useState,
-  useRef,
-  useCallback,
-  useMemo,
-  createRef,
-} from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useMemo } from "react";
+import { motion } from "framer-motion";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../utils/MediaManager.js";
-import * as ScrollManager from "../../../utils/ScrollManager.js";
 import Halo from "../../animations/Halo.js";
 import content from "/content/pages/explore/dataverse-gateways.yaml";
 import Parallax from "../../animations/Parallax.js";
-import classNames from "classnames";
 import { useBreakpoint } from "../../../hook/useBreakpoint";
 
 const parallaxLandscapeCard = [100, 150, 50, 125];
-const cardStyles = [
-  {
-    margin: 57,
-    rotate: -10,
-  },
-  {
-    margin: 35,
-    rotate: -7.5,
-  },
-  {
-    margin: 20,
-    rotate: -5,
-  },
-  {
-    margin: 10,
-    rotate: -2.5,
-  },
-  {
-    margin: 0,
-    rotate: 0,
-  },
-  {
-    margin: 10,
-    rotate: 2.5,
-  },
-  {
-    margin: 20,
-    rotate: 5,
-  },
-  {
-    margin: 35,
-    rotate: 7.5,
-  },
-  {
-    margin: 57,
-    rotate: 10,
-  },
-];
 
 const DataverseGateways = ({ files }) => {
   const ref = useRef(null);
@@ -63,14 +16,16 @@ const DataverseGateways = ({ files }) => {
   const firstPageRef = useRef(null);
   const protocolRef = useRef(null);
   const keywordsContainerRef = useRef(null);
-  const { isLarge } = useBreakpoint();
   const cardRefs = useRef([]);
 
-  const mainKeywordIndex = 0;
-
-  const keywords = useMemo(() => content.featured.keywords, []);
-
-  const cardsLength = useMemo(() => content.protocol.cards.length, []);
+  React.useEffect(() => {
+    if (protocolRef) {
+      const containerScrollWidth = protocolRef.current.scrollWidth;
+      console.log(protocolRef.current);
+      protocolRef.current.scrollLeft =
+        (containerScrollWidth - protocolRef.current.clientWidth) / 2;
+    }
+  }, [protocolRef]);
 
   return (
     <div className="dataverse_gateways" ref={ref}>
@@ -124,7 +79,7 @@ const DataverseGateways = ({ files }) => {
           </div>
 
           <div className="dg__protocol">
-          <div className="dg__protocol__book--container">
+            <div className="dg__protocol__book--container">
               <div className="dg__protocol__book">
                 <div className="dg__protocol__book--element">
                   <StaticImage
@@ -174,28 +129,28 @@ const DataverseGateways = ({ files }) => {
               </div>
             </div>
             <div className="dg__protocol__cards--container" ref={protocolRef}>
-              <div className="dg__protocol__cards" ref={protocolRef}>
+              <div className="dg__protocol__cards">
                 {content.protocol.cards.map((card, index) => (
                   <motion.div
+                    key={index}
                     whileHover={{ scale: 1.7, zIndex: 100 }}
                     transition={{ duration: 0.2 }}
+                    style={{ height: "fit-content" }}
                   >
                     <div
                       key={index}
                       className={`dg__protocol__card offset-${index}`}
                       ref={cardRefs[index]}
                     >
-                        <GatsbyImage
-                          image={MediaManager.GetImage("explore/" + card, files)}
-                          alt={card}
-                        />
+                      <GatsbyImage
+                        image={MediaManager.GetImage("explore/" + card, files)}
+                        alt={card}
+                      />
                     </div>
                   </motion.div>
-               
                 ))}
               </div>
             </div>
-            
           </div>
         </div>
       </div>
