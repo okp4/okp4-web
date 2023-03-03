@@ -326,9 +326,10 @@ header.header {
                 .header__submenu__item__separator {
                   margin: 9px auto;
                   border-top: 0.1px solid $white-80;
-                  width: 107px;
+                  width: 100%;
                   opacity: 20%;
                   @include media-bp-down(lg) {
+                    width: 107px;
                     margin: 20px auto;
                   }
                 }
