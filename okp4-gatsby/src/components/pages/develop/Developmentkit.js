@@ -9,7 +9,7 @@ const DevelopmentKit = () => (
   <div className="developmentkit__main">
     <div className="developmentkit__description__wrapper empower">
       <div className="developmentkit__description">
-        <h2>{contentDevelopmentKit.empower.header}</h2>
+        <h1>{contentDevelopmentKit.empower.header}</h1>
         <p>{contentDevelopmentKit.empower.description}</p>
       </div>
       <StaticImage

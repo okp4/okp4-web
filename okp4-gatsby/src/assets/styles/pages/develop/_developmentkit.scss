@@ -4,7 +4,7 @@
   overflow-x: hidden;
 
   @include media-bp-down(lg) {
-    padding-top: 90px;
+    padding-top: 70px;
   }
 
   .developmentkit__description__wrapper {
@@ -63,6 +63,7 @@
       grid-template-areas: "description image";
       max-width: 1322px;
       margin-bottom: 160px;
+      align-items: flex-start;
 
       @include media-bp-down(lg) {
         grid-template-areas:
@@ -74,19 +75,22 @@
       .developmentkit__description {
         row-gap: 50px;
         max-width: 650px;
+        margin-top: 0;
+        padding-top: 0;
 
         @include media-bp-down(lg) {
           row-gap: 20px;
         }
 
-        h2 {
-          font-size: 106.688px;
-          line-height: 85px;
+        h1 {
+          line-height: 100px;
           letter-spacing: 0.03em;
+          margin-top: 122px;
 
           @include media-bp-down(lg) {
             font-size: 65px;
             line-height: 72px;
+            margin-top: 46px;
           }
         }
 

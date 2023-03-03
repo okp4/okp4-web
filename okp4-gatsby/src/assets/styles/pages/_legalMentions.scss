@@ -1,11 +1,11 @@
 .legalMentions {
-  min-height: 100vh;
-  padding-top: 25vh;
+  min-height: calc(100vh - 505px);
+  padding-top: 122px;
   padding-bottom: 10vh;
 
   @include media-bp-down(lg) {
     width: 100%;
-    padding-top: 110px;
+    padding-top: 56px;
   }
 
   .wrapper {
