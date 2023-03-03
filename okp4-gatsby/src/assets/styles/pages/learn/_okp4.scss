@@ -1,9 +1,13 @@
 .okp4 {
   min-height: 100vh;
-  padding-top: 15vh;
+  padding-top: 181px;
+
+  @include media-bp-down(lg) {
+    padding-top: 70px;
+  }
 
   .learn-okp4 {
-    padding-top: 10vh;
+    //padding-top: 10vh;
     margin: 0 auto;
   }
 
@@ -94,6 +98,11 @@
   .okp4__presentation {
     padding-bottom: 95px;
     position: relative;
+    margin-top: 122px;
+
+    @include media-bp-down(lg) {
+      margin-top: 46px;
+    }
 
     .okp4__title {
       text-align: center;

@@ -55,7 +55,7 @@ const DataSpace = () => {
             <div className="dataspace__background__halo" />
           </div>
           <div className="dataspace__description build">
-            <h2>{contentDataSpace.dataSpaces.build.header}</h2>
+            <h1>{contentDataSpace.dataSpaces.build.header}</h1>
             <p>{contentDataSpace.dataSpaces.build.description}</p>
           </div>
         </div>
