@@ -20,6 +20,10 @@
     display: grid;
     gap: 40px;
 
+    h1 {
+      line-height: 100px;
+    }
+
     .subtitle {
       color: $white-80;
       a {
