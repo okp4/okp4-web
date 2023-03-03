@@ -473,7 +473,7 @@ main.homepage {
             );
           }
 
-          @media (max-width: 1025px) {
+          @include media-bp-down(lg) {
             display: block;
             margin-top: 32px;
             align-self: stretch;
