@@ -3,6 +3,7 @@ body {
 }
 
 .dataspace__main {
+  overflow: hidden;
   min-height: calc(100vh - 505px);
   padding-top: 181px;
 
@@ -123,7 +124,6 @@ body {
     position: relative;
     margin: 0 auto;
     padding: 0px 0 180px;
-    overflow: hidden;
 
     @include media-bp-down(lg) {
       padding: 0px 15px 60px;
@@ -133,7 +133,6 @@ body {
     .dataspace__data__spaces__wrapper {
       display: grid;
       grid-template-areas: "img description";
-      //align-items: center;
       justify-content: center;
       column-gap: 80px;
       padding: 0 30px;
@@ -161,6 +160,7 @@ body {
         position: relative;
         grid-area: img;
         padding-top: 20px;
+        align-self: center;
 
         @include media-bp-down(lg) {
           justify-self: center;
