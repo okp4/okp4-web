@@ -14,7 +14,7 @@ const DevelopmentKit = () => (
       </div>
       <StaticImage
         className="developmentkit__description__image"
-        src="../../../assets/images/illus/okp4-open-laptop.png"
+        src="../../../assets/images/illus/open_laptop_without_logo.png"
         alt="open laptop"
         loading="eager"
       />
