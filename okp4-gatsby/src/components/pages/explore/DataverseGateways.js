@@ -17,6 +17,7 @@ const DataverseGateways = ({ files }) => {
   const protocolRef = useRef(null);
   const keywordsContainerRef = useRef(null);
   const cardRefs = useRef([]);
+  const { isLarge } = useBreakpoint();
 
   React.useEffect(() => {
     if (protocolRef) {
@@ -130,13 +131,8 @@ const DataverseGateways = ({ files }) => {
             </div>
             <div className="dg__protocol__cards--container" ref={protocolRef}>
               <div className="dg__protocol__cards">
-                {content.protocol.cards.map((card, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover={{ scale: 1.7, zIndex: 100 }}
-                    transition={{ duration: 0.2 }}
-                    style={{ height: "fit-content" }}
-                  >
+                {content.protocol.cards.map((card, index) => {
+                  const content = (
                     <div
                       key={index}
                       className={`dg__protocol__card offset-${index}`}
@@ -147,8 +143,22 @@ const DataverseGateways = ({ files }) => {
                         alt={card}
                       />
                     </div>
-                  </motion.div>
-                ))}
+                  );
+                  return isLarge ? (
+                    <motion.div
+                      className="dg__protocol__card--container"
+                      key={index}
+                      whileHover={{ scale: 1.7, zIndex: 100 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      {content}
+                    </motion.div>
+                  ) : (
+                    <div key={index} className="dg__protocol__card--container">
+                      {content}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
