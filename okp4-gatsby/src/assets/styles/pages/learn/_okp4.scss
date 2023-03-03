@@ -108,7 +108,6 @@
       text-align: center;
       margin: 0 auto 90px;
       @include media-bp-between(lg, xxl) {
-        font-size: 100px;
         max-width: 1025px;
       }
     }
