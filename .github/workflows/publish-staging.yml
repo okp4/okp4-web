@@ -33,7 +33,11 @@ jobs:
         working-directory: okp4-gatsby
         run: |
           yarn build
-          cp ../.github/workflows/scripts/env.staging.js public/scripts/env.js
+
+      - name: Replace env script
+        working-directory: .github
+        run: |
+          cp scripts/env.staging.js ../okp4-gatsby/public/scripts/env.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

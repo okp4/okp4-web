@@ -41,7 +41,11 @@ jobs:
         working-directory: okp4-gatsby
         run: |
           yarn build
-          cp ../.github/workflows/scripts/env.prod.js public/scripts/env.js
+
+      - name: Replace env script
+        working-directory: .github
+        run: |
+          cp scripts/env.prod.js ../okp4-gatsby/public/scripts/env.js
 
       - name: Copy build output to OVH machine
         uses: garygrossgarten/github-action-scp@v0.8.0
