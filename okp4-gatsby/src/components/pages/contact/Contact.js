@@ -1,23 +1,27 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import content from "/content/pages/contact/contact.yaml";
 import RightArrowIcon from "../../../assets/images/icons/arrow-mr.inline.svg";
 import ErrorIcon from "../../../assets/images/icons/error_circle_rounded.inline.svg";
 import MessageSentIcon from "../../../assets/images/icons/mark_email_read.inline.svg";
 import axios from "axios";
+import { getOkp4Env } from "../../../utils/utils";
 
-const SENDINBLUE_ENDPOINT = "https://api.sendinblue.com/v3/contacts";
 const EMAIL_REGEX =
-  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+const initialFormData = {
+  name: "",
+  country: "",
+  email: "",
+  message: "",
+};
+const initialFormState = "notSubmitted";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    country: "",
-    email: "",
-    message: "",
-  });
+  const [formData, setFormData] = useState(initialFormData);
   const [isEmailValid, setEmailValid] = useState(true);
-  const [formState, setFormState] = useState("notSubmitted");
+  const [formState, setFormState] = useState(initialFormState);
+  const okp4Env = useMemo(() => getOkp4Env(), []);
 
   const checkEmailFormat = (email) => email.match(EMAIL_REGEX);
 
@@ -27,12 +31,16 @@ const Contact = () => {
     [formData]
   );
 
+  const resetFormData = useCallback(() => setFormData(initialFormData), []);
+  const resetFormState = useCallback(() => setFormState(initialFormState), []);
+
   const handleFormChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
   const handleSubmit = useCallback(
     (event) => {
+      resetFormState();
       event.preventDefault();
       const isEmailFormatValid = checkEmailFormat(formData.email);
       setEmailValid(isEmailFormatValid);
@@ -40,44 +48,68 @@ const Contact = () => {
       if (!isEachMandatoryFieldFilled()) {
         setFormState("mandatoryFieldMissing");
       } else if (isEmailFormatValid) {
-        const config = {
-          headers: {
-            accept: "application/json",
-            "content-type": "application/json",
-            "api-key":
-              "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",
-          },
-        };
+        if (okp4Env) {
+          const { SENDINBLUE_API_ENDPOINT, SENDINBLUE_API_KEY } = okp4Env;
+          const config = {
+            headers: {
+              accept: "application/json",
+              "content-type": "application/json",
+              "api-key": SENDINBLUE_API_KEY,
+            },
+          };
 
-        const body = {
-          email: formData.email,
-          attributes: {
-            NAME: formData.name,
-            COUNTRY: formData.country,
-            EMAIL: formData.email,
-            MESSAGE: formData.message,
-          },
-        };
+          const body = {
+            email: formData.email,
+            attributes: {
+              NAME: formData.name,
+              COUNTRY: formData.country,
+              EMAIL: formData.email,
+              MESSAGE: formData.message,
+            },
+          };
 
-        axios
-          .post(SENDINBLUE_ENDPOINT, JSON.stringify(body), config)
-          .then((response) => {
-            if (response.status === 400) {
+          axios
+            .post(SENDINBLUE_API_ENDPOINT, JSON.stringify(body), config)
+            .then((response) => {
+              if (response.data.id) {
+                resetFormData();
+                setFormState("success");
+              } else {
+                throw new Error(
+                  "HTTP server sent a 2** response that does not contain the created contact id."
+                );
+              }
+            })
+            .catch((error) => {
+              if (error.response) {
+                console.error(
+                  `HTTP server responded with a ${
+                    error.response.status
+                  } code with the following error: ${JSON.stringify(
+                    error.response.data
+                  )}`
+                );
+              } else if (error.request) {
+                console.error(
+                  `Request was sent to the HTTP server but no response was received: ${error.request}`
+                );
+              } else {
+                console.error(
+                  `Oops.. An unspecified error occurred while trying to create a contact: ${error.message}`
+                );
+              }
               setFormState("error");
-            } else {
-              setFormData({
-                name: "",
-                country: "",
-                email: "",
-                message: "",
-              });
-              setFormState("success");
-            }
-          })
-          .catch((err) => setFormState("error"));
+            });
+        }
       }
     },
-    [formData]
+    [
+      formData,
+      isEachMandatoryFieldFilled,
+      okp4Env,
+      resetFormData,
+      resetFormState,
+    ]
   );
 
   return (
