@@ -33,12 +33,12 @@
       column-gap: 100px;
       @include media-bp-down(xxl) {
         column-gap: 50px;
-        margin-top: 46px;
       }
 
       @include media-bp-down(lg) {
         display: flex;
         flex-direction: column;
+        margin-top: 46px;
       }
 
       .community_titles {
