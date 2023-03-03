@@ -124,34 +124,7 @@ const DataverseGateways = ({ files }) => {
           </div>
 
           <div className="dg__protocol">
-            <div className="dg__protocol__cards--container" ref={protocolRef}>
-              <div className="dg__protocol__cards" ref={protocolRef}>
-                {content.protocol.cards.map((card, index) => (
-                  <div
-                    key={index}
-                    className="dg__protocol__card"
-                    ref={cardRefs[index]}
-                  >
-                    <motion.div
-                      whileHover={{ scale: 1.7 }}
-                      transition={{ duration: 0.2 }}
-                      style={
-                        isLarge && {
-                          marginTop: `${cardStyles[index].margin}px`,
-                          rotate: `${cardStyles[index].rotate}deg`,
-                        }
-                      }
-                    >
-                      <GatsbyImage
-                        image={MediaManager.GetImage("explore/" + card, files)}
-                        alt={card}
-                      />
-                    </motion.div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="dg__protocol__book--container">
+          <div className="dg__protocol__book--container">
               <div className="dg__protocol__book">
                 <div className="dg__protocol__book--element">
                   <StaticImage
@@ -200,6 +173,29 @@ const DataverseGateways = ({ files }) => {
                 </div>
               </div>
             </div>
+            <div className="dg__protocol__cards--container" ref={protocolRef}>
+              <div className="dg__protocol__cards" ref={protocolRef}>
+                {content.protocol.cards.map((card, index) => (
+                  <motion.div
+                    whileHover={{ scale: 1.7, zIndex: 100 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div
+                      key={index}
+                      className={`dg__protocol__card offset-${index}`}
+                      ref={cardRefs[index]}
+                    >
+                        <GatsbyImage
+                          image={MediaManager.GetImage("explore/" + card, files)}
+                          alt={card}
+                        />
+                    </div>
+                  </motion.div>
+               
+                ))}
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

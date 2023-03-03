@@ -1,3 +1,5 @@
+@use "sass:math";
+
 main.dataverseGateways {
   min-height: 100vh;
 
@@ -253,30 +255,40 @@ main.dataverseGateways {
             padding: 100px 0;
           }
 
+          &:hover .dg__protocol__card {
+            opacity: 0.2;
+          }
+
           .dg__protocol__card {
             margin: 0 5px;
-            opacity: 0.8;
             max-height: 185px;
             max-width: 120px;
+
+            &:hover {
+              opacity: 1;
+            }
+
+            $min-angle: -8;
+            $max-angle: 8;
+            $nb-element: 9;
+            $alpha: 240;
+            $step: math.div($max-angle - $min-angle, $nb-element - 1);
+            $middle: math.div($nb-element - 1, 2);
+
+            @for $i from 0 through $nb-element - 1 {
+              $angle: calc($min-angle + ($i * $step));
+              $angle-in-rad: calc( $angle * math.$pi / 180);
+
+              &.offset-#{$i} {
+                margin-top: #{ 14 * math.abs($i - $middle) }px;
+                transform: rotate(#{$angle}deg);
+                transform-origin: 50% bottom;
+              }
+            }
 
             @include media-bp-down(lg) {
               height: 185px;
               width: 120px;
-            }
-
-            &:hover {
-              z-index: 5;
-              opacity: 1;
-            }
-          }
-          &:hover {
-            :not(.dg__protocol__card:hover) {
-              div {
-                div {
-                  transition: opacity 0.2s ease;
-                  opacity: 0.2;
-                }
-              }
             }
           }
         }
