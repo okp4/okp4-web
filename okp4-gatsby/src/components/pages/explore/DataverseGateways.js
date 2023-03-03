@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useRef, useMemo } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../utils/MediaManager.js";
@@ -11,12 +11,7 @@ import { useBreakpoint } from "../../../hook/useBreakpoint";
 const parallaxLandscapeCard = [100, 150, 50, 125];
 
 const DataverseGateways = ({ files }) => {
-  const ref = useRef(null);
-  const landscapeRef = useRef(null);
-  const firstPageRef = useRef(null);
   const protocolRef = useRef(null);
-  const keywordsContainerRef = useRef(null);
-  const cardRefs = useRef([]);
   const { isLarge } = useBreakpoint();
 
   React.useEffect(() => {
@@ -29,13 +24,13 @@ const DataverseGateways = ({ files }) => {
   }, [protocolRef]);
 
   return (
-    <div className="dataverse_gateways" ref={ref}>
+    <div className="dataverse_gateways">
       <Halo />
       <div className="wrapper">
-        <div className="dg__first_page" ref={firstPageRef}>
+        <div className="dg__first_page">
           <h1 className="dg__main_title">{content.title}</h1>
           <p className="introduction">{content.featured.introduction}</p>
-          <div className="keywords--container" ref={keywordsContainerRef}>
+          <div className="keywords--container">
             <div className="halo" />
             <div className="keywords">
               <div className="keyword share">Share & Contribute</div>
@@ -52,7 +47,7 @@ const DataverseGateways = ({ files }) => {
             {content.landscape.introduction}
           </p>
 
-          <div className="dg__landscape__cards" ref={landscapeRef}>
+          <div className="dg__landscape__cards">
             {content.landscape.cards.map((card, index) => (
               <Parallax
                 key={index}
@@ -132,31 +127,32 @@ const DataverseGateways = ({ files }) => {
             <div className="dg__protocol__cards--container" ref={protocolRef}>
               <div className="dg__protocol__cards">
                 {content.protocol.cards.map((card, index) => {
-                  const content = (
-                    <div
-                      key={index}
-                      className={`dg__protocol__card offset-${index}`}
-                      ref={cardRefs[index]}
-                    >
-                      <GatsbyImage
-                        image={MediaManager.GetImage("explore/" + card, files)}
-                        alt={card}
-                      />
-                    </div>
+                  const cardContent = (
+                    <GatsbyImage
+                      image={MediaManager.GetImage("explore/" + card, files)}
+                      alt={card}
+                    />
                   );
+                  const baseProps = {
+                    key: index,
+                    className: `dg__protocol__card offset-${index}`,
+                    style: { height: "fit-content" },
+                  };
                   return isLarge ? (
                     <motion.div
-                      className="dg__protocol__card--container"
-                      key={index}
-                      whileHover={{ scale: 1.7, zIndex: 100 }}
-                      transition={{ duration: 0.2 }}
+                      {...baseProps}
+                      whileHover={{
+                        scale: 1.6,
+                        zIndex: 100,
+                        y: "30%",
+                        marginInline: "40px",
+                      }}
+                      transition={{ duration: 0.3 }}
                     >
-                      {content}
+                      {cardContent}
                     </motion.div>
                   ) : (
-                    <div key={index} className="dg__protocol__card--container">
-                      {content}
-                    </div>
+                    <div {...baseProps}>{cardContent}</div>
                   );
                 })}
               </div>
