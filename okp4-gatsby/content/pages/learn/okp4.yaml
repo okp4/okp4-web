@@ -13,14 +13,11 @@ presentationPart:
 dataSharingPart:
   title: How to mainstream Data Sharing?
   image: learn-okp4-section1.png
-  text: |
-    <p>
-    A decentralized data-sharing infrastructure could enable many new opportunities for data way beyond data exchange. OKP4 is a public PoS layer 1 blockchain built for trust-minimized data sharing. It is specifically designed to enable communities to share data, algorithms, and resources to create a sovereign Dataverse and an environment of applications on top of it.
-    </p>
-    <br />
-    <p>
-    OKP4 protocol allows the creation of fully customizable Data Spaces where communities can agree on rules and contribute with any digital resource (dataset, algorithm, storage or computation resource) to create new knowledge and applications. Any identity and consent solutions can be indexed and orchestrated by the protocol according to defined rules to minimize risks and costs and maximize opportunities while keeping data sovereignty.
-    </p>
+  text:
+    - A decentralized data-sharing infrastructure could enable many new opportunities for data way beyond data exchange. OKP4 is a public PoS layer 1 blockchain built for trust-minimized data sharing. It is specifically designed to enable communities to share data, algorithms, and resources to create a sovereign Dataverse and an environment of applications on top of it.
+    - OKP4 protocol allows the creation of fully customizable
+    - Data Spaces
+    - where communities can agree on rules and contribute with any digital resource (dataset, algorithm, storage or computation resource) to create new knowledge and applications. Any identity and consent solutions can be indexed and orchestrated by the protocol according to defined rules to minimize risks and costs and maximize opportunities while keeping data sovereignty.
 knowPart:
   title: Providing value to Data Ecosystems
   introduction: Thanks to shared algorithms, new valuable knowledge can be created, and each participant can be retributed for the data and services they shared.
@@ -42,12 +39,14 @@ cosmosPart:
     OKP4 blockchain is based on the <a target='_blank' rel='noreferrer' href='https://cosmos.network/'>Cosmos SDK technology. <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M2.25 1.25H8.75V7.75M1.25 8.75L8.75 1.25" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </p>
-  description: |
-    <p>
-    Cosmos enables us to design the ideal blockchain & ecosystem for such specific applications <b>to provide the perfect environment</b> for developers, data and service providers, and users to build, contribute and thrive in the Dataverse.
-    </p>
-    <br />
-    <p>
-    The OKP4 protocol enables stakeholders to create Data Spaces to make <b>their raw data available to the network without exposing it</b> to other members.
-    </p>
+  description:
+    - Cosmos enables us to design the ideal blockchain & ecosystem for such specific applications
+    - to provide the perfect environment
+    - for developers, data and service providers, and users to build, contribute and thrive in the Dataverse.
+    - The OKP4 protocol enables stakeholders to create
+    - Data Spaces
+    - to make
+    - their raw data available to the network without exposing it
+    - to other members.
   image: learn-okp4-cosmos.png
+discoverDataSpace: Discover the Data Space
