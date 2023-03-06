@@ -45,7 +45,7 @@ jobs:
       - name: Replace env script
         working-directory: .github
         run: |
-          cp scripts/env.prod.js ../okp4-gatsby/public/scripts/env.js
+          cp environments/prod/env.js ../okp4-gatsby/public/scripts/env.js
 
       - name: Copy build output to OVH machine
         uses: garygrossgarten/github-action-scp@v0.8.0

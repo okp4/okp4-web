@@ -37,7 +37,7 @@ jobs:
       - name: Replace env script
         working-directory: .github
         run: |
-          cp scripts/env.staging.js ../okp4-gatsby/public/scripts/env.js
+          cp environments/staging/env.js ../okp4-gatsby/public/scripts/env.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

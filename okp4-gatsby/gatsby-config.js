@@ -53,5 +53,8 @@ module.exports = {
         username: "okp4",
       },
     },
+    {
+      resolve: "gatsby-plugin-no-sourcemaps",
+    },
   ],
 };
