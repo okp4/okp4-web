@@ -33,6 +33,6 @@ protocol:
 documentation:
   header: deep documentation
   description:
-    - All the technical documentation related to the blockchain and its modules dedicated to developers and validators is available here&colon; <a href="https://docs.okp4.network" rel="noreferrer" target="_blank">https://docs.okp4.network</a>
+    - All the technical documentation related to the blockchain and its modules dedicated to developers and validators is available <a href="https://docs.okp4.network" rel="noreferrer" target="_blank">here</a>.
     - "It includes API documentation to interact with smart contracts & modules: define any custom rule, connect any service..."
     - You can find all the resources on the <a href="https://github.com/okp4/awesome" rel="noreferrer" target="_blank">Awesome OKP4</a>, a curated list of awesome resources, documents, and tools for OKP4.
