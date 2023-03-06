@@ -14,7 +14,7 @@ const DevelopmentKit = () => (
       </div>
       <StaticImage
         className="developmentkit__description__image"
-        src="../../../assets/images/illus/open_laptop_without_logo.png"
+        src="../../../assets/images/illus/laptop.png"
         alt="open laptop"
         loading="eager"
       />
@@ -85,7 +85,7 @@ const DevelopmentKit = () => (
     <div className="developmentkit__description__wrapper protocol">
       <StaticImage
         className="developmentkit__description__image"
-        src="../../../assets/images/illus/data-structure.png"
+        src="../../../assets/images/illus/druid_magic.png"
         alt="data structure"
         loading="eager"
       />
