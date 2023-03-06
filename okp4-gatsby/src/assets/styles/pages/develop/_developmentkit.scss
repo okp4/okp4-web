@@ -376,16 +376,15 @@
 
       .developmentkit__description {
         max-width: 724px;
-      }
-
-      p {
-        @include media-bp-down(lg) {
-          font-size: 20px;
+        p {
+          @include media-bp-down(lg) {
+            font-size: 20px;
+          }
         }
-      }
 
-      p:last-of-type > a {
-        border-bottom: 1px solid #ffffff;
+        p > a {
+          border-bottom: 1px solid #ffffff;
+        }
       }
     }
   }
