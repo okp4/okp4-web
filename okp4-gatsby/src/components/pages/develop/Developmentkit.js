@@ -4,9 +4,11 @@ import contentDevelopmentKit from "/content/pages/develop/developmentKit.yaml";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import Lottie from "lottie-react";
 import mechanicalGearsAnimationData from "/src/assets/lottie-animations/mechanical-gears";
+import Halo from "../../animations/Halo";
 
 const DevelopmentKit = () => (
   <div className="developmentkit__main">
+    <Halo />
     <div className="developmentkit__description__wrapper empower">
       <div className="developmentkit__description">
         <h1>{contentDevelopmentKit.empower.header}</h1>
