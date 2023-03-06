@@ -3,6 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../utils/MediaManager.js";
 import Halo from "../../animations/Halo.js";
 import content from "/content/pages/learn/okp4.yaml";
+import { Link } from "gatsby";
 
 const Okp4 = ({ files }) => (
   <div className="learn-okp4">
@@ -48,14 +49,36 @@ const Okp4 = ({ files }) => (
                 alt={content.dataSharingPart.title}
               />
             </div>
-            <div className=" okp4__section__description">
+            <div className="okp4__section__description">
               <h2 className="okp4__title">{content.dataSharingPart.title}</h2>
-              <div
-                className="okp4__text__secondary okp4__text-part"
-                dangerouslySetInnerHTML={{
-                  __html: content.dataSharingPart.text,
-                }}
-              ></div>
+
+              <div className="okp4__text__secondary okp4__text-part">
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: content.dataSharingPart.text[0],
+                  }}
+                />
+                <br />
+                <p>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: content.dataSharingPart.text[1],
+                    }}
+                  />
+                  <Link className="okp4__link" to="/learn/dataspace/">
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: content.dataSharingPart.text[2],
+                      }}
+                    />
+                  </Link>
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: content.dataSharingPart.text[3],
+                    }}
+                  />
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -109,12 +132,57 @@ const Okp4 = ({ files }) => (
                 }}
               ></div>
             </div>
-            <div
-              className="okp4__cosmos__description okp4__text__secondary"
-              dangerouslySetInnerHTML={{
-                __html: content.cosmosPart.description,
-              }}
-            ></div>
+            <div className="okp4__cosmos__description okp4__text__secondary">
+              <p>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: content.cosmosPart.description[0],
+                  }}
+                />
+                <span
+                  className="okp4__bold"
+                  dangerouslySetInnerHTML={{
+                    __html: content.cosmosPart.description[1],
+                  }}
+                />
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: content.cosmosPart.description[2],
+                  }}
+                />
+              </p>
+              <br />
+              <p>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: content.cosmosPart.description[3],
+                  }}
+                />
+                <Link className="okp4__link" to="/learn/dataspace/">
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: content.cosmosPart.description[4],
+                    }}
+                  />
+                </Link>
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: content.cosmosPart.description[5],
+                  }}
+                />
+                <span
+                  className="okp4__bold"
+                  dangerouslySetInnerHTML={{
+                    __html: content.cosmosPart.description[6],
+                  }}
+                />
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: content.cosmosPart.description[7],
+                  }}
+                />
+              </p>
+            </div>
 
             <div className="okp4__cosmos__image okp4__image">
               <GatsbyImage
@@ -123,6 +191,13 @@ const Okp4 = ({ files }) => (
               />
             </div>
           </div>
+          <Link className="okp4__button" to="/learn/dataspace/">
+            <span
+              dangerouslySetInnerHTML={{
+                __html: content.discoverDataSpace,
+              }}
+            />
+          </Link>
         </div>
       </div>
     </div>

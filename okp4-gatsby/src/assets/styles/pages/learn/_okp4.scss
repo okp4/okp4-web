@@ -7,8 +7,54 @@
   }
 
   .learn-okp4 {
-    //padding-top: 10vh;
     margin: 0 auto;
+  }
+
+  .okp4__link {
+    margin: 0 5px;
+    pointer-events: none;
+    opacity: 80%;
+
+    @include media-bp-up(lg) {
+      pointer-events: unset;
+      border-bottom: 1px solid;
+    }
+  }
+
+  .okp4__bold {
+    margin: 0 5px;
+    font-weight: 700;
+
+    @include media-bp-up(lg) {
+      font-weight: unset;
+    }
+  }
+
+  .okp4__button {
+    display: none;
+
+    @include media-bp-down(lg) {
+      display: block;
+      align-items: center;
+      column-gap: 10px;
+      background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
+        #00b6b7;
+      border-radius: 10px;
+      padding: 18px 30px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      width: 100%;
+      max-width: 335px;
+      margin: 0 auto;
+
+      &:hover {
+        background: url("/images/grain.png"),
+          linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+        color: $textblue;
+      }
+    }
   }
 
   .okp4__presentation_image--container {
@@ -159,14 +205,19 @@
 
       @include media-bp-down(lg) {
         text-align: center;
-        padding: 20px;
-        margin: 32px auto;
+        padding: 32px 20px;
+        margin: 0 auto;
+      }
+
+      p:last-of-type {
+        @include media-bp-down(lg) {
+          margin-bottom: 32px;
+        }
       }
 
       .okp4__title {
         font-weight: 700;
         @include media-bp-down(lg) {
-          margin-top: 32px;
           margin-bottom: 24px;
         }
       }

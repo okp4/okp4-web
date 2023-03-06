@@ -6,6 +6,7 @@ import Strate from "../../animations/Strate.js";
 import Parallax from "../../animations/Parallax.js";
 import content from "/content/pages/index/introduction.yaml";
 import { Link } from "gatsby";
+import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 
 const Introduction = ({ files }) => {
   return (
@@ -16,12 +17,26 @@ const Introduction = ({ files }) => {
       </div>
       <div className="wrapper">
         <h2 className="introduction__title">{content.title}</h2>
-        <p
-          className="introduction__text"
-          dangerouslySetInnerHTML={{
-            __html: content.description,
-          }}
-        ></p>
+        <p className="introduction__text">
+          <span
+            dangerouslySetInnerHTML={{
+              __html: content.description[0],
+            }}
+          />
+          <Link to="/learn/dataspace/">
+            <span
+              dangerouslySetInnerHTML={{
+                __html: content.description[1],
+              }}
+            />
+            <IconArrowtr />
+          </Link>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: content.description[2],
+            }}
+          />
+        </p>
         <p className="introduction__catch">{content.featuredText}</p>
         <div className="grid introduction__cards">
           <Parallax
