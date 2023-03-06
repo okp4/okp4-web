@@ -4,9 +4,11 @@ import contentDevelopmentKit from "/content/pages/develop/developmentKit.yaml";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import Lottie from "lottie-react";
 import mechanicalGearsAnimationData from "/src/assets/lottie-animations/mechanical-gears";
+import Halo from "../../animations/Halo";
 
 const DevelopmentKit = () => (
   <div className="developmentkit__main">
+    <Halo />
     <div className="developmentkit__description__wrapper empower">
       <div className="developmentkit__description">
         <h1>{contentDevelopmentKit.empower.header}</h1>
@@ -14,7 +16,7 @@ const DevelopmentKit = () => (
       </div>
       <StaticImage
         className="developmentkit__description__image"
-        src="../../../assets/images/illus/open_laptop_without_logo.png"
+        src="../../../assets/images/illus/laptop.png"
         alt="open laptop"
         loading="eager"
       />
@@ -85,7 +87,7 @@ const DevelopmentKit = () => (
     <div className="developmentkit__description__wrapper protocol">
       <StaticImage
         className="developmentkit__description__image"
-        src="../../../assets/images/illus/data-structure.png"
+        src="../../../assets/images/illus/druid_magic.png"
         alt="data structure"
         loading="eager"
       />

@@ -104,10 +104,11 @@ const Validator = ({ files }) => {
 
       <div className="staking wrapper">
         <div className="introduction__image-wrapper">
-          <GatsbyImage
+          <StaticImage
             className="staking__image"
-            image={MediaManager.GetImage(content.staking.image, files)}
-            alt={content.staking.title}
+            src="../../../assets/images/illus/druid_magic.png"
+            alt="data structure"
+            loading="eager"
           />
         </div>
         <div className="staking__text">

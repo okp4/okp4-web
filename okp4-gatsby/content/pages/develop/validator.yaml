@@ -32,7 +32,6 @@ nemeton:
     url: https://nemeton.okp4.network/
   image: nemeton-program.gif
 staking:
-  image: validator-staking.png
   title: Validator & staking rewards
   description:
     paragraph1: |

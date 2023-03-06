@@ -105,6 +105,10 @@
           }
         }
       }
+
+      .developmentkit__description__image {
+        align-self: center;
+      }
     }
 
     &.create {
@@ -321,6 +325,7 @@
 
     &.protocol {
       max-width: 1281px;
+      column-gap: 78px;
       grid-template-areas: "image description";
       margin-bottom: 85px;
 

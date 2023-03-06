@@ -326,8 +326,9 @@ main.validator {
       margin: 60px auto 180px;
       width: 100%;
       display: grid;
-      grid-template-columns: minmax(auto, 540px) minmax(724px, auto);
+      grid-template-columns: minmax(300px, 540px) minmax(400px, auto);
       align-items: center;
+      gap: 78px;
     }
   }
 }
