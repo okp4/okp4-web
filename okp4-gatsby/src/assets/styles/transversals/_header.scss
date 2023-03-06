@@ -52,7 +52,7 @@ header.header {
     justify-content: space-between;
     padding: 0 20px;
 
-    @include media-bp-up(lg) {
+    @media screen and (min-width: 1026px) {
       display: none;
     }
 
@@ -250,14 +250,14 @@ header.header {
             .header__menu__item--name {
               text-transform: uppercase;
               cursor: pointer;
-            @include media-bp-up(lg) {
-              &:hover {
-                background: $menu-color;
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
+              @include media-bp-up(lg) {
+                &:hover {
+                  background: $menu-color;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                }
               }
             }
-          }
 
             .active {
               background: $menu-color;
@@ -299,9 +299,10 @@ header.header {
                   flex-direction: column;
                   padding: unset;
                   background: none;
-                }.header__submenu__item {
-                color: $white-80;
-                font-weight: 100;
+                }
+                .header__submenu__item {
+                  color: $white-80;
+                  font-weight: 100;
 
                   .header__submenu__external__link {
                     display: flex;
