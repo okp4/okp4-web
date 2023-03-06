@@ -99,7 +99,7 @@ const Developers = () => {
               <div className="dev__block__wrapper">{icon} </div>
               <div className="dev__block__text">
                 <p className="dev__blocks__title"> {title}</p>
-                <p>{description}</p>
+                <p className="dev__blocks__description">{description}</p>
               </div>
             </div>
           ))}

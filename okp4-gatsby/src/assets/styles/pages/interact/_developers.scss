@@ -14,7 +14,6 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 150%;
-    opacity: 0.8;
   }
 
   .developers__intro {
@@ -59,6 +58,7 @@
 
     .developers__description {
       grid-area: description;
+      opacity: 0.8;
 
       @media (max-width: 1025px) {
         font-size: 18px;
@@ -195,6 +195,17 @@
       gap: 18px;
       z-index: 10;
 
+      .dev__blocks__description {
+        opacity: 0.6;
+      }
+
+      &:hover {
+        .dev__blocks__description {
+          color: $white;
+          opacity: 1;
+        }
+      }
+
       @media (max-width: 1300px) {
         max-width: 300px;
       }
@@ -217,9 +228,6 @@
           .dev__block__wrapper {
             background: #004073;
           }
-          p {
-            color: $white;
-          }
         }
       }
 
@@ -227,9 +235,6 @@
         &:hover {
           .dev__block__wrapper {
             background: #006796;
-          }
-          p {
-            color: $white;
           }
         }
       }
@@ -239,9 +244,6 @@
           .dev__block__wrapper {
             background: #008fad;
           }
-          p {
-            color: $white;
-          }
         }
       }
 
@@ -250,9 +252,6 @@
           .dev__block__wrapper {
             background: #00b6b7;
           }
-          p {
-            color: $white;
-          }
         }
       }
 
@@ -260,9 +259,6 @@
         &:hover {
           .dev__block__wrapper {
             background: #ff9500;
-          }
-          p {
-            color: $white;
           }
         }
         @media (max-width: 500px) {
@@ -360,6 +356,7 @@
     padding-bottom: 140px;
     text-align: center;
     max-width: 940px;
+    opacity: 0.8;
 
     @media (max-width: 1025px) {
       padding-bottom: 60px;
