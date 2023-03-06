@@ -338,6 +338,7 @@ main.dataverse {
     .ibc__image {
       @extend .dataverse_image;
       margin: auto;
+      z-index: -1;
       @include media-bp-down(lg) {
         max-width: 256px;
         margin: 0 auto 60px;
