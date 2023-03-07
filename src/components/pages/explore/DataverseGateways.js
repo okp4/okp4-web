@@ -17,7 +17,6 @@ const DataverseGateways = ({ files }) => {
   React.useEffect(() => {
     if (protocolRef) {
       const containerScrollWidth = protocolRef.current.scrollWidth;
-      console.log(protocolRef.current);
       protocolRef.current.scrollLeft =
         (containerScrollWidth - protocolRef.current.clientWidth) / 2;
     }
