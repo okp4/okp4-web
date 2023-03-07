@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import content from "/content/pages/learn/roadmap.yaml";
 import Roadmap from "../../components/pages/learn/Roadmap";
 import Seo from "../../components/SEO";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function LearnRoadmap({ data }) {
   return (
@@ -38,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo></Seo>;
+export const Head = () => <Seo content={seoContent.roadmap} />;

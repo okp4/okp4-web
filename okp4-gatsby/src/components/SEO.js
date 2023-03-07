@@ -1,9 +1,11 @@
 import React from "react";
 
-const SEO = () => {
+const SEO = ({ content }) => {
+  const { title } = content;
+
   return (
     <>
-      <title>OKP4 - The Open Knowledge Protocol </title>
+      <title>{`OKP4 - ${title}`}</title>
       <meta
         name="description"
         content="
@@ -11,10 +13,7 @@ const SEO = () => {
       />
       <meta name="image" content="/images/twitter.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta
-        name="twitter:title"
-        content="OKP4 - The Open Knowledge Protocol"
-      />
+      <meta name="twitter:title" content="OKP4 - The Open Knowledge Protocol" />
       <meta name="twitter:url" content="https://twitter.com/OKP4_Protocol" />
       <meta
         name="twitter:description"

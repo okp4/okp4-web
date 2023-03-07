@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import Seo from "../../components/SEO";
 import content from "/content/pages/learn/dataverse.yaml";
 import Dataverse from "../../components/pages/learn/Dataverse";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function LearnDataverse({ data }) {
   return (
@@ -38,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo />;
+export const Head = () => <Seo content={seoContent.dataverse} />;

@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import Know from "../../components/pages/learn/Know";
 import content from "/content/pages/learn/know.yaml";
 import Seo from "../../components/SEO";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function LearnKnow({ data }) {
   return (
@@ -54,4 +55,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo></Seo>;
+export const Head = () => <Seo content={seoContent.know} />;

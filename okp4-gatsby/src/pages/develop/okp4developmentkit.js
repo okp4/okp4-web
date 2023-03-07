@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import Seo from "../../components/SEO";
 import content from "/content/pages/develop/developmentKit.yaml";
 import DevelopmentKit from "../../components/pages/develop/Developmentkit";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function DevelopDevelopmentKit({ data }) {
   return (
@@ -38,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo />;
+export const Head = () => <Seo content={seoContent.okp4DevelopmentKit} />;

@@ -3,6 +3,8 @@ import { graphql } from "gatsby";
 import Contact from "../components/pages/contact/Contact";
 import Layout from "../components/Layout";
 import content from "/content/pages/contact/contact.yaml";
+import Seo from "../components/SEO";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function ContactPage({ data }) {
   return (
@@ -36,3 +38,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export const Head = () => <Seo content={seoContent.contact} />;

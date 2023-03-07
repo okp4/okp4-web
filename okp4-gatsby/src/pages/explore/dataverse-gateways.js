@@ -3,6 +3,8 @@ import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import DataverseGateways from "../../components/pages/explore/DataverseGateways";
 import content from "/content/pages/explore/dataverse-gateways.yaml";
+import Seo from "../../components/SEO";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function ExploreDataverseGateways({ data }) {
   return (
@@ -37,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-// TODO : SEO
+export const Head = () => <Seo content={seoContent.dataverseGateways} />;

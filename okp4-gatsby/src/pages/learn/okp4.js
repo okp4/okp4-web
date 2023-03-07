@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import Okp4 from "../../components/pages/learn/Okp4";
 import content from "/content/pages/learn/okp4.yaml";
 import Seo from "../../components/SEO";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function LearnOkp4({ data }) {
   return (
@@ -38,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo></Seo>;
+export const Head = () => <Seo content={seoContent.okp4} />;

@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import content from "/content/pages/learn/dataSpace.yaml";
 import DataSpace from "../../components/pages/learn/DataSpace";
 import Seo from "../../components/SEO";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function LearnDataSpace({ data }) {
   return (
@@ -38,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo />;
+export const Head = () => <Seo content={seoContent.dataSpace} />;

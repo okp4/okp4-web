@@ -5,6 +5,7 @@ import JoinUs from "../../components/pages/interact/community/JoinUs";
 import LatestNews from "../../components/pages/interact/community/LatestNews";
 import content from "/content/pages/interact/community.yaml";
 import Seo from "../../components/SEO";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function Community({ data }) {
   return (
@@ -56,4 +57,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo></Seo>;
+export const Head = () => <Seo content={seoContent.community} />;
