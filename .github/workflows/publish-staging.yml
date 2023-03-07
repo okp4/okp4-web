@@ -34,10 +34,10 @@ jobs:
         run: |
           yarn build
 
-      - name: Replace env script
+      - name: Replace environment config
         working-directory: .github
         run: |
-          cp environments/staging/env.js ../okp4-gatsby/public/scripts/env.js
+          cp environments/staging/env.js ../okp4-gatsby/public/scripts/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
