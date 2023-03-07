@@ -1,5 +1,5 @@
 humanDescription: Content used for the footer at the bottom of the page
-help: Please download all images in the /content/images folder and just indicate the filename ("filename.jpg")
+help: Please download all images in the /content/images folder and just indicate the filename ("filename.webp")
 messageNewsletter: Follow our adventures and <b>stay up to date </b>!
 messageCofounded: Our actions are co-funded by
 newsAndDocs:
@@ -19,45 +19,45 @@ associates:
     logos:
       - label: ChainLayer
         url: https://www.chainlayer.io/
-        image: logo-chainlayer.png
+        image: logo-chainlayer.webp
       - label: Interchain
         url: https://interchain.io/
-        image: logo-interchain.png
+        image: logo-interchain.webp
       - label: CC validators
         url: https://ccvalidators.com/
-        image: logo-cc-validators.png
+        image: logo-cc-validators.webp
       - label: B-Harvest
         url: https://bharvest.io/
-        image: logo-b-harvest.png
+        image: logo-b-harvest.webp
       - label: Stakelab
         url: https://www.stakelab.fr/
       - label: P2P
         url: https://p2p.org/
-        image: logo-p2p.png
+        image: logo-p2p.webp
       - label: Polkachu
         url: https://polkachu.com/
-        image: logo-polkachu.png
+        image: logo-polkachu.webp
       - label: Notional
         url: https://notional.ventures/
-        image: logo-notional.png
+        image: logo-notional.webp
       - label: Imperator
         url: https://imperator.co/
-        image: logo-imperator.png
+        image: logo-imperator.webp
       - label: Citadel.one
         url: https://citadel.one/
-        image: logo-citadelone.png
+        image: logo-citadelone.webp
       - label: Staking Cabin
         url: https://stakingcabin.com/
-        image: logo-staking-cabin.png
+        image: logo-staking-cabin.webp
       - label: NodeStake
         url: https://nodestake.top/
-        image: logo-nodestake.png
+        image: logo-nodestake.webp
       - label: Informal Systems
         url: https://informal.systems/
-        image: logo-informal.png
+        image: logo-informal.webp
       - label: Cros-Nest
         url: https://cros-nest.com/
-        image: logo-nest.png
+        image: logo-nest.webp
   advisors:
     title: Our Advisors
     people:
@@ -83,5 +83,5 @@ contact:
   url: /contact
   text: Contact
 imageFooter:
-  url: footer.png
+  url: footer.webp
   alt: Illustration OKP4 fleurs
