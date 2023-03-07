@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import Seo from "../../components/SEO";
 import content from "/content/pages/develop/validator.yaml";
 import Validator from "../../components/pages/develop/Validator";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function DevelopValidator({ data }) {
   return (
@@ -38,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo />;
+export const Head = () => <Seo content={seoContent.validators} />;

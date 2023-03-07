@@ -6,6 +6,7 @@ import Introduction from "../components/pages/index/Introduction";
 import Video from "../components/pages/index/Video";
 import Universe from "../components/pages/index/Universe";
 import Seo from "../components/SEO";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function Home({ data }) {
   return (
@@ -45,7 +46,7 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo></Seo>;
+export const Head = () => <Seo content={seoContent.homePage} />;
 
 const AnalyticsScript = () => (
   <Script>

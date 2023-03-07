@@ -4,6 +4,7 @@ import Layout from "../../components/Layout";
 import Portal from "../../components/pages/explore/Portal";
 import content from "/content/pages/explore/portal.yaml";
 import Seo from "../../components/SEO";
+import seoContent from "/content/transversals/seo.yaml";
 
 export default function ExplorePortal({ data }) {
   return (
@@ -38,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo />;
+export const Head = () => <Seo content={seoContent.portal} />;
