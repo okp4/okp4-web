@@ -13,7 +13,7 @@ const SEO = ({ content }) => {
       />
       <meta name="image" content="/images/twitter.jpg" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="OKP4 - The Open Knowledge Protocol" />
+      <meta name="twitter:title" content={`OKP4 - ${title}`} />
       <meta name="twitter:url" content="https://twitter.com/OKP4_Protocol" />
       <meta
         name="twitter:description"
