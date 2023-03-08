@@ -2,10 +2,10 @@ name: Lint
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
   workflow_dispatch:
 
@@ -78,3 +78,38 @@ jobs:
           message: 🙅 Closing the PR because it does not respect naming conventions. Edit the branch name and submit a new PR.
     env:
       GITHUB_TOKEN: ${{ secrets.OKP4_TOKEN }}
+
+  lint-image-format:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Check images format
+        working-directory: .
+        run: |
+          folders="
+          content/images/*
+          content/images/**/*
+          src/assets/images/illus/*
+          src/assets/images/illus/**/*
+          src/assets/images/logos/**
+          src/assets/images/logos/**/*
+          static/images/**
+          static/images/**/*
+          "
+
+          not_webp_format=()
+          for folder in $folders; do
+            for image in $folder; do
+              if [[ -f "$image" && $(identify -format '%m\n' "$image") != "WEBP" ]]; then
+                not_webp_format+=("$image")
+              fi
+            done
+          done
+
+          if [[ ${#not_webp_format[@]} -ne 0 ]]; then
+            echo "The following images are not in webp format:"
+            printf '%s\n' "${not_webp_format[@]}"
+            exit 1
+          fi
