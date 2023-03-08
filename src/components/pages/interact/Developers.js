@@ -88,7 +88,7 @@ const Developers = () => {
           </div>
           <div className="developers__intro__image">
             <StaticImage
-              src="../../../assets/images/illus/laptop.png"
+              src="../../../assets/images/illus/laptop.webp"
               alt="developers OKP4"
             />
           </div>

@@ -1,5 +1,5 @@
 humanDescription: Content used for the section "NEW OPPORTUNITIES FOR EVERY DIGITAL RESSOURCE" of the index page
-help: Please download all images in the /content/images folder and just indicate the filename ("filename.jpg")
+help: Please download all images in the /content/images folder and just indicate the filename ("filename.webp")
 title: NEW OPPORTUNITIES FOR EVERY DIGITAL RESSOURCE
 description:
   - OKP4 is the only public <b>layer-1 blockchain</b> designed for coordination of digital assets such as datasets, algorithms, software, storage or computation. Anyone can build and join custom
@@ -9,25 +9,25 @@ featuredText: Let’s build amazing things together!
 whitecard1:
   title: Easy to build
   description: Data Spaces and Applications
-  image: index_intro_card_1.png
+  image: index_intro_card_1.webp
 whitecard2:
   title: Built in Trust
   description: and custom governance
-  image: index_intro_card_2.png
+  image: index_intro_card_2.webp
 whitecard3:
   title: Optimal incentives
   description: for collaboration
-  image: index_intro_card_3.png
+  image: index_intro_card_3.webp
 bluecard1:
   title: Powered by the $KNOW token
   description: Incentives & value flows for the many use cases are enabled by the $KNOW. Many B2B use cases are ready to be launched, more community use cases will be built when the Testnet launches.
-  image: index_intro_know.png
+  image: index_intro_know.webp
   button: What is $KNOW?
   url: /learn/know
 bluecard2:
   title: Built on the Cosmos SDK
   description: A smart contract hub specifically designed for Data Spaces.
-  image: index_intro_cosmos.png
+  image: index_intro_cosmos.webp
 bluecard3:
   title: Simplicity and transparency
   description: Decentralization guarantees sovereignity of shared data and services, trustlessness, transparency, easy managment and customization of governance rules.

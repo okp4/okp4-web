@@ -250,7 +250,7 @@
             height: 436px;
             padding: 50px 53px;
             border-radius: 20px;
-            background: url("/images/grain.png"),
+            background: url("/images/grain.webp"),
               linear-gradient(222.68deg, #f9f9f9 13.75%, #d9e3ff 76.51%);
 
             @media (max-width: 1025px) {
@@ -421,7 +421,7 @@
         }
 
         &:hover {
-          background: url("/images/grain.png"),
+          background: url("/images/grain.webp"),
             linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
           color: $textblue;
 

@@ -15,7 +15,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[0].label
             )}
-            src="../../content/images/companies/logo-chainlayer.png"
+            src="../../content/images/companies/logo-chainlayer.webp"
             alt={contentFooter.associates.companies.logos[0].label}
           />
         ),
@@ -29,7 +29,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[1].label
             )}
-            src="../../content/images/companies/logo-interchain.png"
+            src="../../content/images/companies/logo-interchain.webp"
             alt={contentFooter.associates.companies.logos[1].label}
           />
         ),
@@ -43,7 +43,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[2].label
             )}
-            src="../../content/images/companies/logo-cc-validators.png"
+            src="../../content/images/companies/logo-cc-validators.webp"
             alt={contentFooter.associates.companies.logos[2].label}
           />
         ),
@@ -57,7 +57,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[3].label
             )}
-            src="../../content/images/companies/logo-b-harvest.png"
+            src="../../content/images/companies/logo-b-harvest.webp"
             alt={contentFooter.associates.companies.logos[3].label}
           />
         ),
@@ -71,7 +71,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[4].label
             )}
-            src="../../content/images/companies/logo-stakelab.png"
+            src="../../content/images/companies/logo-stakelab.webp"
             alt={contentFooter.associates.companies.logos[4].label}
           />
         ),
@@ -85,7 +85,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[5].label
             )}
-            src="../../content/images/companies/logo-p2p.png"
+            src="../../content/images/companies/logo-p2p.webp"
             alt={contentFooter.associates.companies.logos[5].label}
           />
         ),
@@ -99,7 +99,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[6].label
             )}
-            src="../../content/images/companies/logo-polkachu.png"
+            src="../../content/images/companies/logo-polkachu.webp"
             alt={contentFooter.associates.companies.logos[6].label}
           />
         ),
@@ -113,7 +113,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[7].label
             )}
-            src="../../content/images/companies/logo-notional.png"
+            src="../../content/images/companies/logo-notional.webp"
             alt={contentFooter.associates.companies.logos[7].label}
           />
         ),
@@ -127,7 +127,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[8].label
             )}
-            src="../../content/images/companies/logo-imperator.png"
+            src="../../content/images/companies/logo-imperator.webp"
             alt={contentFooter.associates.companies.logos[8].label}
           />
         ),
@@ -141,7 +141,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[9].label
             )}
-            src="../../content/images/companies/logo-citadelone.png"
+            src="../../content/images/companies/logo-citadelone.webp"
             alt={contentFooter.associates.companies.logos[9].label}
           />
         ),
@@ -155,7 +155,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[10].label
             )}
-            src="../../content/images/companies/logo-staking-cabin.png"
+            src="../../content/images/companies/logo-staking-cabin.webp"
             alt={contentFooter.associates.companies.logos[10].label}
           />
         ),
@@ -169,7 +169,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[11].label
             )}
-            src="../../content/images/companies/logo-nodestake.png"
+            src="../../content/images/companies/logo-nodestake.webp"
             alt={contentFooter.associates.companies.logos[11].label}
           />
         ),
@@ -183,7 +183,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[12].label
             )}
-            src="../../content/images/companies/logo-informal.png"
+            src="../../content/images/companies/logo-informal.webp"
             alt={contentFooter.associates.companies.logos[12].label}
           />
         ),
@@ -197,7 +197,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[13].label
             )}
-            src="../../content/images/companies/logo-nest.png"
+            src="../../content/images/companies/logo-nest.webp"
             alt={contentFooter.associates.companies.logos[13].label}
           />
         ),
@@ -215,7 +215,7 @@ const Associates = () => {
         image: (
           <StaticImage
             className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-peter-van-mourik.png"
+            src="../../content/images/advisors/advisor-peter-van-mourik.webp"
             alt="OKP4 Advisor"
           />
         ),
@@ -227,7 +227,7 @@ const Associates = () => {
         image: (
           <StaticImage
             className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-benjamin-santi.png"
+            src="../../content/images/advisors/advisor-benjamin-santi.webp"
             alt="OKP4 Advisor"
           />
         ),
@@ -240,7 +240,7 @@ const Associates = () => {
         image: (
           <StaticImage
             className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-jasvin-bhasin.png"
+            src="../../content/images/advisors/advisor-jasvin-bhasin.webp"
             alt="OKP4 Advisor"
           />
         ),
@@ -252,7 +252,7 @@ const Associates = () => {
         image: (
           <StaticImage
             className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-sebastien-couture.png"
+            src="../../content/images/advisors/advisor-sebastien-couture.webp"
             alt="OKP4 Advisor"
           />
         ),

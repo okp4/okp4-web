@@ -39,7 +39,7 @@ main.dataverse {
       line-height: 19px;
     }
     &:hover {
-      background: url("/images/grain.png"),
+      background: url("/images/grain.webp"),
         linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
       color: $textblue;
     }
@@ -402,7 +402,7 @@ main.dataverse {
 
       .ibc__content__synergy_link {
         transition: background 0.25s ease;
-        background: url("/images/grain.png"),
+        background: url("/images/grain.webp"),
           linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
         background-repeat: repeat;
         background-size: contain;
@@ -425,7 +425,7 @@ main.dataverse {
         }
 
         &:hover {
-          background: url("/images/grain.png"),
+          background: url("/images/grain.webp"),
             linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
 
           p {
@@ -530,7 +530,7 @@ main.dataverse {
       border-radius: 20px;
       color: $textblue;
       line-height: 33px;
-      background: url("/images/grain.png"),
+      background: url("/images/grain.webp"),
         linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
       background-repeat: repeat;
       background-size: contain;

@@ -54,7 +54,7 @@
 footer.footer {
   position: relative;
 
-  background: url("/images/grain.png"), $nightblue;
+  background: url("/images/grain.webp"), $nightblue;
   background-repeat: repeat;
   background-size: contain;
 
@@ -129,7 +129,7 @@ footer.footer {
         padding: 32px 40px;
         transition: background 0.25s ease;
         border-radius: 20px;
-        background: url("/images/grain.png"),
+        background: url("/images/grain.webp"),
           linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
         background-repeat: repeat;
         background-size: contain;
@@ -157,7 +157,7 @@ footer.footer {
 
         @include media-bp-up(md) {
           &:hover {
-            background: url("/images/grain.png"),
+            background: url("/images/grain.webp"),
               linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
 
             .title,

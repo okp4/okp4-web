@@ -48,7 +48,7 @@ const Portal = () => {
         image: (
           <StaticImage
             className="portal__tool__image explore"
-            src="../../../assets/images/illus/index_intro_card_2.png"
+            src="../../../assets/images/illus/index_intro_card_2.webp"
             alt="OKP4 portal explore image"
           />
         ),
@@ -95,12 +95,12 @@ const Portal = () => {
       <div className="portal__homepage__image">
         {isLarge ? (
           <StaticImage
-            src="../../../assets/images/illus/portal-homepage.png"
+            src="../../../assets/images/illus/portal-homepage.webp"
             alt="OKP4 portal homepage image"
           />
         ) : (
           <StaticImage
-            src="../../../assets/images/illus/portal-homepage-mobile.png"
+            src="../../../assets/images/illus/portal-homepage-mobile.webp"
             alt="OKP4 portal homepage image"
           />
         )}
@@ -122,7 +122,7 @@ const Portal = () => {
         <div className="portal__tool__features">
           <StaticImage
             className="portal__background__image"
-            src="../../../assets/images/illus/background_img_northern_light.png"
+            src="../../../assets/images/illus/background_img_northern_light.webp"
             alt="background northern light image"
           />
           {features.map(({ icon, feature, description }) => (

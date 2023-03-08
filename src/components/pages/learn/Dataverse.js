@@ -36,7 +36,7 @@ const Dataverse = ({ files }) => {
       <div className="wrapper">
         <StaticImage
           className="background_light background_light__build_dataverse"
-          src="../../../assets/images/illus/background_img_northern_light.png"
+          src="../../../assets/images/illus/background_img_northern_light.webp"
           alt="build dataverse"
           loading="eager"
         />
@@ -97,7 +97,7 @@ const Dataverse = ({ files }) => {
           {isLarge ? (
             <StaticImage
               className="background_light background_light__ibc"
-              src="../../../assets/images/illus/background_img_northern_light.png"
+              src="../../../assets/images/illus/background_img_northern_light.webp"
               alt="build dataverse"
               loading="eager"
             />

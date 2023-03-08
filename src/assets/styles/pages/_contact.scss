@@ -337,12 +337,12 @@
           max-height: 562px;
           height: 500px;
           background: center / contain no-repeat
-            url("../images/illus/index_world.png");
+            url("../images/illus/index_world.webp");
 
           @include media-bp-down(lg) {
             height: 207px;
             background: center / contain no-repeat
-              url("../images/illus/index_world_mobile.png");
+              url("../images/illus/index_world_mobile.webp");
           }
         }
       }

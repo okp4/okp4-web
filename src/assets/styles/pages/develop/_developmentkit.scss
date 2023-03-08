@@ -206,7 +206,7 @@
             }
 
             &:hover {
-              background: url("/images/grain.png"),
+              background: url("/images/grain.webp"),
                 linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
               color: $textblue;
             }
@@ -359,7 +359,7 @@
       text-align: center;
       background: linear-gradient(180deg, rgba(0, 33, 58, 0) 50%, #00213a 100%),
         center / cover no-repeat
-          url("../images/illus/background_img_3d_boxes.png");
+          url("../images/illus/background_img_3d_boxes.webp");
 
       @include media-bp-up(xxl) {
         border-radius: 20px 20px 0 0;
@@ -376,7 +376,7 @@
             rgba(0, 54, 97, 0.8) 100%
           ),
           center / cover no-repeat
-            url("../images/illus/background_img_3d_boxes_mobile.png");
+            url("../images/illus/background_img_3d_boxes_mobile.webp");
       }
 
       .developmentkit__description {
