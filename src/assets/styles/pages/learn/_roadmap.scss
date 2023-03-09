@@ -118,7 +118,7 @@
   min-height: calc(100vh - 505px);
   padding-top: 181px;
 
-  @media screen and (max-height: 1025px) {
+  @include media-bp-down(lg) {
     min-height: 100vh;
   }
 
@@ -176,7 +176,7 @@
       }
     }
 
-    @media screen and (min-width: 1025px) {
+    @include media-bp-up(lg) {
       padding-left: 30px;
     }
 
@@ -193,7 +193,7 @@
       }
 
       &.Genesis {
-        @media only screen and (min-width: 1025px) {
+        @include media-bp-up(lg) {
           .roadmap__cards {
             &::before {
               content: "";
@@ -204,7 +204,7 @@
       }
 
       &.Duir {
-        @media only screen and (min-width: 1025px) {
+        @include media-bp-up(lg) {
           .roadmap__cards {
             &::after {
               content: "";
@@ -216,7 +216,7 @@
       }
 
       &.Lugh {
-        @media only screen and (min-width: 1025px) {
+        @include media-bp-up(lg) {
           .roadmap__cards {
             &::after {
               content: "";
@@ -310,7 +310,7 @@
             height: calc(100vh - 181px);
           }
 
-          @media screen and (max-width: 1025px) {
+          @include media-bp-down(lg) {
             width: 100vw;
             height: inherit;
             max-height: unset;
@@ -354,7 +354,7 @@
                 }
 
                 .roadmap__card__period {
-                  @media only screen and (max-width: 1025px) {
+                  @include media-bp-down(lg) {
                     display: none;
                   }
                 }
@@ -440,7 +440,7 @@
               }
             }
 
-            @media only screen and (max-width: 1025px) {
+            @include media-bp-down(lg) {
               grid-template-columns: unset;
 
               .roadmap__card__opened__content {

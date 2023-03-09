@@ -104,21 +104,23 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
       })}
       ref={divRef}
     >
-      <div className="header--mobile" ref={divMobile}>
-        <Link to="/" className="header--mobile__logo">
-          <IconLogo />
-        </Link>
-        <div
-          className="header--mobile__burger"
-          onClick={toggleBurger}
-          onKeyDown={handleKeyDown}
-          role="button"
-          tabIndex={0}
-        >
-          <IconBurger className="header--mobile__burger__open" />
-          <IconBurgerCross className="header--mobile__burger__close" />
+      {!isLarge && (
+        <div className="header--mobile" ref={divMobile}>
+          <Link to="/" className="header--mobile__logo">
+            <IconLogo />
+          </Link>
+          <div
+            className="header--mobile__burger"
+            onClick={toggleBurger}
+            onKeyDown={handleKeyDown}
+            role="button"
+            tabIndex={0}
+          >
+            <IconBurger className="header--mobile__burger__open" />
+            <IconBurgerCross className="header--mobile__burger__close" />
+          </div>
         </div>
-      </div>
+      )}
       <div className="wrapper header--desktop">
         {showSocials && (
           <div className="header__top">

@@ -422,7 +422,7 @@ main.homepage {
         grid-row: span 2;
         flex-direction: column;
         justify-content: flex-end;
-        height: 487px;
+        min-height: 487px;
         padding: 50px;
 
         @include media-bp-down(lg) {
@@ -473,7 +473,7 @@ main.homepage {
             );
           }
 
-          @media (max-width: 1025px) {
+          @include media-bp-down(lg) {
             display: block;
             margin-top: 32px;
             align-self: stretch;
