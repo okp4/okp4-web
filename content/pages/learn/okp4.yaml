@@ -12,7 +12,7 @@ presentationPart:
   image: learn-okp4-presentation.webp
 dataSharingPart:
   title: How to mainstream Data Sharing?
-  image: learn-okp4-section1.webp
+  image: druid-teacher.webp
   text:
     - A decentralized data-sharing infrastructure could enable many new opportunities for data way beyond data exchange. OKP4 is a public PoS layer 1 blockchain built for trust-minimized data sharing. It is specifically designed to enable communities to share data, algorithms, and resources to create a sovereign Dataverse and an environment of applications on top of it.
     - OKP4 protocol allows the creation of fully customizable
