@@ -12,7 +12,7 @@ const Breadcrumbs = ({ breadcrumbs }) => (
                 {item.name}
               </Link>
             ) : (
-              <span className="link">{item.name}</span>
+              <span>{item.name}</span>
             )}
             {index < breadcrumbs.length - 1 && (
               <div className="separator">&nbsp;&rarr;&nbsp;</div>
