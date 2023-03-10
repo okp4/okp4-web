@@ -4,7 +4,7 @@ import contentLegalMentions from "/content/pages/legals/legal-mentions.yaml";
 import contentCookiePolicy from "/content/pages/legals/cookie-policy.yaml";
 
 const LegalMentionsAndCookiePolicy = () => (
-  <section className="legalMentions">
+  <section className="main-content">
     <Halo />
     <div className="wrapper">
       <div className="legalMentions__content">

@@ -1,11 +1,13 @@
-.legalMentions {
-  min-height: calc(100vh - 505px);
-  padding-top: 122px;
-  padding-bottom: 10vh;
+main.legalMentions {
+  padding-top: 174px;
 
   @include media-bp-down(lg) {
     width: 100%;
-    padding-top: 56px;
+    padding-top: 100px;
+  }
+
+  .main-content {
+    margin-bottom: 82px;
   }
 
   .wrapper {
@@ -21,14 +23,17 @@
     gap: 40px;
 
     h1 {
-      text-align: center;
-      line-height: 72px;
+      line-height: 75px;
+      font-weight: 700;
+      @include media-bp-up(lg) {
+        font-size: 68px;
+      }
     }
 
     .subtitle {
-      color: $white-80;
+      color: $white;
       a {
-        color: $white-80;
+        color: $white;
         text-decoration: underline;
       }
     }
@@ -40,14 +45,25 @@
 
         .title {
           display: block;
-          margin-top: 16px;
-          margin-bottom: 35px;
+          margin: 28px 0;
+          line-height: 38px;
+          font-weight: 700;
           font-size: 20px;
-          line-height: 20px;
+          @include media-bp-up(lg) {
+            font-size: 32px;
+          }
         }
 
         .text {
-          color: $white-80;
+          color: $white;
+
+          @include media-bp-up(lg) {
+            p {
+              font-size: 16px;
+              line-height: 22px;
+              font-weight: 400;
+            }
+          }
 
           ul {
             margin-left: 30px;
