@@ -160,7 +160,7 @@
 
     .okp4__presentation__text {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(auto, 508px) minmax(auto, 616px);
       @include media-bp-up(lg) {
         column-gap: 140px;
       }
