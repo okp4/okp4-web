@@ -1,27 +1,27 @@
 @mixin roadmap-background-images {
   &.Genesis {
     background: center / cover no-repeat
-      url("../images/illus/index_roadmap_1.jpg");
+      url("../images/illus/index_roadmap_1.webp");
   }
 
   &.Nemeton {
     background: center / cover no-repeat
-      url("../images/illus/index_roadmap_2.jpg");
+      url("../images/illus/index_roadmap_2.webp");
   }
 
   &.Myrddin {
     background: center / cover no-repeat
-      url("../images/illus/index_roadmap_3.jpg");
+      url("../images/illus/index_roadmap_3.webp");
   }
 
   &.Duir {
     background: center / cover no-repeat
-      url("../images/illus/index_roadmap_4.jpg");
+      url("../images/illus/index_roadmap_4.webp");
   }
 
   &.Lugh {
     background: center / cover no-repeat
-      url("../images/illus/index_roadmap_5.jpg");
+      url("../images/illus/index_roadmap_5.webp");
   }
 }
 
@@ -401,27 +401,27 @@
               @include media-bp-down(lg) {
                 &.Genesis {
                   background: center / cover no-repeat
-                    url("../images/illus/index_roadmap_1_mobile.jpg");
+                    url("../images/illus/index_roadmap_1_mobile.webp");
                 }
 
                 &.Nemeton {
                   background: center / cover no-repeat
-                    url("../images/illus/index_roadmap_2_mobile.jpg");
+                    url("../images/illus/index_roadmap_2_mobile.webp");
                 }
 
                 &.Myrddin {
                   background: center / cover no-repeat
-                    url("../images/illus/index_roadmap_3_mobile.jpg");
+                    url("../images/illus/index_roadmap_3_mobile.webp");
                 }
 
                 &.Duir {
                   background: center / cover no-repeat
-                    url("../images/illus/index_roadmap_4_mobile.jpg");
+                    url("../images/illus/index_roadmap_4_mobile.webp");
                 }
 
                 &.Lugh {
                   background: top / cover no-repeat
-                    url("../images/illus/index_roadmap_5_mobile.jpg");
+                    url("../images/illus/index_roadmap_5_mobile.webp");
                 }
               }
 

@@ -81,7 +81,7 @@ const DataverseGateways = ({ files }) => {
                     className="imgWrapper"
                     imgClassName="img"
                     objectFit="contain"
-                    src="../../../assets/images/illus/explore/protocol-book.png"
+                    src="../../../assets/images/illus/explore/protocol-book.webp"
                     alt="OKP4 Protocol"
                   />
                 </div>
@@ -90,7 +90,7 @@ const DataverseGateways = ({ files }) => {
                     className="imgWrapper"
                     imgClassName="img"
                     objectFit="contain"
-                    src="../../../assets/images/illus/explore/protocol-page-lb.png"
+                    src="../../../assets/images/illus/explore/protocol-page-lb.webp"
                     alt="OKP4 Protocol"
                   />
                 </div>
@@ -99,7 +99,7 @@ const DataverseGateways = ({ files }) => {
                     className="imgWrapper"
                     imgClassName="img"
                     objectFit="contain"
-                    src="../../../assets/images/illus/explore/protocol-page-lt.png"
+                    src="../../../assets/images/illus/explore/protocol-page-lt.webp"
                     alt="OKP4 Protocol"
                   />
                 </div>
@@ -108,7 +108,7 @@ const DataverseGateways = ({ files }) => {
                     className="imgWrapper"
                     imgClassName="img"
                     objectFit="contain"
-                    src="../../../assets/images/illus/explore/protocol-page-rb.png"
+                    src="../../../assets/images/illus/explore/protocol-page-rb.webp"
                     alt="OKP4 Protocol"
                   />
                 </div>
@@ -117,7 +117,7 @@ const DataverseGateways = ({ files }) => {
                     className="imgWrapper"
                     imgClassName="img"
                     objectFit="contain"
-                    src="../../../assets/images/illus/explore/protocol-page-rt.png"
+                    src="../../../assets/images/illus/explore/protocol-page-rt.webp"
                     alt="OKP4 Protocol"
                   />
                 </div>

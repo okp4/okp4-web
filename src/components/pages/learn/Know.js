@@ -28,13 +28,13 @@ const Know = () => (
           <div className="know__intro__img__wrapper">
             <div className="know__intro__image__token__wrapper">
               <StaticImage
-                src="../../../../content/images/learn-know-token.png"
+                src="../../../../content/images/learn-know-token.webp"
                 alt="Know token"
                 className="know__intro__image"
               />
             </div>
             <StaticImage
-              src="../../../../content/images/learn-know-token.png"
+              src="../../../../content/images/learn-know-token.webp"
               alt="Know token"
               className="know__intro__image__shadow"
             />
@@ -54,7 +54,7 @@ const Know = () => (
             >
               <div className="whitecard">
                 <StaticImage
-                  src="../../../../content/images/learn-know-whitecard-bottles.png"
+                  src="../../../../content/images/learn-know-whitecard-bottles.webp"
                   alt="Fee token"
                   className="whitecard__image__bottles"
                 />
@@ -69,7 +69,7 @@ const Know = () => (
             <Parallax parallaxStart="40" parallaxEnd="-40" parallaxMiddle="0.4">
               <div className="whitecard">
                 <StaticImage
-                  src="../../../../content/images/learn-know-whitecard-wallet.png"
+                  src="../../../../content/images/learn-know-whitecard-wallet.webp"
                   alt="Free token"
                   className="whitecard__image__wallet"
                 />
@@ -95,7 +95,7 @@ const Know = () => (
             }}
           />
           <StaticImage
-            src="../../../../content/images/learn-know-silver-coins.png"
+            src="../../../../content/images/learn-know-silver-coins.webp"
             alt="Silver coins"
             className="know__possibilities__image"
           />
@@ -108,7 +108,7 @@ const Know = () => (
         </div>
         <div className="know__governance__image__wrapper">
           <StaticImage
-            src="../../../../content/images/learn-know-governance-mechanism.png"
+            src="../../../../content/images/learn-know-governance-mechanism.webp"
             alt="Blockchain"
             className="know__governance__image"
           />

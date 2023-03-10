@@ -313,14 +313,14 @@
     left: 7px;
     top: 472px;
     margin-left: 0;
-    background-image: url("../../assets/images/illus/cropped_footer_image.png");
+    background-image: url("../../assets/images/illus/cropped_footer_image.webp");
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 0;
 
     &:hover {
       opacity: 1;
-      background-image: url("../../assets/images/illus/cropped_footer_image.png");
+      background-image: url("../../assets/images/illus/cropped_footer_image.webp");
       background-size: contain;
       width: 100%;
     }

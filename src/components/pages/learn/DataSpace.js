@@ -11,7 +11,7 @@ const DataSpace = () => {
         icon: (
           <StaticImage
             className="dataspace__governance__card__image"
-            src="../../../assets/images/illus/new_document.png"
+            src="../../../assets/images/illus/new_document.webp"
             alt="card image"
             loading="eager"
           />
@@ -23,7 +23,7 @@ const DataSpace = () => {
         icon: (
           <StaticImage
             className="dataspace__governance__card__image"
-            src="../../../assets/images/illus/new_document_setting.png"
+            src="../../../assets/images/illus/new_document_setting.webp"
             alt="card image"
             loading="eager"
           />
@@ -48,7 +48,7 @@ const DataSpace = () => {
           <div className="dataspace__image__wrapper">
             <StaticImage
               className="dataspace__image__data__spaces"
-              src="../../../assets/images/illus/index_intro_card_1.png"
+              src="../../../assets/images/illus/index_intro_card_1.webp"
               alt="build data spaces"
               loading="eager"
             />
@@ -71,14 +71,14 @@ const DataSpace = () => {
           <div className="dataspace__image__wrapper purposes">
             <StaticImage
               className="dataspace__image__data__spaces"
-              src="../../../assets/images/illus/index_intro_card_2.png"
+              src="../../../assets/images/illus/index_intro_card_2.webp"
               alt="build data spaces"
               loading="eager"
             />
             <div className="dataspace__background__halo" />
             <StaticImage
               className="dataspace__background__image"
-              src="../../../assets/images/illus/background_img_northern_light.png"
+              src="../../../assets/images/illus/background_img_northern_light.webp"
               alt="build data spaces"
               loading="eager"
             />
@@ -121,7 +121,7 @@ const DataSpace = () => {
         <div className="dataspace__image__wrapper">
           <StaticImage
             className="dataspace__image__landing"
-            src="../../../assets/images/illus/images-not-compressed/index_landing.png"
+            src="../../../assets/images/illus/images-not-compressed/index_landing.webp"
             alt="OKP4 hero image"
             loading="eager"
           />

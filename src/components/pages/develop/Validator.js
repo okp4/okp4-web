@@ -68,7 +68,7 @@ const Validator = ({ files }) => {
           {isLarge && (
             <StaticImage
               className="background_light"
-              src="../../../assets/images/illus/background_img_northern_light.png"
+              src="../../../assets/images/illus/background_img_northern_light.webp"
               alt="build dataverse"
               loading="eager"
             />
@@ -106,7 +106,7 @@ const Validator = ({ files }) => {
         <div className="introduction__image-wrapper">
           <StaticImage
             className="staking__image"
-            src="../../../assets/images/illus/druid_magic.png"
+            src="../../../assets/images/illus/druid_magic.webp"
             alt="data structure"
             loading="eager"
           />

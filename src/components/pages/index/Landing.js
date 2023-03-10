@@ -123,7 +123,7 @@ const Landing = () => {
         <div className="landing__illus" ref={divFadeIn}>
           <StaticImage
             className="imgWrapper--base"
-            src="../../../assets/images/illus/index_landing.jpg"
+            src="../../../assets/images/illus/index_landing.webp"
             alt="OKP4 hero image"
             loading="eager"
           />
@@ -135,7 +135,7 @@ const Landing = () => {
             >
               <StaticImage
                 className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/calque-1.png"
+                src="../../../assets/images/illus/index_landing_sprites/calque-1.webp"
                 alt="OKP4 hero image"
                 loading="eager"
               />
@@ -144,7 +144,7 @@ const Landing = () => {
             <div className="parallaxWrapper">
               <StaticImage
                 className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/calque-2.png"
+                src="../../../assets/images/illus/index_landing_sprites/calque-2.webp"
                 alt="OKP4 hero image"
                 loading="eager"
               />
@@ -157,7 +157,7 @@ const Landing = () => {
             >
               <StaticImage
                 className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/calque-3.png"
+                src="../../../assets/images/illus/index_landing_sprites/calque-3.webp"
                 alt="OKP4 hero image"
                 loading="eager"
               />
@@ -170,7 +170,7 @@ const Landing = () => {
             >
               <StaticImage
                 className="imgWrapper"
-                src="../../../assets/images/illus/index_landing_sprites/calque-4.png"
+                src="../../../assets/images/illus/index_landing_sprites/calque-4.webp"
                 alt="OKP4 hero image"
                 loading="eager"
               />

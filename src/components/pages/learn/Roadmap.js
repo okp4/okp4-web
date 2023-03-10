@@ -257,7 +257,7 @@ const Roadmap = () => {
     <div className="roadmap__main">
       <Halo />
       <StaticImage
-        src="../../../assets/images/illus/background_img_roadmap.png"
+        src="../../../assets/images/illus/background_img_roadmap.webp"
         alt="background image"
         className="roadmap__background__image"
       />

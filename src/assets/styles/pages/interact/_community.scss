@@ -100,13 +100,13 @@
       left: 7px;
       top: 472px;
       margin-left: 0;
-      background-image: url("../../assets/images/illus/cropped_footer_image.png");
+      background-image: url("../../assets/images/illus/cropped_footer_image.webp");
       background-size: cover;
       background-repeat: no-repeat;
 
       &:hover {
         opacity: 1;
-        background-image: url("../../assets/images/illus/cropped_footer_image.png");
+        background-image: url("../../assets/images/illus/cropped_footer_image.webp");
         background-size: contain;
         width: 100%;
       }
@@ -258,7 +258,7 @@
 
         @include media-bp-up(md) {
           &:hover {
-            background: url("/images/grain.png"),
+            background: url("/images/grain.webp"),
               linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
 
             .card_title,
@@ -441,7 +441,7 @@
 
           @include media-bp-up(md) {
             &:hover {
-              background: url("/images/grain.png"),
+              background: url("/images/grain.webp"),
                 linear-gradient(39.81deg, #006796 21.82%, #00b6b7 98.43%);
 
               .title,

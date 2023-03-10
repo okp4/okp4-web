@@ -9,10 +9,10 @@ presentationPart:
   title: With OKP4, unlock the power of knowledge
   introduction: In our digitalized world, one of the most efficient ways to unlock knowledge is through data. But data is rarely shared. It stays in silos, isolated and protected. As such, data is under-used and under-valued.
   description: Generating knowledge from data is theoretically infinite. That's why an incommensurable amount of value could be unlocked through data sharing. Today's problem is that individuals and companies restrict access to data and information because of risk, complexity, costs and lack of incentive. With OKP4, we provide tools to build applications with fair use of data efficiently.
-  image: learn-okp4-presentation.png
+  image: learn-okp4-presentation.webp
 dataSharingPart:
   title: How to mainstream Data Sharing?
-  image: learn-okp4-section1.png
+  image: learn-okp4-section1.webp
   text:
     - A decentralized data-sharing infrastructure could enable many new opportunities for data way beyond data exchange. OKP4 is a public PoS layer 1 blockchain built for trust-minimized data sharing. It is specifically designed to enable communities to share data, algorithms, and resources to create a sovereign Dataverse and an environment of applications on top of it.
     - OKP4 protocol allows the creation of fully customizable
@@ -30,7 +30,7 @@ knowPart:
     The whole system is decentralized since no dominant third party dictates the rules.
     While the blockchain is governed and operated by the decentralized community, <b>each Data Space can have its own governance mechanisms</b>, enabling companies to benefit from web3 while giving users & data providers complete ownership and transparency.
     </p>
-  image: learn-okp4-know.png
+  image: learn-okp4-know.webp
 cosmosPart:
   title: Powered by Cosmos to skyrocket IBC!
   introduction: The Inter-Blockchain Communication (IBC) protocol will enable OKP4 to be a hub for interchain applications leveraging many other cosmos-based networks such as Juno, Secret network, Osmosis, Akash, Stargaze, and more.
@@ -48,5 +48,5 @@ cosmosPart:
     - to make
     - their raw data available to the network without exposing it
     - to other members.
-  image: learn-okp4-cosmos.png
+  image: learn-okp4-cosmos.webp
 discoverDataSpace: Discover the Data Space
