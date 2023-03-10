@@ -88,28 +88,15 @@ jobs:
       - name: Check images format
         working-directory: .
         run: |
-          folders="
-          content/images/*
-          content/images/**/*
-          src/assets/images/illus/*
-          src/assets/images/illus/**/*
-          src/assets/images/logos/**
-          src/assets/images/logos/**/*
-          static/images/**
-          static/images/**/*
-          "
-
-          not_webp_format=()
-          for folder in $folders; do
-            for image in $folder; do
-              if [[ -f "$image" && $(identify -format '%m\n' "$image") != "WEBP" ]]; then
-                not_webp_format+=("$image")
-              fi
-            done
+          errors=0
+          for image in $(find content/images src/assets/images/illus src/assets/images/logos static/images  -type f); do
+            if [[ $(identify -format '%m\n' "$image") != "WEBP" ]]; then
+              echo "$image is not in WEBP format"
+              errors=$((errors+1))
+            fi
           done
-
-          if [[ ${#not_webp_format[@]} -ne 0 ]]; then
-            echo "The following images are not in webp format:"
-            printf '%s\n' "${not_webp_format[@]}"
+          if [ $errors -gt 0 ]; then
+            echo "There are $errors images to convert in webp format."
             exit 1
           fi
+          echo "All images are in WEBP format."
