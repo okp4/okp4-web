@@ -88,15 +88,15 @@ jobs:
       - name: Check images format
         working-directory: .
         run: |
-          errors=0
-          for image in $(find content/images src/assets/images/illus src/assets/images/logos static/images  -type f); do
+          error=false
+          for image in $(find content src -type f \( -iname \*.webp -o -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png  \)); do
             if [[ $(identify -format '%m\n' "$image") != "WEBP" ]]; then
               echo "$image is not in WEBP format"
-              errors=$((errors+1))
+              error=true
             fi
           done
-          if [ $errors -gt 0 ]; then
-            echo "There are $errors images to convert in webp format."
+          if [ "$error" = true ]; then
+            echo "❌ Some images are not in webp format. Please convert them. 🙏" >&2
             exit 1
           fi
-          echo "All images are in WEBP format."
+          echo "✅ All images are in WEBP format."
