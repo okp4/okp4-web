@@ -79,24 +79,27 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.OKP4_TOKEN }}
 
-  lint-image-format:
+  lint-image:
     runs-on: ubuntu-22.04
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Check images format
-        working-directory: .
+      - name: Lint image files
         run: |
-          error=false
-          for image in $(find content src -type f \( -iname \*.webp -o -iname \*.jpg -o -iname \*.jpeg -o -iname \*.png  \)); do
-            if [[ $(identify -format '%m\n' "$image") != "WEBP" ]]; then
-              echo "$image is not in WEBP format"
-              error=true
+          FAILED=0
+          for file in $(find "$CONTENT_FOLDER" "$SRC_FOLDER" -regextype posix-egrep -regex '.+\.(bmp|ico|jpg|jpeg|png|svg|webp)'); do
+            type=$(identify $file | awk '{print $2}')
+            if [[ $type =~ ^(WEBP|SVG|ICO)$ ]]; then
+              echo "✅ $file"
+            else
+              >&2 echo "❌ $file incorrect. Please use only webp or svg format 🙏"
+              FAILED=1
             fi
           done
-          if [ "$error" = true ]; then
-            echo "❌ Some images are not in webp format. Please convert them. 🙏" >&2
+          if [ "${FAILED}" = "1" ]; then
             exit 1
           fi
-          echo "✅ All images are in WEBP format."
+        env:
+          CONTENT_FOLDER: ./content
+          SRC_FOLDER: ./src
