@@ -275,7 +275,7 @@ header.header {
             }
             .header__submenu__container {
               position: absolute;
-              min-width: 100px;
+              min-width: 257px;
               height: fit-content;
               padding: 20px 0;
               background: transparent;
@@ -288,21 +288,33 @@ header.header {
               }
 
               .header__submenu__content {
-                padding: 20px 30px;
-                border-radius: 20px;
-                background: $pushblue;
+                padding: 30px 40px;
+                border-radius: 10px;
+                background: #004073;
                 background-repeat: repeat;
                 background-size: contain;
+                max-height: 212px;
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: repeat(auto-fit, minmax(107px, 1fr));
+                grid-template-rows: repeat(auto-fit, minmax(31px, 1fr));
+                row-gap: 9px;
+                column-gap: 30px;
 
                 @include media-bp-down(lg) {
                   display: flex;
                   flex-direction: column;
                   padding: unset;
                   background: none;
+                  max-height: unset;
+                  row-gap: unset;
+                  column-gap: unset;
                 }
                 .header__submenu__item {
-                  color: $white-80;
-                  font-weight: 100;
+                  color: $white;
+                  font-weight: 400;
+                  font-size: 18px;
+                  line-height: 22px;
 
                   .header__submenu__external__link {
                     display: flex;
@@ -321,13 +333,13 @@ header.header {
                 }
 
                 .header__submenu__item__separator {
-                  margin: 9px auto;
-                  border-top: 0.1px solid $white-80;
-                  width: 100%;
+                  margin-top: 9px;
+                  border-top: 1px solid $white;
+                  width: 107px;
                   opacity: 20%;
                   @include media-bp-down(lg) {
                     width: 107px;
-                    margin: 20px auto;
+                    margin: 14px auto 20px;
                   }
                 }
               }
