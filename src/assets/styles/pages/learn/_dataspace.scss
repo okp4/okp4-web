@@ -272,10 +272,14 @@ body {
         "header config"
         "rules config"
         "rules build";
-      max-width: 1264px;
-      gap: 30px;
+      max-width: 1324px;
+      gap: 32px;
       padding: 140px 30px 190px;
       margin: 0 auto;
+
+      @include media-bp-up(lg) {
+        grid-template-columns: 1fr 1fr;
+      }
 
       @include media-bp-down(lg) {
         grid-template-areas:
