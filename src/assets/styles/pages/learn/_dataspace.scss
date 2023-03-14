@@ -30,6 +30,10 @@ body {
       @include media-bp-down(lg) {
         font-size: 18px;
         text-align: center;
+
+        &:last-of-type {
+          margin-top: 20px;
+        }
       }
     }
 
