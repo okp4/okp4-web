@@ -1005,6 +1005,11 @@ main.homepage {
           @include media-bp-down(lg) {
             max-width: 100%;
             margin-bottom: 40px;
+            br {
+              display: block;
+              content: "";
+              margin: 20px 0;
+            }
           }
 
           @include media-bp-down(sm) {
