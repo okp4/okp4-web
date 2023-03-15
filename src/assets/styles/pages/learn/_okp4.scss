@@ -291,6 +291,15 @@
       grid-template: revert;
       border-radius: 20px;
     }
+
+    .okp4__section__image {
+      img {
+        border-radius: 40px 0 0 40px;
+        @include media-bp-down(lg) {
+          border-radius: 20px 20px 0 0;
+        }
+      }
+    }
   }
 
   .okp4__know {
