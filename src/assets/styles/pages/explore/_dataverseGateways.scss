@@ -236,7 +236,7 @@ main.dataverseGateways {
       @include media-bp-down(xl) {
         min-height: 830px;
       }
-      @include media-bp-down(md) {
+      @include media-bp-down(sm) {
         min-height: 630px;
         padding: 0;
         margin-bottom: 30px;

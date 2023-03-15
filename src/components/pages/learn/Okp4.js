@@ -19,20 +19,20 @@ const Okp4 = ({ files }) => (
         </div>
         <div className="content__wrapper">
           <h1 className="okp4__title">{content.presentationPart.title}</h1>
-          <div className="okp4__presentation__text">
-            <p
-              className="okp4__text__primary okp4__presentation__introduction"
-              dangerouslySetInnerHTML={{
-                __html: content.presentationPart.introduction,
-              }}
-            ></p>
-            <p
-              className="okp4__text__secondary"
-              dangerouslySetInnerHTML={{
-                __html: content.presentationPart.description,
-              }}
-            ></p>
-          </div>
+        </div>
+        <div className="okp4__presentation__text">
+          <p
+            className="okp4__text__primary okp4__presentation__introduction"
+            dangerouslySetInnerHTML={{
+              __html: content.presentationPart.introduction,
+            }}
+          ></p>
+          <p
+            className="okp4__text__secondary"
+            dangerouslySetInnerHTML={{
+              __html: content.presentationPart.description,
+            }}
+          ></p>
         </div>
       </section>
 

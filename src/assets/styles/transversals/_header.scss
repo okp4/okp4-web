@@ -446,10 +446,14 @@ header.header {
       color: $white-80;
       font-size: 12px;
 
-      .link {
-        cursor: pointer;
+      .link,
+      span {
         color: $white-80;
         font-size: 12px;
+      }
+
+      .link {
+        cursor: pointer;
       }
 
       .separator {
