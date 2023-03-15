@@ -220,6 +220,9 @@
     .okp4__section__content {
       background: $darkblue;
       border-radius: 40px;
+      @include media-bp-down(lg) {
+        border-radius: 20px;
+      }
     }
 
     .wrapper {
