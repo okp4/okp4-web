@@ -57,6 +57,7 @@ main.legalMentions {
           line-height: 38px;
           font-weight: 700;
           font-size: 20px;
+          text-transform: capitalize;
           @include media-bp-up(lg) {
             font-size: 32px;
           }
