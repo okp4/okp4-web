@@ -3,6 +3,7 @@ import Preloader from "./Preloader";
 import Header from "./Header";
 import Footer from "./Footer";
 import "../assets/styles/index.scss";
+import AnalyticsScript from "./AnalyticsScript";
 
 const Layout = ({
   children,
@@ -18,7 +19,10 @@ const Layout = ({
     <>
       <Preloader />
       <Header isPositionFixed={isStatic} breadcrumbs={breadcrumbs} />
-      <main className={location}>{children}</main>
+      <main className={location}>
+        <AnalyticsScript />
+        {children}
+      </main>
       <Footer
         files={files}
         withDocs={withDocs}
