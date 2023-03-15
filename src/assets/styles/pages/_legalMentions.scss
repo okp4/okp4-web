@@ -7,11 +7,12 @@ main.legalMentions {
   }
 
   .header_halo {
-    position: fixed;
+    position: absolute;
     width: 1344px;
     height: 695px;
     top: -174px;
-    right: -193px;
+    right: 0;
+    z-index: -1;
   }
 
   .main-content {
@@ -20,6 +21,7 @@ main.legalMentions {
 
   .wrapper {
     position: relative;
+    overflow: hidden;
   }
 
   .legalMentions__content {
