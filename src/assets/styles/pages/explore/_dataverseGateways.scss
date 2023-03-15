@@ -92,6 +92,7 @@ main.dataverseGateways {
             font-weight: 700;
             line-height: 150%;
             margin: 0 25px;
+            white-space: nowrap;
 
             @media screen and (max-width: 470px) {
               margin: 0;
