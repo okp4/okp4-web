@@ -4,7 +4,6 @@ breadcrumbs:
     link: /
   - name: Learn
   - name: $KNOW
-    link: /learn/know
 introPart:
   titlePartOne: The $KNOW
   titlePartTwo: a native token

@@ -4,7 +4,6 @@ breadcrumbs:
     link: /
   - name: Learn
   - name: Data Space
-    link: /learn/dataspace
 dataSpaces:
   build:
     header: build data spaces
