@@ -44,14 +44,15 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
     if (divRef.current) {
       if (window.scrollY < windowHeight + 100) {
         divRef.current.classList.remove("is-reset");
-        let ratio = getRatio();
 
+        const ratio = getRatio();
         if (ResponsiveManager.isWindowLarger("lg")) {
           divRef.current.style.opacity = ratio;
         } else if (divMobile.current) {
           divMobile.current.style.opacity = ratio;
         }
       } else {
+        divRef.current.style.opacity = null;
         divRef.current.classList.add("is-reset");
       }
     }
@@ -87,6 +88,14 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
       ScrollManager.enableScroll();
     };
   }, [scrollStarted]);
+
+  useEffect(() => {
+    const windowHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+    divRef.current &&
+      window.scrollY >= windowHeight + 100 &&
+      divRef.current.classList.add("is-reset");
+  }, [divRef]);
 
   return (
     <header
