@@ -56,5 +56,15 @@ module.exports = {
     {
       resolve: "gatsby-plugin-no-sourcemaps",
     },
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: "1",
+        matomoUrl: "https://okp4.matomo.cloud",
+        siteUrl: "https://okp4.network",
+        matomoPhpScript: "matomo.php",
+        matomoJsScript: "matomo.js",
+      },
+    },
   ],
 };
