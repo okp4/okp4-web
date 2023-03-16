@@ -7,7 +7,6 @@ import "../assets/styles/index.scss";
 import LegalMentionsAndCookiePolicy from "../components/pages/legal/LegalMentionsAndCookiePolicy";
 import Seo from "../components/SEO";
 import seoContent from "/content/transversals/seo.yaml";
-import AnalyticsScript from "../components/AnalyticsScript";
 
 export default function LegalMentions({ data }) {
   return (
@@ -15,7 +14,6 @@ export default function LegalMentions({ data }) {
       <Preloader />
       <Header isPositionFixed />
       <main className="legalMentions">
-        <AnalyticsScript />
         <LegalMentionsAndCookiePolicy />
       </main>
       <Footer
