@@ -1,7 +1,6 @@
 import * as React from "react";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../utils/MediaManager.js";
-import Halo from "../../animations/Halo.js";
 import content from "/content/pages/learn/dataverse.yaml";
 import { Link } from "gatsby";
 import Parallax from "../../animations/Parallax.js";
@@ -14,8 +13,6 @@ const Dataverse = ({ files }) => {
 
   return (
     <div>
-      <Halo />
-
       <div className="wrapper">
         <div className="okp4_universe">
           <h1 className="okp4_universe__title">{content.okp4Universe.title}</h1>

@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import Halo from "../../animations/Halo.js";
 import contentPortal from "/content/pages/explore/portal.yaml";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import IconRipple from "/src/assets/images/icons/ripple.inline.svg";
@@ -71,7 +70,6 @@ const Portal = () => {
   );
   return (
     <div className="portal__main">
-      <Halo />
       <div className="portal__discover">
         <h1>{contentPortal.discover.header}</h1>
         <p>

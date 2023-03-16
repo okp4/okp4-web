@@ -1,14 +1,11 @@
 import * as React from "react";
-import Halo from "../../animations/Halo.js";
 import contentKnow from "/content/pages/learn/know.yaml";
 import { StaticImage } from "gatsby-plugin-image";
 import Parallax from "../../animations/Parallax";
-import { Link } from "gatsby";
 import IconArrowtr from "../../../assets/images/icons/arrow-tr.inline.svg";
 
 const Know = () => (
   <div className="know__main">
-    <Halo />
     <div className="wrapper">
       <div className="know__intro">
         <div className="know__intro__text">

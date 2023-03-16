@@ -4,7 +4,6 @@ import * as MediaManager from "../../../utils/MediaManager.js";
 import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
 import StickyUniverse from "../../animations/StickyUniverse.js";
 import StrateRoadmap from "../../animations/StrateRoadmap.js";
-import Halo from "../../animations/Halo.js";
 import contentUniverse from "/content/pages/index/universe.yaml";
 import contentRoadmap from "/content/pages/index/roadmap.yaml";
 import { Link } from "gatsby";
@@ -61,7 +60,6 @@ const Universe = ({ files }) => {
       <div className="strate__inner">
         <div className="wrapper">
           <StickyUniverse classContainer="universe__wrapper">
-            <Halo></Halo>
             <div className="universe__sticky">
               <h2 className="universe__title">{contentUniverse.title}</h2>
               <div className="universe__illus">
