@@ -121,7 +121,7 @@ const DataSpace = () => {
         <div className="dataspace__image__wrapper">
           <StaticImage
             className="dataspace__image__landing"
-            src="../../../assets/images/illus/images-not-compressed/index_landing.webp"
+            src="../../../assets/images/illus/index_landing.webp"
             alt="OKP4 hero image"
             loading="eager"
           />
