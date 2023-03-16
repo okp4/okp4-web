@@ -12,6 +12,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <script src="/scripts/env.js" />
+        <script src="/scripts/seo-matomo.js" type="text/javascript" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
