@@ -44,7 +44,7 @@ const Okp4 = ({ files }) => (
                   content.dataSharingPart.image,
                   files
                 )}
-                alt={content.dataSharingPart.title}
+                alt={content.dataSharingPart.alt}
               />
             </div>
             <div className="okp4__section__description">
@@ -106,7 +106,7 @@ const Okp4 = ({ files }) => (
           <div className="okp4__know__image okp4__image">
             <GatsbyImage
               image={MediaManager.GetImage(content.knowPart.image, files)}
-              alt={content.knowPart.title}
+              alt={content.knowPart.alt}
             />
           </div>
         </div>
@@ -185,7 +185,7 @@ const Okp4 = ({ files }) => (
             <div className="okp4__cosmos__image okp4__image">
               <GatsbyImage
                 image={MediaManager.GetImage(content.cosmosPart.image, files)}
-                alt={content.cosmosPart.title}
+                alt={content.cosmosPart.alt}
               />
             </div>
           </div>
