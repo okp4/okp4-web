@@ -20,44 +20,58 @@ associates:
       - label: ChainLayer
         url: https://www.chainlayer.io/
         image: logo-chainlayer.webp
+        alt: Logo Chainlayer - OKP4
       - label: Interchain
         url: https://interchain.io/
         image: logo-interchain.webp
+        alt: Logo Interchain - OKP4
       - label: CC validators
         url: https://ccvalidators.com/
         image: logo-cc-validators.webp
+        alt: Logo Cryptocrew Validators - OKP4
       - label: B-Harvest
         url: https://bharvest.io/
         image: logo-b-harvest.webp
+        alt: Logo B-Harvest - OKP4
       - label: Stakelab
         url: https://www.stakelab.fr/
+        alt: Logo Stakelab - OKP4
       - label: P2P
         url: https://p2p.org/
         image: logo-p2p.webp
+        alt: Logo P2P - OKP4
       - label: Polkachu
         url: https://polkachu.com/
         image: logo-polkachu.webp
+        alt: Logo Polkachu - OKP4
       - label: Notional
         url: https://notional.ventures/
         image: logo-notional.webp
+        alt: Logo Notional - OKP4
       - label: Imperator
         url: https://imperator.co/
         image: logo-imperator.webp
+        alt: Logo Imperator - OKP4
       - label: Citadel.one
         url: https://citadel.one/
         image: logo-citadelone.webp
+        alt: Logo Citadelone - OKP4
       - label: Staking Cabin
         url: https://stakingcabin.com/
         image: logo-staking-cabin.webp
+        alt: Logo Staking Cabin - OKP4
       - label: NodeStake
         url: https://nodestake.top/
         image: logo-nodestake.webp
+        alt: Logo Nodestake - OKP4
       - label: Informal Systems
         url: https://informal.systems/
         image: logo-informal.webp
+        alt: Logo Informal - OKP4
       - label: Cros-Nest
         url: https://cros-nest.com/
         image: logo-nest.webp
+        alt: Logo Nest - OKP4
   advisors:
     title: Our Advisors
     people:

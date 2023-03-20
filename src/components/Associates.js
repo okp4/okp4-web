@@ -216,7 +216,7 @@ const Associates = () => {
           <StaticImage
             className="associates__advisors__image"
             src="../../content/images/advisors/advisor-peter-van-mourik.webp"
-            alt="OKP4 Advisor"
+            alt="Advisor Peter Van Mourik - OKP4"
           />
         ),
       },
@@ -228,7 +228,7 @@ const Associates = () => {
           <StaticImage
             className="associates__advisors__image"
             src="../../content/images/advisors/advisor-benjamin-santi.webp"
-            alt="OKP4 Advisor"
+            alt="Advisor Benjamin Santi - OKP4"
           />
         ),
       },
@@ -241,7 +241,7 @@ const Associates = () => {
           <StaticImage
             className="associates__advisors__image"
             src="../../content/images/advisors/advisor-jasvin-bhasin.webp"
-            alt="OKP4 Advisor"
+            alt="Advisor Jasvin Bhasin - OKP4"
           />
         ),
       },
@@ -253,7 +253,7 @@ const Associates = () => {
           <StaticImage
             className="associates__advisors__image"
             src="../../content/images/advisors/advisor-sebastien-couture.webp"
-            alt="OKP4 Advisor"
+            alt="Advisor Sebastien Couture - OKP4"
           />
         ),
       },

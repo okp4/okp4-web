@@ -48,7 +48,7 @@ const Portal = () => {
           <StaticImage
             className="portal__tool__image explore"
             src="../../../../content/images/index_intro_card_2.webp"
-            alt="OKP4 portal explore image"
+            alt="Gems Icon - OKP4"
           />
         ),
       },

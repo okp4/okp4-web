@@ -11,21 +11,21 @@ const Partners = () => (
           <StaticImage
             className="imgWrapper"
             src="../assets/images/logos/occitanie.webp"
-            alt="Logo Occitanie"
+            alt="Region Occitanie Support - OKP4"
           />
         </div>
         <div className="footer__partenaires__item">
           <StaticImage
             className="imgWrapper"
             src="../assets/images/logos/bpi.webp"
-            alt="Logo BPI France"
+            alt="BPI France Support - OKP4"
           />
         </div>
         <div className="footer__partenaires__item">
           <StaticImage
             className="imgWrapper"
             src="../assets/images/logos/bretagne.webp"
-            alt="Logo Bretagne"
+            alt="Region Bretagne Support - OKP4"
           />
         </div>
       </div>
