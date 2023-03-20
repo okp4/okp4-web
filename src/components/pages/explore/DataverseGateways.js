@@ -60,7 +60,7 @@ const DataverseGateways = ({ files }) => {
                       "explore/" + card.image,
                       files
                     )}
-                    alt={card.title}
+                    alt={card.alt}
                   />
                 </div>
                 <div className="dg__landscape__cards__item__text">
@@ -80,7 +80,7 @@ const DataverseGateways = ({ files }) => {
                     imgClassName="img"
                     objectFit="contain"
                     src="../../../assets/images/illus/explore/protocol-book.webp"
-                    alt="OKP4 Protocol"
+                    alt="Protocol Book - OKP4"
                   />
                 </div>
                 <div className="dg__protocol__book--element page page1">
@@ -89,7 +89,7 @@ const DataverseGateways = ({ files }) => {
                     imgClassName="img"
                     objectFit="contain"
                     src="../../../assets/images/illus/explore/protocol-page-lb.webp"
-                    alt="OKP4 Protocol"
+                    alt="Protocol Book - OKP4"
                   />
                 </div>
                 <div className="dg__protocol__book--element page page2">
@@ -98,7 +98,7 @@ const DataverseGateways = ({ files }) => {
                     imgClassName="img"
                     objectFit="contain"
                     src="../../../assets/images/illus/explore/protocol-page-lt.webp"
-                    alt="OKP4 Protocol"
+                    alt="Protocol Book - OKP4"
                   />
                 </div>
                 <div className="dg__protocol__book--element page page3">
@@ -107,7 +107,7 @@ const DataverseGateways = ({ files }) => {
                     imgClassName="img"
                     objectFit="contain"
                     src="../../../assets/images/illus/explore/protocol-page-rb.webp"
-                    alt="OKP4 Protocol"
+                    alt="Protocol Book - OKP4"
                   />
                 </div>
                 <div className="dg__protocol__book--element page page4">
@@ -116,7 +116,7 @@ const DataverseGateways = ({ files }) => {
                     imgClassName="img"
                     objectFit="contain"
                     src="../../../assets/images/illus/explore/protocol-page-rt.webp"
-                    alt="OKP4 Protocol"
+                    alt="Protocol Book - OKP4"
                   />
                 </div>
               </div>
@@ -126,8 +126,11 @@ const DataverseGateways = ({ files }) => {
                 {content.protocol.cards.map((card, index) => {
                   const cardContent = (
                     <GatsbyImage
-                      image={MediaManager.GetImage("explore/" + card, files)}
-                      alt={card}
+                      image={MediaManager.GetImage(
+                        "explore/" + card.image,
+                        files
+                      )}
+                      alt={card.alt}
                     />
                   );
                   const baseProps = {
