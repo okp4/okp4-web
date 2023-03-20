@@ -8,6 +8,7 @@ okp4Universe:
   title: The OKP4 universe
   description: The Dataverse is an ever-expanding universe comprised of all the Datasets, Algorithms, Software, Storage resources, Computation resources, Identity management solutions, workflow engines, oracles, and many other resources referenced in the blockchain.
   image: index_universe_dataverse.webp
+  alt: Crystal Ball Universe - OKP4
 buildDataverse:
   title: Let's build the dataverse
   description: |
@@ -21,6 +22,7 @@ web2Okp4:
       All existing off-chain services are supported by the Protocol:
     </p>
   image: connecting-web2-with-okp4.webp
+  alt: Mystic Forest Illustration - OKP4
   services:
     - title: Data-agnostic
       description: Any dataset or data stream can be shared
@@ -40,6 +42,7 @@ ibc:
       Thanks to <a target='_blank' rel='noreferrer' href='https://ibc.cosmos.network/'>IBC</a> (Inter Blockchain Communication), integrate any resources from other ecosystems and become the hub for on-chain enabled synergies, for examples:
     </p>
   image: index_universe_blockchain.webp
+  alt: Blockchain network - OKP4
   synergies:
     - title: Datasets from
       links:
@@ -78,10 +81,13 @@ architecture:
   cards:
     - title: Scalable
       image: scalable.webp
+      alt: Scalable icon - OKP4
       description: designed to scale to infinity
     - title: Interoperable
       image: interoperable.webp
+      alt: Interoperable icon - OKP4
       description: ensure maximum integration with existing and future services
     - title: Auditable
       image: auditable.webp
+      alt: Auditable icon - OKP4
       description: provide a complete topology of the Ecosystem recorded as an ontology on-chain

@@ -24,7 +24,7 @@ const Dataverse = ({ files }) => {
             <GatsbyImage
               className="dataverse_image"
               image={MediaManager.GetImage(content.okp4Universe.image, files)}
-              alt={content.okp4Universe.title}
+              alt={content.okp4Universe.alt}
             />
           </div>
         </div>
@@ -57,7 +57,7 @@ const Dataverse = ({ files }) => {
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.web2Okp4.image, files)}
-                alt={content.web2Okp4.title}
+                alt={content.web2Okp4.alt}
               />
             </div>
             <div className="web2_okp4__content_wrapper">
@@ -104,7 +104,7 @@ const Dataverse = ({ files }) => {
 
           <GatsbyImage
             image={MediaManager.GetImage(content.ibc.image, files)}
-            alt={content.ibc.title}
+            alt={content.ibc.alt}
           />
         </div>
         <div className="ibc__content">
@@ -169,7 +169,7 @@ const Dataverse = ({ files }) => {
                 <div className="architecture__card__image" data-infinite="1">
                   <GatsbyImage
                     image={MediaManager.GetImage(card.image, files)}
-                    alt={card.title}
+                    alt={card.alt}
                   />
                 </div>
                 <p className="architecture__card__title">{card.title}</p>
