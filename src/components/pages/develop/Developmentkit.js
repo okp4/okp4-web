@@ -15,7 +15,7 @@ const DevelopmentKit = () => (
       <StaticImage
         className="developmentkit__description__image"
         src="../../../assets/images/illus/laptop.webp"
-        alt="Laptop Illustration Development Kit - OKP4"
+        alt={contentDevelopmentKit.empower.alt}
         loading="eager"
       />
     </div>
@@ -34,7 +34,7 @@ const DevelopmentKit = () => (
       <StaticImage
         className="developmentkit__description__image"
         src="../../../assets/images/illus/ephemeral-book.webp"
-        alt="Ephemeral Book Development Kit - OKP4"
+        alt={contentDevelopmentKit.create.alt}
         loading="eager"
       />
     </div>
@@ -43,7 +43,7 @@ const DevelopmentKit = () => (
         <StaticImage
           className="developmentkit__description__image cauldron"
           src="../../../../content/images/index_universe_dk_cropped.webp"
-          alt="Development Kit Cauldron - OKP4"
+          alt={contentDevelopmentKit.designSystem.alt}
           loading="eager"
         />
       </div>
@@ -86,7 +86,7 @@ const DevelopmentKit = () => (
       <StaticImage
         className="developmentkit__description__image"
         src="../../../assets/images/illus/druid_magic.webp"
-        alt="Druid Magic Development Kit - OKP4"
+        alt={contentDevelopmentKit.protocol.alt}
         loading="eager"
       />
       <div className="developmentkit__description">

@@ -80,7 +80,7 @@ const DataverseGateways = ({ files }) => {
                     imgClassName="img"
                     objectFit="contain"
                     src="../../../assets/images/illus/explore/protocol-book.webp"
-                    alt="Protocol Book - OKP4"
+                    alt={content.protocol.alt}
                   />
                 </div>
                 <div className="dg__protocol__book--element page page1">
@@ -89,7 +89,7 @@ const DataverseGateways = ({ files }) => {
                     imgClassName="img"
                     objectFit="contain"
                     src="../../../assets/images/illus/explore/protocol-page-lb.webp"
-                    alt="Protocol Book - OKP4"
+                    alt={content.protocol.alt}
                   />
                 </div>
                 <div className="dg__protocol__book--element page page2">
@@ -98,7 +98,7 @@ const DataverseGateways = ({ files }) => {
                     imgClassName="img"
                     objectFit="contain"
                     src="../../../assets/images/illus/explore/protocol-page-lt.webp"
-                    alt="Protocol Book - OKP4"
+                    alt={content.protocol.alt}
                   />
                 </div>
                 <div className="dg__protocol__book--element page page3">
@@ -107,7 +107,7 @@ const DataverseGateways = ({ files }) => {
                     imgClassName="img"
                     objectFit="contain"
                     src="../../../assets/images/illus/explore/protocol-page-rb.webp"
-                    alt="Protocol Book - OKP4"
+                    alt={content.protocol.alt}
                   />
                 </div>
                 <div className="dg__protocol__book--element page page4">
@@ -116,7 +116,7 @@ const DataverseGateways = ({ files }) => {
                     imgClassName="img"
                     objectFit="contain"
                     src="../../../assets/images/illus/explore/protocol-page-rt.webp"
-                    alt="Protocol Book - OKP4"
+                    alt={content.protocol.alt}
                   />
                 </div>
               </div>

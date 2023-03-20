@@ -122,7 +122,7 @@ const Landing = () => {
           <StaticImage
             className="imgWrapper--base"
             src="../../../assets/images/illus/index_landing.webp"
-            alt="Main Illustration Data Space - OKP4"
+            alt={contentLanding.alt}
             loading="eager"
           />
           <div className="landing__illus__wrapper">
@@ -134,7 +134,7 @@ const Landing = () => {
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/calque-1.webp"
-                alt="Main Illustration Data Space - OKP4"
+                alt={contentLanding.alt}
                 loading="eager"
               />
             </div>
@@ -143,7 +143,7 @@ const Landing = () => {
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/calque-2.webp"
-                alt="Main Illustration Data Space - OKP4"
+                alt={contentLanding.alt}
                 loading="eager"
               />
             </div>
@@ -156,7 +156,7 @@ const Landing = () => {
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/calque-3.webp"
-                alt="Main Illustration Data Space - OKP4"
+                alt={contentLanding.alt}
                 loading="eager"
               />
             </div>
@@ -169,7 +169,7 @@ const Landing = () => {
               <StaticImage
                 className="imgWrapper"
                 src="../../../assets/images/illus/index_landing_sprites/calque-4.webp"
-                alt="Main Illustration Data Space - OKP4"
+                alt={contentLanding.alt}
                 loading="eager"
               />
             </div>

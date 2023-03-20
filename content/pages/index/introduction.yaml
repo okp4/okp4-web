@@ -10,24 +10,29 @@ whitecard1:
   title: Easy to build
   description: Data Spaces and Applications
   image: index_intro_card_1.webp
+  alt: "Book Icon - OKP4"
 whitecard2:
   title: Built in Trust
   description: and custom governance
   image: index_intro_card_2.webp
+  alt: "Gems Icon - OKP4"
 whitecard3:
   title: Optimal incentives
   description: for collaboration
   image: index_intro_card_3.webp
+  alt: "Bottles Icon - OKP4"
 bluecard1:
   title: Powered by the $KNOW token
   description: Incentives & value flows for the many use cases are enabled by the $KNOW. Many B2B use cases are ready to be launched, more community use cases will be built when the Testnet launches.
   image: index_intro_know.webp
+  alt: "Know Token - OKP4"
   button: What is $KNOW?
   url: /learn/know
 bluecard2:
   title: Built on the Cosmos SDK
   description: A smart contract hub specifically designed for Data Spaces.
   image: index_intro_cosmos.webp
+  alt: "Cosmos Logo - OKP4"
 bluecard3:
   title: Simplicity and transparency
   description: Decentralization guarantees sovereignity of shared data and services, trustlessness, transparency, easy managment and customization of governance rules.

@@ -11,7 +11,7 @@ const DataSpace = () => {
           <StaticImage
             className="dataspace__governance__card__image"
             src="../../../assets/images/illus/new_document.webp"
-            alt="New Document Icon - OKP4"
+            alt={contentDataSpace.governance.cards[0].alt}
             loading="eager"
           />
         ),
@@ -23,7 +23,7 @@ const DataSpace = () => {
           <StaticImage
             className="dataspace__governance__card__image"
             src="../../../assets/images/illus/new_document_setting.webp"
-            alt="New Document Setting Icon - OKP4"
+            alt={contentDataSpace.governance.cards[1].alt}
             loading="eager"
           />
         ),
@@ -47,7 +47,7 @@ const DataSpace = () => {
             <StaticImage
               className="dataspace__image__data__spaces"
               src="../../../../content/images/index_intro_card_1.webp"
-              alt="Book Build Data Spaces - OKP4"
+              alt={contentDataSpace.dataSpaces.build.alt}
               loading="eager"
             />
             <div className="dataspace__background__halo" />
@@ -70,14 +70,14 @@ const DataSpace = () => {
             <StaticImage
               className="dataspace__image__data__spaces"
               src="../../../../content/images/index_intro_card_2.webp"
-              alt="Gems Data Spaces Purposes - OKP4"
+              alt={contentDataSpace.dataSpaces.purposes.alt}
               loading="eager"
             />
             <div className="dataspace__background__halo" />
             <StaticImage
               className="dataspace__background__image"
               src="../../../assets/images/illus/background_img_northern_light.webp"
-              alt="build data spaces"
+              alt=""
               loading="eager"
             />
           </div>
@@ -120,7 +120,7 @@ const DataSpace = () => {
           <StaticImage
             className="dataspace__image__landing"
             src="../../../assets/images/illus/index_landing.webp"
-            alt="Main Illustration Data Space - OKP4"
+            alt={contentDataSpace.decentralizedProtocol.alt}
             loading="eager"
           />
           <div className="dataspace__background__halo" />

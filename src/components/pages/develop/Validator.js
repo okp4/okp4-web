@@ -66,7 +66,7 @@ const Validator = ({ files }) => {
             <StaticImage
               className="background_light"
               src="../../../assets/images/illus/background_img_northern_light.webp"
-              alt="build dataverse"
+              alt=""
               loading="eager"
             />
           )}
@@ -104,7 +104,7 @@ const Validator = ({ files }) => {
           <StaticImage
             className="staking__image"
             src="../../../assets/images/illus/druid_magic.webp"
-            alt="Druid Magic Validators - OKP4"
+            alt={content.staking.alt}
             loading="eager"
           />
         </div>

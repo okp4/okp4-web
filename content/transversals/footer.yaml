@@ -78,15 +78,23 @@ associates:
       - name: Peter
         lastname: Van Mourik
         job: CEO, ChainLayer
+        alt: Advisor Peter Van Mourik - OKP4
       - name: Benjamin
         lastname: Santi
         job: CEO, Web3 Studio
+        alt: Advisor Benjamin Santi - OKP4
       - name: Jasvin
         lastname: Bhasin
         job: Strategic Advisor
+        alt: Advisor Jasvin Bhasin - OKP4
       - name: Sébastien
         lastname: Couture
         job: Founder, Epicenter
+        alt: Advisor Sebastien Couture - OKP4
+  partners:
+    - Region Occitanie Support - OKP4
+    - BPI France Support - OKP4
+    - Region Bretagne Support - OKP4
 sitemap:
   url: https://okp4.network/
   text: Sitemap

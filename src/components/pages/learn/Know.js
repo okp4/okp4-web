@@ -26,13 +26,13 @@ const Know = () => (
             <div className="know__intro__image__token__wrapper">
               <StaticImage
                 src="../../../../content/images/learn-know-token.webp"
-                alt="Know Token - OKP4"
+                alt={contentKnow.introPart.alt}
                 className="know__intro__image"
               />
             </div>
             <StaticImage
               src="../../../../content/images/learn-know-token.webp"
-              alt="Know Token - OKP4"
+              alt={contentKnow.introPart.alt}
               className="know__intro__image__shadow"
             />
           </div>
@@ -52,7 +52,7 @@ const Know = () => (
               <div className="whitecard">
                 <StaticImage
                   src="../../../../content/images/learn-know-whitecard-bottles.webp"
-                  alt="Bottles Illustration - OKP4"
+                  alt={contentKnow.aboutPart.whitecards[0].alt}
                   className="whitecard__image__bottles"
                 />
                 <p className="whitecard__title">
@@ -67,7 +67,7 @@ const Know = () => (
               <div className="whitecard">
                 <StaticImage
                   src="../../../../content/images/learn-know-whitecard-wallet.webp"
-                  alt="Wallet Illustration - OKP4"
+                  alt={contentKnow.aboutPart.whitecards[1].alt}
                   className="whitecard__image__wallet"
                 />
                 <p className="whitecard__title">
@@ -93,7 +93,7 @@ const Know = () => (
           />
           <StaticImage
             src="../../../../content/images/learn-know-silver-coins.webp"
-            alt="Silver Coins Token - OKP4"
+            alt={contentKnow.possibilitiesPart.alt}
             className="know__possibilities__image"
           />
         </div>
@@ -106,7 +106,7 @@ const Know = () => (
         <div className="know__governance__image__wrapper">
           <StaticImage
             src="../../../../content/images/learn-know-governance-mechanism.webp"
-            alt="Governance Mechanism Illustration - OKP4"
+            alt={contentKnow.governancePart.alt}
             className="know__governance__image"
           />
           <div className="know__governance__halo" />

@@ -7,17 +7,20 @@ breadcrumbs:
 empower:
   header: empower your innovation
   description: With a comprehensive set of tools and resources, you'll be able to create your project faster and more efficiently than ever before.
+  alt: Laptop Illustration Development Kit - OKP4
 create:
   header: create innovative web3 apps with OKP4 development kit
   description:
     - The OKP4 Development Kit is a comprehensive set of software development tools and resources made available by OKP4 and the community.
     - This Development Kit empowers developers to create innovative Web3 applications using the OKP4 protocol. With OKP4 DK, you have access to a Web3 Design System, Data Space Governance Templates, many command line tools, a large set of open-source libraries (functions, connectors) for various different technologies, and a comprehensive documentation that makes it easier to build secure and efficient web3 applications.
     - Whether you're an experienced developer or just starting out, the OKP4 Development Kit equips you with the tools you need to turn your ideas into reality. Join the growing family of OKP4 builders and bring your vision to life.
+  alt: Ephemeral Book Development Kit - OKP4
 designSystem:
   header: a web3 design system to swiftly develop user-friendly interfaces
   description: The OKP4 Design System is an open-source set of components and resources created to facilitate the design and development of web interfaces in the OKP4 Ecosystem. This design system is a reference for teams working in the OKP4 Ecosystem, enabling you to design and develop web interfaces with speed, consistency and quality.
   button: Design System
   soon: Soon available
+  alt: Development Kit Cauldron - OKP4
 governanceTemplates:
   header: data space governance templates
   description:
@@ -29,6 +32,7 @@ tools:
 protocol:
   header: protocol integrations
   description: In order to make platforms compatible with the OKP4 protocol, connectors and libraries to develop connectors are provided. As the OKP4 protocol will act as the bandmaster for off-chain components, those components shall be strongly coupled with the protocol. For instance, to allow a service to use a dataset, a connector shall make it possible by using the protocol as the source of truth for access control.
+  alt: Druid Magic Development Kit - OKP4
 documentation:
   header: deep documentation
   description:

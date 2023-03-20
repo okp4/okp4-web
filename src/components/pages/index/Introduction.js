@@ -47,7 +47,7 @@ const Introduction = ({ files }) => {
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.whitecard1.image, files)}
-                alt="Book Icon - OKP4"
+                alt={content.whitecard1.alt}
               />
             </div>
             <p className="title">{content.whitecard1.title}</p>
@@ -63,7 +63,7 @@ const Introduction = ({ files }) => {
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.whitecard2.image, files)}
-                alt="Gems Icon - OKP4"
+                alt={content.whitecard2.alt}
               />
             </div>
             <p className="title">{content.whitecard2.title}</p>
@@ -79,7 +79,7 @@ const Introduction = ({ files }) => {
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.whitecard3.image, files)}
-                alt="Bottles Icon - OKP4"
+                alt={content.whitecard3.alt}
               />
             </div>
             <p className="title">{content.whitecard3.title}</p>
@@ -92,7 +92,7 @@ const Introduction = ({ files }) => {
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.bluecard1.image, files)}
-                alt="Know Token - OKP4"
+                alt={content.bluecard1.alt}
               />
             </div>
             <div className="introduction__pushs__item__texts">
@@ -110,7 +110,7 @@ const Introduction = ({ files }) => {
               <GatsbyImage
                 className="imgWrapper"
                 image={MediaManager.GetImage(content.bluecard2.image, files)}
-                alt="Cosmos Logo - OKP4"
+                alt={content.bluecard2.alt}
               />
             </div>
             <div className="introduction__pushs__item__texts">

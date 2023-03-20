@@ -34,7 +34,7 @@ const Dataverse = ({ files }) => {
         <StaticImage
           className="background_light background_light__build_dataverse"
           src="../../../assets/images/illus/background_img_northern_light.webp"
-          alt="build dataverse"
+          alt=""
           loading="eager"
         />
         <div className="build_dataverse">
@@ -95,7 +95,7 @@ const Dataverse = ({ files }) => {
             <StaticImage
               className="background_light background_light__ibc"
               src="../../../assets/images/illus/background_img_northern_light.webp"
-              alt="build dataverse"
+              alt=""
               loading="eager"
             />
           ) : (

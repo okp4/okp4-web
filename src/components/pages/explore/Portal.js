@@ -48,7 +48,7 @@ const Portal = () => {
           <StaticImage
             className="portal__tool__image explore"
             src="../../../../content/images/index_intro_card_2.webp"
-            alt="Gems Illustration Portal - OKP4"
+            alt={contentPortal.descriptions[0].alt}
           />
         ),
       },
@@ -94,12 +94,12 @@ const Portal = () => {
         {isLarge ? (
           <StaticImage
             src="../../../assets/images/illus/portal-homepage.webp"
-            alt="Portal Homepage - OKP4"
+            alt={contentPortal.discover.alt}
           />
         ) : (
           <StaticImage
             src="../../../assets/images/illus/portal-homepage-mobile.webp"
-            alt="Portal Homepage - OKP4"
+            alt={contentPortal.discover.alt}
           />
         )}
 
@@ -121,7 +121,7 @@ const Portal = () => {
           <StaticImage
             className="portal__background__image"
             src="../../../assets/images/illus/background_img_northern_light.webp"
-            alt="background northern light image"
+            alt=""
           />
           {features.map(({ icon, feature, description }) => (
             <div className="portal__tool__feature" key={feature}>

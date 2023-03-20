@@ -8,7 +8,7 @@ const LegalMentionsAndCookiePolicy = () => (
     <StaticImage
       className="header_halo"
       src="../../../assets/images/illus/header-halo.webp"
-      alt="header halo"
+      alt=""
       loading="eager"
     />
     <div className="wrapper">
