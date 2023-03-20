@@ -24,7 +24,7 @@ const JoinUs = ({ files }) => (
             <GatsbyImage
               className="community__image"
               image={MediaManager.GetImage(contentCommunity.image, files)}
-              alt={contentCommunity.title}
+              alt={contentCommunity.alt}
             />
           </div>
         </div>
