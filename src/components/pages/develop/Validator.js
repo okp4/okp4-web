@@ -25,7 +25,7 @@ const Validator = ({ files }) => {
           <GatsbyImage
             className="introduction__image"
             image={MediaManager.GetImage(content.introduction.image, files)}
-            alt={content.introduction.title}
+            alt={content.introduction.alt}
           />
         </div>
       </div>
@@ -52,7 +52,7 @@ const Validator = ({ files }) => {
         <div className="what-is__image-wrapper">
           <GatsbyImage
             image={MediaManager.GetImage(content.whatIs.image, files)}
-            alt={content.whatIs.title}
+            alt={content.whatIs.alt}
           />
         </div>
         <div className="what-is__text">
@@ -94,7 +94,7 @@ const Validator = ({ files }) => {
             </a>
           </div>
           <div className="nemeton__image">
-            <img src={NemetonGif} alt={content.nemeton.title} loading="eager" />
+            <img src={NemetonGif} alt={content.nemeton.alt} loading="eager" />
           </div>
         </div>
       </div>
@@ -104,7 +104,7 @@ const Validator = ({ files }) => {
           <StaticImage
             className="staking__image"
             src="../../../assets/images/illus/druid_magic.webp"
-            alt="data structure"
+            alt="Druid Magic Validators - OKP4"
             loading="eager"
           />
         </div>
