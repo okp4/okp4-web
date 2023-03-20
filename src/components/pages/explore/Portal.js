@@ -48,7 +48,7 @@ const Portal = () => {
           <StaticImage
             className="portal__tool__image explore"
             src="../../../../content/images/index_intro_card_2.webp"
-            alt="Gems Icon - OKP4"
+            alt="Gems Illustration Portal - OKP4"
           />
         ),
       },
@@ -94,12 +94,12 @@ const Portal = () => {
         {isLarge ? (
           <StaticImage
             src="../../../assets/images/illus/portal-homepage.webp"
-            alt="OKP4 portal homepage image"
+            alt="Portal Homepage - OKP4"
           />
         ) : (
           <StaticImage
             src="../../../assets/images/illus/portal-homepage-mobile.webp"
-            alt="OKP4 portal homepage image"
+            alt="Portal Homepage - OKP4"
           />
         )}
 
