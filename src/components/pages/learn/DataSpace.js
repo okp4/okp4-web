@@ -11,7 +11,7 @@ const DataSpace = () => {
           <StaticImage
             className="dataspace__governance__card__image"
             src="../../../assets/images/illus/new_document.webp"
-            alt="card image"
+            alt="New Document Icon - OKP4"
             loading="eager"
           />
         ),
@@ -23,7 +23,7 @@ const DataSpace = () => {
           <StaticImage
             className="dataspace__governance__card__image"
             src="../../../assets/images/illus/new_document_setting.webp"
-            alt="card image"
+            alt="New Document Setting Icon - OKP4"
             loading="eager"
           />
         ),
@@ -47,7 +47,7 @@ const DataSpace = () => {
             <StaticImage
               className="dataspace__image__data__spaces"
               src="../../../../content/images/index_intro_card_1.webp"
-              alt="build data spaces"
+              alt="Book Build Data Spaces - OKP4"
               loading="eager"
             />
             <div className="dataspace__background__halo" />
@@ -70,7 +70,7 @@ const DataSpace = () => {
             <StaticImage
               className="dataspace__image__data__spaces"
               src="../../../../content/images/index_intro_card_2.webp"
-              alt="build data spaces"
+              alt="Gems Data Spaces Purposes - OKP4"
               loading="eager"
             />
             <div className="dataspace__background__halo" />
@@ -120,7 +120,7 @@ const DataSpace = () => {
           <StaticImage
             className="dataspace__image__landing"
             src="../../../assets/images/illus/index_landing.webp"
-            alt="OKP4 hero image"
+            alt="Main Illustration Data Space - OKP4"
             loading="eager"
           />
           <div className="dataspace__background__halo" />
