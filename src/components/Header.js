@@ -89,14 +89,6 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
     };
   }, [scrollStarted]);
 
-  useEffect(() => {
-    const windowHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-    divRef.current &&
-      window.scrollY >= windowHeight + 100 &&
-      divRef.current.classList.add("is-reset");
-  }, [divRef]);
-
   return (
     <header
       className={classNames(`header`, {
