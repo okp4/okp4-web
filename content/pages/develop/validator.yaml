@@ -22,7 +22,6 @@ whatIs:
     A <i>validator</i> is a virtual entity that process transactions and participates in the consensus of the OKP4 protocol.<br />
     Each validator make the OKP4 network more secure, stable and censorship resistant.
   image: what-is-validator.webp
-  imageBg: what-is-validator-bg.webp
 nemeton:
   title: The nemeton program
   description: |

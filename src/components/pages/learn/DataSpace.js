@@ -48,7 +48,7 @@ const DataSpace = () => {
           <div className="dataspace__image__wrapper">
             <StaticImage
               className="dataspace__image__data__spaces"
-              src="../../../assets/images/illus/index_intro_card_1.webp"
+              src="../../../../content/images/index_intro_card_1.webp"
               alt="build data spaces"
               loading="eager"
             />
@@ -71,7 +71,7 @@ const DataSpace = () => {
           <div className="dataspace__image__wrapper purposes">
             <StaticImage
               className="dataspace__image__data__spaces"
-              src="../../../assets/images/illus/index_intro_card_2.webp"
+              src="../../../../content/images/index_intro_card_2.webp"
               alt="build data spaces"
               loading="eager"
             />
@@ -121,7 +121,7 @@ const DataSpace = () => {
         <div className="dataspace__image__wrapper">
           <StaticImage
             className="dataspace__image__landing"
-            src="../../../assets/images/illus/images-not-compressed/index_landing.webp"
+            src="../../../assets/images/illus/index_landing.webp"
             alt="OKP4 hero image"
             loading="eager"
           />

@@ -9,7 +9,7 @@ import IconMedium from "../assets/images/socials/medium.inline.svg";
 import IconDiscord from "../assets/images/socials/discord.inline.svg";
 import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import IconBurger from "../assets/images/icons/burger.inline.svg";
-import IconBurgerCross from "../assets/images/icons/burger-cross.inline.svg";
+import IconBurgerCross from "../assets/images/icons/cross.inline.svg";
 import { Link } from "gatsby";
 import * as ResponsiveManager from "../utils/ResponsiveManager.js";
 import * as ScrollManager from "../utils/ScrollManager.js";

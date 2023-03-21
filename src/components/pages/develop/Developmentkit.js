@@ -44,7 +44,7 @@ const DevelopmentKit = () => (
       <div className="developmentkit__description__image__wrapper">
         <StaticImage
           className="developmentkit__description__image cauldron"
-          src="../../../assets/images/illus/index_universe_dk_cropped.webp"
+          src="../../../../content/images/index_universe_dk_cropped.webp"
           alt="crystal cauldron"
           loading="eager"
         />

@@ -10,7 +10,7 @@ import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
-import ExitIcon from "../../../assets/images/icons/exit-icon.inline.svg";
+import ExitIcon from "../../../assets/images/icons/cross.inline.svg";
 import * as ScrollManager from "../../../utils/ScrollManager";
 import { useBreakpoint } from "../../../hook/useBreakpoint";
 import { useOnEventOutside } from "../../../hook/useOnEventOutside.js";
