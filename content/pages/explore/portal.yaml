@@ -10,6 +10,7 @@ discover:
     text: Get the app
     link: https://docs.okp4.network/whitepaper/tokenomics
     soon: Soon available
+  alt: Portal Homepage - OKP4
 featuresHeader: A complete tool with multiple features
 features:
   - feature: explore
@@ -23,5 +24,6 @@ features:
 descriptions:
   - header: explore data spaces & applications
     description: Explore the many Data Spaces and find the ones that fit your interests. Check their rules and the resources shared within it and see if there is an opportunity for you. Use the portal to stay updated on your favorite Data Spaces. The portal enables you to access the many applications built on top of Data Spaces.
+    alt: Gems Illustration Portal - OKP4
   - header: monitor your shared resources!
     description: Through the OKP4 Portal, you are informed in real time of the activities related to the Data Spaces you’re interested in and the digital resources you share. Follow how the protocol uses your data and services. Monitor your contribution to knowledge creation, including token rewards.

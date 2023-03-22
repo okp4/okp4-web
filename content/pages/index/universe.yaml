@@ -7,6 +7,7 @@ items:
     description: The first blockchain designed for digital assets sharing & coordination.
     tag: OKP4
     image: index_universe_blockchain.webp
+    alt: Blockchain Network - OKP4
     button: About OKP4
     link: /learn/okp4/
   - title: Dataverse
@@ -14,6 +15,7 @@ items:
     description: The ever-extanding universe comprised of all the Datasets, Algorithms, Softwares, Infrastructures and other resources referenced in the Blockchain and shared within multiple Data Spaces.
     tag: OKP4
     image: index_universe_dataverse.webp
+    alt: Dataverse Crystal Ball - OKP4
     button: Discover more
     link: /learn/dataverse
   - title: Development kit
@@ -21,6 +23,7 @@ items:
     description: Tools and services dedicated to developers to create their own apps using the OKP4 protocol.
     tag: OKP4
     image: index_universe_dk_cropped.webp
+    alt: Development Kit Cauldron - OKP4
     button: Learn more
     link: /develop/okp4developmentkit
   - title: Dataverse Gateways
@@ -28,5 +31,6 @@ items:
     description: OKP4 Dataverse Gateways enable anyone to interact with, build into, share and contribute and earn from the Dataverse.
     tag: OKP4
     image: index_universe_dg.webp
+    alt: Dataverse Gateways Bottle - OKP4
     button: Discover
     link: /explore/dataverse-gateways

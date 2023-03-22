@@ -12,6 +12,7 @@ presentationPart:
 dataSharingPart:
   title: How to mainstream Data Sharing?
   image: druid-teacher.webp
+  alt: Illustration Learn Druid with People - OKP4
   text:
     - A decentralized data-sharing infrastructure could enable many new opportunities for data way beyond data exchange. OKP4 is a public PoS layer 1 blockchain built for trust-minimized data sharing. It is specifically designed to enable communities to share data, algorithms, and resources to create a sovereign Dataverse and an environment of applications on top of it.
     - OKP4 protocol allows the creation of fully customizable
@@ -30,6 +31,7 @@ knowPart:
     While the blockchain is governed and operated by the decentralized community, <b>each Data Space can have its own governance mechanisms</b>, enabling companies to benefit from web3 while giving users & data providers complete ownership and transparency.
     </p>
   image: learn-okp4-know.webp
+  alt: Know Token - OKP4
 cosmosPart:
   title: Powered by Cosmos to skyrocket IBC!
   introduction: The Inter-Blockchain Communication (IBC) protocol will enable OKP4 to be a hub for interchain applications leveraging many other cosmos-based networks such as Juno, Secret network, Osmosis, Akash, Stargaze, and more.
@@ -48,4 +50,5 @@ cosmosPart:
     - their raw data available to the network without exposing it
     - to other members.
   image: learn-okp4-cosmos.webp
+  alt: Cosmos Logo - OKP4
 discoverDataSpace: Discover the Data Space

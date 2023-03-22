@@ -77,7 +77,7 @@ const Universe = ({ files }) => {
                       <GatsbyImage
                         className="imgWrapper"
                         image={MediaManager.GetImage(item.image, files)}
-                        alt={item.description}
+                        alt={item.alt}
                       />
                     </div>
                   );
@@ -175,12 +175,12 @@ const Universe = ({ files }) => {
                             item.imageDesktop,
                             files
                           )}
-                          alt={item.subtitle}
+                          alt={item.alt}
                         />
                         <GatsbyImage
                           className="imgWrapper imgWrapper--mobile"
                           image={MediaManager.GetImage(item.imageMobile, files)}
-                          alt={item.subtitle}
+                          alt={item.alt}
                         />
                       </div>
                     </div>

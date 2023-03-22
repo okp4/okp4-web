@@ -15,7 +15,7 @@ const DevelopmentKit = () => (
       <StaticImage
         className="developmentkit__description__image"
         src="../../../assets/images/illus/laptop.webp"
-        alt="open laptop"
+        alt={contentDevelopmentKit.empower.alt}
         loading="eager"
       />
     </div>
@@ -34,7 +34,7 @@ const DevelopmentKit = () => (
       <StaticImage
         className="developmentkit__description__image"
         src="../../../assets/images/illus/ephemeral-book.webp"
-        alt="opened ephemeral book"
+        alt={contentDevelopmentKit.create.alt}
         loading="eager"
       />
     </div>
@@ -43,7 +43,7 @@ const DevelopmentKit = () => (
         <StaticImage
           className="developmentkit__description__image cauldron"
           src="../../../../content/images/index_universe_dk_cropped.webp"
-          alt="crystal cauldron"
+          alt={contentDevelopmentKit.designSystem.alt}
           loading="eager"
         />
       </div>
@@ -86,7 +86,7 @@ const DevelopmentKit = () => (
       <StaticImage
         className="developmentkit__description__image"
         src="../../../assets/images/illus/druid_magic.webp"
-        alt="data structure"
+        alt={contentDevelopmentKit.protocol.alt}
         loading="eager"
       />
       <div className="developmentkit__description">

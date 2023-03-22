@@ -16,7 +16,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[0].label
             )}
             src="../../content/images/companies/logo-chainlayer.webp"
-            alt={contentFooter.associates.companies.logos[0].label}
+            alt={contentFooter.associates.companies.logos[0].alt}
           />
         ),
       },
@@ -30,7 +30,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[1].label
             )}
             src="../../content/images/companies/logo-interchain.webp"
-            alt={contentFooter.associates.companies.logos[1].label}
+            alt={contentFooter.associates.companies.logos[1].alt}
           />
         ),
       },
@@ -44,7 +44,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[2].label
             )}
             src="../../content/images/companies/logo-cc-validators.webp"
-            alt={contentFooter.associates.companies.logos[2].label}
+            alt={contentFooter.associates.companies.logos[2].alt}
           />
         ),
       },
@@ -58,7 +58,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[3].label
             )}
             src="../../content/images/companies/logo-b-harvest.webp"
-            alt={contentFooter.associates.companies.logos[3].label}
+            alt={contentFooter.associates.companies.logos[3].alt}
           />
         ),
       },
@@ -72,7 +72,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[4].label
             )}
             src="../../content/images/companies/logo-stakelab.webp"
-            alt={contentFooter.associates.companies.logos[4].label}
+            alt={contentFooter.associates.companies.logos[4].alt}
           />
         ),
       },
@@ -86,7 +86,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[5].label
             )}
             src="../../content/images/companies/logo-p2p.webp"
-            alt={contentFooter.associates.companies.logos[5].label}
+            alt={contentFooter.associates.companies.logos[5].alt}
           />
         ),
       },
@@ -100,7 +100,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[6].label
             )}
             src="../../content/images/companies/logo-polkachu.webp"
-            alt={contentFooter.associates.companies.logos[6].label}
+            alt={contentFooter.associates.companies.logos[6].alt}
           />
         ),
       },
@@ -114,7 +114,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[7].label
             )}
             src="../../content/images/companies/logo-notional.webp"
-            alt={contentFooter.associates.companies.logos[7].label}
+            alt={contentFooter.associates.companies.logos[7].alt}
           />
         ),
       },
@@ -128,7 +128,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[8].label
             )}
             src="../../content/images/companies/logo-imperator.webp"
-            alt={contentFooter.associates.companies.logos[8].label}
+            alt={contentFooter.associates.companies.logos[8].alt}
           />
         ),
       },
@@ -142,7 +142,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[9].label
             )}
             src="../../content/images/companies/logo-citadelone.webp"
-            alt={contentFooter.associates.companies.logos[9].label}
+            alt={contentFooter.associates.companies.logos[9].alt}
           />
         ),
       },
@@ -156,7 +156,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[10].label
             )}
             src="../../content/images/companies/logo-staking-cabin.webp"
-            alt={contentFooter.associates.companies.logos[10].label}
+            alt={contentFooter.associates.companies.logos[10].alt}
           />
         ),
       },
@@ -170,7 +170,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[11].label
             )}
             src="../../content/images/companies/logo-nodestake.webp"
-            alt={contentFooter.associates.companies.logos[11].label}
+            alt={contentFooter.associates.companies.logos[11].alt}
           />
         ),
       },
@@ -184,7 +184,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[12].label
             )}
             src="../../content/images/companies/logo-informal.webp"
-            alt={contentFooter.associates.companies.logos[12].label}
+            alt={contentFooter.associates.companies.logos[12].alt}
           />
         ),
       },
@@ -198,7 +198,7 @@ const Associates = () => {
               contentFooter.associates.companies.logos[13].label
             )}
             src="../../content/images/companies/logo-nest.webp"
-            alt={contentFooter.associates.companies.logos[13].label}
+            alt={contentFooter.associates.companies.logos[13].alt}
           />
         ),
       },
@@ -216,7 +216,7 @@ const Associates = () => {
           <StaticImage
             className="associates__advisors__image"
             src="../../content/images/advisors/advisor-peter-van-mourik.webp"
-            alt="OKP4 Advisor"
+            alt={contentFooter.associates.advisors.people[0].alt}
           />
         ),
       },
@@ -228,7 +228,7 @@ const Associates = () => {
           <StaticImage
             className="associates__advisors__image"
             src="../../content/images/advisors/advisor-benjamin-santi.webp"
-            alt="OKP4 Advisor"
+            alt={contentFooter.associates.advisors.people[1].alt}
           />
         ),
       },
@@ -241,7 +241,7 @@ const Associates = () => {
           <StaticImage
             className="associates__advisors__image"
             src="../../content/images/advisors/advisor-jasvin-bhasin.webp"
-            alt="OKP4 Advisor"
+            alt={contentFooter.associates.advisors.people[2].alt}
           />
         ),
       },
@@ -253,7 +253,7 @@ const Associates = () => {
           <StaticImage
             className="associates__advisors__image"
             src="../../content/images/advisors/advisor-sebastien-couture.webp"
-            alt="OKP4 Advisor"
+            alt={contentFooter.associates.advisors.people[3].alt}
           />
         ),
       },

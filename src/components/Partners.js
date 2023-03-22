@@ -11,21 +11,21 @@ const Partners = () => (
           <StaticImage
             className="imgWrapper"
             src="../assets/images/logos/occitanie.webp"
-            alt="Logo Occitanie"
+            alt={contentFooter.associates.partners[0]}
           />
         </div>
         <div className="footer__partenaires__item">
           <StaticImage
             className="imgWrapper"
             src="../assets/images/logos/bpi.webp"
-            alt="Logo BPI France"
+            alt={contentFooter.associates.partners[0]}
           />
         </div>
         <div className="footer__partenaires__item">
           <StaticImage
             className="imgWrapper"
             src="../assets/images/logos/bretagne.webp"
-            alt="Logo Bretagne"
+            alt={contentFooter.associates.partners[2]}
           />
         </div>
       </div>

@@ -11,7 +11,7 @@ const DataSpace = () => {
           <StaticImage
             className="dataspace__governance__card__image"
             src="../../../assets/images/illus/new_document.webp"
-            alt="card image"
+            alt={contentDataSpace.governance.cards[0].alt}
             loading="eager"
           />
         ),
@@ -23,7 +23,7 @@ const DataSpace = () => {
           <StaticImage
             className="dataspace__governance__card__image"
             src="../../../assets/images/illus/new_document_setting.webp"
-            alt="card image"
+            alt={contentDataSpace.governance.cards[1].alt}
             loading="eager"
           />
         ),
@@ -47,7 +47,7 @@ const DataSpace = () => {
             <StaticImage
               className="dataspace__image__data__spaces"
               src="../../../../content/images/index_intro_card_1.webp"
-              alt="build data spaces"
+              alt={contentDataSpace.dataSpaces.build.alt}
               loading="eager"
             />
             <div className="dataspace__background__halo" />
@@ -70,14 +70,14 @@ const DataSpace = () => {
             <StaticImage
               className="dataspace__image__data__spaces"
               src="../../../../content/images/index_intro_card_2.webp"
-              alt="build data spaces"
+              alt={contentDataSpace.dataSpaces.purposes.alt}
               loading="eager"
             />
             <div className="dataspace__background__halo" />
             <StaticImage
               className="dataspace__background__image"
               src="../../../assets/images/illus/background_img_northern_light.webp"
-              alt="build data spaces"
+              alt=""
               loading="eager"
             />
           </div>
@@ -120,7 +120,7 @@ const DataSpace = () => {
           <StaticImage
             className="dataspace__image__landing"
             src="../../../assets/images/illus/index_landing.webp"
-            alt="OKP4 hero image"
+            alt={contentDataSpace.decentralizedProtocol.alt}
             loading="eager"
           />
           <div className="dataspace__background__halo" />

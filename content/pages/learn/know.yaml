@@ -8,23 +8,28 @@ introPart:
   titlePartOne: The $KNOW
   titlePartTwo: a native token
   description: The $KNOW powers innovative technology for the new knowledge economy.
+  alt: Know Token - OKP4
 aboutPart:
   title: About the $KNOW
   description: The $KNOW token is not traded anywhere yet & OKP4 is not doing any public sale.
   whitecards:
     - title: Fee token
       text: Just like ETH for Ethereum and BTC for Bitcoin, you hold your $KNOW in a wallet and spend it when you want to use OKP4.
+      alt: Bottles Illustration - OKP4
     - title: Medium of exchange
       text: |
         <p> The $KNOW token is the <b> primary medium of exchange </b> within the OKP4 ecosystem. It is needed if you want to access data and services provided by OKP4 and its network of participants. </p>
+      alt: Wallet Illustration - OKP4
 possibilitiesPart:
   title: Staking possibilities
   description: |
     <p> Staking enables you to participate in consensus and secure the network if you delegate to the right validators. </p>
     <p> It gives you an income from your $KNOW tokens thanks to block rewards, fees and income from network activity. The $KNOW can also be liquid-staked… </p>
+  alt: Silver Coins Token - OKP4
 governancePart:
   title: Governance
   description: Your staked tokens give you the right to vote on any on-chain governance proposal. This way you can affect many things, like blockchain parameters, revenue mechanisms, DAO treasury spending…
+  alt: Governance Mechanism Illustration - OKP4
 morePart:
   title: |
     & Many More
