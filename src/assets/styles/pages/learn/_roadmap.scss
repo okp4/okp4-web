@@ -1,30 +1,3 @@
-@mixin roadmap-background-images {
-  &.Genesis {
-    background: center / cover no-repeat
-      url("../images/illus/index_roadmap_1.webp");
-  }
-
-  &.Nemeton {
-    background: center / cover no-repeat
-      url("../images/illus/index_roadmap_2.webp");
-  }
-
-  &.Myrddin {
-    background: center / cover no-repeat
-      url("../images/illus/index_roadmap_3.webp");
-  }
-
-  &.Duir {
-    background: center / cover no-repeat
-      url("../images/illus/index_roadmap_4.webp");
-  }
-
-  &.Lugh {
-    background: center / cover no-repeat
-      url("../images/illus/index_roadmap_5.webp");
-  }
-}
-
 @mixin descriptive-text {
   opacity: 0.8;
   font-size: 18px;
@@ -281,7 +254,6 @@
         box-sizing: content-box;
         transition: all 0.5s ease-out;
         @include card-animation();
-        @include roadmap-background-images();
 
         @media screen and (min-width: 4500px) {
           animation: none;
@@ -296,6 +268,17 @@
           width: 253px;
         }
 
+        .roadmap__card__image {
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          border-radius: 20px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
         &.opened {
           z-index: 3;
           width: 100%;
@@ -304,6 +287,10 @@
           background: unset;
           padding: 0;
           animation: unset;
+
+          .roadmap__card__image {
+            border-radius: 0 20px 20px 0;
+          }
 
           @include media-bp-up(lg) {
             max-height: 796px;
@@ -396,34 +383,6 @@
               position: relative;
               padding: 30px;
               border-radius: 0px 20px 20px 0px;
-              @include roadmap-background-images();
-
-              @include media-bp-down(lg) {
-                &.Genesis {
-                  background: center / cover no-repeat
-                    url("../images/illus/index_roadmap_1_mobile.webp");
-                }
-
-                &.Nemeton {
-                  background: center / cover no-repeat
-                    url("../images/illus/index_roadmap_2_mobile.webp");
-                }
-
-                &.Myrddin {
-                  background: center / cover no-repeat
-                    url("../images/illus/index_roadmap_3_mobile.webp");
-                }
-
-                &.Duir {
-                  background: center / cover no-repeat
-                    url("../images/illus/index_roadmap_4_mobile.webp");
-                }
-
-                &.Lugh {
-                  background: top / cover no-repeat
-                    url("../images/illus/index_roadmap_5_mobile.webp");
-                }
-              }
 
               .roadmap__card__opened__image__content {
                 display: flex;
@@ -452,6 +411,10 @@
                 grid-area: 1 / 1;
                 height: 260px;
                 border-radius: 20px 20px 0 0;
+
+                .roadmap__card__image {
+                  border-radius: 20px 20px 0 0;
+                }
 
                 .roadmap__card__opened__image__content {
                   justify-content: space-between;

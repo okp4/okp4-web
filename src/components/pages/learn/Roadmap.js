@@ -6,7 +6,8 @@ import React, {
   useRef,
 } from "react";
 import contentRoadmap from "/content/pages/learn/roadmap.yaml";
-import { StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
+import * as MediaManager from "../../../utils/MediaManager.js";
 import classNames from "classnames";
 import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
 import ExitIcon from "../../../assets/images/icons/cross.inline.svg";
@@ -22,76 +23,86 @@ const Card = ({
   handleCardClose,
   handleCardOpen,
   timeline,
+  image,
+  imageMobile,
   isOpen,
   cardIndex,
   cardRef,
-}) => (
-  <div
-    className={classNames("roadmap__card", title, {
-      opened: isOpen,
-      closed: !isOpen,
-    })}
-    key={title}
-    ref={cardRef}
-  >
-    {isOpen ? (
-      <div className="roadmap__card__opened__wrapper">
-        <div className="roadmap__card__opened__content">
-          <div className="roadmap__card__opened__header">
-            <p className="roadmap__card__title">{title}</p>
-            <p className="roadmap__card__period">{period}</p>
-          </div>
-          <p className="roadmap__card__introduction">{introduction}</p>
-          <div
-            className="roadmap__card__description"
-            dangerouslySetInnerHTML={{
-              __html: description,
-            }}
-          />
-          {timeline.map(({ year, milestones }, index) => (
-            <div className="roadmap__card__timeline" key={index}>
-              <p className="roadmap__card__year">{year}</p>
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: milestones,
-                }}
-              />
+}) => {
+  const { isLarge } = useBreakpoint();
+  return (
+    <div
+      className={classNames("roadmap__card", title, {
+        opened: isOpen,
+        closed: !isOpen,
+      })}
+      key={title}
+      ref={cardRef}
+    >
+      {isOpen ? (
+        <div className="roadmap__card__opened__wrapper">
+          <div className="roadmap__card__opened__content">
+            <div className="roadmap__card__opened__header">
+              <p className="roadmap__card__title">{title}</p>
+              <p className="roadmap__card__period">{period}</p>
             </div>
-          ))}
+            <p className="roadmap__card__introduction">{introduction}</p>
+            <div
+              className="roadmap__card__description"
+              dangerouslySetInnerHTML={{
+                __html: description,
+              }}
+            />
+            {timeline.map(({ year, milestones }, index) => (
+              <div className="roadmap__card__timeline" key={index}>
+                <p className="roadmap__card__year">{year}</p>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: milestones,
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+          <div
+            className={classNames(
+              "roadmap__card__opened__image__wrapper",
+              title
+            )}
+          >
+            {isLarge ? image : imageMobile}
+            <div className="roadmap__card__opened__image__content">
+              <p className="roadmap__card__period">{period}</p>
+              <button
+                className="roadmap__card__opened__close"
+                onClick={handleCardClose}
+              >
+                <ExitIcon />
+              </button>
+            </div>
+          </div>
         </div>
-        <div
-          className={classNames("roadmap__card__opened__image__wrapper", title)}
-        >
-          <div className="roadmap__card__opened__image__content">
-            <p className="roadmap__card__period">{period}</p>
+      ) : (
+        <>
+          {image}
+          <p className="roadmap__card__period">{period}</p>
+          <div className="roadmap__card__content__wrapper">
+            <p className="roadmap__card__title">{title}</p>
             <button
-              className="roadmap__card__opened__close"
-              onClick={handleCardClose}
+              className="roadmap__card__button"
+              onClick={handleCardOpen(title, cardIndex)}
             >
-              <ExitIcon />
+              Discover
+              <ExpandIcon />
             </button>
           </div>
-        </div>
-      </div>
-    ) : (
-      <>
-        <p className="roadmap__card__period">{period}</p>
-        <div className="roadmap__card__content__wrapper">
-          <p className="roadmap__card__title">{title}</p>
-          <button
-            className="roadmap__card__button"
-            onClick={handleCardOpen(title, cardIndex)}
-          >
-            Discover
-            <ExpandIcon />
-          </button>
-        </div>
-      </>
-    )}
-  </div>
-);
+        </>
+      )}
+    </div>
+  );
+};
 
-const Roadmap = () => {
+const Roadmap = ({ files }) => {
   const [openedCardState, setOpenedCardState] = useState(null);
   const [refs, setRefs] = useState([]);
   const cardsRef = useRef();
@@ -281,7 +292,19 @@ const Roadmap = () => {
           })}
         >
           {contentRoadmap.cards.map(
-            ({ title, period, introduction, description, timeline }, index) => (
+            (
+              {
+                title,
+                period,
+                introduction,
+                description,
+                timeline,
+                image,
+                imageMobile,
+                alt,
+              },
+              index
+            ) => (
               <Card
                 key={title}
                 title={title}
@@ -291,6 +314,20 @@ const Roadmap = () => {
                 handleCardClose={handleCardClose}
                 handleCardOpen={handleCardOpen}
                 timeline={timeline}
+                image={
+                  <GatsbyImage
+                    className="roadmap__card__image"
+                    image={MediaManager.GetImage(image, files)}
+                    alt={alt}
+                  />
+                }
+                imageMobile={
+                  <GatsbyImage
+                    className="roadmap__card__image"
+                    image={MediaManager.GetImage(imageMobile, files)}
+                    alt={alt}
+                  />
+                }
                 isOpen={openedCardState?.title === title}
                 cardIndex={index}
                 cardRef={refs[index]}
