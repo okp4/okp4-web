@@ -2,6 +2,13 @@ body {
   overflow-x: hidden;
 }
 
+footer.footer .docs {
+  padding-top: 20px;
+  @include media-bp-up(lg) {
+    padding-top: 106px;
+  }
+}
+
 .dataspace__main {
   overflow: hidden;
   min-height: calc(100vh - 505px);
@@ -367,10 +374,10 @@ body {
     .dataspace__image__wrapper {
       display: grid;
       position: relative;
-      padding-bottom: 60px;
+      padding-bottom: 100px;
 
       @include media-bp-down(lg) {
-        padding-bottom: unset;
+        padding-bottom: 40px;
       }
 
       .dataspace__image__landing {
@@ -391,7 +398,7 @@ body {
           rgba(255 255 255 / 10%) 30%,
           rgba(255 255 255 / 0%) 100%
         );
-        bottom: -40px;
+        bottom: 0;
         right: -12%;
         z-index: 1;
         width: 100vw;
