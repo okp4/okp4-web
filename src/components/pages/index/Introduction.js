@@ -1,7 +1,6 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../utils/MediaManager.js";
-import Halo from "../../animations/Halo.js";
 import Strate from "../../animations/Strate.js";
 import Parallax from "../../animations/Parallax.js";
 import content from "/content/pages/index/introduction.yaml";
@@ -11,7 +10,6 @@ import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 const Introduction = ({ files }) => {
   return (
     <Strate classContainer={"introduction"}>
-      <Halo classContainer={"halo--big"}></Halo>
       <div className="gradient">
         <div className="gradient__layer"></div>
       </div>

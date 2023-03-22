@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import * as ResponsiveManager from "../../utils/ResponsiveManager.js";
 
-const Halo = ({ classContainer = "halo--regular" }) => {
+const Halo = () => {
   const divRef = useRef(null);
 
   useEffect(() => {
@@ -54,6 +54,9 @@ const Halo = ({ classContainer = "halo--regular" }) => {
   }
 
   function handleMouseMove(event) {
+    if (divRef.current) {
+      divRef.current.classList.add("is-active");
+    }
     setTimeout(() => {
       if (divRef.current) {
         let offsetY = divRef.current.getBoundingClientRect().y;
@@ -67,7 +70,7 @@ const Halo = ({ classContainer = "halo--regular" }) => {
   }
 
   return (
-    <div className={"halo " + classContainer} ref={divRef}>
+    <div className="halo" ref={divRef}>
       <div className="halo__light"></div>
     </div>
   );

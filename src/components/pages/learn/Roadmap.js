@@ -6,7 +6,6 @@ import React, {
   useRef,
 } from "react";
 import contentRoadmap from "/content/pages/learn/roadmap.yaml";
-import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
 import classNames from "classnames";
 import ExpandIcon from "../../../assets/images/icons/expand.inline.svg";
@@ -255,7 +254,6 @@ const Roadmap = () => {
 
   return (
     <div className="roadmap__main">
-      <Halo />
       <StaticImage
         src="../../../assets/images/illus/background_img_roadmap.webp"
         alt="background image"

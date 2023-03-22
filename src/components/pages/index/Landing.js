@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
 import * as ScrollManager from "../../../utils/ScrollManager.js";
 import * as ResponsiveManager from "../../../utils/ResponsiveManager.js";
@@ -92,7 +91,6 @@ const Landing = () => {
 
   return (
     <section className="landing" ref={divRef}>
-      <Halo></Halo>
       <div className="wrapper">
         <div className="landing__fade" ref={divFadeOut}>
           <h1>

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../utils/MediaManager.js";
-import Halo from "../../animations/Halo.js";
 import content from "/content/pages/develop/validator.yaml";
 import IconArrowtr from "/src/assets/images/icons/arrow-tr.inline.svg";
 import NemetonGif from "/src/assets/images/gif/nemeton-program.gif";
@@ -12,8 +11,6 @@ const Validator = ({ files }) => {
 
   return (
     <div>
-      <Halo />
-
       <div className="introduction wrapper">
         <div className="introduction__text">
           <h1>{content.introduction.title}</h1>

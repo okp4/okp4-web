@@ -1,13 +1,11 @@
 import * as React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../utils/MediaManager.js";
-import Halo from "../../animations/Halo.js";
 import content from "/content/pages/learn/okp4.yaml";
 import { Link } from "gatsby";
 
 const Okp4 = ({ files }) => (
   <div className="learn-okp4">
-    <Halo classContainer={"halo--big"}></Halo>
     <div className="wrapper">
       <section className="okp4__presentation">
         <div className="okp4__presentation_image--container">

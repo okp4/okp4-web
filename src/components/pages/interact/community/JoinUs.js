@@ -1,7 +1,6 @@
 import * as React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../../utils/MediaManager.js";
-import Halo from "../../../animations/Halo";
 import Parallax from "../../../animations/Parallax";
 import contentCommunity from "../../../../../content/pages/interact/community.yaml";
 import contentSocials from "../../../../../content/transversals/socials.yaml";
@@ -14,7 +13,6 @@ import IconArrowtr from "../../../../assets/images/icons/arrow-tr.inline.svg";
 
 const JoinUs = ({ files }) => (
   <section className="community--join_us">
-    <Halo />
     <div className="wrapper">
       <div className="community__content">
         <div className="community_landing_wrapper">

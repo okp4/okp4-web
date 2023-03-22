@@ -4,7 +4,6 @@ import contentSocials from "../../../../content/transversals/socials.yaml";
 import IconGithub from "../../../assets/images/socials/github.inline.svg";
 import IconDiscord from "../../../assets/images/socials/discord.inline.svg";
 import { StaticImage } from "gatsby-plugin-image";
-import Halo from "../../animations/Halo";
 import IconArrowtr from "../../../assets/images/icons/arrow-tr.inline.svg";
 import DevDesign from "../../../assets/images/icons/developers/dev-design-icon.inline.svg";
 import DevEcosystem from "../../../assets/images/icons/developers/dev-ecosystem-icon.inline.svg";
@@ -52,7 +51,6 @@ const Developers = () => {
 
   return (
     <div className="developers__main">
-      <Halo />
       <div className="wrapper">
         <div className="developers__intro">
           <h1 className="developers__title">{contentDevelopers.title}</h1>

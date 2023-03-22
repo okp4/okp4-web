@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import * as MediaManager from "../../../utils/MediaManager.js";
-import Halo from "../../animations/Halo.js";
 import content from "/content/pages/explore/dataverse-gateways.yaml";
 import Parallax from "../../animations/Parallax.js";
 import { useBreakpoint } from "../../../hook/useBreakpoint";
@@ -24,7 +23,6 @@ const DataverseGateways = ({ files }) => {
 
   return (
     <div className="dataverse_gateways">
-      <Halo />
       <div className="wrapper">
         <div className="dg__first_page">
           <h1 className="dg__main_title">{content.title}</h1>

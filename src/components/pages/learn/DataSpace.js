@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import Halo from "../../animations/Halo.js";
 import { StaticImage } from "gatsby-plugin-image";
 import contentDataSpace from "/content/pages/learn/dataSpace.yaml";
 import { Link } from "gatsby";
@@ -42,7 +41,6 @@ const DataSpace = () => {
 
   return (
     <div className="dataspace__main">
-      <Halo />
       <section className="dataspace__data__spaces">
         <div className="dataspace__data__spaces__wrapper">
           <div className="dataspace__image__wrapper">

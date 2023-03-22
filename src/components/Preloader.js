@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Halo from "./animations/Halo.js";
 
 const Header = () => {
   const divRef = useRef(null);
@@ -10,11 +9,7 @@ const Header = () => {
     }, 100);
   });
 
-  return (
-    <section className="preloader" ref={divRef}>
-      <Halo />
-    </section>
-  );
+  return <section className="preloader" ref={divRef} />;
 };
 
 export default Header;

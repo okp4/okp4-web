@@ -1,11 +1,9 @@
 import * as React from "react";
-import Halo from "../../../animations/Halo";
 import IconArrowtr from "../../../../assets/images/icons/arrow-tr.inline.svg";
 import contentCommunity from "/content/pages/interact/community.yaml";
 
 const LatestNews = ({ posts }) => (
   <section className="latest_news">
-    <Halo />
     <div className="wrapper">
       <div className="latest_news__content">
         <h3 className="news_title">{contentCommunity.news.title}</h3>

@@ -1,5 +1,4 @@
 import * as React from "react";
-import Halo from "../../animations/Halo";
 import contentLegalMentions from "/content/pages/legals/legal-mentions.yaml";
 import contentCookiePolicy from "/content/pages/legals/cookie-policy.yaml";
 import { StaticImage } from "gatsby-plugin-image";
@@ -12,7 +11,6 @@ const LegalMentionsAndCookiePolicy = () => (
       alt="header halo"
       loading="eager"
     />
-    <Halo />
     <div className="wrapper">
       <div className="legalMentions__content">
         <div>

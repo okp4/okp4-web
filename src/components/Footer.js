@@ -11,7 +11,6 @@ import IconGithub from "../assets/images/socials/github.inline.svg";
 import IconMedium from "../assets/images/socials/medium.inline.svg";
 import IconDiscord from "../assets/images/socials/discord.inline.svg";
 import IconTelegram from "../assets/images/socials/telegram.inline.svg";
-import Halo from "./animations/Halo.js";
 import Docs from "./Docs.js";
 import Partners from "./Partners";
 import Associates from "./Associates";
@@ -72,7 +71,6 @@ const Footer = ({
         </div>
       </div>
       <footer className="footer">
-        <Halo />
         <div className="footer__sticky">
           {withDocs && <Docs />}
           {withAssociates && <Associates files={files} />}
