@@ -7,6 +7,7 @@ main.dataverseGateways {
     .wrapper {
       position: relative;
       max-width: 1920px;
+      overflow: hidden;
     }
 
     .dg__first_page {
@@ -57,14 +58,20 @@ main.dataverseGateways {
 
         .halo {
           position: absolute;
-          width: 100%;
-          height: 150%;
           background: radial-gradient(
             50% 50% at 50% 50%,
             #43f2f3 0%,
             rgba(67, 242, 243, 0) 100%
           );
           opacity: 0.1;
+
+          @include media-bp-up(lg) {
+            width: 1759px;
+            height: 108px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
 
           @include media-bp-down(lg) {
             width: 66%;
@@ -92,6 +99,7 @@ main.dataverseGateways {
             font-weight: 700;
             line-height: 150%;
             margin: 0 25px;
+            white-space: nowrap;
 
             @media screen and (max-width: 470px) {
               margin: 0;

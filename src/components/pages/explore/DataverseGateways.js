@@ -33,7 +33,7 @@ const DataverseGateways = ({ files }) => {
             <div className="halo" />
             <div className="keywords">
               <div className="keyword share">Share & Contribute</div>
-              <div className="keyword benefit">Benefit & earn</div>
+              <div className="keyword benefit">Benefit & Earn</div>
               <div className="keyword interact">Interact</div>
               <div className="keyword build">Build</div>
             </div>

@@ -4,7 +4,6 @@ breadcrumbs:
     link: /
   - name: Explore
   - name: Portal
-    link: /explore/portal
 discover:
   header: discover the endless possibilities of the dataverse
   button:
