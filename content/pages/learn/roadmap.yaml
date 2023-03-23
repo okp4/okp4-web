@@ -36,6 +36,9 @@ cards:
           <p> Out of stealth-mode: Beginning of our community (communication about the protocol, the incentivized testnet and coming mainnet) </p>
           <p> OKP4 whitepaper & docs released </p>
           <p> Released OKP4 Alphanet </p>
+    image: index_roadmap_1.webp
+    imageMobile: index_roadmap_1_mobile.webp
+    alt: Genesis illustration - OKP4
   - title: Nemeton
     period: Q4 2022 – Q2 2023
     introduction: |
@@ -57,6 +60,9 @@ cards:
           <p>  Global community building: participation and organization of many events, ambassadors and moderators</p>
           <p>  Advisor program launch </p>
           <p>  Builders program launch </p>
+    image: index_roadmap_2.webp
+    imageMobile: index_roadmap_2_mobile.webp
+    alt: Nemeton Program illustration - OKP4
   - title: Myrddin
     period: Q3 2023 - Q1 2024
     introduction: |
@@ -81,6 +87,9 @@ cards:
           <p>  Strategic enterprise partners disclosed </p>
           <p>  cw20 & cw721 Data Space governance tokens </p>
           <p>  cw20 & cw721 for data & service access control </p>
+    image: index_roadmap_3.webp
+    imageMobile: index_roadmap_3_mobile.webp
+    alt: Myrddin illustration - OKP4
   - title: Duir
     period: Q2 2024 - Q4 2024
     introduction: |
@@ -100,6 +109,9 @@ cards:
           <p>  Hundred of businesses and communities are building applications on top of OKP4 </p>
           <p>  IBC connections to Ethereum, any other L1 or rollup. </p>
           <p>  First OKP4-native dapps are launched (i.e. AMM for governance tokens, resource lending protocols...) </p>
+    image: index_roadmap_4.webp
+    imageMobile: index_roadmap_4_mobile.webp
+    alt: Duir illustration - OKP4
   - title: Lugh
     period: Q1 2025 & beyond
     introduction: |
@@ -116,3 +128,6 @@ cards:
           <p>  Every business sector adopts Data Space technology to build new applications thanks to mutual interest, implicit trust and OKP4 reliable & generic infrastructure layer. </p>
           <p>  Interchain applications UX becomes seamless (any token can be used in any Data Space for governance or payment, any workflow can be triggered from transactions on other chains...) </p>
           <p>  OKP4-native dapps continue to be launched (i.e. resource-based derivatives, synthetics, insurance, stables...) </p>
+    image: index_roadmap_5.webp
+    imageMobile: index_roadmap_5_mobile.webp
+    alt: Lugh illustration - OKP4

@@ -17,7 +17,7 @@ export default function LearnRoadmap({ data }) {
       withPartners={false}
       withAssociates={false}
     >
-      <Roadmap />
+      <Roadmap files={data} />
     </Layout>
   );
 }
