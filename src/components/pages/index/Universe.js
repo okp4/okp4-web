@@ -63,7 +63,7 @@ const Universe = ({ files }) => {
             <div className="universe__sticky">
               <h2 className="universe__title">{contentUniverse.title}</h2>
               <div className="universe__illus">
-                {contentUniverse.items.reverse().map((item, index) => {
+                {contentUniverse.items.map((item, index) => {
                   let isActive = "";
                   if (index === 0) isActive = " is-active";
                   return (
