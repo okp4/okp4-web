@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  publish-gh-pages:
+  publish-ovh:
     runs-on: ubuntu-22.04
     steps:
       - id: get_latest_tag
