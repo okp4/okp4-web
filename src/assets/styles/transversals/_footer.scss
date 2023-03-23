@@ -430,7 +430,12 @@ footer.footer {
           .advisor__job__position {
             opacity: 0.6;
             font-weight: 400;
-            margin-top: 6px;
+            margin: 6px auto 0;
+            overflow-wrap: break-word;
+            max-width: 176px;
+            @media (max-width: 500px) {
+              max-width: 154px;
+            }
           }
         }
       }
