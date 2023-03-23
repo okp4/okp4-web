@@ -85,8 +85,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
-      - name: Install fdupes
-        run: sudo apt-get update && sudo apt-get install -y fdupes
+      - name: Install fdupes 2.2.1
+        run: sudo apt-get update && sudo apt-get install -y fdupes=1:2.1.2-1build1
 
       - name: Check for duplicate files
         run: |
