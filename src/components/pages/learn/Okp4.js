@@ -51,30 +51,20 @@ const Okp4 = ({ files }) => (
               <h2 className="okp4__title">{content.dataSharingPart.title}</h2>
 
               <div className="okp4__text__secondary okp4__text-part">
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: content.dataSharingPart.text[0],
-                  }}
-                />
+                <p>{content.dataSharingPart.text[0]}</p>
                 <br />
                 <p>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: content.dataSharingPart.text[1],
-                    }}
-                  />
-                  <Link className="okp4__link" to="/learn/dataspace/">
-                    <span
-                      dangerouslySetInnerHTML={{
-                        __html: content.dataSharingPart.text[2],
-                      }}
-                    />
-                  </Link>
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: content.dataSharingPart.text[3],
-                    }}
-                  />
+                  <span>{content.dataSharingPart.text[1]}</span>{" "}
+                  <span className="okp4__link-to-button">
+                    {content.dataSharingPart.text[2]}
+                    <Link
+                      className="okp4__button-overlay"
+                      to="/learn/dataspace/"
+                    >
+                      {content.discoverDataSpace}
+                    </Link>
+                  </span>{" "}
+                  <span>{content.dataSharingPart.text[3]}</span>
                 </p>
               </div>
             </div>
@@ -132,53 +122,25 @@ const Okp4 = ({ files }) => (
             </div>
             <div className="okp4__cosmos__description okp4__text__secondary">
               <p>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: content.cosmosPart.description[0],
-                  }}
-                />
-                <span
-                  className="okp4__bold"
-                  dangerouslySetInnerHTML={{
-                    __html: content.cosmosPart.description[1],
-                  }}
-                />
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: content.cosmosPart.description[2],
-                  }}
-                />
+                <span>{content.cosmosPart.description[0]}</span>
+                <span className="okp4__bold">
+                  {content.cosmosPart.description[1]}
+                </span>
+                <span>{content.cosmosPart.description[2]}</span>
               </p>
-              <br />
-              <p>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: content.cosmosPart.description[3],
-                  }}
-                />
-                <Link className="okp4__link" to="/learn/dataspace/">
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: content.cosmosPart.description[4],
-                    }}
-                  />
-                </Link>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: content.cosmosPart.description[5],
-                  }}
-                />
-                <span
-                  className="okp4__bold"
-                  dangerouslySetInnerHTML={{
-                    __html: content.cosmosPart.description[6],
-                  }}
-                />
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: content.cosmosPart.description[7],
-                  }}
-                />
+              <p className="okp4__cosmos__description--second-paragraph">
+                <span>{content.cosmosPart.description[3]}</span>{" "}
+                <span className="okp4__link-to-button">
+                  {content.cosmosPart.description[4]}
+                  <Link className="okp4__button-overlay" to="/learn/dataspace/">
+                    {content.discoverDataSpace}
+                  </Link>
+                </span>{" "}
+                <span>{content.cosmosPart.description[5]}</span>
+                <span className="okp4__bold">
+                  {content.cosmosPart.description[6]}
+                </span>
+                <span>{content.cosmosPart.description[7]}</span>
               </p>
             </div>
 

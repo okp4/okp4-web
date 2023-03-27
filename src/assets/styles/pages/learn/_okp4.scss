@@ -57,6 +57,42 @@
     }
   }
 
+  .okp4__link-to-button {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    @include media-bp-up(lg) {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .okp4__button-overlay {
+    display: block;
+    position: absolute;
+    background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
+      #00b6b7;
+    border-radius: 10px;
+    padding: 16px 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    width: 215px;
+    transform: rotate(-7.68deg);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.25s ease;
+  }
+
+  .okp4__link-to-button:hover > .okp4__button-overlay {
+    @include media-bp-up(lg) {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
   .okp4__presentation_image--container {
     position: absolute;
     bottom: 0;
@@ -105,10 +141,16 @@
   }
 
   .okp4__text__secondary {
-    color: $white-80;
+    color: $white;
     font-size: 20px;
     line-height: 1.8;
     font-weight: 400;
+
+    span {
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
     @include media-bp-down(lg) {
       text-align: center;
       line-height: 1.5;
@@ -429,6 +471,10 @@
 
         p {
           @extend .okp4__text__secondary;
+        }
+
+        &--second-paragraph {
+          margin-top: 10px;
         }
       }
 
