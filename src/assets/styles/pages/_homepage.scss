@@ -997,29 +997,29 @@ main.homepage {
 
         p.text {
           max-width: 70%;
-          margin-bottom: 40px;
           color: $white-80;
           font-size: 20px;
           line-height: 1.5;
 
-          @include media-bp-down(lg) {
-            max-width: 100%;
+          &.last {
             margin-bottom: 40px;
-            br {
-              display: block;
-              content: "";
-              margin: 20px 0;
+            @include media-bp-down(lg) {
+              margin-top: 20px;
+            }
+            @include media-bp-down(sm) {
+              margin-bottom: 20px;
             }
           }
 
-          @include media-bp-down(sm) {
-            margin-bottom: 20px;
+          @include media-bp-down(lg) {
+            max-width: 100%;
           }
 
           b {
             font-weight: 600;
           }
         }
+
         .cta__button {
           background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
             #00b6b7;
