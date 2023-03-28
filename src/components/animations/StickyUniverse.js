@@ -61,7 +61,7 @@ const StickyUniverse = ({ children, classContainer }) => {
           if (item.classList.contains("is-active")) return;
           let rect = item.getBoundingClientRect();
 
-          if (rect.top < targetScroll && rect.top > targetScroll - 100) {
+          if (rect.top < targetScroll && rect.top > targetScroll - 200) {
             universeItems.forEach((oldItem) => {
               if (oldItem.classList.contains("is-active")) {
                 oldItem.classList.remove("is-active");
