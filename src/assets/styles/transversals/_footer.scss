@@ -384,36 +384,37 @@ footer.footer {
           font-weight: 600;
         }
 
-        .associates__advisor__card {
-          padding: 0;
-
-          .associates__advisors__image {
-            border-radius: 20px;
+        .associates__advisor__container {
+          .associates__advisor__card {
+            position: relative;
+            padding: 0;
             max-width: 186px;
             max-height: 260px;
-            margin: 0;
-            background: linear-gradient(
-              #003661,
-              #005ca6 50%,
-              $orange 50%,
-              $orange
-            );
-            background-size: 100% 200%;
-            transition: background 0.4s;
+            border-radius: 20px;
+            overflow: hidden;
+            background: linear-gradient(#003661, #005ca6 50%);
 
-            @media (max-width: 500px) {
-              max-width: 164px;
-              max-height: 293px;
-              margin: 5px;
+            .associates__advisors__background {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 1;
+              width: 230px;
+              height: 300px;
+              margin-top: 300px;
+              transition: margin 0.4s;
             }
-          }
 
-          &:hover {
             .associates__advisors__image {
-              background-position: 100% 100%;
-            }
-            .advisor__fullname {
-              color: $orange;
+              z-index: 2;
+              border-radius: 20px;
+              margin: 0;
+
+              @media (max-width: 500px) {
+                max-width: 164px;
+                max-height: 293px;
+              }
             }
           }
           .advisor__fullname {
@@ -421,6 +422,8 @@ footer.footer {
             gap: 5px;
             justify-content: center;
             margin-top: 15px;
+            color: $white;
+            transition: color 0.4s;
 
             .advisor__lastname {
               text-transform: uppercase;
@@ -435,6 +438,17 @@ footer.footer {
             max-width: 176px;
             @media (max-width: 500px) {
               max-width: 154px;
+            }
+          }
+
+          &:hover {
+            .associates__advisors__background {
+              margin-top: -20px;
+              transition: margin 0.4s;
+            }
+            .advisor__fullname {
+              color: $orange;
+              transition: color 0.4s;
             }
           }
         }
