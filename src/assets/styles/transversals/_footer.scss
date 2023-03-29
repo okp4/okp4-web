@@ -393,6 +393,7 @@ footer.footer {
             border-radius: 20px;
             overflow: hidden;
             background: linear-gradient(#003661, #005ca6 50%);
+            isolation: isolate;
 
             .associates__advisors__background {
               position: absolute;
