@@ -2,14 +2,9 @@ humanDescription: Content used for the section "Roadmap" of the index page
 help: Please download all images in the /content/images folder and just indicate the filename ("filename.webp")
 title: ROADMAP
 subtitle: The next era for the knowledge economy
-description: OKP4 is a blockchain built for the coordination of digital
-  resources.
-  <br /> This is is the only blockchain where
-  <b> developers can find the perfect environment</b> to build a
-  new generation of applications based on digital resources
-  (datasets, algorithms, storage, computation…)
-  <b>shared by participants </b>
-  (communities and businesses).
+description:
+  - OKP4 is a blockchain built for the coordination of digital resources.
+  - This is is the only blockchain where <b>developers can find the perfect environment</b> to build a new generation of applications based on digital resources (datasets, algorithms, storage, computation…) <b>shared by participants</b> (communities and businesses).
 button: Discover the detailed roadmap
 link: /learn/roadmap
 items:

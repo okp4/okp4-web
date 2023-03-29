@@ -120,7 +120,13 @@ const Universe = ({ files }) => {
               <p
                 className="text"
                 dangerouslySetInnerHTML={{
-                  __html: contentRoadmap.description,
+                  __html: contentRoadmap.description[0],
+                }}
+              ></p>
+              <p
+                className="text last"
+                dangerouslySetInnerHTML={{
+                  __html: contentRoadmap.description[1],
                 }}
               ></p>
               <Link to={contentRoadmap.link} className="cta__button">

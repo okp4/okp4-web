@@ -149,6 +149,10 @@
     span {
       font-size: 20px;
       line-height: 1.8;
+      @include media-bp-down(lg) {
+        font-size: 18px;
+        line-height: 1.5;
+      }
     }
 
     @include media-bp-down(lg) {
