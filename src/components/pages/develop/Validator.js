@@ -26,6 +26,7 @@ const Validator = ({ files }) => {
             className="introduction__image"
             image={MediaManager.GetImage(content.introduction.image, files)}
             alt={content.introduction.alt}
+            loading="eager"
           />
         </div>
       </div>
@@ -67,7 +68,6 @@ const Validator = ({ files }) => {
               className="background_light"
               src="../../../assets/images/illus/background_img_northern_light.webp"
               alt=""
-              loading="eager"
             />
           )}
         </div>
@@ -105,7 +105,6 @@ const Validator = ({ files }) => {
             className="staking__image"
             src="../../../assets/images/illus/druid_magic.webp"
             alt={content.staking.alt}
-            loading="eager"
           />
         </div>
         <div className="staking__text">

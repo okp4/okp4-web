@@ -13,6 +13,7 @@ const Okp4 = ({ files }) => (
             className="okp4__presentation_image"
             image={MediaManager.GetImage(content.presentationPart.image, files)}
             alt={content.presentationPart.title}
+            loading="eager"
           />
         </div>
         <div className="content__wrapper">

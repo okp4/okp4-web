@@ -95,11 +95,13 @@ const Portal = () => {
           <StaticImage
             src="../../../assets/images/illus/portal-homepage.webp"
             alt={contentPortal.discover.alt}
+            loading="eager"
           />
         ) : (
           <StaticImage
             src="../../../assets/images/illus/portal-homepage-mobile.webp"
             alt={contentPortal.discover.alt}
+            loading="eager"
           />
         )}
 

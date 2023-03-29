@@ -28,12 +28,14 @@ const Know = () => (
                 src="../../../../content/images/learn-know-token.webp"
                 alt={contentKnow.introPart.alt}
                 className="know__intro__image"
+                loading="eager"
               />
             </div>
             <StaticImage
               src="../../../../content/images/learn-know-token.webp"
               alt={contentKnow.introPart.alt}
               className="know__intro__image__shadow"
+              loading="eager"
             />
           </div>
         </div>

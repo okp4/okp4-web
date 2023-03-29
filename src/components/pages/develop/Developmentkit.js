@@ -35,7 +35,6 @@ const DevelopmentKit = () => (
         className="developmentkit__description__image"
         src="../../../assets/images/illus/ephemeral-book.webp"
         alt={contentDevelopmentKit.create.alt}
-        loading="eager"
       />
     </div>
     <div className="developmentkit__description__wrapper design-system">
@@ -44,7 +43,6 @@ const DevelopmentKit = () => (
           className="developmentkit__description__image cauldron"
           src="../../../../content/images/index_universe_dk_cropped.webp"
           alt={contentDevelopmentKit.designSystem.alt}
-          loading="eager"
         />
       </div>
       <div className="developmentkit__description">
@@ -87,7 +85,6 @@ const DevelopmentKit = () => (
         className="developmentkit__description__image"
         src="../../../assets/images/illus/druid_magic.webp"
         alt={contentDevelopmentKit.protocol.alt}
-        loading="eager"
       />
       <div className="developmentkit__description">
         <h2>{contentDevelopmentKit.protocol.header}</h2>
