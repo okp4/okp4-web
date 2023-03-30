@@ -280,8 +280,18 @@ const Associates = () => {
         </p>
         <div className="associates__advisors__wrapper">
           {advisors.map(({ name, lastname, job, image }) => (
-            <div className="associates__advisor__card" key={name + lastname}>
-              <span>{image}</span>
+            <div
+              className="associates__advisor__container"
+              key={name + lastname}
+            >
+              <div className="associates__advisor__card" key={name + lastname}>
+                <StaticImage
+                  className="associates__advisors__background"
+                  src="../../content/images/advisors/background-advisor.webp"
+                  alt=""
+                />
+                <span>{image}</span>
+              </div>
               <div className="advisor__fullname">
                 <p>{name}</p>
                 <p className="advisor__lastname">{lastname}</p>
