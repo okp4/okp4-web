@@ -12,7 +12,6 @@ const DataSpace = () => {
             className="dataspace__governance__card__image"
             src="../../../assets/images/illus/new_document.webp"
             alt={contentDataSpace.governance.cards[0].alt}
-            loading="eager"
           />
         ),
         header: contentDataSpace.governance.cards[0].header,
@@ -24,7 +23,6 @@ const DataSpace = () => {
             className="dataspace__governance__card__image"
             src="../../../assets/images/illus/new_document_setting.webp"
             alt={contentDataSpace.governance.cards[1].alt}
-            loading="eager"
           />
         ),
         header: contentDataSpace.governance.cards[1].header,
@@ -71,14 +69,12 @@ const DataSpace = () => {
               className="dataspace__image__data__spaces"
               src="../../../../content/images/index_intro_card_2.webp"
               alt={contentDataSpace.dataSpaces.purposes.alt}
-              loading="eager"
             />
             <div className="dataspace__background__halo" />
             <StaticImage
               className="dataspace__background__image"
               src="../../../assets/images/illus/background_img_northern_light.webp"
               alt=""
-              loading="eager"
             />
           </div>
         </div>
@@ -121,7 +117,6 @@ const DataSpace = () => {
             className="dataspace__image__landing"
             src="../../../assets/images/illus/index_landing.webp"
             alt={contentDataSpace.decentralizedProtocol.alt}
-            loading="eager"
           />
           <div className="dataspace__background__halo" />
         </div>

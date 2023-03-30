@@ -88,6 +88,7 @@ const Developers = () => {
             <StaticImage
               src="../../../assets/images/illus/laptop.webp"
               alt={contentDevelopers.alt}
+              loading="eager"
             />
           </div>
         </div>

@@ -25,6 +25,7 @@ const JoinUs = ({ files }) => (
               className="community__image"
               image={MediaManager.GetImage(contentCommunity.image, files)}
               alt={contentCommunity.alt}
+              loading="eager"
             />
           </div>
         </div>

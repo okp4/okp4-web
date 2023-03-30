@@ -25,6 +25,7 @@ const Dataverse = ({ files }) => {
               className="dataverse_image"
               image={MediaManager.GetImage(content.okp4Universe.image, files)}
               alt={content.okp4Universe.alt}
+              loading="eager"
             />
           </div>
         </div>
