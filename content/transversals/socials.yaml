@@ -32,3 +32,6 @@ faq:
 contact:
   url: mailto:hello@okp4.network
   label: Let's get in touch
+career:
+  url: https://taleez.com/careers/okp4
+  label: Career

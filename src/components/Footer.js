@@ -95,6 +95,15 @@ const Footer = ({
               <IconLogo className="footer__main__top__logo" />
               <div className="footer__main__top__links">
                 <a
+                  href={contentSocials.career.url}
+                  className="footer__main__top__links__item"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{contentSocials.career.label}</span>
+                  <IconArrowtr />
+                </a>
+                <a
                   href={contentSocials.faq.url}
                   className="footer__main__top__links__item"
                   target="_blank"
