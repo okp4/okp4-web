@@ -48,7 +48,6 @@ main.homepage {
           overflow: hidden;
           font-family: inherit;
           font-size: inherit;
-          font-weight: inherit;
           line-height: 1;
 
           @include media-bp-down(lg) {
