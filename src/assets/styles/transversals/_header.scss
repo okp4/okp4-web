@@ -296,7 +296,6 @@ header.header {
                 max-height: 212px;
                 display: grid;
                 grid-auto-flow: column;
-                grid-template-columns: repeat(auto-fit, minmax(107px, 1fr));
                 grid-template-rows: repeat(auto-fit, minmax(31px, 1fr));
                 row-gap: 9px;
                 column-gap: 30px;
