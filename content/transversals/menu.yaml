@@ -13,6 +13,8 @@ items:
         link: /learn/dataspace
       - name: $KNOW
         link: /learn/know
+      - name: OKP4 Academy
+        url: https://docs.okp4.network/tutorials/overview
   - name: Develop
     prefixPath: /develop
     subMenuItems:
@@ -24,6 +26,10 @@ items:
         url: https://docs.okp4.network/
       - name: Participate
         url: https://github.com/okp4
+      - name: Builders Program
+        url: https://nemeton.okp4.network/builders/challenges#challenges
+      - name: Use Cases
+        url: https://docs.okp4.network/whitepaper/use-cases
   - name: Explore
     prefixPath: /explore
     subMenuItems:
