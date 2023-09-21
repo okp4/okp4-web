@@ -68,9 +68,9 @@ ibc:
           url: https://holo.host/
         - name: Aleph.im
           url: https://aleph.im/
-    - title: Data space governance from any existing token
+    - title: Zone governance from any existing token
       internalLink:
-        name: Discover Data Space
+        name: Discover Zone
         link: /learn/dataspace
 architecture:
   title: An elegant architecture, for an abundant ecosystem
