@@ -16,7 +16,7 @@ dataSharingPart:
   text:
     - A decentralized data-sharing infrastructure could enable many new opportunities for data way beyond data exchange. OKP4 is a public PoS layer 1 blockchain built for trust-minimized data sharing. It is specifically designed to enable communities to share data, algorithms, and resources to create a sovereign Dataverse and an environment of applications on top of it.
     - OKP4 protocol allows the creation of fully customizable
-    - Data Spaces
+    - Zones
     - where communities can agree on rules and contribute with any digital resource (dataset, algorithm, storage or computation resource) to create new knowledge and applications. Any identity and consent solutions can be indexed and orchestrated by the protocol according to defined rules to minimize risks and costs and maximize opportunities while keeping data sovereignty.
 knowPart:
   title: Providing value to Data Ecosystems
@@ -28,7 +28,7 @@ knowPart:
   ecosystemDescription: |
     <p>
     The whole system is decentralized since no dominant third party dictates the rules.
-    While the blockchain is governed and operated by the decentralized community, <b>each Data Space can have its own governance mechanisms</b>, enabling companies to benefit from web3 while giving users & data providers complete ownership and transparency.
+    While the blockchain is governed and operated by the decentralized community, <b>each Zone can have its own governance mechanisms</b>, enabling companies to benefit from web3 while giving users & data providers complete ownership and transparency.
     </p>
   image: learn-okp4-know.webp
   alt: Know Token - OKP4
@@ -45,10 +45,10 @@ cosmosPart:
     - to provide the perfect environment
     - for developers, data and service providers, and users to build, contribute and thrive in the Dataverse.
     - The OKP4 protocol enables stakeholders to create
-    - Data Spaces
+    - Zones
     - to make their
     - raw data available to the network without exposing it
     - to other members.
   image: learn-okp4-cosmos.webp
   alt: Cosmos Logo - OKP4
-discoverDataSpace: Discover the Data Space
+discoverDataSpace: Discover the Zone

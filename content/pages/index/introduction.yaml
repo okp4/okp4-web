@@ -3,12 +3,12 @@ help: Please download all images in the /content/images folder and just indicate
 title: NEW OPPORTUNITIES FOR EVERY DIGITAL RESSOURCE
 description:
   - OKP4 is the only public <b>layer-1 blockchain</b> designed for coordination of digital assets such as datasets, algorithms, software, storage or computation. Anyone can build and join custom
-  - Data Spaces
+  - Zones
   - where rules are shared and value flows between participants.
 featuredText: Let’s build amazing things together!
 whitecard1:
   title: Easy to build
-  description: Data Spaces and Applications
+  description: Zones and Applications
   image: index_intro_card_1.webp
   alt: "Book Icon - OKP4"
 whitecard2:
@@ -30,7 +30,7 @@ bluecard1:
   url: /learn/know
 bluecard2:
   title: Built on the Cosmos SDK
-  description: A smart contract hub specifically designed for Data Spaces.
+  description: A smart contract hub specifically designed for Zones.
   image: index_intro_cosmos.webp
   alt: "Cosmos Logo - OKP4"
 bluecard3:

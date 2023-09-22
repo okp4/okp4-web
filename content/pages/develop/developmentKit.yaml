@@ -12,7 +12,7 @@ create:
   header: create innovative web3 apps with OKP4 development kit
   description:
     - The OKP4 Development Kit is a comprehensive set of software development tools and resources made available by OKP4 and the community.
-    - This Development Kit empowers developers to create innovative Web3 applications using the OKP4 protocol. With OKP4 DK, you have access to a Web3 Design System, Data Space Governance Templates, many command line tools, a large set of open-source libraries (functions, connectors) for various different technologies, and a comprehensive documentation that makes it easier to build secure and efficient web3 applications.
+    - This Development Kit empowers developers to create innovative Web3 applications using the OKP4 protocol. With OKP4 DK, you have access to a Web3 Design System, Zone Governance Templates, many command line tools, a large set of open-source libraries (functions, connectors) for various different technologies, and a comprehensive documentation that makes it easier to build secure and efficient web3 applications.
     - Whether you're an experienced developer or just starting out, the OKP4 Development Kit equips you with the tools you need to turn your ideas into reality. Join the growing family of OKP4 builders and bring your vision to life.
   alt: Ephemeral Book Development Kit - OKP4
 designSystem:
@@ -22,7 +22,7 @@ designSystem:
   soon: Soon available
   alt: Development Kit Cauldron - OKP4
 governanceTemplates:
-  header: data space governance templates
+  header: Zone governance templates
   description:
     - Import predefined rule templates for resource sharing models, business models, or governance tokens in just a few clicks.
     - "Create your own template library: your rules, your governance. Governance Templates can also reference each other to build more advanced sets and promote sharing of common elements."

@@ -114,7 +114,7 @@ const Portal = () => {
             Anyone can access the portal – connect a wallet to share data &
             services, create{" "}
             <Link className="portal__inline__link" to="/learn/dataspace">
-              Data Spaces
+              Zones
             </Link>
             , access resources, or initiate workflows!
           </p>
