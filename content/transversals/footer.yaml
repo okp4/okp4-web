@@ -35,6 +35,7 @@ associates:
         alt: Logo B-Harvest - OKP4
       - label: Stakelab
         url: https://www.stakelab.fr/
+        image: logo-stakelab.webp
         alt: Logo Stakelab - OKP4
       - label: P2P
         url: https://p2p.org/
@@ -56,10 +57,6 @@ associates:
         url: https://citadel.one/
         image: logo-citadelone.webp
         alt: Logo Citadelone - OKP4
-      - label: Staking Cabin
-        url: https://stakingcabin.com/
-        image: logo-staking-cabin.webp
-        alt: Logo Staking Cabin - OKP4
       - label: NodeStake
         url: https://nodestake.top/
         image: logo-nodestake.webp
@@ -72,6 +69,35 @@ associates:
         url: https://cros-nest.com/
         image: logo-nest.webp
         alt: Logo Nest - OKP4
+      - label: Easy 2 Stake
+        url: https://www.easy2stake.com/
+        image: logo-easytostake.webp
+        alt: Logo Easy 2 Stake - OKP4
+      - label: Dorahacks
+        url: https://dorahacks.io/
+        image: logo-dorahacks.webp
+        alt: Logo DoraHacks - OKP4
+      - label: Lavender.Five
+        url: https://www.lavenderfive.com/
+        image: logo-lavenderfive.webp
+        alt: Logo Lavender.Five - OKP4
+      - label: Meria
+        url: https://www.meria.com/
+        image: logo-meria.webp
+        alt: Logo Meria - OKP4
+      - label: Posthuman
+        url: https://posthuman.digital/
+        image: logo-posthuman.webp
+        alt: Logo Posthuman - OKP4
+      - label: Stakecito
+        url: https://stakecito.com/
+        image: logo-stakecito.webp
+        alt: Logo Stakecito - OKP4
+      - label: Saxon
+        url: https://saxon.xyz/
+        image: logo-saxon.webp
+        alt: Logo Saxon - OKP4
+
   advisors:
     title: Our Advisors
     people:

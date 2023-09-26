@@ -155,7 +155,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[10].label
             )}
-            src="../../content/images/companies/logo-staking-cabin.webp"
+            src="../../content/images/companies/logo-nodestake.webp"
             alt={contentFooter.associates.companies.logos[10].alt}
           />
         ),
@@ -169,7 +169,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[11].label
             )}
-            src="../../content/images/companies/logo-nodestake.webp"
+            src="../../content/images/companies/logo-informal.webp"
             alt={contentFooter.associates.companies.logos[11].alt}
           />
         ),
@@ -183,7 +183,7 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[12].label
             )}
-            src="../../content/images/companies/logo-informal.webp"
+            src="../../content/images/companies/logo-nest.webp"
             alt={contentFooter.associates.companies.logos[12].alt}
           />
         ),
@@ -197,8 +197,93 @@ const Associates = () => {
               "associates__logos__image",
               contentFooter.associates.companies.logos[13].label
             )}
-            src="../../content/images/companies/logo-nest.webp"
+            src="../../content/images/companies/logo-easytostake.webp"
             alt={contentFooter.associates.companies.logos[13].alt}
+          />
+        ),
+      },
+      {
+        label: contentFooter.associates.companies.logos[14].label,
+        url: contentFooter.associates.companies.logos[14].url,
+        logo: (
+          <StaticImage
+            className={classNames(
+              "associates__logos__image",
+              contentFooter.associates.companies.logos[14].label
+            )}
+            src="../../content/images/companies/logo-dorahacks.webp"
+            alt={contentFooter.associates.companies.logos[14].alt}
+          />
+        ),
+      },
+      {
+        label: contentFooter.associates.companies.logos[15].label,
+        url: contentFooter.associates.companies.logos[15].url,
+        logo: (
+          <StaticImage
+            className={classNames(
+              "associates__logos__image",
+              contentFooter.associates.companies.logos[15].label
+            )}
+            src="../../content/images/companies/logo-lavenderfive.webp"
+            alt={contentFooter.associates.companies.logos[15].alt}
+          />
+        ),
+      },
+      {
+        label: contentFooter.associates.companies.logos[16].label,
+        url: contentFooter.associates.companies.logos[16].url,
+        logo: (
+          <StaticImage
+            className={classNames(
+              "associates__logos__image",
+              contentFooter.associates.companies.logos[16].label
+            )}
+            src="../../content/images/companies/logo-meria.webp"
+            alt={contentFooter.associates.companies.logos[16].alt}
+          />
+        ),
+      },
+      {
+        label: contentFooter.associates.companies.logos[17].label,
+        url: contentFooter.associates.companies.logos[17].url,
+        logo: (
+          <StaticImage
+            className={classNames(
+              "associates__logos__image",
+              contentFooter.associates.companies.logos[17].label
+            )}
+            src="../../content/images/companies/logo-posthuman.webp"
+            alt={contentFooter.associates.companies.logos[17].alt}
+          />
+        ),
+      },
+
+      {
+        label: contentFooter.associates.companies.logos[18].label,
+        url: contentFooter.associates.companies.logos[18].url,
+        logo: (
+          <StaticImage
+            className={classNames(
+              "associates__logos__image",
+              contentFooter.associates.companies.logos[18].label
+            )}
+            src="../../content/images/companies/logo-stakecito.webp"
+            alt={contentFooter.associates.companies.logos[18].alt}
+          />
+        ),
+      },
+      {
+        label: contentFooter.associates.companies.logos[19].label,
+        url: contentFooter.associates.companies.logos[19].url,
+        logo: (
+          <StaticImage
+            className={classNames(
+              "associates__logos__image",
+              contentFooter.associates.companies.logos[19].label
+            )}
+            src="../../content/images/companies/logo-saxon.webp"
+            alt={contentFooter.associates.companies.logos[19].alt}
           />
         ),
       },
