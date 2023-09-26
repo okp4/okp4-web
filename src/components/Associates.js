@@ -300,7 +300,7 @@ const Associates = () => {
         image: (
           <StaticImage
             className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-peter-van-mourik.webp"
+            src="../../content/images/people/advisors/advisor-peter-van-mourik.webp"
             alt={contentFooter.associates.advisors.people[0].alt}
           />
         ),
@@ -312,7 +312,7 @@ const Associates = () => {
         image: (
           <StaticImage
             className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-benjamin-santi.webp"
+            src="../../content/images/people/advisors/advisor-benjamin-santi.webp"
             alt={contentFooter.associates.advisors.people[1].alt}
           />
         ),
@@ -325,7 +325,7 @@ const Associates = () => {
         image: (
           <StaticImage
             className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-jasvin-bhasin.webp"
+            src="../../content/images/people/advisors/advisor-jasvin-bhasin.webp"
             alt={contentFooter.associates.advisors.people[2].alt}
           />
         ),
@@ -337,7 +337,7 @@ const Associates = () => {
         image: (
           <StaticImage
             className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-sebastien-couture.webp"
+            src="../../content/images/people/advisors/advisor-sebastien-couture.webp"
             alt={contentFooter.associates.advisors.people[3].alt}
           />
         ),
@@ -372,7 +372,7 @@ const Associates = () => {
               <div className="associates__advisor__card" key={name + lastname}>
                 <StaticImage
                   className="associates__advisors__background"
-                  src="../../content/images/advisors/background-advisor.webp"
+                  src="../../content/images/people/card_background.webp"
                   alt=""
                 />
                 <span>{image}</span>
