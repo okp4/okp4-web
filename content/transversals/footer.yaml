@@ -121,6 +121,28 @@ associates:
     - Region Occitanie Support - OKP4
     - BPI France Support - OKP4
     - Region Bretagne Support - OKP4
+team:
+  title: Our Board Team
+  people:
+    - name: Emmanuel
+      lastname: Aldeguer
+      job: CEO
+      alt: Board Team Emmanuel Aldeguer - OKP4
+    - name: Marine
+      lastname: Dechamp-Guillaume
+      job: Chief Project Manager
+      alt: Board Team Marine Dechamp-Guillaume - OKP4
+    - name: Christophe
+      lastname: Camel
+      job: CTO
+      alt: Board Team Christophe Camel - OKP4
+    - name: Théo
+      lastname: Pelliet
+      job: Head of Ecosystem
+      alt: Board Team Théo Pelliet - OKP4
+  button:
+    name: See All Collaborators
+    link: https://pollen-by-okp4.com/en/about-us/
 sitemap:
   url: https://okp4.network/
   text: Sitemap

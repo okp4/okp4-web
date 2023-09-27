@@ -15,6 +15,7 @@ export default function LearnOkp4({ data }) {
       isStatic
       withDocs={false}
       withAssociates={false}
+      withBoardTeam={true}
       withPartners={false}
     >
       <Okp4 files={data} />

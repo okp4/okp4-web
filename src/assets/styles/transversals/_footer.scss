@@ -297,15 +297,15 @@ footer.footer {
     }
   }
 
-  .associates {
+  .people {
     text-align: center;
     margin-bottom: 110px;
     @media only screen and (max-width: 700px) {
       margin-bottom: 60px;
     }
 
-    .associates__wrapper {
-      .associates__title {
+    .people__wrapper {
+      .people__title {
         font-size: 16px;
         margin-bottom: 40px;
 
@@ -314,7 +314,7 @@ footer.footer {
         }
       }
 
-      .associates__logos__wrapper {
+      .logos__wrapper {
         margin: 40px 0 120px 0;
         display: flex;
         justify-content: space-around;
@@ -368,25 +368,31 @@ footer.footer {
         }
       }
 
-      .associates__advisors__wrapper {
+      .people__infos__wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 60px;
         margin: 10px 20px 120px 20px;
 
+        &.board__team {
+          margin-bottom: 58px;
+        }
+
         @media (max-width: 500px) {
           gap: 30px 15px;
           margin: 20px 0px 60px 0px;
         }
 
-        p {
+        p,
+        span {
           font-size: 18px;
           font-weight: 600;
         }
 
-        .associates__advisor__container {
-          .associates__advisor__card {
+        .person__infos__container {
+          max-width: 186px;
+          .person__infos__card {
             position: relative;
             padding: 0;
             max-width: 186px;
@@ -396,7 +402,7 @@ footer.footer {
             background: linear-gradient(#003661, #005ca6 50%);
             isolation: isolate;
 
-            .associates__advisors__background {
+            .person__card__background {
               position: absolute;
               top: 50%;
               left: 50%;
@@ -408,7 +414,7 @@ footer.footer {
               transition: margin 0.4s;
             }
 
-            .associates__advisors__image {
+            .person__image {
               z-index: 2;
               border-radius: 20px;
               margin: 0;
@@ -419,7 +425,7 @@ footer.footer {
               }
             }
           }
-          .advisor__fullname {
+          .person__fullname {
             display: flex;
             gap: 5px;
             justify-content: center;
@@ -427,12 +433,12 @@ footer.footer {
             color: $white;
             transition: color 0.4s;
 
-            .advisor__lastname {
+            .person__lastname {
               text-transform: uppercase;
             }
           }
 
-          .advisor__job__position {
+          .person__position {
             opacity: 0.6;
             font-weight: 400;
             margin: 6px auto 0;
@@ -444,19 +450,39 @@ footer.footer {
           }
 
           &:hover {
-            .associates__advisors__background {
+            .person__card__background {
               margin-top: -20px;
               transition: margin 0.4s;
             }
-            .advisor__fullname {
+            .person__fullname {
               color: $orange;
               transition: color 0.4s;
             }
           }
         }
       }
+      .blue__gradient__button {
+        text-decoration: none;
+        background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
+          #00b6b7;
+        border-radius: 10px;
+        padding: 18px 30px;
+        text-align: center;
+
+        span {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+        }
+        &:hover {
+          background: url("/images/grain.webp"),
+            linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+          color: $textblue;
+        }
+      }
     }
   }
+
   .footer__partenaires {
     padding-bottom: 120px;
     text-align: center;

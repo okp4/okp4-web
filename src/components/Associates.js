@@ -299,8 +299,8 @@ const Associates = () => {
         job: contentFooter.associates.advisors.people[0].job,
         image: (
           <StaticImage
-            className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-peter-van-mourik.webp"
+            className="person__image"
+            src="../../content/images/people/advisors/advisor-peter-van-mourik.webp"
             alt={contentFooter.associates.advisors.people[0].alt}
           />
         ),
@@ -311,8 +311,8 @@ const Associates = () => {
         job: contentFooter.associates.advisors.people[1].job,
         image: (
           <StaticImage
-            className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-benjamin-santi.webp"
+            className="person__image"
+            src="../../content/images/people/advisors/advisor-benjamin-santi.webp"
             alt={contentFooter.associates.advisors.people[1].alt}
           />
         ),
@@ -324,8 +324,8 @@ const Associates = () => {
         job: contentFooter.associates.advisors.people[2].job,
         image: (
           <StaticImage
-            className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-jasvin-bhasin.webp"
+            className="person__image"
+            src="../../content/images/people/advisors/advisor-jasvin-bhasin.webp"
             alt={contentFooter.associates.advisors.people[2].alt}
           />
         ),
@@ -336,8 +336,8 @@ const Associates = () => {
         job: contentFooter.associates.advisors.people[3].job,
         image: (
           <StaticImage
-            className="associates__advisors__image"
-            src="../../content/images/advisors/advisor-sebastien-couture.webp"
+            className="person__image"
+            src="../../content/images/people/advisors/advisor-sebastien-couture.webp"
             alt={contentFooter.associates.advisors.people[3].alt}
           />
         ),
@@ -347,12 +347,12 @@ const Associates = () => {
   );
 
   return (
-    <section className="associates">
-      <div className="associates__wrapper">
-        <p className="associates__title">
+    <section className="people">
+      <div className="people__wrapper">
+        <p className="people__title">
           {contentFooter.associates.companies.title}
         </p>
-        <div className="associates__logos__wrapper">
+        <div className="logos__wrapper">
           {logos.map(({ label, url, logo }) => (
             <a href={url} key={label} target="_blank" rel="noreferrer">
               <span>{logo}</span>
@@ -360,28 +360,25 @@ const Associates = () => {
           ))}
         </div>
 
-        <p className="associates__title">
+        <p className="people__title">
           {contentFooter.associates.advisors.title}
         </p>
-        <div className="associates__advisors__wrapper">
+        <div className="people__infos__wrapper ">
           {advisors.map(({ name, lastname, job, image }) => (
-            <div
-              className="associates__advisor__container"
-              key={name + lastname}
-            >
-              <div className="associates__advisor__card" key={name + lastname}>
+            <div className="person__infos__container" key={name + lastname}>
+              <div className="person__infos__card" key={name + lastname}>
                 <StaticImage
-                  className="associates__advisors__background"
-                  src="../../content/images/advisors/background-advisor.webp"
+                  className="person__card__background"
+                  src="../../content/images/people/card_background.webp"
                   alt=""
                 />
                 <span>{image}</span>
               </div>
-              <div className="advisor__fullname">
+              <div className="person__fullname">
                 <p>{name}</p>
-                <p className="advisor__lastname">{lastname}</p>
+                <p className="person__lastname">{lastname}</p>
               </div>
-              <p className="advisor__job__position"> {job} </p>
+              <p className="person__position"> {job} </p>
             </div>
           ))}
         </div>
