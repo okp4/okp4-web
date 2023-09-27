@@ -14,6 +14,7 @@ import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import Docs from "./Docs.js";
 import Partners from "./Partners";
 import Associates from "./Associates";
+import BoardTeam from "./BoardTeam.js";
 import Newsletter from "./Newsletter.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentFooter from "/content/transversals/footer.yaml";
@@ -22,6 +23,7 @@ const Footer = ({
   files,
   withDocs = true,
   withAssociates = true,
+  withBoardTeam = false,
   withPartners = true,
 }) => {
   const divScrollTop = useRef(null);
@@ -74,6 +76,7 @@ const Footer = ({
         <div className="footer__sticky">
           {withDocs && <Docs />}
           {withAssociates && <Associates files={files} />}
+          {withBoardTeam && <BoardTeam files={files} />}
           {withPartners && <Partners />}
         </div>
 

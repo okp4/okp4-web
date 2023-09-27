@@ -13,6 +13,7 @@ const Layout = ({
   isStatic = false,
   withDocs = true,
   withAssociates = true,
+  withBoardTeam = false,
   withPartners = true,
 }) => {
   return (
@@ -25,6 +26,7 @@ const Layout = ({
         files={files}
         withDocs={withDocs}
         withAssociates={withAssociates}
+        withBoardTeam={withBoardTeam}
         withPartners={withPartners}
       />
     </>
