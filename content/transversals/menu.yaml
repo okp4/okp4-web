@@ -44,5 +44,7 @@ items:
         link: /interact/developers
       - name: Community
         link: /interact/community
+      - name: Ambassador Program
+        link: /interact/ambassador-program
       - name: Blog
         url: https://blog.okp4.network/
