@@ -12,7 +12,7 @@ const BoardTeam = () => {
         job: contentFooter.team.people[0].job,
         image: (
           <StaticImage
-            className="team__member__image"
+            className="person__image"
             src="../../content/images/people/team/emmanuel.webp"
             alt={contentFooter.team.people[0].alt}
           />
@@ -24,7 +24,7 @@ const BoardTeam = () => {
         job: contentFooter.team.people[1].job,
         image: (
           <StaticImage
-            className="team__member__image"
+            className="person__image"
             src="../../content/images/people/team/marine.webp"
             alt={contentFooter.team.people[1].alt}
           />
@@ -37,7 +37,7 @@ const BoardTeam = () => {
         job: contentFooter.team.people[2].job,
         image: (
           <StaticImage
-            className="team__member__image"
+            className="person__image"
             src="../../content/images/people/team/christophe.webp"
             alt={contentFooter.team.people[2].alt}
           />
@@ -49,7 +49,7 @@ const BoardTeam = () => {
         job: contentFooter.team.people[3].job,
         image: (
           <StaticImage
-            className="team__member__image" // a changer
+            className="person__image"
             src="../../content/images/people/team/theo.webp"
             alt={contentFooter.team.people[3].alt}
           />
@@ -60,27 +60,26 @@ const BoardTeam = () => {
   );
 
   return (
-    <section className="team">
-      <div className="team__wrapper">
-        <p className="team__title">{contentFooter.team.title}</p>
-        <div className="team__members__wrapper">
+    <section className="people">
+      <div className="people__wrapper">
+        <p className="people__title">{contentFooter.team.title}</p>
+        <div className="people__infos__wrapper board__team">
           {team.map(({ name, lastname, job, image }) => (
-            <div className="team__members__container" key={name + lastname}>
-              <div className="team__member__card" key={name + lastname}>
+            <div className="person__infos__container" key={name + lastname}>
+              <div className="person__infos__card" key={name + lastname}>
                 <StaticImage
-                  className="team__member__background"
+                  className="person__card__background"
                   src="../../content/images/people/card_background.webp"
                   alt=""
                 />
                 <span>{image}</span>
               </div>
-              <div className="team__member__fullname">
+              <div className="person__fullname">
                 <p>
-                  {name}{" "}
-                  <span className="team__member__lastname">{lastname}</span>
+                  {name} <span className="person__lastname">{lastname}</span>
                 </p>
               </div>
-              <p className="team__member__position"> {job} </p>
+              <p className="person__position"> {job} </p>
             </div>
           ))}
         </div>

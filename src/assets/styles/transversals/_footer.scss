@@ -297,15 +297,15 @@ footer.footer {
     }
   }
 
-  .associates {
+  .people {
     text-align: center;
     margin-bottom: 110px;
     @media only screen and (max-width: 700px) {
       margin-bottom: 60px;
     }
 
-    .associates__wrapper {
-      .associates__title {
+    .people__wrapper {
+      .people__title {
         font-size: 16px;
         margin-bottom: 40px;
 
@@ -314,7 +314,7 @@ footer.footer {
         }
       }
 
-      .associates__logos__wrapper {
+      .logos__wrapper {
         margin: 40px 0 120px 0;
         display: flex;
         justify-content: space-around;
@@ -368,119 +368,16 @@ footer.footer {
         }
       }
 
-      .associates__advisors__wrapper {
+      .people__infos__wrapper {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 60px;
         margin: 10px 20px 120px 20px;
 
-        @media (max-width: 500px) {
-          gap: 30px 15px;
-          margin: 20px 0px 60px 0px;
+        &.board__team {
+          margin-bottom: 58px;
         }
-
-        p {
-          font-size: 18px;
-          font-weight: 600;
-        }
-
-        .associates__advisor__container {
-          .associates__advisor__card {
-            position: relative;
-            padding: 0;
-            max-width: 186px;
-            max-height: 260px;
-            border-radius: 20px;
-            overflow: hidden;
-            background: linear-gradient(#003661, #005ca6 50%);
-            isolation: isolate;
-
-            .associates__advisors__background {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              z-index: 1;
-              width: 230px;
-              height: 300px;
-              margin-top: 300px;
-              transition: margin 0.4s;
-            }
-
-            .associates__advisors__image {
-              z-index: 2;
-              border-radius: 20px;
-              margin: 0;
-
-              @media (max-width: 500px) {
-                max-width: 164px;
-                max-height: 293px;
-              }
-            }
-          }
-          .advisor__fullname {
-            display: flex;
-            gap: 5px;
-            justify-content: center;
-            margin-top: 15px;
-            color: $white;
-            transition: color 0.4s;
-
-            .advisor__lastname {
-              text-transform: uppercase;
-            }
-          }
-
-          .advisor__job__position {
-            opacity: 0.6;
-            font-weight: 400;
-            margin: 6px auto 0;
-            overflow-wrap: break-word;
-            max-width: 176px;
-            @media (max-width: 500px) {
-              max-width: 154px;
-            }
-          }
-
-          &:hover {
-            .associates__advisors__background {
-              margin-top: -20px;
-              transition: margin 0.4s;
-            }
-            .advisor__fullname {
-              color: $orange;
-              transition: color 0.4s;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .team {
-    text-align: center;
-    margin-bottom: 110px;
-    @media only screen and (max-width: 700px) {
-      margin-bottom: 60px;
-    }
-
-    .team__wrapper {
-      .team__title {
-        font-size: 16px;
-        margin-bottom: 40px;
-
-        @media only screen and (max-width: 700px) {
-          margin-bottom: 36px;
-        }
-      }
-
-      .team__members__wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 60px;
-        margin: 10px 20px 58px 20px;
 
         @media (max-width: 500px) {
           gap: 30px 15px;
@@ -493,9 +390,9 @@ footer.footer {
           font-weight: 600;
         }
 
-        .team__members__container {
+        .person__infos__container {
           max-width: 186px;
-          .team__member__card {
+          .person__infos__card {
             position: relative;
             padding: 0;
             max-width: 186px;
@@ -505,7 +402,7 @@ footer.footer {
             background: linear-gradient(#003661, #005ca6 50%);
             isolation: isolate;
 
-            .team__member__background {
+            .person__card__background {
               position: absolute;
               top: 50%;
               left: 50%;
@@ -517,18 +414,18 @@ footer.footer {
               transition: margin 0.4s;
             }
 
-            .team__member__image {
+            .person__image {
               z-index: 2;
               border-radius: 20px;
               margin: 0;
 
               @media (max-width: 500px) {
-                max-width: 186px;
+                max-width: 164px;
                 max-height: 293px;
               }
             }
           }
-          .team__member__fullname {
+          .person__fullname {
             display: flex;
             gap: 5px;
             justify-content: center;
@@ -536,12 +433,12 @@ footer.footer {
             color: $white;
             transition: color 0.4s;
 
-            .team__member__lastname {
+            .person__lastname {
               text-transform: uppercase;
             }
           }
 
-          .team__member__position {
+          .person__position {
             opacity: 0.6;
             font-weight: 400;
             margin: 6px auto 0;
@@ -553,18 +450,17 @@ footer.footer {
           }
 
           &:hover {
-            .team__member__background {
+            .person__card__background {
               margin-top: -20px;
               transition: margin 0.4s;
             }
-            .team__member__fullname {
+            .person__fullname {
               color: $orange;
               transition: color 0.4s;
             }
           }
         }
       }
-
       .blue__gradient__button {
         text-decoration: none;
         background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
