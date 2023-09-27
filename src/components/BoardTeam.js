@@ -86,6 +86,7 @@ const BoardTeam = () => {
         <Link
           to={contentFooter.team.button.link}
           className="blue__gradient__button"
+          target="_blank"
         >
           <span>{contentFooter.team.button.name}</span>
         </Link>
