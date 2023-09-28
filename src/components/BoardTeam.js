@@ -83,12 +83,14 @@ const BoardTeam = () => {
             </div>
           ))}
         </div>
-        <Link
-          to={contentFooter.team.button.link}
+        <a
+          href={contentFooter.team.button.link}
           className="blue__gradient__button"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <span>{contentFooter.team.button.name}</span>
-        </Link>
+        </a>
       </div>
     </section>
   );

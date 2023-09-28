@@ -19,7 +19,7 @@ items:
     prefixPath: /develop
     subMenuItems:
       - name: OKP4 Development Kit
-        link: /develop/okp4developmentkit
+        link: /develop/okp4-development-kit
       - name: Validators
         link: /develop/validators
       - name: Docs

@@ -25,7 +25,7 @@ items:
     image: index_universe_dk_cropped.webp
     alt: Development Kit Cauldron - OKP4
     button: Learn more
-    link: /develop/okp4developmentkit
+    link: /develop/okp4-development-kit
   - title: Dataverse Gateways
     identifiant: dg
     description: OKP4 Dataverse Gateways enable anyone to interact with, build into, share and contribute and earn from the Dataverse.
