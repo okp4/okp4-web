@@ -4,6 +4,10 @@
   "description": "OKP4 website made with Gatsby",
   "version": "0.1.0",
   "license": "BSD-3-Clause",
+  "author": {
+    "name": "OKP4",
+    "web": "https://okp4.network"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
