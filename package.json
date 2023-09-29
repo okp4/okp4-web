@@ -3,7 +3,7 @@
   "private": true,
   "description": "OKP4 website made with Gatsby",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "BSD-3-Clause",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
