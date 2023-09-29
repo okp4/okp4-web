@@ -1,7 +1,8 @@
 {
   "name": "okp4-website",
   "private": true,
-  "description": "OKP4 website made with Gatsby",
+  "description": "Website for the OKP4 protocol",
+  "homepage": "https://github.com/okp4/okp4-web",
   "version": "0.1.0",
   "license": "BSD-3-Clause",
   "author": {
