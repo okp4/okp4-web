@@ -1,0 +1,603 @@
+@mixin gradient-button {
+  text-decoration: none;
+  background: linear-gradient(78.68deg, #006796 49.23%, #00b6b7 114.06%),
+    #00b6b7;
+  border-radius: 10px;
+  padding: 18px 30px;
+  text-align: center;
+  height: 55px;
+
+  span {
+    font-size: 16px;
+  }
+
+  &:hover {
+    background: url("/images/grain.webp"),
+      linear-gradient(222.68deg, #f9f9f9 13.75%, #d3defa 76.51%);
+    color: $textblue;
+  }
+}
+
+main.wrapper {
+  position: relative;
+  max-width: 1325px;
+  padding: 0 30px;
+  @include media-bp-down(lg) {
+    padding: 0 15px;
+  }
+}
+
+.ambassador_program {
+  min-height: 100vh;
+  padding-top: 145px;
+
+  @include media-bp-down(lg) {
+    padding-top: 70px;
+  }
+
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .ambassador_program__join_us_part {
+    display: grid;
+    grid-template-areas:
+      "subject image"
+      "title image"
+      "description image"
+      "button image";
+    column-gap: 60px;
+
+    @include media-bp-down(lg) {
+      grid-template-areas:
+        "subject"
+        "title"
+        "description"
+        "button"
+        "image";
+      text-align: center;
+      justify-items: center;
+    }
+
+    .ambassador_program__subject {
+      grid-area: subject;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 263px;
+      height: 54px;
+      padding: 12px;
+      margin-bottom: 28px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      opacity: 0.8;
+
+      @include media-bp-down(lg) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .ambassador_program__container {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      gap: 40px;
+
+      @include media-bp-down(lg) {
+        gap: 16px;
+      }
+
+      .ambassador_program__title {
+        grid-area: title;
+        font-weight: 700;
+        @include media-bp-up(lg) {
+          max-width: 650px;
+        }
+      }
+
+      .ambassador_program__description_container {
+        grid-area: description;
+
+        .ambassador_program__description {
+          line-height: 150%;
+          font-size: 18px;
+
+          @include media-bp-up(lg) {
+            font-weight: 400;
+            font-size: 22.1911px;
+            letter-spacing: 0.05em;
+            max-width: 650px;
+          }
+        }
+      }
+    }
+
+    .ambassador_program__image_wrapper {
+      grid-area: image;
+      margin: auto;
+      position: relative;
+    }
+
+    .ambassador_program__image {
+      width: 100%;
+      max-width: 508px;
+      @include media-bp-down(lg) {
+        margin: auto;
+      }
+    }
+
+    .blue__gradient__button {
+      @include gradient-button;
+
+      &.join {
+        grid-area: button;
+        max-width: 230px;
+        @include media-bp-down(lg) {
+          align-self: center;
+          margin-bottom: 58px;
+        }
+      }
+
+      span {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  .ambassador_program__reasons {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin-top: 190px;
+
+    @include media-bp-down(lg) {
+      margin-top: 58px;
+      gap: 20px;
+    }
+
+    .ambassador_program__reasons__title {
+      text-align: center;
+      max-width: 832px;
+      font-weight: 700;
+      font-size: 80px;
+
+      @include media-bp-down(lg) {
+        font-size: 40px;
+      }
+    }
+
+    .ambassador_program__reasons__pillars {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 32px;
+      z-index: 10;
+
+      .ambassador_program__reasons__pillar {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        max-width: 400px;
+        gap: 18px;
+
+        @include media-bp-down(lg) {
+          max-width: 170px;
+        }
+
+        &:hover {
+          p {
+            opacity: unset;
+          }
+        }
+
+        &.commitment {
+          &:hover {
+            .ambassador_program__reasons__pillar__icon {
+              background: #004073;
+            }
+          }
+        }
+
+        &.education {
+          &:hover {
+            .ambassador_program__reasons__pillar__icon {
+              background: #006796;
+            }
+          }
+        }
+
+        &.rewards {
+          &:hover {
+            .ambassador_program__reasons__pillar__icon {
+              background: #008fad;
+            }
+          }
+        }
+
+        .ambassador_program__reasons__pillar__icon {
+          width: 155px;
+          height: 155px;
+          border-radius: 20px;
+          background: rgba(255, 255, 255, 0.06);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          @include media-bp-down(lg) {
+            width: 80px;
+            height: 80px;
+          }
+
+          svg {
+            @include media-bp-down(lg) {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+
+        h4 {
+          text-align: center;
+          font-family: Barlow;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 150%;
+
+          @include media-bp-down(lg) {
+            font-size: 18px;
+          }
+        }
+
+        p {
+          opacity: 0.6;
+          font-size: 20px;
+          font-weight: 400;
+
+          @include media-bp-down(lg) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .ambassadors__halo {
+      position: absolute;
+      width: 40%;
+      height: 12%;
+      right: -18%;
+      top: 22%;
+      background: #00b6b7;
+      transform: matrix(-0.76, -0.65, -0.15, 1.2, 0, 0);
+      mix-blend-mode: hard-light;
+      opacity: 0.7;
+      filter: blur(100px);
+
+      @include media-bp-down(lg) {
+        display: none;
+      }
+    }
+  }
+
+  .ambassador_program__roles {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    margin: 240px 0 120px;
+    text-align: center;
+
+    @include media-bp-down(lg) {
+      margin-top: 58px;
+      gap: 20px;
+    }
+
+    .ambassador_program__roles__title {
+      max-width: 832px;
+      font-weight: 700;
+      font-size: 80px;
+
+      @include media-bp-down(lg) {
+        font-size: 40px;
+      }
+    }
+
+    .ambassador_program__roles__description {
+      opacity: 0.8;
+      margin-bottom: 35px;
+    }
+
+    .ambassador_program__roles__cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+
+      @include media-bp-down(lg) {
+        justify-content: center;
+      }
+
+      .ambassador_program__role__card {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 184px;
+        border-radius: 20px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.12) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+
+        .ambassador_program__image_wrapper {
+          position: relative;
+
+          .ambassador_program__image {
+            width: 184px;
+            position: absolute;
+            bottom: -155px;
+            left: 0;
+            margin: 0 auto;
+          }
+        }
+
+        .ambassador_program__role__text {
+          padding: 0 8px;
+          margin-top: 155px;
+          gap: 12px;
+
+          .ambassador_program__role__title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 180%;
+          }
+          .ambassador_program__role__description {
+            font-size: 16px;
+            font-weight: 700;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+
+  .ambassador_program__start_joining {
+    display: flex;
+    position: relative;
+
+    @include media-bp-down(lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .ambassador_program__start_joining_text {
+      display: flex;
+      flex-direction: column;
+      max-width: 724px;
+      gap: 40px;
+
+      @include media-bp-down(lg) {
+        gap: 20px;
+      }
+
+      .ambassador_program__start_joining_title {
+        font-size: 80px;
+        font-weight: 700;
+        text-align: center;
+
+        @include media-bp-down(lg) {
+          font-size: 40px;
+        }
+      }
+
+      .ambassador_program__start_joining__description {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 150%;
+        opacity: 0.8;
+      }
+    }
+
+    .ambassador_program__start_joining_image {
+      min-width: 345px;
+      z-index: 10;
+      transition-duration: 1s;
+      transition-property: transform;
+
+      &:hover {
+        transform: rotate(180deg);
+      }
+
+      @include media-bp-down(lg) {
+        margin-top: 50px;
+      }
+    }
+
+    .blue__gradient__button {
+      @include gradient-button;
+
+      &.start_joining {
+        max-width: 230px;
+
+        @include media-bp-down(lg) {
+          align-self: center;
+          margin-bottom: 20px;
+        }
+
+        .ambassador_program__start_joining_button_content {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+
+    .ambassadors__hands__halo {
+      position: absolute;
+      width: 63%;
+      height: 43%;
+      right: -11%;
+      top: 27%;
+      background: #00b6b7;
+      transform: matrix(-0.76, 0.35, -0.15, 1.2, 0, 0);
+      mix-blend-mode: hard-light;
+      opacity: 0.7;
+      filter: blur(100px);
+
+      @include media-bp-down(lg) {
+        display: none;
+      }
+    }
+  }
+
+  .ambassador_program__application_description {
+    margin-top: 160px;
+
+    @include media-bp-down(lg) {
+      margin-top: 60px;
+    }
+
+    .ambassador_program__application_description_text {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 1048px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 150%;
+      opacity: 0.8;
+    }
+  }
+
+  .ambassador_program__application_steps_container {
+    display: flex;
+    margin-top: 66px;
+    gap: 33px;
+
+    @include media-bp-down(lg) {
+      flex-direction: column;
+    }
+
+    .ambassador_program__application_step {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      opacity: 0.8;
+
+      @include media-bp-down(lg) {
+        align-items: center;
+        gap: 23px;
+      }
+
+      .ambassador_program__application_step_icon {
+      }
+
+      .ambassador_program__application_step_number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 150%;
+        opacity: 0.8;
+        padding: 12px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .ambassador_program__application_step_text {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        @include media-bp-down(lg) {
+          text-align: center;
+        }
+
+        .ambassador_program__application_step_title {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 150%;
+        }
+        .ambassador_program__application_step_description {
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .ambassador_program__adventure_start {
+    display: flex;
+    flex-direction: column;
+    margin-top: 240px;
+    align-items: center;
+
+    @include media-bp-down(lg) {
+      margin-top: 60px;
+    }
+
+    .ambassador_program__adventure_start_container {
+      display: flex;
+      flex-direction: column;
+      max-width: 832px;
+      gap: 40px;
+
+      @include media-bp-down(lg) {
+        gap: 18px;
+      }
+
+      .ambassador_program__adventure_start_title {
+        text-align: center;
+        font-size: 80px;
+
+        @include media-bp-down(lg) {
+          font-size: 40px;
+        }
+      }
+
+      .ambassador_program__adventure_start_description {
+        text-align: center;
+        font-size: 20px;
+        line-height: 180%;
+        opacity: 0.8;
+
+        @include media-bp-down(lg) {
+          font-size: 18px;
+        }
+      }
+
+      .blue__gradient__button {
+        @include gradient-button;
+        align-self: center;
+
+        &.start {
+          max-width: 230px;
+          margin-bottom: 140px;
+
+          @include media-bp-down(lg) {
+            align-self: center;
+            margin-bottom: 58px;
+          }
+        }
+      }
+    }
+  }
+}
