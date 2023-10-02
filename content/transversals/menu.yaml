@@ -10,7 +10,7 @@ items:
       - name: Dataverse
         link: /learn/dataverse
       - name: Zone
-        link: /learn/dataspace
+        link: /learn/zone
       - name: $KNOW
         link: /learn/know
       - name: OKP4 Academy

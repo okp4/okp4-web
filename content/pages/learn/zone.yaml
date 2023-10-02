@@ -1,0 +1,50 @@
+# Content used for the learn/zone page
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Learn
+  - name: Zone
+zones:
+  main:
+    header: Rules within Zones
+    description: Zone is a powerful concept within the OKP4 protocol. It enables the fine-tuned customization of resource-sharing rules and consents.
+    alt: Book Zones rules - OKP4
+  conditions:
+    header: Your resources, your conditions
+    descriptions:
+      - "Share any digital resource within the OKP4 blockchain: datasets, algorithms, software, storage infrastructure and more! Define custom rules, from access control, business models, and identity management to metadata requirements for shared data & services."
+      - You developed a revolutionary news aggregation algorithm? Parameter the rules to express the compatible inputs, and the price to use it. Once set, get ready to generate value from the protocol consumptions. Did you build valuable financial market indicators, and want to grant access to a dynamic list of users? The OKP4 blockchain has your back.
+    alt: Gems Zones resources- OKP4
+  resources:
+    header: Identify compatible resources
+    descriptions:
+      - Categorize the sharing conditions through a Zone. A Zone is a conceptual framework defined by a set of rules, within which recognized digital resources are compatible with these rules, considering the associated consents. To each zone and shared resource is attached customizable rules concerning every facet of resource sharing. The OKP4 protocol ensures proper compliance with the rules and the execution.
+      - With a Zone you can gather resources linked to a commercial use licence and operable by DID authentication, for example.
+    alt: Zone compatible resources - OKP4
+  flexibility:
+    header: Enjoy flexibility
+    descriptions:
+      - The boundaries definition of a Zone is not fixed but <b>can be adapted as required</b>.
+      - That's possible because there is no materialized link that determines whether a resource belongs to a Zone, as Zones are designed to adapt to constantly changing rules and conditions. Indexing mechanisms come into play to evaluate, based on certain criteria and at regular intervals, the compatibility between resources and Zones.
+      - The Zone is similar to adaptive systems that adjust to environmental changes. The existence of rules defines the reality of the Zone, and it is through the evaluation of digital resources compatible with the Zone that the extent of the Zone's territory is defined. Assessing the compatibility of resources with the Zone's rules determines the scope and coverage of the Zone.
+      - Thus, for example, you can update the price threshold for a Zone to change resources scope from the execution cost.
+management:
+  header: Zones ease resource management
+  cards:
+    - header: Specify any kind of governance
+      description: Zones can sort all the different governance mechanisms to change the rules. Imagine one considers governance with a custom token, and another the control by consortiums.
+      alt: New Document Icon - OKP4
+    - header: Define common rules
+      description: OKP4 enables frictionless resource sharing in a personalized, sovereign, secure and predictable environment. Anyone can easily leverage no-code interfaces and Zone templates to apply common rules while also allowing customizable conditions in every aspect.
+      alt: New Document Setting Icon - OKP4
+    - header: Build applications based on shared resources
+      description: Once rules are defined and resources pooled, participants can easily initiate workflows using compatible services and datasets. The output itself may also populate the Zone scope. Imagine all the new possibilities of applications that can be created!
+decentralizedProtocol:
+  header: based on a decentralized protocol
+  descriptions:
+    - OKP4 is a decentralized and open-source protocol based on a public blockchain.
+    - Zones are defined within on-chain smart contracts, enabling the interaction of any off-chain resource.
+  button:
+    description: About OKP4
+    link: /learn/okp4
+  alt: Main Illustration Zone - OKP4

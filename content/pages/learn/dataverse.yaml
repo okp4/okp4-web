@@ -71,7 +71,7 @@ ibc:
     - title: Zone governance from any existing token
       internalLink:
         name: Discover Zone
-        link: /learn/dataspace
+        link: /learn/zone
 architecture:
   title: An elegant architecture, for an abundant ecosystem
   description: |
