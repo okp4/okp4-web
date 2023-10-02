@@ -48,7 +48,7 @@ ambassadorProgram:
       image: bard.webp
       alt: Bard
     - title: Awenyddlon
-      description: <b>Regional</b> ambassadors.<b>Build and manage local communities</b> considering cultural and regional nuances.
+      description: <b>Regional</b> ambassadors.<br /><p><b>Build and manage local communities</b> considering cultural and regional nuances.</p>
       image: awenyddlon.webp
       alt: Awenyddlon
     - title: Vate
@@ -56,7 +56,7 @@ ambassadorProgram:
       image: vate.webp
       alt: Vate
     - title: Mog Ruith
-      description: <b>Business</b> ambassadors. Generate <b>revenue, investments or partnerships.</b> Referrals to <b>devs</b> who joined the <b>Builders Program</b> or joined the <b>OKP4 technical team.</b>
+      description: <b>Business</b> ambassadors.<p>Generate <b>revenue, investments or partnerships.</b></p> <p>Referrals to <b>devs</b> who joined the <b>Builders Program</b> or joined the <b>OKP4 technical team.</b></p>
       image: mog_ruith.webp
       alt: Mog Ruith
 startToJoin:
