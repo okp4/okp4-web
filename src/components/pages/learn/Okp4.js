@@ -58,11 +58,8 @@ const Okp4 = ({ files }) => (
                   <span>{content.dataSharingPart.text[1]}</span>{" "}
                   <span className="okp4__link-to-button">
                     {content.dataSharingPart.text[2]}
-                    <Link
-                      className="okp4__button-overlay"
-                      to="/learn/dataspace/"
-                    >
-                      {content.discoverDataSpace}
+                    <Link className="okp4__button-overlay" to="/learn/zone/">
+                      {content.discoverZone}
                     </Link>
                   </span>{" "}
                   <span>{content.dataSharingPart.text[3]}</span>
@@ -133,8 +130,8 @@ const Okp4 = ({ files }) => (
                 <span>{content.cosmosPart.description[3]}</span>{" "}
                 <span className="okp4__link-to-button">
                   {content.cosmosPart.description[4]}
-                  <Link className="okp4__button-overlay" to="/learn/dataspace/">
-                    {content.discoverDataSpace}
+                  <Link className="okp4__button-overlay" to="/learn/zone/">
+                    {content.discoverZone}
                   </Link>
                 </span>{" "}
                 <span>{content.cosmosPart.description[5]}</span>
@@ -152,10 +149,10 @@ const Okp4 = ({ files }) => (
               />
             </div>
           </div>
-          <Link className="okp4__button" to="/learn/dataspace/">
+          <Link className="okp4__button" to="/learn/zone/">
             <span
               dangerouslySetInnerHTML={{
-                __html: content.discoverDataSpace,
+                __html: content.discoverZone,
               }}
             />
           </Link>

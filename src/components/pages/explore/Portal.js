@@ -8,7 +8,7 @@ import IconLabeller from "/src/assets/images/icons/labeller.inline.svg";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import Lottie from "lottie-react";
-import monitorAnimationData from "/src/assets/lottie-animations/monitor-dataspace";
+import monitorAnimationData from "/src/assets/lottie-animations/monitor-zone";
 import { useBreakpoint } from "../../../hook/useBreakpoint";
 
 const Portal = () => {
@@ -113,7 +113,7 @@ const Portal = () => {
           <p>
             Anyone can access the portal – connect a wallet to share data &
             services, create{" "}
-            <Link className="portal__inline__link" to="/learn/dataspace">
+            <Link className="portal__inline__link" to="/learn/zone">
               Zones
             </Link>
             , access resources, or initiate workflows!
