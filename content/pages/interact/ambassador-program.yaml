@@ -92,3 +92,6 @@ adventureStart:
   title: Ready to be part of the adventure?
   description: The future of decentralized technology is in your hands. Join us on this exciting adventure and help shape the future with OKP4.
   button: Become an Ambassador
+termsAndConditions:
+  label: Ambassador Program Terms & Conditions
+  link: /ambassador-program-conditions
