@@ -21,7 +21,7 @@ const Introduction = ({ files }) => {
               __html: content.description[0],
             }}
           />
-          <Link to="/learn/dataspace/">
+          <Link to="/learn/zone/">
             <span
               dangerouslySetInnerHTML={{
                 __html: content.description[1],
