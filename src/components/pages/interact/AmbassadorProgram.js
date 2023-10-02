@@ -196,7 +196,7 @@ const AmbassadorProgram = ({ files }) => {
                     label
                   )}
                 >
-                  <div className="ambassador_program__image_wrapper">
+                  <div className="ambassador_program__image_container">
                     <GatsbyImage
                       className="ambassador_program__image"
                       image={MediaManager.GetImage(image, files)}

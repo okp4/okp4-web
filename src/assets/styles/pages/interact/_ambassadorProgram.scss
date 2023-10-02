@@ -136,10 +136,11 @@ main.wrapper {
 
       &.join {
         grid-area: button;
-        max-width: 230px;
+        width: fit-content;
         @include media-bp-down(lg) {
           align-self: center;
           margin-bottom: 58px;
+          width: 100%;
         }
       }
 
@@ -295,7 +296,7 @@ main.wrapper {
     flex-wrap: wrap;
     align-items: center;
     gap: 40px;
-    margin: 240px 0 120px;
+    margin: 240px 0 100px;
     text-align: center;
 
     @include media-bp-down(lg) {
@@ -315,7 +316,6 @@ main.wrapper {
 
     .ambassador_program__roles__description {
       opacity: 0.8;
-      margin-bottom: 35px;
     }
 
     .ambassador_program__roles__cards {
@@ -329,9 +329,11 @@ main.wrapper {
       }
 
       .ambassador_program__role__card {
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: 12px;
+        margin-top: 50px;
         width: 184px;
         border-radius: 20px;
         background: linear-gradient(
@@ -340,28 +342,42 @@ main.wrapper {
           rgba(255, 255, 255, 0) 100%
         );
 
-        .ambassador_program__image_wrapper {
-          position: relative;
+        @include media-bp-down(lg) {
+          width: 165px;
+        }
+
+        &:hover {
+          outline: solid 1px white;
+        }
+
+        .ambassador_program__image_container {
+          position: absolute;
+          overflow-x: clip;
+          top: -42px;
 
           .ambassador_program__image {
-            width: 184px;
-            position: absolute;
-            bottom: -155px;
+            transform-origin: 50% 100%;
+            bottom: 0;
             left: 0;
             margin: 0 auto;
+            transition: transform 400ms;
+
+            &:hover {
+              transform: scale(1.1);
+            }
           }
         }
 
         .ambassador_program__role__text {
           padding: 0 8px;
-          margin-top: 155px;
-          gap: 12px;
+          margin-top: 168px;
 
           .ambassador_program__role__title {
             text-align: center;
             font-size: 20px;
             font-weight: 700;
             line-height: 180%;
+            margin-bottom: 12px;
           }
           .ambassador_program__role__description {
             font-size: 16px;
@@ -395,19 +411,22 @@ main.wrapper {
       .ambassador_program__start_joining_title {
         font-size: 80px;
         font-weight: 700;
-        text-align: center;
 
         @include media-bp-down(lg) {
           font-size: 40px;
+          text-align: center;
         }
       }
 
       .ambassador_program__start_joining__description {
-        text-align: center;
         font-size: 20px;
         font-weight: 400;
         line-height: 150%;
         opacity: 0.8;
+
+        @include media-bp-down(lg) {
+          text-align: center;
+        }
       }
     }
 
@@ -430,15 +449,16 @@ main.wrapper {
       @include gradient-button;
 
       &.start_joining {
-        max-width: 230px;
-
+        width: fit-content;
         @include media-bp-down(lg) {
           align-self: center;
           margin-bottom: 20px;
+          width: 100%;
         }
 
         .ambassador_program__start_joining_button_content {
           display: flex;
+          justify-content: center;
           align-items: center;
           gap: 10px;
         }
@@ -501,9 +521,6 @@ main.wrapper {
       @include media-bp-down(lg) {
         align-items: center;
         gap: 23px;
-      }
-
-      .ambassador_program__application_step_icon {
       }
 
       .ambassador_program__application_step_number {
@@ -589,12 +606,13 @@ main.wrapper {
         align-self: center;
 
         &.start {
-          max-width: 230px;
           margin-bottom: 140px;
+          width: fit-content;
 
           @include media-bp-down(lg) {
             align-self: center;
             margin-bottom: 58px;
+            width: 100%;
           }
         }
       }
