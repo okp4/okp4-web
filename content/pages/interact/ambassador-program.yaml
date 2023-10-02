@@ -1,0 +1,94 @@
+breadcrumbs:
+  - name: Home
+    link: /
+  - name: Interact
+  - name: Ambassador Program
+joinUs:
+  subject: OKP4 Ambassador Program
+  title: Join us!
+  description:
+    paragraph1: |
+      <p>
+        The OKP4 Ambassador Program is not just an initiative; it's a commitment to how we think about decentralization and community growth. It's an opportunity for you to become a key player in the OKP4 ecosystem.
+      </p>
+    paragraph2: |
+      <p>
+        Are you ready to become the ambassador the OKP4 protocol is waiting for? Get involved now!
+      </p>
+  image: ambassador_druid.webp
+  alt: Druid - OKP4
+  button: Become an Ambassador
+  link: https://okp4.typeform.com/OKP4Ambassadors
+reasons:
+  title: Why become an OKP4 ambassador?
+  blocks:
+    - title: Commitment
+      text: Immerse yourself in the heart of the OKP4 ecosystem and actively contribute to its growth.
+      label: commitment
+    - title: Education
+      text: Become an OKP4 protocol expert and share your knowledge with the world.
+      label: education
+    - title: Rewards
+      text: Your passion and commitment will be rewarded with $KNOW airdrops and other exclusive benefits.
+      label: rewards
+ambassadorProgram:
+  title: Ambassador Program
+  description: Each ambassador plays an essential role in the growth of OKP4. Depending on your level, you'll have access to training, resources, and direct support from the OKP4 team. Your efforts will be monitored and rewarded according to your commitment.
+  cards:
+    - title: Marcassin
+      description: <b>Anyone</b> interested in the <b>protocol by learning</b> about it and sometimes involved on social networks.
+      image: marcassin.webp
+      alt: Marcassin
+    - title: Disciple
+      description: OKP4 <b>supporters</b> who demonstrate regularity in <b>promotion, relaying and creating communication posts.</b>
+      image: disciple.webp
+      alt: Disciple
+    - title: Bard
+      description: <b>Educational</b> ambassadors who <b>create content</b> such as blogs, videos, podcasts, and live sessions.
+      image: bard.webp
+      alt: Bard
+    - title: Awenyddlon
+      description: <b>Regional</b> ambassadors.<b>Build and manage local communities</b> considering cultural and regional nuances.
+      image: awenyddlon.webp
+      alt: Awenyddlon
+    - title: Vate
+      description: <b>Media</b> ambassadors who provide <b>outlet coverage</b> and/or <b>engage with influencers</b> to spread <b>awareness.</b>
+      image: vate.webp
+      alt: Vate
+    - title: Mog Ruith
+      description: <b>Business</b> ambassadors. Generate <b>revenue, investments or partnerships.</b> Referrals to <b>devs</b> who joined the <b>Builders Program</b> or joined the <b>OKP4 technical team.</b>
+      image: mog_ruith.webp
+      alt: Mog Ruith
+startToJoin:
+  title: How can I join the OKP4 Ambassador Program?
+  zealyDescription: "To get our community involved in the OKP4 project, we've created a Zealy! It's the first step to becoming an OKP4 Ambassador: open and accessible to all! On the Zealy, you'll find simple quests that can be completed once, weekly or daily. Complete as many tasks as possible to earn points and reach the top of the leaderboard, where you'll be rewarded with $KNOW Token!"
+  button: Start Now
+  link: https://zealy.io/c/okp4
+  image: hands_illustration_with_logo.webp
+  alt: Start now
+applicationSteps:
+  description:
+    paragraph1: For our more active and motivated community members, you can apply to become a Bard / Awenyddion / Vate or Mog Ruith Ambassador. This role requires application and validation by the OKP4 team. We'll provide you with a dedicated mentor from the OKP4 team who will guide you specifically through unique tasks customized just for you.
+    paragraph2: If you're interested in getting more actively involved in OKP4's Ambassador Program, then simply follow the steps below to understand the process.
+
+  steps:
+    - number: step 1
+      title: Complete the application
+      description: This is your chance to <b>tell us about</b> yourself, your skills, your passion for decentralized technology and how you <b>plan to contribute</b> as an OKP4 ambassador. Be sure to provide <b>accurate and detailed information</b> to increase your chances of being selected.
+      alt: Complete the application
+    - number: step 2
+      title: Application Review
+      description: Once your application has been submitted, our dedicated team will review every detail to ensure that it <b>matches our criteria and requirements.</b> This may take some time, as we want to make sure we select the <b>most passionate and qualified candidates.</b> You will be informed of the status of your application as soon as possible.
+      alt: Application Review
+    - number: step 3
+      title: Join the OKP4 Academy
+      description: Congratulations on passing the review stage! You are now invited to join the <b>OKP4 Academy.</b> This is a time of learning where <b>you'll be trained</b> in the workings of the OKP4 protocol, its technology and its vision. You'll also <b>have access to exclusive resources</b> and training to prepare you to become an effective ambassador.
+      alt: Join the OKP4 Academy
+    - number: step 4
+      title: Become an OKP4 Ambassador
+      description: After completing your training at the OKP4 Academy, you can <b>become an OKP4 Ambassador!</b> You'll be the face of OKP4 in your community, helping to raise awareness, educate and develop our ecosystem through Dework. You'll also have the <b>opportunity to take part</b> in exclusive events, webinars and much more.
+      alt: Become an OKP4 Ambassador
+adventureStart:
+  title: Ready to be part of the adventure?
+  description: The future of decentralized technology is in your hands. Join us on this exciting adventure and help shape the future with OKP4.
+  button: Become an Ambassador
