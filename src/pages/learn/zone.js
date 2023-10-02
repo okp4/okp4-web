@@ -1,15 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
-import content from "/content/pages/learn/dataSpace.yaml";
-import DataSpace from "../../components/pages/learn/DataSpace";
+import content from "/content/pages/learn/zone.yaml";
+import Zone from "../../components/pages/learn/Zone";
 import Seo from "../../components/SEO";
 import seoContent from "/content/transversals/seo.yaml";
 
-export default function LearnDataSpace({ data }) {
+export default function LearnZone({ data }) {
   return (
     <Layout
-      location={"dataspace"}
+      location={"zone"}
       files={data}
       breadcrumbs={content.breadcrumbs}
       isStatic
@@ -17,7 +17,7 @@ export default function LearnDataSpace({ data }) {
       withPartners={false}
       withAssociates={false}
     >
-      <DataSpace />
+      <Zone />
     </Layout>
   );
 }
@@ -39,4 +39,4 @@ export const pageQuery = graphql`
   }
 `;
 
-export const Head = () => <Seo content={seoContent.dataSpace} />;
+export const Head = () => <Seo content={seoContent.zone} />;
