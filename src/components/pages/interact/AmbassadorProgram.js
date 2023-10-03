@@ -299,6 +299,9 @@ const AmbassadorProgram = ({ files }) => {
               >
                 <span>{content.adventureStart.button}</span>
               </a>
+              <a href={content.termsAndConditions.link} className="terms">
+                <span>{content.termsAndConditions.label}</span>
+              </a>
             </div>
           </div>
         </div>

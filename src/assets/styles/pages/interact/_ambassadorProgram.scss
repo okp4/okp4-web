@@ -383,6 +383,12 @@ main.wrapper {
             font-size: 16px;
             font-weight: 700;
             opacity: 0.6;
+
+            span {
+              p {
+                margin-top: 10px;
+              }
+            }
           }
         }
       }
@@ -606,14 +612,21 @@ main.wrapper {
         align-self: center;
 
         &.start {
-          margin-bottom: 140px;
           width: fit-content;
 
           @include media-bp-down(lg) {
             align-self: center;
-            margin-bottom: 58px;
             width: 100%;
           }
+        }
+      }
+
+      .terms {
+        align-self: center;
+        margin-bottom: 140px;
+
+        @include media-bp-down(lg) {
+          margin-bottom: 58px;
         }
       }
     }
