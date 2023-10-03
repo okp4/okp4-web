@@ -7,7 +7,7 @@ items:
       <p>The Ambassador Program is open for new participants to contribute to the project or develop open-source software that can integrate with the existing OKP4 tech stack, or leverage the OKP4 tech stack to create projects and applications that may be used or improved when mainnet launches.<p>
   - title: 1. Agreement on the conditions
     text: |
-      <p>By accessing or using OKP4 Services, or by participating in OKP4 Blockchain network (“Network”), you agree to these Terms and Conditions as well as Privacy Policy and any other agreements or terms set forth by OKP4 Association. These Terms constitute a binding obligation between you and OKP4 Association. If you do not agree to these Terms, do not use these Services; if you do use these Services, you accept this Agreement. If you have any questions about these Terms, please contact us at <u>hello@okp4.com</u>.</p>
+      <p>By accessing or using OKP4 Services, or by participating in OKP4 Blockchain network (“Network”), you agree to these Terms and Conditions as well as Privacy Policy and any other agreements or terms set forth by OKP4 Association. These Terms constitute a binding obligation between you and OKP4 Association. If you do not agree to these Terms, do not use these Services; if you do use these Services, you accept this Agreement. If you have any questions about these Terms, please contact us at <u><a href='mailto:hello@okp4.com'>hello@okp4.com</a></u>.</p>
   - title: 2. Privacy Policy
     text: |
       <p>Please refer to our Privacy Policy for more details on what information OKP4 Association may collect, use, or disclose and under what circumstances. You acknowledge and agree that your participation in the Ambassador Program is subject to this Privacy Policy.</p>
@@ -120,4 +120,4 @@ items:
       <br />
       <p>Waiver of Rights. OKP4 Association's failure to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision. A waiver of any such right or provision will be effective only if in writing and signed by a duly authorized representative of OKP4 Association. Except as expressly provided in these Terms, the exercise by either party of any of its remedies under these Terms shall be without prejudice to its other remedies under these Terms or otherwise.</p>
       <br />
-      <p>Contact Information. If you have any questions regarding these Terms, the Ambassador Program or Nemeton, please contact <u>hello@okp4.com</u> or join us on our <u><a href='https://discord.gg/okp4'>OKP4 Discord server</a></u>.</p>
+      <p>Contact Information. If you have any questions regarding these Terms, the Ambassador Program or Nemeton, please contact <u><a href='mailto:hello@okp4.com'>hello@okp4.com</a></u> or join us on our <u><a href='https://discord.gg/okp4'>OKP4 Discord server</a></u>.</p>
