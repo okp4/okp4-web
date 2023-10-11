@@ -23,7 +23,7 @@ jobs:
         with:
           repository: okp4/okp4-web
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           ref: ${{ steps.get_latest_tag.outputs.tag }}
 
