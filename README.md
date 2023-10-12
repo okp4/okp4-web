@@ -36,7 +36,7 @@ Please check out OKP4 health files :
 
 ## License ⚖️
 
-All the code in this repository is licensed under the [![bsd-3-clause][bsd-3-clause-image]][cc-by-sa] [license](LICENSE).
+All the code in this repository is licensed under the [![bsd-3-clause][bsd-3-clause-image]][bsd-3-clause] [license](LICENSE).
 
 The assets (markdown documentation, images, etc.) are licensed under the [![cc-by-sa-4.0][cc-by-sa-image]][cc-by-sa] [license](LICENSE-ASSETS).
 
