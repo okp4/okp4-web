@@ -5257,10 +5257,10 @@ gatsby-plugin-matomo@^0.14.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-matomo/-/gatsby-plugin-matomo-0.14.0.tgz#d8adf0fa336b2c2489a2a69ab7719b0c52864877"
   integrity sha512-zRC+hfqYv5DUXsAnfuEV3x2SkyP/ou/jy9TDxRA3NnxarpBpM+i3h6Rcc4nMmsPq+lEJiQqhBSapw4MTjwqS2A==
 
-gatsby-plugin-no-sourcemaps@^5.7.0:
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-5.8.0.tgz#d55b76c2012acc297abccc254d5550c5575fd339"
-  integrity sha512-onCtCwABM5czbV4vXafY52imz2fcrnJ71q9flr5inYKOM9t+V7ECfyj4Jmw5Gv55cGL+QPj22G3zQinrsdYDCA==
+gatsby-plugin-no-sourcemaps@^5.12.0:
+  version "5.12.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-no-sourcemaps/-/gatsby-plugin-no-sourcemaps-5.12.0.tgz#d970874ed62e853a8fe5bb78350d508aa313a669"
+  integrity sha512-DoC+QGSpD5NUR9ACykmpwcSMwTUXKs1YWNWN/13IpAn1vxO2QJq8HAn8fMulKwO/SOa2okFtWOvXzzaJzBwwGA==
   dependencies:
     "@babel/runtime" "^7.20.13"
 

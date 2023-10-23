@@ -46,7 +46,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "devDependencies": {
-    "gatsby-plugin-no-sourcemaps": "^5.7.0",
+    "gatsby-plugin-no-sourcemaps": "^5.12.0",
     "stylelint": "^14.16.0",
     "stylelint-config-property-sort-order-smacss": "^9.0.0",
     "stylelint-config-standard-scss": "^6.1.0",
