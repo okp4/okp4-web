@@ -5284,10 +5284,10 @@ gatsby-plugin-manifest@^5.12.2:
     semver "^7.5.3"
     sharp "^0.32.6"
 
-gatsby-plugin-matomo@^0.14.0:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-matomo/-/gatsby-plugin-matomo-0.14.0.tgz#d8adf0fa336b2c2489a2a69ab7719b0c52864877"
-  integrity sha512-zRC+hfqYv5DUXsAnfuEV3x2SkyP/ou/jy9TDxRA3NnxarpBpM+i3h6Rcc4nMmsPq+lEJiQqhBSapw4MTjwqS2A==
+gatsby-plugin-matomo@^0.16.2:
+  version "0.16.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-matomo/-/gatsby-plugin-matomo-0.16.2.tgz#d2abaabeb41022077953c8af0f92b229dc747e61"
+  integrity sha512-/MMTlhMdzGaNkTQ5j4iCJ2DkTtbHmMRRTYxhZg7XVhOvJmKVUoKjue/sb5M7414V35ZewNz2/mqx+Cj/sKaMZw==
 
 gatsby-plugin-no-sourcemaps@^5.12.0:
   version "5.12.0"
