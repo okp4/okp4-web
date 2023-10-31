@@ -15,7 +15,6 @@ export default function InteractDevelopers({ data }) {
       isStatic
       withDocs={false}
       withPartners={false}
-      withAssociates={false}
     >
       <Developers />
     </Layout>

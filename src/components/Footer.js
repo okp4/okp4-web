@@ -13,7 +13,6 @@ import IconDiscord from "../assets/images/socials/discord.inline.svg";
 import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import Docs from "./Docs.js";
 import Partners from "./Partners";
-import Associates from "./Associates";
 import BoardTeam from "./BoardTeam.js";
 import Newsletter from "./Newsletter.js";
 import contentSocials from "/content/transversals/socials.yaml";
@@ -22,8 +21,7 @@ import contentFooter from "/content/transversals/footer.yaml";
 const Footer = ({
   files,
   withDocs = true,
-  withAssociates = true,
-  withBoardTeam = false,
+  withBoardTeam = true,
   withPartners = true,
 }) => {
   const divScrollTop = useRef(null);
@@ -75,7 +73,6 @@ const Footer = ({
       <footer className="footer">
         <div className="footer__sticky">
           {withDocs && <Docs />}
-          {withAssociates && <Associates files={files} />}
           {withBoardTeam && <BoardTeam files={files} />}
           {withPartners && <Partners />}
         </div>
@@ -113,15 +110,6 @@ const Footer = ({
                   rel="noreferrer"
                 >
                   <span>{contentSocials.faq.label}</span>
-                  <IconArrowtr />
-                </a>
-                <a
-                  href={contentSocials.pollen.url}
-                  className="footer__main__top__links__item"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{contentSocials.pollen.label}</span>
                   <IconArrowtr />
                 </a>
                 <a

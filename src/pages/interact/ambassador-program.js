@@ -17,7 +17,6 @@ export default function Ambassador({ data }) {
       isStatic
       withDocs={false}
       withPartners={false}
-      withAssociates={false}
     >
       <AmbassadorProgram files={data} />
     </Layout>

@@ -22,7 +22,6 @@ export default function AmbassadorProgramConditions({ data }) {
         files={data}
         withDocs={false}
         withPartners={false}
-        withAssociates={false}
       />
     </>
   );

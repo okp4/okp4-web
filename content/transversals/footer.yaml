@@ -140,9 +140,18 @@ team:
       lastname: Pelliet
       job: Head of Ecosystem
       alt: Board Team Théo Pelliet - OKP4
-  button:
-    name: See All Collaborators
-    link: https://pollen-by-okp4.com/en/about-us/
+    - name: Arnaud
+      lastname: Mimart
+      job: Cloud Architect
+      alt: Board Team Arnaud Mimart - OKP4
+    - name: Julien
+      lastname: Massonnat
+      job: Chief Marketing Officer
+      alt: Board Julien Massonnat - OKP4
+    - name: Mathieu
+      lastname: Conte
+      job: Blockchain Project Manager
+      alt: Board Mathieu Conte - OKP4
 sitemap:
   url: https://okp4.network/
   text: Sitemap

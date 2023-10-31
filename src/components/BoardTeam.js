@@ -55,6 +55,42 @@ const BoardTeam = () => {
           />
         ),
       },
+      {
+        name: contentFooter.team.people[4].name,
+        lastname: contentFooter.team.people[4].lastname,
+        job: contentFooter.team.people[4].job,
+        image: (
+          <StaticImage
+            className="person__image"
+            src="../../content/images/people/team/arnaud.webp"
+            alt={contentFooter.team.people[4].alt}
+          />
+        ),
+      },
+      {
+        name: contentFooter.team.people[5].name,
+        lastname: contentFooter.team.people[5].lastname,
+        job: contentFooter.team.people[5].job,
+        image: (
+          <StaticImage
+            className="person__image"
+            src="../../content/images/people/team/julien.webp"
+            alt={contentFooter.team.people[5].alt}
+          />
+        ),
+      },
+      {
+        name: contentFooter.team.people[6].name,
+        lastname: contentFooter.team.people[6].lastname,
+        job: contentFooter.team.people[6].job,
+        image: (
+          <StaticImage
+            className="person__image"
+            src="../../content/images/people/team/mathieu.webp"
+            alt={contentFooter.team.people[6].alt}
+          />
+        ),
+      },
     ],
     []
   );
@@ -83,14 +119,6 @@ const BoardTeam = () => {
             </div>
           ))}
         </div>
-        <a
-          href={contentFooter.team.button.link}
-          className="blue__gradient__button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>{contentFooter.team.button.name}</span>
-        </a>
       </div>
     </section>
   );

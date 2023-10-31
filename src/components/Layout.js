@@ -12,7 +12,6 @@ const Layout = ({
   breadcrumbs,
   isStatic = false,
   withDocs = true,
-  withAssociates = true,
   withBoardTeam = false,
   withPartners = true,
 }) => {
@@ -22,10 +21,10 @@ const Layout = ({
       <Halo />
       <Header isPositionFixed={isStatic} breadcrumbs={breadcrumbs} />
       <main className={location}>{children}</main>
+      {location === "homepage" ? (withBoardTeam = true) : ""}
       <Footer
         files={files}
         withDocs={withDocs}
-        withAssociates={withAssociates}
         withBoardTeam={withBoardTeam}
         withPartners={withPartners}
       />

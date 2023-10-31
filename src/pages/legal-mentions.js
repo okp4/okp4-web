@@ -22,7 +22,6 @@ export default function LegalMentions({ data }) {
         files={data}
         withDocs={false}
         withPartners={false}
-        withAssociates={false}
       />
     </>
   );

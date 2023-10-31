@@ -14,7 +14,6 @@ export default function DevelopValidator({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={false}
-      withAssociates={false}
       withPartners={false}
     >
       <Validator files={data} />

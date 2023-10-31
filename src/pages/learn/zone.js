@@ -15,7 +15,6 @@ export default function LearnZone({ data }) {
       isStatic
       withDocs
       withPartners={false}
-      withAssociates={false}
     >
       <Zone />
     </Layout>

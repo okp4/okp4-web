@@ -15,7 +15,6 @@ export default function ExploreDataverseGateways({ data }) {
       isStatic
       withDocs={false}
       withPartners={false}
-      withAssociates={false}
     >
       <DataverseGateways files={data} />
     </Layout>

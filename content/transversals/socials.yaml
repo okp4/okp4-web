@@ -17,9 +17,6 @@ discord:
 telegram:
   url: https://t.me/okp4network
   label: Telegram
-pollen:
-  url: https://pollen-by-okp4.com/en/
-  label: Pollen
 whitepaper:
   url: https://docs.okp4.network/docs/whitepaper/abstract
   label: Whitepaper

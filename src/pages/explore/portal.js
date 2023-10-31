@@ -15,7 +15,6 @@ export default function ExplorePortal({ data }) {
       isStatic
       withDocs={false}
       withPartners={false}
-      withAssociates={false}
     >
       <Portal />
     </Layout>
