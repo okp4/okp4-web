@@ -16,7 +16,6 @@ export default function Ambassador({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={false}
-      withPartners={false}
     >
       <AmbassadorProgram files={data} />
     </Layout>

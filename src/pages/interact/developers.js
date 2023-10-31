@@ -14,7 +14,6 @@ export default function InteractDevelopers({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={false}
-      withPartners={false}
     >
       <Developers />
     </Layout>

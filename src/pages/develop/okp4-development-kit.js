@@ -14,7 +14,6 @@ export default function DevelopDevelopmentKit({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={false}
-      withPartners={false}
     >
       <DevelopmentKit />
     </Layout>

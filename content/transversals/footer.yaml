@@ -97,30 +97,6 @@ associates:
         url: https://saxon.xyz/
         image: logo-saxon.webp
         alt: Logo Saxon - OKP4
-
-  advisors:
-    title: Our Advisors
-    people:
-      - name: Peter
-        lastname: Van Mourik
-        job: CEO, ChainLayer
-        alt: Advisor Peter Van Mourik - OKP4
-      - name: Benjamin
-        lastname: Santi
-        job: CEO, Web3 Studio
-        alt: Advisor Benjamin Santi - OKP4
-      - name: Jasvin
-        lastname: Bhasin
-        job: Founder & CEO, bridge.the.NEXT( )
-        alt: Advisor Jasvin Bhasin - OKP4
-      - name: Sébastien
-        lastname: Couture
-        job: Founder, Epicenter
-        alt: Advisor Sebastien Couture - OKP4
-  partners:
-    - Region Occitanie Support - OKP4
-    - BPI France Support - OKP4
-    - Region Bretagne Support - OKP4
 team:
   title: Our Board Team
   people:
@@ -142,7 +118,7 @@ team:
       alt: Board Team Théo Pelliet - OKP4
     - name: Arnaud
       lastname: Mimart
-      job: Cloud Architect
+      job: Blockchain Architect
       alt: Board Team Arnaud Mimart - OKP4
     - name: Julien
       lastname: Massonnat

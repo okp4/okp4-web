@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import contentFooter from "/content/transversals/footer.yaml";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
 
 const BoardTeam = () => {
   const team = useMemo(
@@ -98,7 +97,7 @@ const BoardTeam = () => {
   return (
     <section className="people">
       <div className="people__wrapper">
-        <p className="people__title">{contentFooter.team.title}</p>
+        <h3 className="people__title">{contentFooter.team.title}</h3>
         <div className="people__infos__wrapper board__team">
           {team.map(({ name, lastname, job, image }) => (
             <div className="person__infos__container" key={name + lastname}>

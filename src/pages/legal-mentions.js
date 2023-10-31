@@ -18,11 +18,7 @@ export default function LegalMentions({ data }) {
       <main className="legalMentions">
         <LegalMentionsAndCookiePolicy />
       </main>
-      <Footer
-        files={data}
-        withDocs={false}
-        withPartners={false}
-      />
+      <Footer files={data} withDocs={false} />
     </>
   );
 }

@@ -14,7 +14,6 @@ export default function ContactPage({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={false}
-      withPartners={false}
     >
       <Contact />
     </Layout>

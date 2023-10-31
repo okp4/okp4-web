@@ -15,7 +15,6 @@ export default function Community({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={false}
-      withPartners={false}
     >
       <JoinUs files={data} />
       <LatestNews posts={data.mediumPosts.edges} />
