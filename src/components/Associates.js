@@ -291,95 +291,17 @@ const Associates = () => {
     []
   );
 
-  const advisors = useMemo(
-    () => [
-      {
-        name: contentFooter.associates.advisors.people[0].name,
-        lastname: contentFooter.associates.advisors.people[0].lastname,
-        job: contentFooter.associates.advisors.people[0].job,
-        image: (
-          <StaticImage
-            className="person__image"
-            src="../../content/images/people/advisors/advisor-peter-van-mourik.webp"
-            alt={contentFooter.associates.advisors.people[0].alt}
-          />
-        ),
-      },
-      {
-        name: contentFooter.associates.advisors.people[1].name,
-        lastname: contentFooter.associates.advisors.people[1].lastname,
-        job: contentFooter.associates.advisors.people[1].job,
-        image: (
-          <StaticImage
-            className="person__image"
-            src="../../content/images/people/advisors/advisor-benjamin-santi.webp"
-            alt={contentFooter.associates.advisors.people[1].alt}
-          />
-        ),
-      },
-
-      {
-        name: contentFooter.associates.advisors.people[2].name,
-        lastname: contentFooter.associates.advisors.people[2].lastname,
-        job: contentFooter.associates.advisors.people[2].job,
-        image: (
-          <StaticImage
-            className="person__image"
-            src="../../content/images/people/advisors/advisor-jasvin-bhasin.webp"
-            alt={contentFooter.associates.advisors.people[2].alt}
-          />
-        ),
-      },
-      {
-        name: contentFooter.associates.advisors.people[3].name,
-        lastname: contentFooter.associates.advisors.people[3].lastname,
-        job: contentFooter.associates.advisors.people[3].job,
-        image: (
-          <StaticImage
-            className="person__image"
-            src="../../content/images/people/advisors/advisor-sebastien-couture.webp"
-            alt={contentFooter.associates.advisors.people[3].alt}
-          />
-        ),
-      },
-    ],
-    []
-  );
-
   return (
     <section className="people">
       <div className="people__wrapper">
-        <p className="people__title">
+        <h3 className="people__title">
           {contentFooter.associates.companies.title}
-        </p>
+        </h3>
         <div className="logos__wrapper">
           {logos.map(({ label, url, logo }) => (
             <a href={url} key={label} target="_blank" rel="noreferrer">
               <span>{logo}</span>
             </a>
-          ))}
-        </div>
-
-        <p className="people__title">
-          {contentFooter.associates.advisors.title}
-        </p>
-        <div className="people__infos__wrapper ">
-          {advisors.map(({ name, lastname, job, image }) => (
-            <div className="person__infos__container" key={name + lastname}>
-              <div className="person__infos__card" key={name + lastname}>
-                <StaticImage
-                  className="person__card__background"
-                  src="../../content/images/people/card_background.webp"
-                  alt=""
-                />
-                <span>{image}</span>
-              </div>
-              <div className="person__fullname">
-                <p>{name}</p>
-                <p className="person__lastname">{lastname}</p>
-              </div>
-              <p className="person__position"> {job} </p>
-            </div>
           ))}
         </div>
       </div>

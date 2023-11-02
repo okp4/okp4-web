@@ -14,9 +14,8 @@ export default function LearnOkp4({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={false}
+      withBoardTeam={false}
       withAssociates={false}
-      withBoardTeam={true}
-      withPartners={false}
     >
       <Okp4 files={data} />
     </Layout>

@@ -14,8 +14,6 @@ export default function LearnZone({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs
-      withPartners={false}
-      withAssociates={false}
     >
       <Zone />
     </Layout>

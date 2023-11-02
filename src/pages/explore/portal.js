@@ -14,8 +14,6 @@ export default function ExplorePortal({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={false}
-      withPartners={false}
-      withAssociates={false}
     >
       <Portal />
     </Layout>

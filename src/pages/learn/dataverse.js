@@ -14,8 +14,6 @@ export default function LearnDataverse({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs
-      withAssociates={false}
-      withPartners={false}
     >
       <Dataverse files={data} />
     </Layout>

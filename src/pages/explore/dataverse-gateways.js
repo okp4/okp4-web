@@ -14,8 +14,6 @@ export default function ExploreDataverseGateways({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={false}
-      withPartners={false}
-      withAssociates={false}
     >
       <DataverseGateways files={data} />
     </Layout>

@@ -14,8 +14,6 @@ export default function LearnKnow({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={true}
-      withAssociates={false}
-      withPartners={false}
     >
       <Know />
     </Layout>

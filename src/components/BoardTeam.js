@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import contentFooter from "/content/transversals/footer.yaml";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
 
 const BoardTeam = () => {
   const team = useMemo(
@@ -55,6 +54,42 @@ const BoardTeam = () => {
           />
         ),
       },
+      {
+        name: contentFooter.team.people[4].name,
+        lastname: contentFooter.team.people[4].lastname,
+        job: contentFooter.team.people[4].job,
+        image: (
+          <StaticImage
+            className="person__image"
+            src="../../content/images/people/team/arnaud.webp"
+            alt={contentFooter.team.people[4].alt}
+          />
+        ),
+      },
+      {
+        name: contentFooter.team.people[5].name,
+        lastname: contentFooter.team.people[5].lastname,
+        job: contentFooter.team.people[5].job,
+        image: (
+          <StaticImage
+            className="person__image"
+            src="../../content/images/people/team/julien.webp"
+            alt={contentFooter.team.people[5].alt}
+          />
+        ),
+      },
+      {
+        name: contentFooter.team.people[6].name,
+        lastname: contentFooter.team.people[6].lastname,
+        job: contentFooter.team.people[6].job,
+        image: (
+          <StaticImage
+            className="person__image"
+            src="../../content/images/people/team/mathieu.webp"
+            alt={contentFooter.team.people[6].alt}
+          />
+        ),
+      },
     ],
     []
   );
@@ -62,7 +97,7 @@ const BoardTeam = () => {
   return (
     <section className="people">
       <div className="people__wrapper">
-        <p className="people__title">{contentFooter.team.title}</p>
+        <h3 className="people__title">{contentFooter.team.title}</h3>
         <div className="people__infos__wrapper board__team">
           {team.map(({ name, lastname, job, image }) => (
             <div className="person__infos__container" key={name + lastname}>
@@ -83,14 +118,6 @@ const BoardTeam = () => {
             </div>
           ))}
         </div>
-        <a
-          href={contentFooter.team.button.link}
-          className="blue__gradient__button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>{contentFooter.team.button.name}</span>
-        </a>
       </div>
     </section>
   );

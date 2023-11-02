@@ -14,8 +14,6 @@ export default function LearnRoadmap({ data }) {
       breadcrumbs={content.breadcrumbs}
       isStatic
       withDocs={false}
-      withPartners={false}
-      withAssociates={false}
     >
       <Roadmap files={data} />
     </Layout>

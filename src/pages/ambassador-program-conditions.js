@@ -18,12 +18,7 @@ export default function AmbassadorProgramConditions({ data }) {
       <main className="legalMentions">
         <LegalConditions />
       </main>
-      <Footer
-        files={data}
-        withDocs={false}
-        withPartners={false}
-        withAssociates={false}
-      />
+      <Footer files={data} withDocs={false} />
     </>
   );
 }

@@ -12,19 +12,17 @@ import IconMedium from "../assets/images/socials/medium.inline.svg";
 import IconDiscord from "../assets/images/socials/discord.inline.svg";
 import IconTelegram from "../assets/images/socials/telegram.inline.svg";
 import Docs from "./Docs.js";
-import Partners from "./Partners";
-import Associates from "./Associates";
 import BoardTeam from "./BoardTeam.js";
 import Newsletter from "./Newsletter.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentFooter from "/content/transversals/footer.yaml";
+import Associates from "./Associates.js";
 
 const Footer = ({
   files,
   withDocs = true,
-  withAssociates = true,
-  withBoardTeam = false,
-  withPartners = true,
+  withBoardTeam = true,
+  withAssociates = false,
 }) => {
   const divScrollTop = useRef(null);
   var scrollPos = 0;
@@ -75,9 +73,8 @@ const Footer = ({
       <footer className="footer">
         <div className="footer__sticky">
           {withDocs && <Docs />}
-          {withAssociates && <Associates files={files} />}
           {withBoardTeam && <BoardTeam files={files} />}
-          {withPartners && <Partners />}
+          {withAssociates && <Associates files={files} />}
         </div>
 
         <div className="footer__main">
@@ -98,30 +95,12 @@ const Footer = ({
               <IconLogo className="footer__main__top__logo" />
               <div className="footer__main__top__links">
                 <a
-                  href={contentSocials.career.url}
-                  className="footer__main__top__links__item"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{contentSocials.career.label}</span>
-                  <IconArrowtr />
-                </a>
-                <a
                   href={contentSocials.faq.url}
                   className="footer__main__top__links__item"
                   target="_blank"
                   rel="noreferrer"
                 >
                   <span>{contentSocials.faq.label}</span>
-                  <IconArrowtr />
-                </a>
-                <a
-                  href={contentSocials.pollen.url}
-                  className="footer__main__top__links__item"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span>{contentSocials.pollen.label}</span>
                   <IconArrowtr />
                 </a>
                 <a
