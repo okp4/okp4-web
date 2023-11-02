@@ -10,6 +10,7 @@
 
 # OKP4 Web Site
 
+[![release](https://img.shields.io/github/v/release/okp4/okp4-web?style=for-the-badge&logo=github)](https://github.com/okp4/okp4-web/releases)
 [![lint](https://img.shields.io/github/actions/workflow/status/okp4/okp4-web/lint.yml?branch=main&label=lint&style=for-the-badge&logo=github)](https://github.com/okp4/okp4-web/actions/workflows/lint.yml)
 [![build](https://img.shields.io/github/actions/workflow/status/okp4/okp4-web/build.yml?branch=main&label=build&style=for-the-badge&logo=github)](https://github.com/okp4/okp4-web/actions/workflows/build.yml)
 [![test](https://img.shields.io/github/actions/workflow/status/okp4/okp4-web/test.yml?branch=main&label=test&style=for-the-badge&logo=github)](https://github.com/okp4/okp4-web/actions/workflows/test.yml)
