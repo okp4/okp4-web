@@ -37,6 +37,10 @@ jobs:
         with:
           node-version: 18.17
 
+      - name: Install prettier
+        run: >-
+          npm install -g prettier
+
       - name: Fetch dependencies
         run: |
           yarn --frozen-lockfile
