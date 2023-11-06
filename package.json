@@ -40,10 +40,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/okp4/okp4-web"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/okp4/okp4-web/issues"
   },
   "devDependencies": {
     "gatsby-plugin-no-sourcemaps": "^5.12.0",
