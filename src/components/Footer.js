@@ -196,14 +196,6 @@ const Footer = ({
               <span className="footer__main__sitemap__item">
                 OKP4 {new Date().getFullYear()} Copyright
               </span>
-              <a
-                href={contentFooter.sitemap.url}
-                className="footer__main__sitemap__item"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {contentFooter.sitemap.text}
-              </a>
               <Link
                 className="footer__main__sitemap__item"
                 to="/legal-mentions"

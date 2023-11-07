@@ -128,9 +128,6 @@ team:
       lastname: Conte
       job: Blockchain Project Manager
       alt: Board Mathieu Conte - OKP4
-sitemap:
-  url: https://okp4.network/
-  text: Sitemap
 legals:
   url: /legal-mentions
   text: Legals & GDPR
