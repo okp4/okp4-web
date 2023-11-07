@@ -8,7 +8,7 @@
   <a href="https://www.youtube.com/channel/UCiOfcTaUyv2Szv4OQIepIvg"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
 </p>
 
-# OKP4 Web Site
+# OKP4 Website
 
 [![release](https://img.shields.io/github/v/release/okp4/okp4-web?style=for-the-badge&logo=github)](https://github.com/okp4/okp4-web/releases)
 [![lint](https://img.shields.io/github/actions/workflow/status/okp4/okp4-web/lint.yml?branch=main&label=lint&style=for-the-badge&logo=github)](https://github.com/okp4/okp4-web/actions/workflows/lint.yml)
@@ -20,7 +20,13 @@
 [![license][bsd-3-clause-image]][bsd-3-clause]
 [![cc-by-sa-4.0][cc-by-sa-image]][cc-by-sa]
 
-> Official OKP4 Web Site repository.
+> Official OKP4 Website repository.
+
+## Overview
+
+This repository contains the source code of the [OKP4 Website](https://okp4.network).
+
+[![okp4.network](./screenshot.webp)](https://okp4.network)
 
 ## Community
 
