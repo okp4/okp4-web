@@ -379,10 +379,7 @@ footer.footer {
           margin-bottom: 58px;
         }
 
-        @media (max-width: 500px) {
-          gap: 30px 15px;
-          margin: 20px 0px 60px 0px;
-        }
+       
 
         @media (max-width: 1800px) {
           margin-left: 250px;
@@ -392,6 +389,16 @@ footer.footer {
         @media (max-width: 1500px) {
           margin-left: 150px;
           margin-right: 150px;
+        }
+
+        @media (max-width: 767px) {
+          margin-left: 50px;
+          margin-right: 50px;
+        }
+
+        @media (max-width: 500px) {
+          margin-left: 30px;
+          margin-right: 30px;
         }
 
         p,
