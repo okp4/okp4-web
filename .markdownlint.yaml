@@ -2,3 +2,6 @@ line-length: false
 no-hard-tabs: false
 no-inline-html: false
 first-line-h1: false
+no-duplicate-heading:
+  allow_different_nesting: false
+  siblings_only: true
