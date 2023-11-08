@@ -3,7 +3,7 @@
   "private": true,
   "description": "Website for the OKP4 protocol",
   "homepage": "https://github.com/okp4/okp4-web",
-  "version": "2.13.0",
+  "version": "2.14.0",
   "license": "BSD-3-Clause",
   "author": {
     "name": "OKP4",
