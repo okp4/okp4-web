@@ -28,7 +28,7 @@
     "gatsby-plugin-manifest": "^5.12.3",
     "gatsby-plugin-matomo": "^0.16.2",
     "gatsby-plugin-react-svg": "^3.3.0",
-    "gatsby-plugin-sass": "^6.12.2",
+    "gatsby-plugin-sass": "^6.12.3",
     "gatsby-plugin-sharp": "^5.12.3",
     "gatsby-source-filesystem": "^5.12.1",
     "gatsby-source-medium": "^5.12.0",
