@@ -1,5 +1,11 @@
 # okp4-web changelog
 
+## [2.15.0](https://github.com/okp4/okp4-web/compare/v2.14.0...v2.15.0) (2023-12-05)
+
+### Features
+
+- **ui:** modify text inside the hero ([a382f4f](https://github.com/okp4/okp4-web/commit/a382f4f2d5e6d7a46873cd42aa64c41164cd5e6c))
+
 ## [2.14.0](https://github.com/okp4/okp4-web/compare/v2.13.0...v2.14.0) (2023-11-08)
 
 ### Features
