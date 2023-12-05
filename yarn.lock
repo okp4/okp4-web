@@ -5096,10 +5096,10 @@ fraction.js@^4.3.6:
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.3.7.tgz"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
-framer-motion@^9.0.3:
-  version "9.1.7"
-  resolved "https://registry.npmjs.org/framer-motion/-/framer-motion-9.1.7.tgz"
-  integrity sha512-nKxBkIO4IPkMEqcBbbATxsVjwPYShKl051yhBv9628iAH6JLeHD0siBHxkL62oQzMC1+GNX73XtPjgP753ufuw==
+framer-motion@^10.16.12:
+  version "10.16.12"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.16.12.tgz#8aca3ffa4801953dd873de422a3c1f78b2aa7bfa"
+  integrity sha512-w7Yzx0OzQ5Uh6uNkxaX+4TuAPuOKz3haSbjmHpdrqDpGuCJCpq6YP9Dy7JJWdZ6mJjndrg3Ao3vUwDajKNikCA==
   dependencies:
     tslib "^2.4.0"
   optionalDependencies:
@@ -5284,7 +5284,7 @@ gatsby-page-utils@^3.12.1:
     lodash "^4.17.21"
     micromatch "^4.0.5"
 
-gatsby-parcel-config@^1.12.1:
+gatsby-parcel-config@1.12.1:
   version "1.12.1"
   resolved "https://registry.yarnpkg.com/gatsby-parcel-config/-/gatsby-parcel-config-1.12.1.tgz#248c9d685a75a867eea7f5e48f0a6a9b01144da3"
   integrity sha512-hH9m/dSJTkdeksBzLGi9U+Pey0CsPeHHrRP6pugxd7owtJUQqid37noyadqnawBo2LOwcGE4o69HhqGxGNXxbw==
@@ -9858,12 +9858,12 @@ tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0:
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
-tslib@^2.0.3, tslib@^2.1.0:
+tslib@^2.0.3, tslib@^2.1.0, tslib@^2.4.0:
   version "2.6.2"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz"
   integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
 
-tslib@^2.4.0, tslib@~2.4.0:
+tslib@~2.4.0:
   version "2.4.1"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.4.1.tgz"
   integrity sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==

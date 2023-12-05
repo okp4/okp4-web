@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "classnames": "^2.3.2",
-    "framer-motion": "^9.0.3",
+    "framer-motion": "^10.16.12",
     "gatsby": "^5.12.11",
     "gatsby-plugin-image": "^3.12.3",
     "gatsby-plugin-manifest": "^5.12.3",
