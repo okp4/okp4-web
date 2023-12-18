@@ -17,6 +17,7 @@ import Newsletter from "./Newsletter.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentFooter from "/content/transversals/footer.yaml";
 import Associates from "./Associates.js";
+import ChatBotOracle from "./ChatBotOracle.js";
 
 const Footer = ({
   files,
@@ -69,6 +70,14 @@ const Footer = ({
           <IconArrowtop />
           <span>Back to top</span>
         </div>
+      </div>
+      <div
+        className="chatBotOracle"
+        role="button"
+        tabIndex={0}
+        onKeyDown={handleKeyDown}
+      >
+        <ChatBotOracle />
       </div>
       <footer className="footer">
         <div className="footer__sticky">
