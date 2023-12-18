@@ -18,6 +18,7 @@ import contentHeader from "/content/transversals/header.yaml";
 import Menu from "./Menu";
 import Breadcrumbs from "./Breadcrumbs";
 import { useBreakpoint } from "../hook/useBreakpoint";
+import ChatBotOracle from "./ChatBotOracle.js";
 
 const Header = ({ isPositionFixed = false, breadcrumbs }) => {
   const { isLarge } = useBreakpoint();
@@ -117,6 +118,11 @@ const Header = ({ isPositionFixed = false, breadcrumbs }) => {
         {showSocials && (
           <div className="header__top">
             <div className="header__top__message">
+              <div className="chatBotOracle-mobile" role="button">
+                <div className="chatBotOracle__container">
+                  <ChatBotOracle />
+                </div>
+              </div>
               <p
                 dangerouslySetInnerHTML={{
                   __html: contentHeader.messageSocial,

@@ -71,13 +71,10 @@ const Footer = ({
           <span>Back to top</span>
         </div>
       </div>
-      <div
-        className="chatBotOracle"
-        role="button"
-        tabIndex={0}
-        onKeyDown={handleKeyDown}
-      >
-        <ChatBotOracle />
+      <div className="chatBotOracle-lg" role="button">
+        <div className="chatBotOracle__container">
+          <ChatBotOracle />
+        </div>
       </div>
       <footer className="footer">
         <div className="footer__sticky">
