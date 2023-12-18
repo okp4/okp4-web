@@ -52,14 +52,19 @@
 }
 
 @keyframes ghostEffect {
-  0%, 100% {
+  0% {
     transform: translateY(0);
-    filter: blur(0px);
-    opacity: 0.7;
+    //filter: blur(5px);
+    opacity: 1;
   }
   50% {
     transform: translateY(-10px);
-    filter: blur(2px);
+    //filter: blur(2px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100);
+    //filter: blur(0px);
     opacity: 1;
   }
 }
@@ -72,6 +77,15 @@
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes blurEffect {
+  from {
+    filter: blur(50px);
+  }
+  to {
+    filter: blur(0px);
   }
 }
 
@@ -91,8 +105,13 @@
   border-radius: 100px;
   position: relative; /* Ajout pour le positionnement du texte */
 
+  &:hover{
+    opacity: 1;
+  }
+
   &:hover .chatBotText {
     visibility: visible;
+    opacity: 1;
     animation: slideUp 0.5s ease forwards;
   }
     
@@ -126,11 +145,13 @@
   left: 50%;
   transform: translateX(-80%);
   transition: visibility 0s, opacity 0.5s linear;
+  animation:blurEffect 2s ease-in-out;
 }
 
 .letter, .space {
   display: inline-block;
-  animation: ghostEffect 3s ease-in-out infinite;
+  animation-delay: 3s;
+  animation: ghostEffect 2s ease-in-out infinite;
   font-family: 'Norse';
   font-size: 26px;
 }
