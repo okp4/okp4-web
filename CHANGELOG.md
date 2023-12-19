@@ -1,5 +1,13 @@
 # okp4-web changelog
 
+## [2.16.0](https://github.com/okp4/okp4-web/compare/v2.15.0...v2.16.0) (2023-12-19)
+
+### Features
+
+- **ui:** add an icon chatbot ([68f4166](https://github.com/okp4/okp4-web/commit/68f4166ef079fa94448c51704fc3264e468472d4))
+- **ui:** modificy icon opacity and blur effect ([d78fe9b](https://github.com/okp4/okp4-web/commit/d78fe9bd1d5bc14642b413c9e1021faa12add8ae))
+- **ui:** optimized display on smartphone ([b26a454](https://github.com/okp4/okp4-web/commit/b26a454cf94b5d4055b9c18775c8e956fbc4b84f))
+
 ## [2.15.0](https://github.com/okp4/okp4-web/compare/v2.14.0...v2.15.0) (2023-12-05)
 
 ### Features
