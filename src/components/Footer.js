@@ -17,6 +17,7 @@ import Newsletter from "./Newsletter.js";
 import contentSocials from "/content/transversals/socials.yaml";
 import contentFooter from "/content/transversals/footer.yaml";
 import Associates from "./Associates.js";
+import ChatBotOracle from "./ChatBotOracle.js";
 
 const Footer = ({
   files,
@@ -68,6 +69,11 @@ const Footer = ({
         <div className="scrollToTop__container">
           <IconArrowtop />
           <span>Back to top</span>
+        </div>
+      </div>
+      <div className="chatBotOracle-lg" role="button">
+        <div className="chatBotOracle__container">
+          <ChatBotOracle />
         </div>
       </div>
       <footer className="footer">
