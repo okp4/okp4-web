@@ -5234,28 +5234,6 @@ gatsby-core-utils@^4.13.0, gatsby-core-utils@^4.13.1:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^4.13.1:
-  version "4.13.1"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-4.13.1.tgz#57955316486cc85ab150922f481484bc9287205e"
-  integrity sha512-w7G6SsQr8T2q+AJ1MxvRNGocCt+wjc22MiRLj2Zi3Ijpjszbr818JxwI4+aPt8WOSHlKT5SYCHICnEvcYPm9gg==
-  dependencies:
-    "@babel/runtime" "^7.20.13"
-    ci-info "2.0.0"
-    configstore "^5.0.1"
-    fastq "^1.15.0"
-    file-type "^16.5.4"
-    fs-extra "^11.1.1"
-    got "^11.8.6"
-    hash-wasm "^4.9.0"
-    import-from "^4.0.0"
-    lmdb "2.5.3"
-    lock "^1.1.0"
-    node-object-hash "^2.3.10"
-    proper-lockfile "^4.1.2"
-    resolve-from "^5.0.0"
-    tmp "^0.2.1"
-    xdg-basedir "^4.0.0"
-
 gatsby-graphiql-explorer@^3.13.0:
   version "3.13.0"
   resolved "https://registry.yarnpkg.com/gatsby-graphiql-explorer/-/gatsby-graphiql-explorer-3.13.0.tgz#28c207d81c597b76508ff980dc4949a847124d6d"
@@ -5468,10 +5446,10 @@ gatsby-source-filesystem@^5.13.1:
     valid-url "^1.0.9"
     xstate "^4.38.0"
 
-gatsby-source-medium@^5.13.0:
-  version "5.13.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-medium/-/gatsby-source-medium-5.13.0.tgz#e8841c7427afd249726a084cacd44c1d5de4c535"
-  integrity sha512-8NNH54sz8yfE+FGgk7C5TDBv9y53FCPN/7NP52n8DvIXwmjVUB/xtxOAqYVtzc8EMWiYTy+zJM4tBTv1jQ+ltg==
+gatsby-source-medium@^5.13.1:
+  version "5.13.1"
+  resolved "https://registry.yarnpkg.com/gatsby-source-medium/-/gatsby-source-medium-5.13.1.tgz#e7e2839c0adc5d46c50c76cbda1962a02a7387fa"
+  integrity sha512-yrSxps5RA3s8/eG3Ttro/53ASlcdNIwCZmKfs/7m9wG5zn+kbUvbXc50etwB2Rn9LkIMlOGotQ5DV6sa12YboQ==
   dependencies:
     "@babel/runtime" "^7.20.13"
     axios "^0.21.1"
